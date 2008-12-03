@@ -1,0 +1,15 @@
+Revision: 566c09b8947e694e1eac0c0a3b31f06a7f1cbb64
+Patch-set: 1
+File: envsetup.sh
+
+7
+Wed Dec 03 16:36:51 2008 +0000
+Author: Jean-Baptiste Queru <1000660@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: zfea7f79fbdc44c5878f20e499e36f5cf
+Bytes: 380
+* "if then fi" would be more readable than "[ ] &&'
+
+* If there's a need to distinguish between host systems. I'd rather have a single piece of logic that determines the host, independent from the places that need to have host-specific behaviors. Yes, I know there are probably bad precedents, but that's the kind of thing that is easier to fix before it spirals out of control.
+
+
+
