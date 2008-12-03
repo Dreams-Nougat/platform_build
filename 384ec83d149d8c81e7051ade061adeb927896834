@@ -1,0 +1,24 @@
+Revision: 384ec83d149d8c81e7051ade061adeb927896834
+Patch-set: 1
+File: tools/findleaves.sh
+
+19
+Wed Dec 03 16:11:36 2008 +0000
+Author: Alexey Tarasov <1001302@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: z0ae3ad385d36dd927497dd9d9645d11f
+Bytes: 540
+On 2008/11/11 10:23:37, David Turner wrote:
+> hmm, this is a bit hard to understand. May I suggest you to replace it with the
+> following:
+> """
+> XXX: the !/bin/bash invocation on the first line has been
+>      commented out because it doesn't work on FreeBSD
+>      (which uses /usr/local/bin/bash, instead of /bin/bash)
+> 
+>      note that, with this comment, this script is invoked
+>      with the right bash shell from build/core/main.mk
+> """
+> 
+
+Well, your version is more easy to understand. I'll replace comment in ammended commit.
+
