@@ -37,3 +37,31 @@ UUID: za5ca7d64d26e3672159058dd27ea0502
 Bytes: 134
 why ? please change this to /bin/sh if you think that the script doesn't require bash. otherwise there is no reason to comment out it.
 
+1
+Wed Dec 03 16:11:28 2008 +0000
+Author: Alexey Tarasov <1001302@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: zd8d395a0cd4b5d82446521e2a732ac4a
+Bytes: 756
+this script specifies which interpretator to use  - /bin/bash. For unknown reason executing script from makefile makes bash execute this script with /bin/bash as interpretator, which leads to error on FreeBSD (where bash is located in /usr/local/bin).
+---
+/usr/local/bin/bash: build/tools/findleaves.sh: /bin/bash: bad interpreter: No such file or directory
+---
+When bash is used to run script interactively from command line (/usr/local/bin/bash build/tools/findleaves.sh) it works as expected, no problem occurs. 
+
+I've tried different bash switches, but result of shell invocation from makefile was the same. I've not found way to ignore shebang by bash, so decided to comment it, as script seems is not used directly  and thus no harm will be produced.
+
+1
+Wed Dec 03 16:11:28 2008 +0000
+Author: Alexey Tarasov <1001302@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: zf8d2b1c64eea23b0a4048af69e72e3c6
+Bytes: 657
+On 2008/11/03 13:54:20, David Turner wrote:
+> why ? please change this to /bin/sh if you think that the script doesn't require
+> bash. otherwise there is no reason to comment out it.
+
+This script is not called directly. It's called only via $(shell build/tools/findleaves.sh) call from defintions.mk and main.mk. If change to /bin/sh - script must be rewritten to conform sh syntax (e.g. bash '[[' must be changed to more common '[').
+
+After commenting first line, behaviour of any shell will be not "start interpretator for this file", but "interpret this file by my fork".
+
+Commenting is much simplier solution and requires no any changes on file content.
+
