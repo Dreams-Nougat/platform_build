@@ -1,0 +1,12 @@
+Revision: 6f2081f40c0588eefcaf5edd26e40b65e2b6f6ae
+Patch-set: 1
+File: envsetup.sh
+
+31
+Wed Dec 03 16:11:27 2008 +0000
+Author: Alexey Tarasov <1001302@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: zcfdc959bf6ee469564e33fe25fe39087
+Bytes: 125
+This file must be ignored.
+Was committed by mistake, the only difference - echo "****" lines, used to debug building process.
+
