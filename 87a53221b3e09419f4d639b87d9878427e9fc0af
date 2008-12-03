@@ -2,6 +2,19 @@ Revision: 87a53221b3e09419f4d639b87d9878427e9fc0af
 Patch-set: 1
 File: core/combo/linux-arm.mk
 
+25
+Wed Dec 03 16:11:21 2008 +0000
+Author: Ben Leslie <1000237@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: z3961342bcdd56431ffd0d85b34a9aa9f
+Bytes: 240
+On 2008/10/30 23:49:57, Dave Bort wrote:
+> I'm a little worried about namespace issues here.  I know it's kind of wordy,
+> but I'd prefer something like:
+> 
+> ARCH_ARM_HAVE_THUMB_SUPPORT, ARCH_ARM_HAVE_FAST_INTERWORKING, etc.
+
+Agree. Fixed.
+
 116
 Wed Dec 03 16:11:21 2008 +0000
 Author: Dave Bort <1000392@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -17,6 +30,27 @@ arch_include_dir := $(dir $(android_config_h))
 -include $(android_config_h) -I $(arch_include_dir)
 
 ...or, remove the definition of select-android-config-h and construct it in terms of select-system-core-arch-include-dir.
+
+116
+Wed Dec 03 16:11:21 2008 +0000
+Author: Ben Leslie <1000237@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: z289d6fb3c217e51d43ead9e12ee3df7a
+Bytes: 532
+On 2008/10/30 23:49:57, Dave Bort wrote:
+> Rather than creating a new macro so close to the existing one, maybe do
+> something like:
+> 
+> (before the CFLAGS assignment)
+> android_config_h := $(call select-android-config-h,linux-arm)
+> arch_include_dir := $(dir $(android_config_h))
+> 
+> (in the CFLAGS assignment)
+> -include $(android_config_h) -I $(arch_include_dir)
+> 
+> ...or, remove the definition of select-android-config-h and construct it in
+> terms of select-system-core-arch-include-dir.
+
+Fixed, I took the former approach.
 
 120
 Wed Dec 03 16:11:21 2008 +0000
