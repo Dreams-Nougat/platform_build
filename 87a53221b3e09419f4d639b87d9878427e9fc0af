@@ -55,6 +55,13 @@ To be honest, I don't have an actual use case for wanting to 'tune' to a differe
 
 To this end, I'm going to leave -mtune more-or-less hard coded as it is at the moment, and a further patch can fix this if it is useful.
 
+46
+Wed Dec 03 16:11:22 2008 +0000
+Author: Brian Swetland <1001286@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: zfb12ae3a7f7f452d7ce486fcb0d5a686
+Bytes: 221
+Specifically, my concern is that TARGET_CPU ends up really meaning "target mtune option value" and in a number of cases my not actually reflect the target cpu because you might need a different value for mtune, depending.
+
 116
 Wed Dec 03 16:11:21 2008 +0000
 Author: Dave Bort <1000392@85c56323-6fa9-3386-8a01-6480fb634889>
