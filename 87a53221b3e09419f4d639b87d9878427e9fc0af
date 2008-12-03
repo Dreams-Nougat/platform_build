@@ -2,6 +2,22 @@ Revision: 87a53221b3e09419f4d639b87d9878427e9fc0af
 Patch-set: 1
 File: core/combo/linux-arm.mk
 
+116
+Wed Dec 03 16:11:21 2008 +0000
+Author: Dave Bort <1000392@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: z25395f0a4b409b47c9e78770bf002de3
+Bytes: 431
+Rather than creating a new macro so close to the existing one, maybe do something like:
+
+(before the CFLAGS assignment)
+android_config_h := $(call select-android-config-h,linux-arm)
+arch_include_dir := $(dir $(android_config_h))
+
+(in the CFLAGS assignment)
+-include $(android_config_h) -I $(arch_include_dir)
+
+...or, remove the definition of select-android-config-h and construct it in terms of select-system-core-arch-include-dir.
+
 120
 Wed Dec 03 16:11:21 2008 +0000
 Author: Ben Leslie <1000237@85c56323-6fa9-3386-8a01-6480fb634889>
