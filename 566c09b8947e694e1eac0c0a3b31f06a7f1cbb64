@@ -24,3 +24,10 @@ see amended commit http://review.source.android.com/5093
 
 If I correctly understood your comment, than that commit makes main script logics less system dependent. There are still some Linux related ifs in script body, but most of dependent code is isolated in the header.
 
+7
+Wed Dec 03 21:10:40 2008 +0000
+Author: Jean-Baptiste Queru <1000660@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: z2730b6ce395fa706d77d8a31e9bc4731
+Bytes: 59
+Yes, 5093 is along the lines of what I had in mind, thanks.
+
