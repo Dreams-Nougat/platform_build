@@ -1,0 +1,14 @@
+Revision: 87a53221b3e09419f4d639b87d9878427e9fc0af
+Patch-set: 1
+File: core/combo/linux-arm.mk
+
+120
+Wed Dec 03 16:11:21 2008 +0000
+Author: Ben Leslie <1000237@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: z0934d748a62b4fbbfaae90dad495dd3a
+Bytes: 72
+On 2008/10/30 23:49:57, Dave Bort wrote:
+> s/somtimes/sometimes/
+
+Fixed.
+
