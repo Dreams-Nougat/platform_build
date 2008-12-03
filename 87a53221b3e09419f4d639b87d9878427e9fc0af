@@ -15,6 +15,32 @@ On 2008/10/30 23:49:57, Dave Bort wrote:
 
 Agree. Fixed.
 
+25
+Wed Dec 03 16:11:21 2008 +0000
+Author: Dave Bort <1000392@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: z72c845d0a4a46cbf9d628c73c87c647c
+Bytes: 176
+I'm a little worried about namespace issues here.  I know it's kind of wordy, but I'd prefer something like:
+
+ARCH_ARM_HAVE_THUMB_SUPPORT, ARCH_ARM_HAVE_FAST_INTERWORKING, etc.
+
+46
+Wed Dec 03 16:11:22 2008 +0000
+Author: Dave Bort <1000392@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: zd05514e1c984e27f926d8ec7f739b8cf
+Bytes: 600
+swetland and I would prefer if you removed the abstraction here and just dealt with cflags, like:
+
+arch_cflags := -march=$(TARGET_ARCH_VERSION) -mtune=arm920 -D__ARM_ARCH_4__
+
+This will give us more flexibility in case a given architecture wants to define more than just -mtune and -D args.  (arch_cflags, in this case, is essentially local to this file and thus would be in lowercase)
+
+Of course, this makes it a little messier to override TARGET_CPU, but you could still do it like:
+
+ifneq ($(strip $(TARGET_CPU)),)
+  arch_cflags := -mtune=$(TARGET_CPU) $(filter-out -mtune=%,$(arch_cflags)) 
+endif
+
 116
 Wed Dec 03 16:11:21 2008 +0000
 Author: Dave Bort <1000392@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -61,4 +87,11 @@ On 2008/10/30 23:49:57, Dave Bort wrote:
 > s/somtimes/sometimes/
 
 Fixed.
+
+120
+Wed Dec 03 16:11:22 2008 +0000
+Author: Dave Bort <1000392@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: za196f36d546a3bafc7d851dd1aea6d96
+Bytes: 21
+s/somtimes/sometimes/
 
