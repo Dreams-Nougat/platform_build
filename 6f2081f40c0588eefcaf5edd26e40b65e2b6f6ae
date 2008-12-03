@@ -1,5 +1,14 @@
 Revision: 6f2081f40c0588eefcaf5edd26e40b65e2b6f6ae
 Patch-set: 1
+File: core/main.mk
+
+7
+Wed Dec 03 16:11:27 2008 +0000
+Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: z92b8154cbe6af658b4053fb0be9d51a6
+Bytes: 55
+please use 'ifeq ($(SYSNAME),FreeBSD)' for consistency.
+
 File: envsetup.sh
 
 31
@@ -9,4 +18,22 @@ UUID: zcfdc959bf6ee469564e33fe25fe39087
 Bytes: 125
 This file must be ignored.
 Was committed by mistake, the only difference - echo "****" lines, used to debug building process.
+
+File: tools/findleaves.sh
+
+1
+Wed Dec 03 16:11:27 2008 +0000
+Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: z87d7e62f1dd33c5f5e96913d860e2c59
+Bytes: 191
+mmm, this *is* a bash script though, so there is no point in "interpreting the file by a fork" unless you already run bash.
+
+what problem did you try to avoid, I still don't understand, sorry
+
+1
+Wed Dec 03 16:11:27 2008 +0000
+Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: za5ca7d64d26e3672159058dd27ea0502
+Bytes: 134
+why ? please change this to /bin/sh if you think that the script doesn't require bash. otherwise there is no reason to comment out it.
 

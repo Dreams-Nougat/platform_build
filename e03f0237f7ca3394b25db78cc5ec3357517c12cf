@@ -1,0 +1,20 @@
+Revision: e03f0237f7ca3394b25db78cc5ec3357517c12cf
+Base-for-patch-set: 1
+File: core/main.mk
+
+44
+Wed Dec 03 16:11:27 2008 +0000
+Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: z1e95fed45e6363f73133ba677e1764f7
+Bytes: 51
+please keep existing line spacing whenever possible
+
+File: core/tasks/apicheck.mk
+
+23
+Wed Dec 03 16:11:27 2008 +0000
+Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: z8bf8c1beed7d1d268bb0aefc3062f486
+Bytes: 16
+keep linespacing
+
