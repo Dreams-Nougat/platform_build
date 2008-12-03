@@ -41,6 +41,20 @@ ifneq ($(strip $(TARGET_CPU)),)
   arch_cflags := -mtune=$(TARGET_CPU) $(filter-out -mtune=%,$(arch_cflags)) 
 endif
 
+46
+Wed Dec 03 16:11:22 2008 +0000
+Author: Ben Leslie <1000237@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: ze1395e33be5f78ee5a8f9f133fefdd5d
+Bytes: 859
+On 2008/10/30 23:59:50, Brian Swetland wrote:
+> Specifically, my concern is that TARGET_CPU ends up really meaning "target mtune
+> option value" and in a number of cases my not actually reflect the target cpu
+> because you might need a different value for mtune, depending.
+
+To be honest, I don't have an actual use case for wanting to 'tune' to a different. It might make sense to let a particular board set the -mtune cflag, and leave -mtune completely out of linux-arm.mk. I still think linux-arm.mk should take care of architecture version differences though, as there are going to many boards with the same architecture, but in reality there is very few things in user land that care about the particular TARGET_CPU.
+
+To this end, I'm going to leave -mtune more-or-less hard coded as it is at the moment, and a further patch can fix this if it is useful.
+
 116
 Wed Dec 03 16:11:21 2008 +0000
 Author: Dave Bort <1000392@85c56323-6fa9-3386-8a01-6480fb634889>
