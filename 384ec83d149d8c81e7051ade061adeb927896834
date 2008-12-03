@@ -2,6 +2,17 @@ Revision: 384ec83d149d8c81e7051ade061adeb927896834
 Patch-set: 1
 File: tools/findleaves.sh
 
+1
+Wed Dec 03 16:11:36 2008 +0000
+Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: ze5a9f10131d5a93a7cd6209615c377af
+Bytes: 131
+can you make the commenting more explicit, for example with:
+"""
+##########!/bin/bash  (see XXX comment below for explanation)
+"""
+
+
 19
 Wed Dec 03 16:11:36 2008 +0000
 Author: Alexey Tarasov <1001302@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -21,4 +32,20 @@ On 2008/11/11 10:23:37, David Turner wrote:
 > 
 
 Well, your version is more easy to understand. I'll replace comment in ammended commit.
+
+19
+Wed Dec 03 16:11:36 2008 +0000
+Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: z25ed4ae27c9ca93c590099318174d930
+Bytes: 385
+hmm, this is a bit hard to understand. May I suggest you to replace it with the following:
+"""
+XXX: the !/bin/bash invocation on the first line has been
+     commented out because it doesn't work on FreeBSD
+     (which uses /usr/local/bin/bash, instead of /bin/bash)
+
+     note that, with this comment, this script is invoked
+     with the right bash shell from build/core/main.mk
+"""
+
 
