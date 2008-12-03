@@ -65,3 +65,10 @@ After commenting first line, behaviour of any shell will be not "start interpret
 
 Commenting is much simplier solution and requires no any changes on file content.
 
+1
+Wed Dec 03 16:11:28 2008 +0000
+Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: zfdf3b53451b71904a4a4b6beda2ce03b
+Bytes: 105
+ah thanks, it makes a lot more sense now. Can you add a comment to the script that explains exactly that.
+
