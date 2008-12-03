@@ -13,3 +13,14 @@ Bytes: 380
 
 
 
+7
+Wed Dec 03 19:53:31 2008 +0000
+Author: Alexey Tarasov <1001302@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: zff1b9bdf691516a45ab0dfa8b28553a5
+Bytes: 329
+On 2008/12/03 16:36:51, Jean-Baptiste Queru wrote: {...}
+
+see amended commit http://review.source.android.com/5093
+
+If I correctly understood your comment, than that commit makes main script logics less system dependent. There are still some Linux related ifs in script body, but most of dependent code is isolated in the header.
+
