@@ -1,0 +1,11 @@
+Revision: e8278eb8997a63e49abd14a30a379d7e56e41c73
+Patch-set: 1
+File: tools/atree/fs.cpp
+
+112
+Wed Dec 10 18:10:58 2008 +0000
+Author: Joe Onorato <1000701@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: z3c57adab3fd7d082232d332ca1706829
+Bytes: 165
+I'd rather do if (path.length() == 0 and path[0] == '/').  I'll make that change and get this checked in today to get this working for you.  Just a stylistic detail.
+
