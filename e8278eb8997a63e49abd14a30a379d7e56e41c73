@@ -9,3 +9,12 @@ UUID: z3c57adab3fd7d082232d332ca1706829
 Bytes: 165
 I'd rather do if (path.length() == 0 and path[0] == '/').  I'll make that change and get this checked in today to get this working for you.  Just a stylistic detail.
 
+112
+Wed Dec 10 18:49:20 2008 +0000
+Author: Jeyprakash Michaelraj <1000676@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: z7d7c55ce46027d62b9f6cfd7c8849b4c
+Bytes: 67
+ok, thanks!
+I am sure you meant "... length() == 1 ..."  
+not ZERO.
+
