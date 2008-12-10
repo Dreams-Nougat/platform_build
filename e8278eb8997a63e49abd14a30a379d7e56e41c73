@@ -18,3 +18,13 @@ ok, thanks!
 I am sure you meant "... length() == 1 ..."  
 not ZERO.
 
+112
+Wed Dec 10 18:53:52 2008 +0000
+Author: Jeyprakash Michaelraj <1000676@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: z97355b8fef551b16a95b835101780ed9
+Bytes: 60
+
+I meant:  length() != 0
+I typed too fast, too!! Silly me! 
+
+
