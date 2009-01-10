@@ -1,0 +1,15 @@
+Revision: 6df23618dd8864bc104c88ffc50de441ae090c97
+Patch-set: 1
+File: core/find-jdk-tools-jar.sh
+
+1
+Sat Jan 10 22:22:22 2009 +0000
+Author: Alexey Tarasov <1001302@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: z57842e05271ce47bec2ec87397f38ea3
+Bytes: 276
+why did you forget about bash-ism '[[' if you want to purify this piece of file? :)
+
+Actually, Android build system uses bash instead of sh. This file also is called from config.mk,197 like $(shell $(BUILD_SYSTEM)/find-jdk-tools-jar.sh)
+
+SHELL variable is set to bash, not sh.
+
