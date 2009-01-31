@@ -1,0 +1,13 @@
+Revision: 4cf7606d7ea96bd7f40c4320bceff462005441e8
+Patch-set: 1
+File: core/find-jdk-tools-jar.sh
+
+1
+Sat Jan 31 00:05:17 2009 +0000
+Author: Dave Bort <1000392@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAB3///7Y=
+Bytes: 154
+I've never seen anyone use && in an if like this before; I think it would be a little more clear to use -a:
+
+if [ "x$AN.." != x -a -e "$AND..jar" ] ; then
+
