@@ -11,3 +11,12 @@ I've never seen anyone use && in an if like this before; I think it would be a l
 
 if [ "x$AN.." != x -a -e "$AND..jar" ] ; then
 
+1
+Sat Jan 31 13:28:29 2009 +0000
+Author: Angus Lees <1001538@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAACH////g=
+Bytes: 263
+&& in an if is common shell syntax.
+
+The problem is that -a doesn't short circuit, but && does - saving us a (harmless) stat on /lib/tools.jar when ANDROID_JAVA_HOME is unset.  I was simply trying to preserve the original logic - I can switch to -a if you'd like.
+
