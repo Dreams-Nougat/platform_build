@@ -1,0 +1,20 @@
+Revision: 840165afd84aa2c988055651d59b4677ecf7a0fa
+Patch-set: 1
+File: target/board/generic_x86/AT_Translated_Set_2_keyboard.kcm
+
+63
+Sat Feb 28 05:11:49 2009 +0000
+Author: Joe Onorato <1000701@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAIX////I=
+Bytes: 191
+This file looks the same as development/emulator/keymaps/qwerty.kcm.  I'd prefer to let this x86 fall back to that one unless there's a custom keyboard, but that would go in vendor somewhere.
+
+File: target/board/generic_x86/AT_Translated_Set_2_keyboard.kl
+
+95
+Sat Feb 28 05:11:49 2009 +0000
+Author: Joe Onorato <1000701@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAIX////E=
+Bytes: 36
+Same comment here as for qwerty.kcm.
+
