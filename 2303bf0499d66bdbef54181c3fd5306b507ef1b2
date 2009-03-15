@@ -1,0 +1,18 @@
+Revision: 2303bf0499d66bdbef54181c3fd5306b507ef1b2
+Patch-set: 1
+File: core/build-system.html
+
+212
+Sun Mar 15 10:33:13 2009 +0000
+Author: Nicolas Pierron <1001708@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAMH///+4=
+Bytes: 77
+This is a dead link as the file build/building.html is not in the repository.
+
+339
+Sun Mar 15 10:33:13 2009 +0000
+Author: Nicolas Pierron <1001708@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAMH///+0=
+Bytes: 80
+You should specify the domain name of the adresses. @android.com / @google.com ?
+
