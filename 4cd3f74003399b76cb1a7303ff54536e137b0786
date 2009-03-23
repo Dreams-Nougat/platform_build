@@ -1,0 +1,11 @@
+Revision: 4cd3f74003399b76cb1a7303ff54536e137b0786
+Base-for-patch-set: 1
+File: core/tasks/localize.mk
+
+25
+Mon Mar 23 03:21:05 2009 +0000
+Author: Marcelo E. Magallon <1000880@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAANH///8Y=
+Bytes: 113
+This is where the original problem exists, as a produces a large list that's passed as an argument to echo below.
+
