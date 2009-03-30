@@ -1,0 +1,11 @@
+Revision: d0ade797c46ea719166db30973bb0c9509532d86
+Patch-set: 1
+File: core/config.mk
+
+280
+Mon Mar 30 19:15:49 2009 +0000
+Author: Dave Bort <1000392@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAOH///84=
+Bytes: 86
+Please add a TODO explaining why this line is being added, and when it can be removed.
+
