@@ -1,0 +1,11 @@
+Revision: 14b7f70010d6624c904b590305a3f95144cf5e50
+Patch-set: 1
+File: core/node_fns.mk
+
+189
+Fri Apr 03 02:08:43 2009 +0000
+Author: Dave Bort <1000392@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAOn///88=
+Bytes: 227
+Please change this to LOCAL_PATH, to match the rest of the build system.  I know that AndroidProducts.mk files use LOCAL_DIR, but that was a slip-up on my part (that I didn't even notice until now).  Otherwise, this looks good!
+
