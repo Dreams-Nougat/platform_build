@@ -1,0 +1,15 @@
+Revision: 36fe4421f7418f626b1a75c68ec70e23bb7b46b1
+Patch-set: 1
+File: core/tasks/localize.mk
+
+25
+Wed Apr 15 03:57:25 2009 +0000
+Author: John Seghers <1001850@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAPH////s=
+Bytes: 209
+I have been using this in my builds since without it I get the dreaded argument list too long.
+
+I'm running Ubuntu 8.10 in a VirtualBox VM with 2GB Ram allocated.
+
+Just wanted to give my support to this patch.
+
