@@ -1,0 +1,13 @@
+Revision: 823c0ec2a5ca911f84db3136eb7ee8ee80bc5dbb
+Patch-set: 1
+File: envsetup.sh
+
+123
+Wed Jul 08 16:58:50 2009 +0000
+Author: Joe Onorato <1000701@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAan///70=
+Bytes: 441
+This breaks if multiple vendorsetup.sh files are included (in the goog tree, there are several), so this won't really work. 
+
+I'd rather find a way to add whatever you need to the build system proper.  I think you should probably be able to accomplish anything you need by defining a new product for the different types of builds you're trying to do.  Is there anything other that couldn't be accomplished with additional product spec files?
+
