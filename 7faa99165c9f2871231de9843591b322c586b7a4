@@ -1,0 +1,11 @@
+Revision: 7faa99165c9f2871231de9843591b322c586b7a4
+Patch-set: 2
+File: tools/soslim/Android.mk
+
+11
+Fri Aug 28 16:57:08 2009 +0000
+Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAin///nU=
+Bytes: 168
+can you add a small comment that explains that libdl.so is not needed on FreeBSD because the needed functions are in libc instead? This will make this fragment clearer.
+
