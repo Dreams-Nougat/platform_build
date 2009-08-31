@@ -9,3 +9,13 @@ UUID: AAAAin///nU=
 Bytes: 168
 can you add a small comment that explains that libdl.so is not needed on FreeBSD because the needed functions are in libc instead? This will make this fragment clearer.
 
+11
+Mon Aug 31 16:25:02 2009 +0000
+Author: Alexey Tarasov <1001302@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAAin///nU=
+UUID: AAAAi3////k=
+Bytes: 307
+There is no libdl in FreeBSD at all.
+
+libdl is for dynamic linking support. On FreeBSD all related functions are in libc. AFAIK, the same is correct for Linux (libdl is provided only for backward compatibility), however I'm not 100% sure in case of Linux, thus -ldl was removed feom LDLIBS only for FreeBSD.
+
