@@ -19,3 +19,11 @@ There is no libdl in FreeBSD at all.
 
 libdl is for dynamic linking support. On FreeBSD all related functions are in libc. AFAIK, the same is correct for Linux (libdl is provided only for backward compatibility), however I'm not 100% sure in case of Linux, thus -ldl was removed feom LDLIBS only for FreeBSD.
 
+11
+Wed Sep 02 16:49:30 2009 +0000
+Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAAi3////k=
+UUID: AAAAj3///u8=
+Bytes: 83
+thanks, but can you add the comment to the Android.mk itself? that would be better.
+
