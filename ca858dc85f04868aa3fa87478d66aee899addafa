@@ -1,0 +1,11 @@
+Revision: ca858dc85f04868aa3fa87478d66aee899addafa
+Patch-set: 1
+File: target/board/generic_x86/AT_Translated_Set_2_keyboard.kl
+
+1
+Thu Mar 25 20:35:42 2010 +0000
+Author: Joe Onorato <1000701@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAwH///w0=
+Bytes: 281
+Are this file and the .kcm file in this directory different enough from the base qwerty.kl that there needs to be another copy?  I would like qwerty.kl to work on the standard PC keyboard arrangement for netbooks and such, and if phones ever support stuff like bluetooth keyboards.
+
