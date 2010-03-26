@@ -9,3 +9,54 @@ UUID: AAAAwH///w0=
 Bytes: 281
 Are this file and the .kcm file in this directory different enough from the base qwerty.kl that there needs to be another copy?  I would like qwerty.kl to work on the standard PC keyboard arrangement for netbooks and such, and if phones ever support stuff like bluetooth keyboards.
 
+File: target/board/generic_x86/AndroidBoard.mk
+
+29
+Fri Mar 26 05:01:25 2010 +0000
+Author: Dima Zavin <1000413@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAwH///vk=
+Bytes: 298
+Don't use this mechanism. you should use the "include $(BUILD_PREBUILT)" instead.. i.e.
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := <file>
+LOCAL_MODULE_TAGS := user
+LOCAL_MODULE_CLASS := <the right class>
+LOCAL_MODULE_PATH := $(TARGET_ROOT_OUT)/<file>
+LOCAL_SRC_FILES := <file>
+include $(BUILD_PREBUILT)
+
+File: target/board/generic_x86/BoardConfig.mk
+
+8
+Fri Mar 26 05:01:25 2010 +0000
+Author: Dima Zavin <1000413@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAwH///vg=
+Bytes: 147
+probably too big. We currently use 24M on pretty capable devices. you may want to go to 32M, but I think 128M may be too large. Not a biggy though.
+
+File: target/board/generic_x86/init.generic_x86.sh
+
+4
+Fri Mar 26 05:01:25 2010 +0000
+Author: Dima Zavin <1000413@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAwH///vY=
+Bytes: 54
+we shouldn't be doing this. this was a hack for eeepc.
+
+16
+Fri Mar 26 05:01:25 2010 +0000
+Author: Dima Zavin <1000413@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAwH///vc=
+Bytes: 69
+i thought all this code looked familiar ;) this is all old eeepc code
+
+File: target/product/generic_x86.mk
+
+27
+Fri Mar 26 05:01:25 2010 +0000
+Author: Dima Zavin <1000413@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAwH///vo=
+Bytes: 106
+i don't think this is really supported anymore. Noone has really been using it, and its most likely stale.
+
