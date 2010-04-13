@@ -1,0 +1,18 @@
+Revision: 459ff12e7c3be2c002acc1b484e8cac6600edf0c
+Patch-set: 1
+File: core/main.mk
+
+375
+Tue Apr 13 17:44:04 2010 +0000
+Author: Joe Onorato <1000701@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAwn///+g=
+Bytes: 27
+can you fix the tab please?
+
+404
+Tue Apr 13 17:44:04 2010 +0000
+Author: Joe Onorato <1000701@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAwn///+c=
+Bytes: 140
+Why is this a warning and not an error?  Unless there's a really good reason, I'd rather just require that all the build tools be installed.
+
