@@ -9,10 +9,28 @@ UUID: AAAAwn///+g=
 Bytes: 27
 can you fix the tab please?
 
+375
+Tue Apr 13 17:52:50 2010 +0000
+Author: raphael <1001100@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAAwn///+g=
+UUID: AAAAwn///+Q=
+Bytes: 4
+Done
+
 404
 Tue Apr 13 17:44:04 2010 +0000
 Author: Joe Onorato <1000701@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: AAAAwn///+c=
 Bytes: 140
 Why is this a warning and not an error?  Unless there's a really good reason, I'd rather just require that all the build tools be installed.
+
+404
+Tue Apr 13 17:52:50 2010 +0000
+Author: raphael <1001100@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAAwn///+c=
+UUID: AAAAwn///+M=
+Bytes: 290
+We don't actually need Java when creating an actual SDK (since we only patch a linux SDK zip with the various tools *.exe) and that way we don't need to bother with it on the windows build servers.
+
+I only need java when building layoutlib as part of my Eclipse workspace for local testing.
 
