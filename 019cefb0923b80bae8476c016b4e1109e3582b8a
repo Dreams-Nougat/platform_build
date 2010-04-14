@@ -1,0 +1,23 @@
+Revision: 019cefb0923b80bae8476c016b4e1109e3582b8a
+Patch-set: 2
+File: core/config.mk
+
+9
+Wed Apr 14 15:48:10 2010 +0000
+Author: Thorsten Glaser <1002670@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAwn///6s=
+Bytes: 385
+What about something like this?
+
+ifneq (,$(shell which bash 2>/dev/null))
+SHELL := $(shell which bash)
+else ifneq (,$(filter $(shell uname),FreeBSD MidnightBSD OpenBSD))
+SHELL := /usr/local/bin/bash
+else ifneq (,$(filter $(shell uname),DragonFly NetBSD))
+SHELL := /usr/pkg/bin/bash
+else ifneq (,$(filter $(shell uname),MirBSD))
+SHELL := /usr/mpkg/bin/bash
+else
+SHELL := /bin/bash
+endif
+
