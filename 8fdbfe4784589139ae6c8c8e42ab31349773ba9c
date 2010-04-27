@@ -1,5 +1,14 @@
 Revision: 8fdbfe4784589139ae6c8c8e42ab31349773ba9c
 Patch-set: 2
+File: target/board/generic_x86/BoardConfig.mk
+
+9
+Tue Apr 27 19:17:22 2010 +0000
+Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAx3///2U=
+Bytes: 126
+It would be nice if you could define this to "x86" instead of "none". This would allow testing of NDK-generated x86 binaries !
+
 File: target/board/generic_x86/buildspec-generic_x86.mk
 
 1
