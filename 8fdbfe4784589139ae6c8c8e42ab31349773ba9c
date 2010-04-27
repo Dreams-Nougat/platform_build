@@ -9,6 +9,14 @@ UUID: AAAAx3///2U=
 Bytes: 126
 It would be nice if you could define this to "x86" instead of "none". This would allow testing of NDK-generated x86 binaries !
 
+9
+Tue Apr 27 22:15:00 2010 +0000
+Author: Bruce J Beare <1003360@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAAx3///2U=
+UUID: AAAAx3///1M=
+Bytes: 33
+Absolutely. Thanks for the catch.
+
 File: target/board/generic_x86/buildspec-generic_x86.mk
 
 1
@@ -17,6 +25,34 @@ Author: Dima Zavin <1000413@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: AAAAx3///2E=
 Bytes: 32
 what's the purpose of this file?
+
+1
+Tue Apr 27 22:15:00 2010 +0000
+Author: Bruce J Beare <1003360@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAAx3///2E=
+UUID: AAAAx3///1o=
+Bytes: 1079
+BUILD_ENV_SEQUENCE_NUMBER from build-system.html:
+<h3>Environment Setup / buildspec.mk Versioning</h3>
+<p>In order to make easier for people when the build system changes, when
+it is necessary to make changes to buildspec.mk or to rerun the environment
+setup scripts, they contain a version number in the variable
+BUILD_ENV_SEQUENCE_NUMBER.  If this variable does not match what the build
+system expects, it fails printing an error message explaining what happened.
+If you make a change that requires an update, you need to update two places
+so this message will be printed.
+<ul>
+    <li>In config/envsetup.make, increment the
+        CORRECT_BUILD_ENV_SEQUENCE_NUMBER definition.</li>
+    <li>In buildspec.mk.default, update the BUILD_ENV_SEQUENCE_DUMBER
+        definition to match the one in config/envsetup.make</li>
+</ul>
+The scripts automatically get the value from the build system, so they will
+trigger the warning as well.
+</p>
+"build/core/build-system.html" 947 lines --92%-- (2 of 6)  
+
+It was copied in from the boilerplate. Is it safe to drop it?
 
 File: target/board/generic_x86/init.generic_x86.sh
 
@@ -29,6 +65,15 @@ it's sad that these hacks from eeepc are still being kept.
 
 We should have a warning that says "NOT SAFE FOR SHIP"
 
+3
+Tue Apr 27 22:15:00 2010 +0000
+Author: Bruce J Beare <1003360@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAAx3///2A=
+UUID: AAAAx3///1k=
+Bytes: 116
+Why do you feel that the dhcp tweak is an eepc hack?
+It can easily be dropped... but can be useful for an emulator.
+
 File: tools/applypatch/Android.mk
 
 17
@@ -37,4 +82,12 @@ Author: Dima Zavin <1000413@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: AAAAx3///2I=
 Bytes: 72
 does this not work for sh and other archs? or does it only break on x86?
+
+17
+Tue Apr 27 22:15:00 2010 +0000
+Author: Bruce J Beare <1003360@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAAx3///2I=
+UUID: AAAAx3///1g=
+Bytes: 105
+There is dependent code that is ARM only. If you prefer to have this ifneq for x86... I'm fine with that.
 
