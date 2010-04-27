@@ -1,0 +1,31 @@
+Revision: 8fdbfe4784589139ae6c8c8e42ab31349773ba9c
+Patch-set: 2
+File: target/board/generic_x86/buildspec-generic_x86.mk
+
+1
+Tue Apr 27 19:14:30 2010 +0000
+Author: Dima Zavin <1000413@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAx3///2E=
+Bytes: 32
+what's the purpose of this file?
+
+File: target/board/generic_x86/init.generic_x86.sh
+
+3
+Tue Apr 27 19:14:30 2010 +0000
+Author: Dima Zavin <1000413@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAx3///2A=
+Bytes: 114
+it's sad that these hacks from eeepc are still being kept.
+
+We should have a warning that says "NOT SAFE FOR SHIP"
+
+File: tools/applypatch/Android.mk
+
+17
+Tue Apr 27 19:14:30 2010 +0000
+Author: Dima Zavin <1000413@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAx3///2I=
+Bytes: 72
+does this not work for sh and other archs? or does it only break on x86?
+
