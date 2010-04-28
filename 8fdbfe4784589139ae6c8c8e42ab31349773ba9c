@@ -54,6 +54,14 @@ trigger the warning as well.
 
 It was copied in from the boilerplate. Is it safe to drop it?
 
+1
+Wed Apr 28 01:03:23 2010 +0000
+Author: Dima Zavin <1000413@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAAx3///1o=
+UUID: AAAAx3///ws=
+Bytes: 115
+I was not asking about the variable. I was asking why you have this buildspec file? You don't need it for anything.
+
 File: target/board/generic_x86/init.generic_x86.sh
 
 3
@@ -73,6 +81,17 @@ UUID: AAAAx3///1k=
 Bytes: 116
 Why do you feel that the dhcp tweak is an eepc hack?
 It can easily be dropped... but can be useful for an emulator.
+
+3
+Wed Apr 28 01:03:23 2010 +0000
+Author: Dima Zavin <1000413@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAAx3///1k=
+UUID: AAAAx3///wo=
+Bytes: 177
+because you are:
+- Assuming that eth0 exists ALWAYS by the time you run this service
+- Assuming that it's connected.
+- "Managing" network interfaces behind the framework's back.
 
 File: tools/applypatch/Android.mk
 
