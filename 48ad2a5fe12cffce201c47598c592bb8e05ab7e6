@@ -1,0 +1,22 @@
+Revision: 48ad2a5fe12cffce201c47598c592bb8e05ab7e6
+Patch-set: 1
+File: core/dynamic_binary.mk
+
+143
+Mon May 10 20:59:04 2010 +0000
+Author: Jean-Baptiste Queru <1000660@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAyX///eM=
+Bytes: 60
+Should probably be a tab for consistency with the line above
+
+File: tools/apriori/apriori.c
+
+329
+Mon May 10 20:59:04 2010 +0000
+Author: Jean-Baptiste Queru <1000660@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAyX///eI=
+Bytes: 102
+Should be using spaces instead of tabs.
+
+Not sure how we regard opening blocks for no apparent reason.
+
