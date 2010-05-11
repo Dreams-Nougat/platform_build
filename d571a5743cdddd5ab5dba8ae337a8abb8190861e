@@ -1,0 +1,52 @@
+Revision: d571a5743cdddd5ab5dba8ae337a8abb8190861e
+Patch-set: 2
+File: tools/retouch/Android.mk
+
+105
+Tue May 11 20:26:43 2010 +0000
+Author: Iliyan Malchev <1000866@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAyn///1s=
+Bytes: 95
+No need to compile these with -g and -O2 anymore.  We should let the default flags take effect.
+
+106
+Tue May 11 20:26:43 2010 +0000
+Author: Iliyan Malchev <1000866@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAyn///1o=
+Bytes: 35
+Also definitely remove -fno-inline.
+
+File: tools/retouch/retouch-bindiff.c
+
+21
+Tue May 11 20:26:43 2010 +0000
+Author: Iliyan Malchev <1000866@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAyn///1g=
+Bytes: 41
+cont_prev and offs_prev should be static.
+
+File: tools/retouch/retouch-deltas.c
+
+19
+Tue May 11 20:26:43 2010 +0000
+Author: Iliyan Malchev <1000866@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAyn///zU=
+Bytes: 16
+Make them static
+
+37
+Tue May 11 20:26:43 2010 +0000
+Author: Iliyan Malchev <1000866@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAyn///zE=
+Bytes: 114
+Please indent the conditions some more, they are on the same level of indentation as the body of the if statement.
+
+155
+Tue May 11 20:26:43 2010 +0000
+Author: Iliyan Malchev <1000866@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAyn///zc=
+Bytes: 31
+Who not:
+
+decoding = argc != 3;
+
