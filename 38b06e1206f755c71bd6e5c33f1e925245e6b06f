@@ -1,0 +1,20 @@
+Revision: 38b06e1206f755c71bd6e5c33f1e925245e6b06f
+Patch-set: 1
+File: tools/apriori/apriori.c
+
+599
+Tue May 18 21:43:05 2010 +0000
+Author: Iliyan Malchev <1000866@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAzH///WU=
+Bytes: 51
+Why did you remove const from full_path and output?
+
+File: tools/apriori/hash.c
+
+7
+Tue May 18 21:43:05 2010 +0000
+Author: Iliyan Malchev <1000866@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAzH///WQ=
+Bytes: 71
+Use __attribute__((unused)) here instead of the do {} while loop below.
+
