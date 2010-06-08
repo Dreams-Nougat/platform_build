@@ -1,0 +1,11 @@
+Revision: 635765ce6aaf5eae157b9a5419b27f026feef689
+Patch-set: 3
+File: core/main.mk
+
+466
+Tue Jun 08 18:25:15 2010 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAzX///NA=
+Bytes: 96
+You don't prune directories like out/, .repo etc, which would cause serious performance pitfall.
+
