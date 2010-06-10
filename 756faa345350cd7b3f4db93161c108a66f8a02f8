@@ -9,3 +9,11 @@ UUID: AAAAzX//+x0=
 Bytes: 104
 oops. upload shouldn't have occurred on this one. David's comments in upload 1 are still unanswered. TBD
 
+689
+Thu Jun 10 23:30:00 2010 +0000
+Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAAzX//+x0=
+UUID: AAAAzX//+w0=
+Bytes: 204
+it's ok. I think the real issue is that you should also define PRIVATE_SYSTEM_TAR for the systemtarball-nodeps target below. I can only assyme that this is the one that is missing the value of system_tar.
+
