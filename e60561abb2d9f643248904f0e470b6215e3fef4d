@@ -1,5 +1,14 @@
 Revision: e60561abb2d9f643248904f0e470b6215e3fef4d
 Patch-set: 1
+File: core/definitions.mk
+
+1056
+Thu Jun 10 18:01:47 2010 +0000
+Author: Jean-Baptiste Queru <1000660@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAzX//+10=
+Bytes: 102
+I think you should be adding $(hide) before the command, so that it doesn't end up printed by default.
+
 File: core/dynamic_binary.mk
 
 128
