@@ -1,0 +1,21 @@
+Revision: 9d540ecdb03e93b1fda572b597d7cf84ae4b5bd1
+Patch-set: 1
+File: core/Makefile
+
+710
+Thu Jun 10 21:09:53 2010 +0000
+Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAzX//+zo=
+Bytes: 220
+I believe you would want to use @ or $(hide) before each command to prevent them from being displayed by default.
+
+@ is used to completely hide the line (e.g. for mkdir -p)
+$(hide) to hide it, unless showcommands is used
+
+711
+Thu Jun 10 21:09:53 2010 +0000
+Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAzX//+zk=
+Bytes: 46
+I guess that cp -f might be a bit better here.
+
