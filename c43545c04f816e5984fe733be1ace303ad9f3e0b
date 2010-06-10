@@ -1,0 +1,11 @@
+Revision: c43545c04f816e5984fe733be1ace303ad9f3e0b
+Patch-set: 1
+File: core/Makefile
+
+689
+Thu Jun 10 21:11:59 2010 +0000
+Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAzX//+zY=
+Bytes: 123
+by convention, PRIVATE_XXX variable must be declared per-target, and not globally. What bug is this patch supposed to fix ?
+
