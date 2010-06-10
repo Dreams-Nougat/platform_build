@@ -1,0 +1,11 @@
+Revision: e60561abb2d9f643248904f0e470b6215e3fef4d
+Patch-set: 1
+File: core/dynamic_binary.mk
+
+128
+Thu Jun 10 17:56:53 2010 +0000
+Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAzX//+2A=
+Bytes: 67
+I'm pretty sure you want to keep this dependency if SOSLIM is used.
+
