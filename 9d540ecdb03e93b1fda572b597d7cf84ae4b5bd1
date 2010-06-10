@@ -12,10 +12,26 @@ I believe you would want to use @ or $(hide) before each command to prevent them
 @ is used to completely hide the line (e.g. for mkdir -p)
 $(hide) to hide it, unless showcommands is used
 
+710
+Thu Jun 10 21:43:05 2010 +0000
+Author: Bruce J Beare <1003360@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAAzX//+zo=
+UUID: AAAAzX//+yw=
+Bytes: 4
+Done
+
 711
 Thu Jun 10 21:09:53 2010 +0000
 Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: AAAAzX//+zk=
 Bytes: 46
 I guess that cp -f might be a bit better here.
+
+711
+Thu Jun 10 21:43:05 2010 +0000
+Author: Bruce J Beare <1003360@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAAzX//+zk=
+UUID: AAAAzX//+y0=
+Bytes: 4
+Done
 
