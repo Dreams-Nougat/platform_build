@@ -9,3 +9,14 @@ UUID: AAAAzX//+zY=
 Bytes: 123
 by convention, PRIVATE_XXX variable must be declared per-target, and not globally. What bug is this patch supposed to fix ?
 
+689
+Thu Jun 10 21:40:02 2010 +0000
+Author: Bruce J Beare <1003360@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAAzX//+zY=
+UUID: AAAAzX//+y8=
+Bytes: 198
+Is the original code considered correct then?
+I've not seen that sort of construct before.
+
+I made the change because in my builds (for the other comments), PRIVATE_SYSTEM_TAR was never getting set.
+
