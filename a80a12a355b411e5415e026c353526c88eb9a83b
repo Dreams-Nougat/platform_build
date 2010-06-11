@@ -34,3 +34,11 @@ $(INSTALLED_BOOTTARBALL_TARGET): PRIVATE_BOOT_TAR := $(boot_tar)
 
 The PRIVATE_* variables are "target specific variables"  See http://www.gnu.org/software/make/manual/make.html#Target_002dspecific
 
+724
+Fri Jun 11 19:11:26 2010 +0000
+Author: Bruce J Beare <1003360@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAAzX//+wc=
+UUID: AAAAzX//+sk=
+Bytes: 23
+Done (all of the above)
+
