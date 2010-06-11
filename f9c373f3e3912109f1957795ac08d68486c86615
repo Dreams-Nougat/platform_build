@@ -1,0 +1,15 @@
+Revision: f9c373f3e3912109f1957795ac08d68486c86615
+Patch-set: 2
+File: core/definitions.mk
+
+1044
+Fri Jun 11 06:44:54 2010 +0000
+Author: Joe Onorato <1000701@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAzX//+vs=
+Bytes: 394
+I don't like adding these ifs all over the place.  Can this go into build/core/combo somewhere?
+
+Can those define STRIPPER and STRIPPER_COMMAND, where STRIPPER is the binary (the same as SOSLIM) for dependency purposes, and STRIPPER_COMMAND is the commandline that's run?  Alternatively, could we write a script that converts the arguments for the alternate strippers?
+
+What is this for anyway?
+
