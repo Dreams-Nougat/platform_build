@@ -13,3 +13,14 @@ Can those define STRIPPER and STRIPPER_COMMAND, where STRIPPER is the binary (th
 
 What is this for anyway?
 
+1044
+Fri Jun 11 14:29:44 2010 +0000
+Author: Bruce J Beare <1003360@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAAzX//+vs=
+UUID: AAAAzX//+u4=
+Bytes: 219
+I'll take a look at this. Thanks.
+
+We use 'strip --strip-debug' instead of soslim... since soslim isn't ported to x86.
+BTW... what was the bug that required you to use soslim instead of existing objcopy and strip tools?
+
