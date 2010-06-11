@@ -1,0 +1,15 @@
+Revision: 945a24c85b4a26bd3fedf82420a390dba464cfa0
+Patch-set: 4
+File: core/definitions.mk
+
+1044
+Fri Jun 11 22:52:19 2010 +0000
+Author: Bruce J Beare <1003360@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAzX//+o8=
+Bytes: 308
+I'm not all that happy with having the ifeq here. I would prefer (as suggested) to do something like:
+
+$(STRIP_COMMAND)
+
+And have STRIP_COMMAND have everything that it needs. The problem is that I don't see how to defer the interpretation of $< and $@. If you have a suggestion... I'll be glad to go with it.
+
