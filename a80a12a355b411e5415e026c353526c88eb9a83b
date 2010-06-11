@@ -1,0 +1,36 @@
+Revision: a80a12a355b411e5415e026c353526c88eb9a83b
+Patch-set: 2
+File: core/Makefile
+
+709
+Fri Jun 11 00:22:00 2010 +0000
+Author: Joe Onorato <1000701@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAzX//+wo=
+Bytes: 80
+Should be:
+$(hide) echo "Target boot fs tarball: $(INSTALLED_BOOTTARBALL_TARGET)
+
+710
+Fri Jun 11 00:22:00 2010 +0000
+Author: Joe Onorato <1000701@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAzX//+wk=
+Bytes: 50
+All of these lines should be prefixed with $(hide)
+
+714
+Fri Jun 11 00:22:00 2010 +0000
+Author: Joe Onorato <1000701@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAzX//+wg=
+Bytes: 16
+Please fix tabs.
+
+724
+Fri Jun 11 00:22:00 2010 +0000
+Author: Joe Onorato <1000701@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAAzX//+wc=
+Bytes: 206
+Should be
+$(INSTALLED_BOOTTARBALL_TARGET): PRIVATE_BOOT_TAR := $(boot_tar)
+
+The PRIVATE_* variables are "target specific variables"  See http://www.gnu.org/software/make/manual/make.html#Target_002dspecific
+
