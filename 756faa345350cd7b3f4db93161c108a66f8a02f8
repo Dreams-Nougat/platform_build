@@ -17,3 +17,11 @@ UUID: AAAAzX//+w0=
 Bytes: 204
 it's ok. I think the real issue is that you should also define PRIVATE_SYSTEM_TAR for the systemtarball-nodeps target below. I can only assyme that this is the one that is missing the value of system_tar.
 
+689
+Fri Jun 11 00:22:15 2010 +0000
+Author: Joe Onorato <1000701@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAAzX//+w0=
+UUID: AAAAzX//+wY=
+Bytes: 203
+No, it's not ok.  The PRIVATE_* variables are scoped to a particular goal.  This is overwritten by https://review.source.android.com/#patch,sidebyside,15111,2,core/Makefile  See my comments on that file.
+
