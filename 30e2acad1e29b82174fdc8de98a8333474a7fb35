@@ -1,0 +1,36 @@
+Revision: 30e2acad1e29b82174fdc8de98a8333474a7fb35
+Patch-set: 5
+File: tools/releasetools/amend_generator.py
+
+196
+Thu Jun 17 22:59:04 2010 +0000
+Author: Doug Zongker <1002268@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAA0X///+A=
+Bytes: 42
+This whole file shouldn't exist in master.
+
+File: tools/releasetools/both_generator.py
+
+58
+Thu Jun 17 22:59:04 2010 +0000
+Author: Doug Zongker <1002268@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAA0X///98=
+Bytes: 21
+this file's gone too.
+
+File: tools/releasetools/ota_from_target_files
+
+51
+Thu Jun 17 22:59:04 2010 +0000
+Author: Doug Zongker <1002268@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAA0X///+Q=
+Bytes: 72
+maybe "--use_aslr"?  --aslr_mode sounds like it should take an argument.
+
+865
+Thu Jun 17 22:59:04 2010 +0000
+Author: Doug Zongker <1002268@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAA0X///+M=
+Bytes: 45
+long option name doesn't match the help text.
+
