@@ -1,0 +1,11 @@
+Revision: 734f2e0bfffa1fe36311cde8ab680d25c9543ee1
+Patch-set: 1
+File: envsetup.sh
+
+1085
+Wed Jul 07 21:56:33 2010 +0000
+Author: Jean-Baptiste Queru <1000660@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAA0n//+qI=
+Bytes: 36
+I don't think that'll work on MacOS.
+
