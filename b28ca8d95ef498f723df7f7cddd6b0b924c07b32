@@ -1,0 +1,11 @@
+Revision: b28ca8d95ef498f723df7f7cddd6b0b924c07b32
+Patch-set: 1
+File: core/combo/select.mk
+
+31
+Thu Jul 08 21:21:46 2010 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAA0n//+h0=
+Bytes: 45
+Sorry, I am wondering where STRIP is defined.
+
