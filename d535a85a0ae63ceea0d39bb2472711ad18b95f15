@@ -1,0 +1,11 @@
+Revision: d535a85a0ae63ceea0d39bb2472711ad18b95f15
+Patch-set: 1
+File: core/cleanbuild.mk
+
+124
+Thu Jul 08 02:05:00 2010 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAA0n//+oc=
+Bytes: 288
+I think your change is equivalent to removing $(building_sdk) from $(current_build_config), so that if first "make PRODUCT-xxx-xxx sdk" then "make PRODUCT-xxx-xxx" (or vice versa) won't trigger a clean build. I do believe that such 2 builds are essentially different, so we still need it.
+
