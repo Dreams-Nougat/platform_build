@@ -9,3 +9,12 @@ UUID: AAAA0n//+h0=
 Bytes: 45
 Sorry, I am wondering where STRIP is defined.
 
+31
+Thu Jul 08 21:27:43 2010 +0000
+Author: Bruce J Beare <1003360@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAA0n//+h0=
+UUID: AAAA0n//+ho=
+Bytes: 115
+I was trying to be consistent here.
+In this case... I believe it could potentially be passed in in the environment.
+
