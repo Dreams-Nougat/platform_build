@@ -1,0 +1,11 @@
+Revision: a67bc11058f47eeba1f8bb30173c73ec0af8fcce
+Patch-set: 1
+File: libs/host/CopyFile.c
+
+9
+Thu Jul 08 06:26:04 2010 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAA0n//+ns=
+Bytes: 41
+I guess this is why utimes() is not used.
+
