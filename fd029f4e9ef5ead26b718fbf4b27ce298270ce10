@@ -9,3 +9,25 @@ UUID: AAAA0n//+uk=
 Bytes: 167
 You have to change the value of PRIVATE_ARM_MODE, instead of defining a new var. Because PRIVATE_ARM_MODE is a target specific var, it may vary with different targets.
 
+764
+Thu Jul 08 22:12:29 2010 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAA0n//+gg=
+Bytes: 444
+Hi Chih-Wei,
+
+It seems PRIVATE_ARM_MODE is only used for logging purpose. (A bit weird to me).
+How about to change binary.mk:
+LOCAL_ARM_MODE := $(strip $(LOCAL_ARM_MODE))
+ifeq ($(TARGET_ARCH),arm)
+arm_objects_mode := $(if $(LOCAL_ARM_MODE),$(LOCAL_ARM_MODE),arm)
+normal_objects_mode := $(if $(LOCAL_ARM_MODE),$(LOCAL_ARM_MODE),thumb)
+else
+arm_objects_mode :=
+normal_objects_mode :=
+endif
+
+I think the effect is the same as your change.
+
+thanks!
+
