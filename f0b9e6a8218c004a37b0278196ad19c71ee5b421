@@ -1,0 +1,11 @@
+Revision: f0b9e6a8218c004a37b0278196ad19c71ee5b421
+Patch-set: 2
+File: core/binary.mk
+
+65
+Fri Jul 09 02:54:31 2010 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAA0n//+bI=
+Bytes: 190
+You'd better explicitly set those vars to empty in the else case, because the makefile will be included for multiple module. (Though it seems unlikely TARGET_ARCH will change across modules)
+
