@@ -9,3 +9,13 @@ UUID: AAAA0n//+bI=
 Bytes: 190
 You'd better explicitly set those vars to empty in the else case, because the makefile will be included for multiple module. (Though it seems unlikely TARGET_ARCH will change across modules)
 
+65
+Fri Jul 09 03:05:10 2010 +0000
+Author: Chih-Wei Huang <1003004@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAA0n//+bI=
+UUID: AAAA0n//+bA=
+Bytes: 212
+Hmm, I don't know. As you said, TARGET_ARCH will not change across modules, and the vars are just empty by default. So originally I think the else part is redundant.
+
+But if you insist, I'll upload another patch.
+
