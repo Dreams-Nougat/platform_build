@@ -1,0 +1,13 @@
+Revision: af1c7a5168ce2b6dba1393c413c627366d464cd7
+Patch-set: 2
+File: envsetup.sh
+
+1094
+Mon Jul 12 17:24:41 2010 +0000
+Author: Joe Onorato <1000701@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAA0n//+NM=
+Bytes: 217
+I don't mind vendor/*/*/vendorsetup.sh, but I don't want to add build/target/board/*/vendorsetup.sh.  It's just distributing this needlessly throughout the tree when every single checkout has the build/ project.
+
+-joe
+
