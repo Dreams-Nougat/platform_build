@@ -11,3 +11,11 @@ I don't mind vendor/*/*/vendorsetup.sh, but I don't want to add build/target/boa
 
 -joe
 
+1094
+Mon Jul 12 17:27:29 2010 +0000
+Author: Bruce J Beare <1003360@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAA0n//+NM=
+UUID: AAAA0n//+NA=
+Bytes: 208
+Ok on not having build/target/board/*/vendorsetup.sh. I still think that it is better to put the default lunch registrations there ... but given  that they are going in envsetup.sh, this path isn't necessary.
+
