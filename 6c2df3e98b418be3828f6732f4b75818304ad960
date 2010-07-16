@@ -1,0 +1,11 @@
+Revision: 6c2df3e98b418be3828f6732f4b75818304ad960
+Patch-set: 1
+File: target/product/full_x86.mk
+
+26
+Fri Jul 16 01:55:33 2010 +0000
+Author: Chih-Wei Huang <1003004@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAA1X///wo=
+Bytes: 156
+I'm curious how net.eth0.startonboot works. I check the code of init and init.rc, but can't find anywhere that respects this variable. Could you explain it?
+
