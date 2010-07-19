@@ -1,0 +1,11 @@
+Revision: 82de94e716a0184f48c009b7e476e3daba9f5c84
+Patch-set: 1
+File: core/config.mk
+
+339
+Mon Jul 19 20:53:09 2010 +0000
+Author: Joe Onorato <1000701@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAA2H///5Y=
+Bytes: 182
+Would you mind putting it at the end of the file?  That way we can get everything that's in this file (which seems reasonable, given that this is the file that get_build_var invokes)
+
