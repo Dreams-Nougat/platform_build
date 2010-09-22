@@ -1,0 +1,11 @@
+Revision: 5360e7c2e6d66da1d7f781fcb85a380d9fafd610
+Patch-set: 1
+File: core/main.mk
+
+74
+Wed Sep 22 17:57:52 2010 +0000
+Author: Jean-Baptiste Queru <1000660@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAA7n///e0=
+Bytes: 34
+"now" should be "beyond froyo/2.2"
+
