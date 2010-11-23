@@ -1,0 +1,15 @@
+Revision: 5ac53232096f0585a863901d8394c6e12eda2322
+Patch-set: 1
+File: core/Makefile
+
+1319
+Tue Nov 23 23:33:08 2010 +0000
+Author: Joe Onorato <1000701@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAA9n///Dc=
+Bytes: 291
+How about this instead:
+
+-include $(sort $(wildcard vendor/*/build/tasks/*.mk))
+
+I'd rather not have them in core, because that implies that it's part of the build system proper, which these aren't.  Also, we use wildcard and should sort them so that it's not subject to filesystem ordering.
+
