@@ -1,0 +1,11 @@
+Revision: ade3b0603ec3ffc0112c54a4f2eb22c349a23840
+Patch-set: 1
+File: envsetup.sh
+
+34
+Thu Dec 02 18:40:17 2010 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAA9n//90g=
+Bytes: 117
+I am afraid you have to be in $TOP to run this script, since the make command use relative path build/core/config.mk.
+
