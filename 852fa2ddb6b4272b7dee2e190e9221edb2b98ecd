@@ -1,0 +1,18 @@
+Revision: 852fa2ddb6b4272b7dee2e190e9221edb2b98ecd
+Patch-set: 1
+File: core/definitions.mk
+
+1004
+Thu Jan 13 19:02:13 2011 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAA+3//8wA=
+Bytes: 11
+PRIVATE_CXX
+
+1164
+Thu Jan 13 19:02:13 2011 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAA+3//8v8=
+Bytes: 5
+ditto
+
