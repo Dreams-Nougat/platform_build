@@ -29,6 +29,14 @@ looks like sound isn't expected to work. I'll remove it from AndroidBoard.mk.
 
 I see that it is in the generic one... does sound work in the ARM emulator?
 
+12
+Wed Feb 09 23:14:53 2011 +0000
+Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAA+3//5Ts=
+UUID: AAAA+3//5Tk=
+Bytes: 23
+Yes, it certainly does.
+
 File: target/board/generic_x86/README.txt
 
 1
