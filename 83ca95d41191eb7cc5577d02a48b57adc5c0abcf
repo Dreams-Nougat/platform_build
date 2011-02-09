@@ -1,0 +1,20 @@
+Revision: 83ca95d41191eb7cc5577d02a48b57adc5c0abcf
+Patch-set: 1
+File: target/board/generic_x86/BoardConfig.mk
+
+12
+Wed Feb 09 22:01:00 2011 +0000
+Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAA+3//5V0=
+Bytes: 155
+really? If true, I think it would make sense to put a comment to explain that this forces the guest system to use the proper goldfish-specific device file.
+
+File: target/board/generic_x86/README.txt
+
+1
+Wed Feb 09 22:01:00 2011 +0000
+Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAA+3//5V4=
+Bytes: 153
+This seems to be a copy of the generic README.txt. It would be so much better if you could replace that with a proper description of generic_x86 instead.
+
