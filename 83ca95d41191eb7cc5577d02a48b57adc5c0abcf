@@ -9,6 +9,16 @@ UUID: AAAA+3//5V0=
 Bytes: 155
 really? If true, I think it would make sense to put a comment to explain that this forces the guest system to use the proper goldfish-specific device file.
 
+12
+Wed Feb 09 22:49:57 2011 +0000
+Author: Bruce J Beare <1003360@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAA+3//5V0=
+UUID: AAAA+3//5U4=
+Bytes: 146
+I think that you are right... the goldfish config file that I am using doesn't set CONFIG_SOUND.
+
+Jun... do we have sound working on the emulator?
+
 File: target/board/generic_x86/README.txt
 
 1
@@ -17,4 +27,13 @@ Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: AAAA+3//5V4=
 Bytes: 153
 This seems to be a copy of the generic README.txt. It would be so much better if you could replace that with a proper description of generic_x86 instead.
+
+1
+Wed Feb 09 22:49:57 2011 +0000
+Author: Bruce J Beare <1003360@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAA+3//5V4=
+UUID: AAAA+3//5U0=
+Bytes: 70
+It is. :).
+Sure... I'll change it to generic_x86 with the next upload.
 
