@@ -37,6 +37,14 @@ UUID: AAAA+3//5Tk=
 Bytes: 23
 Yes, it certainly does.
 
+12
+Mon Feb 14 19:14:03 2011 +0000
+Author: Bruce J Beare <1003360@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAA+3//5Tk=
+UUID: AAAA+3//44I=
+Bytes: 45
+WE have audio working now... was a qemu tweak
+
 File: target/board/generic_x86/README.txt
 
 1
