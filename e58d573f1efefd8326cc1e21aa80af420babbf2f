@@ -1,0 +1,11 @@
+Revision: e58d573f1efefd8326cc1e21aa80af420babbf2f
+Patch-set: 1
+File: tools/apriori/apriori.c
+
+1423
+Thu Feb 17 18:22:57 2011 +0000
+Author: Kenny Root <1002975@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAA+3//4ZY=
+Bytes: 98
+I'd be fine with you redoing all the formatting here to eliminate the tabs in this #ifdef section.
+
