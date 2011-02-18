@@ -1,0 +1,22 @@
+Revision: ebb327c25f609eeded09674004eb448539757ee3
+Patch-set: 4
+File: target/board/generic_x86/AndroidBoard.mk
+
+3
+Fri Feb 18 20:08:49 2011 +0000
+Author: Jeff Brown <1003957@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAA+3//4Nw=
+Bytes: 64
+What do you need the tuttle keymap for?
+
+We deleted it recently.
+
+File: target/board/generic_x86/device.mk
+
+2
+Fri Feb 18 20:08:49 2011 +0000
+Author: Jeff Brown <1003957@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAA+3//4No=
+Bytes: 39
+New file.  Bump copyright date to 2011.
+
