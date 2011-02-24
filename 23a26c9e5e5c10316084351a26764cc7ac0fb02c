@@ -9,6 +9,15 @@ UUID: AAAA+3//3oE=
 Bytes: 4
 2011
 
+2
+Thu Feb 24 17:32:12 2011 +0000
+Author: Bruce J Beare <1003360@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAA+3//3oE=
+UUID: AAAA+3//3lI=
+Bytes: 123
+Sure you want this changed?
+This is a copy of a file from elsewhere... and the original copyright date is probably correct.
+
 File: target/product/generic_x86.mk
 
 2
@@ -17,4 +26,13 @@ Author: Xavier Ducrohet <1001414@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: AAAA+3//3oA=
 Bytes: 4
 2011
+
+2
+Thu Feb 24 17:32:12 2011 +0000
+Author: Bruce J Beare <1003360@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAA+3//3oA=
+UUID: AAAA+3//3lM=
+Bytes: 123
+Sure you want this changed?
+This is a copy of a file from elsewhere... and the original copyright date is probably correct.
 
