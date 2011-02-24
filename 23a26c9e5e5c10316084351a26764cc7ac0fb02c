@@ -1,0 +1,20 @@
+Revision: 23a26c9e5e5c10316084351a26764cc7ac0fb02c
+Patch-set: 5
+File: target/board/generic_x86/device.mk
+
+2
+Thu Feb 24 01:44:05 2011 +0000
+Author: Xavier Ducrohet <1001414@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAA+3//3oE=
+Bytes: 4
+2011
+
+File: target/product/generic_x86.mk
+
+2
+Thu Feb 24 01:44:05 2011 +0000
+Author: Xavier Ducrohet <1001414@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAA+3//3oA=
+Bytes: 4
+2011
+
