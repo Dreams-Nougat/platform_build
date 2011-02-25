@@ -1,5 +1,14 @@
 Revision: 23a26c9e5e5c10316084351a26764cc7ac0fb02c
 Patch-set: 5
+File: target/board/generic_x86/BoardConfig.mk
+
+11
+Fri Feb 25 02:26:13 2011 +0000
+Author: Chih-Wei Huang <1003004@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAA+3//3eQ=
+Bytes: 91
+We should keep the "generic_x86" target as generic as possible. So I don't agree this line.
+
 File: target/board/generic_x86/device.mk
 
 2
@@ -17,6 +26,37 @@ UUID: AAAA+3//3lI=
 Bytes: 123
 Sure you want this changed?
 This is a copy of a file from elsewhere... and the original copyright date is probably correct.
+
+2
+Fri Feb 25 02:26:13 2011 +0000
+Author: Chih-Wei Huang <1003004@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAA+3//3lI=
+UUID: AAAA+3//3eg=
+Bytes: 63
+I agree 2011. It should reflect the date the file been created.
+
+22
+Fri Feb 25 02:26:13 2011 +0000
+Author: Chih-Wei Huang <1003004@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAA+3//3ec=
+Bytes: 76
+What's the purpose of the ril properties? Is it meaningful to an x86 target?
+
+26
+Fri Feb 25 02:26:13 2011 +0000
+Author: Chih-Wei Huang <1003004@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAA+3//3eY=
+Bytes: 27
+The line should be removed.
+
+File: target/board/generic_x86/system.prop
+
+6
+Fri Feb 25 02:26:13 2011 +0000
+Author: Chih-Wei Huang <1003004@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAA+3//3eU=
+Bytes: 19
+Does it make sense?
 
 File: target/product/generic_x86.mk
 
