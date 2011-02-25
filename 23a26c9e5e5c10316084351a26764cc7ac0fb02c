@@ -44,6 +44,14 @@ UUID: AAAA+3//3eg=
 Bytes: 63
 I agree 2011. It should reflect the date the file been created.
 
+2
+Fri Feb 25 03:10:55 2011 +0000
+Author: Xavier Ducrohet <1001414@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAA+3//3lI=
+UUID: AAAA+3//3dk=
+Bytes: 59
+if it's a copy of a file from somewhere else, this is fine.
+
 22
 Fri Feb 25 02:26:13 2011 +0000
 Author: Chih-Wei Huang <1003004@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -84,4 +92,12 @@ UUID: AAAA+3//3lM=
 Bytes: 123
 Sure you want this changed?
 This is a copy of a file from elsewhere... and the original copyright date is probably correct.
+
+2
+Fri Feb 25 03:10:55 2011 +0000
+Author: Xavier Ducrohet <1001414@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAA+3//3lM=
+UUID: AAAA+3//3dg=
+Bytes: 18
+yeah this is fine.
 
