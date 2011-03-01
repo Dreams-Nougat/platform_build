@@ -18,6 +18,16 @@ Bytes: 211
 Feel free to build it however you like.
 This target is really intended to be used with the IA qemu emulator. The emulator supports ATOM. We want to get the best possible performance with it so we build for atom.
 
+11
+Tue Mar 01 02:09:01 2011 +0000
+Author: Chih-Wei Huang <1003004@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAA+3//3eA=
+UUID: AAAA/H///60=
+Bytes: 184
+You could enable x86-atom on your build (by buildspec.mk or something similar), but don't enable it by default.
+
+Suppose you enable armv7 for the generic build, would it be acceptable?
+
 File: target/board/generic_x86/device.mk
 
 2
