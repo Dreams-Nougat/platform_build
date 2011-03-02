@@ -1,0 +1,13 @@
+Revision: ba366c4fb3b8629fbd9221836f9305efadee9b93
+Patch-set: 5
+File: target/board/vbox_x86/BoardConfig.mk
+
+21
+Wed Mar 02 16:42:15 2011 +0000
+Author: Bruce J Beare <1003360@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAA/H///mY=
+Bytes: 333
+Since we don't have an init.vbox.rc or a init.generic_x86.rc file... it doesn't matter what androidboot.hardware is set to. IF we do end up with such an init file, we'll want to reflect it here.
+
+Chih-Wei does have a point... but it is unclear which way is better just now.. If David would like this changed... I certainly can do so.
+
