@@ -1,0 +1,11 @@
+Revision: 18a130e98a654b99057d974f563a645dbb96010c
+Patch-set: 8
+File: core/Makefile
+
+1383
+Mon Mar 21 23:37:52 2011 +0000
+Author: Jun Nakajima <1005562@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAA/X///H8=
+Bytes: 53
+This can fail silently, and the copy does not happen.
+
