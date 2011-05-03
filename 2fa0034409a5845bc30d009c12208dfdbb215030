@@ -9,3 +9,17 @@ UUID: AAAA/3//++s=
 Bytes: 117
 Why use an environmental variable? is there any var in the BoardConfig that indicates OpenGL HW emulation is enabled?
 
+26
+Tue May 03 16:33:43 2011 +0000
+Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAA/3//++s=
+UUID: AAAA/3//++c=
+Bytes: 512
+There is no such BoardConfig variable, and we're still in experimental phase.
+
+This patch is not intended to be submitted directly. I have uploaded it to share it with GraphTech.
+
+Also, some wallpapers do work when OpenGL ES emulation is *not* enabled, and fail when it is enabled. So having different env variables to control the build helps debug the situation.
+
+Apart from that, where would you recommend putting this for all emulator products exactly (full-eng, full_x86-eng, goop-eng, sdk-eng, sdk_x86-eng)?
+
