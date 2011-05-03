@@ -1,0 +1,11 @@
+Revision: 2fa0034409a5845bc30d009c12208dfdbb215030
+Patch-set: 1
+File: target/product/full.mk
+
+26
+Tue May 03 16:26:12 2011 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAA/3//++s=
+Bytes: 117
+Why use an environmental variable? is there any var in the BoardConfig that indicates OpenGL HW emulation is enabled?
+
