@@ -23,3 +23,11 @@ Also, some wallpapers do work when OpenGL ES emulation is *not* enabled, and fai
 
 Apart from that, where would you recommend putting this for all emulator products exactly (full-eng, full_x86-eng, goop-eng, sdk-eng, sdk_x86-eng)?
 
+26
+Tue May 03 16:58:51 2011 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAA/3//++c=
+UUID: AAAA/3//++I=
+Bytes: 81
+Their nearest ancestor is core.mk, which is unfortunately the base of all builds.
+
