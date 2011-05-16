@@ -9,6 +9,14 @@ UUID: AAABAn///9Y=
 Bytes: 124
 Generally speaking, shouldn't this flag be the default with the x86 toolchain? Same for -Wa,--noexecstack or f-unwind-tables
 
+89
+Mon May 16 17:05:02 2011 +0000
+Author: dougkwan <1003498@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAABAn///9Y=
+UUID: AAABAn///7w=
+Bytes: 107
+We have -fno-short-enums because enum size is not specified in ARM EABI.  Do we have the same issue on x86?
+
 94
 Mon May 16 14:23:38 2011 +0000
 Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
