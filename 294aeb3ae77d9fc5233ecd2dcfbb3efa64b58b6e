@@ -1,0 +1,25 @@
+Revision: 294aeb3ae77d9fc5233ecd2dcfbb3efa64b58b6e
+Patch-set: 3
+File: core/combo/TARGET_linux-x86.mk
+
+89
+Mon May 16 14:23:38 2011 +0000
+Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAABAn///9Y=
+Bytes: 124
+Generally speaking, shouldn't this flag be the default with the x86 toolchain? Same for -Wa,--noexecstack or f-unwind-tables
+
+94
+Mon May 16 14:23:38 2011 +0000
+Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAABAn///9c=
+Bytes: 82
+it looks line this line and a few below are already defined above, started from 82
+
+123
+Mon May 16 14:23:38 2011 +0000
+Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAABAn///9U=
+Bytes: 77
+Also, this should really be defined by default by the toolchain, preferrably.
+
