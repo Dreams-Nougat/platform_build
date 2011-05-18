@@ -17,12 +17,32 @@ UUID: AAABAn///7w=
 Bytes: 107
 We have -fno-short-enums because enum size is not specified in ARM EABI.  Do we have the same issue on x86?
 
+89
+Wed May 18 20:46:00 2011 +0000
+Author: Mark Horn <1005665@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAABAn///9Y=
+UUID: AAABAn///dE=
+Bytes: 407
+The x86 toolchain (4.4.3) does not have any of these implemented as defaults.
+I've heard conflicting directions regarding adding them as defaults.
+For now, we need to leave these in place to ensure the proper generation of executables.
+
+IF we get the direction to implements these in the toolchain, updates to this file and the NDK build scripts will need to be done and committed with the update toolchain.
+
 94
 Mon May 16 14:23:38 2011 +0000
 Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: AAABAn///9c=
 Bytes: 82
 it looks line this line and a few below are already defined above, started from 82
+
+94
+Wed May 18 20:46:00 2011 +0000
+Author: Mark Horn <1005665@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAABAn///9c=
+UUID: AAABAn///dA=
+Bytes: 71
+Good catch, I'll update the Patch Set to remove the dups and re-upload.
 
 123
 Mon May 16 14:23:38 2011 +0000
