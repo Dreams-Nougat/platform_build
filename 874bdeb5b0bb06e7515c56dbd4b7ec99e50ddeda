@@ -1,0 +1,13 @@
+Revision: 874bdeb5b0bb06e7515c56dbd4b7ec99e50ddeda
+Patch-set: 3
+File: tools/releasetools/ota_from_target_files
+
+456
+Wed Jun 01 16:19:14 2011 +0000
+Author: Doug Zongker <1002268@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAABB3///4c=
+Bytes: 248
+Calling sys.exit() here will leave behind some temp files in /tmp.  Throw an exception instead, and put the call to common.Cleanup() in main() in a finally block.
+
+Also, we indent python 2 spaces, not 6, and there should be no space before a colon.
+
