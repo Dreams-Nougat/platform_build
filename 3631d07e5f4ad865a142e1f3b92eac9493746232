@@ -1,0 +1,18 @@
+Revision: 3631d07e5f4ad865a142e1f3b92eac9493746232
+Patch-set: 2
+File: tools/droiddoc/src/Comment.java
+
+327
+Wed Jun 08 18:22:19 2011 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAABCH///0c=
+Bytes: 49
+Could you replace the tab indentation with space?
+
+351
+Wed Jun 08 18:22:19 2011 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAABCH///0Y=
+Bytes: 41
+It's really strange. Jesse may know more.
+
