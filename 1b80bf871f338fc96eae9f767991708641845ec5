@@ -11,3 +11,11 @@ You can not enable dex-preopt on Mac.
 Actually you can build emulator with dex-preopt with "make PRODUCT-full-user" on Linux.
 See evaluation of WITH_DEXPREOPT in build/core/main.mk.
 
+19
+Fri Jun 17 17:41:03 2011 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAABDX///38=
+UUID: AAABDX///3w=
+Bytes: 171
+Btw, in the internal master tree the logic has been changed to: any user builds on Linux will be with dex-preopt. (ie, the PRODUCT-xxx-user syntax is not needed any more).
+
