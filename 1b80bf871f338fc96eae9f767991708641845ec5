@@ -1,0 +1,13 @@
+Revision: 1b80bf871f338fc96eae9f767991708641845ec5
+Patch-set: 1
+File: target/board/generic/BoardConfig.mk
+
+19
+Fri Jun 17 17:37:47 2011 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAABDX///38=
+Bytes: 181
+You can not enable dex-preopt on Mac.
+Actually you can build emulator with dex-preopt with "make PRODUCT-full-user" on Linux.
+See evaluation of WITH_DEXPREOPT in build/core/main.mk.
+
