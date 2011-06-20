@@ -19,3 +19,19 @@ UUID: AAABDX///3w=
 Bytes: 171
 Btw, in the internal master tree the logic has been changed to: any user builds on Linux will be with dex-preopt. (ie, the PRODUCT-xxx-user syntax is not needed any more).
 
+19
+Mon Jun 20 12:58:45 2011 +0000
+Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAABDX///3w=
+UUID: AAABDX///us=
+Bytes: 107
+Yes, but the point is to enable this even for userdebug builds, like the SDK platform images. Thanks anyway
+
+19
+Mon Jun 20 12:58:45 2011 +0000
+Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAABDX///38=
+UUID: AAABDX///uw=
+Bytes: 195
+Ow, that's surprising. I will add a check-for-Linux bit then because I really want the Dex preopt generation for any future SDK platform image (and for the full-eng / full_x86-eng stuff as well).
+
