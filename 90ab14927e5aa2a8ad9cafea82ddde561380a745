@@ -1,0 +1,29 @@
+Revision: 90ab14927e5aa2a8ad9cafea82ddde561380a745
+Patch-set: 1
+File: core/combo/TARGET_linux-arm.mk
+
+50
+Tue Jun 21 07:23:53 2011 +0000
+Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAABDX///do=
+Bytes: 144
+I think it would be even better if you added a small explanation / use case for this 'feature' here, i.e. a comment explaining the cygwin usage.
+
+File: core/dumpvar.mk
+
+15
+Tue Jun 21 07:23:53 2011 +0000
+Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAABDX///ds=
+Bytes: 139
+It would be nicer if the use of spaces/tabs would be consistent here. Personally, I recommend avoiding tabs whenever possible in Makefiles.
+
+File: envsetup.sh
+
+109
+Tue Jun 21 07:23:53 2011 +0000
+Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAABDX///dk=
+Bytes: 99
+how about using a variable to avoid repeating the path, and make it easier to update in the future?
+
