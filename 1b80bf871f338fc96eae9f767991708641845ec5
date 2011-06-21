@@ -35,3 +35,11 @@ UUID: AAABDX///uw=
 Bytes: 195
 Ow, that's surprising. I will add a check-for-Linux bit then because I really want the Dex preopt generation for any future SDK platform image (and for the full-eng / full_x86-eng stuff as well).
 
+19
+Tue Jun 21 19:04:02 2011 +0000
+Author: Xavier Ducrohet <1001414@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAABDX///uw=
+UUID: AAABDX///Uc=
+Bytes: 140
+doing the pre-opt only on linux is fine since we now only ship the system image that is built by linux. It is used by win/mac users as well.
+
