@@ -9,6 +9,14 @@ UUID: AAABDX///do=
 Bytes: 144
 I think it would be even better if you added a small explanation / use case for this 'feature' here, i.e. a comment explaining the cygwin usage.
 
+50
+Tue Jun 21 13:10:53 2011 +0000
+Author: raphael <1001100@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAABDX///do=
+UUID: AAABDX///bM=
+Bytes: 4
+Done
+
 File: core/dumpvar.mk
 
 15
@@ -18,6 +26,15 @@ UUID: AAABDX///ds=
 Bytes: 139
 It would be nicer if the use of spaces/tabs would be consistent here. Personally, I recommend avoiding tabs whenever possible in Makefiles.
 
+15
+Tue Jun 21 13:10:53 2011 +0000
+Author: raphael <1001100@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAABDX///ds=
+UUID: AAABDX///bI=
+Bytes: 128
+Done.
+My editor is setup to always use spaces, but I wanted to be consistent thus the use of tabs. Apparently I missed one line.
+
 File: envsetup.sh
 
 109
@@ -26,4 +43,12 @@ Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: AAABDX///dk=
 Bytes: 99
 how about using a variable to avoid repeating the path, and make it easier to update in the future?
+
+109
+Tue Jun 21 13:10:53 2011 +0000
+Author: raphael <1001100@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAABDX///dk=
+UUID: AAABDX///a8=
+Bytes: 4
+Done
 
