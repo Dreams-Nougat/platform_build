@@ -1,0 +1,11 @@
+Revision: dadaf4f3eded4d5a81094f30503313ca9544c070
+Patch-set: 1
+File: core/config.mk
+
+28
+Fri Jan 13 18:20:16 2012 +0000
+Author: Kenny Root <1002975@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAACCX////A=
+Bytes: 150
+Hm, it might not be best to have this here. How many projects really need it? LOCAL_C_INCLUDES in every Android.mk that needs it should be sufficient.
+
