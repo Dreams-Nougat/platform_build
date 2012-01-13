@@ -1,0 +1,13 @@
+Revision: 79647c2322448c8232b54a38cb397b5b5dcdb6e4
+Patch-set: 1
+File: core/legacy_prebuilts.mk
+
+19
+Fri Jan 13 18:21:43 2012 +0000
+Author: Kenny Root <1002975@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAACCX///+0=
+Bytes: 146
+You should not add new prebuilts to this file as this comment says.
+
+If it needs to be in all configurations, look at build/target/product/core.mk
+
