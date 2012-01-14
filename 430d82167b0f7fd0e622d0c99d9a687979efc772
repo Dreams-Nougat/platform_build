@@ -27,3 +27,11 @@ Bytes: 178
 We called that an "unbundled" apps, which should also be built against a given SDK (LOCAL_SDK_VERSION := 8, for example).
 In that case, you should use LOCAL_JNI_SHARED_LIBRARIES.
 
+296
+Sat Jan 14 02:47:52 2012 +0000
+Author: Chih-Hung Chou <1002612@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAACC3///9c=
+UUID: AAACC3///9U=
+Bytes: 22
+ok. sounds reasonable.
+
