@@ -18,3 +18,12 @@ UUID: AAACC3///9w=
 Bytes: 265
 and how do you build the apps? by using the "mm" or build them all? my idea is to separate the "mm" from the whole image building. so if developer make in the package sub-folder, the jni library will be included in the APK while the building the system image won't.
 
+296
+Sat Jan 14 02:01:05 2012 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAACC3///9w=
+UUID: AAACC3///9c=
+Bytes: 178
+We called that an "unbundled" apps, which should also be built against a given SDK (LOCAL_SDK_VERSION := 8, for example).
+In that case, you should use LOCAL_JNI_SHARED_LIBRARIES.
+
