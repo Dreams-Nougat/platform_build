@@ -9,3 +9,11 @@ UUID: AAACCX////A=
 Bytes: 150
 Hm, it might not be best to have this here. How many projects really need it? LOCAL_C_INCLUDES in every Android.mk that needs it should be sufficient.
 
+28
+Sat Jan 14 00:38:20 2012 +0000
+Author: Joe Onorato <1000701@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAACCX////A=
+UUID: AAACCX///6s=
+Bytes: 242
+Yes, we are going to eventually try to componentize the includes so linking against libselinux would automatically add its headers.  In the meantime, just add them to the places where they're needed.  That will make that refactoring smoother.
+
