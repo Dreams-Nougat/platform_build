@@ -1,0 +1,14 @@
+Revision: 3af86492f1c80186a3a8b376708fc5ca9828aec6
+Patch-set: 4
+File: tools/releasetools/ota_from_target_files
+
+487
+Mon Jan 23 23:15:32 2012 +0000
+Author: Conley Owens <1006257@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAACTn////w=
+Bytes: 204
+FYI, you could also do:
+  metadata = {"pre-device": GetBuildProp("ro.build.date.utc", target_zip)}
+  if not OPTIONS.dummy_source:
+    metadata["pre-device"] = GetBuildProp("ro.product.device", source_zip)
+
