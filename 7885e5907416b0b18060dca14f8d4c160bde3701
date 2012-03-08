@@ -1,0 +1,11 @@
+Revision: 7885e5907416b0b18060dca14f8d4c160bde3701
+Patch-set: 2
+File: target/board/generic_mips/BoardConfig.mk
+
+22
+Thu Mar 08 23:08:18 2012 +0000
+Author: Duane Sand <1010669@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAADsn///8k=
+Bytes: 52
+We have since removed the use of mips-r2* abi names.
+
