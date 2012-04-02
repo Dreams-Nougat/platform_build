@@ -1,0 +1,20 @@
+Revision: dff63c20fb328a0595f9c52fecc93c06219eb1ba
+Patch-set: 2
+File: core/Makefile
+
+1173
+Mon Apr 02 17:35:15 2012 +0000
+Author: Doug Zongker <1002268@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAEcX///8o=
+Bytes: 65
+Why the odd indentation?  (Or is gerrit displaying things oddly?)
+
+File: tools/releasetools/edify_generator.py
+
+175
+Mon Apr 02 17:35:15 2012 +0000
+Author: Doug Zongker <1002268@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAEcX///8s=
+Bytes: 68
+Why not just make format always take the mount point as an argument?
+
