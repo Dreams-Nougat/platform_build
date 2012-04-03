@@ -1,0 +1,11 @@
+Revision: 9b40ce7412e581c8379a1f6f094c697a3946a9fe
+Patch-set: 3
+File: tools/releasetools/edify_generator.py
+
+170
+Tue Apr 03 17:46:10 2012 +0000
+Author: Doug Zongker <1002268@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAEbn///5E=
+Bytes: 113
+Have you changed the updater's install.c?  Last I looked its argument processing contained #ifdef HAVE_SELINUXes.
+
