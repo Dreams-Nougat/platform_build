@@ -1,0 +1,60 @@
+Revision: c11b2890aa0516fbb55d177cdb30171047ddce63
+Patch-set: 4
+File: core/Makefile
+
+619
+Fri Apr 06 18:01:35 2012 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAEgX///4Y=
+Bytes: 35
+Missing "\" at the end of the line.
+
+620
+Fri Apr 06 18:01:35 2012 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAEgX///4U=
+Bytes: 53
+Don't remove $(hide) at the beginning of the command.
+
+621
+Fri Apr 06 18:01:35 2012 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAEgX///4Q=
+Bytes: 12
+Missing "\".
+
+622
+Fri Apr 06 18:01:35 2012 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAEgX///4M=
+Bytes: 7
+$(hide)
+
+797
+Fri Apr 06 18:01:35 2012 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAEgX///4I=
+Bytes: 12
+Missing "\".
+
+798
+Fri Apr 06 18:01:35 2012 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAEgX///4E=
+Bytes: 16
+$(hide) and "\".
+
+799
+Fri Apr 06 18:01:35 2012 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAEgX///4A=
+Bytes: 7
+$(hide)
+
+925
+Fri Apr 06 18:01:35 2012 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAEgX///38=
+Bytes: 6
+ditto.
+
