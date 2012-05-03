@@ -1,6 +1,52 @@
 Revision: 7885e5907416b0b18060dca14f8d4c160bde3701
 Patch-set: 2
+File: core/combo/TARGET_linux-mips.mk
+
+47
+Thu May 03 23:00:43 2012 +0000
+Author: Duane Sand <1010669@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAFPX///98=
+Bytes: 256
+In the current aosp/master branch, this location should perhaps be
+
+prebuilt/$(HOST_PREBUILT_TAG)/toolchain/mips-linux-android-4.5.2/bin/mips-linux-android-
+
+That's the naming pattern used in TARGET_linux-arm.mk and TARGET_linux-x86.mk
+Please recheck this.
+
+File: core/dumpvar.mk
+
+20
+Thu May 03 23:00:43 2012 +0000
+Author: Duane Sand <1010669@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAFPX///94=
+Bytes: 73
+Should this be mips-linux-android-4.5.2 instead of mips-linux-gnu-4.5.2 ?
+
+22
+Thu May 03 23:00:43 2012 +0000
+Author: Duane Sand <1010669@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAFPX///9w=
+Bytes: 63
+Should this be mips-linux-android-4.5.2 instead of mips-4.5.2 ?
+
+File: envsetup.sh
+
+117
+Thu May 03 23:00:43 2012 +0000
+Author: Duane Sand <1010669@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAFPX///9s=
+Bytes: 204
+The current aosp/master version of envsetup.sh has change a lot in how it sets up toolchaindir; the version shown here will not merge easily.  I have a rewrite that merges well, but will need your review.
+
 File: target/board/generic_mips/BoardConfig.mk
+
+14
+Thu May 03 23:00:43 2012 +0000
+Author: Duane Sand <1010669@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAFPX///9o=
+Bytes: 121
+This entire sequence should be skipped, if TARGET_CPU_ABI was already explicitly defined by the developer's build script.
 
 22
 Thu Mar 08 23:08:18 2012 +0000
@@ -8,4 +54,34 @@ Author: Duane Sand <1010669@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: AAADsn///8k=
 Bytes: 52
 We have since removed the use of mips-r2* abi names.
+
+22
+Thu May 03 23:00:43 2012 +0000
+Author: Duane Sand <1010669@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAADsn///8k=
+UUID: AAAFPX///9k=
+Bytes: 402
+Correction.  When doing a default make of the SDK, TARGET_CPU_ABI must default to 'mips'.  But the mips-r2 etc choices should remain available for NDK users and non-default builds of Android itself.  So this current coding is okay as is. 
+
+Skipping the whole thing if TARGET_CPU_ABI already exists would be good for future flexibility, and allow stripping out these spelling-sensitive pattern matchers.
+
+File: target/product/AndroidProducts.mk
+
+46
+Thu May 03 23:00:43 2012 +0000
+Author: Duane Sand <1010669@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAFPX///9g=
+Bytes: 39
+Also require 
+
+$(LOCAL_DIR)/sdk_mips.mk
+
+File: target/product/generic_mips.mk
+
+1
+Thu May 03 23:00:43 2012 +0000
+Author: Duane Sand <1010669@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAFPX///9c=
+Bytes: 73
+Also need a new file  "sdk_mips.mk", analogous to sdk.mk and sdk_x86.mk .
 
