@@ -65,6 +65,16 @@ Correction.  When doing a default make of the SDK, TARGET_CPU_ABI must default t
 
 Skipping the whole thing if TARGET_CPU_ABI already exists would be good for future flexibility, and allow stripping out these spelling-sensitive pattern matchers.
 
+22
+Fri May 04 19:01:42 2012 +0000
+Author: Duane Sand <1010669@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAFPX///9k=
+UUID: AAAFPX///6M=
+Bytes: 33
+Current code is fine as is.
+
+Done
+
 File: target/product/AndroidProducts.mk
 
 46
@@ -76,6 +86,16 @@ Also require
 
 $(LOCAL_DIR)/sdk_mips.mk
 
+46
+Fri May 04 19:01:42 2012 +0000
+Author: Duane Sand <1010669@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAFPX///9g=
+UUID: AAAFPX///6Q=
+Bytes: 69
+Addition of sdk_mips.mk is handled by separate patch Ie91e28db.
+
+Done
+
 File: target/product/generic_mips.mk
 
 1
@@ -84,4 +104,14 @@ Author: Duane Sand <1010669@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: AAAFPX///9c=
 Bytes: 73
 Also need a new file  "sdk_mips.mk", analogous to sdk.mk and sdk_x86.mk .
+
+1
+Fri May 04 19:01:42 2012 +0000
+Author: Duane Sand <1010669@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAFPX///9c=
+UUID: AAAFPX///6U=
+Bytes: 70
+That file sdk_mips.mk is handled by a separate patch Ie91e28db.\
+
+Done
 
