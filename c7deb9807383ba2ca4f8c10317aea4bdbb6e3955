@@ -1,0 +1,19 @@
+Revision: c7deb9807383ba2ca4f8c10317aea4bdbb6e3955
+Patch-set: 1
+File: core/Makefile
+
+631
+Mon May 07 22:20:14 2012 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAFT3///uk=
+Bytes: 202
+How about let the var point to the actual path? 
+That will be more flexible in case we have some inherit hierarchy for the device, such as you can share init.rc in the base tuna dir for toro and maguro.
+
+656
+Mon May 07 22:20:14 2012 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAFUH///ek=
+Bytes: 50
+We'd better move it close to the above assignment.
+
