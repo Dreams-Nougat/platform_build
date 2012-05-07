@@ -1,0 +1,33 @@
+Revision: 76506eba9d11867e53069c97038996bddd7dd5a2
+Patch-set: 1
+File: target/board/generic_mips/AndroidBoard.mk
+
+17
+Mon May 07 22:36:55 2012 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAFUX///xs=
+Bytes: 79
+AndroidBoard.mk is deprecated.
+You can just replace it with a plain Android.mk.
+
+File: target/board/generic_mips/BoardConfig.mk
+
+31
+Mon May 07 22:36:55 2012 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAFUX///xo=
+Bytes: 123
+It's wired HTC is referenced here.
+I see it's also in build/target/board/generic/BoardConfig.mk.
+JBQ, do you have any idea?
+
+File: target/product/core.mk
+
+115
+Mon May 07 22:36:55 2012 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAFUX///xY=
+Bytes: 254
+Can we move it to target/board/generic_mips/device.mk?
+On the other hand, since libffi is in the LOCAL_SHARED_LIBRARIES of libdvm, libffi will get installed automatically with libdvm by the build system and you don't need to put it into PRODUCT_PACKAGES.
+
