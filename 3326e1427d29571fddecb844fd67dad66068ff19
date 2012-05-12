@@ -1,0 +1,11 @@
+Revision: 3326e1427d29571fddecb844fd67dad66068ff19
+Patch-set: 2
+File: core/combo/TARGET_linux-x86.mk
+
+126
+Sat May 12 06:28:29 2012 +0000
+Author: Andrew Hsieh <1010186@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAFYn///8I=
+Bytes: 151
+I have uploaded 3rd patch set of https://android-review.googlesource.com/#/c/36450/ which works with -Wl,--gc-sections.  No need to comment it out now.
+
