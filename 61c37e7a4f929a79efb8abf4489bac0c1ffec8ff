@@ -9,6 +9,19 @@ UUID: AAAFYH///Fo=
 Bytes: 19
 Why is this needed?
 
+283
+Tue May 15 20:08:19 2012 +0000
+Author: Kito Cheng <1010084@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAFYH///Fo=
+UUID: AAAFbn///9w=
+Bytes: 442
+The whole archive will force the linker enforce to include whole library even unused symbol/code.
+
+The original reason is make it including whole libaprof for constructor/destructor. It's easier way to impalement.
+
+However we have LOCAL_WHOLE_STATIC_LIBRARIES(will transform to PRIVATE_ALL_WHOLE_STATIC_LIBRARIES here) for shared library,
+so I think make LOCAL_WHOLE_STATIC_LIBRARIES available for static library and executable is reasonable.
+
 305
 Tue May 15 19:40:55 2012 +0000
 Author: Ben Cheng <1000234@85c56323-6fa9-3386-8a01-6480fb634889>
