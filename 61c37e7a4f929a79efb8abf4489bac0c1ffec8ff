@@ -22,6 +22,14 @@ The original reason is make it including whole libaprof for constructor/destruct
 However we have LOCAL_WHOLE_STATIC_LIBRARIES(will transform to PRIVATE_ALL_WHOLE_STATIC_LIBRARIES here) for shared library,
 so I think make LOCAL_WHOLE_STATIC_LIBRARIES available for static library and executable is reasonable.
 
+283
+Wed May 16 00:20:45 2012 +0000
+Author: Ben Cheng <1000234@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAFbn///9w=
+UUID: AAAFYH///CU=
+Bytes: 170
+Is libaprof the only library that is linked through the PRIVATE_ALL_WHOLE_STATIC_LIBRARIES variable? My concern is it will increase the overall size of other executables.
+
 305
 Tue May 15 19:40:55 2012 +0000
 Author: Ben Cheng <1000234@85c56323-6fa9-3386-8a01-6480fb634889>
