@@ -30,6 +30,26 @@ UUID: AAAFYH///CU=
 Bytes: 170
 Is libaprof the only library that is linked through the PRIVATE_ALL_WHOLE_STATIC_LIBRARIES variable? My concern is it will increase the overall size of other executables.
 
+283
+Thu May 17 16:33:25 2012 +0000
+Author: Kito Cheng <1010084@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAFYH///CU=
+UUID: AAAFZX///+o=
+Bytes: 965
+It's possible to increase the code size of executable, but it would not increase the size of other executable since PRIVATE_ALL_WHOLE_STATIC_LIBRARIES is only come from LOCAL_WHOLE_STATIC_LIBRARIES.
+
+
+btw, the default implementation of `transform-o-to-executable-inner` (which is the rule to build executable) in build/core/definitions.mk have provider whole archive feature (implement by same command in build/core/definitions.mk:1250), but every target specify implementation don't provide it.
+
+
+
+The libaprof is the only library linked  through the PRIVATE_ALL_WHOLE_STATIC_LIBRARIES with executable now, but the PRIVATE_ALL_WHOLE_STATIC_LIBRARIES (LOCAL_WHOLE_STATIC_LIBRARIES) variable is already use for build static libraries and shared libraries in many project including bionic.
+
+
+here is the reference search result for LOCAL_WHOLE_STATIC_LIBRARIES:
+
+http://tools.oesf.biz/android-4.0.4_r1.0/search?q=LOCAL_WHOLE_STATIC_LIBRARIES&defs=&refs=&path=mk&hist=
+
 305
 Tue May 15 19:40:55 2012 +0000
 Author: Ben Cheng <1000234@85c56323-6fa9-3386-8a01-6480fb634889>
