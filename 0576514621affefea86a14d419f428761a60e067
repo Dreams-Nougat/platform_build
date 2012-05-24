@@ -1,0 +1,11 @@
+Revision: 0576514621affefea86a14d419f428761a60e067
+Patch-set: 1
+File: core/combo/TARGET_linux-x86.mk
+
+100
+Thu May 24 14:30:00 2012 +0000
+Author: Andrew Hsieh <1010186@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAFv3////c=
+Bytes: 154
+Why disable movbe in x86-atom?   We should probably change TARGET_ARCH_VARIANT := x86-atom to x86 in build/target/board/generic_x86/BoardConfig.mk instead
+
