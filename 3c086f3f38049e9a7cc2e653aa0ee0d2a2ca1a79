@@ -1,0 +1,11 @@
+Revision: 3c086f3f38049e9a7cc2e653aa0ee0d2a2ca1a79
+Patch-set: 1
+File: target/product/generic_x86.mk
+
+20
+Thu May 24 14:13:41 2012 +0000
+Author: Jean-Baptiste Queru <1000660@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAFun///5s=
+Bytes: 232
+inherit-product is really the right thing here. Using an include creates risks that variables set earlier would get overwritten by the included file. I know that there aren't any at the moment, but there could be some in the future.
+
