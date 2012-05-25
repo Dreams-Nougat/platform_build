@@ -9,3 +9,11 @@ UUID: AAAFun///5s=
 Bytes: 232
 inherit-product is really the right thing here. Using an include creates risks that variables set earlier would get overwritten by the included file. I know that there aren't any at the moment, but there could be some in the future.
 
+20
+Fri May 25 16:24:28 2012 +0000
+Author: Bruce J Beare <1003360@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAFun///5s=
+UUID: AAAF1H///+A=
+Bytes: 189
+I originally used inherit... but that caused issues because it does appends of variables (when a variable is specified in both files). In this case... it really wants to be a pure override.
+
