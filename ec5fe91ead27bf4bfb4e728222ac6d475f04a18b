@@ -9,3 +9,11 @@ UUID: AAAGXX///8k=
 Bytes: 125
 Why not use execl("sh -c" + <strip command>), or simpler system(<strip command>), rather than bother splitting the arguments?
 
+211
+Thu Jun 07 17:45:45 2012 +0000
+Author: raphael <1001100@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAGXX///8k=
+UUID: AAAGXX///70=
+Bytes: 187
+Splitting  arguments isn't exactly hard and it means not having to care about shell escaping. That way we don't have to care when someone writes "strip ;rm -rf /" in the atree file. YMMV.
+
