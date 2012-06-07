@@ -1,0 +1,11 @@
+Revision: ec5fe91ead27bf4bfb4e728222ac6d475f04a18b
+Patch-set: 2
+File: tools/atree/fs.cpp
+
+211
+Thu Jun 07 17:12:50 2012 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAGXX///8k=
+Bytes: 125
+Why not use execl("sh -c" + <strip command>), or simpler system(<strip command>), rather than bother splitting the arguments?
+
