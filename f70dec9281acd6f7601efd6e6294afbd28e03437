@@ -9,3 +9,11 @@ UUID: AAAGfH///zc=
 Bytes: 68
 Note that in the next major release JSC won't be an option any more.
 
+55
+Tue Jun 12 17:18:42 2012 +0000
+Author: Raghu Gandham <1003296@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAGfH///zc=
+UUID: AAAGe3///lI=
+Bytes: 121
+Thanks for letting me know. Later versions of v8 contain MIPS support and hopefully we can move to it without any issues.
+
