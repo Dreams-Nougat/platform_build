@@ -1,0 +1,11 @@
+Revision: f70dec9281acd6f7601efd6e6294afbd28e03437
+Patch-set: 1
+File: target/board/generic_mips/BoardConfig.mk
+
+55
+Tue Jun 12 14:47:48 2012 +0000
+Author: Jean-Baptiste Queru <1000660@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAGfH///zc=
+Bytes: 68
+Note that in the next major release JSC won't be an option any more.
+
