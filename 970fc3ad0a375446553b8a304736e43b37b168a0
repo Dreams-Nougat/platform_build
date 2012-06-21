@@ -1,0 +1,11 @@
+Revision: 970fc3ad0a375446553b8a304736e43b37b168a0
+Patch-set: 3
+File: /COMMIT_MSG
+
+17
+Thu Jun 21 18:36:50 2012 +0000
+Author: Jean-Baptiste Queru <1000660@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAG03///6Y=
+Bytes: 117
+Sorry, needs to be in the first line (short description), as that's the only one that gets reliably preserved around.
+
