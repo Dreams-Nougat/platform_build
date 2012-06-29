@@ -1,0 +1,11 @@
+Revision: 478ba5e3f00bb1321cd022d744020231f2449287
+Patch-set: 1
+File: core/main.mk
+
+157
+Fri Jun 29 00:14:24 2012 +0000
+Author: Joe Onorato <1000701@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAHDH///0M=
+Bytes: 90
+Should we restrict this even more, to a case where someone is asking to build an emulator?
+
