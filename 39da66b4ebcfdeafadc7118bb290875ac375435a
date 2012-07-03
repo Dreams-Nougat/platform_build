@@ -1,0 +1,13 @@
+Revision: 39da66b4ebcfdeafadc7118bb290875ac375435a
+Patch-set: 1
+File: core/main.mk
+
+235
+Tue Jul 03 15:11:59 2012 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAHFn///jg=
+Bytes: 109
+After looking through the other properties, perhaps a better name for this property is:
+
+  ro.build.selinux=1
+
