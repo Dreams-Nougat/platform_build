@@ -1,0 +1,11 @@
+Revision: 42ced6d5e2380a965fd2257770cfe11381f8f381
+Patch-set: 1
+File: envsetup.sh
+
+140
+Thu Jul 26 17:23:00 2012 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAH3n///sQ=
+Bytes: 88
+It seems ARM_EABI_TOOLCHAIN_PATH is the same as ARM_EABI_TOOLCHAIN. Why do we need both?
+
