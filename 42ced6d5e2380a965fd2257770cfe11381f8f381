@@ -9,3 +9,11 @@ UUID: AAAH3n///sQ=
 Bytes: 88
 It seems ARM_EABI_TOOLCHAIN_PATH is the same as ARM_EABI_TOOLCHAIN. Why do we need both?
 
+140
+Mon Jul 30 04:57:10 2012 +0000
+Author: Bruce J Beare <1003360@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAH3n///sQ=
+UUID: AAAH3X//+Rs=
+Bytes: 232
+That's just a coding convenience. Notice the use of the colon (:). The idea is that the _PATH variable is added to ANDROID_BUILD_PATHS unconditionally... even for the IA case. In this way, we don't get an extra "::" in the variable.
+
