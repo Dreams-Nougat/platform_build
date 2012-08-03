@@ -1,0 +1,13 @@
+Revision: 3560cffbe04a25d077d0249e0689cc5153f0af4a
+Patch-set: 3
+File: envsetup.sh
+
+142
+Fri Aug 03 22:03:46 2012 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAICn////s=
+Bytes: 144
+The logic has been changed  a little bit by the Intel folks:
+https://android-review.googlesource.com/#/c/39313/
+Though the change is not in yet.
+
