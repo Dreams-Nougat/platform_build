@@ -1,0 +1,11 @@
+Revision: 9ff37c1b46375b3d1bcba86d87aece9c5b8f3b84
+Patch-set: 2
+File: envsetup.sh
+
+1130
+Wed Aug 15 21:12:07 2012 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAIbX///pw=
+Bytes: 191
+I think you need to move them to the makefile, presumably bulid/core/config.mk, because envsetup.sh is not a musthave to do a build. For example, our buildbots actually don't run envsetup.sh.
+
