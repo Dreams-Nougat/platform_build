@@ -9,3 +9,13 @@ UUID: AAAIbX///pw=
 Bytes: 191
 I think you need to move them to the makefile, presumably bulid/core/config.mk, because envsetup.sh is not a musthave to do a build. For example, our buildbots actually don't run envsetup.sh.
 
+1130
+Thu Aug 16 08:51:24 2012 +0000
+Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAIbX///pw=
+UUID: AAAIiX///+E=
+Bytes: 183
+I thought the buildbots didn't use ccache on purpose?
+
+If this is no longer the case, we might now be able to shared the ccache directory between build bots, but that's another issue.
+
