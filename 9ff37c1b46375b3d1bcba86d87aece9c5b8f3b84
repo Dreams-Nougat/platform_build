@@ -19,3 +19,12 @@ I thought the buildbots didn't use ccache on purpose?
 
 If this is no longer the case, we might now be able to shared the ccache directory between build bots, but that's another issue.
 
+1130
+Thu Aug 16 17:01:07 2012 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: AAAIiX///+E=
+UUID: AAAIgH///4Q=
+Bytes: 110
+Our buildbots do enable ccache.
+We have only 1 buildbot on a machine and usually it uses the same repo client.
+
