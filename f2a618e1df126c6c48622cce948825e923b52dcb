@@ -1,0 +1,32 @@
+Revision: f2a618e1df126c6c48622cce948825e923b52dcb
+Base-for-patch-set: 3
+File: core/Makefile
+
+633
+Fri Aug 17 18:32:07 2012 +0000
+Author: Bjorn Andersson <1011077@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAIkn///lk=
+Bytes: 119
+Change this to
+
+$(recovery_ramdisk): ...
+
+
+$(MKBOOTIMG) is not used in this recipe, so don't list it as a prerequisite.
+
+637
+Fri Aug 17 18:32:07 2012 +0000
+Author: Bjorn Andersson <1011077@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAIkn///lc=
+Bytes: 83
+$(recovery_kernel) is not a prerequisite of the file system, drop it from the list.
+
+662
+Fri Aug 17 18:32:07 2012 +0000
+Author: Bjorn Andersson <1011077@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAIkn///lQ=
+Bytes: 191
+Keep the $(MKBOOTFS) line, so that we actually output the file being defined as target for this recipe.
+
+You can change $(recovery_ramdisk) to $@ to make it clearer that this is the output...
+

@@ -1,0 +1,25 @@
+Revision: 093a7d026db63a2417b41023e69365f3e050d4cb
+Patch-set: 3
+File: core/Makefile
+
+662
+Fri Aug 17 18:32:07 2012 +0000
+Author: Bjorn Andersson <1011077@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAIkn///lE=
+Bytes: 13
+Whitespace...
+
+663
+Fri Aug 17 18:32:07 2012 +0000
+Author: Bjorn Andersson <1011077@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAIkn///k0=
+Bytes: 58
+Skip this and have the rule above produce the file system.
+
+669
+Fri Aug 17 18:32:07 2012 +0000
+Author: Bjorn Andersson <1011077@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAIkn///ko=
+Bytes: 5
+Nice.
+
