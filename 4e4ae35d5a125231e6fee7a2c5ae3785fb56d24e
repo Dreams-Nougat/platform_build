@@ -1,0 +1,11 @@
+Revision: 4e4ae35d5a125231e6fee7a2c5ae3785fb56d24e
+Patch-set: 2
+File: core/combo/HOST_darwin-x86.mk
+
+66
+Sat Aug 18 16:23:12 2012 +0000
+Author: Jean-Baptiste Queru <1000660@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAIu3///+k=
+Bytes: 14
+Trailing space
+
