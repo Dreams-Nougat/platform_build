@@ -1,0 +1,11 @@
+Revision: f4817a95663144a6bfaeeed0c7cb081063a0daad
+Patch-set: 1
+File: target/product/core.mk
+
+63
+Thu Aug 30 15:59:11 2012 +0000
+Author: Kenny Root <1002975@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAI6X//9Eg=
+Bytes: 43
+Could you move this down right about mdnsd?
+
