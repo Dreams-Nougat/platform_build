@@ -1,0 +1,11 @@
+Revision: f582827f534e75b4b86842265f316fd2d78308aa
+Patch-set: 1
+File: core/definitions.mk
+
+1465
+Tue Oct 02 21:00:17 2012 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAAJxn///lQ=
+Bytes: 144
+I don't think this and the following cases are necessary: they are searching in the intermrdiate dirs that are created during the build process.
+
