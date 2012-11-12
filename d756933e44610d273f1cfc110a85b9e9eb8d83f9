@@ -1,0 +1,13 @@
+Revision: d756933e44610d273f1cfc110a85b9e9eb8d83f9
+Patch-set: 1
+File: core/combo/HOST_darwin-x86.mk
+
+78
+Mon Nov 12 18:28:53 2012 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: AAALc3///tw=
+Bytes: 98
+By convention, the above 2 variable names should be:
+HOST_TOOLCHAIN_ROOT
+HOST_SDK_TOOLCHAIN_PREFIX
+
