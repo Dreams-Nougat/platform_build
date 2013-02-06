@@ -22,3 +22,11 @@ This will allow people to setup the env, and override the gdbwrapper at will for
    . build/envsetup.sh
    function gdbwrapper() { ddd --debugger $ANDROID_TOOLCHAIN/$GDB "$@" ; }
 
+791
+Wed Feb 06 16:45:00 2013 +0000
+Author: John Michelau <1005146@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: NgGKT1lk
+UUID: PhESY4h8
+Bytes: 208
+Is your preference is that 'ddd' support isn't built-in, and instead needs to be defined by the user after sourcing the build environment?  Or do you only object to the way that I accomplished building it in?
+
