@@ -17,3 +17,23 @@ UUID: P3QMcM3w
 Bytes: 96
 $(hide) MKBOOTIMG=$(BOARD_CUSTOM_MKBOOTIMG) ./build/tools/releasetools/ota_from_target_files ...
 
+File: tools/releasetools/common.py
+
+244
+Thu Feb 21 17:49:57 2013 +0000
+Author: Doug Zongker <1002268@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: P.82JvSs
+Bytes: 12
+"of" -> "or"
+
+245
+Thu Feb 21 17:49:57 2013 +0000
+Author: Doug Zongker <1002268@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: P.22bcWw
+Bytes: 142
+do you want to support anything like 
+
+   MKBOOTIMG="mkbootimg --somearg"
+
+?  If so you need to split mkbootimg into a list and join it to cmd
+
