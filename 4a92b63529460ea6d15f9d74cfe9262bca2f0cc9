@@ -1,0 +1,19 @@
+Revision: 4a92b63529460ea6d15f9d74cfe9262bca2f0cc9
+Patch-set: 1
+File: core/Makefile
+
+1196
+Thu Feb 21 00:03:25 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: P3WMsB68
+Bytes: 180
+I don't know if such "target-specific variable export " exists..
+But it seems to me we don't need it: you should pass it as a environmental variable from the build recipe directly.
+
+1202
+Thu Feb 21 00:03:25 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: P3QMcM3w
+Bytes: 96
+$(hide) MKBOOTIMG=$(BOARD_CUSTOM_MKBOOTIMG) ./build/tools/releasetools/ota_from_target_files ...
+
