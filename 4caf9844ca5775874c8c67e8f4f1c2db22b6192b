@@ -1,0 +1,29 @@
+Revision: 4caf9844ca5775874c8c67e8f4f1c2db22b6192b
+Patch-set: 2
+File: envsetup.sh
+
+748
+Fri Mar 08 18:57:01 2013 +0000
+Author: JP Abgrall <1005480@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: RRNKdlKk
+Bytes: 93
+No need to make this file aware of any specific other clients.
+
+Keep the useblabla() outside.
+
+753
+Fri Mar 08 18:57:01 2013 +0000
+Author: JP Abgrall <1005480@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: RWkgW-1c
+Bytes: 45
+ANDROID_GDB_WRAPPER="$ANDROID_TOOLCHAIN/$GDB"
+
+809
+Fri Mar 08 18:57:01 2013 +0000
+Author: JP Abgrall <1005480@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: RWsghT60
+Bytes: 70
+GDB_WRAPPER is a bit generic. Prefix...
+
+  $ANDROID_GDB_WRAPPER -x ...
+
