@@ -40,3 +40,11 @@ Assume that there are 2000 different clients: your method fails to scale, and is
 
 The solution I'm suggesting allows the 1998 other clients to benefit from only changing one function in their env after envsetup.sh.
 
+791
+Fri Mar 08 19:07:00 2013 +0000
+Author: John Michelau <1005146@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: RRDLzGC4
+UUID: RTHYPUKk
+Bytes: 300
+Understood and agreed.  The patch set 2 that I pushed this morning solves the scaling issue, but leaves in shortcuts for the most common debuggers (gdb and ddd).  I'm not sure it will work with the command line interfaces of the more obscure tools, so I'll try a few and tweak the patch if necessary.
+
