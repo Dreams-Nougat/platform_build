@@ -30,3 +30,13 @@ UUID: PhESY4h8
 Bytes: 208
 Is your preference is that 'ddd' support isn't built-in, and instead needs to be defined by the user after sourcing the build environment?  Or do you only object to the way that I accomplished building it in?
 
+791
+Fri Mar 08 18:28:38 2013 +0000
+Author: JP Abgrall <1005480@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: PhESY4h8
+UUID: RRDLzGC4
+Bytes: 258
+Assume that there are 2000 different clients: your method fails to scale, and is unusable for the 1998 more obscure clients.
+
+The solution I'm suggesting allows the 1998 other clients to benefit from only changing one function in their env after envsetup.sh.
+
