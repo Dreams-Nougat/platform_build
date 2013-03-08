@@ -11,6 +11,14 @@ No need to make this file aware of any specific other clients.
 
 Keep the useblabla() outside.
 
+748
+Fri Mar 08 19:17:44 2013 +0000
+Author: John Michelau <1005146@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: RRNKdlKk
+UUID: RTJYFzIg
+Bytes: 51
+Wish I could leave a shortcut in, but will conform.
+
 753
 Fri Mar 08 18:57:01 2013 +0000
 Author: JP Abgrall <1005480@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -26,4 +34,12 @@ Bytes: 70
 GDB_WRAPPER is a bit generic. Prefix...
 
   $ANDROID_GDB_WRAPPER -x ...
+
+809
+Fri Mar 08 19:17:44 2013 +0000
+Author: John Michelau <1005146@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: RWsghT60
+UUID: RTLYIyJ4
+Bytes: 7
+Agreed.
 
