@@ -1,0 +1,15 @@
+Revision: bd0e4d901dd00a686b1423ccdece92909ed30149
+Patch-set: 1
+File: /COMMIT_MSG
+
+9
+Thu Mar 28 23:24:15 2013 +0000
+Author: Wink Saville <1001401@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: SwUGdsqU
+Bytes: 187
+Change the Change-Id to the same as in the other change:
+
+  Change-Id: I7429015b3c5f7f38b7be01eb2d4927f7a9999c80
+
+This allows gerrit to know the two changes are dependent upon each other.
+
