@@ -1,0 +1,11 @@
+Revision: a7199dc3b6f322585fb2eea608cd806bc2b46912
+Patch-set: 1
+File: envsetup.sh
+
+885
+Tue May 07 17:12:02 2013 +0000
+Author: Jeff Sharkey <1006166@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: UVbA51kY
+Bytes: 37
+maybe something shorter like sepgrep?
+
