@@ -1,0 +1,19 @@
+Revision: 674767d498d3c89855e1249ef437bb70d70c7bb4
+Patch-set: 2
+File: target/product/generic_no_telephony.mk
+
+32
+Wed Jul 03 13:13:26 2013 +0000
+Author: Takeshi Aimi <1017042@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 87cedc49_4ceaff9d
+Bytes: 77
+This may be removed.
+But I should make sure why "Phone" is also in this list.
+
+39
+Wed Jul 03 13:13:26 2013 +0000
+Author: Takeshi Aimi <1017042@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 87cedc49_6cefbbac
+Bytes: 23
+do wee need Phone here?
+
