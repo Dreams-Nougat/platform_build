@@ -10,3 +10,19 @@ Bytes: 166
 I guess it's a newly-added module? I couldn't find it in the source tree.
 If so you should add it to build/target/product/embedded.mk, just next to sepolicy, I think.
 
+140
+Mon Jul 08 17:42:32 2013 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2771b0c7_cc8a0b5c
+UUID: e7df98f0_af903940
+Bytes: 350
+https://android-review.googlesource.com/#/c/58384/
+
+Isn't this next to sepolicy?
+
+I think we're waiting on the library for this, and perhaps a way to auto increment the version number. Haiqing Jiang to write the library, he started some work here:
+
+https://bitbucket.org/hqjiang/external-libselinux/pull-requests
+
+but it never made it past my review.
+
