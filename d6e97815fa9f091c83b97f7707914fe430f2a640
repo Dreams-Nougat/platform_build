@@ -26,3 +26,12 @@ https://bitbucket.org/hqjiang/external-libselinux/pull-requests
 
 but it never made it past my review.
 
+140
+Tue Jul 16 17:24:35 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e7df98f0_af903940
+UUID: c777f47c_7957a380
+Bytes: 102
+Oh they are also included in embedded.mk.
+It seems we duplicate them in core.mk and should be removed.
+
