@@ -1,0 +1,11 @@
+Revision: 4006a62143461cd41adaa9a889b21f7016860cce
+Patch-set: 3
+File: core/definitions.mk
+
+908
+Wed Jul 24 22:59:26 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 934d4312_cf918d9e
+Bytes: 538
+The build system doesn't like you to pass in a custom --proto_path: it must be $(TOP). The --proto_path option of protoc could affect the path of the output .pb.cc/.pb.h files, see http://code.google.com/apis/protocolbuffers/docs/reference/cpp-generated.html#invocation. If we allow the module to set different --proto_path, it will be very hard for the build system to figure out the correct path of the output .pb.cc/.pb.h. It's critical for the build system to know the exact locations of a c++ source file when the makefile is parsed.
+
