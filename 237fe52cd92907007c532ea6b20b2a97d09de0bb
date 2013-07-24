@@ -1,0 +1,18 @@
+Revision: 237fe52cd92907007c532ea6b20b2a97d09de0bb
+Patch-set: 1
+File: core/definitions.mk
+
+859
+Wed Jul 24 22:00:59 2013 +0000
+Author: Wink Saville <1001401@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 934d4312_a4b6a888
+Bytes: 25
+nit: no tabs or all tabs?
+
+860
+Wed Jul 24 22:00:59 2013 +0000
+Author: Wink Saville <1001401@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 934d4312_a4cd4802
+Bytes: 63
+"$$f" doesn't exist as we're not looping ofre the source files?
+
