@@ -28,3 +28,11 @@ Bytes: 318
 Yeah, but you can specify multiple --proto_path to protoc, protoc searches all the proto_paths to find the source files and construct the output path by replacing the proto_path with the --cpp_out path. That's too complex for makefile.
 I have discussed this before with Wink. I can forward you the previous discussion.
 
+908
+Thu Jul 25 01:03:15 2013 +0000
+Author: Ulas Kirazci <1020814@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 934d4312_2f97d13f
+UUID: 934d4312_0f11b5d6
+Bytes: 26
+Reverted the cpp_out here.
+
