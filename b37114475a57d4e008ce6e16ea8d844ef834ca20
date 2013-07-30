@@ -1,0 +1,12 @@
+Revision: b37114475a57d4e008ce6e16ea8d844ef834ca20
+Patch-set: 2
+File: core/definitions.mk
+
+1850
+Tue Jul 30 01:17:16 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 138a339d_7f530f72
+Bytes: 155
+What's the use case? Why those predefined macros?
+Maybe we should allow the module to define its own macors with  private variable like PRIVATE_M4_OPTIONS?
+
