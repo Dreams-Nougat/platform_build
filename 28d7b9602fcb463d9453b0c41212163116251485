@@ -1,0 +1,12 @@
+Revision: 28d7b9602fcb463d9453b0c41212163116251485
+Patch-set: 1
+File: core/tasks/cts.mk
+
+139
+Fri Aug 02 19:11:38 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f8281c83_ce1fe36e
+Bytes: 122
+Any specific reason to make this change in aosp?
+I have split the above rule in the internal master tree. It may conflict.
+
