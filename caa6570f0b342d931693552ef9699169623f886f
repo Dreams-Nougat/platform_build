@@ -1,0 +1,34 @@
+Revision: caa6570f0b342d931693552ef9699169623f886f
+Patch-set: 1
+File: tools/releasetools/sign_target_files_apks
+
+188
+Thu Aug 08 22:39:09 2013 +0000
+Author: Doug Zongker <1002268@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d872781f_e500d615
+Bytes: 270
+You should put a "\b" at the beginning and end of the old_cert16 regex so only an entire signature attribute is matched.  
+
+You should pass flags=re.IGNORECASE to subn() so that if the input mac file happens to be written in uppercase base-16 it will still get replaced.
+
+190
+Thu Aug 08 22:39:09 2013 +0000
+Author: Doug Zongker <1002268@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d872781f_2514ae57
+Bytes: 62
+We don't print tabs anywhere else.  Indent with spaces please.
+
+200
+Thu Aug 08 22:39:09 2013 +0000
+Author: Doug Zongker <1002268@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d872781f_e59c56b3
+Bytes: 410
+I don't think you need to print errno == ENOENT errors at all, -k options may well be passed that aren't used in a particular build.  (Maybe print them if verbose output is requested.)  Conversely, I think you want to print non-ENOENT errors even for devkeys (like, if the file is there but can't be opened, that's something unusual we'd want to see).  So I don't think you need to special-case devkeys at all.
+
+202
+Thu Aug 08 22:39:09 2013 +0000
+Author: Doug Zongker <1002268@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d872781f_45652adc
+Bytes: 8
+No tabs.
+
