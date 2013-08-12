@@ -1,0 +1,11 @@
+Revision: 612e2cd0e8c79bc6ab46d13cd96c01d1be382139
+Patch-set: 3
+File: tools/releasetools/common.py
+
+291
+Mon Aug 12 16:41:32 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1807b0cc_17c654e2
+Bytes: 75
+Please address Doug's question about MKBOOTIMG as a command plus some args.
+
