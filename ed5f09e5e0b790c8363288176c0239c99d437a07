@@ -1,0 +1,11 @@
+Revision: ed5f09e5e0b790c8363288176c0239c99d437a07
+Patch-set: 1
+File: core/pathmap.mk
+
+62
+Thu Sep 05 02:38:25 2013 +0000
+Author: Chih-Wei Huang <1002563@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 92f9c100_5bcda3a3
+Bytes: 67
+device/intel/common/BroadConfig.mk? Should say BroadConfig.mk only.
+
