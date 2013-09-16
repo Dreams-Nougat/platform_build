@@ -1,5 +1,14 @@
 Revision: 945913163fec217024958be9575b356d856fa377
 Patch-set: 1
+File: core/combo/TARGET_linux-x86.mk
+
+147
+Mon Sep 16 06:38:55 2013 +0000
+Author: Pavel Chupin <1010578@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a79845f6_9c6d45c5
+Bytes: 181
+-m32 is removed here. It's required for multilib toolchain, see https://android-review.googlesource.com/#/c/64184/ for details.. Either should be restored here or in arch makefiles.
+
 File: core/combo/arch/x86/haswell.mk
 
 3
@@ -8,4 +17,13 @@ Author: Synergy Dev <1022430@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: a7aa05ea_f3e3df19
 Bytes: 54
 This line is commented in the other new variant files.
+
+File: core/combo/arch/x86/sandybridge.mk
+
+15
+Mon Sep 16 06:38:55 2013 +0000
+Author: Pavel Chupin <1010578@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a79845f6_7ca239ed
+Bytes: 36
+corei7-avx is better for sandybridge
 
