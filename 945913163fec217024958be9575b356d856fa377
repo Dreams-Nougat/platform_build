@@ -1,0 +1,11 @@
+Revision: 945913163fec217024958be9575b356d856fa377
+Patch-set: 1
+File: core/combo/arch/x86/haswell.mk
+
+3
+Mon Sep 16 01:17:33 2013 +0000
+Author: Synergy Dev <1022430@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a7aa05ea_f3e3df19
+Bytes: 54
+This line is commented in the other new variant files.
+
