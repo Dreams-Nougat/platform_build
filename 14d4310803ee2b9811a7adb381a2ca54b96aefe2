@@ -10,3 +10,11 @@ Bytes: 160
 I'm not sure if -mstackrealign here is still required. Unless anybody checked this I would keep it.
 Other flags -msse3 -mfpmath=sse are compiler default indeed.
 
+148
+Thu Sep 19 09:46:06 2013 +0000
+Author: Andrew Hsieh <1010186@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 645e4b2d_4ac2b377
+UUID: 448867e2_c1f242c6
+Bytes: 60
+Isn't mstackrealign default in Android x86 compiler already?
+
