@@ -1,0 +1,11 @@
+Revision: fedc275deb07d31e7c5530d4a7f3cc9a02d5d14e
+Patch-set: 1
+File: tools/signapk/SignApk.java
+
+208
+Thu Sep 19 22:59:10 2013 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c42537aa_793af2f4
+Bytes: 102
+"Must specify an RSA or DSA key because -minsdk " + sMinSdkVersion + " is less than " + JELLY_BEAN_MR2
+
