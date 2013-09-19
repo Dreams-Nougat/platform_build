@@ -18,3 +18,11 @@ UUID: 448867e2_c1f242c6
 Bytes: 60
 Isn't mstackrealign default in Android x86 compiler already?
 
+148
+Thu Sep 19 10:10:06 2013 +0000
+Author: Pavel Chupin <1010578@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 448867e2_c1f242c6
+UUID: 645e4b2d_0a527be6
+Bytes: 41
+Yes. You are right. We have it hardcoded.
+
