@@ -1,0 +1,11 @@
+Revision: 2ba2d8503f397f67285f34d56b953717639e82c5
+Patch-set: 4
+File: tools/signapk/SignApk.java
+
+738
+Fri Sep 20 21:20:57 2013 +0000
+Author: Kenny Root <1002975@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 84a41f88_63ad8230
+Bytes: 35
+whoops, messed this up in my merge.
+
