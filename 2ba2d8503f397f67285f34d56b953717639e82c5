@@ -2,6 +2,20 @@ Revision: 2ba2d8503f397f67285f34d56b953717639e82c5
 Patch-set: 4
 File: tools/signapk/SignApk.java
 
+92
+Fri Sep 20 21:48:33 2013 +0000
+Author: Doug Zongker <1002268@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c4aa9752_a5f4de42
+Bytes: 55
+Uh, is this true?  Hasn't JB-MR2 already been released?
+
+129
+Fri Sep 20 21:48:33 2013 +0000
+Author: Doug Zongker <1002268@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a4a76389_0753781c
+Bytes: 111
+Is the choice of signature algorithm not orthogonal to choice of hash?  There's no "SHA1withDSA", for instance?
+
 738
 Fri Sep 20 21:20:57 2013 +0000
 Author: Kenny Root <1002975@85c56323-6fa9-3386-8a01-6480fb634889>
