@@ -9,12 +9,30 @@ UUID: c4aa9752_a5f4de42
 Bytes: 55
 Uh, is this true?  Hasn't JB-MR2 already been released?
 
+92
+Fri Sep 20 21:59:09 2013 +0000
+Author: Kenny Root <1002975@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c4aa9752_a5f4de42
+UUID: 84a41f88_6674b090
+Bytes: 125
+Yes, I fixed it in AOSP on Oct 12, 2012, and it got into JB-MR2. See https://code.google.com/p/android/issues/detail?id=38321
+
 129
 Fri Sep 20 21:48:33 2013 +0000
 Author: Doug Zongker <1002268@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: a4a76389_0753781c
 Bytes: 111
 Is the choice of signature algorithm not orthogonal to choice of hash?  There's no "SHA1withDSA", for instance?
+
+129
+Fri Sep 20 21:59:09 2013 +0000
+Author: Kenny Root <1002975@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a4a76389_0753781c
+UUID: 84a41f88_66d91072
+Bytes: 216
+It is, but SignApk didn't support DSA before, so I'd rather force people to use at least a stronger hash at least.
+
+Having support for DSA probably isn't wise in total. Maybe I should just remove the support for DSA.
 
 738
 Fri Sep 20 21:20:57 2013 +0000
