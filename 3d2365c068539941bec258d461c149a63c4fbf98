@@ -1,0 +1,11 @@
+Revision: 3d2365c068539941bec258d461c149a63c4fbf98
+Patch-set: 6
+File: tools/signapk/SignApk.java
+
+730
+Tue Sep 24 17:30:06 2013 +0000
+Author: Kenny Root <1002975@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c416178f_6bfdb521
+Bytes: 135
+TR, I think this might break for custom keys. Can you test this? Will changing this to publicKey[k].getPublicKey().getAlgorithm() work?
+
