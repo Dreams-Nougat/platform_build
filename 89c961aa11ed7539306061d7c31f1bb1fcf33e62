@@ -1,0 +1,25 @@
+Revision: 89c961aa11ed7539306061d7c31f1bb1fcf33e62
+Patch-set: 1
+File: tools/signapk/SignApk.java
+
+747
+Wed Sep 25 18:50:12 2013 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 24a373b4_5953571b
+Bytes: 129
+returns after System.exit are weird. you didn't fancy a die(String) and die(Throwable)? or just letting the exceptions propagate?
+
+763
+Wed Sep 25 18:50:12 2013 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 24a373b4_79581b35
+Bytes: 33
+don't want this to be a Provider?
+
+771
+Wed Sep 25 18:50:12 2013 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 24a373b4_994cdf77
+Bytes: 59
+oh, i see. just propagating would have your life easier :-)
+
