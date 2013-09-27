@@ -1,0 +1,13 @@
+Revision: 385440032dbc867f281d990863c08c24df57137c
+Patch-set: 1
+File: core/combo/arch/x32/x32.mk
+
+11
+Fri Sep 27 17:27:56 2013 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c47c57a6_fe7fd565
+Bytes: 201
+i think we should delete this legacy cruft. if your target device doesn't support this, it doesn't support Android, so you're on your own.
+
+we removed the equivalent ARM cruft a couple of releases ago.
+
