@@ -11,3 +11,12 @@ i think we should delete this legacy cruft. if your target device doesn't suppor
 
 we removed the equivalent ARM cruft a couple of releases ago.
 
+File: core/combo/arch/x86_64/haswell.mk
+
+19
+Fri Sep 27 17:30:17 2013 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 641c8bfb_bdbb2b05
+Bytes: 88
+we can probably lift -mstackrealign and -mfpmath=sse up too, and remove the duplication.
+
