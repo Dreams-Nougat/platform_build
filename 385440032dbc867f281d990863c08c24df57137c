@@ -11,6 +11,14 @@ i think we should delete this legacy cruft. if your target device doesn't suppor
 
 we removed the equivalent ARM cruft a couple of releases ago.
 
+11
+Mon Sep 30 19:49:33 2013 +0000
+Author: Pavel Chupin <1010578@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c47c57a6_fe7fd565
+UUID: 446f8776_ec8a436d
+Bytes: 18
+Ok. I'll clean up.
+
 File: core/combo/arch/x86_64/haswell.mk
 
 19
@@ -19,4 +27,12 @@ Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 641c8bfb_bdbb2b05
 Bytes: 88
 we can probably lift -mstackrealign and -mfpmath=sse up too, and remove the duplication.
+
+19
+Mon Sep 30 19:49:33 2013 +0000
+Author: Pavel Chupin <1010578@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 641c8bfb_bdbb2b05
+UUID: 6481eb4b_f85d2927
+Bytes: 21
+Agree. I'll clean up.
 
