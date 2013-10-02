@@ -1,5 +1,14 @@
 Revision: 385440032dbc867f281d990863c08c24df57137c
 Patch-set: 1
+File: core/combo/TARGET_linux-x86_64.mk
+
+204
+Wed Oct 02 00:38:55 2013 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 413a19c6_85d2d2a4
+Bytes: 102
+i changed this to i387 because i'm using the "i387" header which seems to support both x86 and x86_64.
+
 File: core/combo/arch/x32/x32.mk
 
 11
