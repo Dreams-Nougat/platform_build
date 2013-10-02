@@ -1,0 +1,13 @@
+Revision: fd82a49e04adb5513977acd0f616ddac421c715b
+Patch-set: 3
+File: core/combo/TARGET_linux-x86_64.mk
+
+149
+Wed Oct 02 21:39:23 2013 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 819df127_0a4b6361
+Bytes: 190
+we should go through the codebase and remove the need for these (since they're always true for x86 too), and then come back and remove them from x86 and x86_64.
+
+but this looks fine for now.
+
