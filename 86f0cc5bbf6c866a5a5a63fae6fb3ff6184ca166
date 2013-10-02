@@ -1,0 +1,31 @@
+Revision: 86f0cc5bbf6c866a5a5a63fae6fb3ff6184ca166
+Patch-set: 2
+File: core/combo/TARGET_linux-x86_64.mk
+
+302
+Wed Oct 02 16:06:50 2013 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 819df127_1ea96986
+Bytes: 158
+can't we just take out the useless options and hard-code MMX, SSE, SSE2, and SSE3 on?
+
+especially because we already have -mfpmath=sse unconditionally set :-)
+
+File: target/board/generic_x86_64/README.txt
+
+1
+Wed Oct 02 16:06:50 2013 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 21660513_9b84afcf
+Bytes: 72
+i think you want to grep all these files for x86 (as opposed to x86_64).
+
+File: target/product/AndroidProducts.mk
+
+58
+Wed Oct 02 16:06:50 2013 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 819df127_fe8fdd2a
+Bytes: 34
+these don't exist any more, right?
+
