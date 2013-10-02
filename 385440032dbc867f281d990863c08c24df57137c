@@ -9,6 +9,14 @@ UUID: 413a19c6_85d2d2a4
 Bytes: 102
 i changed this to i387 because i'm using the "i387" header which seems to support both x86 and x86_64.
 
+204
+Wed Oct 02 01:02:28 2013 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 413a19c6_85d2d2a4
+UUID: a1a0355b_1c5415ff
+Bytes: 298
+...and i've changed it back again. i was having trouble getting the freebsd x86_64 fenv to build, so i'll go with openbsd for now. we should probably revisit this though, and make a conscious decision about which bsd to go with (especially because we haven't been using openbsd's libm in the past).
+
 File: core/combo/arch/x32/x32.mk
 
 11
