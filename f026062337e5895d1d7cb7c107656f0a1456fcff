@@ -44,3 +44,14 @@ UUID: c13fe9e6_40b410e6
 Bytes: 21
 and none of these do.
 
+File: core/combo/arch/x86/x86-atom.mk
+
+8
+Fri Oct 04 07:45:57 2013 +0000
+Author: Christopher Ferris <1019050@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c13fe9e6_80ae1896
+Bytes: 140
+It doesn't appear that either the MOVBE or POPCNT definition is used by any Makefile.
+
+Is it used by the upcoming x86_64 bit code somewhere?
+
