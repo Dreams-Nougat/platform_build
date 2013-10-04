@@ -1,0 +1,46 @@
+Revision: f026062337e5895d1d7cb7c107656f0a1456fcff
+Patch-set: 1
+File: core/combo/TARGET_linux-x86.mk
+
+146
+Fri Oct 04 07:30:25 2013 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c13fe9e6_a0dd142c
+Bytes: 61
+-D used by qemu, so probably not relevant for target. remove?
+
+147
+Fri Oct 04 07:30:25 2013 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 81625122_73cc800b
+Bytes: 67
+-D referenced by zlib, which explicitly has #undef USE_SSE. remove?
+
+148
+Fri Oct 04 07:30:25 2013 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c13fe9e6_00eb28c4
+Bytes: 109
+-D used by external/pixman (whatever that is), and libcutils (where we should probably just hard-code it on).
+
+149
+Fri Oct 04 07:30:25 2013 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e1422d7c_213aa84a
+Bytes: 41
+-D not used anywhere in codebase. remove?
+
+152
+Fri Oct 04 07:30:25 2013 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e1422d7c_813f3c39
+Bytes: 78
+note that this has a -DUSE... (that isn't referenced anywhere in the codebase)
+
+167
+Fri Oct 04 07:30:25 2013 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c13fe9e6_40b410e6
+Bytes: 21
+and none of these do.
+
