@@ -9,12 +9,28 @@ UUID: c13fe9e6_a0dd142c
 Bytes: 61
 -D used by qemu, so probably not relevant for target. remove?
 
+146
+Fri Oct 04 08:14:50 2013 +0000
+Author: Pavel Chupin <1010578@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c13fe9e6_a0dd142c
+UUID: c168c904_3585d060
+Bytes: 12
+I think yes.
+
 147
 Fri Oct 04 07:30:25 2013 +0000
 Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 81625122_73cc800b
 Bytes: 67
 -D referenced by zlib, which explicitly has #undef USE_SSE. remove?
+
+147
+Fri Oct 04 08:14:50 2013 +0000
+Author: Pavel Chupin <1010578@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 81625122_73cc800b
+UUID: 21528551_9895f58b
+Bytes: 4
+Yes.
 
 148
 Fri Oct 04 07:30:25 2013 +0000
@@ -23,12 +39,28 @@ UUID: c13fe9e6_00eb28c4
 Bytes: 109
 -D used by external/pixman (whatever that is), and libcutils (where we should probably just hard-code it on).
 
+148
+Fri Oct 04 08:14:50 2013 +0000
+Author: Pavel Chupin <1010578@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c13fe9e6_00eb28c4
+UUID: 2107e553_9018148b
+Bytes: 12
+I think yes.
+
 149
 Fri Oct 04 07:30:25 2013 +0000
 Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: e1422d7c_213aa84a
 Bytes: 41
 -D not used anywhere in codebase. remove?
+
+149
+Fri Oct 04 08:14:50 2013 +0000
+Author: Pavel Chupin <1010578@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e1422d7c_213aa84a
+UUID: c168c904_158a5470
+Bytes: 12
+I think yes.
 
 152
 Fri Oct 04 07:30:25 2013 +0000
@@ -37,12 +69,28 @@ UUID: e1422d7c_813f3c39
 Bytes: 78
 note that this has a -DUSE... (that isn't referenced anywhere in the codebase)
 
+152
+Fri Oct 04 08:14:50 2013 +0000
+Author: Pavel Chupin <1010578@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e1422d7c_813f3c39
+UUID: c168c904_758f4880
+Bytes: 86
+Atom supports SSSE3, so it can be used for differentiation. We can have it internally.
+
 167
 Fri Oct 04 07:30:25 2013 +0000
 Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: c13fe9e6_40b410e6
 Bytes: 21
 and none of these do.
+
+167
+Fri Oct 04 08:14:50 2013 +0000
+Author: Pavel Chupin <1010578@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c13fe9e6_40b410e6
+UUID: 2107e553_d0129c66
+Bytes: 43
+For new platforms up to Silvermont/Haswell.
 
 File: core/combo/arch/x86/x86-atom.mk
 
@@ -54,4 +102,14 @@ Bytes: 140
 It doesn't appear that either the MOVBE or POPCNT definition is used by any Makefile.
 
 Is it used by the upcoming x86_64 bit code somewhere?
+
+8
+Fri Oct 04 08:14:50 2013 +0000
+Author: Pavel Chupin <1010578@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c13fe9e6_80ae1896
+UUID: 21528551_b898b9c3
+Bytes: 179
+movbe is atom specific. popcnt is core specific.
+It's applicable to both x86_64 and x86.
+Not sure how widely it is used in projects though, but it can be used for differentiation.
 
