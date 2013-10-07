@@ -1,0 +1,25 @@
+Revision: a64a02a0ce80f32d8afaecd05e7076876c56c024
+Patch-set: 2
+File: target/board/generic_aarch64/BoardConfig.mk
+
+0
+Mon Oct 07 20:10:39 2013 +0000
+Author: Dima Zavin <1000413@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 21a365b4_13cd2e81
+Bytes: 110
+I think we should move all these files into device/generic/ somewhere. This target/board location is obsolete.
+
+24
+Mon Oct 07 20:10:39 2013 +0000
+Author: Dima Zavin <1000413@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 419e996d_f4589691
+Bytes: 28
+do we need this? I hope not.
+
+25
+Mon Oct 07 20:10:39 2013 +0000
+Author: Dima Zavin <1000413@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 419e996d_1400ba56
+Bytes: 64
+What about this? I think the audio hal takes care of this stuff.
+
