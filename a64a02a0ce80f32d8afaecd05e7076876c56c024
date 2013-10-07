@@ -9,6 +9,22 @@ UUID: 21a365b4_13cd2e81
 Bytes: 110
 I think we should move all these files into device/generic/ somewhere. This target/board location is obsolete.
 
+0
+Mon Oct 07 20:48:06 2013 +0000
+Author: Ben Cheng <1000234@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 21a365b4_13cd2e81
+UUID: a1967556_8f92d950
+Bytes: 184
+This is following the convention of existing generic devices:
+
+generic
+generic_armv5
+generic_x86    
+generic_mips
+generic_x86_64
+
+Perhaps we can use a future CL to upgrade all of them?
+
 24
 Mon Oct 07 20:10:39 2013 +0000
 Author: Dima Zavin <1000413@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -16,10 +32,26 @@ UUID: 419e996d_f4589691
 Bytes: 28
 do we need this? I hope not.
 
+24
+Mon Oct 07 20:48:06 2013 +0000
+Author: Ben Cheng <1000234@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 419e996d_f4589691
+UUID: a1967556_4f80f1f5
+Bytes: 75
+Probably not. This is inherited from generic, and I saw this in x86_64 too.
+
 25
 Mon Oct 07 20:10:39 2013 +0000
 Author: Dima Zavin <1000413@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 419e996d_1400ba56
 Bytes: 64
 What about this? I think the audio hal takes care of this stuff.
+
+25
+Mon Oct 07 20:48:06 2013 +0000
+Author: Ben Cheng <1000234@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 419e996d_1400ba56
+UUID: 21a365b4_9342fe6a
+Bytes: 94
+Same as above. I think we can remove this and add later if we understand how it is being used.
 
