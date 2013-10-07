@@ -25,6 +25,14 @@ generic_x86_64
 
 Perhaps we can use a future CL to upgrade all of them?
 
+0
+Mon Oct 07 20:56:21 2013 +0000
+Author: Dima Zavin <1000413@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a1967556_8f92d950
+UUID: 21a365b4_b695308b
+Bytes: 111
+yuk :( follow the current convention then for now. We should file a bug to move all of these to device/generic.
+
 24
 Mon Oct 07 20:10:39 2013 +0000
 Author: Dima Zavin <1000413@85c56323-6fa9-3386-8a01-6480fb634889>
