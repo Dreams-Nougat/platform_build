@@ -33,6 +33,14 @@ UUID: 21a365b4_b695308b
 Bytes: 111
 yuk :( follow the current convention then for now. We should file a bug to move all of these to device/generic.
 
+0
+Mon Oct 07 21:01:25 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 21a365b4_b695308b
+UUID: 419e996d_3705c067
+Bytes: 65
+I remember we already have a bug for this but I couldn't find it.
+
 24
 Mon Oct 07 20:10:39 2013 +0000
 Author: Dima Zavin <1000413@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -47,6 +55,14 @@ Parent: 419e996d_f4589691
 UUID: a1967556_4f80f1f5
 Bytes: 75
 Probably not. This is inherited from generic, and I saw this in x86_64 too.
+
+24
+Mon Oct 07 21:01:25 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a1967556_4f80f1f5
+UUID: 419e996d_97a4ac9d
+Bytes: 49
+Yes, I'll clean up these 2 variables in a new CL.
 
 25
 Mon Oct 07 20:10:39 2013 +0000
