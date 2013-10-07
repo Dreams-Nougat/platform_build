@@ -1,0 +1,12 @@
+Revision: 7c36c6519b8fd4f03977882f540a9997a7e1e10f
+Patch-set: 1
+File: target/product/full_aarch64.mk
+
+32
+Mon Oct 07 19:36:42 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a1967556_4c68ff22
+Bytes: 112
+Let's remove full_aarch64 and just keep the aosp_aarch64.
+(full_* is the historical name for the aosp products).
+
