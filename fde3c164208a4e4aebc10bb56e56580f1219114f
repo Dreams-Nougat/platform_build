@@ -1,0 +1,25 @@
+Revision: fde3c164208a4e4aebc10bb56e56580f1219114f
+Patch-set: 1
+File: core/combo/TARGET_linux-x86.mk
+
+143
+Tue Oct 08 16:16:35 2013 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e1d30d45_bc034992
+Bytes: 55
+(read the later comments first...) and what about this?
+
+173
+Tue Oct 08 16:16:35 2013 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 61c0fd68_ee0c6755
+Bytes: 39
+in another patch, can we remove this...
+
+181
+Tue Oct 08 16:16:35 2013 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e1d30d45_dc0e05bc
+Bytes: 34
+...and this for both of the x86es?
+
