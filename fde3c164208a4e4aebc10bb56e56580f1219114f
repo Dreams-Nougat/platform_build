@@ -9,6 +9,14 @@ UUID: e1d30d45_bc034992
 Bytes: 55
 (read the later comments first...) and what about this?
 
+143
+Wed Oct 09 07:35:49 2013 +0000
+Author: Pavel Chupin <1010578@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e1d30d45_bc034992
+UUID: 21644599_282e0b9b
+Bytes: 12
+I think yes.
+
 173
 Tue Oct 08 16:16:35 2013 +0000
 Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -16,10 +24,26 @@ UUID: 61c0fd68_ee0c6755
 Bytes: 39
 in another patch, can we remove this...
 
+173
+Wed Oct 09 07:35:49 2013 +0000
+Author: Pavel Chupin <1010578@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 61c0fd68_ee0c6755
+UUID: e174ed43_0e48eb61
+Bytes: 42
+Yes. These are from old toolchain dates...
+
 181
 Tue Oct 08 16:16:35 2013 +0000
 Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: e1d30d45_dc0e05bc
 Bytes: 34
 ...and this for both of the x86es?
+
+181
+Wed Oct 09 07:35:49 2013 +0000
+Author: Pavel Chupin <1010578@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e1d30d45_dc0e05bc
+UUID: 01690174_a741ca4a
+Bytes: 4
+Yes.
 
