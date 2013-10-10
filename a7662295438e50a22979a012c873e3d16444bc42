@@ -9,3 +9,11 @@ UUID: 414e9957_112a0ca2
 Bytes: 78
 Please remove -mstackrealign and -mfpmath=sse.  They aren't needed for x86-64.
 
+148
+Thu Oct 10 17:19:27 2013 +0000
+Author: Pavel Chupin <1010578@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 414e9957_112a0ca2
+UUID: 212c457a_8b9ed161
+Bytes: 4
+Done
+
