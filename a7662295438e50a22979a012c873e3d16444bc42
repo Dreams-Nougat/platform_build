@@ -1,0 +1,11 @@
+Revision: a7662295438e50a22979a012c873e3d16444bc42
+Base-for-patch-set: 1
+File: core/combo/TARGET_linux-x86_64.mk
+
+148
+Thu Oct 10 17:04:27 2013 +0000
+Author: H.J. Lu <1005205@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 414e9957_112a0ca2
+Bytes: 78
+Please remove -mstackrealign and -mfpmath=sse.  They aren't needed for x86-64.
+
