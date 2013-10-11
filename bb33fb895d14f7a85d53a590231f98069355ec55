@@ -1,0 +1,15 @@
+Revision: bb33fb895d14f7a85d53a590231f98069355ec55
+Patch-set: 1
+File: core/combo/arch/arm/armv7-a-neon.mk
+
+12
+Fri Oct 11 23:21:21 2013 +0000
+Author: Christopher Ferris <1019050@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: be4e9480_eec973a0
+Bytes: 204
+Wouldn't it be better to rewrite this as:
+
+ifeq ($(TARGET_CPU_VARIANT),$(filter $(TARGET_CPU_VARIANT),cortex-a15 krait))
+
+and combine into one. If they separate in the future, we can split them out again.
+
