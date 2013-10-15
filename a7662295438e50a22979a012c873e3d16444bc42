@@ -27,3 +27,11 @@ UUID: 7e76dcc6_626d68c3
 Bytes: 278
 Ah, this is probably where things went wrong with clang compiles. We were probably building with just a generic x86 that chooses i686 as the machine type. That machine is not guaranteed to have SSE2/SSE3 defined for the architectural tuning, so we need to keep those flags here.
 
+149
+Tue Oct 15 09:16:09 2013 +0000
+Author: Pavel Chupin <1010578@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7e76dcc6_626d68c3
+UUID: de51881f_29054997
+Bytes: 104
+GCC toolchain is supposed to have -msse3 hardcoded for x86. Probably clang is missing the same hardcode.
+
