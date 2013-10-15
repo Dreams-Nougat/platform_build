@@ -17,3 +17,13 @@ UUID: 212c457a_8b9ed161
 Bytes: 4
 Done
 
+Base-for-patch-set: 2
+File: core/combo/TARGET_linux-x86.mk
+
+149
+Tue Oct 15 07:55:48 2013 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7e76dcc6_626d68c3
+Bytes: 278
+Ah, this is probably where things went wrong with clang compiles. We were probably building with just a generic x86 that chooses i686 as the machine type. That machine is not guaranteed to have SSE2/SSE3 defined for the architectural tuning, so we need to keep those flags here.
+
