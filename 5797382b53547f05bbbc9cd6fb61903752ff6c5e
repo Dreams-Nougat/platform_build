@@ -48,3 +48,11 @@ where 1) includes 2), 2) includes 3) and 3) includes 4).
 
 In the new uapi world we put 2) and 4) into external/kernel-headers and then bionic. Since the actual include path inside the file doesn't contain uapi, and the regular user-space problem just includes <linux/foo.h> as opposed to <uapi/linux/foo.h>, we have to direct the -I path to levels below uapi.
 
+138
+Wed Oct 16 21:32:25 2013 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5e2f58b5_a83e9fe7
+UUID: 3e346406_47870212
+Bytes: 262
+but that's what i'm saying --- this seems like a bug. don't we want to keep 'uapi' in the path, not put any kernel header files on the default include path (which has caused a lot of problems in the old world), and #include uapi/... in the header files we write?
+
