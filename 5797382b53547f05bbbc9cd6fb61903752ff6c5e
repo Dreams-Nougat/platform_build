@@ -56,3 +56,11 @@ UUID: 3e346406_47870212
 Bytes: 262
 but that's what i'm saying --- this seems like a bug. don't we want to keep 'uapi' in the path, not put any kernel header files on the default include path (which has caused a lot of problems in the old world), and #include uapi/... in the header files we write?
 
+138
+Wed Oct 16 21:58:57 2013 +0000
+Author: Ben Cheng <1000234@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3e346406_47870212
+UUID: 3e346406_e7f29653
+Bytes: 62
+how about existing userspace code that includes <linux/foo.h>?
+
