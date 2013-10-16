@@ -9,3 +9,11 @@ UUID: 3e346406_04521889
 Bytes: 75
 should we be doing this? don't we want uapi _off_ the default include path?
 
+138
+Wed Oct 16 20:05:37 2013 +0000
+Author: Ben Cheng <1000234@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3e346406_04521889
+UUID: 1e396001_2028ea49
+Bytes: 112
+The processed headers either include <linux/blah.h> or <asm/blah.h>, so the uapi path is explicitly listed here.
+
