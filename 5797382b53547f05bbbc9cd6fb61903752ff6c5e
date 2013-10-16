@@ -25,3 +25,26 @@ UUID: 3e346406_e7d0d641
 Bytes: 103
 but is that what we want (and what linus intended), or just us carrying over old stupidity into 64-bit?
 
+138
+Wed Oct 16 21:20:49 2013 +0000
+Author: Ben Cheng <1000234@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3e346406_e7d0d641
+UUID: 5e2f58b5_a83e9fe7
+Bytes: 662
+If I understand this correctly this is what Linus intended. For a given kernel header foo.h, it typically lives in 4 places:
+
+1) include/linux/foo.h
+#include <uapi/linux/foo.h>
+
+2) include/uapi/linux/foo.h
+#include <asm/foo.h>
+
+3) include/asm/foo.h
+#include <uapi/asm/foo.h>
+
+4) include/uapi/asm/foo.h
+
+where 1) includes 2), 2) includes 3) and 3) includes 4).
+
+In the new uapi world we put 2) and 4) into external/kernel-headers and then bionic. Since the actual include path inside the file doesn't contain uapi, and the regular user-space problem just includes <linux/foo.h> as opposed to <uapi/linux/foo.h>, we have to direct the -I path to levels below uapi.
+
