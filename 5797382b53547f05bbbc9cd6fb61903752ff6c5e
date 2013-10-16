@@ -17,3 +17,11 @@ UUID: 1e396001_2028ea49
 Bytes: 112
 The processed headers either include <linux/blah.h> or <asm/blah.h>, so the uapi path is explicitly listed here.
 
+138
+Wed Oct 16 21:05:40 2013 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 1e396001_2028ea49
+UUID: 3e346406_e7d0d641
+Bytes: 103
+but is that what we want (and what linus intended), or just us carrying over old stupidity into 64-bit?
+
