@@ -11,3 +11,13 @@ Doesn't sort do alphabetical sorting, not numeric sorting?
 
 What happens when MAKE_VERSION is 11.00 ?
 
+43
+Thu Oct 17 18:32:35 2013 +0000
+Author: Synergy Dev <1022430@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3e346406_24959c2e
+UUID: fed9ec3e_fffa3fea
+Bytes: 75
+You're right. I'll change this to use expr when I get a chance.
+
+Thank you.
+
