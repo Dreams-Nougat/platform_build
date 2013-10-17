@@ -29,3 +29,14 @@ UUID: def0a8a0_f1e9a2ca
 Bytes: 21
 Would "sort -n" work?
 
+43
+Thu Oct 17 19:49:41 2013 +0000
+Author: Synergy Dev <1022430@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: def0a8a0_f1e9a2ca
+UUID: bedbf437_5d033b23
+Bytes: 260
+Sort doesn't seem like the best choice for this after a bit of testing, I apologize. The following is being used in the new patchset:
+ifneq (1,$(strip $(shell expr $(MAKE_VERSION) \>= 3.81)))
+
+This seems like the best solution for future make versions as well.
+
