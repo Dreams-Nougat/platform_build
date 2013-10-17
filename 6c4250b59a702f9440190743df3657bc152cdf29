@@ -21,3 +21,11 @@ You're right. I'll change this to use expr when I get a chance.
 
 Thank you.
 
+43
+Thu Oct 17 18:51:39 2013 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: fed9ec3e_fffa3fea
+UUID: def0a8a0_f1e9a2ca
+Bytes: 21
+Would "sort -n" work?
+
