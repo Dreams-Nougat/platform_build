@@ -19,6 +19,18 @@ UUID: 7ec09cbf_b783105d
 Bytes: 112
 The AArch64 Android toolchain does not define this flag yet. For the other architectures this flag is redundant.
 
+94
+Tue Oct 29 19:26:34 2013 +0000
+Author: Ben Cheng <1000234@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7ec09cbf_b783105d
+UUID: 5e49184c_8f0ecaf3
+Bytes: 265
+In build/core/config.h it defines ANDROID:
+
+COMMON_GLOBAL_CFLAGS:= -DANDROID -fmessage-length=0 -W -Wall -Wno-unused -Winit-self -Wpointer-arith
+
+Do you need to use __ANDROID__ instead of ANDROID? (yes it looks like a mess and we need to revisit this to unify them)
+
 173
 Tue Oct 29 19:09:22 2013 +0000
 Author: Ben Cheng <1000234@85c56323-6fa9-3386-8a01-6480fb634889>
