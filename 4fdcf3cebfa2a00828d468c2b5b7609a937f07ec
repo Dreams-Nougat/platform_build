@@ -19,3 +19,18 @@ UUID: 7ec09cbf_b783105d
 Bytes: 112
 The AArch64 Android toolchain does not define this flag yet. For the other architectures this flag is redundant.
 
+173
+Tue Oct 29 19:09:22 2013 +0000
+Author: Ben Cheng <1000234@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1e5ec0fd_1eeafb22
+Bytes: 307
+Did you rebase your tree? This should already be defined after this:
+
+commit 71c36eb4513f2b02eb0d26e199a2303b43f82382
+Author: Ben Cheng <bccheng@google.com>
+Date:   Mon Oct 28 10:27:58 2013 -0700
+
+    Add the search path for libgcc.a and crt*.o.
+    
+    Change-Id: I727f5630f7667b98770d779d43be6a7901471c55
+
