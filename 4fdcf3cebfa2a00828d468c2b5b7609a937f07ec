@@ -11,3 +11,11 @@ the other architectures have a comment saying "This flag is probably redundant. 
 
 we should either make that so for 64-bit or remove the comments in the other files.
 
+94
+Tue Oct 29 18:57:37 2013 +0000
+Author: Serban Constantinescu <1030338@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 1e5ec0fd_1322f41c
+UUID: 7ec09cbf_b783105d
+Bytes: 112
+The AArch64 Android toolchain does not define this flag yet. For the other architectures this flag is redundant.
+
