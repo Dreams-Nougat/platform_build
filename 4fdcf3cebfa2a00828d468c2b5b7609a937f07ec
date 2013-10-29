@@ -1,0 +1,13 @@
+Revision: 4fdcf3cebfa2a00828d468c2b5b7609a937f07ec
+Patch-set: 3
+File: core/combo/TARGET_linux-aarch64.mk
+
+94
+Tue Oct 29 18:48:39 2013 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1e5ec0fd_1322f41c
+Bytes: 259
+the other architectures have a comment saying "This flag is probably redundant. The macro should be defined by our toolchain binaries automatically (as a compiler built-in)."
+
+we should either make that so for 64-bit or remove the comments in the other files.
+
