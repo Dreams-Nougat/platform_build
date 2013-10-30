@@ -1,0 +1,11 @@
+Revision: 74a8faf23381eabffd4dc9b5c37caa8d2213756b
+Patch-set: 4
+File: core/combo/TARGET_linux-aarch64.mk
+
+108
+Wed Oct 30 16:20:22 2013 +0000
+Author: Serban Constantinescu <1030338@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7ec09cbf_f2a756b1
+Bytes: 198
+We believe that these have been fixed in a newer version of the linker. There are new features for AArch64 in newer versions of the linker, we will need to move to binutils 2.24 when it is released.
+
