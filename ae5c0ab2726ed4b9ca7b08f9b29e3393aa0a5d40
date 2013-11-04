@@ -9,3 +9,11 @@ UUID: 5e32f8d3_407bc72a
 Bytes: 166
 why are we adding all this crap back in? you can't pass CTS with most of these set to false. we left in the only ones you could actually mess with and still pass CTS.
 
+150
+Mon Nov 04 19:30:02 2013 +0000
+Author: Andrew P Boie <1011333@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5e32f8d3_407bc72a
+UUID: 1e2c007a_922279c5
+Bytes: 133
+A subsequent patch to this one removed the options that shouldn't be fiddled with: https://android-review.googlesource.com/#/c/67091/
+
