@@ -1,0 +1,46 @@
+Revision: 80cdaa8a36b5548dd4251d58345a49eed07aa453
+Patch-set: 1
+File: /COMMIT_MSG
+
+12
+Wed Nov 27 20:14:05 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a3bafe99_b064207d
+Bytes: 165
+Why not just use makefile include for the combination of board configs? and use the product inheritance to combine products? I don't see why they do not scale well..
+
+21
+Wed Nov 27 20:14:05 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a3bafe99_10a2cc4d
+Bytes: 152
+In general I don't like the idea of relying on analyzing the directory structure when loading product config - it slows down every make command you run.
+
+31
+Wed Nov 27 20:14:05 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c3a45289_69b6c10e
+Bytes: 76
+This can already be done with inherit-product in a more straightforward way.
+
+34
+Wed Nov 27 20:14:05 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a3bafe99_30f5903e
+Bytes: 345
+No, you can't change the board config on product's base, based on the current build system design. Currently all products of the same board config share the same out/target/product/<device ( board config) name>/ tree. This design makes all the native code (static libraries, shared libraries, executables) are reused if you do incremental build.
+
+40
+Wed Nov 27 20:14:05 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 03abca57_08d7078d
+Bytes: 92
+AndroidBoard.mk is deprecated now - it's really has no difference than a regular Android.mk.
+
+46
+Wed Nov 27 20:14:05 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a3bafe99_d0a7543a
+Bytes: 458
+This is NOT weird - it's so by design. Previously (in ics and earlier) the build system loaded all the product config files it could find in the source tree, even if you just select one product by running lunch. Even now if your run "make dump-products" or "make product-graph" the build system still needs to load all the product config. You can't load all the product config by a simple makefile "incldue", which just overrides all the PRODUCT_* variables.
+
