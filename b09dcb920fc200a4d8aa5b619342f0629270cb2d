@@ -1,0 +1,18 @@
+Revision: b09dcb920fc200a4d8aa5b619342f0629270cb2d
+Patch-set: 2
+File: core/config.mk
+
+395
+Thu Dec 05 17:53:23 2013 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c3ca9290_96d50ad4
+Bytes: 47
+older -> pre-JDK7 to be clear what older means?
+
+396
+Thu Dec 05 17:53:23 2013 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c3ca9290_b6d006e4
+Bytes: 10
+whitespace
+
