@@ -9,3 +9,11 @@ UUID: 63a3a6b3_44860eb8
 Bytes: 83
 I guess this doesn't work, for auto-prebuilt-boilerplate only accepts 8 parameters.
 
+101
+Thu Dec 05 01:46:12 2013 +0000
+Author: Chih-Wei Huang <1002563@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 63a3a6b3_44860eb8
+UUID: e3e2361a_cce2cf46
+Bytes: 155
+Ah, I forgot I have another patch (from Intel) that extends auto-prebuilt-boilerplate to accept 10 parameters in my codebase. The 9th is LOCAL_MODULE_PATH.
+
