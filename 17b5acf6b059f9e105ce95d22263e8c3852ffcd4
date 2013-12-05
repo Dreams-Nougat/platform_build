@@ -1,0 +1,11 @@
+Revision: 17b5acf6b059f9e105ce95d22263e8c3852ffcd4
+Patch-set: 1
+File: core/compilerchecks.mk
+
+27
+Thu Dec 05 23:27:39 2013 +0000
+Author: Aaron Gascoigne <1019048@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c3ca9290_f9066f36
+Bytes: 36
+gcc version should not be hardcoded.
+
