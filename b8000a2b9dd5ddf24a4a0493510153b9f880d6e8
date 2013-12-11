@@ -9,6 +9,14 @@ UUID: a8101b3f_9a248dde
 Bytes: 53
 Perhaps we should document what these arguments are ?
 
+57
+Wed Dec 11 19:11:08 2013 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a8101b3f_9a248dde
+UUID: 8337bac2_d2895a0d
+Bytes: 67
+yeah, the ones they delegate to are doc'd, but I added doc here too
+
 File: core/dex_preopt_libart.mk
 
 41
@@ -17,4 +25,12 @@ Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: e31f9643_07a578ca
 Bytes: 143
 Why did you choose to leave the leading "/" out of DEXPREOPT_BOOR_JAR_DIR ? Do you want to enforce the absolute pathiness of DEX_PREOPT_IMAGE ?
+
+41
+Wed Dec 11 19:11:08 2013 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e31f9643_07a578ca
+UUID: a332fed0_b36dca8e
+Bytes: 43
+I didn't, this variable predates my change.
 
