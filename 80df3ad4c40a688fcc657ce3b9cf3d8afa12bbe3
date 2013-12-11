@@ -1,0 +1,18 @@
+Revision: 80df3ad4c40a688fcc657ce3b9cf3d8afa12bbe3
+Patch-set: 1
+File: tools/releasetools/sign_target_files_apks
+
+240
+Wed Dec 11 21:14:12 2013 +0000
+Author: Doug Zongker <1002268@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c31c5254_439846a6
+Bytes: 35
+maybe value.pop() or del value[-1]?
+
+241
+Wed Dec 11 21:14:12 2013 +0000
+Author: Doug Zongker <1002268@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a8e73b93_621a3654
+Bytes: 65
+Why not " ".join(value), rather than importing the string module?
+
