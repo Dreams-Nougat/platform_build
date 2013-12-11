@@ -1,0 +1,20 @@
+Revision: b8000a2b9dd5ddf24a4a0493510153b9f880d6e8
+Patch-set: 1
+File: core/dex_preopt.mk
+
+57
+Wed Dec 11 18:46:57 2013 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a8101b3f_9a248dde
+Bytes: 53
+Perhaps we should document what these arguments are ?
+
+File: core/dex_preopt_libart.mk
+
+41
+Wed Dec 11 18:46:57 2013 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e31f9643_07a578ca
+Bytes: 143
+Why did you choose to leave the leading "/" out of DEXPREOPT_BOOR_JAR_DIR ? Do you want to enforce the absolute pathiness of DEX_PREOPT_IMAGE ?
+
