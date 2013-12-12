@@ -2,6 +2,14 @@ Revision: d87f96734f74cccb5176c6db41b0b9cf127977f5
 Patch-set: 1
 File: core/definitions.mk
 
+1370
+Thu Dec 12 23:45:23 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 88d6f7d9_5704c42f
+Bytes: 151
+Then let's add the flags here, just after the above $(HOST_GLOBAL_LDFLAGS).
+Please add a comment that "-fPIE -pie" only applies to executable on Linux.
+
 1394
 Thu Dec 12 19:58:24 2013 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -18,4 +26,12 @@ Parent: 28aeeb65_5a686510
 UUID: 68db8306_3325923d
 Bytes: 138
 I tried that initially but the build broke (less the LOCAL_NO_DEFAULT_COMPILER_FLAGS part). I'll give this a shot and see if it works out.
+
+1394
+Thu Dec 12 23:45:23 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 68db8306_3325923d
+UUID: e8ce934a_efa71d3a
+Bytes: 62
+OK, I didn't know that PIE can't be applied to shared library.
 
