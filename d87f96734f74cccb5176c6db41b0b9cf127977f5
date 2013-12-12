@@ -1,0 +1,13 @@
+Revision: d87f96734f74cccb5176c6db41b0b9cf127977f5
+Patch-set: 1
+File: core/definitions.mk
+
+1394
+Thu Dec 12 19:58:24 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 28aeeb65_5a686510
+Bytes: 282
+This is unnecessary.
+I think we can add "-fPIE -pie" to HOST_GLOBAL_LDFLAGS in build/core/combo/HOST_linux-x86.mk.
+If you don't want to enable PIE for a module, just use "LOCAL_NO_DEFAULT_COMPILER_FLAGS := true" to disable the global flags set in build/core/combo/HOST_linux-x86.mk.
+
