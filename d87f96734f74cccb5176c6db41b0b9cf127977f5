@@ -10,6 +10,14 @@ Bytes: 151
 Then let's add the flags here, just after the above $(HOST_GLOBAL_LDFLAGS).
 Please add a comment that "-fPIE -pie" only applies to executable on Linux.
 
+1370
+Fri Dec 13 00:09:38 2013 +0000
+Author: Joshua J. Drake <1037474@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 88d6f7d9_5704c42f
+UUID: 68db8306_93755ee2
+Bytes: 178
+Adding the flag here works except QEMU will no longer build. Hence the change to add the -no-pie variant of transform-host-o-to-executable-inner and the change to QEMU to use it.
+
 1394
 Thu Dec 12 19:58:24 2013 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -34,4 +42,12 @@ Parent: 68db8306_3325923d
 UUID: e8ce934a_efa71d3a
 Bytes: 62
 OK, I didn't know that PIE can't be applied to shared library.
+
+1394
+Fri Dec 13 00:09:38 2013 +0000
+Author: Joshua J. Drake <1037474@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e8ce934a_efa71d3a
+UUID: 28c50b24_91755ee2
+Bytes: 82
+The error in liblog is pretty strange. I don't understand what's going on there :(
 
