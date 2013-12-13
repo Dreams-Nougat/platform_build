@@ -40,6 +40,14 @@ out/host/linux-x86/obj/EXECUTABLES/emulator64-arm_intermediates/audio/audio.o: c
 collect2: ld returned 1 exit status
 make: *** [out/host/linux-x86/obj/EXECUTABLES/emulator64-arm_intermediates/emulator64-arm] Error 1
 
+1370
+Fri Dec 13 01:11:55 2013 +0000
+Author: Joshua J. Drake <1037474@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 28c50b24_546044e7
+UUID: 68db8306_d6f0b40b
+Bytes: 174
+Note that qemu seems to explicitly use -fno-PIC in several places, which would preclude using PIE. I assumed this was for a good reason and decided not to try to change that.
+
 1394
 Thu Dec 12 19:58:24 2013 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
