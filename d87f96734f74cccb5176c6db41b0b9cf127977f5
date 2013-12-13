@@ -48,6 +48,16 @@ UUID: 68db8306_d6f0b40b
 Bytes: 174
 Note that qemu seems to explicitly use -fno-PIC in several places, which would preclude using PIE. I assumed this was for a good reason and decided not to try to change that.
 
+1370
+Fri Dec 13 01:33:40 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 28c50b24_546044e7
+UUID: c8762fc5_96756ae2
+Bytes: 234
+That error appears only if -fPIE is applied to the emulator executables. You can run "make -j64 showcommands host-native"  and examine the compiler commands.
+I guess you still have some extra local change?
+I'll upload a new patch-set.
+
 1394
 Thu Dec 12 19:58:24 2013 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
