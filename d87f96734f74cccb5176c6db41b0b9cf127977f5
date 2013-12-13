@@ -26,6 +26,20 @@ UUID: 88d6f7d9_b740904d
 Bytes: 124
 Why the 64-bit QEMU executable build will be broken? the flag will be guarded by  $(PRIVATE_NO_DEFAULT_COMPILER_FLAGS) here.
 
+1370
+Fri Dec 13 01:08:23 2013 +0000
+Author: Joshua J. Drake <1037474@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 88d6f7d9_b740904d
+UUID: 28c50b24_546044e7
+Bytes: 758
+The build error without using the -no-pie variant follows:
+
+host Executable (PIE): emulator64-arm (out/host/linux-x86/obj/EXECUTABLES/emulator64-arm_intermediates/emulator64-arm)
+/android/source/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.7-4.6/bin/../lib/gcc/x86_64-linux/4.6.x-google/../../../../x86_64-linux/bin/ld: out/host/linux-x86/obj/EXECUTABLES/emulator64-arm_intermediates/audio/audio.o: relocation R_X86_64_32S against `.rodata' can not be used when making a shared object; recompile with -fPIC
+out/host/linux-x86/obj/EXECUTABLES/emulator64-arm_intermediates/audio/audio.o: could not read symbols: Bad value
+collect2: ld returned 1 exit status
+make: *** [out/host/linux-x86/obj/EXECUTABLES/emulator64-arm_intermediates/emulator64-arm] Error 1
+
 1394
 Thu Dec 12 19:58:24 2013 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
