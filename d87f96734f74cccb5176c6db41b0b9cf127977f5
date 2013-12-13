@@ -18,6 +18,14 @@ UUID: 68db8306_93755ee2
 Bytes: 178
 Adding the flag here works except QEMU will no longer build. Hence the change to add the -no-pie variant of transform-host-o-to-executable-inner and the change to QEMU to use it.
 
+1370
+Fri Dec 13 00:17:16 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 68db8306_93755ee2
+UUID: 88d6f7d9_b740904d
+Bytes: 124
+Why the 64-bit QEMU executable build will be broken? the flag will be guarded by  $(PRIVATE_NO_DEFAULT_COMPILER_FLAGS) here.
+
 1394
 Thu Dec 12 19:58:24 2013 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
