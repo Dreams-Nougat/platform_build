@@ -49,6 +49,20 @@ UUID: a8973b5d_c5086cbd
 Bytes: 116
 In build/core/main, we only enable WITH_DEXPREOPT for user builds. It seems we don't need this judgement here again.
 
+117
+Sat Dec 14 00:45:34 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a8973b5d_c8abe3a2
+Bytes: 64
+Why do need $(installed_odex) even if LOCAL_DEX_PREOPT is unset?
+
+125
+Sat Dec 14 00:45:34 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c86c6f4a_29d00938
+Bytes: 119
+Since you add $(installed_odex) to ALL_MODULES.$$(LOCAL_MODULE).INSTALLED, I don't think we still need this dependency.
+
 129
 Sat Dec 14 00:31:50 2013 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
