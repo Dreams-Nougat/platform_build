@@ -1,0 +1,122 @@
+Revision: 00e6c92c527fcb12e67cc6c5c416acdc2b7d768f
+Patch-set: 5
+File: c86c6f4a_c62764e1
+
+73
+Sat Dec 14 00:31:50 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c86c6f4a_c62764e1
+Bytes: 361
+Let's move this to a separate makfile and include it where we call this function. "include <makefile>" is preferable over "$(eval )" for 2 reasons:
+1) you don't need to escape $ in the included makefile so it's much more readable.
+2) "include" is much faster than "$(eval)".
+
+
+The same for lots of functions defined then called with $(eval) in the art/ project.
+
+File: c86c6f4a_e3f7f2fd
+
+62
+Sat Dec 14 00:31:50 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c86c6f4a_e3f7f2fd
+Bytes: 152
+$(patsubst core, core-libart,$(TARGET_BOOT_JARS))
+No $(foreach) is needed.
+
+Also please add a comment why we need to replace core with core-libart here.
+
+File: core/dex_preopt.mk
+
+9
+Sat Dec 14 00:31:50 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 28c8ab74_366f788a
+Bytes: 164
+Let's define a global (all-capital) variable in target/product/runtime_libart_default.mk and target/product/runtime_libdvm_default.mk, instead of grepping out here.
+
+32
+Sat Dec 14 00:31:50 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 28ab4b9f_9e54fd13
+Bytes: 74
+I think we should rename it to _dexpreopt-boot-jar-remove-classes.dex now.
+
+83
+Sat Dec 14 00:31:50 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a8973b5d_c5086cbd
+Bytes: 116
+In build/core/main, we only enable WITH_DEXPREOPT for user builds. It seems we don't need this judgement here again.
+
+129
+Sat Dec 14 00:31:50 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 28ab4b9f_814a5c70
+Bytes: 24
+It's good to catch this!
+
+134
+Sat Dec 14 00:31:50 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c86c6f4a_06533c57
+Bytes: 102
+How about the boot jars? where is the rule to install the .odex files for them when libdvm.so is used?
+
+File: core/dex_preopt_libart.mk
+
+38
+Sat Dec 14 00:31:50 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c8be2fc6_9375bc14
+Bytes: 50
+Where is PRODUCT_DEX_PREOPT_IMAGE_IN_DATA defined?
+
+61
+Sat Dec 14 00:31:50 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c86c6f4a_c3faf6e8
+Bytes: 60
+We already have DEXPREOPT_BOOT_JARS_MODULES in dex_preopt.mk
+
+75
+Sat Dec 14 00:31:50 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a8973b5d_42fc528c
+Bytes: 57
+I don't see the definition of PARALLEL_ART_COMPILE_JOBS .
+
+92
+Sat Dec 14 00:31:50 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c86c6f4a_a3bdfa9b
+Bytes: 110
+Please move the above block back to the art project - module definition shouldn't be in the core build system.
+
+File: core/java.mk
+
+255
+Sat Dec 14 00:31:50 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 28ab4b9f_61d8703e
+Bytes: 27
+Let's move it down to here.
+
+File: core/java_library.mk
+
+96
+Sat Dec 14 00:31:50 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a8973b5d_85d26495
+Bytes: 31
+Please use PRIVATE_DEX_LOCATION
+
+File: core/package.mk
+
+394
+Sat Dec 14 00:31:50 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c86c6f4a_c9113569
+Bytes: 47
+The convention is to use PRIVATE_DEX_LOCATION .
+
