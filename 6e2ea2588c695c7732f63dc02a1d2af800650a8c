@@ -1,0 +1,50 @@
+Revision: 6e2ea2588c695c7732f63dc02a1d2af800650a8c
+Patch-set: 7
+File: core/dex_preopt_libart.mk
+
+45:80-45:81
+Mon Dec 16 20:29:42 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 28ab4b9f_8d23adc0
+Bytes: 20
+extra trailing space
+
+51:64-51:66
+Mon Dec 16 20:29:42 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c86c6f4a_7892c538
+Bytes: 108
+I think it's slightly more efficient to use $(patsubst)
+$(patsubst $(PRODUCT_OUT)%,%,$(TARGET_BOOT_OAT_OUT))
+
+File: core/dex_preopt_libdvm.mk
+
+44:28-44:32
+Mon Dec 16 20:29:42 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a8973b5d_3c00515c
+Bytes: 50
+I think we need to run "mkdir -p $(dir $$@)" here.
+
+File: core/product_config.mk
+
+270:71-270:72
+Mon Dec 16 20:29:42 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a8973b5d_5c51d546
+Bytes: 112
+Should be:
+PRODUCTS.$(INTERNAL_PRODUCT).PRODUCT_PROPERTY_OVERRIDES += persist.sys.dalvik.vm.lib=$(DALVIK_VM_LIB)
+
+File: target/product/runtime_libart_default.mk
+
+19:0-20:0
+Mon Dec 16 20:29:42 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 28ab4b9f_0d3c3da9
+Bytes: 146
+Or just use:
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.dalvik.vm.lib=$(DALVIK_VM_LIB)
+This makes the product_config.mk a little bit cleaner.
+
