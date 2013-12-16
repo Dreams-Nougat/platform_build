@@ -9,6 +9,14 @@ UUID: 28ab4b9f_8d23adc0
 Bytes: 20
 extra trailing space
 
+45:80-45:81
+Mon Dec 16 22:55:52 2013 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 28ab4b9f_8d23adc0
+UUID: 68baa3ef_fb2e6bac
+Bytes: 4
+Done
+
 51:64-51:66
 Mon Dec 16 20:29:42 2013 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -16,6 +24,14 @@ UUID: c86c6f4a_7892c538
 Bytes: 108
 I think it's slightly more efficient to use $(patsubst)
 $(patsubst $(PRODUCT_OUT)%,%,$(TARGET_BOOT_OAT_OUT))
+
+51:64-51:66
+Mon Dec 16 22:55:52 2013 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c86c6f4a_7892c538
+UUID: 08a847a1_40c9f091
+Bytes: 4
+Done
 
 File: core/dex_preopt_libdvm.mk
 
@@ -26,6 +42,14 @@ UUID: a8973b5d_3c00515c
 Bytes: 50
 I think we need to run "mkdir -p $(dir $$@)" here.
 
+44:28-44:32
+Mon Dec 16 22:55:52 2013 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a8973b5d_3c00515c
+UUID: 68baa3ef_1b2a3f93
+Bytes: 101
+no, I moved that into dexopt-one-file implementations since it was being redundantly done everywhere.
+
 File: core/product_config.mk
 
 270:71-270:72
@@ -35,6 +59,14 @@ UUID: a8973b5d_5c51d546
 Bytes: 112
 Should be:
 PRODUCTS.$(INTERNAL_PRODUCT).PRODUCT_PROPERTY_OVERRIDES += persist.sys.dalvik.vm.lib=$(DALVIK_VM_LIB)
+
+270:71-270:72
+Mon Dec 16 22:55:52 2013 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a8973b5d_5c51d546
+UUID: 68baa3ef_fb554b12
+Bytes: 4
+Done
 
 File: target/product/runtime_libart_default.mk
 
@@ -47,4 +79,12 @@ Or just use:
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.dalvik.vm.lib=$(DALVIK_VM_LIB)
 This makes the product_config.mk a little bit cleaner.
+
+19:0-20:0
+Mon Dec 16 22:55:52 2013 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 28ab4b9f_0d3c3da9
+UUID: a80e5bb3_6aabb70a
+Bytes: 94
+I fixed the other place so as not to have cut/paste redundancy here and in the libdvm version.
 
