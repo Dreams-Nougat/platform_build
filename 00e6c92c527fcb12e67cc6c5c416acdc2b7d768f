@@ -35,12 +35,34 @@ UUID: 28c8ab74_366f788a
 Bytes: 164
 Let's define a global (all-capital) variable in target/product/runtime_libart_default.mk and target/product/runtime_libdvm_default.mk, instead of grepping out here.
 
+9
+Mon Dec 16 07:16:02 2013 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 28c8ab74_366f788a
+UUID: 28ab4b9f_07041c2e
+Bytes: 281
+done, called DALVIK_VM_LIB
+
+I also then removed the adding in each runtime_lib*_default.mk to PRODUCT_PROPERTY_OVERRIDES and just did it in one place in product_config.mk like this:
+
+PRODUCT_PROPERTY_OVERRIDES += persist.sys.dalvik.vm.lib=$(DALVIK_VM_LIB)
+
+that seems better right?
+
 32
 Sat Dec 14 00:31:50 2013 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 28ab4b9f_9e54fd13
 Bytes: 74
 I think we should rename it to _dexpreopt-boot-jar-remove-classes.dex now.
+
+32
+Mon Dec 16 07:16:02 2013 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 28ab4b9f_9e54fd13
+UUID: c86c6f4a_f7b16873
+Bytes: 4
+Done
 
 83
 Sat Dec 14 00:31:50 2013 +0000
@@ -49,12 +71,28 @@ UUID: a8973b5d_c5086cbd
 Bytes: 116
 In build/core/main, we only enable WITH_DEXPREOPT for user builds. It seems we don't need this judgement here again.
 
+83
+Mon Dec 16 07:16:02 2013 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a8973b5d_c5086cbd
+UUID: 28ab4b9f_e7081046
+Bytes: 4
+Done
+
 117
 Sat Dec 14 00:45:34 2013 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: a8973b5d_c8abe3a2
 Bytes: 64
 Why do need $(installed_odex) even if LOCAL_DEX_PREOPT is unset?
+
+117
+Mon Dec 16 07:16:02 2013 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a8973b5d_c8abe3a2
+UUID: c86c6f4a_17de04a8
+Bytes: 290
+we don't here (yet). In dalvik-dev, we always did dexopt. if LOCAL_DEX_PREOPT was set, it would go to /system as before. If not set, it would go to /data/dalvik-cache which would could be sent via "adb sync". I'll remove this for now as unneeded (as well as the dalvik-cache-* declarations)
 
 125
 Sat Dec 14 00:45:34 2013 +0000
@@ -63,6 +101,14 @@ UUID: c86c6f4a_29d00938
 Bytes: 119
 Since you add $(installed_odex) to ALL_MODULES.$$(LOCAL_MODULE).INSTALLED, I don't think we still need this dependency.
 
+125
+Mon Dec 16 07:16:02 2013 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c86c6f4a_29d00938
+UUID: c86c6f4a_37e30075
+Bytes: 4
+Done
+
 129
 Sat Dec 14 00:31:50 2013 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -70,12 +116,28 @@ UUID: 28ab4b9f_814a5c70
 Bytes: 24
 It's good to catch this!
 
+129
+Mon Dec 16 07:16:02 2013 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 28ab4b9f_814a5c70
+UUID: c86c6f4a_57d87cb8
+Bytes: 125
+yeah, but the comment is out of date if I'm removing the installed_odex from /data/dalvik-cache, so I've updated it slightly.
+
 134
 Sat Dec 14 00:31:50 2013 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: c86c6f4a_06533c57
 Bytes: 102
 How about the boot jars? where is the rule to install the .odex files for them when libdvm.so is used?
+
+134
+Mon Dec 16 07:16:02 2013 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c86c6f4a_06533c57
+UUID: 28ab4b9f_c7fd14de
+Bytes: 115
+should be in dex_preopt_libdvm.mk, I tried to move dvm specific stuff there so it can be more easily removed later.
 
 File: core/dex_preopt_libart.mk
 
@@ -86,12 +148,30 @@ UUID: c8be2fc6_9375bc14
 Bytes: 50
 Where is PRODUCT_DEX_PREOPT_IMAGE_IN_DATA defined?
 
+38
+Mon Dec 16 07:16:02 2013 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c8be2fc6_9375bc14
+UUID: a8973b5d_f6b68808
+Bytes: 175
+removed now.
+
+In dalvik-dev we used this for trygon where the boot.art/boot.oat didn't fit in /system. I can remove it now (along with a bunch of the dalvik-cache stuff above)
+
 61
 Sat Dec 14 00:31:50 2013 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: c86c6f4a_c3faf6e8
 Bytes: 60
 We already have DEXPREOPT_BOOT_JARS_MODULES in dex_preopt.mk
+
+61
+Mon Dec 16 07:16:02 2013 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c86c6f4a_c3faf6e8
+UUID: c86c6f4a_77dd78a7
+Bytes: 58
+ah, true. This was all written long before that was added.
 
 75
 Sat Dec 14 00:31:50 2013 +0000
@@ -100,12 +180,30 @@ UUID: a8973b5d_42fc528c
 Bytes: 57
 I don't see the definition of PARALLEL_ART_COMPILE_JOBS .
 
+75
+Mon Dec 16 07:16:02 2013 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a8973b5d_42fc528c
+UUID: 28ab4b9f_a7020820
+Bytes: 179
+good catch. this was still in art/build. However, we only use it to throttle the backend for the llvm based backend which we aren't using by default so I've removed it everywhere.
+
 92
 Sat Dec 14 00:31:50 2013 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: c86c6f4a_a3bdfa9b
 Bytes: 110
 Please move the above block back to the art project - module definition shouldn't be in the core build system.
+
+92
+Mon Dec 16 07:16:02 2013 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c86c6f4a_a3bdfa9b
+UUID: 28ab4b9f_87182c90
+Bytes: 520
+hmm, to me this is similar to the libdvm case where rules to make odex for the boot jars are visible globally as well. if someone rebuilds a boot jar, they need to regenerate this as well.
+
+I'm sure you are right that putting this here isn't 100% right, but I think there needs to be something. perhaps in the includes that go for package.mk? but then I don't know why that doesn't apply to the libdvm case too. (it probably should but I'd like to talk more before redoing this to make sure I'm using the right approach)
 
 File: core/java.mk
 
@@ -116,6 +214,14 @@ UUID: 28ab4b9f_61d8703e
 Bytes: 27
 Let's move it down to here.
 
+255
+Mon Dec 16 07:16:02 2013 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 28ab4b9f_61d8703e
+UUID: 28ab4b9f_67152054
+Bytes: 44
+the dexpreopt-odex-install line above? done.
+
 File: core/java_library.mk
 
 96
@@ -125,6 +231,14 @@ UUID: a8973b5d_85d26495
 Bytes: 31
 Please use PRIVATE_DEX_LOCATION
 
+96
+Mon Dec 16 07:16:02 2013 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a8973b5d_85d26495
+UUID: 28ab4b9f_4712246e
+Bytes: 109
+done here and elsewhere. I seem to have figured that out later, this must have been one of the first I added.
+
 File: core/package.mk
 
 394
@@ -133,4 +247,12 @@ Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: c86c6f4a_c9113569
 Bytes: 47
 The convention is to use PRIVATE_DEX_LOCATION .
+
+394
+Mon Dec 16 07:16:02 2013 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c86c6f4a_c9113569
+UUID: a8973b5d_d6ab84a2
+Bytes: 4
+Done
 
