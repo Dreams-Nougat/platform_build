@@ -221,6 +221,18 @@ UUID: a8973b5d_9723b6c0
 Bytes: 327
 In the libdvm case, we have DEXPREOPT_BOOT_ODEXS, which points to the built .odex files of the boot jars. Then in package.mk and java_library.mk we have "$(LOCAL_BUILT_MODULE): $(DEXPREOPT_BOOT_ODEXS)" and "$(built_odex) : $(DEXPREOPT_BOOT_ODEXS)". This makes sure if any boot jars gets rebuilt, all .odex will be re-generated.
 
+92
+Mon Dec 16 23:45:47 2013 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a8973b5d_9723b6c0
+UUID: 08a847a1_c091803d
+Bytes: 405
+ok, well maybe this is a different problem them. or a problem rarely encountered before.
+
+my worry is someone can't just rebuild in libcore or frameworks/base now, they need to rebuild in art too. I guess I've seen some warning about needing to do top level builds for dexopt, I don't see that anymore.
+
+this would be an issue before as well, if you change core.jar, you need to regenerate frameworks.odex
+
 File: core/java.mk
 
 255
