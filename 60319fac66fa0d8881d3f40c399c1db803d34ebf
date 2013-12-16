@@ -10,6 +10,16 @@ Bytes: 141
 Why we need the above 2 lines? the dependency should be established in an implicit way:
 .cc <- $(DEX2OAT) $(LIBART_COMPILER) <- .oat and .art
 
+19:73-19:79
+Mon Dec 16 22:56:02 2013 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c86c6f4a_6c204a2e
+UUID: 08a847a1_20c6e481
+Bytes: 450
+because like with dexopt (and dx), we've wanted to have a order only dependency on the tool. you don't need to rerunt he compiler for everything just because the LIBART_COMPILER or any of its dependencies changes. 
+
+however, if the file formats change, we need to force a rebuild. I'd checked this in before but it got lost when I was first pulling this over to aosp, so I ran into this issue when someone changed a file format when I rebased things.
+
 File: core/java_library.mk
 
 96:39-96:42
@@ -20,6 +30,14 @@ Bytes: 107
 Perhaps it's more efficient and more readable with:
 $(patsubst $(PRODUCT_OUT)%,%,$(LOCAL_INSTALLED_MODULE))
 
+96:39-96:42
+Mon Dec 16 22:56:02 2013 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a8973b5d_3764ea7b
+UUID: 68baa3ef_9b540f14
+Bytes: 4
+Done
+
 97:67-97:68
 Mon Dec 16 21:56:45 2013 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -27,6 +45,14 @@ UUID: 28ab4b9f_8d7ccdcf
 Bytes: 121
 We are missing dependencies here:
 We don't have dependency on $(LOCAL_DEX_PREOPT_IMAGE), as well as $(DEX2OAT_DEPENDENCY)
+
+97:67-97:68
+Mon Dec 16 22:56:02 2013 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 28ab4b9f_8d7ccdcf
+UUID: 08a847a1_80a6d8d6
+Bytes: 296
+actually, there is a dependency already on LOCAL_DEX_PREOPT_IMAGE, but you are right the tools dependency is missing (though implicit through the LOCAL_DEX_PREOPT_IMAGE. I'll make it explicit, and conditional on DALVIK_VM_LIB value since we don't want to depend on DEXOPT and DEXPREOPT for libart
 
 File: core/package.mk
 
@@ -36,4 +62,12 @@ Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: c86c6f4a_cc593ec3
 Bytes: 198
 If LOCAL_UNINSTALLABLE_MODULE is true, we can reset LOCAL_DEX_PREOPT to empty in dex_preopt_odex_install.mk, and use "ifdef LOCAL_DEX_PREOPT" as is consistent with the call to $(dexpreopt-one-file).
+
+393:0-393:33
+Mon Dec 16 22:56:02 2013 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c86c6f4a_cc593ec3
+UUID: 08a847a1_805018ef
+Bytes: 4
+Done
 
