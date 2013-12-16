@@ -1,0 +1,39 @@
+Revision: 60319fac66fa0d8881d3f40c399c1db803d34ebf
+Patch-set: 8
+File: core/dex_preopt_libart.mk
+
+19:73-19:79
+Mon Dec 16 21:56:45 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c86c6f4a_6c204a2e
+Bytes: 141
+Why we need the above 2 lines? the dependency should be established in an implicit way:
+.cc <- $(DEX2OAT) $(LIBART_COMPILER) <- .oat and .art
+
+File: core/java_library.mk
+
+96:39-96:42
+Mon Dec 16 21:56:45 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a8973b5d_3764ea7b
+Bytes: 107
+Perhaps it's more efficient and more readable with:
+$(patsubst $(PRODUCT_OUT)%,%,$(LOCAL_INSTALLED_MODULE))
+
+97:67-97:68
+Mon Dec 16 21:56:45 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 28ab4b9f_8d7ccdcf
+Bytes: 121
+We are missing dependencies here:
+We don't have dependency on $(LOCAL_DEX_PREOPT_IMAGE), as well as $(DEX2OAT_DEPENDENCY)
+
+File: core/package.mk
+
+393:0-393:33
+Mon Dec 16 21:56:45 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c86c6f4a_cc593ec3
+Bytes: 198
+If LOCAL_UNINSTALLABLE_MODULE is true, we can reset LOCAL_DEX_PREOPT to empty in dex_preopt_odex_install.mk, and use "ifdef LOCAL_DEX_PREOPT" as is consistent with the call to $(dexpreopt-one-file).
+
