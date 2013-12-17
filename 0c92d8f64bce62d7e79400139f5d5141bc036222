@@ -14,6 +14,30 @@ It seems somehow 'out/target/product/generic/system/framework/boot.oat'  got har
 Also It seems to me we shouldn't embed the build out  path into a file that would be installed to the device.
 Any idea?
 
+73
+Tue Dec 17 19:57:22 2013 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 08ff67b9_c8d86f0c
+UUID: c86c6f4a_f1c88b90
+Bytes: 623
+I see you are moving this to have a separate built location vs install location, but don't forget I'd reverted this and moved it back to art based on your earlier comments and my confusion, so make sure to remove it from art as well.
+
+as far as the error, the problem is 
+
+--host-prefix=$(DEXPREOPT_BOOT_JAR_DIR_FULL_PATH)
+
+I think. That is what it uses to know what part of out/... path to strip off to know what the target path will be. 
+
+I think you need to pass
+
+out/target/product/generic/dex_bootjars
+
+instead of
+
+out/target/product/generic/dex_bootjars/system/framework
+
+though I'm not sure that explains everything.
+
 File: core/dex_preopt_odex_install.mk
 
 54
@@ -22,4 +46,12 @@ Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: c86c6f4a_9bc0563a
 Bytes: 86
 Is it possible that LOCAL_DEX_PREOPT_IMAGE is set to any other value in an Android.mk?
+
+54
+Tue Dec 17 19:57:22 2013 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c86c6f4a_9bc0563a
+UUID: a8973b5d_d8572a8e
+Bytes: 116
+yes, in art/test we use a smaller core.art for unit testing, since we can't build the frameworks stuff for the host.
 
