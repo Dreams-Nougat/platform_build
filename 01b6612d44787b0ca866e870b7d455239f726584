@@ -1,0 +1,60 @@
+Revision: 01b6612d44787b0ca866e870b7d455239f726584
+Patch-set: 9
+File: core/dex_preopt_odex_install.mk
+
+36:0-36:22
+Tue Dec 17 00:23:59 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 28ab4b9f_b30c8a06
+Bytes: 37
+Move the line 28 to be enclosed here.
+
+39:0-39:105
+Tue Dec 17 00:23:59 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 28ab4b9f_f319f25e
+Bytes: 251
+I think if the module doesn't contain java code, we should reset LOCAL_DEX_PREOPT, just like what if LOCAL_UNINSTALLABLE_MODULE is true. Then later we use whehter LOCAL_DEX_PREOPT is set (and no other condition) to determine if we need further action.
+
+41:0-43:23
+Tue Dec 17 00:23:59 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 28ab4b9f_73be0298
+Bytes: 359
+So $(installed_odex) rule is excluded for boot jars. I still don't see how the .odex files of the boot jars get installed. As I said in the other comment, previously the boot jars' odex files get installed by "$(LOCAL_INSTALLED_MODULE): $(installed_odex)" in base_rules.mk. Now you don't have them covered that way or by ALL_MODULES.$(LOCAL_MODULE).INSTALLED.
+
+File: core/java_library.mk
+
+96:39-96:95
+Tue Dec 17 00:23:59 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 28ab4b9f_332aba93
+Bytes: 68
+No leading "/" now: the result of $(patsubst) will have a leading /.
+
+101:62-101:63
+Tue Dec 17 00:23:59 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c86c6f4a_e280c3df
+Bytes: 748
+This makes me think more about how the boot.art should get installed. With this dependency, boot.art gets installed whenever a module is being dex-preopted. That's not good - building a module shouldn't get anything installed to out/target/product/*/system. boot.art should be installed at the installation stage.
+Previously, .odex files of the boot jars are generated to a staging directory $(DEXPREOPT_BOOT_JAR_DIR_FULL_PATH) and all $(built_odex) have dependency on those files. .odex files of the boot jars are installed only by the rule "$(LOCAL_INSTALLED_MODULE): $(installed_odex)".
+So for boot.art, I think we should have some dependency like "out/target/product/*/system/framework/core.jar: out/target/product/*/system/framework/boot.art".
+
+File: core/package.mk
+
+394:0-396:76
+Tue Dec 17 00:23:59 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a8973b5d_ac50acee
+Bytes: 73
+I think we should move this up to be enclosed by "ifdef LOCAL_DEX_PREOPT"
+
+397:89-397:115
+Tue Dec 17 00:23:59 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a8973b5d_4ccc8071
+Bytes: 272
+This makes the $(LOCAL_DEX_PREOPT_IMAGE) (i.e. $(DEFAULT_DEX_PREOPT_IMAGE)) be built even if LOCAL_DEX_PREOPT is not set. So it should be enclosed by the "ifdef LOCAL_DEX_PREOPT" too.
+Also, if the product is configured as libdvm-only, we shouldn't install boot.art, right?
+
