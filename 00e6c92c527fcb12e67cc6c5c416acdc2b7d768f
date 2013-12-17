@@ -233,6 +233,14 @@ my worry is someone can't just rebuild in libcore or frameworks/base now, they n
 
 this would be an issue before as well, if you change core.jar, you need to regenerate frameworks.odex
 
+92
+Tue Dec 17 00:20:34 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 08a847a1_c091803d
+UUID: 28ab4b9f_73e5e2c1
+Bytes: 141
+Yeah, in that case, the user must do a top-level build, then all .odex files will be rebuilt due to the dependency on $(DEXPREOPT_BOOT_ODEXS)
+
 File: core/java.mk
 
 255
