@@ -1,0 +1,11 @@
+Revision: 2cdf2137ca028595f4306634c8146642910801f6
+Patch-set: 1
+File: envsetup.sh
+
+167:51-167:70
+Thu Dec 19 21:44:27 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 48631fc4_e0e69859
+Bytes: 71
+ANDROID_BUILD_PATHS is already absolute path, see build/core/dumpvar.mk
+
