@@ -9,3 +9,25 @@ UUID: 48631fc4_e0e69859
 Bytes: 71
 ANDROID_BUILD_PATHS is already absolute path, see build/core/dumpvar.mk
 
+167:51-167:70
+Thu Dec 19 21:51:38 2013 +0000
+Author: Andrew P Boie <1011333@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 48631fc4_e0e69859
+UUID: e871338d_ba6e898a
+Bytes: 858
+Yes, but it's not computed correctly, it relies on $(PWD). By running get_abs_build_var, it forces it to CD to $TOP before running the Make command.
+
+Just try this, in a fresh terminal in the Android tree:
+
+ $ . build/envsetup.sh
+ $ cd system/core
+ $ $ get_build_var ANDROID_BUILD_PATHS
+ /home/apboie/Documents/repo-aosp/system/core/out/host/linux-x86/bin
+
+See how out/host/linux-x86/bin has system/core prepended to it, and none of the toolchains get set?
+
+If I run get_abs_build_var it is correct:
+
+ $ get_abs_build_var ANDROID_BUILD_PATHS
+ /home/apboie/Documents/repo-aosp/out/host/linux-x86/bin:/home/apboie/Documents/repo-aosp/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8/bin:/home/apboie/Documents/repo-aosp/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8/bin:/home/apboie/Documents/repo-aosp/prebuilts/gcc/linux-x86/mips/mipsel-linux-android-4.8/bin
+
