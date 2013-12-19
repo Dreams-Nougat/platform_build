@@ -2,6 +2,20 @@ Revision: 2cdf2137ca028595f4306634c8146642910801f6
 Patch-set: 1
 File: envsetup.sh
 
+36:4-37:12
+Thu Dec 19 22:18:06 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 48631fc4_8064fc7d
+Bytes: 13
+cd $TOP here.
+
+48:4-49:74
+Thu Dec 19 22:18:06 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 48631fc4_a02f4010
+Bytes: 27
+We should do the same here.
+
 167:51-167:70
 Thu Dec 19 21:44:27 2013 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -30,4 +44,15 @@ If I run get_abs_build_var it is correct:
 
  $ get_abs_build_var ANDROID_BUILD_PATHS
  /home/apboie/Documents/repo-aosp/out/host/linux-x86/bin:/home/apboie/Documents/repo-aosp/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8/bin:/home/apboie/Documents/repo-aosp/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8/bin:/home/apboie/Documents/repo-aosp/prebuilts/gcc/linux-x86/mips/mipsel-linux-android-4.8/bin
+
+167:51-167:70
+Thu Dec 19 22:18:06 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e871338d_ba6e898a
+UUID: 48631fc4_80115cd9
+Bytes: 445
+Ah, I know why there is such difference.
+Look at the definition of the 2 shell functions get_abs_build_var() and get_build_var(): we run "cd $TOP" before running make in get_abs_build_var, whereas we don't do that for get_build_var. Since we the build system relies on the shell variable $PWD to calculate the absolute path, we definitely should do "cd $TOP" for both.
+
+Btw, I didn't expect a user to run lunch from a dir other than the top dir.
 
