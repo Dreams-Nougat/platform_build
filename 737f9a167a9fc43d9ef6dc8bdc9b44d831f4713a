@@ -1,0 +1,11 @@
+Revision: 737f9a167a9fc43d9ef6dc8bdc9b44d831f4713a
+Patch-set: 1
+File: target/board/generic_x86/sepolicy/healthd.te
+
+1
+Fri Dec 20 20:25:01 2013 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 088cc7b8_c982a4ec
+Bytes: 14
+this is odd...
+
