@@ -1,0 +1,20 @@
+Revision: 7b6ebb740cba1db80532fb2bc3aa37e22db17b60
+Patch-set: 2
+File: core/llvm_config.mk
+
+166
+Mon Dec 30 18:45:43 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 6df1d54f_8361c0ee
+Bytes: 94
+Please add comment to all the new functions specifying what the meaning of the parameters are.
+
+File: core/shared_library.mk
+
+56
+Mon Dec 30 18:45:43 2013 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a8649bc8_2bd863b8
+Bytes: 108
+Could we move the function call to llvm_config.mk? so that the global variables will be evaluated only once.
+
