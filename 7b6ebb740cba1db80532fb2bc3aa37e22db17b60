@@ -9,6 +9,14 @@ UUID: 6df1d54f_8361c0ee
 Bytes: 94
 Please add comment to all the new functions specifying what the meaning of the parameters are.
 
+166
+Tue Dec 31 10:02:27 2013 +0000
+Author: Logan Chien <1032077@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 6df1d54f_8361c0ee
+UUID: 2878ab6e_2a8f87d2
+Bytes: 129
+I will add a short comment above this line.  Besides, all of the usage of this macro will be moved here (just a few lines after).
+
 File: core/shared_library.mk
 
 56
@@ -17,4 +25,12 @@ Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: a8649bc8_2bd863b8
 Bytes: 108
 Could we move the function call to llvm_config.mk? so that the global variables will be evaluated only once.
+
+56
+Tue Dec 31 10:02:27 2013 +0000
+Author: Logan Chien <1032077@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a8649bc8_2bd863b8
+UUID: c81c6f54_cc05436b
+Bytes: 85
+Done.  Now, they are changed to CLANG_{HOST,TARGET}_GLOBAL_{CFLAGS,CPPFLAGS,LDFLAGS}.
 
