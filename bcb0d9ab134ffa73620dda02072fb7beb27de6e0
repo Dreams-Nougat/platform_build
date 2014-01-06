@@ -1,0 +1,20 @@
+Revision: bcb0d9ab134ffa73620dda02072fb7beb27de6e0
+Patch-set: 3
+File: core/executable.mk
+
+66
+Mon Jan 06 20:18:05 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0d7db99f_6980ed74
+Bytes: 14
+the same here.
+
+File: core/shared_library.mk
+
+77
+Mon Jan 06 20:18:05 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2d80bdc3_a512a86b
+Bytes: 100
+It seems unnecessary to me: you already set it to $(CLANG_TARGET_GLOBAL_LDFLAGS) in the above lines.
+
