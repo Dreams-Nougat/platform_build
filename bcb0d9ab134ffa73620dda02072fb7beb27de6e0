@@ -1,5 +1,14 @@
 Revision: bcb0d9ab134ffa73620dda02072fb7beb27de6e0
 Patch-set: 3
+File: core/binary.mk
+
+193
+Mon Jan 06 20:20:25 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2d80bdc3_a544e863
+Bytes: 201
+We don't need the PRIVATE_HOST_* variables for target modules; and no PRIVATE_TARGET_* for the host modules. I think we can use "ifdef LOCAL_IS_HOST_MODULE" to conditionally include the above 2 blocks.
+
 File: core/executable.mk
 
 66
