@@ -9,6 +9,14 @@ UUID: 2d80bdc3_a544e863
 Bytes: 201
 We don't need the PRIVATE_HOST_* variables for target modules; and no PRIVATE_TARGET_* for the host modules. I think we can use "ifdef LOCAL_IS_HOST_MODULE" to conditionally include the above 2 blocks.
 
+193
+Tue Jan 07 06:50:44 2014 +0000
+Author: Logan Chien <1032077@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2d80bdc3_a544e863
+UUID: cd100198_23992a66
+Bytes: 4
+Done
+
 File: core/executable.mk
 
 66
@@ -18,6 +26,14 @@ UUID: 0d7db99f_6980ed74
 Bytes: 14
 the same here.
 
+66
+Tue Jan 07 06:50:44 2014 +0000
+Author: Logan Chien <1032077@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 0d7db99f_6980ed74
+UUID: 8dd0c910_a1a6ded7
+Bytes: 4
+Done
+
 File: core/shared_library.mk
 
 77
@@ -26,4 +42,12 @@ Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 2d80bdc3_a512a86b
 Bytes: 100
 It seems unnecessary to me: you already set it to $(CLANG_TARGET_GLOBAL_LDFLAGS) in the above lines.
+
+77
+Tue Jan 07 06:50:44 2014 +0000
+Author: Logan Chien <1032077@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2d80bdc3_a512a86b
+UUID: cd100198_c3cad654
+Bytes: 279
+I will remove these in next patch set.  BTW, I wrote this because I was afraid that the value of $(my_target_global_ldflags) will be updated when $(LOCAL_SDK_VERSION) is defined.  After further investigation, I've found that $(my_ndk_stl_shared_lib) is clang compatible.  Thanks.
 
