@@ -1,0 +1,19 @@
+Revision: e6f65438a45f0e1b519fb3cd2799f44ca87911a7
+Patch-set: 4
+File: core/llvm_config.mk
+
+109:37-109:38
+Fri Jan 10 15:43:36 2014 +0000
+Author: Pavel Chupin <1010578@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: ad33cd7d_2215aec4
+Bytes: 78
+\ shouldn't be here
+Fix is here: https://android-review.googlesource.com/78642
+
+111:37-111:38
+Fri Jan 10 15:43:36 2014 +0000
+Author: Pavel Chupin <1010578@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0dd6993f_10cb4a5b
+Bytes: 5
+ditto
+
