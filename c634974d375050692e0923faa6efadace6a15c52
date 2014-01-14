@@ -1,0 +1,11 @@
+Revision: c634974d375050692e0923faa6efadace6a15c52
+Patch-set: 1
+File: core/envsetup.mk
+
+219
+Tue Jan 14 00:29:36 2014 +0000
+Author: Ben Cheng <1000234@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: ed294520_34cbb05b
+Bytes: 70
+Do we want to introduce a new flag or simply relying on pattern match?
+
