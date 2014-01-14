@@ -17,3 +17,12 @@ UUID: 2d30bd7d_3c29599d
 Bytes: 41
 i thought we already had TARGET_IS_64BIT?
 
+219
+Tue Jan 14 00:39:53 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2d30bd7d_3c29599d
+UUID: 2d30bd7d_fc7c419a
+Bytes: 302
+TARGET_IS_64BIT is defined in the toolchain configuration file core/combo/TARGET_linux-aarch64.mk, which is not loaded at this point yet. I can't move that file, because it depends on the variables defined in this file.
+I think pattern filtering on TARGET_ARCH is fine - we only have a handful of them.
+
