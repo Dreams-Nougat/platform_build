@@ -1,0 +1,12 @@
+Revision: 9f97ead76e7e3ebab0dbb115667d62c013124d71
+Patch-set: 1
+File: core/base_rules.mk
+
+86
+Wed Jan 15 01:06:31 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: cdf9e1ff_bb04a731
+Bytes: 69
++Conley
+I don't know why MODULE_LICENSE_LGPL was previously excluded.
+
