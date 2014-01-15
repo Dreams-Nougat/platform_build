@@ -1,0 +1,11 @@
+Revision: ed22f7ee2596cca9a8ad2f548b4fa735a52fe821
+Patch-set: 1
+File: core/definitions.mk
+
+1767
+Wed Jan 15 18:08:13 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8d0d29ec_bc478de4
+Bytes: 59
+The comment says it evaluates to the list of the dst files.
+
