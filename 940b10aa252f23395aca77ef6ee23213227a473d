@@ -36,6 +36,14 @@ function use_java7() {
 
 I run the use_* function before running make when Java version needs to change. So far it works well for me.
 
+1329
+Fri Jan 17 18:33:08 2014 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: cd43a132_ff0c67ce
+UUID: 32249ea3_b6ae4810
+Bytes: 243
+Yes, that's my workflow as well. I am optimising here for the *average* engineer, who doesn't really care about or need to switch between multiple java versions. I expect most people will be using only java 7 once we ramp down on klp branches.
+
 1341
 Fri Jan 17 18:25:00 2014 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -43,10 +51,28 @@ UUID: 0d23f98e_19195b92
 Bytes: 216
 Hmm, this means you have to export EXPERIMENTAL_USE_JAVA7 as environmental variable before running lunch. I usually use it as a make command line variable instead (make -j48 showcommands EXPERIMENTAL_USE_JAVA7=true).
 
+1341
+Fri Jan 17 18:33:08 2014 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 0d23f98e_19195b92
+UUID: 32249ea3_96ab4c00
+Bytes: 140
+Yes, I've detailed this in the instructions. The email I'm going to send to android-eng is
+
+https://goto.google.com/android-java7-transition
+
 1353
 Fri Jan 17 18:25:00 2014 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 8d37e9c2_b28786b3
 Bytes: 102
 This path is very different from mine:	/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home
+
+1353
+Fri Jan 17 18:33:08 2014 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8d37e9c2_b28786b3
+UUID: 32249ea3_d6a1c421
+Bytes: 154
+I'll see if I can do better for Mac OS. Looks like different OS versions use slightly different paths. Perhaps there's a symlink somewhere that I can use.
 
