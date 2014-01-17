@@ -1,0 +1,52 @@
+Revision: 940b10aa252f23395aca77ef6ee23213227a473d
+Patch-set: 1
+File: envsetup.sh
+
+1329
+Fri Jan 17 18:25:00 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: cd43a132_ff0c67ce
+Bytes: 730
+Yeah, maybe we should let the users set up JAVA_HOME outside the envsetup.sh/lunch command.
+I have the following snippet in my ~/.bashrc (.bash_profile on Mac):
+
+function setup_jdk() {
+  # Remove the current JDK from PATH
+  if [ -n "$JAVA_HOME" ] ; then
+    PATH=${PATH/$JAVA_HOME\/bin:/}
+  fi
+  export JAVA_HOME=$1
+  export PATH=$JAVA_HOME/bin:$PATH
+}
+function use_java5() {
+  setup_jdk /usr/lib/jvm/java-1.5.0-sun
+}
+
+function use_openjdk6() {
+  setup_jdk /usr/lib/jvm/java-6-openjdk
+}
+
+function use_java6() {
+  setup_jdk /usr/lib/jvm/java-6-sun
+}
+
+function use_java7() {
+  setup_jdk /usr/lib/jvm/java-7-openjdk-amd64
+}
+
+I run the use_* function before running make when Java version needs to change. So far it works well for me.
+
+1341
+Fri Jan 17 18:25:00 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0d23f98e_19195b92
+Bytes: 216
+Hmm, this means you have to export EXPERIMENTAL_USE_JAVA7 as environmental variable before running lunch. I usually use it as a make command line variable instead (make -j48 showcommands EXPERIMENTAL_USE_JAVA7=true).
+
+1353
+Fri Jan 17 18:25:00 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8d37e9c2_b28786b3
+Bytes: 102
+This path is very different from mine:	/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home
+
