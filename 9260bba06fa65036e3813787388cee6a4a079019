@@ -1,0 +1,13 @@
+Revision: 9260bba06fa65036e3813787388cee6a4a079019
+Patch-set: 2
+File: envsetup.sh
+
+1353
+Wed Jan 22 10:44:29 2014 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5292f212_a23dc0d0
+Bytes: 214
+PS2 fixes this path as per Ying's comment and also verified on two corp Mac laptops.
+
+(The previous path was from my personal Macbook, and it's quite possible that I screwed around with java locations etc. on that)
+
