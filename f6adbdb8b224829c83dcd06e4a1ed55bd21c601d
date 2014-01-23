@@ -1,0 +1,11 @@
+Revision: f6adbdb8b224829c83dcd06e4a1ed55bd21c601d
+Patch-set: 7
+File: tools/releasetools/ota_from_target_files
+
+876:45-876:47
+Thu Jan 23 17:34:18 2014 +0000
+Author: Doug Zongker <1002268@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 72b456b0_ce9017f6
+Bytes: 142
+If you're not signing it, you don't need to bother with the temp file; you can just open args[1] as output_zip rather than copy it at the end.
+
