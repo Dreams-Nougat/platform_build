@@ -1,0 +1,11 @@
+Revision: 3350f477d814e23dd0ac4c029aa5e3c70eaa6372
+Patch-set: 1
+File: core/prebuilt.mk
+
+224
+Sat Jan 25 00:42:02 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b22faeb4_a8bdffe9
+Bytes: 79
+reset LOCAL_2ND_ARCH_VAR_PREFIX here, just like what you did in the package.mk.
+
