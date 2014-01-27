@@ -1,0 +1,18 @@
+Revision: 6d45dbfd7990686dc9db165001c85b59da5eaa02
+Patch-set: 1
+File: core/definitions.mk
+
+481
+Mon Jan 27 22:02:50 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b226cef6_0db9b5f7
+Bytes: 52
+intermediates-dir-for -> __generated-sources-dir-for
+
+484
+Mon Jan 27 22:02:50 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b226cef6_ada7c9cd
+Bytes: 52
+intermediates-dir-for -> __generated-sources-dir-for
+
