@@ -1,0 +1,11 @@
+Revision: 214aaba4fdf46081ec1e85efa1c9c5e3fa15698c
+Patch-set: 1
+File: core/binary.mk
+
+100
+Tue Jan 28 02:08:48 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b226cef6_6d367118
+Bytes: 245
+It should be $($(LOCAL_2ND_ARCH_VAR_PREFIX)TARGET_GLOBAL_UNSUPPORTED_CFLAGS). In my original change, the name space was simply prepended to the global variables, except for the board config variables TARGET_2ND_ARCH, TARGET_2ND_ARCH_VARIANT etc.
+
