@@ -1,0 +1,11 @@
+Revision: 736c902a95f22215dd4593e3dd4b24db4444f39d
+Patch-set: 1
+File: core/combo/HOST_linux-x86.mk
+
+45
+Fri Jan 31 23:13:46 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b20eceb3_508e64d7
+Bytes: 261
+This doesn't work if you switch build target between 32-bit and 64-bit: the host modules are shared by all products. Ian talked to me and we agreed that we'll eventually move to by-default-64-bit host builds. If this is just a temporary workaround, that's fine.
+
