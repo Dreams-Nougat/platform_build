@@ -1,0 +1,11 @@
+Revision: 1261c3c1846ad983944580e5053b2918bdee5609
+Patch-set: 1
+File: core/64_bit_blacklist.mk
+
+4
+Tue Feb 04 04:22:53 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 521bd206_3af39dbb
+Bytes: 34
+why both? only art will be 64-bit.
+
