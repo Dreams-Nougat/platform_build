@@ -9,3 +9,24 @@ UUID: 521bd206_3af39dbb
 Bytes: 34
 why both? only art will be 64-bit.
 
+46
+Tue Feb 04 04:54:48 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 521bd206_faa20591
+Bytes: 260
+It would be more efficient and clean to use $(filter), I think:
+_64_bit_directory_blacklist_pattern := $(addsuffix /%, $(64_bit_directory_blacklist))
+define directory_is_64_bit_blacklisted
+$(if $(filter $(_64_bit_directory_blacklist_pattern), $(1)),true)
+endef
+
+File: core/definitions.mk
+
+447
+Tue Feb 04 04:54:48 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9221ca33_fc24453e
+Bytes: 291
+Why do we need this?
+If LOCAL_PATH matches directory_is_64_bit_blacklisted, we'll build for only 32-bit and static_library.mk/shared_library.mk/executable.mk will set "LOCAL_2ND_ARCH_VAR_PREFIX := $(TARGET_2ND_ARCH_VAR_PREFIX)", which in turn will call local-intermediates-dir with $(2) set.
+
