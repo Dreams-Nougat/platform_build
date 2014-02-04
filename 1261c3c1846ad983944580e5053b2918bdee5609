@@ -9,6 +9,14 @@ UUID: 521bd206_3af39dbb
 Bytes: 34
 why both? only art will be 64-bit.
 
+4
+Tue Feb 04 22:59:15 2014 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 521bd206_3af39dbb
+UUID: d25422b3_89a61d5b
+Bytes: 81
+This applies to the build rules, which will be parsed even if dalvik is disabled.
+
 46
 Tue Feb 04 04:54:48 2014 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -20,6 +28,14 @@ define directory_is_64_bit_blacklisted
 $(if $(filter $(_64_bit_directory_blacklist_pattern), $(1)),true)
 endef
 
+46
+Tue Feb 04 22:59:15 2014 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 521bd206_faa20591
+UUID: 72e9b62a_6398bc1a
+Bytes: 2
+OK
+
 File: core/definitions.mk
 
 447
@@ -29,4 +45,12 @@ UUID: 9221ca33_fc24453e
 Bytes: 291
 Why do we need this?
 If LOCAL_PATH matches directory_is_64_bit_blacklisted, we'll build for only 32-bit and static_library.mk/shared_library.mk/executable.mk will set "LOCAL_2ND_ARCH_VAR_PREFIX := $(TARGET_2ND_ARCH_VAR_PREFIX)", which in turn will call local-intermediates-dir with $(2) set.
+
+447
+Tue Feb 04 22:59:15 2014 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 9221ca33_fc24453e
+UUID: d25422b3_6975e10d
+Bytes: 294
+local-intermediates-dir is used to set up the generated source list, so it is called before  static_library.mk/shared_library.mk/executable.mk are included.  Also, a bunch of modules manually call intermediates-dir-for directly on another module and need to be forced to the 32-bit one for now.
 
