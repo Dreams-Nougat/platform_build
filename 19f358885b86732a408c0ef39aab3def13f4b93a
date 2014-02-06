@@ -1,0 +1,12 @@
+Revision: 19f358885b86732a408c0ef39aab3def13f4b93a
+Patch-set: 4
+File: core/llvm_config.mk
+
+137
+Thu Feb 06 05:44:52 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b2d6ce80_b04e8001
+Bytes: 85
+We shouldn't include the above arch-specific configs twice.
+I'll upload a new change.
+
