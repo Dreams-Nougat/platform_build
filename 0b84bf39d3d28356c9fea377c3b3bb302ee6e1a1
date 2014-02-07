@@ -1,0 +1,12 @@
+Revision: 0b84bf39d3d28356c9fea377c3b3bb302ee6e1a1
+Patch-set: 3
+File: core/Makefile
+
+130
+Fri Feb 07 19:44:30 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 722c567b_c82fef07
+Bytes: 175
+I don't think it's a good place to put such check in the makefile, because it will be run every time you run make.
+I think you can add it to build/tools/post_process_props.py.
+
