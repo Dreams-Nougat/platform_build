@@ -1,0 +1,22 @@
+Revision: 1e5a27105a4f5021739a7b908ec79bc7fe1cccdc
+Patch-set: 1
+File: core/clang/TARGET_arm64.mk
+
+53
+Fri Feb 07 06:35:50 2014 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 123a3aa9_adb8fdf4
+Bytes: 106
+This is actually wrong. Can you please add another warning/TODO here mentioning that this needs to change?
+
+File: core/clang/config.mk
+
+49
+Fri Feb 07 06:35:50 2014 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 123a3aa9_0da8319e
+Bytes: 274
+I think we should be pulling these from the prebuilts/ directory, rather than external/clang these days.
+
+prebuilts/clang/linux-x86/host/3.3/lib/clang/3.3/include (substituting proper OS) would be the relevant place today, although I am also ok with it as a separate change.
+
