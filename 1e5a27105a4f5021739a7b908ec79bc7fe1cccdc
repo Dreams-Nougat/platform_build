@@ -9,6 +9,14 @@ UUID: 123a3aa9_adb8fdf4
 Bytes: 106
 This is actually wrong. Can you please add another warning/TODO here mentioning that this needs to change?
 
+53
+Fri Feb 07 17:10:55 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 123a3aa9_adb8fdf4
+UUID: 722c567b_68a9a36f
+Bytes: 4
+Done
+
 File: core/clang/config.mk
 
 49
@@ -19,4 +27,13 @@ Bytes: 274
 I think we should be pulling these from the prebuilts/ directory, rather than external/clang these days.
 
 prebuilts/clang/linux-x86/host/3.3/lib/clang/3.3/include (substituting proper OS) would be the relevant place today, although I am also ok with it as a separate change.
+
+49
+Fri Feb 07 17:10:55 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 123a3aa9_0da8319e
+UUID: 523112d0_27243a90
+Bytes: 75
+It seems we just need to cherry-pick a CL from internal master.
+I'll do it.
 
