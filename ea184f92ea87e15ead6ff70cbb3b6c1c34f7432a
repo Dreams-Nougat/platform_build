@@ -1,0 +1,33 @@
+Revision: ea184f92ea87e15ead6ff70cbb3b6c1c34f7432a
+Patch-set: 4
+File: tools/post_process_props.py
+
+41
+Tue Feb 11 20:00:39 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8fbfe18b_d2251a90
+Bytes: 11
+Unnecessary
+
+45
+Tue Feb 11 20:00:39 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0fc2111e_1c32e10b
+Bytes: 11
+Unnecessary
+
+77
+Tue Feb 11 20:00:39 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8fbfe18b_72178e31
+Bytes: 53
+Move this to __init__ and build the dict as a member?
+
+81
+Tue Feb 11 20:00:39 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8fbfe18b_121c1251
+Bytes: 55
+if not line.strip() or line.startswith("#"):
+  continue
+
