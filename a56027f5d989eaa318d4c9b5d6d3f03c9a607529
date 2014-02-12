@@ -1,0 +1,11 @@
+Revision: a56027f5d989eaa318d4c9b5d6d3f03c9a607529
+Patch-set: 9
+File: core/definitions.mk
+
+454
+Wed Feb 12 18:45:54 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: ef65bd2a_37e032ea
+Bytes: 28
+The above line is duplicate.
+
