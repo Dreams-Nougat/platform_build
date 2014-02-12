@@ -1,0 +1,20 @@
+Revision: 5dab43ae2453f1a6231817eda9189a7684ddff0a
+Patch-set: 3
+File: core/clear_vars.mk
+
+149
+Wed Feb 12 19:43:11 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: af2665f6_aabdef99
+Bytes: 34
+You need to put all of the 4 here.
+
+File: core/module_arch_supported.mk
+
+41
+Wed Feb 12 19:43:11 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: cff71998_2b6d798a
+Bytes: 164
+LOCAL_MODULE is not defined at this point if it's for $(BUILD_PACKAGE). It's LOCAL_PACKAGE_NAME. But we wouldn't use LOCAL_MODULE_TARGET_ARCH_WARN for app, I guess.
+
