@@ -9,6 +9,14 @@ UUID: af2665f6_aabdef99
 Bytes: 34
 You need to put all of the 4 here.
 
+149
+Wed Feb 12 20:24:19 2014 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: af2665f6_aabdef99
+UUID: 4f0c0978_0f3c0546
+Bytes: 4
+Done
+
 File: core/module_arch_supported.mk
 
 41
