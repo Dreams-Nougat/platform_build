@@ -1,0 +1,12 @@
+Revision: 3596c854d83c6674e9b7068de014a255bf952985
+Patch-set: 1
+File: core/binary.mk
+
+100
+Thu Feb 13 17:05:19 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 6fae2d95_38ba09ec
+Bytes: 164
+Why the host module set those flags? I guess because the module doesn't include $(CLEAR_VARS)?
+Those variables may be useful when we switch to 64-bit host binaries.
+
