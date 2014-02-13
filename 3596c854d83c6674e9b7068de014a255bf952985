@@ -20,3 +20,16 @@ It's usually because there is a common.mk that is included by lots of different 
 
 See https://android-review.googlesource.com/#/c/82083/ for where this was causing me problems.
 
+100
+Thu Feb 13 19:31:18 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: afcbc564_f10ef2bb
+UUID: 8f9e016b_d77c74cc
+Bytes: 159
+Fair enough.
+How about making it cleaner by:
+<set up all my_* variables for both target and host>
+ifndef LOCAL_IS_HOST_MODULE
+<add the target-only flags>
+endif
+
