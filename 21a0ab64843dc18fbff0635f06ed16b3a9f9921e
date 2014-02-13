@@ -1,0 +1,11 @@
+Revision: 21a0ab64843dc18fbff0635f06ed16b3a9f9921e
+Patch-set: 2
+File: target/product/embedded.mk
+
+79
+Thu Feb 13 23:01:23 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 4fb329fa_7a8d556a
+Bytes: 76
+Unfortunately that variable is not available yet when this file gets loaded.
+
