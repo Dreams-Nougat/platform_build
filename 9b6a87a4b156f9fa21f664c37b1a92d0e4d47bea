@@ -17,3 +17,11 @@ UUID: e3e2361a_cce2cf46
 Bytes: 155
 Ah, I forgot I have another patch (from Intel) that extends auto-prebuilt-boilerplate to accept 10 parameters in my codebase. The 9th is LOCAL_MODULE_PATH.
 
+101
+Thu Feb 20 15:41:20 2014 +0000
+Author: Guilhem Imberton <1012623@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e3e2361a_cce2cf46
+UUID: 0f193130_04baa052
+Bytes: 76
+Are you planning to upstream the other patch ? or you want me to upload it ?
+
