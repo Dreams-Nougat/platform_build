@@ -9,6 +9,14 @@ UUID: 7c58ad41_e89853ec
 Bytes: 36
 this seems... weird. time to rename?
 
+127
+Thu Feb 27 23:56:36 2014 +0000
+Author: Ben Cheng <1000234@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7c58ad41_e89853ec
+UUID: 7c58ad41_4b307900
+Bytes: 42
+is ANDROID_EABI_TOOLCHAIN_2ND_ARCH better?
+
 132
 Thu Feb 27 23:44:07 2014 +0000
 Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -16,12 +24,28 @@ UUID: 1c26d1b5_2ab086d4
 Bytes: 45
 shouldn't this have a toolchaindir2 line too?
 
+132
+Thu Feb 27 23:56:36 2014 +0000
+Author: Ben Cheng <1000234@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 1c26d1b5_2ab086d4
+UUID: 3c29d585_5fb03407
+Bytes: 102
+I plan to do arm64 first and leave x86_64 stuff for Intel since I don't have x86_64 setup for testing.
+
 156
 Thu Feb 27 23:44:07 2014 +0000
 Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 5c5da930_67d9329a
 Bytes: 32
 i'm very confused at this point.
+
+156
+Thu Feb 27 23:56:36 2014 +0000
+Author: Ben Cheng <1000234@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5c5da930_67d9329a
+UUID: 5c5da930_c7a69ed3
+Bytes: 109
+The ARM_EABI_TOOLCHAIN stuff is legacy stuff for kernel building. For user space the ANDROID_ prefix is used.
 
 976
 Thu Feb 27 23:44:07 2014 +0000
@@ -36,4 +60,12 @@ Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 5c5da930_27fa1ae2
 Bytes: 88
 just set a which_gdb variable here and factor out the duplicated call to after the "fi"?
+
+1035
+Thu Feb 27 23:56:36 2014 +0000
+Author: Ben Cheng <1000234@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5c5da930_27fa1ae2
+UUID: 5c5da930_c721fe83
+Bytes: 19
+Good idea. Will do.
 
