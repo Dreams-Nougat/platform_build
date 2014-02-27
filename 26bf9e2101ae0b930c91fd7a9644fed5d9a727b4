@@ -1,0 +1,39 @@
+Revision: 26bf9e2101ae0b930c91fd7a9644fed5d9a727b4
+Patch-set: 1
+File: envsetup.sh
+
+127
+Thu Feb 27 23:44:07 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7c58ad41_e89853ec
+Bytes: 36
+this seems... weird. time to rename?
+
+132
+Thu Feb 27 23:44:07 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1c26d1b5_2ab086d4
+Bytes: 45
+shouldn't this have a toolchaindir2 line too?
+
+156
+Thu Feb 27 23:44:07 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5c5da930_67d9329a
+Bytes: 32
+i'm very confused at this point.
+
+976
+Thu Feb 27 23:44:07 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5c5da930_a7f60aff
+Bytes: 38
+shouldn't this have GDB and GDB64 too?
+
+1035
+Thu Feb 27 23:44:07 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5c5da930_27fa1ae2
+Bytes: 88
+just set a which_gdb variable here and factor out the duplicated call to after the "fi"?
+
