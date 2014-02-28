@@ -17,6 +17,14 @@ UUID: 7c58ad41_4b307900
 Bytes: 42
 is ANDROID_EABI_TOOLCHAIN_2ND_ARCH better?
 
+127
+Fri Feb 28 00:08:18 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7c58ad41_4b307900
+UUID: 3c29d585_7f8c1024
+Bytes: 246
+it's the EABI that makes no sense to me. that's an arm-specific thing. i don't understand why we clear these variables here, unset them on L156, and then set them on L161 if and only if we're dealing with arm, and then reference them on L172-173.
+
 132
 Thu Feb 27 23:44:07 2014 +0000
 Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -46,6 +54,16 @@ Parent: 5c5da930_67d9329a
 UUID: 5c5da930_c7a69ed3
 Bytes: 109
 The ARM_EABI_TOOLCHAIN stuff is legacy stuff for kernel building. For user space the ANDROID_ prefix is used.
+
+156
+Fri Feb 28 00:08:18 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5c5da930_c7a69ed3
+UUID: 5c5da930_47a18e8d
+Bytes: 323
+can we just change this file over to ANDROID_TOOLCHAIN and ANDROID_TOOLCHAIN2 then, but set the EABI variable at the end (for the first arch only, since they're clearly not using the ...2 variable yet)?
+
+presumably the kernel guys will never need the second arch anyway, because any given kernel tree will just be one arch?
 
 976
 Thu Feb 27 23:44:07 2014 +0000
