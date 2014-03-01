@@ -32,6 +32,14 @@ UUID: dc0199f4_d5fe5c19
 Bytes: 4
 Done
 
+9
+Sat Mar 01 18:06:28 2014 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: dc0199f4_d5fe5c19
+UUID: bc5ea529_f3fde287
+Bytes: 292
+I think what I meant was that these directories link against libnativehelper, which wasn't available for 64-bit at the time, but that may have been fixed even before I submitted this file.  Anything that builds, regardless of the ability to run and test, should be removed from the blacklist.
+
 31
 Fri Feb 28 16:29:26 2014 +0000
 Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
