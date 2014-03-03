@@ -1,0 +1,11 @@
+Revision: 58ed85ec743016407b68dbdb30c5ba2139b511d9
+Patch-set: 3
+File: envsetup.sh
+
+1354
+Mon Mar 03 11:56:36 2014 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7c0a6d15_6d5c5d6a
+Bytes: 177
+This grep statement is incorrect. It should be "JAVA_VERSION.*1\.6", and "1\.7" below. Otherwise, it will produce spurious matches with the SOURCE sha line in the versions file.
+
