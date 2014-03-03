@@ -9,3 +9,12 @@ UUID: 7c0a6d15_6d5c5d6a
 Bytes: 177
 This grep statement is incorrect. It should be "JAVA_VERSION.*1\.6", and "1\.7" below. Otherwise, it will produce spurious matches with the SOURCE sha line in the versions file.
 
+1354
+Mon Mar 03 17:59:31 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7c0a6d15_6d5c5d6a
+UUID: 3c52b523_3c3a1ee1
+Bytes: 66
+Good catch.
+I don't see $JAVA_HOME/release in the JDK 6 on my Mac.
+
