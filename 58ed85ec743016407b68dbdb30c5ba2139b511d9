@@ -18,3 +18,13 @@ Bytes: 66
 Good catch.
 I don't see $JAVA_HOME/release in the JDK 6 on my Mac.
 
+1354
+Mon Mar 03 18:05:15 2014 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3c52b523_3c3a1ee1
+UUID: 7c0a6d15_7f8ac099
+Bytes: 162
+Another good catch. I don't see it either, but i assume my install is messed up because it seems to have an infinite symlink cycle.
+
+Aarggh, fuuuuuuuuuuuu mac OS.
+
