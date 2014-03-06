@@ -1,0 +1,11 @@
+Revision: e0813533350cb66e0f9a29466e2a21b77f7c9030
+Patch-set: 1
+File: core/main.mk
+
+354
+Thu Mar 06 18:52:03 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1cab3158_6be6b599
+Bytes: 66
+You'll need to move this up to before the new conditional include.
+
