@@ -1,0 +1,16 @@
+Revision: aa54033b469739b31e8c48eaa26f0dc7ef531738
+Patch-set: 1
+File: core/combo/HOST_windows-x86.mk
+
+45:0-45:69
+Tue Mar 11 01:59:38 2014 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9c2ba1c2_66e1677f
+Bytes: 190
+From
+
+<command-line>: error: "__STDC_CONSTANT_MACROS" redefined
+<command-line>: error: this is the location of the previous definition
+
+on windows-x86 builds, I'm guessing this is a problem.
+
