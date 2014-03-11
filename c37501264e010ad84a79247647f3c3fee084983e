@@ -1,0 +1,11 @@
+Revision: c37501264e010ad84a79247647f3c3fee084983e
+Patch-set: 1
+File: core/clang/config.mk
+
+1:0-1:7
+Tue Mar 11 01:53:00 2014 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9c2ba1c2_86ae1b35
+Bytes: 56
+nit: other places in this file have space after comments
+
