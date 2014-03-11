@@ -14,3 +14,28 @@ From
 
 on windows-x86 builds, I'm guessing this is a problem.
 
+45:0-45:69
+Tue Mar 11 02:03:32 2014 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 9c2ba1c2_66e1677f
+UUID: fce81dcd_df79ffd9
+Bytes: 1123
+could this be due to
+
+external/llvm/llvm-device-build.mk:6:	-D__STDC_CONSTANT_MACROS	\
+external/llvm/llvm-host-build.mk:4:	-D__STDC_CONSTANT_MACROS	\
+
+(I also see
+
+ndk/tests/device/test-libc++-static-full/jni/Android.mk:19:LOCAL_CPPFLAGS += -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -D__STDC_CONSTANT_MACROS
+ndk/tests/device/test-libc++-shared-full/jni/Android.mk:19:LOCAL_CPPFLAGS += -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -D__STDC_CONSTANT_MACROS
+ndk/tests/build/stdint-c++/jni/Android.mk:13:#     defined if __STDC_CONSTANT_MACROS is already defined.
+build/core/combo/HOST_windows-x86.mk:45:HOST_GLOBAL_CFLAGS += -D__STDC_FORMAT_MACROS -D__STDC_CONSTANT_MACROS
+build/core/combo/HOST_linux-x86.mk:63:HOST_GLOBAL_CFLAGS += -D__STDC_FORMAT_MACROS -D__STDC_CONSTANT_MACROS
+build/core/combo/HOST_darwin-x86.mk:39:HOST_GLOBAL_CFLAGS += -D__STDC_FORMAT_MACROS -D__STDC_CONSTANT_MACROS
+external/sfntly/Android.mk:121:	'-D__STDC_CONSTANT_MACROS' \
+external/sfntly/Android.mk:202:	'-D__STDC_CONSTANT_MACROS' \
+external/llvm/utils/FileCheck/Android.mk:17:LOCAL_CFLAGS += -D __STDC_LIMIT_MACROS -D __STDC_CONSTANT_MACROS
+
+)
+
