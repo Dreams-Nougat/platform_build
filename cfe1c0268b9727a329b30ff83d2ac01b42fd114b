@@ -1,0 +1,13 @@
+Revision: cfe1c0268b9727a329b30ff83d2ac01b42fd114b
+Patch-set: 1
+File: core/64_bit_blacklist.mk
+
+35
+Wed Mar 12 18:35:05 2014 +0000
+Author: Glenn Kasten <1004395@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: fce81dcd_b1eb785e
+Bytes: 150
+Eric - this addresses your comment about libeffects.
+Eventually, we need to add the 32-bit only rule to all
+the sub-directories of libeffects instead.
+
