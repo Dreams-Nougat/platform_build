@@ -10,3 +10,11 @@ Bytes: 220
 I don't want to make this list longer. There were a couple of proposals to add other variables.
 You can always write a small makefiile template that include $(BUILD_PREBUILT) and then include the template multiple times.
 
+45
+Wed Mar 12 07:32:00 2014 +0000
+Author: Guilhem Imberton <1012623@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7c20adde_1757fe1e
+UUID: 3c1ab5b4_eff6d1ff
+Bytes: 153
+In fact today there is no way to add a dependency on a prebuilt. REQUIRED_MODULES is a must to have to handle properly package dependencies in makefiles.
+
