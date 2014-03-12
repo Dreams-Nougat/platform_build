@@ -2,6 +2,13 @@ Revision: 9c0bdfdd321a5273b4337c416033732beba21168
 Patch-set: 2
 File: core/multi_prebuilt.mk
 
+41
+Wed Mar 12 14:36:12 2014 +0000
+Author: Guilhem Imberton <1012623@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: bcb4e5de_1dfb7760
+Bytes: 67
+I should remove LOCAL_ here as it seem to be removed on the others.
+
 45
 Wed Mar 12 03:27:30 2014 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
