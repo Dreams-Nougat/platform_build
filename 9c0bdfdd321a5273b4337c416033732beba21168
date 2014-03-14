@@ -25,3 +25,11 @@ UUID: 3c1ab5b4_eff6d1ff
 Bytes: 153
 In fact today there is no way to add a dependency on a prebuilt. REQUIRED_MODULES is a must to have to handle properly package dependencies in makefiles.
 
+45
+Fri Mar 14 00:54:07 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3c1ab5b4_eff6d1ff
+UUID: 5cb3e9f9_200bab3f
+Bytes: 84
+LOCAL_REQUIRED_MODULES works with $(BUILD_PREBUILT), but not $(BUILD_MULTI_PREBUILT)
+
