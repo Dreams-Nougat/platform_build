@@ -1,0 +1,11 @@
+Revision: fdb66e6bc1602b11f07289d5cde31c02aa972975
+Patch-set: 2
+File: core/flags_deps.mk
+
+47
+Fri Mar 14 00:21:35 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5cb3e9f9_cce06bb1
+Bytes: 58
+This means $(2) will be regenerated whenever you run make.
+
