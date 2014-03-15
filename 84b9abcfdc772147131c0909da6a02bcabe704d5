@@ -1,0 +1,67 @@
+Revision: 84b9abcfdc772147131c0909da6a02bcabe704d5
+Patch-set: 2
+File: core/64_bit_blacklist.mk
+
+22
+Sat Mar 15 01:46:38 2014 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: dcb1990e_67cd1da2
+Bytes: 29
+already has LOCAL_32_BIT_ONLY
+
+24
+Sat Mar 15 01:46:38 2014 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: dcb1990e_a7c32578
+Bytes: 11
+builds fine
+
+27
+Sat Mar 15 01:46:38 2014 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: fcb49dfd_63f751fd
+Bytes: 36
+nothing builds out of this directory
+
+28
+Sat Mar 15 01:46:38 2014 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: dcb1990e_c7dd1155
+Bytes: 11
+builds fine
+
+29
+Sat Mar 15 01:46:38 2014 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5cbf69de_20002b1f
+Bytes: 18
+no Android.mk here
+
+30
+Sat Mar 15 01:46:38 2014 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5cbf69de_80ea5717
+Bytes: 11
+builds fine
+
+32
+Sat Mar 15 01:46:38 2014 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: dcb1990e_27cf15a3
+Bytes: 11
+builds fine
+
+34
+Sat Mar 15 01:46:38 2014 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: dcb1990e_6772bdb6
+Bytes: 11
+builds fine
+
+36
+Sat Mar 15 01:46:38 2014 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5cbf69de_00de4782
+Bytes: 11
+builds fine
+
