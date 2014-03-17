@@ -65,3 +65,11 @@ UUID: 5cbf69de_00de4782
 Bytes: 11
 builds fine
 
+36
+Mon Mar 17 17:50:38 2014 +0000
+Author: Glenn Kasten <1004395@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5cbf69de_00de4782
+UUID: dcdfd954_5149d44e
+Bytes: 187
+Colin - thanks for your notes.  I simply did an "echo libstagefright/*/" and then removed libstagefright_foundation;  your approach was more precise!  I'll update with new patch set here.
+
