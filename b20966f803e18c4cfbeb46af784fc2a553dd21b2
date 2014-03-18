@@ -1,0 +1,11 @@
+Revision: b20966f803e18c4cfbeb46af784fc2a553dd21b2
+Patch-set: 1
+File: target/board/generic_mips/BoardConfig.mk
+
+60
+Tue Mar 18 22:27:40 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3c02b58d_86c38a49
+Bytes: 110
+Note that MIPS inherits files from the generic policy, so we don't need a shell.te file in the MIPS directory.
+
