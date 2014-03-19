@@ -1,0 +1,13 @@
+Revision: 0a579d7e68cd0891eebf8b4eb02a7b6f831deeeb
+Patch-set: 1
+File: core/main.mk
+
+806
+Wed Mar 19 17:56:51 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: fcfbbdcb_8d1f2944
+Bytes: 166
+Then you can set up the dependency here:
+# Comments here.
+$(SEPOLICY_BUILT_MAC_PERMISSIONS_XML) : $(filter $(TARGET_OUT_APPS_PRIVILEGED)/%.apk, $(modules_to_install))
+
