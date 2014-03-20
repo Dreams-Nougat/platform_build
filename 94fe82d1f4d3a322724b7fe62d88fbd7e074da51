@@ -1,0 +1,13 @@
+Revision: 94fe82d1f4d3a322724b7fe62d88fbd7e074da51
+Patch-set: 1
+File: core/clang/HOST_x86.mk
+
+18
+Thu Mar 20 23:53:11 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5cee8935_ff4bbf79
+Bytes: 242
+I guess this won't work for Mac OS, since its path is prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1/.
+What about windows (the mingw sdk build)?
+Maybe we can set up some variables in build/core/combo/HOST_<combo>.mks and use them here?
+
