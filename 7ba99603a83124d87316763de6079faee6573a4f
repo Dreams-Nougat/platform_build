@@ -10,6 +10,14 @@ Bytes: 246
 If BUILD_HOST_64bit is set, we should include $(BUILD_SYSTEM)/clang/HOST_x86_64.mk, even though  $(HOST_ARCH) is still x86.
 Eventually when we switch to 64-bit host builds, we'll keep only HOST_x86_64.mk and perhaps change $(HOST_ARCH) to x86_64.
 
+53
+Sat Mar 22 00:15:24 2014 +0000
+Author: Tim Murray <1017430@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3c5e35d0_a6ec5be7
+UUID: 5cee8935_be72d067
+Bytes: 83
+agreed, I was wondering why this was happening. I'll fix that in the next revision.
+
 File: core/combo/HOST_linux-x86.mk
 
 47
@@ -20,10 +28,26 @@ Bytes: 139
 Move HOST_ARCH_DESCRIPTOR_FOR_CLANG to build/core/clang/HOST_<arch>.mk
 I think we should only define the gcc path and perhaps version here.
 
+47
+Sat Mar 22 00:15:24 2014 +0000
+Author: Tim Murray <1017430@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: bcdf857e_9f5c2cde
+UUID: 5cee8935_3e78804d
+Bytes: 99
+does it make sense to move it even though the toolchain location depends entirely on the OS in use?
+
 73
 Sat Mar 22 00:07:48 2014 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 3c5e35d0_469807a8
 Bytes: 69
 The lines below I think still belong to build/core/clang/HOST_x86.mk.
+
+73
+Sat Mar 22 00:15:24 2014 +0000
+Author: Tim Murray <1017430@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3c5e35d0_469807a8
+UUID: 3c5e35d0_e609f3fd
+Bytes: 172
+the problem with HOST_x86.mk is that Linux x86 and x86_64 share the same set of libs, and Darwin has an entirely different set of libs. I can move it in anyway if you want.
 
