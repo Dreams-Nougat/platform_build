@@ -51,3 +51,11 @@ UUID: 3c5e35d0_e609f3fd
 Bytes: 172
 the problem with HOST_x86.mk is that Linux x86 and x86_64 share the same set of libs, and Darwin has an entirely different set of libs. I can move it in anyway if you want.
 
+73
+Sat Mar 22 00:21:57 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3c5e35d0_e609f3fd
+UUID: bcdf857e_3ff2404e
+Bytes: 130
+Yeah, you can create a common file in build/core/clang/ that will be included by both HOST_x86.mk and HOST_x86_64.mk, if you want.
+
