@@ -1,0 +1,11 @@
+Revision: d271d1bd4a4cbe53412fe1c21eab6214414f8701
+Patch-set: 1
+File: core/binary.mk
+
+63:75-63:96
+Mon Mar 24 19:17:55 2014 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9cb2c15a_a6d47cd9
+Bytes: 167
+This should be $($(LOCAL_2ND_ARCH_VAR_PREFIX)TARGET_GCC_VERSION) for multilib support, there may be a different version of GCC for 32-bit and 64-bit in the same build.
+
