@@ -1,0 +1,11 @@
+Revision: 94f41da7dda15ebf73d88263d0b2b21b6b984309
+Patch-set: 1
+File: core/base_rules.mk
+
+103
+Tue Mar 25 20:28:12 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: dc1c3954_034c8e5f
+Bytes: 94
+You'll need to move the definition of my_32_64_bit_suffix from binary.mk to base_rules.mk now.
+
