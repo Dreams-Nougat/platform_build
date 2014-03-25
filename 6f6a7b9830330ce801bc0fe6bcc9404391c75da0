@@ -10,3 +10,16 @@ Bytes: 170
 Why do we need this?
 Even clang is built from source, we still need the dependency: you have to build clang before the build system can run clang to compile source files.
 
+179
+Tue Mar 25 02:36:05 2014 +0000
+Author: Tim Murray <1017430@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: bcd6a580_6ddef1f6
+UUID: bcd6a580_30461071
+Bytes: 450
+this was to break the circular dependency you mentioned in the other changes. the idea is that we have two different settings that are not intended to be used at the same time:
+
+1. FORCE_BUILD_LLVM_COMPONENTS: this will build the self-hosted clang/LLVM using prebuilts/clang and place the output in out/host.
+2. USE_BUILT_LLVM_COMPONENTS: don't rebuild LLVM/clang, but use whatever clang is present in out/host.
+
+definitely open to other suggestions.
+
