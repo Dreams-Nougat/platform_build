@@ -1,0 +1,12 @@
+Revision: 7d78079c5b343deb1fc8fba9556d92e5ad8be331
+Patch-set: 1
+File: core/combo/HOST_linux-x86.mk
+
+26
+Tue Mar 25 17:52:04 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3c78f56e_16991cef
+Bytes: 238
+Please update the comment.
+Also, I guess there are couple of branches using the master build system, please keep an eye on the build server after you submit the change. You may need to update the manifests when you receive breakage email.
+
