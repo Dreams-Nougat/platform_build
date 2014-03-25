@@ -1,0 +1,27 @@
+Revision: aeef245d71e1e43948aeba7026662a84a582e89f
+Patch-set: 5
+File: core/clang/config.mk
+
+44
+Tue Mar 25 01:52:57 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: bcd6a580_4d684d4e
+Bytes: 90
+But HOST_TOOLCHAIN_FOR_CLANG will be changed later when it includes the HOST_x86*.mk file.
+
+File: core/clang/x86_shared.mk
+
+0
+Tue Mar 25 01:52:57 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9cdba1ac_2cc99b69
+Bytes: 61
+I think it's better to rename this file to HOST_x86_common.mk
+
+3
+Tue Mar 25 01:52:57 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: bcd6a580_ad9e2909
+Bytes: 73
+Hmm, it's already set to the same in build/core/combo/HOST_darwin-x86.mk.
+
