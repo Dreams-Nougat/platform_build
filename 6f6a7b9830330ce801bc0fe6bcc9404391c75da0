@@ -9,6 +9,14 @@ UUID: 3c8f15af_3e48a9a3
 Bytes: 306
 Is there some way we can get rid of (or overwrite, or version) the existing build output from out/host/linux-86/bin if FORCE_BUILD_LLVM_COMPONENTS is true ? I spent 15-20 minutes hunting down an issue that turned out to be a stale tblgen binary in out/host/linux-x86/bin/tblgen (built sometime in January).
 
+172
+Tue Mar 25 15:56:49 2014 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3c8f15af_3e48a9a3
+UUID: bc64e5c8_7a2959b1
+Bytes: 151
+I guess we could add a cleanspec everytime something in external/llvm or external/clang changes, but I guess then the FORCE_ flag isn't really a FORCE.
+
 179
 Tue Mar 25 01:40:43 2014 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
