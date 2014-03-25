@@ -9,3 +9,11 @@ UUID: fc1f3d43_0ded9930
 Bytes: 110
 Is $(LOCAL_MODULE) in the path intentional? that will result in full path like /data/nativetest/mytest/mytest.
 
+30
+Tue Mar 25 23:59:42 2014 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: fc1f3d43_0ded9930
+UUID: b9e79793_a2595eec
+Bytes: 62
+That's how it has always worked in the past, I'm not sure why.
+
