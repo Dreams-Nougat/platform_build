@@ -10,3 +10,13 @@ Bytes: 267
 LOCAL_BUILD_MULTILIB_EXEC?
 LOCAL_BUILD_MULTILIB, LOCAL_32_BIT_ONLY and LOCAL_NO_2ND_ARCH serve similar purpose. I think it's a little confusing for the users. Maybe we can unify them with just one variable LOCAL_BUILD_MULTILIB with value not limited to true or false.
 
+9
+Tue Mar 25 23:59:13 2014 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: fc1f3d43_2a2f9bb9
+UUID: 59f69b4a_7fb40fd7
+Bytes: 563
+Unfortunately, LOCAL_32_BIT_ONLY is spread all over the code already.
+
+I could support LOCAL_BUILD_MULTILIB := 32 as a synonym for LOCAL_32_BIT_ONLY := true, LOCAL_BUILD_MULTILIB := both for this case, and LOCAL_BUILD_MULTILIB := primary for LOCAL_NO_2ND_ARCH (which is barely used, especially after this stack converts most of them to LOCAL_BUILD_MULTILIB).  That still seems confusing, because they are all for slightly different purposes.  LOCAL_32_BIT_ONLY is for selecting by architecture, while LOCAL_NO_2ND_ARCH explicitly selects the primary architecture.
+
