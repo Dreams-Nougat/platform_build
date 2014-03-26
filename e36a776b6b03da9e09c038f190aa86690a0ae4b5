@@ -1,0 +1,22 @@
+Revision: e36a776b6b03da9e09c038f190aa86690a0ae4b5
+Patch-set: 3
+File: core/multilib.mk
+
+24
+Wed Mar 26 18:15:51 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 590f7b24_3ab1fd0c
+Bytes: 124
+It seems most $(BUILD_EXECUTABLE)s and $(BUILD_PACKAGES)s will fail here, because they don't have none of the variables set.
+
+File: core/prebuilt.mk
+
+16
+Wed Mar 26 18:15:51 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 392487a3_19d08fe2
+Bytes: 268
+Hmm, this (and the commit message) is a little misleading: actually it meant "either" and let module_arch_supported.mk choose to build for the 1st or 2nd arch.
+"both" for $(BUILD_PACKAGE) also means "either".
+"both" for libraries and exectuables really means "both" :)
+
