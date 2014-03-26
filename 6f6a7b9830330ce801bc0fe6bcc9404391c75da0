@@ -55,3 +55,11 @@ Bytes: 306
 Hmmm, the second case is interesting: you may use the buggy clang to build the clang source you've just made a fix. It's intriguing but seems unnecessary to me: we should just use the prebuilt clang to build clang itself in that case.
 Let me think more about how to break the circurlar dependency tomorrow.
 
+179
+Wed Mar 26 05:49:09 2014 +0000
+Author: Tim Murray <1017430@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: fc1f3d43_78c4092d
+UUID: dc1c3954_3dba7f9f
+Bytes: 192
+USE_BUILT is more about ability to test rebases and cherry-picks without having to do prebuilt changes every time for testing. it will probably only be used by me, srhines, and others like us.
+
