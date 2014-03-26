@@ -25,6 +25,16 @@ UUID: 1c23318f_b4b92ed0
 Bytes: 200
 Unfortunately you are on your own when you switch the value of these environmental variable. Such variables are rarely used and the users should know what files need to clean when the flag is enabled.
 
+172
+Wed Mar 26 12:21:48 2014 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 1c23318f_b4b92ed0
+UUID: f904af03_1c951524
+Bytes: 343
+I see, that's fine. I expect most users will start with a make clobber anyway, because dependencies aren't set up correctly. i.e, when using USE_BUILT_LLVM_COMPONENTS the build system *can't* know that the compiler hasn't changed (from prebuilts/ to out/).
+
+I just wasn't sure if this was going to be used on the continuous build (or similar.)
+
 179
 Tue Mar 25 01:40:43 2014 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
