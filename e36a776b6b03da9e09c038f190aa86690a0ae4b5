@@ -1,5 +1,23 @@
 Revision: e36a776b6b03da9e09c038f190aa86690a0ae4b5
 Patch-set: 3
+File: /COMMIT_MSG
+
+7:16-7:36
+Wed Mar 26 18:23:35 2014 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1c23318f_048c8b70
+Bytes: 170
+what do you think of the variable name?  This is going to get spread throughout a lot of Android.mk files, so we should figure out any naming issues now.  LOCAL_MULTILIB?
+
+15:27-15:34
+Wed Mar 26 18:23:35 2014 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 590f7b24_5a8cb1da
+Bytes: 325
+I'm a little worried about the naming of "primary", because we have talked to vendors about 64-bit devices with "64-bit primary" or "32-bit primary", where "32-bit primary" means a 64-bit build with TARGET_PREFER_32_BIT set.  Maybe "first" or "main"?
+
+Maybe "primary" is ok, since I don't expect this to get used much at all.
+
 File: core/multilib.mk
 
 24
@@ -8,6 +26,14 @@ Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 590f7b24_3ab1fd0c
 Bytes: 124
 It seems most $(BUILD_EXECUTABLE)s and $(BUILD_PACKAGES)s will fail here, because they don't have none of the variables set.
+
+24
+Wed Mar 26 18:23:35 2014 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 590f7b24_3ab1fd0c
+UUID: 1c23318f_a451f72b
+Bytes: 111
+This is in the else from the top ifndef my_module_build_mulitlib, so it only applies if they specify something.
 
 File: core/prebuilt.mk
 
@@ -19,4 +45,12 @@ Bytes: 268
 Hmm, this (and the commit message) is a little misleading: actually it meant "either" and let module_arch_supported.mk choose to build for the 1st or 2nd arch.
 "both" for $(BUILD_PACKAGE) also means "either".
 "both" for libraries and exectuables really means "both" :)
+
+16
+Wed Mar 26 18:23:35 2014 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 392487a3_19d08fe2
+UUID: 590f7b24_fa4825ed
+Bytes: 9
+will fix.
 
