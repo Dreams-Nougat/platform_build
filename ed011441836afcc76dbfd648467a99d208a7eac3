@@ -1,0 +1,11 @@
+Revision: ed011441836afcc76dbfd648467a99d208a7eac3
+Patch-set: 1
+File: tools/buildinfo.sh
+
+30
+Wed Mar 26 18:02:14 2014 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 99ec937b_84ce68a3
+Bytes: 195
+NOTE: With some bash trickery, we can guarantee that we don't leave any "gaps" in the ABIs ({arm64-v8a, armeabi-v7a, armeabi} instead of {arm64-v8a, "", armeabi-v7a, armeabi} but is it worth it ?
+
