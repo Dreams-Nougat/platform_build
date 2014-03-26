@@ -9,6 +9,14 @@ UUID: 1c23318f_048c8b70
 Bytes: 170
 what do you think of the variable name?  This is going to get spread throughout a lot of Android.mk files, so we should figure out any naming issues now.  LOCAL_MULTILIB?
 
+7
+Wed Mar 26 18:40:01 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 1c23318f_048c8b70
+UUID: 590f7b24_5a0ef194
+Bytes: 74
+I slightly prefer LOCAL_MULTILIB. But LOCAL_BUILD_MULTILIB seems fine too.
+
 15:27-15:34
 Wed Mar 26 18:23:35 2014 +0000
 Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -18,7 +26,36 @@ I'm a little worried about the naming of "primary", because we have talked to ve
 
 Maybe "primary" is ok, since I don't expect this to get used much at all.
 
+15
+Wed Mar 26 18:40:01 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 590f7b24_5a8cb1da
+UUID: 392487a3_99137fb4
+Bytes: 88
+To be consistent with the makefile variables used in the build system, I prefer "first".
+
 File: core/multilib.mk
+
+16
+Wed Mar 26 18:40:01 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 392487a3_59e04763
+Bytes: 30
+endif  # ifdef TARGET_2ND_ARCH
+
+21
+Wed Mar 26 18:40:01 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 392487a3_19dacfb3
+Bytes: 67
+endif 	# ifeq ($(LOCAL_32_BIT_ONLY)|$(LOCAL_NO_2ND_ARCH),true|true)
+
+22
+Wed Mar 26 18:40:01 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1c23318f_e41befff
+Bytes: 37
+else # ifndef my_module_build_multlib
 
 24
 Wed Mar 26 18:15:51 2014 +0000
@@ -34,6 +71,14 @@ Parent: 590f7b24_3ab1fd0c
 UUID: 1c23318f_a451f72b
 Bytes: 111
 This is in the else from the top ifndef my_module_build_mulitlib, so it only applies if they specify something.
+
+24
+Wed Mar 26 18:40:01 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 1c23318f_a451f72b
+UUID: 590f7b24_5a5b9171
+Bytes: 78
+Got it. Comments at the end of "else" and "endif" lines would make it clearer.
 
 File: core/prebuilt.mk
 
