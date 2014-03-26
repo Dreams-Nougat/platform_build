@@ -17,6 +17,14 @@ UUID: bc64e5c8_7a2959b1
 Bytes: 151
 I guess we could add a cleanspec everytime something in external/llvm or external/clang changes, but I guess then the FORCE_ flag isn't really a FORCE.
 
+172
+Wed Mar 26 01:46:39 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: bc64e5c8_7a2959b1
+UUID: 1c23318f_b4b92ed0
+Bytes: 200
+Unfortunately you are on your own when you switch the value of these environmental variable. Such variables are rarely used and the users should know what files need to clean when the flag is enabled.
+
 179
 Tue Mar 25 01:40:43 2014 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -37,4 +45,13 @@ this was to break the circular dependency you mentioned in the other changes. th
 2. USE_BUILT_LLVM_COMPONENTS: don't rebuild LLVM/clang, but use whatever clang is present in out/host.
 
 definitely open to other suggestions.
+
+179
+Wed Mar 26 01:46:39 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: bcd6a580_30461071
+UUID: fc1f3d43_78c4092d
+Bytes: 306
+Hmmm, the second case is interesting: you may use the buggy clang to build the clang source you've just made a fix. It's intriguing but seems unnecessary to me: we should just use the prebuilt clang to build clang itself in that case.
+Let me think more about how to break the circurlar dependency tomorrow.
 
