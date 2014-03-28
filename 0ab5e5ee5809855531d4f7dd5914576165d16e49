@@ -9,3 +9,11 @@ UUID: 993ad3c3_34391e04
 Bytes: 221
 Move the above logic to the makfile in build/core/envsetup.mk after we just load the BoardConfig.mk? so the value of the makefile variable and the value of the shell variable (and also the system property) are consistent.
 
+49
+Fri Mar 28 09:38:20 2014 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 993ad3c3_34391e04
+UUID: 19f8a337_e6e89420
+Bytes: 4
+Done
+
