@@ -85,3 +85,12 @@ To break the inherent circular dependency, you have to copy the newly built clan
 Also, it's really confusing to have both FORCE_BUILD_LLVM_COMPONENTS and USE_BUILT_LLVM_COMPONENTS. 
 With that approach, I don't see the necessity to keep either of them. The build system just points clang to the prebuilt, and it always builds clang from source in the source tree, but the newly built clang isn't used in the same build process.
 
+File: core/clang/config.mk
+
+9:13-9:38
+Fri Mar 28 19:24:56 2014 +0000
+Author: Tim Murray <1017430@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 194fc37f_c85c6fb7
+Bytes: 315
+if we're going to keep FORCE_BUILD_LLVM_COMPONENTS as a way to build LLVM/Clang and require that built files have to be copied to the prebuilt directory before they can be used, should we always keep LLVM_PREBUILTS_PATH set to prebuilts/clang? that would make the rest of my changes simpler or entirely unnecessary.
+
