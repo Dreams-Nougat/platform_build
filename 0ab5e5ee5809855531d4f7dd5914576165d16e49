@@ -1,0 +1,11 @@
+Revision: 0ab5e5ee5809855531d4f7dd5914576165d16e49
+Patch-set: 3
+File: tools/buildinfo.sh
+
+49
+Fri Mar 28 00:52:33 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 993ad3c3_34391e04
+Bytes: 221
+Move the above logic to the makfile in build/core/envsetup.mk after we just load the BoardConfig.mk? so the value of the makefile variable and the value of the shell variable (and also the system property) are consistent.
+
