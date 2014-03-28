@@ -1,0 +1,12 @@
+Revision: 622121219a0e23adf5534c0e63f249c6052096a9
+Patch-set: 4
+File: core/envsetup.mk
+
+145
+Fri Mar 28 17:08:49 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f91d8f5d_e59bd912
+Bytes: 140
+Could you move it up here?
+I think it just amends the board config, so want to make sure it's done right after the BoardConfig.mk is loaded.
+
