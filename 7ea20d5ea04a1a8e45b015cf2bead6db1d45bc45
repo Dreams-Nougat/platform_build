@@ -1,0 +1,12 @@
+Revision: 7ea20d5ea04a1a8e45b015cf2bead6db1d45bc45
+Patch-set: 1
+File: target/product/embedded.mk
+
+88
+Fri Mar 28 17:17:16 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7958bf41_eb484ded
+Bytes: 125
+embedded.mk is supposed to be without a vm.
+The highest level of product with a vm I think is target/product/core_minimal.mk.
+
