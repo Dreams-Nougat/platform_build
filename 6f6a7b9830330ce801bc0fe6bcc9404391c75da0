@@ -94,3 +94,11 @@ UUID: 194fc37f_c85c6fb7
 Bytes: 315
 if we're going to keep FORCE_BUILD_LLVM_COMPONENTS as a way to build LLVM/Clang and require that built files have to be copied to the prebuilt directory before they can be used, should we always keep LLVM_PREBUILTS_PATH set to prebuilts/clang? that would make the rest of my changes simpler or entirely unnecessary.
 
+9
+Fri Mar 28 21:34:32 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 194fc37f_c85c6fb7
+UUID: f94bcf71_6a09f38a
+Bytes: 84
+Yeah, let's always use the prebuilt and remove the use of USE_BUILT_LLVM_COMPONENTS.
+
