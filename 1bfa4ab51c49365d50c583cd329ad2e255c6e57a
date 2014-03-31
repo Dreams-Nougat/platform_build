@@ -1,0 +1,12 @@
+Revision: 1bfa4ab51c49365d50c583cd329ad2e255c6e57a
+Patch-set: 1
+File: core/combo/select.mk
+
+97
+Mon Mar 31 23:44:58 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 39ae4766_8f99bdad
+Bytes: 150
+The idea sounds good to me.
+But I think we should move the definition of CCACHE_BIN to build/core/config.mk, where other utility variables are set up.
+
