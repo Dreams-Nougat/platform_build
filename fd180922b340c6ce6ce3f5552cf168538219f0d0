@@ -1,0 +1,18 @@
+Revision: fd180922b340c6ce6ce3f5552cf168538219f0d0
+Patch-set: 1
+File: core/dex_preopt_libart.mk
+
+20
+Mon Mar 31 20:43:01 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b9d157e4_f2eaa886
+Bytes: 28
+Use ":=" for the above line.
+
+86
+Mon Mar 31 20:43:01 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 197d03a0_58538133
+Bytes: 247
+Why do you need to change this? this rule is used for all the apks and jars during the build process. If you change this, you'll need to update the DEXPREOPT_ONE_FILE_DEPENDENCY_TOOLS in build/core/dex_preopt.mk to use DEX2OATD_DEPENDENCY as well.
+
