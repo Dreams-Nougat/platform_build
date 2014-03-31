@@ -28,3 +28,12 @@ DEX2OAT := $(DEX2OATD)
 
 but yes, if there are more places to fix it, then they should be fixed.
 
+86
+Mon Mar 31 21:13:19 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 79db5f06_f3e86a20
+UUID: b9d157e4_952d4678
+Bytes: 179
+Oh, I misread the commit message as "Use dex2oatd only for boot.art, but not other .odex files".
+Yes, then change build/core/dex_preopt.mk to reference DEX2OATD_DEPENDENCY please.
+
