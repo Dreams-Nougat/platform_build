@@ -11,3 +11,11 @@ HOST_TOOLCHAIN_PREFIX := prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.6
 
 It will be better to use ":=" for assignment in the Makefile.
 
+26
+Tue Apr 01 05:03:16 2014 +0000
+Author: Andrew Hsieh <1010186@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 19ab4358_2b8bdd5a
+UUID: f9a74f88_c416bed7
+Bytes: 4
+Done
+
