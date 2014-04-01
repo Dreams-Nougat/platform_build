@@ -1,0 +1,13 @@
+Revision: ad100d6ad2e830f389182f564a0e18e9370378d4
+Patch-set: 3
+File: core/combo/HOST_linux-x86.mk
+
+26
+Tue Apr 01 03:40:44 2014 +0000
+Author: Logan Chien <1018664@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 19ab4358_2b8bdd5a
+Bytes: 161
+HOST_TOOLCHAIN_PREFIX := prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.6/bin/x86_64-linux-
+
+It will be better to use ":=" for assignment in the Makefile.
+
