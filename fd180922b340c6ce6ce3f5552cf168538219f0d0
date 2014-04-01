@@ -9,6 +9,14 @@ UUID: b9d157e4_f2eaa886
 Bytes: 28
 Use ":=" for the above line.
 
+20
+Tue Apr 01 07:44:39 2014 +0000
+Author: Nicolas Geoffray <1038443@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b9d157e4_f2eaa886
+UUID: 79b43fb0_8840d753
+Bytes: 4
+Done
+
 86
 Mon Mar 31 20:43:01 2014 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -36,4 +44,12 @@ UUID: b9d157e4_952d4678
 Bytes: 179
 Oh, I misread the commit message as "Use dex2oatd only for boot.art, but not other .odex files".
 Yes, then change build/core/dex_preopt.mk to reference DEX2OATD_DEPENDENCY please.
+
+86
+Tue Apr 01 07:44:39 2014 +0000
+Author: Nicolas Geoffray <1038443@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b9d157e4_952d4678
+UUID: 59b93ba9_a7962a7b
+Bytes: 4
+Done
 
