@@ -1,0 +1,21 @@
+Revision: 2158bd8c5fcfd255cab2a48e2fb8058f9b04fbd2
+Patch-set: 3
+File: core/config.mk
+
+248
+Mon Apr 07 20:02:34 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 59a69bd4_f314582b
+Bytes: 139
+It can be simplified a little bit:
+TARGET_CPU_ABI_LIST := $(TARGET_CPU_ABI) $(TARGET_CPU_ABI2) $(TARGET_2ND_CPU_ABI) $(TARGET_2ND_CPU_ABI2)
+
+288
+Mon Apr 07 20:02:34 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 19734325_b11c5bc7
+Bytes: 122
+Then here:
+TARGET_CPU_ABI_LIST := $(subst $(space),$(comma),$(strip $(TARGET_CPU_ABI_LIST)))
+Same for _32_BIT and _64_BIT.
+
