@@ -1,0 +1,26 @@
+Revision: 24af54f7cf019d6afdc863de882dc9f14a42b8b1
+Patch-set: 4
+File: core/config.mk
+
+252
+Tue Apr 08 16:39:45 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 39d4872d_dcd5e5d6
+Bytes: 94
+To be consistent with other use of TARGET_IS_64_BIT, I prefer 
+ifeq (true,$(TARGET_IS_64_BIT))
+
+258
+Tue Apr 08 16:39:45 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 19d1833f_1bfb6329
+Bytes: 32
+ifneq (true,$(TARGET_IS_64_BIT))
+
+263
+Tue Apr 08 16:39:45 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 19d1833f_5bf1db48
+Bytes: 57
+I think it's TARGET_2ND_CPU_ABI2 not TARGET_2ND_CPU_ABI3.
+
