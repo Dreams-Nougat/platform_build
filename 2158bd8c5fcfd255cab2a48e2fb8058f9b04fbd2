@@ -10,6 +10,14 @@ Bytes: 139
 It can be simplified a little bit:
 TARGET_CPU_ABI_LIST := $(TARGET_CPU_ABI) $(TARGET_CPU_ABI2) $(TARGET_2ND_CPU_ABI) $(TARGET_2ND_CPU_ABI2)
 
+248
+Tue Apr 08 13:02:40 2014 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 59a69bd4_f314582b
+UUID: 19d6e33f_4d1499cd
+Bytes: 4
+Done
+
 288
 Mon Apr 07 20:02:34 2014 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -18,4 +26,12 @@ Bytes: 122
 Then here:
 TARGET_CPU_ABI_LIST := $(subst $(space),$(comma),$(strip $(TARGET_CPU_ABI_LIST)))
 Same for _32_BIT and _64_BIT.
+
+288
+Tue Apr 08 13:02:40 2014 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 19734325_b11c5bc7
+UUID: f9e2ef19_ec08eb89
+Bytes: 4
+Done
 
