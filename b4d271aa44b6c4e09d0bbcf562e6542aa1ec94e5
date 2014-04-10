@@ -1,0 +1,36 @@
+Revision: b4d271aa44b6c4e09d0bbcf562e6542aa1ec94e5
+Patch-set: 2
+File: /COMMIT_MSG
+
+14
+Thu Apr 10 21:19:14 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f97e6f24_7315cf59
+Bytes: 144
+So currently the default is actually that both are set. Are you going to change the default behavior? or expect most 64-bit devices to set both?
+
+File: core/package.mk
+
+10
+Thu Apr 10 21:19:14 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 996f3376_5ecf71f4
+Bytes: 234
+This comment seems to conflict with the commit message.
+Default should be case that none of the variables are set, right? or you want to default these 2 variables to true somewhere?
+Also you left out "my_module_mulitlib := both" here.
+
+12
+Thu Apr 10 21:19:14 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f97e6f24_f66e8d87
+Bytes: 26
+"first" shouldn't be here.
+
+18
+Thu Apr 10 21:19:14 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f97e6f24_96e2a9b7
+Bytes: 23
+"first" should be here.
+
