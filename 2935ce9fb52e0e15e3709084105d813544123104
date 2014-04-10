@@ -1,0 +1,20 @@
+Revision: 2935ce9fb52e0e15e3709084105d813544123104
+Patch-set: 1
+File: core/executable.mk
+
+33
+Thu Apr 10 20:52:59 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 996f3376_32b0b16c
+Bytes: 100
+"first arch" -> "preferred arch"?
+If $(TARGET_PREFER_32_BIT) is true, this is actually the 2nd arch.
+
+47
+Thu Apr 10 20:52:59 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 79027fbc_cc3e0fee
+Bytes: 251
+Hmm "second arch" -> "secondly preferred arch"?
+Maybe we should switch to 32-bit TARGET_ARCH and 64-bit TARGET_2ND_ARCH for TARGET_PREFER_32_BIT? sure the build system doesn't work for that currently for we have assumed the 2nd arch to be 32-bit only.
+
