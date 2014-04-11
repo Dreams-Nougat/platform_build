@@ -27,6 +27,20 @@ UUID: 996f3376_fc0ae8ef
 Bytes: 313
 I would prefer to not have the arch info built into the apk, if there is no other reason. Otherwise we would end up with 2 copies of an apks in the source tree with just the 32-bit v.s. 64-bit difference. (Currently we have only 1 copy of GmsCore.apk checked in that serves arm, x86 and mips. That's really good.)
 
+14
+Fri Apr 11 08:48:05 2014 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 996f3376_fc0ae8ef
+UUID: 59ee9b35_8284dcf7
+Bytes: 997
+The current frameworks code assumes that all system apps (the ones that have their libraries as LOCAL_REQUIRED_MODULES, and not LOCAL_JNI_SHARED_LIBRARIES) will be built with the most preferred ABI (i.e, the first ABI in ro.product.cpu.abilist).
+
+I think that's a reasonable assumption in general, though there might be exceptions to that rule (for example, an app that hasn't ported its code over to 64 bit, or found that the port is less performant).
+
+For these apps, I don't think we can avoid including the arch info the APK (or elsewhere, given that this is a special case). Ying - can you loop me into the bug where the framework team wants to unpack the APKs in the first run ? That would solve this problem.
+
+For apps that use LOCAL_JNI_SHARED_LIBRARIES, the framework code will iterate over all the shared libraries in the APK and choose the most preferred ABI from that list, so no additional information is required. The architecture does *not* need to be explicitly encoded in the APK.
+
 File: core/package.mk
 
 18
