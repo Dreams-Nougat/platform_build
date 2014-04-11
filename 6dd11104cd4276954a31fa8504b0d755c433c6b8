@@ -60,3 +60,11 @@ UUID: 99b2d35a_94b6ca6c
 Bytes: 163
 Ah, I forgot the fact you blacklisted the whole packages/ subtree. But there are apps defined elsewhere, such as in frameworks/base, vendor/unbundled_google/, etc.
 
+19
+Fri Apr 11 01:50:58 2014 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 99b2d35a_94b6ca6c
+UUID: d9544bb3_49602569
+Bytes: 108
+Most of them were blacklisted too, until we started fixing them recently.  That's why I started this series.
+
