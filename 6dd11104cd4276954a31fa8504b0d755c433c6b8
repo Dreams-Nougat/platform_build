@@ -52,3 +52,11 @@ UUID: d9544bb3_a921992f
 Bytes: 329
 Previously it defaulted to 64-bit, but the blacklist was forcing everything back to 32-bit.  This is to maintain the current behavior once the blacklist is removed, at which point individual devices can opt-in to 64-bit apps.  I hope the opting-in is combined into whatever they end up needing to do to install the 64-bit zygote.
 
+19
+Fri Apr 11 01:47:45 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d9544bb3_a921992f
+UUID: 99b2d35a_94b6ca6c
+Bytes: 163
+Ah, I forgot the fact you blacklisted the whole packages/ subtree. But there are apps defined elsewhere, such as in frameworks/base, vendor/unbundled_google/, etc.
+
