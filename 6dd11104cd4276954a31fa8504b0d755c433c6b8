@@ -19,6 +19,14 @@ UUID: d9544bb3_290e09be
 Bytes: 506
 I've thought about this, but I'm not an expert on the runtime so I'm not sure what the solution is.  I would guess that we should remove LOCAL_REQUIRED_MODULES from apps, and have the build system use LOCAL_JNI_SHARED_LIBRARIES to choose what to install in /system/lib[64], and used the architecture of the package to choose 32-bit or 64-bit library dependencies.  The architecture of the package will also need to end up in the apk somewhere so activitymanager knows which zygote to use to launch the app.
 
+14
+Fri Apr 11 04:29:04 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d9544bb3_290e09be
+UUID: 996f3376_fc0ae8ef
+Bytes: 313
+I would prefer to not have the arch info built into the apk, if there is no other reason. Otherwise we would end up with 2 copies of an apks in the source tree with just the 32-bit v.s. 64-bit difference. (Currently we have only 1 copy of GmsCore.apk checked in that serves arm, x86 and mips. That's really good.)
+
 File: core/package.mk
 
 18
