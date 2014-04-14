@@ -1,0 +1,11 @@
+Revision: b4055d8e269b97f640f177238b2667b756d6b514
+Patch-set: 2
+File: target/product/embedded.mk
+
+79
+Mon Apr 14 11:15:00 2014 +0000
+Author: Robert Craig <1013157@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b97b175f_42fcb288
+Bytes: 269
+I'd be O.K. with changing the name of this file to something less ambiguous. selinux_version sorta seems like the sepolicy version and not the targeted platform version. Maybe change to something like platform_version or selinux_target or selinux_platform_version .....
+
