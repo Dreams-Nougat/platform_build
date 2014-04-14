@@ -9,3 +9,11 @@ UUID: b97b175f_42fcb288
 Bytes: 269
 I'd be O.K. with changing the name of this file to something less ambiguous. selinux_version sorta seems like the sepolicy version and not the targeted platform version. Maybe change to something like platform_version or selinux_target or selinux_platform_version .....
 
+79
+Mon Apr 14 13:22:25 2014 +0000
+Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b97b175f_42fcb288
+UUID: d9544bb3_58bc6999
+Bytes: 106
+Samsung devices use sepolicy_version, not sure if that is better or not.  sepolicy_build might be clearer?
+
