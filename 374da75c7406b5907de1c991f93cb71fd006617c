@@ -27,3 +27,11 @@ UUID: 795efffe_58b01d6d
 Bytes: 73
 LOCAL_STATIC_LIBRARIES += libstdc++ works, but libstlport_static doesn't.
 
+14
+Tue Apr 15 23:31:01 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 795efffe_58b01d6d
+UUID: 3978076f_367618ab
+Bytes: 142
+Hmm, it seems a little bit strange to me that the symbol introduced by NDK's stlport_static isn't defined in the platform's libstlport_static.
+
