@@ -35,3 +35,11 @@ UUID: 3978076f_367618ab
 Bytes: 142
 Hmm, it seems a little bit strange to me that the symbol introduced by NDK's stlport_static isn't defined in the platform's libstlport_static.
 
+14
+Wed Apr 16 00:05:02 2014 +0000
+Author: Andrew Hsieh <1010186@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3978076f_367618ab
+UUID: 19750377_f509f8f9
+Bytes: 371
+libstlport in NDK use gabi++ as run-time, which isn't close to complete (lack tons of cxa_* functions including cxa_pure_virtual).  The libstdc++.a in platform build isn't close to complete either, but it get cxa_pure_virtual() from bionic/libstdc++/src/pure_virtual.cpp.  Will replace gabi++ with lib++abi which is more complete, but will take a while for that to happen
+
