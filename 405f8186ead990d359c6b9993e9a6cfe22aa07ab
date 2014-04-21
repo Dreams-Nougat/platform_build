@@ -1,0 +1,27 @@
+Revision: 405f8186ead990d359c6b9993e9a6cfe22aa07ab
+Patch-set: 1
+File: core/clang/config.mk
+
+39
+Mon Apr 21 22:22:35 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 658813e3_432f0dae
+Bytes: 2
+ws
+
+File: core/combo/HOST_darwin-x86.mk
+
+126
+Mon Apr 21 22:22:35 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 658813e3_0387c54f
+Bytes: 59
+It should replace the above $(HOST_GLOBAL_LDFLAGS) instead.
+
+147
+Mon Apr 21 22:22:35 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 65d653dd_f7b7f8c1
+Bytes: 6
+ditto.
+
