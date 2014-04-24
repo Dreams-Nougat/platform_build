@@ -9,3 +9,11 @@ UUID: 6587332a_8911f975
 Bytes: 55
 Why don't we need to do the same for TARGET_x86.mk etc?
 
+19
+Thu Apr 24 23:40:03 2014 +0000
+Author: Tim Murray <1017430@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 6587332a_8911f975
+UUID: 6587332a_c96771ef
+Bytes: 110
+x86 integrated assembler seems okay. the ARM one is new in 3.5 and doesn't work for a lot of our source files.
+
