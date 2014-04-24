@@ -1,0 +1,20 @@
+Revision: 847fd0311f6c82b8ac90d970cfc68aafd9913471
+Base-for-patch-set: 1
+File: core/binary.mk
+
+153
+Thu Apr 24 19:28:31 2014 +0000
+Author: Tim Murray <1017430@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 85b427df_ae3def4e
+Bytes: 61
+this is deleted because we're always compiling from prebuilts
+
+File: core/clang/arm.mk
+
+6
+Thu Apr 24 19:28:31 2014 +0000
+Author: Tim Murray <1017430@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c5e8dfcd_f0db48f9
+Bytes: 43
+this is now on by default in clang/LLVM 3.5
+
