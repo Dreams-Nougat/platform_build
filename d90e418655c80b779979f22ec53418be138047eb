@@ -1,0 +1,20 @@
+Revision: d90e418655c80b779979f22ec53418be138047eb
+Patch-set: 1
+File: core/clang/x86_common.mk
+
+47
+Thu Apr 24 19:37:52 2014 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 659e536e_919e7cdc
+Bytes: 2
+ws
+
+File: core/combo/HOST_linux-x86.mk
+
+36
+Thu Apr 24 19:37:52 2014 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a5be8bc4_b368f832
+Bytes: 2
+ws
+
