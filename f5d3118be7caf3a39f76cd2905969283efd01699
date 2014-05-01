@@ -25,3 +25,13 @@ UUID: ca32acf0_ac0263d3
 Bytes: 276
 These would stay in the final version.  I considered renaming them to PRODUCT_* and using PRODUCT.$(INTERNAL_PRODUCT).PRODUCT_SUPPORTS_64_BIT_APPS, but that seemed unnecessary since we don't need any inheritance overriding these variables.  I can do it that way if you prefer.
 
+41
+Thu May 01 01:45:50 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: ca32acf0_ac0263d3
+UUID: 0a292485_f7403248
+Bytes: 293
+Hmm, it's fine if it's not intended to be overridden.
+Btw, it confuses me that we have TARGET_SUPPORTS_32_BIT_APPS and TARGET_SUPPORTS_64_BIT_APPS. It defaults to either 32-bit app, or 64-bit app, but why both?
+Also in build/core/package.mk the comment at the beginning doesn't match the code.
+
