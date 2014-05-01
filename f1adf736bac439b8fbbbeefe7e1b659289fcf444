@@ -1,0 +1,27 @@
+Revision: f1adf736bac439b8fbbbeefe7e1b659289fcf444
+Patch-set: 2
+File: /COMMIT_MSG
+
+12
+Thu May 01 16:19:30 2014 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: aa1ad864_33ca4881
+Bytes: 12
+nit: absence
+
+File: core/config.mk
+
+253
+Thu May 01 16:19:30 2014 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: ea25b0a9_0da851a9
+Bytes: 135
+Hmmm. The semantics of TARGET_IS_64_BIT are confusing. Is it trying to tell us that TARGET_CPU_ABI , TARGET_CPU_ABI2 are 64 bit ABIs ?.
+
+259
+Thu May 01 16:19:30 2014 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: ea25b0a9_9009fa48
+Bytes: 103
+This looks asymmetric, do you want to look at TARGET_SUPPORTS_64_BIT_APPS here ? Is that even possible.
+
