@@ -1,0 +1,11 @@
+Revision: db74585282ac769d3e082463a1c04c481f8d6e6b
+Patch-set: 1
+File: core/config.mk
+
+244
+Thu May 01 01:48:38 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0a292485_b78f4a64
+Bytes: 212
+Are you going to add a new variable TARGET_PREFER_32_BIT_APPS? in addition to TARGET_SUPPORTS_32_BIT_APPS? With TARGET_PREFER_32_BIT_APPS can we remove TARGET_SUPPORTS_32_BIT_APPS and TARGET_SUPPORTS_64_BIT_APPS?
+
