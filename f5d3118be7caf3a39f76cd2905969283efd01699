@@ -17,3 +17,11 @@ Bytes: 115
 Those TARGET_* variables are not supposed to be set in product configuration files.
 But I'm ok if it's just a hack.
 
+41
+Thu May 01 01:22:00 2014 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 4a3f9cb5_b396426a
+UUID: ca32acf0_ac0263d3
+Bytes: 276
+These would stay in the final version.  I considered renaming them to PRODUCT_* and using PRODUCT.$(INTERNAL_PRODUCT).PRODUCT_SUPPORTS_64_BIT_APPS, but that seemed unnecessary since we don't need any inheritance overriding these variables.  I can do it that way if you prefer.
+
