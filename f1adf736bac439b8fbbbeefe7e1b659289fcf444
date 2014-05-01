@@ -18,10 +18,27 @@ UUID: ea25b0a9_0da851a9
 Bytes: 135
 Hmmm. The semantics of TARGET_IS_64_BIT are confusing. Is it trying to tell us that TARGET_CPU_ABI , TARGET_CPU_ABI2 are 64 bit ABIs ?.
 
+253
+Thu May 01 17:55:14 2014 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: ea25b0a9_0da851a9
+UUID: ea205093_6a52fb25
+Bytes: 152
+Yes, TARGET_IS_64_BIT is whether the primary arch is 64 bit
+2ND_TARGET_IS_64_BIT would be whether the secondary arch is 64 bit, but we don't support it.
+
 259
 Thu May 01 16:19:30 2014 +0000
 Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: ea25b0a9_9009fa48
 Bytes: 103
 This looks asymmetric, do you want to look at TARGET_SUPPORTS_64_BIT_APPS here ? Is that even possible.
+
+259
+Thu May 01 17:55:14 2014 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: ea25b0a9_9009fa48
+UUID: 4a587c41_48ae3fbb
+Bytes: 297
+It has to look at TARGET_IS_64_BIT to know to put the primary arch abis in the 32-bit abi list.  It could technically look at TARGET_SUPPORTS_32_BIT_APPS to filter them out, but that will never change on a 32-bit only build so I left it out to reduce the chance of breaking existing 32-bit builds.
 
