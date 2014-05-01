@@ -9,3 +9,11 @@ UUID: ea205093_d8dfb1e6
 Bytes: 52
 oops, this isn't going to work for mips64 and x86_64
 
+41
+Thu May 01 01:01:18 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 4a3f9cb5_b396426a
+Bytes: 115
+Those TARGET_* variables are not supposed to be set in product configuration files.
+But I'm ok if it's just a hack.
+
