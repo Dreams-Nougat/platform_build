@@ -1,0 +1,12 @@
+Revision: bc9821bf519650706af2970511d7d9d5d555d678
+Patch-set: 3
+File: target/product/emulator.mk
+
+25
+Tue May 06 03:47:41 2014 +0000
+Author: raphael <1001100@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8aba749a_f837d3f8
+Bytes: 153
+For the record I forgot to place the $(warning) in an else section so it gets reversed.
+Anyway, this is an ugly hack that needs to get reverted tomorrow.
+
