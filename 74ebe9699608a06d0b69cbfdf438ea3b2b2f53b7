@@ -1,0 +1,11 @@
+Revision: 74ebe9699608a06d0b69cbfdf438ea3b2b2f53b7
+Patch-set: 2
+File: core/executable_prefer_symlink.mk
+
+4:1-4:2
+Thu May 08 18:48:56 2014 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: aa62d821_4888ab11
+Bytes: 33
+please remove trailing whitespace
+
