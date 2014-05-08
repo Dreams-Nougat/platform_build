@@ -1,5 +1,14 @@
 Revision: 74ebe9699608a06d0b69cbfdf438ea3b2b2f53b7
 Patch-set: 2
+File: core/clear_vars.mk
+
+150
+Thu May 08 20:39:43 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2a57c842_7afe154c
+Bytes: 20
+You don't need this.
+
 File: core/executable_prefer_symlink.mk
 
 4:1-4:2
@@ -8,4 +17,33 @@ Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: aa62d821_4888ab11
 Bytes: 33
 please remove trailing whitespace
+
+4
+Thu May 08 20:39:43 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2a57c842_5a0351a4
+Bytes: 2
+ws
+
+7
+Thu May 08 20:39:43 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8a58b470_6f9931f4
+Bytes: 90
+Use a locally-scoped varible like "my_symlink", and then reset it at the end of this file.
+
+10
+Thu May 08 20:39:43 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8a58b470_efa4212e
+Bytes: 99
+We use PRIVATE_ prefix for target specific variables:
+$(my_symlink): PRIVATE_SRC_BINARY_NAME := ...
+
+15
+Thu May 08 20:39:43 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8a58b470_2f78d9d5
+Bytes: 112
+In rare cases actually it's not named Android.mk. The build system has a LOCAL_MODULE_MAKEFILE for this purpose.
 
