@@ -13,3 +13,11 @@ http://gcc.gnu.org/onlinedocs/gcc/Preprocessor-Options.html
 
 Ditto other files in this patch set.
 
+107
+Fri May 09 14:25:32 2014 +0000
+Author: Andrew Hsieh <1010186@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8a827417_aae4efb6
+UUID: 8a999485_41ab5c61
+Bytes: 111
+Done in 2nd patch.  Thanks for catching this.  3rd patch to address clang which doesn't accept this switch too.
+
