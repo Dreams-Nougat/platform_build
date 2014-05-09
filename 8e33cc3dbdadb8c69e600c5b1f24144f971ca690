@@ -1,0 +1,15 @@
+Revision: 8e33cc3dbdadb8c69e600c5b1f24144f971ca690
+Patch-set: 1
+File: core/combo/TARGET_linux-arm.mk
+
+107
+Fri May 09 13:52:14 2014 +0000
+Author: Simon Baldwin <1037287@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8a827417_aae4efb6
+Bytes: 161
+The option should be "-fno-canonical-system-headers" (plural):
+
+http://gcc.gnu.org/onlinedocs/gcc/Preprocessor-Options.html
+
+Ditto other files in this patch set.
+
