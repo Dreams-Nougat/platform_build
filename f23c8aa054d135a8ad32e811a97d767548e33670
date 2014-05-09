@@ -1,0 +1,13 @@
+Revision: f23c8aa054d135a8ad32e811a97d767548e33670
+Patch-set: 2
+File: envsetup.sh
+
+101
+Fri May 09 09:46:24 2014 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: aa93b868_2b60f9dc
+Bytes: 246
+The emulator paths you've added are not being added to $ANDROID_BUILD_PATHS.
+
+It might not technically be required (given that the location of your emulator binaries isn't going to change across lunch targets) but it does create an inconsistency.
+
