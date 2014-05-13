@@ -1,0 +1,19 @@
+Revision: 6fa19a749aa4f42dea4e91e3e677ccc82f1b032a
+Patch-set: 1
+File: /COMMIT_MSG
+
+13:31-13:61
+Tue May 13 23:54:41 2014 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: cafc6cef_5c8bddc7
+Bytes: 197
+narayan wanted it changed to
+
+<arch-name>/<module_name>.odex
+
+to match the 
+
+/data/dalvik-cache/<arch-name>/<module_name>.dex pattern.
+
+obviously a code change will be required in art for this too.
+
