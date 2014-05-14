@@ -17,3 +17,12 @@ to match the
 
 obviously a code change will be required in art for this too.
 
+13
+Wed May 14 03:53:43 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: cafc6cef_5c8bddc7
+UUID: caaaaceb_4c64df5b
+Bytes: 117
+Done
+though it makes the pattern rule to install the .odex file in core/dex_preopt_odex_install.mk a little bit ugly.
+
