@@ -26,3 +26,11 @@ Bytes: 117
 Done
 though it makes the pattern rule to install the .odex file in core/dex_preopt_odex_install.mk a little bit ugly.
 
+13
+Wed May 14 04:10:53 2014 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: caaaaceb_4c64df5b
+UUID: ea9db0d4_535c7cd0
+Bytes: 99
+yeah, it seems like it might be a bit ugly in the C++ code too, I'm looking at that part right now.
+
