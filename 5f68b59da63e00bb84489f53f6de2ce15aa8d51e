@@ -1,0 +1,12 @@
+Revision: 5f68b59da63e00bb84489f53f6de2ce15aa8d51e
+Patch-set: 2
+File: core/dex_preopt_odex_install.mk
+
+63
+Wed May 14 04:57:57 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: caaaaceb_afa8d5ae
+Bytes: 193
+We may need a way to specify an arch- or 32/64-bit- aware custom LOCAL_DEX_PREOPT_IMAGE. We don't use it in normal modules, but I saw it in some art tests.
+I'll revisit it later if it's needed.
+
