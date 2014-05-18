@@ -1,0 +1,21 @@
+Revision: 6eb95a83f49157491e5e69ce1371d369723b9687
+Patch-set: 5
+File: core/dex_preopt_libart_boot.mk
+
+5
+Sun May 18 17:02:30 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7f10a43e_afd38906
+Bytes: 72
+Could you add some comment on the difference of _LOCATION and _FILENAME?
+
+File: core/dex_preopt_odex_install.mk
+
+105
+Sun May 18 17:02:30 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3f0aac14_4101689c
+Bytes: 81
+The second argument should be:
+$($(LOCAL_2ND_ARCH_VAR_PREFIX)DEX2OAT_TARGET_ARCH)
+
