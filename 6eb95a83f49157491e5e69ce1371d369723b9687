@@ -9,6 +9,14 @@ UUID: 7f10a43e_afd38906
 Bytes: 72
 Could you add some comment on the difference of _LOCATION and _FILENAME?
 
+5
+Sun May 18 19:24:42 2014 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7f10a43e_afd38906
+UUID: 3f0aac14_21fc341f
+Bytes: 4
+Done
+
 File: core/dex_preopt_odex_install.mk
 
 105
@@ -18,4 +26,12 @@ UUID: 3f0aac14_4101689c
 Bytes: 81
 The second argument should be:
 $($(LOCAL_2ND_ARCH_VAR_PREFIX)DEX2OAT_TARGET_ARCH)
+
+105
+Sun May 18 19:24:42 2014 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3f0aac14_4101689c
+UUID: 7f10a43e_8ff7a56e
+Bytes: 4
+Done
 
