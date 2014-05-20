@@ -1,0 +1,11 @@
+Revision: 506c544eef13deecde096ce215393d2bf16d06b7
+Patch-set: 1
+File: envsetup.sh
+
+189
+Tue May 20 21:02:11 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: ff281483_17717e5e
+Bytes: 70
+It should be appended here. Otherwise we may end up with "::" in PATH.
+
