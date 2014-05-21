@@ -1,0 +1,11 @@
+Revision: 38bba065e096c18e12c0d08d586c1eee5c4179ae
+Patch-set: 1
+File: /COMMIT_MSG
+
+9
+Wed May 21 23:49:40 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3f8d4cf3_43a958b0
+Bytes: 89
+I think the current approach is to discourage people using LOCAL_PATH for shared library.
+
