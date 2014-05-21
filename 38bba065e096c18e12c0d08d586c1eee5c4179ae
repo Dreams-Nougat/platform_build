@@ -9,3 +9,11 @@ UUID: 3f8d4cf3_43a958b0
 Bytes: 89
 I think the current approach is to discourage people using LOCAL_PATH for shared library.
 
+9
+Wed May 21 23:58:37 2014 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3f8d4cf3_43a958b0
+UUID: 7f5ee42c_f941434c
+Bytes: 99
+related cl is this https://android-review.googlesource.com/95403 VG is a bit exotic in this regard.
+
