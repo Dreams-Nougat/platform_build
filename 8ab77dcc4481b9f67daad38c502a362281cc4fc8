@@ -1,0 +1,13 @@
+Revision: 8ab77dcc4481b9f67daad38c502a362281cc4fc8
+Patch-set: 1
+File: core/clang/HOST_x86_common.mk
+
+23
+Thu May 22 00:34:36 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3f8d4cf3_66efcada
+Bytes: 402
+This won't work. This is a global configuration loaded well before any Android.mk gets loaded. So at this point the module-scoped LOCAL_CPPFLAGS isn't defined.
+
+Maybe you can use "LOCAL_NO_DEFAULT_COMPILER_FLAGS := true" in libc++'s module definition, so the build system will skip any global flags. If you still need some global flags, you can add them with LOCAL_CFLAGS_<arch_name> in the Android.mk.
+
