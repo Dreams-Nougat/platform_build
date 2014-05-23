@@ -32,6 +32,14 @@ UUID: 7fd184e1_35feda89
 Bytes: 172
 It actually used r instead of q, which replaces duplicate names. If changing the global arflags to use q won't interfere with anything else, then that makes the most sense.
 
+1177
+Fri May 23 18:15:41 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7fd184e1_35feda89
+UUID: 5fd680dc_349a5e59
+Bytes: 162
+$(combo_var_prefix)GLOBAL_ARFLAGS in core/combo/select.mk is only used here. But yes, you need to "make checkbuild" to make sure it doesn't break existing builds.
+
 1179
 Fri May 23 17:58:43 2014 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -47,4 +55,12 @@ Parent: 7fd184e1_d59d0e88
 UUID: 5fd680dc_943a2ab8
 Bytes: 311
 I don't think this should perform that much worse. There will be a small hit for having to run ar more times, but q is much faster than r because it doesn't have to scan the archive; it just appends the new file to the end. We might actually see a performance improvement here... tough to say without trying it.
+
+1179
+Fri May 23 18:15:41 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5fd680dc_943a2ab8
+UUID: 1fe088ae_123e4aaa
+Bytes: 128
+Good to know q would improve performance. But copy-the-first seems to still be good to have. I's appreciate if you can do it :-)
 
