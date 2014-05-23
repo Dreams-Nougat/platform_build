@@ -9,12 +9,28 @@ UUID: 1fe088ae_4fe66d7e
 Bytes: 15
 i=$$(($$i + 1))
 
+1174
+Fri May 23 18:04:30 2014 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 1fe088ae_4fe66d7e
+UUID: 1fe088ae_12f64af9
+Bytes: 44
+Thanks. I knew there had to be a better way.
+
 1177
 Fri May 23 17:58:43 2014 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 7fd184e1_d56bcebf
 Bytes: 99
 You should use $($(PRIVATE_2ND_ARCH_VAR_PREFIX)TARGET_GLOBAL_ARFLAGS), which already includes cqPD.
+
+1177
+Fri May 23 18:04:30 2014 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7fd184e1_d56bcebf
+UUID: 7fd184e1_35feda89
+Bytes: 172
+It actually used r instead of q, which replaces duplicate names. If changing the global arflags to use q won't interfere with anything else, then that makes the most sense.
 
 1179
 Fri May 23 17:58:43 2014 +0000
@@ -23,4 +39,12 @@ UUID: 7fd184e1_d59d0e88
 Bytes: 306
 _extract-and-include-single-target-whole-static-lib used to be long-running job when the whole static libraries get really big in external/llvm .
  I think this change would make it worse. One optimization I can think of is to for the 1st .a we can actually just do a copy instead of extracting and merging.
+
+1179
+Fri May 23 18:04:30 2014 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7fd184e1_d59d0e88
+UUID: 5fd680dc_943a2ab8
+Bytes: 311
+I don't think this should perform that much worse. There will be a small hit for having to run ar more times, but q is much faster than r because it doesn't have to scan the archive; it just appends the new file to the end. We might actually see a performance improvement here... tough to say without trying it.
 
