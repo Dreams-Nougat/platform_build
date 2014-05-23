@@ -1,0 +1,11 @@
+Revision: 6d51a4a5e10b536b10e6250cfbb2842622214728
+Patch-set: 1
+File: core/definitions.mk
+
+1191
+Fri May 23 23:17:06 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3f52ac51_f8a6b135
+Bytes: 78
+$(wordlist 2,999,$(PRIVATE_ALL_WHOLE_STATIC_LIBRARIES)) is more efficient :-).
+
