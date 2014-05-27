@@ -1,0 +1,12 @@
+Revision: 0e5ce8be34446278a3404ea2a4afc01f20f86c5a
+Base-for-patch-set: 1
+File: core/definitions.mk
+
+1175
+Tue May 27 19:50:43 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7ffd0472_e18b9058
+Bytes: 247
+You can't write to the object files to just $$f. That will end up in the root of the source tree and cause race condition if 2 jobs have the same file name.
+You need to put it under $(PRIVATE_INTERMEDIATES_DIR)/WHOLE/, like what it previously did.
+
