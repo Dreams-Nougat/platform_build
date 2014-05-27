@@ -17,6 +17,14 @@ UUID: 1fe088ae_12f64af9
 Bytes: 44
 Thanks. I knew there had to be a better way.
 
+1174
+Tue May 27 17:32:46 2014 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 1fe088ae_12f64af9
+UUID: 7ffd0472_78e0f95d
+Bytes: 4
+Done
+
 1177
 Fri May 23 17:58:43 2014 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -39,6 +47,14 @@ Parent: 7fd184e1_35feda89
 UUID: 5fd680dc_349a5e59
 Bytes: 162
 $(combo_var_prefix)GLOBAL_ARFLAGS in core/combo/select.mk is only used here. But yes, you need to "make checkbuild" to make sure it doesn't break existing builds.
+
+1177
+Tue May 27 17:32:46 2014 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5fd680dc_349a5e59
+UUID: 7ffd0472_18ebad45
+Bytes: 4
+Done
 
 1179
 Fri May 23 17:58:43 2014 +0000
