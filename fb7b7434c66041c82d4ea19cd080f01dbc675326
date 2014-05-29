@@ -1,0 +1,11 @@
+Revision: fb7b7434c66041c82d4ea19cd080f01dbc675326
+Patch-set: 1
+File: envsetup.sh
+
+1036
+Thu May 29 00:58:23 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: ff8c944a_c2df521d
+Bytes: 37
+this is just the help text, isn't it?
+
