@@ -1,0 +1,18 @@
+Revision: 80324b54d714b93579cb34880b452a5a55f0f9de
+Patch-set: 1
+File: /COMMIT_MSG
+
+7
+Thu May 29 16:19:37 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1fbfa8df_b7aec871
+Bytes: 74
+presumably we'll add it for the host too when we've updated the prebuilts?
+
+16
+Thu May 29 16:19:37 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: bfcdbca8_3404f0e0
+Bytes: 261
+you mean specifically libm.a? i think this part of your comment is more confusing than useful. i think what you're trying to say is that libatomic is more like libgcc than libm. but i think you've already said that above and can just stop at the end of line 14.
+
