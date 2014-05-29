@@ -1,0 +1,11 @@
+Revision: 4c952d72b7aca4801e0ee4070cf54e3de57b98b5
+Patch-set: 2
+File: core/combo/TARGET_linux-arm.mk
+
+246
+Thu May 29 19:56:42 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9fcab88f_d3f1544a
+Bytes: 63
+Dan, do we need to exclude LIBATOMIC as well if libc++ is used?
+
