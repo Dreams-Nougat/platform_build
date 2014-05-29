@@ -9,3 +9,11 @@ UUID: 9fcab88f_d3f1544a
 Bytes: 63
 Dan, do we need to exclude LIBATOMIC as well if libc++ is used?
 
+246
+Thu May 29 20:11:55 2014 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 9fcab88f_d3f1544a
+UUID: 5fc5a077_2233947d
+Bytes: 181
+I believe with libc++ is fine, but it should probably be excluded from any clang builds. If clang has similar needs it's probably in compiler-rt, but that will conflict with libgcc.
+
