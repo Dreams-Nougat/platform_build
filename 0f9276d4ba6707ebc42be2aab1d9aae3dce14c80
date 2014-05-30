@@ -10,3 +10,11 @@ Bytes: 89
 GCC passes -shared to linker.  We can remove -Wl,-shared here.
 ie. -shared,-Wl,-Bsymbolic
 
+227:1-227:24
+Fri May 30 22:03:59 2014 +0000
+Author: Tim Murray <1017430@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: bfe21c19_8f2b9972
+UUID: dffef0bb_ba64552a
+Bytes: 70
+I'd like to go ahead and submit as is and clean this up in the future.
+
