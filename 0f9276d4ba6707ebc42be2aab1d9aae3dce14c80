@@ -1,0 +1,12 @@
+Revision: 0f9276d4ba6707ebc42be2aab1d9aae3dce14c80
+Patch-set: 1
+File: core/combo/TARGET_linux-arm.mk
+
+227:1-227:24
+Fri May 30 07:41:25 2014 +0000
+Author: Andrew Hsieh <1010186@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: bfe21c19_8f2b9972
+Bytes: 89
+GCC passes -shared to linker.  We can remove -Wl,-shared here.
+ie. -shared,-Wl,-Bsymbolic
+
