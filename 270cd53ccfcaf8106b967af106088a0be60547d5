@@ -1,0 +1,20 @@
+Revision: 270cd53ccfcaf8106b967af106088a0be60547d5
+Patch-set: 3
+File: core/envsetup.mk
+
+316
+Sat May 31 02:27:26 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3fef0c01_e4d9228f
+Bytes: 79
+no, this is wrong. ..../system/bin really is where the target executables live.
+
+File: envsetup.sh
+
+960
+Sat May 31 02:27:26 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: dfd51034_569b0a93
+Bytes: 257
+what you'll need to do is bear in mind that OUT_EXE_SYMBOLS is really pointing to ..../system/bin. so you'll probably want to strip the "/system/bin" yourself and then use the full path to the executable (which the local EXE=... line is currently mangling).
+
