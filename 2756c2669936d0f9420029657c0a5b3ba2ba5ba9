@@ -1,0 +1,20 @@
+Revision: 2756c2669936d0f9420029657c0a5b3ba2ba5ba9
+Patch-set: 1
+File: core/combo/javac.mk
+
+28
+Mon Jun 02 18:14:06 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1fbfa8df_34bf4951
+Bytes: 33
+Guard with "ifdef JAVAC_WRAPPER".
+
+File: core/combo/select.mk
+
+101
+Mon Jun 02 18:14:06 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9fcab88f_9febd689
+Bytes: 117
+guard it with "ifdef CC_WRAPPER", otherwise we may end up with extra spaces at the beginning of $(combo_var_prefix)CC
+
