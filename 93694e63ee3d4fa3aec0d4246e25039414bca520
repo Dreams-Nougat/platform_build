@@ -36,3 +36,21 @@ Bytes: 238
 The configurations in build/core/combo.
 With armv8-a for the second arch, it won't bulid, for we don't have armv8-a.mk in build/core/combo/arch/arm/. Also I don't know if the 32-bit toolchain knows armv8-a as arch variant and cpu variant.
 
+27
+Wed Jun 04 22:07:11 2014 +0000
+Author: Ian Rogers <1010118@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7f1c24fb_8eb06b7a
+UUID: df4350e0_10ef8dda
+Bytes: 654
+Our ARM 32-bit GCC supports armv8-a as a -march option:
+
+$ arm-eabi-gcc-4.8 -march=armv8-a
+arm-eabi-gcc-4.8: fatal error: no input files
+compilation terminated.
+
+it seems like we should add a armv8-a.mk in build/core/combo/arch/arm/, looking at:
+https://gcc.gnu.org/onlinedocs/gcc-4.8.3/gcc/ARM-Options.html#ARM-Options
+There are other options we can specify for potentially better neon support like:
+-mfpu=neon-fp-armv8
+I defer to Ben and ARM on the best default combination. It seems wrong that we're not treating 32-bit ARMv8 as an improved instruction set in this patch but making it look like a cortex-a15 (although that's better than just generic).
+
