@@ -18,3 +18,11 @@ UUID: dfd51034_569b0a93
 Bytes: 257
 what you'll need to do is bear in mind that OUT_EXE_SYMBOLS is really pointing to ..../system/bin. so you'll probably want to strip the "/system/bin" yourself and then use the full path to the executable (which the local EXE=... line is currently mangling).
 
+960
+Wed Jun 04 16:33:04 2014 +0000
+Author: Brigid Smith <1047249@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: dfd51034_569b0a93
+UUID: bfcdbca8_8a9a74e5
+Bytes: 156
+Do you mean to remove /system/bin from $OUT_EXE_SYMBOLS?  That's what my change to envsetup.mk did, but I'm not sure exactly where I should be stripping it.
+
