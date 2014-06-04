@@ -26,3 +26,27 @@ UUID: bfcdbca8_8a9a74e5
 Bytes: 156
 Do you mean to remove /system/bin from $OUT_EXE_SYMBOLS?  That's what my change to envsetup.mk did, but I'm not sure exactly where I should be stripping it.
 
+960
+Wed Jun 04 16:39:57 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: bfcdbca8_8a9a74e5
+UUID: 3fef0c01_17cc5347
+Bytes: 675
+you can't change the makefile without changing everything that uses that. so what i think you need to do is  to strip the "/system/bin" yourself _here_ and then use the full path to the executable (which the local EXE=... line is currently mangling).
+
+as usual, though, step 1 is to get yourself a reproduceable test case. get a command line that should work but currently doesn't, like when we were messing around attaching gdb to your test. make sure it _doesn't_ work without any changes, and then you work in the script to fix things.
+
+you probably want to add a new function that returns a path to the symbols for a given binary, and have both callers in here call that.
+
+960
+Wed Jun 04 16:39:57 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: bfcdbca8_8a9a74e5
+UUID: dfd51034_8236c81c
+Bytes: 675
+you can't change the makefile without changing everything that uses that. so what i think you need to do is  to strip the "/system/bin" yourself _here_ and then use the full path to the executable (which the local EXE=... line is currently mangling).
+
+as usual, though, step 1 is to get yourself a reproduceable test case. get a command line that should work but currently doesn't, like when we were messing around attaching gdb to your test. make sure it _doesn't_ work without any changes, and then you work in the script to fix things.
+
+you probably want to add a new function that returns a path to the symbols for a given binary, and have both callers in here call that.
+
