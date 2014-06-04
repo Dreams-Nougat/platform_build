@@ -1,0 +1,11 @@
+Revision: 93694e63ee3d4fa3aec0d4246e25039414bca520
+Patch-set: 1
+File: target/board/generic_arm64/BoardConfig.mk
+
+26:0-27:33
+Wed Jun 04 16:39:16 2014 +0000
+Author: Ian Rogers <1010118@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: bf505ca5_96b4fc0d
+Bytes: 213
+it seems strange these just don't agree with the TARGET_CPU above. Presumably we could build arm code (ie not 64-bit) with armv8 as a variant. There are instructions in armv8 beyond even what's in cortex-a15 iirc.
+
