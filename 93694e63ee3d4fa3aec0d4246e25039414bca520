@@ -27,3 +27,12 @@ What is "exactly same configuration" ? The variant here has neon while the norma
 TARGET_2ND_ARCH_VARIANT := armv8-a
 TARGET_2ND_CPU_VARIANT := armv8-a
 
+27
+Wed Jun 04 21:39:25 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3f162cdd_52d754cb
+UUID: 7f1c24fb_8eb06b7a
+Bytes: 238
+The configurations in build/core/combo.
+With armv8-a for the second arch, it won't bulid, for we don't have armv8-a.mk in build/core/combo/arch/arm/. Also I don't know if the 32-bit toolchain knows armv8-a as arch variant and cpu variant.
+
