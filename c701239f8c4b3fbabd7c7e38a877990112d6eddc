@@ -1,0 +1,11 @@
+Revision: c701239f8c4b3fbabd7c7e38a877990112d6eddc
+Patch-set: 6
+File: envsetup.sh
+
+965
+Fri Jun 06 23:53:58 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: bf505ca5_4e19f5dc
+Bytes: 253
+oh, duh, sorry. i forgot there's no real "return", and that the whole point of get_symbols_directory is to return a string. i misunderstood why $() was being used. since it's actually necessary and seems to be the local style, please switch back to $().
+
