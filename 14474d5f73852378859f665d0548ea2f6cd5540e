@@ -1,0 +1,41 @@
+Revision: 14474d5f73852378859f665d0548ea2f6cd5540e
+Patch-set: 5
+File: envsetup.sh
+
+947
+Fri Jun 06 23:18:07 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1f908898_153b14bf
+Bytes: 20
+comment out of date.
+
+948
+Fri Jun 06 23:18:07 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5f868066_fd43d226
+Bytes: 40
+get_symbols_directory seems more honest.
+
+950
+Fri Jun 06 23:18:07 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9f26384e_108b1513
+Bytes: 486
+i think you've misunderstood. get_abs_build_var is just a thing in our makefiles that returns the value of a make variable. TARGET_OUT_EXECUTABLES_UNSTRIPPED is the make variable we care about. so this shouldn't be a parameter here because it would be a mistake to pass in anything else.
+
+if we do pass in a parameter, i think it should be the absolute path to an executable (say /system/bin/ls) so we can return ..../symbols/system/bin/ls rather than ..../symbols like we currently do.
+
+966
+Fri Jun 06 23:18:07 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9f26384e_d094bd2d
+Bytes: 113
+i don't think you need to do this in a subshell with $(). i think you can just call the function like a function.
+
+1068
+Fri Jun 06 23:18:07 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1f908898_d5eeecdc
+Bytes: 25
+debugging output left in.
+
