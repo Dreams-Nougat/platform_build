@@ -1,0 +1,11 @@
+Revision: bd5851ef5f7979811cc5c549a0a509cd5c09c0b2
+Patch-set: 8
+File: envsetup.sh
+
+965
+Mon Jun 09 17:01:54 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3f646c99_e8c79379
+Bytes: 220
+i think we should either have /$(EXE) here so the content matches the variable name, or rename these variables to match what they actually contain. (i know they were the names we inherited, but they're misleading names.)
+
