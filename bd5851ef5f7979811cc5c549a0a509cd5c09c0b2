@@ -18,6 +18,14 @@ UUID: 1f696874_47eb2e8a
 Bytes: 79
 I am providing the full pathname for this argument (i.e. /system/xbin/crasher).
 
+963
+Mon Jun 09 22:18:31 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 1f696874_47eb2e8a
+UUID: bffcdced_e2268240
+Bytes: 102
+try running this line at the prompt, and adding one pipe element at a time so you can what it's doing.
+
 965
 Mon Jun 09 17:01:54 2014 +0000
 Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -32,6 +40,14 @@ Parent: 3f646c99_e8c79379
 UUID: 1f696874_30eaeec3
 Bytes: 64
 What would be a better name? Something like OUT_EXE_SYMBOLS_DIR?
+
+965
+Mon Jun 09 22:18:31 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 1f696874_30eaeec3
+UUID: bffcdced_82369e6a
+Bytes: 191
+that would certainly be an improvement. but since it's only used in one place and the function already has a perfectly good name, it's not obvious that we need to give it a local name at all.
 
 966
 Mon Jun 09 17:37:28 2014 +0000
