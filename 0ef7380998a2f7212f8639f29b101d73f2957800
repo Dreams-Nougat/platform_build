@@ -1,0 +1,11 @@
+Revision: 0ef7380998a2f7212f8639f29b101d73f2957800
+Patch-set: 9
+File: envsetup.sh
+
+965
+Mon Jun 09 22:16:52 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1f696874_d08832a7
+Bytes: 29
+you don't need this line now.
+
