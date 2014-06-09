@@ -10,12 +10,28 @@ Bytes: 326
 note that this is broken too. i think this should be 
 adb shell readlink /proc/$PID/exe" instead, to get the absolute path to the executable. i'm a bit confused about how this can be working for you. this should get you "crasher", and OUT_EXE_SYMBOLS should be .../symbols, so where is the missing "/system/xbin/" coming from?
 
+963
+Mon Jun 09 21:45:47 2014 +0000
+Author: Brigid Smith <1047249@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3f646c99_8899376f
+UUID: 1f696874_47eb2e8a
+Bytes: 79
+I am providing the full pathname for this argument (i.e. /system/xbin/crasher).
+
 965
 Mon Jun 09 17:01:54 2014 +0000
 Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 3f646c99_e8c79379
 Bytes: 220
 i think we should either have /$(EXE) here so the content matches the variable name, or rename these variables to match what they actually contain. (i know they were the names we inherited, but they're misleading names.)
+
+965
+Mon Jun 09 21:45:47 2014 +0000
+Author: Brigid Smith <1047249@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3f646c99_e8c79379
+UUID: 1f696874_30eaeec3
+Bytes: 64
+What would be a better name? Something like OUT_EXE_SYMBOLS_DIR?
 
 966
 Mon Jun 09 17:37:28 2014 +0000
