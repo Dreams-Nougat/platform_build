@@ -1,0 +1,11 @@
+Revision: 0d911bbb902e7578c54256c2648afa76d7026076
+Patch-set: 3
+File: core/product_config.mk
+
+167:0-167:33
+Tue Jun 10 00:31:33 2014 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: bffcdced_4bb4b1d5
+Bytes: 68
+we should be removing this stuff, not perpetuating it in a new form.
+
