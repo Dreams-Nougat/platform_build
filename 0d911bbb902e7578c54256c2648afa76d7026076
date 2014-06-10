@@ -9,3 +9,13 @@ UUID: bffcdced_4bb4b1d5
 Bytes: 68
 we should be removing this stuff, not perpetuating it in a new form.
 
+167
+Tue Jun 10 00:50:35 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: bffcdced_4bb4b1d5
+UUID: 9f12b80c_f330100e
+Bytes: 152
+Done.
+I just removed the "ifneq ($(HOST_ARCH),x86_64)" .
+The setting of WITH_HOST_DALVIK will be removed in future change after no other place using it.
+
