@@ -20,3 +20,13 @@ Bytes: 137
 On what branch you saw the error? I had submitted a fix before submitting this change:
 https://android-review.googlesource.com/#/c/97215/
 
+18
+Wed Jun 11 21:47:52 2014 +0000
+Author: JP Abgrall <1005480@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7f6424c8_fd9723bd
+UUID: 1f6328c5_b776a857
+Bytes: 160
+Silly me: I thought that "repo rebase" was behaving like "repo sync" and continued to rebase and just list all errors. But it stops on 1st error.
+
+All good now.
+
