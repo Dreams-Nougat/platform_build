@@ -11,3 +11,12 @@ Breaks the build:
 
 build/core/target_test_internal.mk:23: *** system/extras/tests/wifi/stress: Do not set LOCAL_MODULE_PATH when building test wifiLoadScanAssoc.  Stop.
 
+18
+Wed Jun 11 21:25:28 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3f5e2cfe_f8c73147
+UUID: 7f6424c8_fd9723bd
+Bytes: 137
+On what branch you saw the error? I had submitted a fix before submitting this change:
+https://android-review.googlesource.com/#/c/97215/
+
