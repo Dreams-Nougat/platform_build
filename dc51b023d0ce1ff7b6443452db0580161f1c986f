@@ -1,0 +1,11 @@
+Revision: dc51b023d0ce1ff7b6443452db0580161f1c986f
+Patch-set: 2
+File: tools/releasetools/ota_from_target_files
+
+973
+Wed Jun 11 20:51:24 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1f8a489d_813cf1dd
+Bytes: 95
+IMHO, we should error out if --worker_threads is not a digit, rather than silently ignoring it.
+
