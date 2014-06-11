@@ -1,0 +1,13 @@
+Revision: 8c141e7e9f39f679afed0e2b0de30dc1b6521740
+Patch-set: 5
+File: core/target_test_internal.mk
+
+18:0-18:87
+Wed Jun 11 21:09:24 2014 +0000
+Author: JP Abgrall <1005480@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3f5e2cfe_f8c73147
+Bytes: 168
+Breaks the build:
+
+build/core/target_test_internal.mk:23: *** system/extras/tests/wifi/stress: Do not set LOCAL_MODULE_PATH when building test wifiLoadScanAssoc.  Stop.
+
