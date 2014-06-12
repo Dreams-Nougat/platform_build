@@ -1,0 +1,20 @@
+Revision: fcb9b8085f4339118d65657e913707c5de3a295b
+Patch-set: 1
+File: core/combo/TARGET_linux-arm.mk
+
+229
+Thu Jun 12 23:16:59 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7f49844c_75ba625a
+Bytes: 53
+do you need this, given the -shared on the next line?
+
+File: core/combo/TARGET_linux-x86.mk
+
+185
+Thu Jun 12 23:16:59 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: df74307d_6a225b0c
+Bytes: 52
+is it a bug that not all targets have --gc-sections?
+
