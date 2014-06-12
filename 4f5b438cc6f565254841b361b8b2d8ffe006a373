@@ -1,0 +1,18 @@
+Revision: 4f5b438cc6f565254841b361b8b2d8ffe006a373
+Patch-set: 1
+File: core/combo/include/arch/freebsd-x86/AndroidConfig.h
+
+194:2-194:3
+Thu Jun 12 22:27:00 2014 +0000
+Author: Christopher Ferris <1019050@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7f49844c_d53dcead
+Bytes: 12
+Extra space.
+
+263:0-263:2
+Thu Jun 12 22:27:00 2014 +0000
+Author: Christopher Ferris <1019050@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7f49844c_b5484a45
+Bytes: 39
+Fix the extra space while you are here?
+
