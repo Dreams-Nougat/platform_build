@@ -57,6 +57,14 @@ UUID: df74307d_add728ca
 Bytes: 197
 also, ccross noted that we can't increase the size because the API doesn't specify the size of the callers buffer. so yes, we can change the API and push that through, but that is a bigger project.
 
+59
+Fri Jun 13 18:50:23 2014 +0000
+Author: Doug Zongker <1002268@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: df74307d_edd040db
+UUID: bfc3fcc9_5eeab5c3
+Bytes: 154
+The mgrep indicates that people are looking at $(BUILD_NUMBER).  We could leave that alone and put a more parsimonious version of it into the fingerprint.
+
 67
 Fri Jun 13 02:14:32 2014 +0000
 Author: Jean-Luc Brouillet <1038790@85c56323-6fa9-3386-8a01-6480fb634889>
