@@ -2,6 +2,15 @@ Revision: 34f1ed7de6494600fefa70f5a7473585f87c4443
 Patch-set: 1
 File: tools/post_process_props.py
 
+59
+Fri Jun 13 14:54:10 2014 +0000
+Author: Doug Zongker <1002268@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7f49844c_a17008b7
+Bytes: 212
+Why do we try to continue at all, instead of making post_process_props.py exit with an error and kill the build?
+
+Is either making the property blank or truncating it arbitrarily likely to produce a useful build?
+
 67
 Fri Jun 13 02:14:32 2014 +0000
 Author: Jean-Luc Brouillet <1038790@85c56323-6fa9-3386-8a01-6480fb634889>
