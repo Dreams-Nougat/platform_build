@@ -39,6 +39,16 @@ For the specific case in that bug, I'd look at:
 - can we truncate usernames to (say) 8 chars?
 - can BUILD_ID be something shorter than "OPENMASTER" for aosp?
 
+59
+Fri Jun 13 18:46:04 2014 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: df74307d_12c67d26
+UUID: df74307d_edd040db
+Bytes: 145
+I the bug, I believe Ying noted that people are looking at the eng.* specifically for various reasons.
+
+replace "OPENMASTER" with "AOSP" perhaps?
+
 67
 Fri Jun 13 02:14:32 2014 +0000
 Author: Jean-Luc Brouillet <1038790@85c56323-6fa9-3386-8a01-6480fb634889>
