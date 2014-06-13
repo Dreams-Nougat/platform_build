@@ -1,0 +1,11 @@
+Revision: 34f1ed7de6494600fefa70f5a7473585f87c4443
+Patch-set: 1
+File: tools/post_process_props.py
+
+67
+Fri Jun 13 02:14:32 2014 +0000
+Author: Jean-Luc Brouillet <1038790@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7f49844c_5b682f33
+Bytes: 63
+I like the idea of truncating.  Lines 66, 67 should be removed.
+
