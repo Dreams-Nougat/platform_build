@@ -21,6 +21,24 @@ In that case most of the aosp_*-userdebug (or if the user has a long username) w
 It seems with truncated fingerprint at least a dev build still work as long as you are not testing build fingerprint related code.
 OTOH, do you think if we can remove or shorten any part of the $(BUILD_FINGERPRINT)?  see discussion in https://b.corp.google.com/issue?id=15593959 .
 
+59
+Fri Jun 13 17:20:51 2014 +0000
+Author: Doug Zongker <1002268@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7f49844c_2155f87d
+UUID: df74307d_12c67d26
+Bytes: 667
+I think that if the problem is that the fingerprint is too bloated, the solution should be to unbloat the fingerprint, not hack up the property processor.
+
+Perhaps the max property size can be increased somewhat; these aren't the days of swetland.
+
+For the specific case in that bug, I'd look at:
+
+- what purpose does "eng." in BUILD_NUMBER serve? can we just drop it?
+- how about the timestamp?  these usually aren't even accurate, since they only change when build.prop is regenerated, which isn't every build.
+- can we remove the periods in BUILD_NUMBER?
+- can we truncate usernames to (say) 8 chars?
+- can BUILD_ID be something shorter than "OPENMASTER" for aosp?
+
 67
 Fri Jun 13 02:14:32 2014 +0000
 Author: Jean-Luc Brouillet <1038790@85c56323-6fa9-3386-8a01-6480fb634889>
