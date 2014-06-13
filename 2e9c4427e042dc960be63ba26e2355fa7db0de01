@@ -1,0 +1,20 @@
+Revision: 2e9c4427e042dc960be63ba26e2355fa7db0de01
+Patch-set: 1
+File: /COMMIT_MSG
+
+13:0-13:32
+Fri Jun 13 22:35:47 2014 +0000
+Author: Daniel Cashman <1026058@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: df74307d_c6560237
+Bytes: 9
+too many?
+
+File: target/board/generic/sepolicy/device.te
+
+2:0-2:33
+Fri Jun 13 22:35:47 2014 +0000
+Author: Daniel Cashman <1026058@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5f4e8057_d494f22d
+Bytes: 225
+I don't know if we actually need this type.  The only rules for qemu_device seem to be allowing rw_file_perms across a variety of domains.  It might make sense to just allow that to all domains too, and not need the new type.
+
