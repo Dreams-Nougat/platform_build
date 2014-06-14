@@ -1,0 +1,13 @@
+Revision: 4a7c1d58be11338357203cf98cb05404eab91619
+Patch-set: 2
+File: core/Makefile
+
+115:80-115:104
+Sat Jun 14 00:47:55 2014 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9fc0f8c0_fdf567ec
+Bytes: 99
+is "Android system property length limit." clearer?
+
+perhaps mention limit of PROPERTY_VALUE_MAX=92
+
