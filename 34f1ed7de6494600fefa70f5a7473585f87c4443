@@ -90,3 +90,11 @@ UUID: df74307d_529e3584
 Bytes: 177
 Hmm, these lines just tell the truth what would cause if the value is too long, that's why I prefer to keep them. Shall I change "This will cause ..." to "This would cause ..."?
 
+67
+Sat Jun 14 01:09:32 2014 +0000
+Author: Jean-Luc Brouillet <1038790@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: df74307d_529e3584
+UUID: 5f4e8057_c5d99a8f
+Bytes: 65
+If you truncate, the property will no longer be empty at runtime.
+
