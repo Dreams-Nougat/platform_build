@@ -11,3 +11,13 @@ Heh, I like this comment...
 
 Anyway... what's freebsd-x86 used for ? Is this an officially supported build configuration ? (what about linux-ppc , linux-arm64 etc. assuming these are host configurations).
 
+35
+Mon Jun 16 20:14:37 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7fd6e483_3f1b7b8d
+UUID: 9fc0f8c0_38426d51
+Bytes: 203
+i don't think freebsd-x86 and linux-ppc are used. wangying?
+
+linux-arm64 is misleading --- it's really a target, not host. target_linux-x86 is just because linux-x86 was already used for the host (aiui).
+
