@@ -9,10 +9,26 @@ UUID: 9f439833_2eb4070c
 Bytes: 80
 Hmm, I just deleted this several days ago. Any particular reason to add it back?
 
+3
+Mon Jun 16 21:03:22 2014 +0000
+Author: Andrew Hsieh <1010186@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 9f439833_2eb4070c
+UUID: 1f3168d1_e79782bd
+Bytes: 202
+Done that, but strangely by the time g++ links llvm-rs-cc.exe its dependencies out/host/windows-x86/obj32/lib/libLLVM.dll and out/host/windows-x86/obj32/lib/libclang.dll are not built yet.  Please help.
+
 21
 Mon Jun 16 18:42:03 2014 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: bf469c40_cf00e19c
 Bytes: 133
 I think we should change to $(BUILD_OUT_EXECUTABLES) in the above instead. $(BUILD_OUT_EXECUTABLES) points to the build OS directory.
+
+21
+Mon Jun 16 21:03:22 2014 +0000
+Author: Andrew Hsieh <1010186@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: bf469c40_cf00e19c
+UUID: 3f538cfe_b65cd026
+Bytes: 85
+Sure.  Should I change the following line#24,25 to use BUILD_OUT_EXECUTABLES as well.
 
