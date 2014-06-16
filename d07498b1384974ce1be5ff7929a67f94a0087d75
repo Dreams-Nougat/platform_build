@@ -17,6 +17,14 @@ UUID: 1f3168d1_e79782bd
 Bytes: 202
 Done that, but strangely by the time g++ links llvm-rs-cc.exe its dependencies out/host/windows-x86/obj32/lib/libLLVM.dll and out/host/windows-x86/obj32/lib/libclang.dll are not built yet.  Please help.
 
+3
+Mon Jun 16 21:36:44 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 1f3168d1_e79782bd
+UUID: 64ec997a_2128ae0b
+Bytes: 143
+You shouldn't be building llvm-rs-cc.exe at all, the prebuilts in prebuilts/sdk/tools/windows will be used. See prebuilts/sdk/tools/Android.mk.
+
 21
 Mon Jun 16 18:42:03 2014 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -31,4 +39,13 @@ Parent: bf469c40_cf00e19c
 UUID: 3f538cfe_b65cd026
 Bytes: 85
 Sure.  Should I change the following line#24,25 to use BUILD_OUT_EXECUTABLES as well.
+
+21
+Mon Jun 16 21:36:44 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3f538cfe_b65cd026
+UUID: 9f439833_7156f038
+Bytes: 128
+Then you don't need the ifneq..else..endif any more.
+$(BUILD_OUT_EXECUTABLES) points to out/host/linux-x86/bin in windows build.
 
