@@ -49,3 +49,13 @@ Bytes: 128
 Then you don't need the ifneq..else..endif any more.
 $(BUILD_OUT_EXECUTABLES) points to out/host/linux-x86/bin in windows build.
 
+21
+Mon Jun 16 21:47:32 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 9f439833_7156f038
+UUID: 7f3264d4_5e681533
+Bytes: 237
+Oh sorry, you should still be building llvm-rs-cc.exe, but not libLLVM.dll/libclang.dll. Do you have the following CLs in your client:
+ https://android-review.googlesource.com/#/c/97182/
+https://android-review.googlesource.com/#/c/97686/
+
