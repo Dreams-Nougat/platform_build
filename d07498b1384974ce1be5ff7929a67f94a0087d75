@@ -44,6 +44,14 @@ Oh sorry, you should still be building llvm-rs-cc.exe, but not libLLVM.dll/libcl
 https://android-review.googlesource.com/#/c/97686/
 <Obviously I replied to the wrong section>
 
+3
+Mon Jun 16 23:19:24 2014 +0000
+Author: Andrew Hsieh <1010186@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7f3264d4_39845bba
+UUID: 04fbdd34_1e998d62
+Bytes: 164
+My tree (sync'd this morning has both changes already.  I just tried again and found I still miss libLLVM.dll and libclang.dll w/o FORCE_BUILD_LLVM_COMPONENTS:=true
+
 21
 Mon Jun 16 18:42:03 2014 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
