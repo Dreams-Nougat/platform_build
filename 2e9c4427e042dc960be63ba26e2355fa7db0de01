@@ -26,3 +26,11 @@ UUID: 9f6e38af_dc8dfcb4
 Bytes: 537
 Given that device/generic/goldfish/ueventd.goldfish.rc makes /dev/qemu_trace and /dev/qemu_pipe 0666, I think we can just allow all domains rw_file_perms to qemu_device and not add a new type.  If we are concerned about any future /dev/qemu_ devices, then we could explicitly list /dev/qemu_trace and /dev/qemu_pipe in build/target/board/generic*/sepolicy/file_contexts rather than using the /dev/qemu_.* regex so that we do not assign qemu_device to any future devices without updating those files, although I'm not sure that is needed.
 
+2:0-2:33
+Mon Jun 16 16:28:36 2014 +0000
+Author: Daniel Cashman <1026058@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 9f6e38af_dc8dfcb4
+UUID: 3fd0ec87_fdb8c1d8
+Bytes: 77
+Agreed.  Nick and I discussed this on Friday and came to the same conclusion.
+
