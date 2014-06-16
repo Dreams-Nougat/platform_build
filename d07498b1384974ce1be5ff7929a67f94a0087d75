@@ -1,0 +1,18 @@
+Revision: d07498b1384974ce1be5ff7929a67f94a0087d75
+Patch-set: 1
+File: core/clang/config.mk
+
+3
+Mon Jun 16 18:42:03 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9f439833_2eb4070c
+Bytes: 80
+Hmm, I just deleted this several days ago. Any particular reason to add it back?
+
+21
+Mon Jun 16 18:42:03 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: bf469c40_cf00e19c
+Bytes: 133
+I think we should change to $(BUILD_OUT_EXECUTABLES) in the above instead. $(BUILD_OUT_EXECUTABLES) points to the build OS directory.
+
