@@ -18,3 +18,11 @@ UUID: 5f4e8057_d494f22d
 Bytes: 225
 I don't know if we actually need this type.  The only rules for qemu_device seem to be allowing rw_file_perms across a variety of domains.  It might make sense to just allow that to all domains too, and not need the new type.
 
+2:0-2:33
+Mon Jun 16 14:53:14 2014 +0000
+Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5f4e8057_d494f22d
+UUID: 9f6e38af_dc8dfcb4
+Bytes: 537
+Given that device/generic/goldfish/ueventd.goldfish.rc makes /dev/qemu_trace and /dev/qemu_pipe 0666, I think we can just allow all domains rw_file_perms to qemu_device and not add a new type.  If we are concerned about any future /dev/qemu_ devices, then we could explicitly list /dev/qemu_trace and /dev/qemu_pipe in build/target/board/generic*/sepolicy/file_contexts rather than using the /dev/qemu_.* regex so that we do not assign qemu_device to any future devices without updating those files, although I'm not sure that is needed.
+
