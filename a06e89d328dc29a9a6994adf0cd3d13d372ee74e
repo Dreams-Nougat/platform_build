@@ -1,0 +1,16 @@
+Revision: a06e89d328dc29a9a6994adf0cd3d13d372ee74e
+Patch-set: 1
+File: core/cleanbuild.mk
+
+87
+Wed Jun 18 19:22:31 2014 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c4a0e55c_22cc4a9d
+Bytes: 187
+you could also handle:
+
+ /system/lib/* -> /system/lib64/*
+ /system/lib64/* -> /system/lib/*
+ /system/vendor/lib/* -> /system/vendor/lib64/*
+ /system/vendor/lib64/* -> /system/vendor/lib/*
+
