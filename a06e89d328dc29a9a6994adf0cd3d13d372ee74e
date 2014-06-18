@@ -14,3 +14,12 @@ you could also handle:
  /system/vendor/lib/* -> /system/vendor/lib64/*
  /system/vendor/lib64/* -> /system/vendor/lib/*
 
+87
+Wed Jun 18 21:17:28 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c4a0e55c_22cc4a9d
+UUID: 4466b513_52e35442
+Bytes: 43
+Done.
+It's a little tricky to get it right.
+
