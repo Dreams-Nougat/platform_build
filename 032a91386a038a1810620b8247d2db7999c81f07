@@ -1,0 +1,11 @@
+Revision: 032a91386a038a1810620b8247d2db7999c81f07
+Patch-set: 1
+File: core/clang/config.mk
+
+33:34-33:39
+Thu Jun 19 14:19:10 2014 +0000
+Author: Primiano Tucci <1040443@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 04803dc3_dc2f857b
+Bytes: 32
+I think you want CLANG_CXX here.
+
