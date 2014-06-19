@@ -1,0 +1,11 @@
+Revision: 3b7a4d811df5b326e714984edd7dd3e2b11e16d5
+Patch-set: 2
+File: core/clang/config.mk
+
+35
+Thu Jun 19 17:10:48 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c4a70589_c7424051
+Bytes: 58
+This also enables ccache with clang. Did you guys test it?
+
