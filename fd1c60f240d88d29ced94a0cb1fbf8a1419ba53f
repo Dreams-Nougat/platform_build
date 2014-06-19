@@ -1,0 +1,11 @@
+Revision: fd1c60f240d88d29ced94a0cb1fbf8a1419ba53f
+Patch-set: 1
+File: target/product/embedded.mk
+
+80
+Thu Jun 19 22:06:03 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 84d18de4_5873956b
+Bytes: 92
+Over time, we should create an /selinux directory, and start putting all of our files there.
+
