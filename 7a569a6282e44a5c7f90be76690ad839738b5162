@@ -1,0 +1,11 @@
+Revision: 7a569a6282e44a5c7f90be76690ad839738b5162
+Patch-set: 1
+File: envsetup.sh
+
+1000:31-1000:32
+Sat Jun 21 01:01:31 2014 +0000
+Author: Christopher Ferris <1019050@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 04df5d24_e4238ec5
+Bytes: 217
+By the way, this appears to change the way this option works. I don't think that is going to go over well. It might be better to add something that modifies the value only if you find a EXE that begins with / instead.
+
