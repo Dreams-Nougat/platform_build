@@ -9,3 +9,11 @@ UUID: 04df5d24_e4238ec5
 Bytes: 217
 By the way, this appears to change the way this option works. I don't think that is going to go over well. It might be better to add something that modifies the value only if you find a EXE that begins with / instead.
 
+1000:31-1000:32
+Sat Jun 21 01:07:30 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 04df5d24_e4238ec5
+UUID: e4db2937_d70724e7
+Bytes: 77
+no, this is changing the behavior back to being more like what it used to be.
+
