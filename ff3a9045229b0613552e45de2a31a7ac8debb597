@@ -1,0 +1,15 @@
+Revision: ff3a9045229b0613552e45de2a31a7ac8debb597
+Patch-set: 1
+File: core/main.mk
+
+695
+Tue Jun 24 16:32:18 2014 +0000
+Author: Dan Willemsen <1004735@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 048d9d44_42c362d0
+Bytes: 426
+This breaks using 'mymodule:32' in PRODUCT_PACKAGES for our BSP -- we use that to specify that we only ever want to install the 32 bit version of a module for either 32-bit or 64-bit builds.
+
+After this change, those dependencies get dropped, since product_MODULES contains 'mymodule_32', but a 32-bit target build only defines 'mymodule'
+
+Is there a recommended alternative, or does this need to be fixed in the build system?
+
