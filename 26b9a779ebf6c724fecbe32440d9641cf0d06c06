@@ -1,0 +1,13 @@
+Revision: 26b9a779ebf6c724fecbe32440d9641cf0d06c06
+Patch-set: 1
+File: envsetup.sh
+
+996
+Tue Jun 24 19:06:05 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 44a315b3_fa2316c5
+Bytes: 352
+i don't think you need to duplicate the whole thing. there's two parts to this block: the first gets the arguments and the second does something with them. the second part doesn't need to be duplicated. you just need to make sure that the arguments are sorted out by the time you get to that code.
+
+you might also find $# useful. see the bash man page.
+
