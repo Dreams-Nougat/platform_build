@@ -1,0 +1,32 @@
+Revision: 404e92ea4cf2786546066c54aced2ff55d13de64
+Patch-set: 3
+File: envsetup.sh
+
+1014
+Tue Jun 24 23:39:43 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 649c9984_44db40f9
+Bytes: 107
+doesn't it make more sense to move the defaulting of PORT outside this if so we don't need to duplicate it?
+
+1018
+Tue Jun 24 23:39:43 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 649c9984_24d83cfa
+Bytes: 46
+don't you need some kind of early return here?
+
+1032
+Tue Jun 24 23:39:43 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 649c9984_04f65873
+Bytes: 122
+doesn't this mean that if you don't specify EXE, rather than get the right one from /proc we assume you meant app_process?
+
+1036
+Tue Jun 24 23:39:43 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 649c9984_c4ff5043
+Bytes: 46
+i still don't understand what's going on here.
+
