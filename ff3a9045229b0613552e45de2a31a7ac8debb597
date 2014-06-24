@@ -13,3 +13,11 @@ After this change, those dependencies get dropped, since product_MODULES contain
 
 Is there a recommended alternative, or does this need to be fixed in the build system?
 
+695
+Tue Jun 24 17:28:15 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 048d9d44_42c362d0
+UUID: 649e596e_b3129be5
+Bytes: 272
+Hmm, it doesn't make sense to have ":32" or ":64" in a 32-bit product configuration. But yes, I think the build system can do better job if by any chance they end up in a 32-bit product configuration. I just uploaded a change: https://android-review.googlesource.com/99208
+
