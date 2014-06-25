@@ -1,0 +1,46 @@
+Revision: 39b92a675400e8eb9c670de27fb61bd5aece0726
+Patch-set: 4
+File: envsetup.sh
+
+1004
+Wed Jun 25 23:18:33 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c4cd45a8_68260b22
+Bytes: 250
+this is weird. you set PORT to a $2, then if that was non-empty, you do it again?
+
+i was expecting that the defaulting would come at the _end_. so you try to initialize from the arguments, then you fill in values for those things that didn't get set?
+
+1021
+Wed Jun 25 23:18:33 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 84e50d1e_c69aa260
+Bytes: 265
+this is the case where "PID" isn't a number. (so maybe we should call the argument 'process' or 'pid_or_name' or somesuch, and only set PID when we actually know we have a pid? "temp" tells us nothing, so it's not a good name.)
+
+
+okay, so where's EXE actually used?
+
+1058
+Wed Jun 25 23:18:33 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a4ca118f_a26fa00c
+Bytes: 10
+...here...
+
+1084
+Wed Jun 25 23:18:33 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a4ca118f_427facb8
+Bytes: 155
+...and here.
+
+so why are we setting it on L1022? why aren't we waiting until we have a good PID, and then using adb shell to get the actual EXE from /proc?
+
+1086
+Wed Jun 25 23:18:33 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 84e50d1e_c66ce28b
+Bytes: 131
+now you know how to do an early return, you can lose a lot of the useless indentation from this function by moving this up to L995.
+
