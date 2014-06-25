@@ -1,0 +1,11 @@
+Revision: 5ef2e15298e2abee1c5d399c132a36e743034bb2
+Patch-set: 1
+File: core/definitions.mk
+
+1730
+Wed Jun 25 10:26:35 2014 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e472491f_e8a26b21
+Bytes: 25
+Remove stray blank line ?
+
