@@ -1,0 +1,12 @@
+Revision: a89aca33b59d6a4bae94efe1e1c46a44e23f519b
+Patch-set: 2
+File: core/executable_prefer_symlink.mk
+
+40:0-40:11
+Thu Jun 26 14:45:21 2014 +0000
+Author: YongQin Liu <1041813@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c4962558_60493a75
+Bytes: 158
+is this line needed for the host modules?
+or adding line like "ART_HOST_EXECUTABLES += $(HOST_OUT_EXECUTABLES)/$(LOCAL_MODULE)" here with condition is better?
+
