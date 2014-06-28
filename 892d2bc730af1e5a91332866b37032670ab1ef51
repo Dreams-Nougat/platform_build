@@ -1,0 +1,12 @@
+Revision: 892d2bc730af1e5a91332866b37032670ab1ef51
+Patch-set: 3
+File: core/executable_prefer_symlink.mk
+
+40
+Sat Jun 28 00:20:40 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 6438195d_8ab36f26
+Bytes: 96
+# Create the symlink when you run mm/mmm or "make <module_name>"
+$(LOCAL_MODULE) : $(my_symlink)
+
