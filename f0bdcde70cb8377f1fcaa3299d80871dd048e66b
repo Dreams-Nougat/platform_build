@@ -1,0 +1,11 @@
+Revision: f0bdcde70cb8377f1fcaa3299d80871dd048e66b
+Patch-set: 1
+File: core/dex_preopt.mk
+
+25
+Mon Jun 30 17:22:55 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 64865967_c425d39f
+Bytes: 47
+Hmm,can we run just "zip -d $(1) classes*.dex"?
+
