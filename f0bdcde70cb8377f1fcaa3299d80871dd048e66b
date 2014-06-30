@@ -9,3 +9,11 @@ UUID: 64865967_c425d39f
 Bytes: 47
 Hmm,can we run just "zip -d $(1) classes*.dex"?
 
+25
+Mon Jun 30 17:38:28 2014 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 64865967_c425d39f
+UUID: 241b8108_4b8d65db
+Bytes: 117
+that might work, but technically if there is a gap, it is not part of the multidex classes, and should be left there.
+
