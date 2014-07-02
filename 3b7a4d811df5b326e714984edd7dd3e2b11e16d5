@@ -9,3 +9,11 @@ UUID: c4a70589_c7424051
 Bytes: 58
 This also enables ccache with clang. Did you guys test it?
 
+35
+Wed Jul 02 07:27:31 2014 +0000
+Author: Marcin Kosiba <1040328@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c4a70589_c7424051
+UUID: 240701cd_971b8445
+Bytes: 140
+to verify it works with ccache is it sufficient if I compile with ccache, blow away out and re-compile or is there a more scientific way? :)
+
