@@ -1,0 +1,18 @@
+Revision: 8905facfe8d902c856ea611478994ff8c36a52a6
+Patch-set: 4
+File: tools/adbs
+
+137
+Wed Jul 02 23:30:24 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 04cafddd_1a4b2d95
+Bytes: 62
+which of the functions in this file are still actually needed?
+
+183
+Wed Jul 02 23:30:24 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 84498d4f_f8d00932
+Bytes: 148
+do you still have the bug where your version never exits (if you do "adbs", say, rather than "adbs logcat")? can you see from this diff why that is?
+
