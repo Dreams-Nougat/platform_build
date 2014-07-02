@@ -1,0 +1,11 @@
+Revision: c579290d3dd8129b8326bc75ff7815553a608190
+Patch-set: 7
+File: envsetup.sh
+
+1039
+Wed Jul 02 23:33:43 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 04cafddd_750b5243
+Bytes: 87
+why not just use readlink? could you write a program for which this code wouldn't work?
+
