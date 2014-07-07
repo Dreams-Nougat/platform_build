@@ -17,3 +17,13 @@ UUID: e474097d_98d3996f
 Bytes: 401
 The two ideas I'm thinking are either to return some value from the ProcessLine function to say that the line was not a recognized bit of output (like maybe return true when it finds a line it recognizes and false otherwise, and then print "line" on false), or to have ProcessLine print unrecognized lines.  The former seems preferable since the latter could add a lot of output where it isn't wanted.
 
+Base-for-patch-set: 6
+File: tools/adbs
+
+218
+Mon Jul 07 22:03:26 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e474097d_4f34d115
+Bytes: 23
+what was this line for?
+
