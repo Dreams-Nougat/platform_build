@@ -17,3 +17,13 @@ UUID: 196c2814_df02b796
 Bytes: 3
 Yes
 
+5
+Mon Jul 14 21:00:42 2014 +0000
+Author: Bernhard Rosenkränzer <1010121@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 196c2814_df02b796
+UUID: b9495ca6_fb050fa1
+Bytes: 217
+This is a shell script and not a Makefile, so what the make manual says doesn't really matter.
+
+realpath does exist in coreutils as well and generally returns the same thing as readlink -f, so both variants will work.
+
