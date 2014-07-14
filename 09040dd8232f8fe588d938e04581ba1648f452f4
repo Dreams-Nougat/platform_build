@@ -27,3 +27,11 @@ This is a shell script and not a Makefile, so what the make manual says doesn't 
 
 realpath does exist in coreutils as well and generally returns the same thing as readlink -f, so both variants will work.
 
+5
+Mon Jul 14 21:19:04 2014 +0000
+Author: Ian Rogers <1010118@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b9495ca6_fb050fa1
+UUID: 196c2814_eab36f7f
+Bytes: 76
+You are right :-) Ying what do you prefer in the light of the clarification?
+
