@@ -9,6 +9,14 @@ UUID: 39bc8c31_15b494b9
 Bytes: 24
 Upper-case is preferred.
 
+22
+Tue Jul 22 19:35:28 2014 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 39bc8c31_15b494b9
+UUID: 59b7804c_d940871d
+Bytes: 4
+Done
+
 File: core/install_jni_libs.mk
 
 28
@@ -17,6 +25,14 @@ Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 59b7804c_5603c49b
 Bytes: 51
 You don't need this, or other changes in this file.
+
+28
+Tue Jul 22 19:35:28 2014 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 59b7804c_5603c49b
+UUID: 39bc8c31_d840811d
+Bytes: 4
+Done
 
 File: core/package_internal.mk
 
@@ -27,6 +43,14 @@ UUID: 59b7804c_16093cbe
 Bytes: 35
 Use the macro defined in config.mk?
 
+78
+Tue Jul 22 19:35:28 2014 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 59b7804c_16093cbe
+UUID: 39bc8c31_785075ea
+Bytes: 4
+Done
+
 317
 Tue Jul 22 18:40:45 2014 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -34,10 +58,26 @@ UUID: 79b2845d_3770c017
 Bytes: 174
 Use just the LOCAL_ variable to decide the value of jni_zip_options. Or perhaps we should use LOCAL_JNI_LIBS_ZIP_OPTIONS? so you can pass it directly to the zip command line.
 
+317
+Tue Jul 22 19:35:28 2014 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 79b2845d_3770c017
+UUID: 79b2845d_da2cf91d
+Bytes: 4
+Done
+
 361
 Tue Jul 22 18:40:45 2014 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 79b2845d_97efec61
 Bytes: 76
 Also I hope we can extend LOCAL_PACKAGE_ALIGNMENT to LOCAL_ZIPALIGN_OPTIONS.
+
+361
+Tue Jul 22 19:35:28 2014 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 79b2845d_97efec61
+UUID: 39bc8c31_58881110
+Bytes: 71
+zipalign does not have many options, package alignment is the only one.
 
