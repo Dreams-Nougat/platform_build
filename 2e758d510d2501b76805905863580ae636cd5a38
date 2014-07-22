@@ -9,10 +9,26 @@ UUID: 39bc8c31_3e15355c
 Bytes: 120
 We don't need it as a parameter. Just use $(PRIVATE_JNI_SHARED_LIBRARIES_ZIP_OPTIONS), as other $(PRIVE_*)s in the rule.
 
+1742
+Tue Jul 22 21:06:08 2014 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 39bc8c31_3e15355c
+UUID: 79db64ad_691f057c
+Bytes: 4
+Done
+
 1787
 Tue Jul 22 20:54:55 2014 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 79b2845d_c5753add
 Bytes: 86
 Same here - you can reference directly the $(PRIVATE_*) variables in the build recipe.
+
+1787
+Tue Jul 22 21:06:08 2014 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 79b2845d_c5753add
+UUID: 79db64ad_491cc185
+Bytes: 4
+Done
 
