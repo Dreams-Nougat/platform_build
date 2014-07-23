@@ -9,6 +9,14 @@ UUID: 79b2845d_b3fe7bce
 Bytes: 93
 wait... aren't these last two lines equivalent to just "-mno-odd-spreg"? what did you intend?
 
+16
+Wed Jul 23 02:51:22 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 79b2845d_b3fe7bce
+UUID: 79b2845d_d3205fbc
+Bytes: 63
+oh, these are flags to filter out. that makes a lot more sense!
+
 File: core/combo/TARGET_linux-mips.mk
 
 99
