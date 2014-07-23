@@ -1,0 +1,40 @@
+Revision: bc07dba96a99a2c049d099eb3eccb71a0bbc8552
+Patch-set: 2
+File: core/clang/mips.mk
+
+16
+Wed Jul 23 02:50:17 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 79b2845d_b3fe7bce
+Bytes: 93
+wait... aren't these last two lines equivalent to just "-mno-odd-spreg"? what did you intend?
+
+File: core/combo/TARGET_linux-mips.mk
+
+99
+Wed Jul 23 02:50:17 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 39bc8c31_31aa8307
+Bytes: 39
+dalvik? ain't nobody got time for that.
+
+File: core/combo/TARGET_linux-mips64.mk
+
+102
+Wed Jul 23 02:50:17 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 79b2845d_f3f803e4
+Bytes: 37
+dalvik64? that isn't even a thing :-)
+
+File: envsetup.sh
+
+139
+Wed Jul 23 02:50:17 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 79b2845d_9308974a
+Bytes: 41
+or just merge them as
+
+  mips|mips64) ...
+
