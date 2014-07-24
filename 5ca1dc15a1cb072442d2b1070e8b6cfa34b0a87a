@@ -1,0 +1,11 @@
+Revision: 5ca1dc15a1cb072442d2b1070e8b6cfa34b0a87a
+Patch-set: 1
+File: core/binary.mk
+
+136
+Thu Jul 24 22:20:03 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b91cfc52_03b9ee04
+Bytes: 42
+there must be a space between ifneq and (.
+
