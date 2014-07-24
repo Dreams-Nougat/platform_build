@@ -9,10 +9,29 @@ UUID: 193d089f_f5fac752
 Bytes: 123
 i can't see anywhere where this is set to false. should we just adjust the single reference in bionic and then remove this?
 
+4
+Thu Jul 24 18:20:58 2014 +0000
+Author: Duane Sand <1010669@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 193d089f_f5fac752
+UUID: 595300fd_b693f0da
+Bytes: 64
+agreed.
+see https://android-review.googlesource.com/#/c/102482/2
+
 5
 Thu Jul 24 03:53:45 2014 +0000
 Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: d9461042_96050931
 Bytes: 78
 seems like ARCH_HAVE_ALIGNED_DOUBLES was only used in dalvik, so this is dead.
+
+5
+Thu Jul 24 18:20:58 2014 +0000
+Author: Duane Sand <1010669@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d9461042_96050931
+UUID: 794e0458_7a888d10
+Bytes: 95
+Agreed.
+
+Also, rev 6 of Mips arch supports misaligned mem operands with regular load/store ops.
 
