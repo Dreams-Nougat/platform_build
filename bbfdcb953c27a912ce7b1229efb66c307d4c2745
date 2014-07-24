@@ -1,0 +1,18 @@
+Revision: bbfdcb953c27a912ce7b1229efb66c307d4c2745
+Patch-set: 1
+File: core/combo/arch/mips/mips32r6.mk
+
+4
+Thu Jul 24 03:53:45 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 193d089f_f5fac752
+Bytes: 123
+i can't see anywhere where this is set to false. should we just adjust the single reference in bionic and then remove this?
+
+5
+Thu Jul 24 03:53:45 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d9461042_96050931
+Bytes: 78
+seems like ARCH_HAVE_ALIGNED_DOUBLES was only used in dalvik, so this is dead.
+
