@@ -18,6 +18,14 @@ Bytes: 64
 agreed.
 see https://android-review.googlesource.com/#/c/102482/2
 
+4
+Thu Jul 24 18:22:37 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 595300fd_b693f0da
+UUID: 9949f84f_c66282e1
+Bytes: 15
+thanks! merged.
+
 5
 Thu Jul 24 03:53:45 2014 +0000
 Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -34,4 +42,12 @@ Bytes: 95
 Agreed.
 
 Also, rev 6 of Mips arch supports misaligned mem operands with regular load/store ops.
+
+5
+Thu Jul 24 18:22:37 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 794e0458_7a888d10
+UUID: f922f488_e8cd8b6c
+Bytes: 62
+excellent... that will fix a lot of mips portability problems.
 
