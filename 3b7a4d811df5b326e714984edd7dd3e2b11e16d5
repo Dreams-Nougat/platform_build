@@ -17,3 +17,12 @@ UUID: 240701cd_971b8445
 Bytes: 140
 to verify it works with ccache is it sufficient if I compile with ccache, blow away out and re-compile or is there a more scientific way? :)
 
+35
+Fri Jul 25 23:21:27 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 240701cd_971b8445
+UUID: 36f65b4a_e5b772d7
+Bytes: 85
+I think that's good enough if ccache doesn't complain.
+(Sorry, I missed this review.)
+
