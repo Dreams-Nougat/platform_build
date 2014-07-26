@@ -26,3 +26,11 @@ Bytes: 85
 I think that's good enough if ccache doesn't complain.
 (Sorry, I missed this review.)
 
+35
+Sat Jul 26 00:43:34 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 36f65b4a_e5b772d7
+UUID: 9949f84f_9c2feabb
+Bytes: 148
+I just did a couple of builds and it didn't show any problem. Actually it's a big win as we are moving to clang for host build by default in master.
+
