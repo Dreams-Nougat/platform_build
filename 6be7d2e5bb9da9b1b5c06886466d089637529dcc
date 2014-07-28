@@ -1,0 +1,13 @@
+Revision: 6be7d2e5bb9da9b1b5c06886466d089637529dcc
+Base-for-patch-set: 1
+File: core/combo/HOST_darwin-x86.mk
+
+37:0-37:82
+Mon Jul 28 22:49:10 2014 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 36f65b4a_72c2f9ce
+Bytes: 315
+my thought is that we'd make this an $(error...) if empty, printing the name of the variable that is unset. otherwise, we just default to -gcc and -g++ which might not lead to an error, since it could just be an invocation starting with - which to make just means skip error, right?
+
+(and similar comment elsewhere)
+
