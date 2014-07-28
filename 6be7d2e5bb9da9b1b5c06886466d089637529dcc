@@ -11,3 +11,11 @@ my thought is that we'd make this an $(error...) if empty, printing the name of 
 
 (and similar comment elsewhere)
 
+37
+Mon Jul 28 22:58:42 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 36f65b4a_72c2f9ce
+UUID: f974b47c_06cf1a3f
+Bytes: 151
+I've thought about that, but we can't do that: Many unbundled branches build only Java code and they don't need host toolchains in their repo manifest.
+
