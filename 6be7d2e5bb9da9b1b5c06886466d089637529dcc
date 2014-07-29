@@ -19,3 +19,13 @@ UUID: f974b47c_06cf1a3f
 Bytes: 151
 I've thought about that, but we can't do that: Many unbundled branches build only Java code and they don't need host toolchains in their repo manifest.
 
+37
+Tue Jul 29 01:00:44 2014 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f974b47c_06cf1a3f
+UUID: 36f65b4a_1494b87d
+Bytes: 179
+ah, I see. well, in that case, maybe assign a clear error value if they try to use it? such as
+
+$(combo_2nd_arch_prefix)HOST_CC := error-$(combo_2nd_arch_prefix)HOST_CC-is-not-set
+
