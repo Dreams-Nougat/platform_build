@@ -29,3 +29,14 @@ ah, I see. well, in that case, maybe assign a clear error value if they try to u
 
 $(combo_2nd_arch_prefix)HOST_CC := error-$(combo_2nd_arch_prefix)HOST_CC-is-not-set
 
+37
+Tue Jul 29 17:07:16 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 36f65b4a_1494b87d
+UUID: f922f488_b3469be0
+Bytes: 234
+Hmmm, that would give a weird error message like:
+bash: error-HOST_CC-is-not-set : No such file or directory.
+I'd rather like it to be:
+bash: prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8/bin/gcc : No such file or directory.
+
