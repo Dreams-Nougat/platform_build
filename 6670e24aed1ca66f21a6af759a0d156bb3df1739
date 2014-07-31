@@ -9,3 +9,13 @@ UUID: 16295785_310b6afa
 Bytes: 179
 I see you kept this in when submitting. Unfortunately, I have a feeling that that is going to break all of your code that is compiled with Clang (RenderScript, bcc, libpng, etc.).
 
+15
+Thu Jul 31 22:10:25 2014 +0000
+Author: Duane Sand <1010669@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 16295785_310b6afa
+UUID: f6204393_fe10106d
+Bytes: 71
+Agreed.
+
+Handled by https://android-review.googlesource.com/#/c/102872/
+
