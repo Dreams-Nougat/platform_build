@@ -1,0 +1,11 @@
+Revision: 6670e24aed1ca66f21a6af759a0d156bb3df1739
+Patch-set: 4
+File: core/clang/mips.mk
+
+15
+Thu Jul 31 00:59:41 2014 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 16295785_310b6afa
+Bytes: 179
+I see you kept this in when submitting. Unfortunately, I have a feeling that that is going to break all of your code that is compiled with Clang (RenderScript, bcc, libpng, etc.).
+
