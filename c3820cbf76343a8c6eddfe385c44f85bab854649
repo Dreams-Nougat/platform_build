@@ -9,6 +9,14 @@ UUID: d64c1fb5_cb7201b1
 Bytes: 193
 The variable name is misleading: actually you dex-preopt only the libraries in $(DEXPREOPT_BOOT_JARS_MODULES), not other Java libraries. Change it to someting like WITH_DEXPREOPT_BOOT_IMG_ONLY?
 
+5
+Tue Aug 05 19:51:17 2014 +0000
+Author: Alex Light <1047769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d64c1fb5_cb7201b1
+UUID: 76345307_15e6c4f9
+Bytes: 4
+Done
+
 14:0-14:30
 Tue Aug 05 08:26:51 2014 +0000
 Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -36,6 +44,14 @@ endif
 endif
 
 Then you don't need to change other lines in this file.
+
+45
+Tue Aug 05 19:51:17 2014 +0000
+Author: Alex Light <1047769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 16431782_8d6f6d78
+UUID: f63f63e6_e360c65d
+Bytes: 37
+Wow thanks. That's so much better. :)
 
 File: target/board/generic_x86/BoardConfig.mk
 
