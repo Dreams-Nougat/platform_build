@@ -1,0 +1,29 @@
+Revision: c3820cbf76343a8c6eddfe385c44f85bab854649
+Patch-set: 1
+File: core/dex_preopt_odex_install.mk
+
+14:0-14:30
+Tue Aug 05 08:26:51 2014 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 56390f00_a0e07a9e
+Bytes: 83
+I was more expecting WITH_DEXPREOPT_APPS to be used here without the other changes?
+
+File: target/board/generic_x86/BoardConfig.mk
+
+28:0-28:27
+Tue Aug 05 08:26:51 2014 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 56390f00_60ff9242
+Bytes: 66
+if we default this based on WITH_DEXOPT, we don't need this right?
+
+File: target/board/generic_x86_64/BoardConfig.mk
+
+34:0-34:27
+Tue Aug 05 08:26:51 2014 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f63f63e6_7da1f793
+Bytes: 66
+if we default this based on WITH_DEXOPT, we don't need this right?
+
