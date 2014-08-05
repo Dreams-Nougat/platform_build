@@ -1,0 +1,12 @@
+Revision: ed7079193d66328645aebd8aef8748b2ba88884f
+Patch-set: 2
+File: target/board/generic_x86/BoardConfig.mk
+
+28
+Tue Aug 05 21:11:42 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 16431782_384ad98d
+Bytes: 83
+Currently the default is false.
+We need this only if we plan to default it to true.
+
