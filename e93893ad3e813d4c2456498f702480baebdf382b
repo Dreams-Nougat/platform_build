@@ -1,0 +1,11 @@
+Revision: e93893ad3e813d4c2456498f702480baebdf382b
+Patch-set: 1
+File: core/binary.mk
+
+61
+Wed Aug 13 19:14:43 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b64deb11_dda29e50
+Bytes: 110
+Actually space is preferred over tab, for according to makefiile manual tab should be used on in build recipe.
+
