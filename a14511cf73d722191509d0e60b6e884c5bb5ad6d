@@ -19,3 +19,11 @@ UUID: 3344ad56_a4ccaea4
 Bytes: 93
 I don't think the generic devices can reference files inside particular vendor's device tree.
 
+29
+Wed Aug 20 21:16:37 2014 +0000
+Author: Bo Hu <1046320@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d33271f0_07d38596
+Bytes: 92
+Hi David,
+   Where can I download the /device/linaro/ranchu/* so that I can try building it?
+
