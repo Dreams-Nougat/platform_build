@@ -19,3 +19,11 @@ Why do we need this?
 I believe that flag is only for RS team debugging.
 Also this will break unbundled build.
 
+33
+Thu Aug 21 16:38:43 2014 +0000
+Author: Tim Murray <1017430@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 13aec965_86b8ca5d
+UUID: 13aec965_e64f3ea3
+Bytes: 199
+I don't think you want this; FORCE_BUILD_LLVM_COMPONENTS is only used to rebuild LLVM and put it in out, but I think we're always using clang prebuilts for compilation rather than any clang we build.
+
