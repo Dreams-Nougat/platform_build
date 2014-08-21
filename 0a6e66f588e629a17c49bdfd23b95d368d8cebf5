@@ -1,0 +1,21 @@
+Revision: 0a6e66f588e629a17c49bdfd23b95d368d8cebf5
+Patch-set: 3
+File: target/board/generic_arm64/BoardConfig.mk
+
+31
+Thu Aug 21 16:29:06 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d3a7d188_a4038274
+Bytes: 143
+You don't need to add them to board config.
+To enable those two, include build/target/product/core_64_bit.mk, which aosp_arm64.mk already does.
+
+33
+Thu Aug 21 16:29:06 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 13aec965_86b8ca5d
+Bytes: 109
+Why do we need this?
+I believe that flag is only for RS team debugging.
+Also this will break unbundled build.
+
