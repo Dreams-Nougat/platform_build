@@ -1,0 +1,11 @@
+Revision: 6fca5eb72b47482e7c7e89fb91fa14175dde3fa9
+Patch-set: 3
+File: target/product/sdk_arm64.mk
+
+26
+Thu Aug 21 16:31:41 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 33b90dab_a75f0aa0
+Bytes: 73
+Now runtime_libart_default is the default and you don't need to set this.
+
