@@ -26,3 +26,11 @@ Bytes: 270
 I see CLANG_CONFIG_UNKNOWN_CFLAGS defined but I cannot find its use. Maybe I just missed something?
 I am taking a short cut here to filter out all gcc-only flags for cflags, cppflags, ldflags, asflags. Please remind me if there are other better places to change. Thanks.
 
+119
+Mon Aug 25 22:01:57 2014 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f389353b_93168465
+UUID: f389353b_966f52c9
+Bytes: 21
+Done, in Patch Set 3.
+
