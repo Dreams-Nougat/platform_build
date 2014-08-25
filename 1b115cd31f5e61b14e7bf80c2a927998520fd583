@@ -9,3 +9,11 @@ UUID: f389353b_7373d8f3
 Bytes: 213
 You should add them to build/core/clang/config.mk, or arch-specific clang config makefiles. Then they will be covered by function call of $(LOCAL_2ND_ARCH_VAR_PREFIX)convert-to-$(my_host)clang-flags) in this file.
 
+119
+Mon Aug 25 23:58:17 2014 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f389353b_7373d8f3
+UUID: f389353b_bc36ed17
+Bytes: 200
+Got it. I have undone this change and added some of the GCC only flags into arm.mk file first. Please review patch set 4. I will add more flags into each target .mk file later, maybe in follow up CLs.
+
