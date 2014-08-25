@@ -9,3 +9,11 @@ UUID: f389353b_93168465
 Bytes: 17
 spaces, not tabs.
 
+119
+Mon Aug 25 21:11:08 2014 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f389353b_93168465
+UUID: 9399d985_27a4a8a7
+Bytes: 66
+Don't we already have something like this in core/clang/config.mk?
+
