@@ -17,3 +17,12 @@ UUID: 9399d985_27a4a8a7
 Bytes: 66
 Don't we already have something like this in core/clang/config.mk?
 
+119
+Mon Aug 25 21:32:25 2014 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 9399d985_27a4a8a7
+UUID: 739e256e_7a0f2d97
+Bytes: 270
+I see CLANG_CONFIG_UNKNOWN_CFLAGS defined but I cannot find its use. Maybe I just missed something?
+I am taking a short cut here to filter out all gcc-only flags for cflags, cppflags, ldflags, asflags. Please remind me if there are other better places to change. Thanks.
+
