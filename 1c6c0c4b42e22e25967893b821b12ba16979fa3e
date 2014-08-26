@@ -1,0 +1,11 @@
+Revision: 1c6c0c4b42e22e25967893b821b12ba16979fa3e
+Patch-set: 1
+File: core/clang/arm64.mk
+
+20
+Tue Aug 26 17:42:45 2014 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f3d0553d_b89d955e
+Bytes: 37
+Pretty sure clang supports this flag.
+
