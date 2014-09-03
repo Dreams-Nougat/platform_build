@@ -1,0 +1,11 @@
+Revision: 9674f4c02e8cd843fb0cdd4cb9ea66f9aae505a7
+Patch-set: 3
+File: target/board/generic/sepolicy/property_contexts
+
+2
+Wed Sep 03 18:03:00 2014 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f04e8b81_48463f3e
+Bytes: 140
+If we're going to create a dalvik property, I would prefer this be in external/sepolicy. Dalvik properties are not specific to the emulator.
+
