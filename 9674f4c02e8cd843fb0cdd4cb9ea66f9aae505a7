@@ -9,3 +9,11 @@ UUID: f04e8b81_48463f3e
 Bytes: 140
 If we're going to create a dalvik property, I would prefer this be in external/sepolicy. Dalvik properties are not specific to the emulator.
 
+2
+Wed Sep 03 18:23:46 2014 +0000
+Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f04e8b81_48463f3e
+UUID: 10979f03_9ee7bdf7
+Bytes: 506
+Agreed, except that on the non-emulator these properties are never set in this way.  qemu-props seems to read out a list of boot properties from the emulator and set anything in the list, so potentially any property could end up being set here (e.g. using the -prop option to the emulator).  I originally was just going to allow setting anything in property_type (as with init, which previously qemu-props ran in), but this is now prohibited by neverallow in external/sepolicy for anything other than init.
+
