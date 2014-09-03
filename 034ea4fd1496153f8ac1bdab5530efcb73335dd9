@@ -1,0 +1,11 @@
+Revision: 034ea4fd1496153f8ac1bdab5530efcb73335dd9
+Patch-set: 3
+File: core/host_executable.mk
+
+14
+Wed Sep 03 22:37:23 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 50583741_42229694
+Bytes: 102
+You need to move it up here, before the first inclusion of $(BUILD_SYSTEM)/host_executable_internal.mk
+
