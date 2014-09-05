@@ -1,0 +1,11 @@
+Revision: 6a49e4a666b58f07567cd78b1ad912faf92c08d4
+Patch-set: 1
+File: core/binary.mk
+
+933
+Fri Sep 05 00:22:34 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 10979f03_93d56e58
+Bytes: 71
+You need to reset the new LOCAL_ variables in build/core/clear_vars.mk.
+
