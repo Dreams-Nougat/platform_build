@@ -1,0 +1,11 @@
+Revision: 7431a4a679d505f1c765501d8d8fd29ce5dbbcd5
+Patch-set: 2
+File: core/clear_vars.mk
+
+57
+Fri Sep 05 00:48:53 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 10979f03_f3871254
+Bytes: 65
+I think you added LOCAL_CLANG_LDFLAGS, not LOCAL_CLANG_LDLIBS :-)
+
