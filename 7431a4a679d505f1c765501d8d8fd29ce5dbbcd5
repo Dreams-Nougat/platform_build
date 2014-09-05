@@ -9,3 +9,11 @@ UUID: 10979f03_f3871254
 Bytes: 65
 I think you added LOCAL_CLANG_LDFLAGS, not LOCAL_CLANG_LDLIBS :-)
 
+57
+Fri Sep 05 01:44:43 2014 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 10979f03_f3871254
+UUID: 10807fc3_c4623ce4
+Bytes: 60
+Thanks for the catch. Now it should be fixed in patch set 3.
+
