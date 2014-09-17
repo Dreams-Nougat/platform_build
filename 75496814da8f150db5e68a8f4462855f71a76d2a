@@ -40,6 +40,15 @@ UUID: f0fe8bbb_3492be92
 Bytes: 110
 A static libc++ would be an option. iirc some of those tools are C only, and thus wouldn't need libc++ at all.
 
+196
+Wed Sep 17 18:47:46 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f0fe8bbb_3492be92
+UUID: 70137bdc_4fda41fb
+Bytes: 143
+Hmm. So we'll explicitly set "LOCAL_CXX_STL := none" in those modules?
+Btw, "LOCAL_CXX_STL := none" is more expressive than "LOCAL_CXX_STL :=".
+
 201
 Wed Sep 17 18:25:04 2014 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
