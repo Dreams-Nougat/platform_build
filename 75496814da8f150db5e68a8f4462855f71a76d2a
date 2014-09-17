@@ -49,6 +49,18 @@ Bytes: 143
 Hmm. So we'll explicitly set "LOCAL_CXX_STL := none" in those modules?
 Btw, "LOCAL_CXX_STL := none" is more expressive than "LOCAL_CXX_STL :=".
 
+196
+Wed Sep 17 18:49:52 2014 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 70137bdc_4fda41fb
+UUID: f0fe8bbb_144c6253
+Bytes: 303
+Correct. I think you're right though, we should make it possible to link a static libc++. I'll upload another revision for this when I get my tree into a more sane state.
+
+> Btw, "LOCAL_CXX_STL := none" is more expressive than "LOCAL_CXX_STL :=".
+
+Fine by me. I'll fix that in the next revision as well.
+
 201
 Wed Sep 17 18:25:04 2014 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
