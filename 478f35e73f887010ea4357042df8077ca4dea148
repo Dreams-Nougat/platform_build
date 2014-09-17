@@ -1,0 +1,11 @@
+Revision: 478f35e73f887010ea4357042df8077ca4dea148
+Patch-set: 1
+File: core/clang/config.mk
+
+10:66-10:69
+Wed Sep 17 17:31:22 2014 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d0e2671a_b50a2285
+Bytes: 49
+This part of the path makes this not very robust.
+
