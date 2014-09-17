@@ -10,6 +10,20 @@ Bytes: 567
 If a build is with TARGET_BUILD_APPS, but not LOCAL_SDK_VERSION, that means we are doing unbundled build in the full platform source tree (with bionic, such as the "apps" target in master on the build page), so libc++ should be available as well.
 Regarding unbundled branches, are we going to add libc++ as one of the NDK stl variant? If not, will libc++ be built against the NDK (with LOCAL_SDK_VERSION in external/libcxx/Android.mk )? If not, unbundled branches won't be able to use libc++, because it will depend on bionic, which can't be used in unbundled branch.
 
+180
+Wed Sep 17 18:40:12 2014 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 10ab1f9f_b2aec86b
+UUID: f0fe8bbb_94305209
+Bytes: 795
+> If a build is with TARGET_BUILD_APPS, but not LOCAL_SDK_VERSION, that means we are doing unbundled build in the full platform source tree (with bionic, such as the "apps" target in master on the build page), so libc++ should be available as well.
+
+Thanks for clarifying. I know close to nothing about how the unbundled branches work.
+
+> Regarding unbundled branches, are we going to add libc++ as one of the NDK stl variant? If not, will libc++ be built against the NDK (with LOCAL_SDK_VERSION in external/libcxx/Android.mk )? If not, unbundled branches won't be able to use libc++, because it will depend on bionic, which can't be used in unbundled branch.
+
+libc++ already is an NDK STL variant, though strictly speaking it's a different libc++. The NDK folks maintain a separate source tree.
+
 196
 Wed Sep 17 18:25:04 2014 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -18,10 +32,26 @@ Bytes: 339
 Note that for most of the common host tools, such as aapt, fastboot, adb etc, we don't want them to depend on any additional shared library, because that means we'll need to distribute the shared library together with the executables and deploy them with the correct directory structure.
 Maybe in that case we should use the static libc++?
 
+196
+Wed Sep 17 18:40:12 2014 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 50a117b9_f5cd5a47
+UUID: f0fe8bbb_3492be92
+Bytes: 110
+A static libc++ would be an option. iirc some of those tools are C only, and thus wouldn't need libc++ at all.
+
 201
 Wed Sep 17 18:25:04 2014 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 70137bdc_6f6bc56d
 Bytes: 49
 We don't automatically add -lc or -lm previously.
+
+201
+Wed Sep 17 18:40:12 2014 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 70137bdc_6f6bc56d
+UUID: f0fe8bbb_395cf75a
+Bytes: 214
+But they were implicitly added by the compile. I'm explicitly adding them here because I need to counteract the -nodefaultlibs ld flag. Still need to use -nodefaultlibs to prevent g++ from linking libstdc++ though.
 
