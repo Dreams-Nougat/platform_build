@@ -9,10 +9,28 @@ UUID: 501677dd_d8ae2db8
 Bytes: 56
 I think we can use just empty string as the default now.
 
+172
+Thu Sep 18 00:16:49 2014 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 501677dd_d8ae2db8
+UUID: 3042e3dc_05cbd68c
+Bytes: 312
+That's a lot less clear imo. If I were to write `LOCAL_CXX_STL :=` in an Android.mk, I would expect to not get an STL (as it is now, it will puke out an error).
+
+I think it's reasonable to assume that someone might try that, given that it's very similar to the old behavior of `LOCAL_SYSTEM_SHARED_LIBRARIES :=`.
+
 190
 Thu Sep 18 00:12:42 2014 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 501677dd_58a3fdcd
 Bytes: 150
 We don't need LOCAL_STATIC_CXX_STL. Just use a new variant libc++_static, just like we have stlport_static and stlport_shared in the NDK stl variants.
+
+190
+Thu Sep 18 00:16:49 2014 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 501677dd_58a3fdcd
+UUID: 3042e3dc_6588a264
+Bytes: 72
+Okay, had thought about doing it this way as well. I'll make the change.
 
