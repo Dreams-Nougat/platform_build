@@ -1,0 +1,18 @@
+Revision: 276fe9ad7f2385b0c6f2977dcc01874c3edc626a
+Patch-set: 3
+File: core/binary.mk
+
+172
+Thu Sep 18 00:12:42 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 501677dd_d8ae2db8
+Bytes: 56
+I think we can use just empty string as the default now.
+
+190
+Thu Sep 18 00:12:42 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 501677dd_58a3fdcd
+Bytes: 150
+We don't need LOCAL_STATIC_CXX_STL. Just use a new variant libc++_static, just like we have stlport_static and stlport_shared in the NDK stl variants.
+
