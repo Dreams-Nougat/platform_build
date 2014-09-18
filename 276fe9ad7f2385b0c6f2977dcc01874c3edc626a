@@ -19,6 +19,14 @@ That's a lot less clear imo. If I were to write `LOCAL_CXX_STL :=` in an Android
 
 I think it's reasonable to assume that someone might try that, given that it's very similar to the old behavior of `LOCAL_SYSTEM_SHARED_LIBRARIES :=`.
 
+172
+Thu Sep 18 00:21:37 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3042e3dc_05cbd68c
+UUID: 301bc308_77a050c0
+Bytes: 32
+OK, I don't have strong opinion.
+
 190
 Thu Sep 18 00:12:42 2014 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
