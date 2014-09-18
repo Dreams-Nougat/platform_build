@@ -9,3 +9,11 @@ UUID: d0e2671a_b50a2285
 Bytes: 49
 This part of the path makes this not very robust.
 
+10
+Thu Sep 18 02:10:30 2014 +0000
+Author: Lai Wei-Chih <1012228@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d0e2671a_b50a2285
+UUID: 10479fed_eda491aa
+Bytes: 76
+3.5 is hard-coded here originally, how do you think add 'LLVM_VERSION=3.5' ?
+
