@@ -17,3 +17,11 @@ UUID: b012530c_d69ce258
 Bytes: 193
 I remember this is a hack to fix bionic-unit-tests-static build, see https://b.corp.google.com/issue?id=13643367#ISSUE_HistoryHeader9 . Not sure if moving to libstdc++.so would break the build.
 
+27
+Tue Sep 23 00:16:56 2014 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b012530c_d69ce258
+UUID: 7021bb30_e55b412e
+Bytes: 120
+Ah, okay. I think we no longer have this issue because libc has that symbol itself now, but I'm still re-verifying this.
+
