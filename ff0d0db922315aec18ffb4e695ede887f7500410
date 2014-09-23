@@ -1,0 +1,11 @@
+Revision: ff0d0db922315aec18ffb4e695ede887f7500410
+Patch-set: 3
+File: core/binary.mk
+
+357
+Tue Sep 23 16:38:43 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d01507f5_6359cc6a
+Bytes: 35
+PRIVATE_NATIVE_COVERAGE isn't used.
+
