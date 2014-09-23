@@ -1,5 +1,22 @@
 Revision: a2f6deb5f1ae5abd46430eabc025a0dbc70a9f65
 Patch-set: 2
+File: core/combo/TARGET_linux-arm.mk
+
+167
+Tue Sep 23 00:45:58 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b012530c_363b9604
+Bytes: 77
+You need the 	$(combo_2nd_arch_prefix) prefix, so it works in multilib build.
+
+216
+Tue Sep 23 00:45:58 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d01507f5_9a928d45
+Bytes: 244
+This won't work in multlib build.
+You need to turn it into a target-specific variable (like the PRIVATE_TARGET_LIBATOMIC). Or can we merge PRIVATE_TARGET_LIBATOMIC, PRIVATE_TARGET_LIBGCOV and PRIVATE_TARGET_LIBGCC to a single PRIVATE_ variable?
+
 File: core/target_test_internal.mk
 
 27
