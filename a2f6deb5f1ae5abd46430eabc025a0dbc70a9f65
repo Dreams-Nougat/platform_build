@@ -9,3 +9,11 @@ UUID: 7021bb30_82a03b1a
 Bytes: 162
 Using a static library makes every test in the tree sensitive to libstdc++ being built with coverage information. Is there any downside to using a shared library?
 
+27
+Tue Sep 23 00:13:37 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7021bb30_82a03b1a
+UUID: b012530c_d69ce258
+Bytes: 193
+I remember this is a hack to fix bionic-unit-tests-static build, see https://b.corp.google.com/issue?id=13643367#ISSUE_HistoryHeader9 . Not sure if moving to libstdc++.so would break the build.
+
