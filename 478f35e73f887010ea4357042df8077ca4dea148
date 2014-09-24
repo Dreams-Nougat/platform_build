@@ -27,3 +27,13 @@ That seems like a better idea. I would also prefer to put back the verbose "preb
 
 Can I ask what is motivating this change right now? We probably will keep the 3.5 numbering for a few months (until 3.6 gets closer, even though 3.5 has shipped).
 
+10
+Wed Sep 24 03:54:40 2014 +0000
+Author: Lai Wei-Chih <1012228@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3042e3dc_2e6d973d
+UUID: 90d62f81_2a821ff6
+Bytes: 335
+I am thinking if we are moving to llvm-3.6 in the future, or we have multiple LLVM toolchains. We might test 3.6 like "make LLVM_PREBUILTS_PATH={where-3.6-bin} LLVM_PREBUILTS_HEADER_PATH={where-3.6-headers}".  
+
+It is convenient if we could just set LLVM_PREBUILTS_PATH in the command line.  Could I know why "../"  is not recommended?
+
