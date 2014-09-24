@@ -1,0 +1,13 @@
+Revision: b87b5082059c5cc310acf1f3c0fa1abaf1246ee9
+Patch-set: 2
+File: core/clang/config.mk
+
+11:51-11:56
+Wed Sep 24 22:04:18 2014 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d071878d_1a169d67
+Bytes: 241
+This really should be hard-coded. I do not want ../ anywhere in the path for this.
+
+I upload patch-set 3 to address this. +1 it if it suits your needs. If it doesn't you are going to have to explain why this needs to be a relative path here.
+
