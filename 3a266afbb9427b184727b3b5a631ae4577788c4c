@@ -1,0 +1,18 @@
+Revision: 3a266afbb9427b184727b3b5a631ae4577788c4c
+Patch-set: 1
+File: core/clang/config.mk
+
+47
+Fri Sep 26 22:31:38 2014 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9032afd1_10ae8c1c
+Bytes: 72
+This is something that the chromium_org Android.mk files should address.
+
+48
+Fri Sep 26 22:31:38 2014 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b0433333_7a4c0555
+Bytes: 37
+We can do better than this, honestly.
+
