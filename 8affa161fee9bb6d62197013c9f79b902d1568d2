@@ -1,0 +1,13 @@
+Revision: 8affa161fee9bb6d62197013c9f79b902d1568d2
+Patch-set: 3
+File: core/clang/config.mk
+
+11
+Fri Sep 26 03:25:14 2014 +0000
+Author: Lai Wei-Chih <1012228@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 90d62f81_70d7e8d1
+Bytes: 183
+Thanks for this patch. 
+
+After https://android-review.googlesource.com/#/c/88875,  do we really LLVM_PREBUILTS_HEADER_PATH variable? clang should be able to locate the headers itself.
+
