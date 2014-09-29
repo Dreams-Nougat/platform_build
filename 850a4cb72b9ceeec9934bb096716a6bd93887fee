@@ -1,0 +1,11 @@
+Revision: 850a4cb72b9ceeec9934bb096716a6bd93887fee
+Patch-set: 1
+File: core/combo/include/arch/linux-x86/AndroidConfig.h
+
+259
+Mon Sep 29 20:03:10 2014 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 50f83838_7de657c4
+Bytes: 180
+How can this ever be true? This define comes from a libc header, but this file is included before anything else is loaded. Didn't we fix a similar issue to this several months ago?
+
