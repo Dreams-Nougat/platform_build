@@ -1,0 +1,16 @@
+Revision: 5ab7b9c42dbf7c6181cfdf051a9dabd363424d11
+Patch-set: 2
+File: core/dex_preopt_libart.mk
+
+21:0-21:35
+Mon Oct 06 18:12:06 2014 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d0342809_3557881d
+Bytes: 174
+maybe add a comment as to the use case such as 
+
+# Default to debug version to help find bugs,
+# but allow it to be disabled for benchmarking.
+
+but is that really the reason?
+
