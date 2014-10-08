@@ -18,3 +18,48 @@ Bytes: 31
 Sorry, I forgot that bit.
 Done.
 
+File: core/dex_preopt_odex_install.mk
+
+15:0-16:37
+Wed Oct 08 16:58:11 2014 +0000
+Author: Ian Rogers <1010118@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 90a8f091_efd60179
+Bytes: 163
+Should this be:
+
+ifneq (,$(DEXPREOPT.$(TARGET_PRODUCT).$(LOCAL_MODULE).CONFIG))
+  LOCAL_DEX_PREOPT := $(DEXPREOPT.$(TARGET_PRODUCT).$(LOCAL_MODULE).CONFIG)
+else ..
+
+File: core/product.mk
+
+294:2-294:25
+Wed Oct 08 16:58:11 2014 +0000
+Author: Ian Rogers <1010118@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b0a334b2_b3346200
+Bytes: 54
+I couldn't parse this, likely user error on my behalf.
+
+File: core/product_config.mk
+
+419:44-419:51
+Wed Oct 08 16:58:11 2014 +0000
+Author: Ian Rogers <1010118@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 90a8f091_efad21f9
+Bytes: 8
+configs.
+
+419:14-419:20
+Wed Oct 08 16:58:11 2014 +0000
+Author: Ian Rogers <1010118@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b0a334b2_136b6ee4
+Bytes: 5
+setup
+
+422:27-422:32
+Wed Oct 08 16:58:11 2014 +0000
+Author: Ian Rogers <1010118@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 90a8f091_cfb05d54
+Bytes: 6
+setups
+
