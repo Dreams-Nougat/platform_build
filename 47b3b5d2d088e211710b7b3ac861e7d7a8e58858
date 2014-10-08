@@ -31,6 +31,14 @@ ifneq (,$(DEXPREOPT.$(TARGET_PRODUCT).$(LOCAL_MODULE).CONFIG))
   LOCAL_DEX_PREOPT := $(DEXPREOPT.$(TARGET_PRODUCT).$(LOCAL_MODULE).CONFIG)
 else ..
 
+16
+Wed Oct 08 17:12:03 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 90a8f091_efd60179
+UUID: f0b4ccdf_295b99d2
+Bytes: 216
+No, as the commit message says $(DEXPREOPT.$(TARGET_PRODUCT).$(LOCAL_MODULE).CONFIG) can be used either to disable LOCAL_DEX_PREOPT or pass dex2oat command line flags, for which we added a new LOCAL_DEX_PREOPT_FLAGS.
+
 File: core/product.mk
 
 294:2-294:25
@@ -39,6 +47,14 @@ Author: Ian Rogers <1010118@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: b0a334b2_b3346200
 Bytes: 54
 I couldn't parse this, likely user error on my behalf.
+
+294
+Wed Oct 08 17:12:03 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b0a334b2_b3346200
+UUID: b007b451_0b850e63
+Bytes: 144
+We want to replace all whitespaces in the config with the following string, so it appears as a single word in PRODUCT_DEX_PREOPT_MODULE_CONFIGS.
 
 File: core/product_config.mk
 
@@ -56,10 +72,34 @@ UUID: b0a334b2_136b6ee4
 Bytes: 5
 setup
 
+419
+Wed Oct 08 17:12:03 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 90a8f091_efad21f9
+UUID: b007b451_ab6b2210
+Bytes: 4
+Done
+
+419
+Wed Oct 08 17:12:03 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b0a334b2_136b6ee4
+UUID: b007b451_4b66f64a
+Bytes: 4
+Done
+
 422:27-422:32
 Wed Oct 08 16:58:11 2014 +0000
 Author: Ian Rogers <1010118@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 90a8f091_cfb05d54
 Bytes: 6
 setups
+
+422
+Wed Oct 08 17:12:03 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 90a8f091_cfb05d54
+UUID: 10bfa0c3_79c8ff7f
+Bytes: 4
+Done
 
