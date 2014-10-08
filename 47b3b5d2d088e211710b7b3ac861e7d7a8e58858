@@ -20,6 +20,13 @@ Done.
 
 File: core/dex_preopt_odex_install.mk
 
+11
+Wed Oct 08 23:31:00 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f0992c84_9b64d7bf
+Bytes: 9
+See here.
+
 15:0-16:37
 Wed Oct 08 16:58:11 2014 +0000
 Author: Ian Rogers <1010118@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -46,6 +53,15 @@ Parent: f0b4ccdf_295b99d2
 UUID: f0992c84_181e2dd2
 Bytes: 285
 I think this is making it confusing as to whose flag has precedent. If a project sets LOCAL_DEX_PREOPT := true then this is overridden by $(DEXPREOPT.$(TARGET_PRODUCT).$(LOCAL_MODULE).CONFIG) being set false but the opposite isn't true. I'm awash in a see of global variables anyway...
+
+16
+Wed Oct 08 23:31:00 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f0992c84_181e2dd2
+UUID: f0992c84_3b768b7c
+Bytes: 215
+No, we run to this point only if LOCAL_DEX_PREOPT is not set by the project. The precedence is:
+project's LOCAL variable > $(DEXPREOPT.$(TARGET_PRODUCT).$(LOCAL_MODULE).CONFIG)  > $(PRODUCT_DEX_PREOPT_DEFAULT_FLAGS)
 
 File: core/product.mk
 
