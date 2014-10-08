@@ -9,3 +9,12 @@ UUID: 50c5985b_d8c03126
 Bytes: 262
 I think if we had PRODUCT_DEX_PREOPT_BOOT_DEFAULT_FLAGS as well, we could use that for WITH_ART_SMALL_MODE so it wouldn't have to be a "#if ART_SMALL_MODE" in the code (assuming we also set some PRODUCT_PROPERTY_OVERRIDES as well. but that can be another change.
 
+22
+Wed Oct 08 16:45:28 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 50c5985b_d8c03126
+UUID: b007b451_8ba29e09
+Bytes: 31
+Sorry, I forgot that bit.
+Done.
+
