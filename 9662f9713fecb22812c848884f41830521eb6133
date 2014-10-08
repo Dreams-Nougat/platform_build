@@ -1,0 +1,18 @@
+Revision: 9662f9713fecb22812c848884f41830521eb6133
+Patch-set: 2
+File: core/binary.mk
+
+262
+Wed Oct 08 23:53:46 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 10116099_defd7745
+Bytes: 23
+This isn't correct now.
+
+263
+Wed Oct 08 23:53:46 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f0820c18_caa6834c
+Bytes: 49
+... explicitly sets LOCAL_NATIVE_COVERAGE := true
+
