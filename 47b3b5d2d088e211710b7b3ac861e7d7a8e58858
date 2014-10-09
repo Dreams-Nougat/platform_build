@@ -63,6 +63,14 @@ Bytes: 215
 No, we run to this point only if LOCAL_DEX_PREOPT is not set by the project. The precedence is:
 project's LOCAL variable > $(DEXPREOPT.$(TARGET_PRODUCT).$(LOCAL_MODULE).CONFIG)  > $(PRODUCT_DEX_PREOPT_DEFAULT_FLAGS)
 
+16
+Thu Oct 09 22:35:24 2014 +0000
+Author: Ian Rogers <1010118@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f0992c84_3b768b7c
+UUID: 10bfa0c3_b254694d
+Bytes: 107
+But why can't $(DEXPREOPT.$(TARGET_PRODUCT).$(LOCAL_MODULE).CONFIG) be other values than false to override?
+
 File: core/product.mk
 
 294:2-294:25
