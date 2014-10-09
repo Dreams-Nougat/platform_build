@@ -71,6 +71,21 @@ UUID: 10bfa0c3_b254694d
 Bytes: 107
 But why can't $(DEXPREOPT.$(TARGET_PRODUCT).$(LOCAL_MODULE).CONFIG) be other values than false to override?
 
+16
+Thu Oct 09 22:48:24 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 10bfa0c3_b254694d
+UUID: 5073d823_eb85052c
+Bytes: 12
+Sure it can.
+
+103
+Thu Oct 09 22:48:24 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9081d019_b0c53e47
+Bytes: 93
+Here is when $(DEXPREOPT.$(TARGET_PRODUCT).$(LOCAL_MODULE).CONFIG) is other value than false.
+
 File: core/product.mk
 
 294:2-294:25
