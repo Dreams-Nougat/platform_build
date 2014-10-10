@@ -94,6 +94,16 @@ UUID: 10bfa0c3_156c27a3
 Bytes: 117
 But in that case the value is flags. What if I set DEX_PREOPT_DEFAULT:=false then try to set specific things to true?
 
+103
+Fri Oct 10 00:40:25 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 10bfa0c3_156c27a3
+UUID: 106de043_66c87080
+Bytes: 566
+Sorry, I don't understand. If DEX_PREOPT_DEFAULT:=false, we don't do dex-preot for the module at all. Why bother to set module specific thing?
+Also I believe we introduced DEX_PREOPT_DEFAULT to accommodate  "nostripping" when we wanted to preserve the classes.dex inside apks to allow dual boot. This flag should be gone now as we have removed dalvik.
+Again, this change allows  you to attach an arbitrary string to a module in a product configuration. It's not meant to finalize how we interpret the string. We can improve that when the requirement becomes clearer.
+
 File: core/product.mk
 
 294:2-294:25
