@@ -86,6 +86,14 @@ UUID: 9081d019_b0c53e47
 Bytes: 93
 Here is when $(DEXPREOPT.$(TARGET_PRODUCT).$(LOCAL_MODULE).CONFIG) is other value than false.
 
+103
+Fri Oct 10 00:23:13 2014 +0000
+Author: Ian Rogers <1010118@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 9081d019_b0c53e47
+UUID: 10bfa0c3_156c27a3
+Bytes: 117
+But in that case the value is flags. What if I set DEX_PREOPT_DEFAULT:=false then try to set specific things to true?
+
 File: core/product.mk
 
 294:2-294:25
