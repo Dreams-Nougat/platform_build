@@ -21,3 +21,11 @@ As such, my way around it is to just use sed to insert a LOCAL_CXX_STL := stlpor
 
 This change preserves the intended behavior. No one wants stlport on the host (if you find someone that thinks otherwise, send them to me and I'll tell them why they're wrong :) ). stlport is only used to get features that somewhat approximate what the host stdlib gives them, so the intent for host modules is really to just use the system's stdlib.
 
+49
+Thu Oct 16 17:50:00 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 70f37c1b_41e3f436
+UUID: d0218832_1c07a30b
+Bytes: 238
+Do you plan to move permanently to libc++ in chromium? I don't think you can modify the makefiles manually. Torne should be able to help add LOCAL_CXX_STL support to the gyp-to-Android.mk generator, based on if it's host or target module.
+
