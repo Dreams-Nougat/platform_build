@@ -29,3 +29,11 @@ UUID: d0218832_1c07a30b
 Bytes: 238
 Do you plan to move permanently to libc++ in chromium? I don't think you can modify the makefiles manually. Torne should be able to help add LOCAL_CXX_STL support to the gyp-to-Android.mk generator, based on if it's host or target module.
 
+49
+Thu Oct 16 17:53:04 2014 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d0218832_1c07a30b
+UUID: 90ee3033_a24c80be
+Bytes: 182
+Based on a previous discussion with torne, it's best to just sidestep that issue for the time being. I don't plan on checking in my sed nightmare, it's just for development purposes.
+
