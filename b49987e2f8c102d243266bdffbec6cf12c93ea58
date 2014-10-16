@@ -1,0 +1,11 @@
+Revision: b49987e2f8c102d243266bdffbec6cf12c93ea58
+Patch-set: 1
+File: core/cxx_stl_setup.mk
+
+49
+Thu Oct 16 17:12:49 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 505bd8e0_942dd236
+Bytes: 47
+$(error) if someone use stlport in host module.
+
