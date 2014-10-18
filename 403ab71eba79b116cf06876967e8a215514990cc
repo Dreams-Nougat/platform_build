@@ -26,3 +26,11 @@ UUID: 708ffcad_5b53bcab
 Bytes: 302
 I think it would be better to do this by letting each arch override some variables used by the function rather than overriding the function itself. It would be _much_ clearer what is different between them if we do it this way (and it fits in with the way most of our other configuration changes work).
 
+13
+Sat Oct 18 00:19:16 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 708ffcad_5b53bcab
+UUID: 908ab09b_590e6353
+Bytes: 117
+Sounds good. (It may be harder to override things like argument order with variable). Thanks for taking care of this!
+
