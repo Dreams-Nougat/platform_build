@@ -18,3 +18,11 @@ UUID: 908ab09b_8e334335
 Bytes: 58
 The general ones are defined in build/core/definitions.mk.
 
+13
+Sat Oct 18 00:13:32 2014 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 703d3c9e_d42794a2
+UUID: 708ffcad_5b53bcab
+Bytes: 302
+I think it would be better to do this by letting each arch override some variables used by the function rather than overriding the function itself. It would be _much_ clearer what is different between them if we do it this way (and it fits in with the way most of our other configuration changes work).
+
