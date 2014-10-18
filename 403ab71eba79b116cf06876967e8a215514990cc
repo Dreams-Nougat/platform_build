@@ -10,3 +10,11 @@ Bytes: 328
 That sounds good, but I think it will be difficult to introduce arch-specific change to those functions.
 Actually the build system supports a general transform-o-to-static-executable-inner (and other similar functions), and it can be overridden by arch-specific functions. (Maybe initially all archs were using the general one).
 
+13
+Sat Oct 18 00:12:56 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 703d3c9e_d42794a2
+UUID: 908ab09b_8e334335
+Bytes: 58
+The general ones are defined in build/core/definitions.mk.
+
