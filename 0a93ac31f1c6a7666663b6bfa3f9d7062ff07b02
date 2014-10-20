@@ -1,0 +1,11 @@
+Revision: 0a93ac31f1c6a7666663b6bfa3f9d7062ff07b02
+Patch-set: 1
+File: core/clang/config.mk
+
+101
+Mon Oct 20 20:49:42 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f0492c4e_a70c98df
+Bytes: 7
+_TARGET
+
