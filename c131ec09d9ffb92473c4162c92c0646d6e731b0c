@@ -1,0 +1,11 @@
+Revision: c131ec09d9ffb92473c4162c92c0646d6e731b0c
+Base-for-patch-set: 2
+File: core/config.mk
+
+421
+Wed Oct 22 09:56:43 2014 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f5359ed2_d2b2e4db
+Bytes: 64
+You've lost the code that sets HOST_JDK_TOOLS_JAR to "" for macs
+
