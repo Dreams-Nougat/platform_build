@@ -13,3 +13,12 @@ might also be worth mentioning why we require prescott.
 
 i assume you tested the emulator and it actually supports the instructions in question?
 
+17
+Wed Oct 22 22:27:04 2014 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 1549527c_d7252c4b
+UUID: d5889ae4_a13cdeb6
+Bytes: 75
+Changed the comment in patch set 2.
+Doing more tests with the emulator now.
+
