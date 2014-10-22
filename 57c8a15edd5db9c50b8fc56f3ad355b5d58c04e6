@@ -1,0 +1,11 @@
+Revision: 57c8a15edd5db9c50b8fc56f3ad355b5d58c04e6
+Patch-set: 1
+File: core/clang/arm.mk
+
+3
+Wed Oct 22 16:48:36 2014 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 55210a94_09e27933
+Bytes: 34
+Is it useful to keep these around?
+
