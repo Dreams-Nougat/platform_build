@@ -17,3 +17,11 @@ UUID: 150232f8_47c74171
 Bytes: 135
 Could be useful to keep the same variables for all targets, although it is empty now for arm. They are still included in TARGET_arm.mk.
 
+3
+Wed Oct 22 17:24:39 2014 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 150232f8_47c74171
+UUID: 150232f8_27b675d2
+Bytes: 5
+sgtm.
+
