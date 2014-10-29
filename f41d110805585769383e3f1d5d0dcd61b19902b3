@@ -1,0 +1,11 @@
+Revision: f41d110805585769383e3f1d5d0dcd61b19902b3
+Patch-set: 1
+File: envsetup.sh
+
+990:13-990:17
+Wed Oct 29 18:00:50 2014 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5594aafe_2e7e65a1
+Bytes: 29
+when this can this be == "" ?
+
