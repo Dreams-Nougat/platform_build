@@ -27,3 +27,13 @@ UUID: f582fe17_3e3a0170
 Bytes: 185
 actually - this is because I was switching targets between x86* and arm*, normally it only includes current toolchain. I will need to add toolchain path detection logic based on cpu.abi
 
+1050
+Fri Oct 31 16:22:53 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f582fe17_3e3a0170
+UUID: 758d2e44_919bde03
+Bytes: 231
+yeah, that makes more sense.
+
+note that we already have that logic in python for the stack tool (with unit tests since it took so many attempts to get right!). might make sense to turn gdbclient into a python script in development?
+
