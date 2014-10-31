@@ -19,3 +19,11 @@ UUID: d587ba27_e3360e27
 Bytes: 172
 the difference is you can lunch for example aosp_x86_64 and have arm-linux...-gdb and aarch64* in PATH, but mips-* are not included (that is if you lunch different target).
 
+1050
+Fri Oct 31 16:01:40 2014 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d587ba27_e3360e27
+UUID: f582fe17_3e3a0170
+Bytes: 185
+actually - this is because I was switching targets between x86* and arm*, normally it only includes current toolchain. I will need to add toolchain path detection logic based on cpu.abi
+
