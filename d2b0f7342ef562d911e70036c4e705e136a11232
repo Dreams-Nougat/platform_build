@@ -1,0 +1,13 @@
+Revision: d2b0f7342ef562d911e70036c4e705e136a11232
+Patch-set: 1
+File: envsetup.sh
+
+1050
+Fri Oct 31 15:35:44 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 75760e14_a92f99f8
+Bytes: 215
+i didn't think any were on the path unless you'd lunched?
+
+anyway, they're called mipsel-linux-android-* and mips64el-linux-android-*. (el for little endian.) but like x86/x86-64 you can use the 64-bit one for both.
+
