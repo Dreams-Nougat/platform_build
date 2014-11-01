@@ -1,0 +1,13 @@
+Revision: 9b8e4b377208db6d405bc84e9af73bd37f75a93c
+Patch-set: 3
+File: envsetup.sh
+
+1065
+Sat Nov 01 00:56:58 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 75ab6e9e_9e2d1d85
+Bytes: 192
+to
+
+is this really a worthwhile TODO? iirc this doesn't take a human-measurable fraction of the gdbserver startup time, right? this is milliseconds and the next step is multiple whole seconds?
+
