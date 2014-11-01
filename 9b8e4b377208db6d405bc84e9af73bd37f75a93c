@@ -11,3 +11,11 @@ to
 
 is this really a worthwhile TODO? iirc this doesn't take a human-measurable fraction of the gdbserver startup time, right? this is milliseconds and the next step is multiple whole seconds?
 
+1065
+Sat Nov 01 01:06:33 2014 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 75ab6e9e_9e2d1d85
+UUID: 15b23212_e1648243
+Bytes: 110
+it should be moved to L1075, in case gdbserver is started - check if adb is listening... and if not start it..
+
