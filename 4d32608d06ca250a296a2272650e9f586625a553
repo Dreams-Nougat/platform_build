@@ -1,0 +1,13 @@
+Revision: 4d32608d06ca250a296a2272650e9f586625a553
+Patch-set: 1
+File: core/binary.mk
+
+181
+Mon Nov 03 19:52:01 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d5c5fa79_8e7e079f
+Bytes: 150
+Why do (only) this in a separate file? 
+If you want to do it in a separate file, I'd like to move all the 
+LOCAL_ADDRESS_SANITIZER stuff to that file.
+
