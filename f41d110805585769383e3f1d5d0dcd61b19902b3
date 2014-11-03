@@ -9,6 +9,14 @@ UUID: 5594aafe_2e7e65a1
 Bytes: 29
 when this can this be == "" ?
 
+990:13-990:17
+Mon Nov 03 04:32:15 2014 +0000
+Author: Zheng Xu <1042649@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5594aafe_2e7e65a1
+UUID: d59c1a86_6736460a
+Bytes: 33
+for example, gdbclient "" "" 1234
+
 997
 Wed Oct 29 18:13:27 2014 +0000
 Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
