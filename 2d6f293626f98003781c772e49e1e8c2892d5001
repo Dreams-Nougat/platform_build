@@ -1,0 +1,11 @@
+Revision: 2d6f293626f98003781c772e49e1e8c2892d5001
+Patch-set: 2
+File: core/cxx_stl_setup.mk
+
+38:28-38:38
+Fri Nov 07 01:44:46 2014 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d54eda55_a00ba4c5
+Bytes: 116
+This conflicts with my other patch, so I'll have to reupload. I just want this here so bionicbb can confirm a build.
+
