@@ -1,0 +1,14 @@
+Revision: 087146322d76807111d784cfd2bac51b0fd6da1a
+Patch-set: 3
+File: core/config_sanitizers.mk
+
+21:8-21:28
+Fri Nov 07 12:29:09 2014 +0000
+Author: Evgenii Stepanov <1005967@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d5697aa3_3cdfdd68
+Bytes: 196
+Please add this for host modules:
+LOCAL_ALLOW_UNDEFINED_SYMBOLS := true
+
+ASan runtime library is statically linked into the main executable. As a result, all ASan libraries have undefined symbols.
+
