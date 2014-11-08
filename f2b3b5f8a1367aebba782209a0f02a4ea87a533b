@@ -1,0 +1,11 @@
+Revision: f2b3b5f8a1367aebba782209a0f02a4ea87a533b
+Patch-set: 1
+File: /COMMIT_MSG
+
+9:34-9:48
+Sat Nov 08 18:09:43 2014 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: ba3f93b4_b0b878e9
+Bytes: 14
+HAVE_BACKTRACE
+
