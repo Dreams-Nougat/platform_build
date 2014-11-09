@@ -9,3 +9,12 @@ UUID: 1a1b3f6c_7ca2cdb9
 Bytes: 116
 This is probably overkill. It can be worked around simply enough, but I thought I'd get another opinion on it first.
 
+File: core/shared_library_internal.mk
+
+68
+Sun Nov 09 00:53:49 2014 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: da152730_0d03a1ad
+Bytes: 4
+tabs
+
