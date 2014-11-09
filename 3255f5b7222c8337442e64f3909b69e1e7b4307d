@@ -1,0 +1,11 @@
+Revision: 3255f5b7222c8337442e64f3909b69e1e7b4307d
+Patch-set: 1
+File: /COMMIT_MSG
+
+13:0-14:46
+Sun Nov 09 00:50:19 2014 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1a1b3f6c_7ca2cdb9
+Bytes: 116
+This is probably overkill. It can be worked around simply enough, but I thought I'd get another opinion on it first.
+
