@@ -1,0 +1,11 @@
+Revision: 3ab436b1e0e6ee92d631f69bf3b5bbed7b2ca5d8
+Patch-set: 2
+File: libs/host/CopyFile.c
+
+74
+Mon Nov 10 22:52:49 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5a4f777e_d42c0a0a
+Bytes: 6
+#elif?
+
