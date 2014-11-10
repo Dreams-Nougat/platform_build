@@ -1,0 +1,15 @@
+Revision: 751aee5bf6e6fed23b4efa045bc6978e55d6ef38
+Patch-set: 1
+File: libs/host/CopyFile.c
+
+71
+Mon Nov 10 18:55:06 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3a4c838a_2730d48a
+Bytes: 132
+danalbert thinks this should be __MINGW32__.
+
+also, prefer "#if defined" (especially when the code two lines later uses it).
+
+#elif?
+
