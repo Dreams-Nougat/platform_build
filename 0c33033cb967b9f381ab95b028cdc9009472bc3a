@@ -11,12 +11,28 @@ For tapas, we should get the device name from the build system:
  DEVICE=$(get_build_var TARGET_DEVICE)
 You can test env variable TARGET_BUILD_APPS to see if it's tapas build, see the function tapas() in this same file.
 
+989
+Thu Nov 13 22:39:37 2014 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 9adacf31_dfdbbb9f
+UUID: da9e076c_f45a563b
+Bytes: 83
+for tapas we copy exe file and linker(64)? from device to appropriate local folder.
+
 1009
 Thu Nov 13 03:18:21 2014 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 9adacf31_7fd62f85
 Bytes: 84
 This isn't correct. For tapas $DEVICE may be generic, generic_x86, generic_mips etc.
+
+1009
+Thu Nov 13 22:39:37 2014 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 9adacf31_7fd62f85
+UUID: da9e076c_54c5e268
+Bytes: 4
+Done
 
 1012:4-1012:8
 Thu Nov 13 00:31:12 2014 +0000
@@ -72,4 +88,12 @@ Parent: 1af89f89_b418a667
 UUID: 1af89f89_54fd027b
 Bytes: 272
 good idea, but sometimes symbol_dir is not set because my ANDROID_SERIAL is pointing to incorrect device (or I did not build symbols), we need somehow to detect if it is tapas user and doesn't care about app_process symbols or it is lunch user who cares (in most cases)...
+
+1012:4-1012:8
+Thu Nov 13 22:39:37 2014 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 1af89f89_54fd027b
+UUID: da9e076c_74cae67b
+Bytes: 4
+Done
 
