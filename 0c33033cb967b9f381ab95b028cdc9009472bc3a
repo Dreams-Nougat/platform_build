@@ -22,3 +22,11 @@ not really - we need access to executable to run gdb and to detect lp64. old one
 
 So for tapas you will need symbols from the build server or adb pull app_process32/64 workaround but with different path..
 
+1012:4-1012:8
+Thu Nov 13 00:58:00 2014 +0000
+Author: Primiano Tucci <1040443@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7af19ba1_572ea6bb
+UUID: 3afba387_f286c039
+Bytes: 165
+I am pretty sure the old one was looking for app_process in the right place (I think it was looking into ANDROID_PRODUCT_OUT rather than hardcoding product/$DEVICE).
+
