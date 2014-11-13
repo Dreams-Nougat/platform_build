@@ -18,6 +18,14 @@ UUID: 7adfdb23_a708a899
 Bytes: 47
 combos_2nd_arch_prefix -> combo_2nd_arch_prefix
 
+147
+Thu Nov 13 19:48:41 2014 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7adfdb23_a708a899
+UUID: 3ac2c357_7d59cbfa
+Bytes: 46
+Hadn't verified these targets yet. Nice catch.
+
 File: core/definitions.mk
 
 1377
@@ -27,4 +35,12 @@ UUID: 5ac5b75b_3e7d8dde
 Bytes: 60
 It should be:
 $($(PRIVATE_2ND_ARCH_VAR_PREFIX)TARGET_LINKER)
+
+1377
+Thu Nov 13 19:48:41 2014 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5ac5b75b_3e7d8dde
+UUID: 3ac2c357_dd701f7a
+Bytes: 56
+That would explain why my volantis won't boot :) Thanks.
 
