@@ -1,0 +1,14 @@
+Revision: 0c33033cb967b9f381ab95b028cdc9009472bc3a
+Patch-set: 1
+File: envsetup.sh
+
+1012:4-1012:8
+Thu Nov 13 00:31:12 2014 +0000
+Author: Primiano Tucci <1040443@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1af89f89_312cc88c
+Bytes: 270
+This error will still be hit on a tapas build. A tapas build doesn't have the target/product/mako (or similar) folder at all, just product/generic.
+
+I think you want the check above to be something like
+if [[ ! -d "${SYMBOLS_DIR}" || ! -d "${TAPAS_SYMBOLS_DIR}" ]]; then
+
