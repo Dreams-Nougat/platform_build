@@ -30,3 +30,11 @@ UUID: 3afba387_f286c039
 Bytes: 165
 I am pretty sure the old one was looking for app_process in the right place (I think it was looking into ANDROID_PRODUCT_OUT rather than hardcoding product/$DEVICE).
 
+1012:4-1012:8
+Thu Nov 13 01:01:36 2014 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3afba387_f286c039
+UUID: 3afba387_f25d2036
+Bytes: 288
+It wasn't tapas do not build app_process, so there is no correct location for it.. on the other hand - if you download symbols for your device/build, it has app_process32/64 at the right place. so you wont need to do cp -r out/target/product/hammerhead/symbols out/target/product/generic/
+
