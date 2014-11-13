@@ -12,3 +12,13 @@ This error will still be hit on a tapas build. A tapas build doesn't have the ta
 I think you want the check above to be something like
 if [[ ! -d "${SYMBOLS_DIR}" || ! -d "${TAPAS_SYMBOLS_DIR}" ]]; then
 
+1012:4-1012:8
+Thu Nov 13 00:42:27 2014 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 1af89f89_312cc88c
+UUID: 7af19ba1_572ea6bb
+Bytes: 219
+not really - we need access to executable to run gdb and to detect lp64. old one needed it too.
+
+So for tapas you will need symbols from the build server or adb pull app_process32/64 workaround but with different path..
+
