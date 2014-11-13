@@ -49,3 +49,11 @@ At this point the best solution, IMHO, seems to be:
 if symbols_dir is not set, adb pull the exe from the device.
 In most of the cases folks want to debug Java apps, nor native binaries, which means that the exe will be app_process32/64 and we don't care about the debug symbols for that, we just need to make gdb happy.
 
+1012:4-1012:8
+Thu Nov 13 01:14:43 2014 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 1af89f89_b418a667
+UUID: 1af89f89_54fd027b
+Bytes: 272
+good idea, but sometimes symbol_dir is not set because my ANDROID_SERIAL is pointing to incorrect device (or I did not build symbols), we need somehow to detect if it is tapas user and doesn't care about app_process symbols or it is lunch user who cares (in most cases)...
+
