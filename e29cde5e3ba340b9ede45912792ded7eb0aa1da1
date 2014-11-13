@@ -1,0 +1,30 @@
+Revision: e29cde5e3ba340b9ede45912792ded7eb0aa1da1
+Patch-set: 1
+File: core/combo/TARGET_linux-mips.mk
+
+165
+Thu Nov 13 19:33:46 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5ac5b75b_9e9ea1f2
+Bytes: 47
+combos_2nd_arch_prefix -> combo_2nd_arch_prefix
+
+File: core/combo/TARGET_linux-x86.mk
+
+147
+Thu Nov 13 19:33:46 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7adfdb23_a708a899
+Bytes: 47
+combos_2nd_arch_prefix -> combo_2nd_arch_prefix
+
+File: core/definitions.mk
+
+1377
+Thu Nov 13 19:33:46 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5ac5b75b_3e7d8dde
+Bytes: 60
+It should be:
+$($(PRIVATE_2ND_ARCH_VAR_PREFIX)TARGET_LINKER)
+
