@@ -1,0 +1,11 @@
+Revision: 16a23e8417ca1b07ea5b5a6243296287d2fc8545
+Patch-set: 1
+File: core/binary.mk
+
+73:46-73:69
+Fri Nov 14 23:41:56 2014 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7a8d1b44_f8015e2a
+Bytes: 8
+$(...) ?
+
