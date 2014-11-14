@@ -9,3 +9,11 @@ UUID: da9e076c_065b2841
 Bytes: 6
 remove
 
+1017
+Fri Nov 14 03:47:06 2014 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: da9e076c_065b2841
+UUID: 7a1a7bb5_c029222a
+Bytes: 40
+right... debugging shell scripts.. done.
+
