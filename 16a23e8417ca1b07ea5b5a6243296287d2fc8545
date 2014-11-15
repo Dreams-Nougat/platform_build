@@ -1,5 +1,14 @@
 Revision: 16a23e8417ca1b07ea5b5a6243296287d2fc8545
 Patch-set: 1
+File: /COMMIT_MSG
+
+8
+Sat Nov 15 01:50:18 2014 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: baba33ec_f872f185
+Bytes: 37
+Maybe put a "Bug: 18395015" here too.
+
 File: core/binary.mk
 
 73:46-73:69
