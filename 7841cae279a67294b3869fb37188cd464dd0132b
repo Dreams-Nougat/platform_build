@@ -1,0 +1,25 @@
+Revision: 7841cae279a67294b3869fb37188cd464dd0132b
+Patch-set: 1
+File: core/dex_preopt.mk
+
+2:59-2:78
+Tue Nov 18 01:36:11 2014 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9a1baf06_57642c07
+Bytes: 26
+remove this reference too?
+
+54:0-61:4
+Tue Nov 18 01:36:11 2014 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7a30bb7e_96496c81
+Bytes: 8
+and this
+
+71:0-71:22
+Tue Nov 18 01:36:11 2014 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7a30bb7e_165ebc31
+Bytes: 8
+and this
+
