@@ -1,0 +1,11 @@
+Revision: 63ede392675ddf023d992608ca603748009454d8
+Patch-set: 2
+File: target/board/generic/device.mk
+
+35
+Tue Nov 18 19:34:29 2014 +0000
+Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5aff77b8_28af03f5
+Bytes: 223
+Interesting, can this be moved to emulator.mk as well, or does the power.goldfish doesn't build for ARM64? If so, it might make more sense to use a conditional in emulator.mk instead of adding this to all 32-bit ARM builds.
+
