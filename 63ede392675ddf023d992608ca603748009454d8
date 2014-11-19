@@ -9,3 +9,12 @@ UUID: 5aff77b8_28af03f5
 Bytes: 223
 Interesting, can this be moved to emulator.mk as well, or does the power.goldfish doesn't build for ARM64? If so, it might make more sense to use a conditional in emulator.mk instead of adding this to all 32-bit ARM builds.
 
+35
+Wed Nov 19 20:17:23 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5aff77b8_28af03f5
+UUID: 1aa89ff3_2ba5f913
+Bytes: 83
+power.goldfish builds fine in aosp_arm64, aosp_x86_64.
+I'll move it to emulator.mk.
+
