@@ -1,0 +1,27 @@
+Revision: 2863805c3d13fbb9eb5b084ad5e47fb8ca3a1c7e
+Patch-set: 1
+File: core/binary.mk
+
+1012
+Thu Nov 20 23:00:44 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5ff84938_c3758a3a
+Bytes: 30
+$(my_libcxx) isn't set anyway.
+
+File: core/definitions.mk
+
+1311
+Thu Nov 20 23:00:44 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5ff84938_83aae216
+Bytes: 22
+Hmm, remove the cruft.
+
+1334
+Thu Nov 20 23:00:44 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5ff84938_039ed2f2
+Bytes: 35
+$(PRIVATE_LIBCXX) isn't set anyway.
+
