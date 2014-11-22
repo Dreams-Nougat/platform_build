@@ -9,3 +9,12 @@ UUID: 1f9ed122_e408b051
 Bytes: 53
 dex2oat should just pick this up from the variant now
 
+550
+Sat Nov 22 05:43:50 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 1f9ed122_e408b051
+UUID: 3fa1d55e_5613544c
+Bytes: 81
+Good idea.
+Let's set up a variable in the arch variable specific config makefile.
+
