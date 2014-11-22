@@ -1,0 +1,11 @@
+Revision: 9d3ca15f1c8789390b8baaa2df28fd11b14a0a9d
+Base-for-patch-set: 1
+File: core/combo/include/arch/darwin-x86/AndroidConfig.h
+
+67
+Sat Nov 22 07:58:02 2014 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: bf0a2512_cde92917
+Bytes: 23
+In the x86 file? *sigh*
+
