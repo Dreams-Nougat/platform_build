@@ -26,3 +26,15 @@ UUID: ff6c9df2_6e89d706
 Bytes: 177
 TARGET_CPU_VARIANT should already be defined, and so the definition on line 533 will hold. I was trying to avoid having different variant definitions for clang, GCC and dex2oat.
 
+550
+Thu Nov 27 11:35:15 2014 +0000
+Author: Anton Shamin <1055300@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: ff6c9df2_6e89d706
+UUID: 1f633129_36aaf618
+Bytes: 273
+Ian, as I understood your patch form instruction set features based on TARGET_CPU_VARIANT.
+
+Current patch use DEX2OAT_TARGET_INSTRUCTION_SET_FEATURES for passing instruction set features to dex2oat. So it's useless with your patch applied.
+
+Please, correct me if I'm wrong.
+
