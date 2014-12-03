@@ -1,0 +1,11 @@
+Revision: e4a583a4f3c870c831c86a3563295a961ac6b40a
+Patch-set: 1
+File: core/combo/arch/x86/atom.mk
+
+8
+Wed Dec 03 16:24:57 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1fe09112_8e35db7d
+Bytes: 78
+i thought atom did support MOVBE? doesn't -march=atom cause GCC to emit MOVBE?
+
