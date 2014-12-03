@@ -38,3 +38,11 @@ Current patch use DEX2OAT_TARGET_INSTRUCTION_SET_FEATURES for passing instructio
 
 Please, correct me if I'm wrong.
 
+550
+Wed Dec 03 18:58:22 2014 +0000
+Author: Ian Rogers <1010118@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 1f633129_36aaf618
+UUID: 1ff971d6_862b8c71
+Bytes: 113
+Hi Anton, I don't follow your comment. I think the code above is unnecessary. Could you rebase the patch. Thanks!
+
