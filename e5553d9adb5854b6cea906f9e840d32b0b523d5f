@@ -1,0 +1,11 @@
+Revision: e5553d9adb5854b6cea906f9e840d32b0b523d5f
+Patch-set: 1
+File: core/java.mk
+
+223
+Fri Dec 05 00:16:58 2014 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: bf0225b9_fe4a9971
+Bytes: 163
+Do we always want to bundle this, or can we be more clever and detect whether or not this is necessary (or even make people choose that they want the I/O support)?
+
