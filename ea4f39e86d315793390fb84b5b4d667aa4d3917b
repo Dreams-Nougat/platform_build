@@ -9,3 +9,11 @@ UUID: 5f8cc9b9_1dd053d6
 Bytes: 35
 Should kill this while you're here.
 
+66
+Fri Dec 05 18:57:26 2014 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5f8cc9b9_1dd053d6
+UUID: 1f96d1c9_1e7cc9a4
+Bytes: 95
+all the other files have HAVE_MALLOC_H, so this will get killed when one of us deals with that.
+
