@@ -1,0 +1,20 @@
+Revision: 0fc42a438b59287d5ad78e3e24eb1b10ab39abf3
+Patch-set: 2
+File: core/binary.mk
+
+66
+Fri Dec 05 20:57:02 2014 +0000
+Author: Duane Sand <1010669@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 040206f8_9bfc8bcb
+Bytes: 334
+This is a build-script alternative, to adding more symlinks within prebuilts/ndk.  This may be simpler than extending the ndk build tools to create these new symlinks.
+
+Symlinks would perhaps be needed if the mips32r6 target were exposed to ndk users.  But that is not planned, and such users could instead target android-21 or later.
+
+101
+Fri Dec 05 20:57:02 2014 +0000
+Author: Duane Sand <1010669@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 040206f8_7b19bfa3
+Bytes: 58
+renamed my_cpu_abi as my_cpu_variant; no functional change
+
