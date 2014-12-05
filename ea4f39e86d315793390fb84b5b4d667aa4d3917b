@@ -1,0 +1,11 @@
+Revision: ea4f39e86d315793390fb84b5b4d667aa4d3917b
+Base-for-patch-set: 1
+File: core/combo/include/arch/darwin-x86/AndroidConfig.h
+
+66
+Fri Dec 05 17:53:00 2014 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5f8cc9b9_1dd053d6
+Bytes: 35
+Should kill this while you're here.
+
