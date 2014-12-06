@@ -1,0 +1,11 @@
+Revision: ed5bb6229278e56a5d70861953d9c65aa496dcd4
+Patch-set: 8
+File: core/config_sanitizers.mk
+
+29
+Sat Dec 06 01:42:55 2014 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 845d1634_6af8d78c
+Bytes: 131
+This is a little gross, but I don't see a better option for when ASAN needs to be applied to C programs with LOCAL_CXX_STL := none.
+
