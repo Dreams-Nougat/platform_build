@@ -1,0 +1,11 @@
+Revision: 15a684979f87176ff711802d88538c3c3df62a17
+Patch-set: 2
+File: core/binary.mk
+
+230
+Tue Dec 09 00:54:02 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 247aaaaa_9d06e7bb
+Bytes: 90
+No, it still needs to be guarded by LOCAL_SDK_VERSION, something like the fix on the left.
+

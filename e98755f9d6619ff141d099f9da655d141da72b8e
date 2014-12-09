@@ -1,0 +1,14 @@
+Revision: e98755f9d6619ff141d099f9da655d141da72b8e
+Base-for-patch-set: 2
+File: core/binary.mk
+
+230
+Tue Dec 09 00:54:02 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c488eee4_60bc875e
+Bytes: 169
+ifndef TARGET_BUILD_APPS
+# Platform build, set up the dependency on system shared libraries.
+installed_shared_library_module_names += $(my_system_shared_libraries)
+endif
+
