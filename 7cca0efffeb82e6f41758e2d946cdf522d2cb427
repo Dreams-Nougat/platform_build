@@ -1,0 +1,11 @@
+Revision: 7cca0efffeb82e6f41758e2d946cdf522d2cb427
+Patch-set: 1
+File: target/board/generic_mips64/device.mk
+
+34
+Thu Dec 11 11:01:02 2014 +0000
+Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 44731e24_05a7b29b
+Bytes: 165
+Are you sure this is still needed? I.e. these lines are already part of target/product/emulator.mk which should be included for any emulator-compatible system image.
+
