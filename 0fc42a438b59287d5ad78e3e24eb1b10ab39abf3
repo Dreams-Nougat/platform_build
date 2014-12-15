@@ -18,6 +18,16 @@ UUID: 046f66ad_d677a2f8
 Bytes: 15
 missing "endif"
 
+87
+Mon Dec 15 22:18:29 2014 +0000
+Author: Duane Sand <1010669@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 046f66ad_d677a2f8
+UUID: e1e7a492_c2d7c2d2
+Bytes: 403
+I think it is correct as is.
+
+According to https://www.gnu.org/software/make/manual/html_node/Conditional-Syntax.html , a single endif is used when 'else ifeq' pairs are together on one line.  It acts like single-token elsif in other languages.  There's plenty of examples of that in other build/core scripts.  Whereas extra, nested endifs are needed if the else and ifseq are on separate lines.  weird.
+
 101
 Fri Dec 05 20:57:02 2014 +0000
 Author: Duane Sand <1010669@85c56323-6fa9-3386-8a01-6480fb634889>
