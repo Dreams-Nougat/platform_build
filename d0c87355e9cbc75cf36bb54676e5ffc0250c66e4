@@ -1,0 +1,11 @@
+Revision: d0c87355e9cbc75cf36bb54676e5ffc0250c66e4
+Patch-set: 1
+File: target/product/runtime_libart.mk
+
+42:0-43:21
+Tue Dec 16 04:35:20 2014 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 041da64d_03880eb2
+Bytes: 44
+i think I'd just merge these lists and |sort
+
