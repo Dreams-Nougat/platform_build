@@ -11,6 +11,15 @@ This is a build-script alternative, to adding more symlinks within prebuilts/ndk
 
 Symlinks would perhaps be needed if the mips32r6 target were exposed to ndk users.  But that is not planned, and such users could instead target android-21 or later.
 
+86
+Wed Dec 17 20:11:02 2014 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a1d5ac01_c9ca2929
+Bytes: 338
+I don't like to put arch-specific things in this file. They will be evaluated every time this file gets included.
+I would suggest to create symlinks. We have done that for arm64.
+Another alternative is to set up per-arch(variant) per-sdk-version variables in an arch specific configuration file, and then uses such variables in this file.
+
 87
 Mon Dec 15 11:57:59 2014 +0000
 Author: Andrew Hsieh <1010186@85c56323-6fa9-3386-8a01-6480fb634889>
