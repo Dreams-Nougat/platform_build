@@ -20,6 +20,16 @@ I don't like to put arch-specific things in this file. They will be evaluated ev
 I would suggest to create symlinks. We have done that for arm64.
 Another alternative is to set up per-arch(variant) per-sdk-version variables in an arch specific configuration file, and then uses such variables in this file.
 
+86
+Thu Dec 18 19:13:57 2014 +0000
+Author: Duane Sand <1010669@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a1d5ac01_c9ca2929
+UUID: 81a8a891_72b596c1
+Bytes: 540
+The thing with first_mipsr6_libs_versions could indeed be handled by symlinks within the prebuilts/ndk directory.  Those symlinks would need to be mechanically generated whether that prebuilts is remade.  I defer to Andrew on whether doing that in his tools or here is better.  I'm unable to offer a patch to ndk tools to automate that.
+
+The libr6 distinction cannot be done via symlink, but could be refactored by using a collection of make variables with variant suffix.  I'm hesitant to make that large a change here, for this one issue.
+
 87
 Mon Dec 15 11:57:59 2014 +0000
 Author: Andrew Hsieh <1010186@85c56323-6fa9-3386-8a01-6480fb634889>
