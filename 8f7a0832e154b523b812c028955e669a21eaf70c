@@ -1,0 +1,14 @@
+Revision: 8f7a0832e154b523b812c028955e669a21eaf70c
+Patch-set: 1
+File: core/config_sanitizers.mk
+
+68
+Mon Dec 22 11:58:00 2014 +0000
+Author: Evgenii Stepanov <1005967@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a1b76c4b_d0a33cb3
+Bytes: 350
+UBSan has run-time state, so it's wrong to statically link it into shared libraries.
+In the upstream we link it statically to the main executable (the same as ASan on the host). GCC links shared libubsan.so to both executable and shared libraries (the same as ASan on device).
+
+I think we should use shared ubsan runtime on Android, the same as ASan.
+
