@@ -1,0 +1,11 @@
+Revision: b5381366d45c2690245ada65462fd707a778444d
+Patch-set: 1
+File: target/product/emulator.mk
+
+48
+Wed Jan 07 02:20:31 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2e7a89aa_37ced293
+Bytes: 78
+Where is module sensors.ranchu defined? I couldn't find it in the source tree.
+
