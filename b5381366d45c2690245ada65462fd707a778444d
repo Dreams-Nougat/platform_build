@@ -9,3 +9,11 @@ UUID: 2e7a89aa_37ced293
 Bytes: 78
 Where is module sensors.ranchu defined? I couldn't find it in the source tree.
 
+48
+Wed Jan 07 10:48:31 2015 +0000
+Author: Christoffer Dall <1057368@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2e7a89aa_37ced293
+UUID: ae52f94e_f8bcf1da
+Bytes: 79
+it's in a different change: https://android-review.googlesource.com/#/c/122010/
+
