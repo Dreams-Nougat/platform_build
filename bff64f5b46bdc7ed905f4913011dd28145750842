@@ -1,0 +1,12 @@
+Revision: bff64f5b46bdc7ed905f4913011dd28145750842
+Patch-set: 1
+File: tools/releasetools/build_image.py
+
+299
+Wed Jan 07 02:42:17 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2ea1a95e_906324af
+Bytes: 137
+Isn't glob_dict["build.prop"] already a dict object? see build/tools/releasetools/common.py:
+d["build.prop"] = LoadBuildProp(read_helper)
+
