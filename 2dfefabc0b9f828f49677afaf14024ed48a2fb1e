@@ -17,3 +17,11 @@ UUID: ce63adf0_4963e1af
 Bytes: 221
 I see.  The internal ABI mipsr6 in NDK built script should really be named mips32r6.  https://android-review.googlesource.com/#/c/121742 fixes it, and https://android-review.googlesource.com/#/c/121940 fixes prebuilts/ndk
 
+130
+Wed Jan 07 22:21:46 2015 +0000
+Author: Duane Sand <1010669@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: ce63adf0_4963e1af
+UUID: ce2badc1_e90ed5a6
+Bytes: 4
+Done
+
