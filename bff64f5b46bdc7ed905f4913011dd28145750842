@@ -10,3 +10,24 @@ Bytes: 137
 Isn't glob_dict["build.prop"] already a dict object? see build/tools/releasetools/common.py:
 d["build.prop"] = LoadBuildProp(read_helper)
 
+299
+Wed Jan 07 14:50:31 2015 +0000
+Author: Johan Redestig <1002951@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2ea1a95e_906324af
+UUID: ae52f94e_b8a27936
+Bytes: 457
+This file is using a locally defined LoadGlobalDict. And, no, the contents of the glob_dict["build.prop"] is a string object, not a dictionary. LoadGlobalDict does:
+
+  def LoadGlobalDict(filename):
+  ...
+  v = line.split("=", 1)
+  ...
+
+And the input file contains a line on this format:
+
+  build.prop={'ro.build.date.utc': 1418245729}
+
+line.split will result in a string that is stored in glob_dict.
+
+This string needs to be parsed into a dictionary object.
+
