@@ -1,0 +1,13 @@
+Revision: d922c6aac42ff8f12944acbfb95f15ff8e7ae7bb
+Patch-set: 1
+File: core/java.mk
+
+175
+Wed Jan 07 01:03:35 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2e7a89aa_1425d4d1
+Bytes: 431
+Unfortunately this won't work in incremental build between user and eng/userdbug build: compilation flag change won't trigger rebuild with the current build system.
+Our build server does incremental user build on top of userdebug build. That means user build will get the binaries built with "-g" as  well.
+In general, basing comilation flags on TARGET_BUILD_VARIANT doesn't work in incremental build with the current build system.
+
