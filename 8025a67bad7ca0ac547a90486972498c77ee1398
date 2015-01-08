@@ -9,3 +9,22 @@ UUID: ceb9edd9_b94e1f37
 Bytes: 240
 I want Ying to comment on whether or not we should allow $(shell) at all in our makefiles. If we do, you should cache this operation the first time (i.e. some_var=$(shell expr ....)), rather than making the same shell call a few lines down.
 
+206
+Thu Jan 08 19:41:54 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: ceb9edd9_b94e1f37
+UUID: ee823118_ed4e0106
+Bytes: 308
+Yes, $(shell) is more expensive than makefile builtins.
+You can define a list of supported API levels lower than 21 somewhere, and then use $(filter) here, something like:
+RENDERSCRIPT_32BIT_ONLY_API_LEVELS := 9 10 ... 20
+ifeq ($(filter $(RENDERSCRIPT_32BIT_ONLY_API_LEVELS),$(renderscript_target_api)),)
+...
+
+245
+Thu Jan 08 19:41:54 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: ae7cb9f1_686cc376
+Bytes: 83
+If you store the path in a variable, you don't need to handle the conditional here.
+
