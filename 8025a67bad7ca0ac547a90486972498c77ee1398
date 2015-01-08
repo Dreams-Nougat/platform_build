@@ -1,0 +1,11 @@
+Revision: 8025a67bad7ca0ac547a90486972498c77ee1398
+Patch-set: 1
+File: core/java.mk
+
+206
+Thu Jan 08 08:54:30 2015 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: ceb9edd9_b94e1f37
+Bytes: 240
+I want Ying to comment on whether or not we should allow $(shell) at all in our makefiles. If we do, you should cache this operation the first time (i.e. some_var=$(shell expr ....)), rather than making the same shell call a few lines down.
+
