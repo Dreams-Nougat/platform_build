@@ -2,10 +2,25 @@ Revision: aa112716067167d58d1db37aaf8adc49b83b59a1
 Base-for-patch-set: 1
 File: core/combo/include/arch/windows/AndroidConfig.h
 
+80
+Fri Jan 09 22:00:24 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2efc49c4_f3531a31
+Bytes: 79
+at some point we'll have to chase up these. but that's a worry for another day.
+
 106:3-107:31
 Fri Jan 09 20:30:21 2015 +0000
 Author: Christopher Ferris <1019050@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 4ed17d3e_9e29a1b0
 Bytes: 94
 Is this a problem? Have you compiled the mingw sdk target to verify there aren't any problems?
+
+106:3-107:31
+Fri Jan 09 22:00:24 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 4ed17d3e_9e29a1b0
+UUID: 0ef945d6_69a06178
+Bytes: 191
+no, the one user uses winsock anyway. the other change i sent out makes that test for winsock rather than this. (and is why bionicbb didn't like this change; it didn't have the other change.)
 
