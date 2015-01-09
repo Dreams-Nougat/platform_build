@@ -1,0 +1,11 @@
+Revision: aa112716067167d58d1db37aaf8adc49b83b59a1
+Base-for-patch-set: 1
+File: core/combo/include/arch/windows/AndroidConfig.h
+
+106:3-107:31
+Fri Jan 09 20:30:21 2015 +0000
+Author: Christopher Ferris <1019050@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 4ed17d3e_9e29a1b0
+Bytes: 94
+Is this a problem? Have you compiled the mingw sdk target to verify there aren't any problems?
+
