@@ -1,0 +1,11 @@
+Revision: 27ea2415c17bce48d5b9efd6b89ebd6bbd9c5735
+Patch-set: 4
+File: core/config.mk
+
+600
+Fri Jan 09 07:57:38 2015 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 6eaba19e_5e231544
+Bytes: 295
+Can you make sure that the naming conventions between this and your other patch (for 64-bit support) are reasonably consistent? In other words, can you make sure we use RS_COMPAT vs. RENDERSCRIPT in the names for both places? It just will look awkward after both CLs go in if they are different.
+
