@@ -1,0 +1,11 @@
+Revision: 5d0fc2243439807def1ad5b59895960408d384fa
+Patch-set: 2
+File: core/java.mk
+
+206
+Fri Jan 09 01:11:54 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: aea119bc_69da9d7c
+Bytes: 83
+Let's move this definition to build/core/config.mk (or build/core/clang/config.mk).
+
