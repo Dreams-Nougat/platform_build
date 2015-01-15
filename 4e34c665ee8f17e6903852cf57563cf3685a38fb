@@ -1,0 +1,12 @@
+Revision: 4e34c665ee8f17e6903852cf57563cf3685a38fb
+Patch-set: 1
+File: core/Makefile
+
+169
+Thu Jan 15 18:30:30 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 6b971303_befb99ce
+Bytes: 159
+We can just remove the above part.
+There is no ro.product.locale mentioned in product makefiles. You need just update the oem.prop in the internal source tree.
+
