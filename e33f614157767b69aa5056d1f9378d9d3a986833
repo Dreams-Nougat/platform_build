@@ -19,3 +19,18 @@ I felt it was better to make something global, instead of remembering it locally
 
 Your strategy becomes "complicated" when you compile for both host and target. Example: fdlibm.
 
+189
+Tue Jan 20 18:43:09 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 6b6c7315_1c5a7d45
+UUID: cb5d5f61_ffcfb768
+Bytes: 67
+You don't need this: we'll call the filtering function on line 989.
+
+989
+Tue Jan 20 18:43:09 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 6bf1d3a1_91ae5ea2
+Bytes: 36
+We'll filter the unknown flags here.
+
