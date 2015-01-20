@@ -1,0 +1,12 @@
+Revision: ff479211ede69007a9115694474799ffc0f3c68e
+Patch-set: 1
+File: core/package_internal.mk
+
+425
+Tue Jan 20 23:09:32 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 6b1ab3b5_c6d2e2df
+Bytes: 174
+The dependency on the boot image has been set up in build/core/setup_one_odex.mk:
+$(my_built_odex) : $($(my_2nd_arch_prefix)DEXPREOPT_ONE_FILE_DEPENDENCY_BUILT_BOOT_PREOPT) \
+
