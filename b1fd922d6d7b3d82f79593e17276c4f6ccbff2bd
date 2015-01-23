@@ -1,0 +1,27 @@
+Revision: b1fd922d6d7b3d82f79593e17276c4f6ccbff2bd
+Patch-set: 2
+File: core/definitions.mk
+
+1429:31-1429:39
+Fri Jan 23 04:23:06 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 4b732f24_b9db67a4
+Bytes: 20
+-dynamic or -shared?
+
+1430:68-1430:77
+Fri Jan 23 04:23:06 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2b70bb17_ebb18251
+Bytes: 9
+same here
+
+1437:6-1437:48
+Fri Jan 23 04:23:06 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 4b732f24_399937e1
+Bytes: 111
+If we want to go this way, I think it's better to use:
+$(filter $(PRIVATE_LDFLAGS),-shared)
+than $(findstring).
+
