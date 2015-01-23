@@ -9,12 +9,28 @@ UUID: 4b732f24_b9db67a4
 Bytes: 20
 -dynamic or -shared?
 
+1429:31-1429:39
+Fri Jan 23 21:04:18 2015 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 4b732f24_b9db67a4
+UUID: 2b7fdb22_4fc6f15a
+Bytes: 4
+Done
+
 1430:68-1430:77
 Fri Jan 23 04:23:06 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 2b70bb17_ebb18251
 Bytes: 9
 same here
+
+1430:68-1430:77
+Fri Jan 23 21:04:18 2015 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2b70bb17_ebb18251
+UUID: 4b724f59_0dd6b1d5
+Bytes: 4
+Done
 
 1437:6-1437:48
 Fri Jan 23 04:23:06 2015 +0000
@@ -24,4 +40,12 @@ Bytes: 111
 If we want to go this way, I think it's better to use:
 $(filter $(PRIVATE_LDFLAGS),-shared)
 than $(findstring).
+
+1437:6-1437:48
+Fri Jan 23 21:04:18 2015 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 4b732f24_399937e1
+UUID: 6b75533d_ee379f80
+Bytes: 4
+Done
 
