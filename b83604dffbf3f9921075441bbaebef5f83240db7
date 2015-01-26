@@ -9,3 +9,12 @@ UUID: 4b75ef75_550e2ca7
 Bytes: 208
 Has clang grown something similar to -print-file-name yet? I remember there was talk of it on the list a while back for printing the locations for the sanitizer libs, but don't know if that was ever resolved.
 
+File: core/definitions.mk
+
+1344
+Mon Jan 26 00:37:36 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 4b75ef75_f51738b2
+Bytes: 238
+We can't just let the driver deal with this for us because using -nodefaultlibs (so we link bionic) links the libraries in the wrong order. The driver places -lclang_rt.profile... after libc, so profile_rt can't resolve symbols from libc.
+

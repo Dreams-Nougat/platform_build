@@ -1,0 +1,11 @@
+Revision: 172cd7653e4dfb628065349ea915329076e44e1d
+Base-for-patch-set: 1
+File: core/definitions.mk
+
+1349
+Mon Jan 26 00:37:36 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 6b78f36f_d6b7a477
+Bytes: 189
+Can't think of why this was so far down the link line... This only needs to resolve symbols in object files and static libraries, as shared libraries will already have those symbols linked.
+
