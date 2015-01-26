@@ -9,3 +9,11 @@ UUID: 2b20bb81_c448beb0
 Bytes: 91
 Re-zipalign a zipalign'ed apk should be a noop. I just did a test and it behaved as a noop.
 
+12:11-13:4
+Mon Jan 26 22:44:27 2015 +0000
+Author: Adrián Yanes Martínez <1065171@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2b20bb81_c448beb0
+UUID: abd02b89_ee22db92
+Bytes: 478
+Yes. But SW like DexGuard allows you to zipalign some items and skip others. So assume this scenario: a user creates an apk with DexGuard and chooses to zipalign only jpeg images but not pngs (for whatever reason). Then Dexguard will create the signature based on that alignment, however, Android will zipalign ALL the content that can be zipaligned within the apk while integrating the apk into the build; thus the signature will get broken due to the zipalignment will change.
+
