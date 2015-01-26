@@ -17,3 +17,13 @@ UUID: abd02b89_ee22db92
 Bytes: 478
 Yes. But SW like DexGuard allows you to zipalign some items and skip others. So assume this scenario: a user creates an apk with DexGuard and chooses to zipalign only jpeg images but not pngs (for whatever reason). Then Dexguard will create the signature based on that alignment, however, Android will zipalign ALL the content that can be zipaligned within the apk while integrating the apk into the build; thus the signature will get broken due to the zipalignment will change.
 
+12:11-13:4
+Mon Jan 26 23:38:37 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: abd02b89_ee22db92
+UUID: ab2cab7b_5121e639
+Bytes: 165
++Runtime and framework folks.
+I am not sure if it's good idea to allow partially zipalign'ed prebult apks in the system.img.
+Otherwise I have no problem with the CL.
+
