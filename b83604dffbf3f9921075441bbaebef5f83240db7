@@ -1,0 +1,11 @@
+Revision: b83604dffbf3f9921075441bbaebef5f83240db7
+Patch-set: 1
+File: core/combo/TARGET_linux-arm.mk
+
+174
+Mon Jan 26 00:27:55 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 4b75ef75_550e2ca7
+Bytes: 208
+Has clang grown something similar to -print-file-name yet? I remember there was talk of it on the list a while back for printing the locations for the sanitizer libs, but don't know if that was ever resolved.
+
