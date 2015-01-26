@@ -1,0 +1,11 @@
+Revision: 4809f9c4b288bc4c35433fde6a594595373de502
+Patch-set: 1
+File: /COMMIT_MSG
+
+12:11-13:4
+Mon Jan 26 22:04:40 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2b20bb81_c448beb0
+Bytes: 91
+Re-zipalign a zipalign'ed apk should be a noop. I just did a test and it behaved as a noop.
+
