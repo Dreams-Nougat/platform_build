@@ -1,5 +1,14 @@
 Revision: b83604dffbf3f9921075441bbaebef5f83240db7
 Patch-set: 1
+File: core/clang/config.mk
+
+11:55-11:58
+Mon Jan 26 19:30:53 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8b58c71b_d21242c5
+Bytes: 30
+Use $(LLVM_PREBUILTS_VERSION)?
+
 File: core/combo/TARGET_linux-arm.mk
 
 174
