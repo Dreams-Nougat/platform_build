@@ -1,0 +1,18 @@
+Revision: d7f416614c6cdc91aee33553ccde80c8db50624c
+Patch-set: 9
+File: core/definitions.mk
+
+1865:1-1868:110
+Fri Jan 30 01:26:05 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 97a38fb2_96958ca2
+Bytes: 42
+Why not combine the two calls to zipalign?
+
+1870:0-1871:89
+Fri Jan 30 01:26:05 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d797c75c_c24982a6
+Bytes: 59
+It's unnecessary to check the alignment at this point here.
+
