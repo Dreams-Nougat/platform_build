@@ -9,10 +9,26 @@ UUID: 97a38fb2_96958ca2
 Bytes: 42
 Why not combine the two calls to zipalign?
 
+1865:1-1868:110
+Fri Jan 30 01:35:41 2015 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 97a38fb2_96958ca2
+UUID: 378ae32f_ada23d87
+Bytes: 152
+resources and shared libraries require different alignment. I do not want to introduce "sequence of alignments" syntax to zipalign command line options.
+
 1870:0-1871:89
 Fri Jan 30 01:26:05 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: d797c75c_c24982a6
 Bytes: 59
 It's unnecessary to check the alignment at this point here.
+
+1870:0-1871:89
+Fri Jan 30 01:35:41 2015 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d797c75c_c24982a6
+UUID: d797c75c_4581fc26
+Bytes: 14
+Done - removed
 
