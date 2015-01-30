@@ -26,3 +26,11 @@ UUID: 97baafec_dbcba7a5
 Bytes: 39
 that's kinda why i didn't want it here.
 
+45
+Fri Jan 30 18:19:38 2015 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 97baafec_dbcba7a5
+UUID: 17cebfa3_975e26dd
+Bytes: 95
+do we want to restrict alignment be apply only to "*.so entities or all uncompressed entities"?
+
