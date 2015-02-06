@@ -1,0 +1,11 @@
+Revision: fb0c19999f6200c3cd4aa71e3b4abf2d1975e83b
+Patch-set: 1
+File: target/board/Android.mk
+
+28:1-28:107
+Fri Feb 06 18:30:02 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: bce4f851_4455c0b7
+Bytes: 74
+This is wrong. You can't modify a target in another target's build recipe.
+
