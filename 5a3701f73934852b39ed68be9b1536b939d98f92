@@ -9,3 +9,11 @@ UUID: 3c9e48d1_0da49194
 Bytes: 176
 this is going to be confusing, it will create an ro.bootloader-version that is not the bootloader version, it is the required bootloader version.  Maybe s/require /ro.require./
 
+246:86-246:89
+Fri Feb 06 20:38:37 2015 +0000
+Author: Andres Morales <1038928@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3c9e48d1_0da49194
+UUID: 3c9e48d1_70ca4ece
+Bytes: 121
+Done, although we're running close to the 32 char limit here. Not a problem now but not sure if it will be. Maybe ro.req?
+
