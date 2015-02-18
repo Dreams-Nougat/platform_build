@@ -1,0 +1,18 @@
+Revision: 2457fa1e266d4d162d3a9961ff2d8a2eee4cfdbf
+Patch-set: 3
+File: core/prebuilt_internal.mk
+
+183:0-184:40
+Wed Feb 18 21:56:35 2015 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0b721c91_f4bd78b2
+Bytes: 178
+Don't know what style Ying prefers, but this looks overly complicated. If DEX_PREOPT_IN_DATA_LIST was empty in case DEX_PREOPT_IN_DATA!=true, the filter part below would suffice.
+
+185:7-185:8
+Wed Feb 18 21:56:35 2015 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0b721c91_54d70cfa
+Bytes: 143
+Is that common style? I haven't seen this before, and it's distracting, as ! is a common character for boolean negation (which it is not here).
+
