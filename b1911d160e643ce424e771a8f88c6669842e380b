@@ -1,0 +1,11 @@
+Revision: b1911d160e643ce424e771a8f88c6669842e380b
+Patch-set: 1
+File: core/combo/include/arch/windows/AndroidConfig.h
+
+101
+Fri Feb 20 17:26:53 2015 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a89cb684_a1b2fe90
+Bytes: 124
+i wonder if these "ifdef USE_MINGW" are still necessary. do we support anything other than mingw for windows native builds ?
+
