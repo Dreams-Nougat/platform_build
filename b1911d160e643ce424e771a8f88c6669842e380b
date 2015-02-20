@@ -21,3 +21,13 @@ i think most of these things should just be turned into _WIN32 and pushed down i
 
 we should probably bump the _WIN32_WINNT value at some point too. i think there are places where we'd like to use stuff that's been added since Win2K.
 
+101
+Fri Feb 20 18:25:26 2015 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 88ba92ec_18ec85bd
+UUID: 48d41a2e_96e98c05
+Bytes: 151
+I can probably get rid of this define - it isn't used anywhere.
+
+(the result under experimental/ doesn't count because it's never compiled for windows)
+
