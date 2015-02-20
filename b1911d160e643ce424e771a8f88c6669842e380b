@@ -9,3 +9,15 @@ UUID: a89cb684_a1b2fe90
 Bytes: 124
 i wonder if these "ifdef USE_MINGW" are still necessary. do we support anything other than mingw for windows native builds ?
 
+101
+Fri Feb 20 18:18:53 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a89cb684_a1b2fe90
+UUID: 88ba92ec_18ec85bd
+Bytes: 263
+not afaik.
+
+i think most of these things should just be turned into _WIN32 and pushed down into the call sites.
+
+we should probably bump the _WIN32_WINNT value at some point too. i think there are places where we'd like to use stuff that's been added since Win2K.
+
