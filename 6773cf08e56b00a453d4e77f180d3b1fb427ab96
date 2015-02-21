@@ -34,3 +34,11 @@ UUID: 17cebfa3_975e26dd
 Bytes: 95
 do we want to restrict alignment be apply only to "*.so entities or all uncompressed entities"?
 
+45
+Sat Feb 21 18:19:39 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 17cebfa3_975e26dd
+UUID: 28f0c60e_60254ca3
+Bytes: 136
+narayan suggests endsWith(".so") or an explicit list. callers can do their wildcarding in the build system if they really feel the need?
+
