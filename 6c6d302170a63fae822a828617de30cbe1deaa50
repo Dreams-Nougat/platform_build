@@ -1,0 +1,19 @@
+Revision: 6c6d302170a63fae822a828617de30cbe1deaa50
+Patch-set: 1
+File: core/binary.mk
+
+1001:34-1003:14
+Mon Feb 23 17:50:09 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 48789a6f_96652c05
+Bytes: 173
+That's a user error.
+If you want to ensure a global variable not to be modified by individual Android.mk, you can add it to _product_stash_var_list in build/core/product.mk.
+
+1014:0-1014:89
+Mon Feb 23 17:50:09 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a86916a4_99647bb0
+Bytes: 117
+You can define global variables (in config.mk or definitions.mk) and reference the global variables in the functions.
+
