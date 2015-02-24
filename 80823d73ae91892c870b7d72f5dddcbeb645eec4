@@ -1,0 +1,12 @@
+Revision: 80823d73ae91892c870b7d72f5dddcbeb645eec4
+Patch-set: 1
+File: target/product/runtime_libart.mk
+
+55:0-59:5
+Tue Feb 24 01:48:39 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e5cb393b_eb2ab19f
+Bytes: 287
+This won't work if WITH_ART_SMALL_MODE is set in BoardConfig.mk, because board config is loaded only after product makefiles are loaded.
+I saw other properties set in build/core/main.mk. We can move this to that file as well, if you want WITH_ART_SMALL_MODE set as board config variable.
+
