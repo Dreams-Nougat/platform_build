@@ -9,3 +9,26 @@ UUID: a22bf7c1_a91e9d04
 Bytes: 71
 drat - this delta is unnecessary. i'll upload a change to address this.
 
+File: tools/zipalign/ZipAlign.cpp
+
+36:53-36:57
+Thu Feb 26 16:48:23 2015 +0000
+Author: Simon Baldwin <1037287@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 428ddb43_0e4d0b88
+Bytes: 82
+Won't supplying a [list of files] after zipalign -c produce usage (from line 276)?
+
+41
+Thu Feb 26 16:48:23 2015 +0000
+Author: Simon Baldwin <1037287@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 428ddb43_2e52c726
+Bytes: 17
+Stray colon here.
+
+46
+Thu Feb 26 16:48:23 2015 +0000
+Author: Simon Baldwin <1037287@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 62a81f91_2f3649df
+Bytes: 85
+kPageAlignment isn't used outside of getAlignment; maybe move it inside the function.
+
