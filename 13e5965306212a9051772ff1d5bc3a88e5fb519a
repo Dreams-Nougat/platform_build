@@ -18,6 +18,14 @@ UUID: 428ddb43_0e4d0b88
 Bytes: 82
 Won't supplying a [list of files] after zipalign -c produce usage (from line 276)?
 
+36:53-36:57
+Thu Feb 26 17:52:45 2015 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 428ddb43_0e4d0b88
+UUID: 6281ff16_073176e6
+Bytes: 81
+This looks like a remnant from the earlier CL. we won't need the [list of files].
+
 41
 Thu Feb 26 16:48:23 2015 +0000
 Author: Simon Baldwin <1037287@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -25,10 +33,26 @@ UUID: 428ddb43_2e52c726
 Bytes: 17
 Stray colon here.
 
+41
+Thu Feb 26 17:52:45 2015 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 428ddb43_2e52c726
+UUID: 6281ff16_27367adf
+Bytes: 4
+Done
+
 46
 Thu Feb 26 16:48:23 2015 +0000
 Author: Simon Baldwin <1037287@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 62a81f91_2f3649df
 Bytes: 85
 kPageAlignment isn't used outside of getAlignment; maybe move it inside the function.
+
+46
+Thu Feb 26 17:52:45 2015 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 62a81f91_2f3649df
+UUID: e2932f68_ab414931
+Bytes: 4
+Done
 
