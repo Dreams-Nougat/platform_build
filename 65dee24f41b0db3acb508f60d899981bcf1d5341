@@ -1,0 +1,18 @@
+Revision: 65dee24f41b0db3acb508f60d899981bcf1d5341
+Patch-set: 11
+File: tools/zipalign/ZipAlign.cpp
+
+46
+Thu Feb 26 12:16:44 2015 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 22dc672f_9dbf83a6
+Bytes: 6
+const?
+
+296
+Thu Feb 26 12:16:44 2015 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a22bf7c1_69d305da
+Bytes: 3
+{ }
+
