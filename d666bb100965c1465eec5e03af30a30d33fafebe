@@ -1,0 +1,13 @@
+Revision: d666bb100965c1465eec5e03af30a30d33fafebe
+Patch-set: 1
+File: core/cxx_stl_setup.mk
+
+33
+Wed Mar 04 05:51:37 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b2f34a1a_fef58106
+Bytes: 291
+I'm still looking in to this, but I can't even make this work right with a basic foo.cpp outside of Android. I'm not sure we actually need it though, so that's what I'm checking first.
+
+If we don't need it, setting it to this should make sure the error is obvious if someone tries to use it.
+
