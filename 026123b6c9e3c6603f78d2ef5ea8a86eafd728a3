@@ -1,0 +1,11 @@
+Revision: 026123b6c9e3c6603f78d2ef5ea8a86eafd728a3
+Patch-set: 1
+File: core/combo/arch/x86_64/x86_64.mk
+
+11:0-11:20
+Mon Mar 09 17:18:52 2015 +0000
+Author: Christopher Ferris <1019050@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f7e9342c_c0f6de64
+Bytes: 40
+Should you set ARCH_X86_HAVE_SSE4_1 too?
+
