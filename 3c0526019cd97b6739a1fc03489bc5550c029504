@@ -1,0 +1,27 @@
+Revision: 3c0526019cd97b6739a1fc03489bc5550c029504
+Patch-set: 1
+File: core/binary.mk
+
+837:29-837:54
+Mon Mar 09 22:59:47 2015 +0000
+Author: Johann Koenig <1013986@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9c249dae_0d91714a
+Bytes: 130
+Is there a way to combine this with the x86 case, where it checks for either x86 or x86_64? The rest of the block looks identical.
+
+843:12-843:13
+Mon Mar 09 22:59:47 2015 +0000
+Author: Johann Koenig <1013986@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7c3369f5_acdb8310
+Bytes: 92
+If it can't be combined because of this line it should still be moved next to the x86 block.
+
+File: core/definitions.mk
+
+1064:22-1064:23
+Mon Mar 09 22:59:47 2015 +0000
+Author: Johann Koenig <1013986@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9c249dae_2de8adad
+Bytes: 48
+This looks like it might be trickier to combine.
+
