@@ -9,3 +9,11 @@ UUID: 5ca30580_83dafe63
 Bytes: 51
 my only question is the earlier version was to 64o.
 
+804:17-804:19
+Tue Mar 10 02:13:49 2015 +0000
+Author: Dan Liang <1004496@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5ca30580_83dafe63
+UUID: 5ca30580_635ee250
+Bytes: 56
+The original version is transform-asm-to-o for x86 Arch.
+
