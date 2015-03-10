@@ -17,3 +17,11 @@ UUID: 5ca30580_635ee250
 Bytes: 56
 The original version is transform-asm-to-o for x86 Arch.
 
+804:17-804:19
+Tue Mar 10 17:30:35 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5ca30580_83dafe63
+UUID: 7c97e954_ccf14fe5
+Bytes: 29
+we have unified the function.
+
