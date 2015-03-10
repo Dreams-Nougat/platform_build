@@ -9,6 +9,15 @@ UUID: 9c249dae_0d91714a
 Bytes: 130
 Is there a way to combine this with the x86 case, where it checks for either x86 or x86_64? The rest of the block looks identical.
 
+837:29-837:54
+Tue Mar 10 01:26:52 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 9c249dae_0d91714a
+UUID: 5cca253a_ab4a697c
+Bytes: 54
+Definitely we should combine.
+I'll upload a new patch.
+
 843:12-843:13
 Mon Mar 09 22:59:47 2015 +0000
 Author: Johann Koenig <1013986@85c56323-6fa9-3386-8a01-6480fb634889>
