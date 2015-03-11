@@ -15,3 +15,12 @@ Maybe
 
  $(subst ../,dotdot/,$(1))
 
+1172
+Wed Mar 11 02:07:39 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 9c73bd93_159cb4b1
+UUID: bc3de1a0_eee2ff1c
+Bytes: 170
+Yes, but that would end up with duplicate rule for the same object file and make will give warning for that case.
+Anyway I think that's good and idea and advice is taken.
+
