@@ -21,3 +21,11 @@ However, if there is some other switch in the code - that can be a problem. So i
 
 What has to be done though, is adding "ARCH_X86_HAVE_POPCNT := true" as this is a different instruction set and it is not automatically turned on with "-msse4.2".
 
+11:0-11:20
+Wed Mar 11 17:01:44 2015 +0000
+Author: Christopher Ferris <1019050@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 1c9d0d70_74e3c621
+UUID: 619ca22a_5bbce301
+Bytes: 256
+Unfortunately, some of the makefiles explicitly check for ARCH_X86_HAVE_SSE4_1 and use different code in that case. So for completeness, everything supported has to be set to true. It would never show up as a correctness issue, only as a performance issue.
+
