@@ -9,3 +9,15 @@ UUID: f7e9342c_c0f6de64
 Bytes: 40
 Should you set ARCH_X86_HAVE_SSE4_1 too?
 
+11:0-11:20
+Wed Mar 11 09:14:13 2015 +0000
+Author: Alexander Ivchenko <1017368@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f7e9342c_c0f6de64
+UUID: 1c9d0d70_74e3c621
+Bytes: 459
+In terms of the compiler that is not necessary, as "-msse4.2" flag implies all the "sse"s bellow (so sse4.1, ssse3.. are all turned on when "-msse4.2" is specified). 
+
+However, if there is some other switch in the code - that can be a problem. So it is better to add all the missing things here.
+
+What has to be done though, is adding "ARCH_X86_HAVE_POPCNT := true" as this is a different instruction set and it is not automatically turned on with "-msse4.2".
+
