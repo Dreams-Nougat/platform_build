@@ -1,0 +1,20 @@
+Revision: fc6b04258ec93e30a77cc3519b00f0182585e57f
+Patch-set: 1
+File: /COMMIT_MSG
+
+9:0-11:8
+Wed Mar 11 17:56:06 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e1ded2f5_0fdf0552
+Bytes: 132
+You shouldn't do that. The build system is dependency based: if none of the dependency is changed, you shouldn't rebuild the target.
+
+File: core/definitions.mk
+
+1963
+Wed Mar 11 17:56:06 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 817a76a8_94ad646c
+Bytes: 96
+In most cases we'd expect the src and the dest are not identical and this will be waste of time.
+
