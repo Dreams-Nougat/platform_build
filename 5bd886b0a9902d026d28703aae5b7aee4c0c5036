@@ -1,0 +1,17 @@
+Revision: 5bd886b0a9902d026d28703aae5b7aee4c0c5036
+Patch-set: 1
+File: core/definitions.mk
+
+1172
+Wed Mar 11 01:42:19 2015 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9c73bd93_159cb4b1
+Bytes: 113
+This could collide if a module used:
+
+ LOCAL_SRC_FILES := a.c ../a.c ../../a.c
+
+Maybe
+
+ $(subst ../,dotdot/,$(1))
+
