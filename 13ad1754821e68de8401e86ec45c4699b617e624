@@ -1,0 +1,16 @@
+Revision: 13ad1754821e68de8401e86ec45c4699b617e624
+Patch-set: 1
+File: core/main.mk
+
+393:0-393:54
+Thu Mar 12 21:06:53 2015 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2168ea9d_3f626f8d
+Bytes: 253
+add to build/CleanSpec.mk
+
+# Adding dalvik.vm.usejit
+$(call add-clean-step, rm -rf $(PRODUCT_OUT)/system/build.prop)
+$(call add-clean-step, rm -rf $(PRODUCT_OUT)/root/default.prop)
+$(call add-clean-step, rm -rf $(PRODUCT_OUT)/recovery/root/default.prop)
+
