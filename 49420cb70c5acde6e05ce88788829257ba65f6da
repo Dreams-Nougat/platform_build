@@ -1,0 +1,13 @@
+Revision: 49420cb70c5acde6e05ce88788829257ba65f6da
+Patch-set: 1
+File: tools/releasetools/common.py
+
+1078
+Fri Mar 13 22:11:21 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c178ee71_6441a8c4
+Bytes: 68
+... "we just want to give a more informative error message."
+
+right?
+
