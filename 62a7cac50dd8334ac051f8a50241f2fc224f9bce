@@ -1,0 +1,11 @@
+Revision: 62a7cac50dd8334ac051f8a50241f2fc224f9bce
+Patch-set: 1
+File: core/main.mk
+
+392:64-392:81
+Fri Mar 20 18:24:47 2015 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 46825452_6dd3aefe
+Bytes: 85
+verify-none should be faster, right? or it isn't because we still resolve and quicken
+
