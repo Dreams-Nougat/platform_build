@@ -1,0 +1,11 @@
+Revision: ff1474e2d742cd98479ddfc78d08f56fcebb0269
+Patch-set: 1
+File: core/envsetup.mk
+
+77:56-77:65
+Fri Mar 20 18:50:10 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 66259842_9c80a492
+Bytes: 28
+typo: it should be $(UNAME)!
+
