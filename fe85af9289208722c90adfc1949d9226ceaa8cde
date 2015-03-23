@@ -1,0 +1,11 @@
+Revision: fe85af9289208722c90adfc1949d9226ceaa8cde
+Patch-set: 1
+File: tools/releasetools/img_from_target_files.py
+
+147
+Mon Mar 23 21:33:20 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 86c44cd3_cab54732
+Bytes: 89
+Should reset this after calling close (or just not bother with resetting it in ZipWrite).
+
