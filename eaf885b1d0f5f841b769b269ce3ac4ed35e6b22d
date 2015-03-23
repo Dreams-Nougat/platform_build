@@ -9,3 +9,11 @@ UUID: a6731093_b5fce0f0
 Bytes: 99
 Uh... isn't this just os.path.basename? Or are they expecting basefilename to possibly contain "/"?
 
+354:6-354:48
+Mon Mar 23 23:30:45 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a6731093_b5fce0f0
+UUID: a6731093_1824e9d8
+Bytes: 203
+It's the latter. In the input_zip (target_files), the partition names are in all upper case, like "SYSTEM" (don't know why). They are trying to put the lower case ones into the output_zip (OTA zip file).
+
