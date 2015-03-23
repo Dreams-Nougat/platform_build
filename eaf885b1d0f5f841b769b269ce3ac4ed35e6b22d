@@ -1,0 +1,11 @@
+Revision: eaf885b1d0f5f841b769b269ce3ac4ed35e6b22d
+Patch-set: 2
+File: tools/releasetools/ota_from_target_files
+
+354:6-354:48
+Mon Mar 23 23:20:12 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a6731093_b5fce0f0
+Bytes: 99
+Uh... isn't this just os.path.basename? Or are they expecting basefilename to possibly contain "/"?
+
