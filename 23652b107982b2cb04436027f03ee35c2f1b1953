@@ -1,0 +1,112 @@
+Revision: 23652b107982b2cb04436027f03ee35c2f1b1953
+Patch-set: 1
+File: tools/releasetools/add_img_to_target_files.py
+
+113:16-113:17
+Tue Mar 24 04:51:41 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 06869c96_23f6d4dc
+Bytes: 2
+as
+
+320:29-320:30
+Tue Mar 24 04:51:41 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 467c1457_85d6c443
+Bytes: 2
+as
+
+File: tools/releasetools/blockimgdiff.py
+
+375:69-375:76
+Tue Mar 24 04:51:41 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 267f204e_ea3f5bd9
+Bytes: 143
+i guess this is to avoid hitting the line length limit... but it looks a bit strange since it's different from the lines right above and below.
+
+File: tools/releasetools/check_target_files_signatures
+
+438:29-438:30
+Tue Mar 24 04:51:41 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 467c1457_65d9c076
+Bytes: 2
+as
+
+File: tools/releasetools/common.py
+
+109:20-109:22
+Tue Mar 24 04:51:41 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 06869c96_c3e6082d
+Bytes: 2
+as
+
+638:27-638:28
+Tue Mar 24 04:51:41 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 267f204e_8a25efa4
+Bytes: 2
+as
+
+748:38-748:39
+Tue Mar 24 04:51:41 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 06869c96_80c2369e
+Bytes: 44
+not sure if this is the right place to wrap?
+
+792:18-792:19
+Tue Mar 24 04:51:41 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 467c1457_25cfb8ac
+Bytes: 2
+as
+
+1069:20-1069:21
+Tue Mar 24 04:51:41 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 467c1457_45ccbcb5
+Bytes: 2
+as
+
+1291:27-1291:28
+Tue Mar 24 04:51:41 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 06869c96_e3db0c6a
+Bytes: 2
+as
+
+File: tools/releasetools/img_from_target_files.py
+
+39:0-41:17
+Tue Mar 24 04:51:41 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 06869c96_e0878262
+Bytes: 19
+shall we kill this?
+
+156:29-156:30
+Tue Mar 24 04:51:41 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 467c1457_05cab49c
+Bytes: 2
+as
+
+File: tools/releasetools/ota_from_target_files
+
+229:4-229:18
+Tue Mar 24 04:51:41 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 267f204e_aaf2b3b2
+Bytes: 38
+shouldn't dir be one of the arguments?
+
+1595:29-1595:30
+Tue Mar 24 04:51:41 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 06869c96_83d6c043
+Bytes: 2
+as
+

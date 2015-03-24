@@ -1,0 +1,11 @@
+Revision: 088521ef906346e06ce39c877ff142c2467e3a79
+Base-for-patch-set: 1
+File: tools/releasetools/ota_from_target_files
+
+737:0-737:19
+Tue Mar 24 04:51:41 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 467c1457_a5bae803
+Bytes: 11
+good catch!
+
