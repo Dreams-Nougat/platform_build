@@ -9,6 +9,16 @@ UUID: 06869c96_23f6d4dc
 Bytes: 2
 as
 
+113:16-113:17
+Tue Mar 24 18:08:52 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 06869c96_23f6d4dc
+UUID: c626449c_66b2aec7
+Bytes: 180
+I'd done some driveby cleanups of these, but apparently didn't get all of them.
+
+There might be a lint warning that could be turned on (though 2to3 will catch all of these for us).
+
 320:29-320:30
 Tue Mar 24 04:51:41 2015 +0000
 Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -25,7 +35,24 @@ UUID: 267f204e_ea3f5bd9
 Bytes: 143
 i guess this is to avoid hitting the line length limit... but it looks a bit strange since it's different from the lines right above and below.
 
+375:69-375:76
+Tue Mar 24 18:08:52 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 267f204e_ea3f5bd9
+UUID: 6642f831_0bdc9d0f
+Bytes: 33
+I'll clean up the others as well.
+
 File: tools/releasetools/check_target_files_signatures
+
+169
+Tue Mar 24 18:08:52 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a6215087_658aa6b2
+Bytes: 253
+All of these concerned me a bit. It's difficult to reason about these when they weren't initialized in the constructor.
+
+I've chosen None as the default for everything since it's the most likely to cause an error if someone tries to do anything with it.
 
 438:29-438:30
 Tue Mar 24 04:51:41 2015 +0000
@@ -43,6 +70,13 @@ UUID: 06869c96_c3e6082d
 Bytes: 2
 as
 
+316:64-316:73
+Tue Mar 24 18:08:52 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8620cc83_64b8ea56
+Bytes: 32
+As best as I could tell, anyway.
+
 638:27-638:28
 Tue Mar 24 04:51:41 2015 +0000
 Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -57,6 +91,14 @@ UUID: 06869c96_80c2369e
 Bytes: 44
 not sure if this is the right place to wrap?
 
+748:38-748:39
+Tue Mar 24 18:08:52 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 06869c96_80c2369e
+UUID: 8620cc83_a4a82203
+Bytes: 87
+It's a weird place to do it, but pylint doesn't mind. I do though, so I'll clean it up.
+
 792:18-792:19
 Tue Mar 24 04:51:41 2015 +0000
 Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -70,6 +112,15 @@ Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 467c1457_45ccbcb5
 Bytes: 2
 as
+
+1263
+Tue Mar 24 18:08:52 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8620cc83_64cc6ae4
+Bytes: 152
+docstrings are absolutely hideous for this kind of thing.
+
+If we have enough of these cases it might make sense to use a templating library like jinja2.
 
 1291:27-1291:28
 Tue Mar 24 04:51:41 2015 +0000
@@ -87,6 +138,14 @@ UUID: 06869c96_e0878262
 Bytes: 19
 shall we kill this?
 
+39:0-41:17
+Tue Mar 24 18:08:52 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 06869c96_e0878262
+UUID: 8620cc83_24b8b227
+Bytes: 35
+I thought I already had. Guess not.
+
 156:29-156:30
 Tue Mar 24 04:51:41 2015 +0000
 Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -102,6 +161,21 @@ Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 267f204e_aaf2b3b2
 Bytes: 38
 shouldn't dir be one of the arguments?
+
+229:4-229:18
+Tue Mar 24 18:08:52 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 267f204e_aaf2b3b2
+UUID: 8620cc83_07f658dc
+Bytes: 80
+Yeah. This didn't fire for pylint because dir is the name of a builtin function.
+
+234
+Tue Mar 24 18:08:52 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c3fb9632_7ebad105
+Bytes: 229
+I'm not sure why this line didn't show as an error, but I'll have to undo all the cases where I removed the last argument. All the callers I had seen always passed dir=False, so I thought it was safe to remove. Missed one though.
 
 1595:29-1595:30
 Tue Mar 24 04:51:41 2015 +0000
