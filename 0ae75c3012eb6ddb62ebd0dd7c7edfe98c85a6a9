@@ -9,3 +9,11 @@ UUID: a37b02ac_290c35bf
 Bytes: 155
 by default, yes, but there's no actual requirement that you have a guard page. http://pubs.opengroup.org/stage7tc1/functions/pthread_attr_getguardsize.html
 
+14
+Thu Mar 26 23:50:45 2015 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a37b02ac_290c35bf
+UUID: 63758ab8_4d4c1d4f
+Bytes: 75
+Can bionic ensure there's always a guard page? This is pretty important....
+
