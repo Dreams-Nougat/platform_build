@@ -9,6 +9,15 @@ UUID: 23be3291_a9d4bd3e
 Bytes: 59
 This does not mean that the exit code of this program is 1.
 
+77:3-77:12
+Thu Mar 26 23:25:14 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 23be3291_a9d4bd3e
+UUID: 43d246e8_84a8ef83
+Bytes: 104
+Good catch. I missed this case.
+I remember I had tested this case. I don't know why I didn't catch it...
+
 83
 Thu Mar 26 22:55:40 2015 +0000
 Author: Jiyong Park <1019458@85c56323-6fa9-3386-8a01-6480fb634889>
