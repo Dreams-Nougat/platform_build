@@ -27,3 +27,11 @@ POSIX says no: "If guardsize is zero, a guard area shall not be provided for thr
 
 but that's not your real enemy. your real enemy is pthread_attr_setstack (http://pubs.opengroup.org/stage7tc1/functions/pthread_attr_getstack.html#). in that case, the caller allocated the stack, and we can't go around calling mprotect on memory they gave us. (especially not because they probably sized it deliberately and assume they can use it all.)
 
+14
+Thu Mar 26 23:55:28 2015 +0000
+Author: Daniel Micay <1069238@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a37b02ac_290c35bf
+UUID: 43d246e8_d7222bcd
+Bytes: 287
+If you disable the guard page you lose the guarantee that this will trigger a segmentation fault. The one byte probe write can't really cause any additional harm if the guard page is missing though. The thread is going to clobber a bunch of stuff with or without this if you do overflow.
+
