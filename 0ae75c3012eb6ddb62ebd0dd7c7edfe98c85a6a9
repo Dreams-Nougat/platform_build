@@ -17,3 +17,13 @@ UUID: 63758ab8_4d4c1d4f
 Bytes: 75
 Can bionic ensure there's always a guard page? This is pretty important....
 
+14
+Thu Mar 26 23:55:20 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 63758ab8_4d4c1d4f
+UUID: 43d246e8_3761370e
+Bytes: 458
+POSIX says no: "If guardsize is zero, a guard area shall not be provided for threads created with attr."
+
+but that's not your real enemy. your real enemy is pthread_attr_setstack (http://pubs.opengroup.org/stage7tc1/functions/pthread_attr_getstack.html#). in that case, the caller allocated the stack, and we can't go around calling mprotect on memory they gave us. (especially not because they probably sized it deliberately and assume they can use it all.)
+
