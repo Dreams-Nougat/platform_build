@@ -1,0 +1,18 @@
+Revision: a45223b63566d8496250ae797778a4d16ee81419
+Base-for-patch-set: 2
+File: core/tasks/check_boot_jars/check_boot_jars.py
+
+77:3-77:12
+Thu Mar 26 22:55:40 2015 +0000
+Author: Jiyong Park <1019458@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 23be3291_a9d4bd3e
+Bytes: 59
+This does not mean that the exit code of this program is 1.
+
+83
+Thu Mar 26 22:55:40 2015 +0000
+Author: Jiyong Park <1019458@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 23be3291_49e3c11f
+Bytes: 114
+The exit code is 0 (success) regardless of the return value of the main function because sys.exit() is not called.
+
