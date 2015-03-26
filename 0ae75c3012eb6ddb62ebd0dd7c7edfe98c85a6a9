@@ -1,0 +1,11 @@
+Revision: 0ae75c3012eb6ddb62ebd0dd7c7edfe98c85a6a9
+Patch-set: 2
+File: /COMMIT_MSG
+
+14
+Thu Mar 26 23:48:34 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a37b02ac_290c35bf
+Bytes: 155
+by default, yes, but there's no actual requirement that you have a guard page. http://pubs.opengroup.org/stage7tc1/functions/pthread_attr_getguardsize.html
+
