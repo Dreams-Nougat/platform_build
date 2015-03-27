@@ -35,3 +35,15 @@ UUID: 43d246e8_d7222bcd
 Bytes: 287
 If you disable the guard page you lose the guarantee that this will trigger a segmentation fault. The one byte probe write can't really cause any additional harm if the guard page is missing though. The thread is going to clobber a bunch of stuff with or without this if you do overflow.
 
+14
+Fri Mar 27 00:00:36 2015 +0000
+Author: Daniel Micay <1069238@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 43d246e8_d7222bcd
+UUID: 63758ab8_0dadc514
+Bytes: 499
+One way to make exploitation harder even if there's no guard page would be to add weak secondary stack ASLR in Bionic. The problem with that is it can screw over callers with very precisely sized stacks, as they'll have less available than they expect.
+
+Using a single page for ASLR with stacks >= 1M is arguably sane because they could be screwed over by a compiler update if they're that close to the end...
+
+I have a patch doing this but it's pretty sketchy so I didn't have plans to upstream it.
+
