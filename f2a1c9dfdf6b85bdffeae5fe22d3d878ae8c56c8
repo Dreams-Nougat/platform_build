@@ -1,0 +1,11 @@
+Revision: f2a1c9dfdf6b85bdffeae5fe22d3d878ae8c56c8
+Patch-set: 1
+File: target/product/base.mk
+
+38
+Fri Mar 27 14:46:42 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c3ae3665_a68f06a7
+Bytes: 47
+is this the right place? not runtime_libart.mk?
+
