@@ -1,0 +1,11 @@
+Revision: c5f71dd89a12e16efbd4c10bfdf7f717d72ce035
+Patch-set: 1
+File: core/main.mk
+
+370:2-370:67
+Wed Apr 01 16:45:46 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e37fbae4_07a6d60f
+Bytes: 77
+Is it intentional to set this in /default.prop instead of /system/build.prop?
+
