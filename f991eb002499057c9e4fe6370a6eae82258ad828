@@ -9,3 +9,11 @@ UUID: a371421d_250d8e6d
 Bytes: 23
 Missed some $@ -> $(1).
 
+860
+Wed Apr 01 16:32:35 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a371421d_250d8e6d
+UUID: 8370be19_e47ffa8b
+Bytes: 150
+Thanks! I didn't spot that and no error showed up when I tested it because PRODUCT_SUPPORTS_VBOOT flag was not actually set in internal master branch.
+
