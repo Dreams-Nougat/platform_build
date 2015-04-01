@@ -9,3 +9,11 @@ UUID: e37fbae4_07a6d60f
 Bytes: 77
 Is it intentional to set this in /default.prop instead of /system/build.prop?
 
+370:2-370:67
+Wed Apr 01 18:28:05 2015 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e37fbae4_07a6d60f
+UUID: a371421d_3963f717
+Bytes: 99
+Not really. This allows a product to override it, right? Not really necessary, though. Your advice?
+
