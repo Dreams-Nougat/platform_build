@@ -1,0 +1,11 @@
+Revision: f991eb002499057c9e4fe6370a6eae82258ad828
+Patch-set: 1
+File: core/Makefile
+
+860
+Wed Apr 01 16:15:37 2015 +0000
+Author: David Riley <1062805@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a371421d_250d8e6d
+Bytes: 23
+Missed some $@ -> $(1).
+
