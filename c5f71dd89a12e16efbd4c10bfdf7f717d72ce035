@@ -1,5 +1,14 @@
 Revision: c5f71dd89a12e16efbd4c10bfdf7f717d72ce035
 Patch-set: 1
+File: CleanSpec.mk
+
+352:0-353:63
+Wed Apr 01 18:47:03 2015 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e37fbae4_5b68a3ef
+Bytes: 62
+this was never set right? its new here? then this is unneeded.
+
 File: core/main.mk
 
 370:2-370:67
@@ -32,4 +41,12 @@ Parent: a371421d_3963f717
 UUID: 8370be19_2dabb5d6
 Bytes: 48
 No, you can override both in product's makefile.
+
+370:2-370:67
+Wed Apr 01 18:47:03 2015 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8370be19_2dabb5d6
+UUID: a371421d_39abf7d6
+Bytes: 70
+all the other dalvik.vm ones seem to be ADDITIONAL_DEFAULT_PROPERITIES
 
