@@ -9,3 +9,14 @@ UUID: 63bd8ac9_6d5119ba
 Bytes: 12
 Why 2 times?
 
+315:11-315:12
+Wed Apr 01 02:06:26 2015 +0000
+Author: Mohamad Ayyash <1037321@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 63bd8ac9_6d5119ba
+UUID: 63bd8ac9_2d02c18f
+Bytes: 229
+It's:
+total_verity_data = (image_size - adjusted_image_size) > partition_size - image_size
+
+I can change AdjustPartitionSizeForVerity to VerityDataSize that returns just total_verity_data instead and make it clearer. Let me know?
+
