@@ -17,3 +17,11 @@ UUID: a371421d_3963f717
 Bytes: 99
 Not really. This allows a product to override it, right? Not really necessary, though. Your advice?
 
+370:2-370:67
+Wed Apr 01 18:37:28 2015 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a371421d_3963f717
+UUID: 43b5e6d8_9d9867f5
+Bytes: 129
+i have the vague recollection that it has to be in default.prop to be consistently available when init is starting up the zygote.
+
