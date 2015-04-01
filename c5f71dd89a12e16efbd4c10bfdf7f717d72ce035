@@ -9,6 +9,14 @@ UUID: e37fbae4_5b68a3ef
 Bytes: 62
 this was never set right? its new here? then this is unneeded.
 
+352:0-353:63
+Wed Apr 01 18:56:51 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e37fbae4_5b68a3ef
+UUID: 8370be19_38469113
+Bytes: 62
+you'll need this to regenerate it with the new property added.
+
 File: core/main.mk
 
 370:2-370:67
