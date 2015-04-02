@@ -11,3 +11,11 @@ Wow, I didn't we are doing this.
 Not failing the build looks good to me.
 But can we still keep the error message if any?
 
+1298:110-1298:120
+Thu Apr 02 20:50:09 2015 +0000
+Author: Johan Redestig <1002951@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 23c4727c_f177a351
+UUID: 2312b2d8_acd30bdb
+Bytes: 116
+Do you consider it an error if there is no certificate found? If it is not an error there is not much to log, right?
+
