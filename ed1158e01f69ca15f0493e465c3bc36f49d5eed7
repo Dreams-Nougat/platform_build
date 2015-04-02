@@ -19,3 +19,11 @@ UUID: 2312b2d8_acd30bdb
 Bytes: 116
 Do you consider it an error if there is no certificate found? If it is not an error there is not much to log, right?
 
+1298:110-1298:120
+Thu Apr 02 21:41:09 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2312b2d8_acd30bdb
+UUID: 23c4727c_8abee9a0
+Bytes: 90
+I was worried it may fail in other way, without printing a message. But it seems unlikely.
+
