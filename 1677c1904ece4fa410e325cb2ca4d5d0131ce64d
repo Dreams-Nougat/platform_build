@@ -1,0 +1,20 @@
+Revision: 1677c1904ece4fa410e325cb2ca4d5d0131ce64d
+Patch-set: 1
+File: core/dex_preopt_odex_install.mk
+
+126:0-127:62
+Thu Apr 02 16:01:26 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 63de6a5c_9a163181
+Bytes: 39
+You don't want to install both, do you?
+
+File: core/setup_one_odex.mk
+
+24:0-24:50
+Thu Apr 02 16:01:26 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 23c4727c_4e010fbc
+Bytes: 34
+Why doesn't it apply to jar files?
+
