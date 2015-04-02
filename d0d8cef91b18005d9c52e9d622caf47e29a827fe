@@ -1,0 +1,68 @@
+Revision: d0d8cef91b18005d9c52e9d622caf47e29a827fe
+Patch-set: 1
+File: tools/fs_config/Android.mk
+
+36:0-36:98
+Thu Apr 02 23:54:10 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 63de6a5c_39c1829c
+Bytes: 306
+We should allow the device define a custom value in its BoardConfig.mk;
+Is fs_config_dirs and/or fs_config_files required for every build? If so we may need to give a default android_filesystem_config.h.
+Otherwise enclose the whole thing with conditional:
+ifdef TARGET_ANDROID_FILESYSTEM_CONFIG_H
+...
+endif
+
+46:0-46:70
+Thu Apr 02 23:54:10 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 23c4727c_768ca0cb
+Bytes: 115
+You don't need this. The build system will establish the dependency on all the header files included by the source.
+
+47:16-47:42
+Thu Apr 02 23:54:10 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e3bdfae6_92897bbd
+Bytes: 56
+I'd use:
+-I $(dir $(TARGET_ANDROID_FILESYSTEM_CONFIG_H))
+
+48:16-48:80
+Thu Apr 02 23:54:10 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 63de6a5c_9951966b
+Bytes: 177
+I found this is hard to read. I'd change it to:
+-DANDROID_FILESYSTEM_CONFIG=\"$(TARGET_ANDROID_FILESYSTEM_CONFIG_H)\"
+
+Do you really want to build the file path into the binary?
+
+59:0-62:91
+Thu Apr 02 23:54:10 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 63de6a5c_3daccd9c
+Bytes: 120
+$(LOCAL_BUILT_MODULE) : $(HOST_OUT_EXECUTABLES)/fs_config_generate_$(TARGET_DEVICE)
+   mkdir -p $(dir $@)
+   $< -D -o $@
+
+71:0-74:92
+Thu Apr 02 23:54:10 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e3bdfae6_f52541d7
+Bytes: 120
+$(LOCAL_BUILT_MODULE) : $(HOST_OUT_EXECUTABLES)/fs_config_generate_$(TARGET_DEVICE)
+   mkdir -p $(dir $@)
+   $< -F -o $@
+
+File: tools/fs_config/fs_config_generate.c
+
+24:0-44:6
+Thu Apr 02 23:54:10 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 63de6a5c_fd67651f
+Bytes: 187
+I'd move the default value to a header file and use it if a device header file isn't provided. So that we can have all the above logic in the makefile and not pass the path to the c file.
+
