@@ -9,3 +9,11 @@ UUID: 63de6a5c_ffcf67dc
 Bytes: 676
 I'm likely behind the times, I believe the "instruction set features" should be dying a death and CPU variants be being used to determine "features". The ART CPU variant naming conventions should align with those of clang and GCC, however, clang and GCC have been slow in getting support for some architecture variants like krait. Fwiw, as the variant information from /proc/cpuinfo and HWCAP are unreliable we store the CPU variant into a system property and pass that to dex2oat. The instruction set features test in ART covers this and it should be made a CTS test and the broken /proc/cpuinfo and HWCAP... fixed. I'm unaware of there being an ARM64 feature called aarch32.
 
+546:2-546:70
+Thu Apr 02 15:37:25 2015 +0000
+Author: Ian Rogers <1010118@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 63de6a5c_ffcf67dc
+UUID: 23c4727c_ee1fc35d
+Bytes: 264
+Ah, the point is to say that this ARM32 target has ARMv8 instructions. Should this be being picked up from the architecture variant? That should then also work for the native side - assuming the appropriate architecture variant work has been done in GCC and clang.
+
