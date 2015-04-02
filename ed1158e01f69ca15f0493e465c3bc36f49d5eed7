@@ -1,0 +1,13 @@
+Revision: ed1158e01f69ca15f0493e465c3bc36f49d5eed7
+Patch-set: 2
+File: core/Makefile
+
+1298:110-1298:120
+Thu Apr 02 19:46:24 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 23c4727c_f177a351
+Bytes: 120
+Wow, I didn't we are doing this.
+Not failing the build looks good to me.
+But can we still keep the error message if any?
+
