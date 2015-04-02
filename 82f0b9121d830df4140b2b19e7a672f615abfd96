@@ -1,0 +1,14 @@
+Revision: 82f0b9121d830df4140b2b19e7a672f615abfd96
+Patch-set: 4
+File: core/combo/HOST_linux-x86.mk
+
+52:0-52:39
+Thu Apr 02 01:25:58 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e3bdfae6_a029e004
+Bytes: 326
+This file isn't intended to be included multiple times.
+It has been included once in build/core/config.mk.
+Also clang/config.mk has been written in a way that it has dependency on variables set in core/combo/[HOST|TARGET]_*.mk, not the opposite.
+I'd suggest to move the *_LIBPROFILE_RT variables to build/core/clang/config.mk.
+
