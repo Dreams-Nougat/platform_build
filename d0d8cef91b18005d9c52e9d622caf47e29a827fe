@@ -39,6 +39,15 @@ I found this is hard to read. I'd change it to:
 
 Do you really want to build the file path into the binary?
 
+51:0-51:0
+Fri Apr 03 00:11:01 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 23c4727c_e182284c
+Bytes: 233
+You can store the built executable to a vaiable here:
+host_fs_config_bin := $(LOCAL_INSTALLED_MODULE)
+Then you can use $(host_fs_config_bin) to replace "$(HOST_OUT_EXECUTABLES)/fs_config_generate_$(TARGET_DEVICE)" later in this file.
+
 59:0-62:91
 Thu Apr 02 23:54:10 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -58,6 +67,13 @@ $(LOCAL_BUILT_MODULE) : $(HOST_OUT_EXECUTABLES)/fs_config_generate_$(TARGET_DEVI
    $< -F -o $@
 
 File: tools/fs_config/fs_config_generate.c
+
+22:18-22:45
+Fri Apr 03 00:11:01 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e3bdfae6_f582e19a
+Bytes: 117
+We may want to use a different file name for the device specific header file, to avoid conflict and reduce confusion.
 
 24:0-44:6
 Thu Apr 02 23:54:10 2015 +0000
