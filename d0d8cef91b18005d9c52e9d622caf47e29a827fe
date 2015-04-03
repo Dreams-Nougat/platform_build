@@ -26,6 +26,18 @@ There is a problem with providing an override to the name, one can not do:
 
 in the source file without adding an additional 'manufacturing' step to edit/change it. I guess I can add that step ...
 
+36:0-36:98
+Fri Apr 03 00:56:30 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e3bdfae6_286ec0ac
+UUID: 23c4727c_70e943ad
+Bytes: 224
+We can ask TARGET_ANDROID_FILESYSTEM_CONFIG_H to have a fixed file name, but not the path. I think that's reasonable.
+
+
+(Or you can use:
+LOCAL_CFLAGS += -include $(TARGET_ANDROID_FILESYSTEM_CONFIG_H), but it's not preferred.
+
 46:0-46:70
 Thu Apr 02 23:54:10 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -60,6 +72,15 @@ Bytes: 387
 I do not need the path, it was meant to be informational (the tool could print out the full path of the file being included and processed), but I do need this to _not_ be defined if TARGET_ANDROID_FILESYSTEM_CONFIG_H does not exist so that the source procedes to a default.
 
 Would you be more comfortable with $(patsubst) rather than the short-hand? I could do an ifneq ($(TARGET_...),)?
+
+48:16-48:80
+Fri Apr 03 00:56:30 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e3bdfae6_08309c18
+UUID: 63de6a5c_a05536dd
+Bytes: 73
+Yes, I got it after I read the c file.
+Yes, you can use "ifneq ..." here.
 
 51:0-51:0
 Fri Apr 03 00:11:01 2015 +0000
