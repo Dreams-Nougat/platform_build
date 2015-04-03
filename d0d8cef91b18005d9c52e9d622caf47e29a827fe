@@ -14,6 +14,18 @@ ifdef TARGET_ANDROID_FILESYSTEM_CONFIG_H
 ...
 endif
 
+36:0-36:98
+Fri Apr 03 00:39:52 2015 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 63de6a5c_39c1829c
+UUID: e3bdfae6_286ec0ac
+Bytes: 232
+There is a problem with providing an override to the name, one can not do:
+
+ #include ANDROID_FILESYSTEM_CONFIG
+
+in the source file without adding an additional 'manufacturing' step to edit/change it. I guess I can add that step ...
+
 46:0-46:70
 Thu Apr 02 23:54:10 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -38,6 +50,16 @@ I found this is hard to read. I'd change it to:
 -DANDROID_FILESYSTEM_CONFIG=\"$(TARGET_ANDROID_FILESYSTEM_CONFIG_H)\"
 
 Do you really want to build the file path into the binary?
+
+48:16-48:80
+Fri Apr 03 00:39:52 2015 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 63de6a5c_9951966b
+UUID: e3bdfae6_08309c18
+Bytes: 387
+I do not need the path, it was meant to be informational (the tool could print out the full path of the file being included and processed), but I do need this to _not_ be defined if TARGET_ANDROID_FILESYSTEM_CONFIG_H does not exist so that the source procedes to a default.
+
+Would you be more comfortable with $(patsubst) rather than the short-hand? I could do an ifneq ($(TARGET_...),)?
 
 51:0-51:0
 Fri Apr 03 00:11:01 2015 +0000
@@ -75,10 +97,26 @@ UUID: e3bdfae6_f582e19a
 Bytes: 117
 We may want to use a different file name for the device specific header file, to avoid conflict and reduce confusion.
 
+22:18-22:45
+Fri Apr 03 00:39:52 2015 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e3bdfae6_f582e19a
+UUID: 63de6a5c_a0f9b6c4
+Bytes: 128
+The following include has to become a 'manufacturing' step in order to use a device specific header file. I will look into that.
+
 24:0-44:6
 Thu Apr 02 23:54:10 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 63de6a5c_fd67651f
 Bytes: 187
 I'd move the default value to a header file and use it if a device header file isn't provided. So that we can have all the above logic in the makefile and not pass the path to the c file.
+
+24:0-44:6
+Fri Apr 03 00:39:52 2015 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 63de6a5c_fd67651f
+UUID: 23c4727c_bced7737
+Bytes: 199
+The default has to be sensitive to NO_ANDROID_DEVICE_* being defined in the included file to signal one or the other structure missing. In essence, the default include file would then be lines 27-29.
 
