@@ -1,0 +1,40 @@
+Revision: be72c070efe7e6f3b6e1e8ea98c9a7e8ec6a7412
+Patch-set: 2
+File: tools/fs_config/Android.mk
+
+51:0-51:58
+Sat Apr 04 01:03:28 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e3bdfae6_a8c4f990
+Bytes: 29
+This never evaluates to true.
+
+60:0-66:35
+Sat Apr 04 01:03:28 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e3bdfae6_e8e3111e
+Bytes: 163
+This complexity is really unnecessary.
+I think it's reasonable to require a fixed header file name, such as android_filesystem_config.h.
+I'll upload a cleaner one.
+
+File: tools/fs_config/android_filesystem_config.h
+
+22
+Sat Apr 04 01:03:28 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 63f74ae2_56e8957b
+Bytes: 62
+With "LOCAL_CFLAGS := -Werror" the above line fails the build.
+
+File: tools/fs_config/fs_config_generate.c
+
+125:4-125:65
+Sat Apr 04 01:03:28 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 63f74ae2_f6ce6130
+Bytes: 170
+Where is this functiond efined?
+I got this error:
+error: implicit declaration of function 'fs_config_generate' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+
