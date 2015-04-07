@@ -1,0 +1,11 @@
+Revision: b4b996a8ee26553e29f7610f97041753ddff3e68
+Base-for-patch-set: 4
+File: core/clear_vars.mk
+
+174
+Tue Apr 07 20:31:22 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a32b0216_8a0937df
+Bytes: 17
+Oops. Bad rebase.
+
