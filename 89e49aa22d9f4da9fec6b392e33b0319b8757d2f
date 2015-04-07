@@ -1,0 +1,11 @@
+Revision: 89e49aa22d9f4da9fec6b392e33b0319b8757d2f
+Patch-set: 5
+File: core/config_sanitizers.mk
+
+39:2-41:28
+Tue Apr 07 21:35:50 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 23e3924b_04da989e
+Bytes: 70
+You don't need this. They are already defined in build/core/config.mk.
+
