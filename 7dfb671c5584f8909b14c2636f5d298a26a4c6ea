@@ -9,3 +9,11 @@ UUID: 237f124e_108e727f
 Bytes: 128
 is 400dpi a thing too? i see mentions of it in parts of the documentation that mention 560. (most places don't mention 560 :-( )
 
+769
+Wed Apr 08 22:33:55 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 237f124e_108e727f
+UUID: 237f124e_5bdadb14
+Bytes: 182
+oh yes. 400dpi is greater than xhdpi (320dpi), it should be in this list as well. ideally we should map x*hdpi back to numeric forms like 480dpi. then we can handle that more easily.
+
