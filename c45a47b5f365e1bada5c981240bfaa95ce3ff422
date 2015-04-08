@@ -11,3 +11,12 @@ Do we need some 'rules' as to what shared libraries we want to allow into DISTTO
 
 First one(s) to add are libcutils and liblog ... followed by a bunch of cleanups to switch STATIC for SHARED for the set above :-)
 
+1274:0-1274:49
+Wed Apr 08 20:52:42 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 83c43ed3_64160a01
+UUID: 03868e96_63161c01
+Bytes: 232
+I have no idea what licence implication for the DISTOOLS or OTATOOLS. They are just host tools we don't distribute to anybody outside google, do we?
+If you add new tool to the platform, you'll still need to get the license approval.
+
