@@ -1,0 +1,27 @@
+Revision: 5baaa54f90ee6ba2fd6c572129d62af210aec864
+Patch-set: 4
+File: tools/releasetools/ota_from_target_files.py
+
+1583
+Thu Apr 09 20:03:24 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 03868e96_d836e361
+Bytes: 62
+Closing twice? Maybe just wrap the whole block in try/finally.
+
+File: tools/releasetools/test_common.py
+
+80
+Thu Apr 09 20:03:24 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e356daec_ef45a174
+Bytes: 228
+I'm not a fan of the copy/paste. Aren't these basically all the same test that just call a different function? If so, make the function to call be an argument to the inner most test and make all these just be wrappers around it.
+
+276
+Thu Apr 09 20:03:24 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e356daec_0f72e5e1
+Bytes: 20
+This got duplicated?
+
