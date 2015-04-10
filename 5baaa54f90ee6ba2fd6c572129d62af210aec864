@@ -9,6 +9,14 @@ UUID: 03868e96_d836e361
 Bytes: 62
 Closing twice? Maybe just wrap the whole block in try/finally.
 
+1583
+Fri Apr 10 18:39:35 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 03868e96_d836e361
+UUID: 636d8ab3_259fb0df
+Bytes: 308
+This is a weird format. It won't close twice actually, and it's not to handle the exception. There is an infinite loop from L1537 to L1581. In each iteration, it opens the zipfile. Before getting into another iteration, it needs to close the zipfile... I've moved L1583 inside the loop to make it less weird.
+
 File: tools/releasetools/test_common.py
 
 80
