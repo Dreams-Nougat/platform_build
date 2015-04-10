@@ -1,0 +1,11 @@
+Revision: b4a6278f4dc624f5abb6d54cb66da5831ee4dace
+Patch-set: 1
+File: tools/releasetools/ota_from_target_files.py
+
+738
+Fri Apr 10 00:31:15 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 234d525a_3099c1f8
+Bytes: 101
+Currently this works differently from WriteIncrementalOTAPackage(). This function doesn't consider...
+
