@@ -18,10 +18,33 @@ UUID: e356daec_ef45a174
 Bytes: 228
 I'm not a fan of the copy/paste. Aren't these basically all the same test that just call a different function? If so, make the function to call be an argument to the inner most test and make all these just be wrappers around it.
 
+80
+Fri Apr 10 18:31:49 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e356daec_ef45a174
+UUID: 636d8ab3_e54cd853
+Bytes: 245
+i'm combining _test_ZipWriteStr_arcname() and _test_ZipWriteStr_zinfo(), but still leaving _Write() and _WriteStr() as separate ones. _Write() needs a tempfile, and also it checks the stat after writing. Keeping them separate seems more cleaner.
+
+236:6-236:38
+Fri Apr 10 18:31:49 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e356daec_bd73c218
+Bytes: 53
+I'm merging this with ZipWriteStr_resets_ZIP64_LIMIT.
+
 276
 Thu Apr 09 20:03:24 2015 +0000
 Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: e356daec_0f72e5e1
 Bytes: 20
 This got duplicated?
+
+276
+Fri Apr 10 18:31:49 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e356daec_0f72e5e1
+UUID: 636d8ab3_45cf4c5b
+Bytes: 73
+bad copy & paste :( pylint actually caught that but i missed the warning.
 
