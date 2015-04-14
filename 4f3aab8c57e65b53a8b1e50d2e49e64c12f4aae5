@@ -1,0 +1,21 @@
+Revision: 4f3aab8c57e65b53a8b1e50d2e49e64c12f4aae5
+Patch-set: 1
+File: /COMMIT_MSG
+
+16:0-17:5
+Tue Apr 14 17:00:17 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9033a6f4_e48750a8
+Bytes: 82
+I think We don't have it because we don't need it.
+Is there anything changed? +enh
+
+File: core/Makefile
+
+85:29-85:65
+Tue Apr 14 17:00:17 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9033a6f4_04193c2c
+Bytes: 31
+where is this variable defined?
+
