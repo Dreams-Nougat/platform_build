@@ -9,3 +9,12 @@ UUID: 907ac6a8_ae612b83
 Bytes: 65
 oh, we should probably move the stripping inside this conditional
 
+204:0-204:38
+Wed Apr 15 19:22:34 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 907ac6a8_ae612b83
+UUID: 907ac6a8_6e01d38a
+Bytes: 61
+Probably.
+Or should we disable dex-preopt for PRESIGNED apks?
+
