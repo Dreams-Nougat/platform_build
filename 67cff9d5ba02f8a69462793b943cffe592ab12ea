@@ -1,0 +1,11 @@
+Revision: 67cff9d5ba02f8a69462793b943cffe592ab12ea
+Patch-set: 3
+File: core/prebuilt_internal.mk
+
+200:0-200:63
+Wed Apr 15 19:28:15 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b07b4aac_e1d3b151
+Bytes: 99
+I am not sure if you can put a comment line inside the build recipe. Did you try running such case?
+
