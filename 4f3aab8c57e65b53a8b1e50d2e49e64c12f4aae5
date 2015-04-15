@@ -10,6 +10,15 @@ Bytes: 82
 I think We don't have it because we don't need it.
 Is there anything changed? +enh
 
+16:0-17:5
+Wed Apr 15 22:00:20 2015 +0000
+Author: Sylvain Chouleur <1071374@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 9033a6f4_e48750a8
+UUID: b0926a12_d1b9b458
+Bytes: 312
+I need this for another patch that will use this /system/default.prop file to store a property handling the start of service console.
+I thought it was a good idea to separate this patch because the current one is quite standalone, but if you prefer I can merge it with the one which uses the /system/default.prop
+
 File: core/Makefile
 
 85:29-85:65
@@ -18,4 +27,12 @@ Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 9033a6f4_04193c2c
 Bytes: 31
 where is this variable defined?
+
+85:28-85:65
+Wed Apr 15 22:00:20 2015 +0000
+Author: Sylvain Chouleur <1071374@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 90a1e660_250bf4ac
+Bytes: 105
+This variable is defined in the device's BoardConfig.mk
+It uses the exact same logic as for /default.prop
 
