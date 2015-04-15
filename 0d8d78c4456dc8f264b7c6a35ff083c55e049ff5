@@ -1,0 +1,11 @@
+Revision: 0d8d78c4456dc8f264b7c6a35ff083c55e049ff5
+Patch-set: 2
+File: core/prebuilt_internal.mk
+
+204:0-204:38
+Wed Apr 15 19:18:47 2015 +0000
+Author: Kenny Root <1002975@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 907ac6a8_ae612b83
+Bytes: 65
+oh, we should probably move the stripping inside this conditional
+
