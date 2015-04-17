@@ -1,0 +1,11 @@
+Revision: 9f4d76584ce63fb73d093c831f6dd20036c663a3
+Patch-set: 1
+File: core/definitions.mk
+
+1907:11-1907:22
+Fri Apr 17 18:09:21 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 907ac6a8_d2eae872
+Bytes: 39
+Use $(filter) instead of $(findstring).
+
