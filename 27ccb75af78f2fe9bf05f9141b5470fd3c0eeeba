@@ -1,0 +1,13 @@
+Revision: 27ccb75af78f2fe9bf05f9141b5470fd3c0eeeba
+Patch-set: 1
+File: core/config_sanitizers.mk
+
+39:1-39:36
+Fri Apr 17 17:49:35 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d080bec6_95d22502
+Bytes: 178
+For a target module, my_sanitize_host isn't initialized, and
+you may pick up the value of a random host module.
+It seems to me we don't need the variable my_sanitize_host at all.
+
