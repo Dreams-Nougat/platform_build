@@ -1,0 +1,11 @@
+Revision: 9d158b199d7c964e5deb453ab1cb35990c3da99f
+Patch-set: 2
+File: core/config_sanitizers.mk
+
+56:0-80:39
+Fri Apr 17 18:30:49 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d0c51e25_a80ee735
+Bytes: 135
+Nit: we may want to move this to build/core/config.mk (or similar) as a global constant, so we dont' need to parse it for every module.
+
