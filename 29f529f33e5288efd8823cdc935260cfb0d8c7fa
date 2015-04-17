@@ -1,0 +1,18 @@
+Revision: 29f529f33e5288efd8823cdc935260cfb0d8c7fa
+Patch-set: 1
+File: tools/releasetools/blockimgdiff.py
+
+401
+Fri Apr 17 17:39:37 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d0c51e25_42ef2283
+Bytes: 124
+So whenever there are overlapping blocks, we'll always back up the whole range, instead of only the overlapping ones, right?
+
+451
+Fri Apr 17 17:39:37 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d0c51e25_62c9fe2b
+Bytes: 206
+Sami, I just spotted this line and wanted to check with you. In theory it may need up to 512mb for the stash space. So we will need 512mb+ cache partition on any device that supports block-based OTA, right?
+
