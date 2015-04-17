@@ -1,0 +1,12 @@
+Revision: 4431afd71f378745f7f1510a0c55f86205249f3e
+Patch-set: 2
+File: core/config_sanitizers.mk
+
+128:16-128:39
+Fri Apr 17 18:25:40 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 907ac6a8_125f0079
+Bytes: 163
+Since LOCAL_SANITIZE is already multiple valued, can we make this an optional value for LOCA_SANTITIZE?
+I want to reduce the number of LOCAL variables if possible.
+
