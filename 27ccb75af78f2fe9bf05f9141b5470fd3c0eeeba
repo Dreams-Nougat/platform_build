@@ -11,3 +11,11 @@ For a target module, my_sanitize_host isn't initialized, and
 you may pick up the value of a random host module.
 It seems to me we don't need the variable my_sanitize_host at all.
 
+39:1-39:36
+Fri Apr 17 17:50:49 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d080bec6_95d22502
+UUID: 907ac6a8_f2c844a7
+Bytes: 52
+That's a good point. Oops. I'll have a fix in a bit.
+
