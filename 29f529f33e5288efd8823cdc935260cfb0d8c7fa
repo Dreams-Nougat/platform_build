@@ -19,6 +19,16 @@ Correct. I looked into this and stashing only the overlapping blocks does not re
 
 If we want to reduce stash usage, we could split large moves and diffs into smaller segments. It might also be a good idea to have a parameter for ota_from_target_files to specify the maximum amount of stash space available.
 
+401
+Fri Apr 17 18:30:36 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b0926a12_92724a60
+UUID: d0c51e25_1d3c1f74
+Bytes: 254
+Yes, we can change the stash strategy when we have stats for the actual advantages, which seems to be a less priority.
+
+But I do have some concern about the maximum stash space requirement. We may need to provide a limit and do some check in OTA scripts.
+
 451
 Fri Apr 17 17:39:37 2015 +0000
 Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
