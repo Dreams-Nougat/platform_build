@@ -10,3 +10,11 @@ Bytes: 149
 Please specify in what path and what module the error occurs:
 $(error $(LOCAL_PATH): $(LOCAL_MODULE): Use of sanitizers requires LOCAL_CLANG := true)
 
+51:4-51:59
+Fri Apr 17 18:03:11 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d080bec6_350f91e7
+UUID: d080bec6_b56de186
+Bytes: 56
+Oops. Had made that change locally but forgot to upload.
+
