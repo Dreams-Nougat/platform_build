@@ -9,10 +9,28 @@ UUID: d0c51e25_42ef2283
 Bytes: 124
 So whenever there are overlapping blocks, we'll always back up the whole range, instead of only the overlapping ones, right?
 
+401
+Fri Apr 17 17:55:24 2015 +0000
+Author: Sami Tolvanen <1058768@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d0c51e25_42ef2283
+UUID: b0926a12_92724a60
+Bytes: 494
+Correct. I looked into this and stashing only the overlapping blocks does not really seem to reduce the amount of stash space required. Often most of the blocks overlap and there are large block ranges that overlap fully almost always. At least for the OTAs I checked.
+
+If we want to reduce stash usage, we could split large moves and diffs into smaller segments. It might also be a good idea to have a parameter for ota_from_target_files to specify the maximum amount of stash space available.
+
 451
 Fri Apr 17 17:39:37 2015 +0000
 Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: d0c51e25_62c9fe2b
 Bytes: 206
 Sami, I just spotted this line and wanted to check with you. In theory it may need up to 512mb for the stash space. So we will need 512mb+ cache partition on any device that supports block-based OTA, right?
+
+451
+Fri Apr 17 17:55:24 2015 +0000
+Author: Sami Tolvanen <1058768@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d0c51e25_62c9fe2b
+UUID: b0926a12_3277b652
+Bytes: 69
+This line was here before v3, but yes, 512MB seems to be the maximum.
 
