@@ -1,0 +1,12 @@
+Revision: 2b53764d2147bce3d4a7e5d71fbb147d71c3acc4
+Patch-set: 2
+File: core/config_sanitizers.mk
+
+51:4-51:59
+Fri Apr 17 18:01:15 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d080bec6_350f91e7
+Bytes: 149
+Please specify in what path and what module the error occurs:
+$(error $(LOCAL_PATH): $(LOCAL_MODULE): Use of sanitizers requires LOCAL_CLANG := true)
+
