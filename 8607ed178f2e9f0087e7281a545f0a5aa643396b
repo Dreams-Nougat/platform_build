@@ -1,0 +1,11 @@
+Revision: 8607ed178f2e9f0087e7281a545f0a5aa643396b
+Patch-set: 2
+File: core/dynamic_binary.mk
+
+60
+Tue Apr 21 20:51:08 2015 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 302afabf_46c423e3
+Bytes: 57
+I am not entirely sure about this... open to suggestions.
+
