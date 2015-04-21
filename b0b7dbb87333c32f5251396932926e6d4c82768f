@@ -1,0 +1,20 @@
+Revision: b0b7dbb87333c32f5251396932926e6d4c82768f
+Patch-set: 2
+File: core/tasks/cts.mk
+
+90:1-90:39
+Tue Apr 21 19:22:43 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 302afabf_cbddbc0c
+Bytes: 306
+Did you test it?
+This will be expanded to out/host/linux-x86/lib64/libc++.so in the current build system, which builds host modules in 64-bit by default.
+I am not sure the cts binaries that depends on libc++.so is 64-bit or 32-bit. If you have both, you'll need to include both 32-bit and 64-bit libc++.so.
+
+104:39-104:57
+Tue Apr 21 19:22:43 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d01a7eb3_5d9b5172
+Bytes: 32
+So this require to be lib64 too.
+
