@@ -1,5 +1,21 @@
 Revision: 8607ed178f2e9f0087e7281a545f0a5aa643396b
 Patch-set: 2
+File: core/combo/TARGET_linux-arm.mk
+
+191:0-191:49
+Tue Apr 21 23:09:07 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d01a7eb3_dec9f4fb
+Bytes: 27
+We can remove this as well.
+
+193:0-193:60
+Tue Apr 21 23:09:07 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 309d9a70_5190944b
+Bytes: 57
+We can remove this since all archs are with this enabled.
+
 File: core/dynamic_binary.mk
 
 60
@@ -8,4 +24,38 @@ Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 302afabf_46c423e3
 Bytes: 57
 I am not entirely sure about this... open to suggestions.
+
+60
+Tue Apr 21 23:09:07 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 302afabf_46c423e3
+UUID: 309d9a70_f186e8e4
+Bytes: 388
+This isn't correct.
+For shared libraries, $(LOCAL_BUILT_MODULE) is in a common library path, such as out/target/product/shamu/obj/lib, which will be added to "-L" when a module links against the library. 
+The new strip_output should be put in $(intermediates) instead, something like:
+strip_output := $(intermediates)/STRIPPED/$(my_built_module_stem)
+(following example of linked_module.)
+
+122:32-122:61
+Tue Apr 21 23:09:07 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d08d1e46_ee1c3f96
+Bytes: 46
+You need to add it to build/core/clear_vars.mk
+
+129:7-129:16
+Tue Apr 21 23:09:07 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 10a416b9_308148d3
+Bytes: 50
+no need.
+ifeq (true,$(my_pack_module_relocations))
+
+131:56-131:78
+Tue Apr 21 23:09:07 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d08d1e46_8e701bd7
+Bytes: 88
+you need $(ACP) too, because you call $(copy-file-to-target) in $(pack-elf-relocations).
 
