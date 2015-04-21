@@ -16,6 +16,16 @@ UUID: 309d9a70_5190944b
 Bytes: 57
 We can remove this since all archs are with this enabled.
 
+File: core/config.mk
+
+428:21-428:86
+Tue Apr 21 23:12:55 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 309d9a70_5125f460
+Bytes: 127
+where is the source of this tool?
+Note that with the new dependency on this tool it may break many existing unbundled branches.
+
 File: core/dynamic_binary.mk
 
 60
