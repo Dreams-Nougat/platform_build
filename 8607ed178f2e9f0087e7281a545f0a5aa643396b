@@ -26,6 +26,14 @@ Bytes: 127
 where is the source of this tool?
 Note that with the new dependency on this tool it may break many existing unbundled branches.
 
+428:21-428:86
+Tue Apr 21 23:13:59 2015 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 309d9a70_5125f460
+UUID: d08d1e46_6ee92fad
+Bytes: 41
+its in bionic/tools/relocaion_packer atm.
+
 File: core/dynamic_binary.mk
 
 60
