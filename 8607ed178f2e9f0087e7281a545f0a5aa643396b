@@ -9,12 +9,28 @@ UUID: d01a7eb3_dec9f4fb
 Bytes: 27
 We can remove this as well.
 
+191:0-191:49
+Wed Apr 22 00:09:50 2015 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d01a7eb3_dec9f4fb
+UUID: d08d1e46_f405f041
+Bytes: 4
+Done
+
 193:0-193:60
 Tue Apr 21 23:09:07 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 309d9a70_5190944b
 Bytes: 57
 We can remove this since all archs are with this enabled.
+
+193:0-193:60
+Wed Apr 22 00:09:50 2015 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 309d9a70_5190944b
+UUID: 10a416b9_d3bc864b
+Bytes: 4
+Done
 
 File: core/config.mk
 
@@ -33,6 +49,14 @@ Parent: 309d9a70_5125f460
 UUID: d08d1e46_6ee92fad
 Bytes: 41
 its in bionic/tools/relocaion_packer atm.
+
+428:21-428:86
+Wed Apr 22 00:09:50 2015 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d08d1e46_6ee92fad
+UUID: 10a416b9_73867a63
+Bytes: 44
+Is bionic present in all unbundled branches?
 
 File: core/dynamic_binary.mk
 
@@ -55,12 +79,28 @@ The new strip_output should be put in $(intermediates) instead, something like:
 strip_output := $(intermediates)/STRIPPED/$(my_built_module_stem)
 (following example of linked_module.)
 
+60
+Wed Apr 22 00:09:50 2015 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 309d9a70_f186e8e4
+UUID: 10a416b9_33d872a5
+Bytes: 4
+Done
+
 122:32-122:61
 Tue Apr 21 23:09:07 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: d08d1e46_ee1c3f96
 Bytes: 46
 You need to add it to build/core/clear_vars.mk
+
+122:32-122:61
+Wed Apr 22 00:09:50 2015 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d08d1e46_ee1c3f96
+UUID: 309d9a70_54cde265
+Bytes: 4
+Done
 
 129:7-129:16
 Tue Apr 21 23:09:07 2015 +0000
@@ -70,10 +110,26 @@ Bytes: 50
 no need.
 ifeq (true,$(my_pack_module_relocations))
 
+129:7-129:16
+Wed Apr 22 00:09:50 2015 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 10a416b9_308148d3
+UUID: 10a416b9_93b83e28
+Bytes: 4
+Done
+
 131:56-131:78
 Tue Apr 21 23:09:07 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: d08d1e46_8e701bd7
 Bytes: 88
 you need $(ACP) too, because you call $(copy-file-to-target) in $(pack-elf-relocations).
+
+131:56-131:78
+Wed Apr 22 00:09:50 2015 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d08d1e46_8e701bd7
+UUID: d08d1e46_d4ac749d
+Bytes: 4
+Done
 
