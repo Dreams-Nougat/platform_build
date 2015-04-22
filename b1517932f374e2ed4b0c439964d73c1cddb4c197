@@ -10,3 +10,11 @@ Bytes: 143
 In your previous patcheset, it defaults to true, by the arch specific global variables removed in this PS.
 Do you want it to opt-in or opt-out?
 
+118:30-118:35
+Wed Apr 22 00:34:31 2015 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 309d9a70_b4644e94
+UUID: 10a416b9_365300f3
+Bytes: 77
+opt-out. This is true when LOCAL_FORCE_STATIC_EXECUTABLE is not set to 'true'
+
