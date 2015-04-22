@@ -69,6 +69,14 @@ That said, you'll need to move it to a project common to platform branches and u
 Can we make it a prebuilt and store it in prebuilts/misc/?
 Or put the source and build it from source in build/tools?
 
+428:21-428:86
+Wed Apr 22 00:34:27 2015 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d08d1e46_74ce6004
+UUID: 309d9a70_d47472fa
+Bytes: 123
+let me see if I can move it to prebuilds... build/tools won't work because relocation_packer in turn depends on elfutils...
+
 File: core/dynamic_binary.mk
 
 60
