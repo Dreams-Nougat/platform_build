@@ -18,3 +18,11 @@ UUID: 10a416b9_365300f3
 Bytes: 77
 opt-out. This is true when LOCAL_FORCE_STATIC_EXECUTABLE is not set to 'true'
 
+118:30-118:35
+Wed Apr 22 00:50:27 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 10a416b9_365300f3
+UUID: d08d1e46_57cde665
+Bytes: 86
+Oh, I was wondering why you use "ifneq ($(LOCAL_FORCE_STATIC_EXECUTABLE),true)" below.
+
