@@ -58,6 +58,17 @@ UUID: 10a416b9_73867a63
 Bytes: 44
 Is bionic present in all unbundled branches?
 
+428:21-428:86
+Wed Apr 22 00:26:03 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 10a416b9_73867a63
+UUID: d08d1e46_74ce6004
+Bytes: 311
+Definitely not. Unbundled branches don't include bionic. They use libc from the NDK prebuilts.
+That said, you'll need to move it to a project common to platform branches and unbundled branches.
+Can we make it a prebuilt and store it in prebuilts/misc/?
+Or put the source and build it from source in build/tools?
+
 File: core/dynamic_binary.mk
 
 60
