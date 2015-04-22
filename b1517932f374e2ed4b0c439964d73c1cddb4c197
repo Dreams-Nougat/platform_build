@@ -1,0 +1,12 @@
+Revision: b1517932f374e2ed4b0c439964d73c1cddb4c197
+Patch-set: 3
+File: core/dynamic_binary.mk
+
+118:30-118:35
+Wed Apr 22 00:29:22 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 309d9a70_b4644e94
+Bytes: 143
+In your previous patcheset, it defaults to true, by the arch specific global variables removed in this PS.
+Do you want it to opt-in or opt-out?
+
