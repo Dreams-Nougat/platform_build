@@ -44,3 +44,11 @@ As far as I understand this will be disabled only for libraries with defined LOC
 
 And once we have first supported version, it is going to be supported for libraries that target it.
 
+83:2-83:73
+Fri Apr 24 03:28:39 2015 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d0d43e30_c77aa170
+UUID: 309d9a70_e84d004f
+Bytes: 211
+in other words - we still want opt-out scheme in the case when app targets API level >= FIRST_SUPPORTED_VERSION. And unconditionally disabling unsupported sections if target_api is less than first supported one.
+
