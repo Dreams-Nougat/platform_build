@@ -1,0 +1,11 @@
+Revision: 8a5cfeba93ed15f9c40f9e4634dafb5785fbaa14
+Patch-set: 1
+File: core/binary.mk
+
+82:22-82:23
+Fri Apr 24 01:53:27 2015 +0000
+Author: Sascha Häberling <1057503@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 309d9a70_34ce88df
+Bytes: 33
+and disabling packed relocations.
+
