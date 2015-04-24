@@ -9,6 +9,14 @@ UUID: 309d9a70_34ce88df
 Bytes: 33
 and disabling packed relocations.
 
+82:22-82:23
+Fri Apr 24 02:02:41 2015 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 309d9a70_34ce88df
+UUID: 10a416b9_0e124ad9
+Bytes: 4
+Done
+
 83:2-83:73
 Fri Apr 24 01:55:17 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -25,4 +33,14 @@ else
   my_pack_module_relocations := $($(LOCAL_2ND_ARCH_VAR_PREFIX)TARGET_PACK_MODULE_RELOCATIONS)
 endif
 endif
+
+83:2-83:73
+Fri Apr 24 02:02:41 2015 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 10a416b9_0e97aac2
+UUID: d0d43e30_c77aa170
+Bytes: 261
+As far as I understand this will be disabled only for libraries with defined LOCAL_SDK_VERSION (L62), so platform libraries are going to get packed relocations.
+
+And once we have first supported version, it is going to be supported for libraries that target it.
 
