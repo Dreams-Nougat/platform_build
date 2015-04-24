@@ -9,3 +9,20 @@ UUID: 309d9a70_34ce88df
 Bytes: 33
 and disabling packed relocations.
 
+83:2-83:73
+Fri Apr 24 01:55:17 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 10a416b9_0e97aac2
+Bytes: 468
+This is commented out, so the enclosed will be applied universally. See the commit message in https://android-review.googlesource.com/#/c/114664/
+
+I think we can switch to opt-in for unbundled build in build/core/dynamic_binary.mk for now:
+ifeq ($(my_pack_module_relocations),)
+ifdef BUILD_TARGET_APPS
+# Unbundled build
+  my_pack_module_relocations := false
+else
+  my_pack_module_relocations := $($(LOCAL_2ND_ARCH_VAR_PREFIX)TARGET_PACK_MODULE_RELOCATIONS)
+endif
+endif
+
