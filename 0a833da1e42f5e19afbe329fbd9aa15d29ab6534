@@ -1,0 +1,27 @@
+Revision: 0a833da1e42f5e19afbe329fbd9aa15d29ab6534
+Patch-set: 3
+File: core/clang/TARGET_arm.mk
+
+71:73-71:89
+Mon Apr 27 21:40:41 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f0f222e5_5bbd6643
+Bytes: 91
+This naming convention doesn't match the profile library. Shouldn't it be asan-arm-android?
+
+72
+Mon Apr 27 21:40:41 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d0d99e70_64308394
+Bytes: 9
+lib/asan?
+
+File: core/config_sanitizers.mk
+
+88
+Mon Apr 27 21:40:41 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f0f222e5_3b9182cb
+Bytes: 51
+Won't this show up after the rpath for /system/lib?
+
