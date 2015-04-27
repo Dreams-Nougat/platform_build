@@ -50,3 +50,11 @@ Bytes: 85
 There is no rpath for /system/lib.
 That's something the dynamic loader takes care of.
 
+88
+Mon Apr 27 21:51:39 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d0d99e70_44c0e798
+UUID: f0f222e5_7b682a20
+Bytes: 52
+My mistake, I was confusing this with the host libs.
+
