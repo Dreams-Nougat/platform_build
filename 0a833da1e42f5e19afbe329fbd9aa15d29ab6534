@@ -9,12 +9,28 @@ UUID: f0f222e5_5bbd6643
 Bytes: 91
 This naming convention doesn't match the profile library. Shouldn't it be asan-arm-android?
 
+71:73-71:89
+Mon Apr 27 21:50:59 2015 +0000
+Author: Evgenii Stepanov <1005967@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f0f222e5_5bbd6643
+UUID: b0d42a38_3ec3a73e
+Bytes: 13
+Right. Fixed.
+
 72
 Mon Apr 27 21:40:41 2015 +0000
 Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: d0d99e70_64308394
 Bytes: 9
 lib/asan?
+
+72
+Mon Apr 27 21:50:59 2015 +0000
+Author: Evgenii Stepanov <1005967@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d0d99e70_64308394
+UUID: f0f222e5_7b9dcab0
+Bytes: 31
+Of course. Thanks for noticing.
 
 File: core/config_sanitizers.mk
 
@@ -24,4 +40,13 @@ Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: f0f222e5_3b9182cb
 Bytes: 51
 Won't this show up after the rpath for /system/lib?
+
+88
+Mon Apr 27 21:50:59 2015 +0000
+Author: Evgenii Stepanov <1005967@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f0f222e5_3b9182cb
+UUID: d0d99e70_44c0e798
+Bytes: 85
+There is no rpath for /system/lib.
+That's something the dynamic loader takes care of.
 
