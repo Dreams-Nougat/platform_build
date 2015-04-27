@@ -10,3 +10,11 @@ Bytes: 163
 Since LOCAL_SANITIZE is already multiple valued, can we make this an optional value for LOCA_SANTITIZE?
 I want to reduce the number of LOCAL variables if possible.
 
+128:16-128:39
+Mon Apr 27 19:52:53 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 907ac6a8_125f0079
+UUID: d0d99e70_0ec3203e
+Bytes: 214
+No, I don't think so. Determining which elements in LOCAL_SANITIZE need to be passed to -fsanitize and which need to be passed to -fsanitize-recover would be unreliable and take more time than the additional LOCAL.
+
