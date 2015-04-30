@@ -1,0 +1,20 @@
+Revision: ad4a4125e3b39899940a765b5f0d8f09a3fc5187
+Patch-set: 1
+File: core/clang/mips.mk
+
+10
+Thu Apr 30 00:32:37 2015 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 90fd66eb_4bb3117b
+Bytes: 142
+Rather than placing this in the main unknown section here, can you do a "+=" later on along with a comment that has a bug # for tracking this?
+
+File: core/clang/mips64.mk
+
+10
+Thu Apr 30 00:32:37 2015 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 70f8f2fa_f08ac66d
+Bytes: 74
+Same comment about just making this a separate addition with a bug number.
+
