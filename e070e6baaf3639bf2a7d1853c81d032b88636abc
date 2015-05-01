@@ -1,0 +1,20 @@
+Revision: e070e6baaf3639bf2a7d1853c81d032b88636abc
+Patch-set: 1
+File: core/combo/TARGET_linux-x86.mk
+
+89
+Fri May 01 23:00:06 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d078be71_80c15730
+Bytes: 64
+add this separately below, with a comment and a link to the bug?
+
+File: core/combo/TARGET_linux-x86_64.mk
+
+87
+Fri May 01 23:00:06 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 105fb6fa_a76674d6
+Bytes: 29
+does the bug exist on x86-64?
+
