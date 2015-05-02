@@ -18,3 +18,11 @@ UUID: 105fb6fa_a76674d6
 Bytes: 29
 does the bug exist on x86-64?
 
+87
+Sat May 02 00:00:52 2015 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 105fb6fa_a76674d6
+UUID: f06142bc_20532bc1
+Bytes: 63
+Yes. I saw the devirtualized call in -m64 test case output too.
+
