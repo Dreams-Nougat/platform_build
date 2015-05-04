@@ -9,6 +9,14 @@ UUID: 102df676_4ec307a7
 Bytes: 20
 Is this one needed ?
 
+77
+Mon May 04 21:06:46 2015 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 102df676_4ec307a7
+UUID: 7042b231_6ab352c9
+Bytes: 161
+gcc 4.9 gives new -Wclobbered in other modules that we might need to ignore, if the source code is not fixed. So, here for clang we need to filter out this flag.
+
 File: core/combo/TARGET_linux-x86.mk
 
 100
@@ -26,4 +34,12 @@ Author: David Li <1054518@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 7042b231_f7facb88
 Bytes: 5
 Typo.
+
+96
+Mon May 04 21:06:46 2015 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7042b231_f7facb88
+UUID: 105fb6fa_09d3aed9
+Bytes: 4
+Done
 
