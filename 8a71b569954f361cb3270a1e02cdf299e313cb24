@@ -1,0 +1,11 @@
+Revision: 8a71b569954f361cb3270a1e02cdf299e313cb24
+Patch-set: 2
+File: core/combo/TARGET_linux-x86.mk
+
+100
+Mon May 04 19:37:21 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7042b231_20b9702b
+Bytes: 14
+virtualization
+
