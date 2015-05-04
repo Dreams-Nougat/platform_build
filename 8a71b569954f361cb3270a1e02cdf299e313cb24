@@ -1,5 +1,14 @@
 Revision: 8a71b569954f361cb3270a1e02cdf299e313cb24
 Patch-set: 2
+File: core/clang/config.mk
+
+77
+Mon May 04 20:31:10 2015 +0000
+Author: David Li <1054518@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 102df676_4ec307a7
+Bytes: 20
+Is this one needed ?
+
 File: core/combo/TARGET_linux-x86.mk
 
 100
@@ -8,4 +17,13 @@ Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 7042b231_20b9702b
 Bytes: 14
 virtualization
+
+File: core/combo/TARGET_linux-x86_64.mk
+
+96
+Mon May 04 20:31:10 2015 +0000
+Author: David Li <1054518@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7042b231_f7facb88
+Bytes: 5
+Typo.
 
