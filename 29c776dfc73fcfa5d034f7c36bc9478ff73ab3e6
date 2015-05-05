@@ -1,0 +1,18 @@
+Revision: 29c776dfc73fcfa5d034f7c36bc9478ff73ab3e6
+Patch-set: 1
+File: core/envsetup.mk
+
+72:2-74:25
+Tue May 05 01:35:28 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b0218a87_e8a3cb7b
+Bytes: 57
+I guess for Linux/Mac this config doesn't build any more.
+
+86
+Tue May 05 01:35:28 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b0218a87_8894171b
+Bytes: 118
+Let's overwrite it here, and add a comment to make it clear this doesn't mean we still support pure 32-bit host build.
+
