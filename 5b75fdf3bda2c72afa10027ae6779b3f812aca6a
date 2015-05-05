@@ -10,3 +10,11 @@ Bytes: 60
 there is no such variable.
 Do you mean LOCAL_IS_HOST_MODULE?
 
+19:0-19:28
+Tue May 05 17:29:07 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b0218a87_4e306794
+UUID: 102df676_bed2e684
+Bytes: 118
+Yeah... this was actually a typo... wonder why it was working. Must have accidentally done something in my local tree.
+
