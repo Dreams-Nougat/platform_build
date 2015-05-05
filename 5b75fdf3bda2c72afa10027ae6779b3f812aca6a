@@ -1,0 +1,12 @@
+Revision: 5b75fdf3bda2c72afa10027ae6779b3f812aca6a
+Patch-set: 2
+File: core/multilib.mk
+
+19:0-19:28
+Tue May 05 17:27:24 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b0218a87_4e306794
+Bytes: 60
+there is no such variable.
+Do you mean LOCAL_IS_HOST_MODULE?
+
