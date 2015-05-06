@@ -30,3 +30,12 @@ However STLPORT_WHITELIST isn't defined yet at this point.
 In config.mk it loads envsetup.mk (which eventually loads the product makefiles) before it defines STLPORT_WHITELIST.
 On the other hand, we can remove libstlport from this file, and add it to specific device's makefile, such as device/asus/flo/device-common.mk. I'd really like to keep the device names out of the build project.
 
+76:0-78:5
+Wed May 06 17:20:53 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: cd24a5a6_2b42c9fe
+UUID: 8d1e2d58_31c7d798
+Bytes: 122
++byi
+Or even better, we can add libstlport.so to these devices blobs, then you can remove stlport from the tree right now.
+
