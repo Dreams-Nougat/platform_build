@@ -1,0 +1,12 @@
+Revision: 9a38ad846502303375e4e2416185730e60a45335
+Patch-set: 1
+File: target/product/embedded.mk
+
+76:0-78:5
+Wed May 06 17:02:16 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: cd24a5a6_8b19dd7b
+Bytes: 180
+I think we can just remove libstlport from this list, assuming libstlport is pulled in LOCAL_SHARED_LIBRARIES.
+Then we can contain the whitelist in the external/stlport/Android.mk.
+
