@@ -19,3 +19,14 @@ Bytes: 63
 It isn't :(
 https://android-review.googlesource.com/#/c/119847/
 
+76:0-78:5
+Wed May 06 17:15:12 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 6d19f971_32759978
+UUID: cd24a5a6_2b42c9fe
+Bytes: 417
+OH, I forgot your that CL :-)
+However STLPORT_WHITELIST isn't defined yet at this point.
+In config.mk it loads envsetup.mk (which eventually loads the product makefiles) before it defines STLPORT_WHITELIST.
+On the other hand, we can remove libstlport from this file, and add it to specific device's makefile, such as device/asus/flo/device-common.mk. I'd really like to keep the device names out of the build project.
+
