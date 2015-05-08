@@ -1,0 +1,11 @@
+Revision: 39a38083019578c10afee31295894bb45c37b0ae
+Patch-set: 6
+File: tools/releasetools/test_common.py
+
+49
+Fri May 08 19:28:46 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 4d6d15ec_1d3f37da
+Bytes: 19
+Unused. Run pylint.
+
