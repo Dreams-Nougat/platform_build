@@ -9,3 +9,11 @@ UUID: 4d6d15ec_1d3f37da
 Bytes: 19
 Unused. Run pylint.
 
+49
+Fri May 08 20:54:04 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 4d6d15ec_1d3f37da
+UUID: 4d6d15ec_c3b8fc54
+Bytes: 163
+Actually they were not captured by my pylint. Changed to expected_compress_type, because I was trying to explicitly pass the args to _verify() instead of the dict.
+
