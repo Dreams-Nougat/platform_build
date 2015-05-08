@@ -17,3 +17,11 @@ UUID: 4d6d15ec_c3b8fc54
 Bytes: 163
 Actually they were not captured by my pylint. Changed to expected_compress_type, because I was trying to explicitly pass the args to _verify() instead of the dict.
 
+49
+Fri May 08 21:08:38 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 4d6d15ec_c3b8fc54
+UUID: 4d6d15ec_6e331728
+Bytes: 58
+Oh, because extra_args actually is used... on this line :)
+
