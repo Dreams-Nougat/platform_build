@@ -1,0 +1,11 @@
+Revision: bd7ed2a8ab31608a13c55d4a707f2fb8116fabc8
+Patch-set: 2
+File: target/board/generic/sepolicy/qemu_props.te
+
+8
+Mon May 11 18:24:12 2015 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0d407d41_5c803a46
+Bytes: 22
+do we want this style?
+
