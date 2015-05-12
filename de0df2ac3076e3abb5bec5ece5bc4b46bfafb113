@@ -1,0 +1,11 @@
+Revision: de0df2ac3076e3abb5bec5ece5bc4b46bfafb113
+Patch-set: 1
+File: /COMMIT_MSG
+
+10:28-11:19
+Tue May 12 18:38:08 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2d338121_aa496e43
+Bytes: 184
+Is it? The other host tools that use it aren't in CTS? aapt or aidl? I know we statically link it to adb and fastboot since those are tools that are nice to be able to relocate easily.
+
