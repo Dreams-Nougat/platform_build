@@ -1,0 +1,11 @@
+Revision: 42f18814899a3ddf36a7062e1162a5f8aaf25495
+Patch-set: 1
+File: tools/releasetools/blockimgdiff.py
+
+141
+Tue May 12 20:04:51 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: cd43c57f_3ea91edf
+Bytes: 224
+I was wrong about the "not seeing any use of DataImage". Actually it's being used by device/moto/shamu/releasetools.py (and for seed device as well) to update modem images. For DataImages, copy_blocks should always be empty.
+
