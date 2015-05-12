@@ -9,3 +9,30 @@ UUID: cd43c57f_3ea91edf
 Bytes: 224
 I was wrong about the "not seeing any use of DataImage". Actually it's being used by device/moto/shamu/releasetools.py (and for seed device as well) to update modem images. For DataImages, copy_blocks should always be empty.
 
+192
+Tue May 12 20:28:24 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2d338121_e08a771b
+Bytes: 27
+s/that//
+
+clobbered_blocks?
+
+File: tools/releasetools/common.py
+
+1201
+Tue May 12 20:28:24 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: ad3e91ea_11436e22
+Bytes: 37
+but we still want to emit this check?
+
+File: tools/releasetools/sparse_img.py
+
+31
+Tue May 12 20:28:24 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2d338121_a0fa2f86
+Bytes: 8
+a string
+
