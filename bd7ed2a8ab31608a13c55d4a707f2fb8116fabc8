@@ -9,3 +9,11 @@ UUID: 0d407d41_5c803a46
 Bytes: 22
 do we want this style?
 
+8
+Tue May 12 12:23:17 2015 +0000
+Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 0d407d41_5c803a46
+UUID: 2dd541cf_d72c3496
+Bytes: 89
+No strong preference either way.  Maybe it is more readable split up into separate rules?
+
