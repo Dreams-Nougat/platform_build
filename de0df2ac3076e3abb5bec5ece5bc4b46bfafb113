@@ -9,3 +9,11 @@ UUID: 2d338121_aa496e43
 Bytes: 184
 Is it? The other host tools that use it aren't in CTS? aapt or aidl? I know we statically link it to adb and fastboot since those are tools that are nice to be able to relocate easily.
 
+10:28-11:19
+Tue May 12 19:14:25 2015 +0000
+Author: Daniel Cashman <1026058@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2d338121_aa496e43
+UUID: ad3e91ea_2b2ef739
+Bytes: 77
+Not as far as I know, but will leave the definitive answer to unsuk & stuart.
+
