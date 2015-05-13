@@ -18,6 +18,14 @@ s/that//
 
 clobbered_blocks?
 
+192
+Wed May 13 18:24:41 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2d338121_e08a771b
+UUID: cd1ae5b3_8f10fdd2
+Bytes: 4
+Done
+
 File: tools/releasetools/common.py
 
 1201
@@ -27,6 +35,14 @@ UUID: ad3e91ea_11436e22
 Bytes: 37
 but we still want to emit this check?
 
+1201
+Wed May 13 18:24:41 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: ad3e91ea_11436e22
+UUID: ed2329ea_f6d50e3a
+Bytes: 195
+yeah. currently check_first_block is set to false with this CL. let's re-enable the feature when we can check at a finer-grained (e.g. to exclude some mutable bits, or to only read certain bits).
+
 File: tools/releasetools/sparse_img.py
 
 31
@@ -35,4 +51,12 @@ Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 2d338121_a0fa2f86
 Bytes: 8
 a string
+
+31
+Wed May 13 18:24:41 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2d338121_a0fa2f86
+UUID: ad15b184_ae669652
+Bytes: 4
+Done
 
