@@ -17,3 +17,11 @@ UUID: ad3e91ea_2b2ef739
 Bytes: 77
 Not as far as I know, but will leave the definitive answer to unsuk & stuart.
 
+10:28-11:19
+Wed May 13 18:18:16 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: ad3e91ea_2b2ef739
+UUID: ed2329ea_1b7babee
+Bytes: 91
+This change LGTM - removed libc++.so while keeping the ability to add back libraries later.
+
