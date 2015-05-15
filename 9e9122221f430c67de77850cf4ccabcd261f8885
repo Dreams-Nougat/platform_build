@@ -9,6 +9,14 @@ UUID: 0da4fdb8_36820e03
 Bytes: 26
 used in developer only and
 
+5:36-5:69
+Fri May 15 21:37:42 2015 +0000
+Author: Kevin Cernekee <1067059@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 0da4fdb8_36820e03
+UUID: eda6c9c2_c34f3f15
+Bytes: 4
+Done
+
 6:57-7:29
 Fri May 15 21:32:49 2015 +0000
 Author: Heidi von Markham <1060384@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -16,10 +24,26 @@ UUID: 0da4fdb8_f6008605
 Bytes: 118
 I'd lose the comma and put the final phrase in parentheses. Ex. ... images (as that would open a major security hole).
 
+6:57-7:29
+Fri May 15 21:37:42 2015 +0000
+Author: Kevin Cernekee <1067059@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 0da4fdb8_f6008605
+UUID: cd8d8546_f22de4c2
+Bytes: 4
+Done
+
 32:5-32:6
 Fri May 15 21:32:49 2015 +0000
 Author: Heidi von Markham <1060384@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: eda6c9c2_43ffcf2c
 Bytes: 26
 don't need the comma here.
+
+32:5-32:6
+Fri May 15 21:37:42 2015 +0000
+Author: Kevin Cernekee <1067059@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: eda6c9c2_43ffcf2c
+UUID: 0da4fdb8_36af6e5f
+Bytes: 4
+Done
 
