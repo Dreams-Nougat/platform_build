@@ -1,0 +1,15 @@
+Revision: 045861e91d20936d7b12eed97a92df89c60f7f96
+Patch-set: 3
+File: core/combo/TARGET_linux-arm64.mk
+
+118:24-118:37
+Fri May 15 15:20:33 2015 +0000
+Author: Than McIntosh <1059614@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: edb169f2_b142b01b
+Bytes: 116
+If you are going to add this, you could also add
+
+-Wl,--icf=safe
+
+which is already being used on the arm32 side....?
+
