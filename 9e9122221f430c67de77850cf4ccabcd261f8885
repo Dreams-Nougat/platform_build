@@ -1,0 +1,25 @@
+Revision: 9e9122221f430c67de77850cf4ccabcd261f8885
+Patch-set: 1
+File: target/product/security/README
+
+5:36-5:69
+Fri May 15 21:32:49 2015 +0000
+Author: Heidi von Markham <1060384@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0da4fdb8_36820e03
+Bytes: 26
+used in developer only and
+
+6:57-7:29
+Fri May 15 21:32:49 2015 +0000
+Author: Heidi von Markham <1060384@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0da4fdb8_f6008605
+Bytes: 118
+I'd lose the comma and put the final phrase in parentheses. Ex. ... images (as that would open a major security hole).
+
+32:5-32:6
+Fri May 15 21:32:49 2015 +0000
+Author: Heidi von Markham <1060384@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: eda6c9c2_43ffcf2c
+Bytes: 26
+don't need the comma here.
+
