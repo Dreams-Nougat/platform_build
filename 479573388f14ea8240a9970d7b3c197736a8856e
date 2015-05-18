@@ -41,6 +41,14 @@ UUID: 4dc1956b_5a7d552b
 Bytes: 116
 I think that's a very reasonable assumption. Any other thoughts from anybody else? If not, I'll remove that comment.
 
+5
+Mon May 18 16:52:24 2015 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 4dc1956b_5a7d552b
+UUID: 0da23dbf_26716208
+Bytes: 36
+yes please remove the comment. Thnx.
+
 File: target/board/generic/sepolicy/property_contexts
 
 5
