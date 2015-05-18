@@ -1,0 +1,36 @@
+Revision: 479573388f14ea8240a9970d7b3c197736a8856e
+Patch-set: 1
+File: target/board/generic/sepolicy/goldfish_setup.te
+
+20
+Mon May 18 14:34:31 2015 +0000
+Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8d70ed19_67ea2ca3
+Bytes: 74
+No semicolon required after macro call; will expand to an empty statement.
+
+24
+Mon May 18 14:34:31 2015 +0000
+Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8d70ed19_87de4805
+Bytes: 5
+Ditto
+
+File: target/board/generic/sepolicy/property.te
+
+5
+Mon May 18 14:34:31 2015 +0000
+Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2d9b818e_649f6462
+Bytes: 149
+I don't think so, as it cannot be set at runtime except on the emulator, right?  So we would never need to allow setting it in a non-emulator policy?
+
+File: target/board/generic/sepolicy/property_contexts
+
+5
+Mon May 18 14:34:31 2015 +0000
+Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2d9b818e_24a95c89
+Bytes: 5
+Ditto
+
