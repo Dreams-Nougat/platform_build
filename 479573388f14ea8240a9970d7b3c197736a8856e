@@ -9,6 +9,14 @@ UUID: 8d70ed19_67ea2ca3
 Bytes: 74
 No semicolon required after macro call; will expand to an empty statement.
 
+20
+Mon May 18 15:35:44 2015 +0000
+Author: Yu Ning <1057369@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8d70ed19_67ea2ca3
+UUID: 4dc1956b_3a8aa1b3
+Bytes: 49
+My mistake and a good thing to learn :) Will fix.
+
 24
 Mon May 18 14:34:31 2015 +0000
 Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -24,6 +32,14 @@ Author: Stephen Smalley <1010111@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 2d9b818e_649f6462
 Bytes: 149
 I don't think so, as it cannot be set at runtime except on the emulator, right?  So we would never need to allow setting it in a non-emulator policy?
+
+5
+Mon May 18 15:35:44 2015 +0000
+Author: Yu Ning <1057369@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2d9b818e_649f6462
+UUID: 4dc1956b_5a7d552b
+Bytes: 116
+I think that's a very reasonable assumption. Any other thoughts from anybody else? If not, I'll remove that comment.
 
 File: target/board/generic/sepolicy/property_contexts
 
