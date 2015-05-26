@@ -1,0 +1,11 @@
+Revision: d07498b1384974ce1be5ff7929a67f94a0087d75
+Base-for-patch-set: 2
+File: core/combo/HOST_windows-x86.mk
+
+38
+Tue May 26 08:00:43 2015 +0000
+Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: cdf3c519_582da58e
+Bytes: 116
+it's not very clear why you need to remove these definitions. Maybe add a small line about it in the commit message?
+
