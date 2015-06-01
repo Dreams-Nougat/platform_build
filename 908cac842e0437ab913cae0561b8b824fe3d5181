@@ -1,0 +1,11 @@
+Revision: 908cac842e0437ab913cae0561b8b824fe3d5181
+Patch-set: 1
+File: tools/releasetools/ota_from_target_files.py
+
+601
+Mon Jun 01 21:05:47 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f942104b_e3abda5c
+Bytes: 46
+should this just go in the end of WriteScript?
+
