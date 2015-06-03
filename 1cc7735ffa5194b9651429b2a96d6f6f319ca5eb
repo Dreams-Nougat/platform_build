@@ -1,0 +1,11 @@
+Revision: 1cc7735ffa5194b9651429b2a96d6f6f319ca5eb
+Patch-set: 1
+File: target/board/generic/sepolicy/goldfish_logcat.te
+
+3
+Wed Jun 03 15:45:26 2015 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 59595c72_da0f65e3
+Bytes: 47
+This is already in the core policy. not needed.
+
