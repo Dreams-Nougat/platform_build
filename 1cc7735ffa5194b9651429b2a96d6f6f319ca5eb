@@ -17,3 +17,11 @@ UUID: 7948e0a0_5b49a302
 Bytes: 191
 oh, in the core policy, this is wrapped in a userdebug_or_eng() macro. So technically removing this line would break emulators building for a user build target. So I guess this is fine as-is.
 
+3
+Wed Jun 03 15:47:12 2015 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 59595c72_da0f65e3
+UUID: 395ca863_7992a7db
+Bytes: 40
+only for eng and userdebug, not for user
+
