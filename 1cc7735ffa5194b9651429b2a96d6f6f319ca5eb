@@ -9,3 +9,11 @@ UUID: 59595c72_da0f65e3
 Bytes: 47
 This is already in the core policy. not needed.
 
+3
+Wed Jun 03 15:47:07 2015 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 59595c72_da0f65e3
+UUID: 7948e0a0_5b49a302
+Bytes: 191
+oh, in the core policy, this is wrapped in a userdebug_or_eng() macro. So technically removing this line would break emulators building for a user build target. So I guess this is fine as-is.
+
