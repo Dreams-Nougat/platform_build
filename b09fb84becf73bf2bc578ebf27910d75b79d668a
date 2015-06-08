@@ -15,3 +15,11 @@ Since they are the same files, it's probably better to use a single filter as in
 
 Also, is there any drawback in adding this file to non-ranchu builds at this point? If not it's probably easier to always add the file, so we don't have to manage the list of ranchu build products manually here.
 
+61:0-70:5
+Mon Jun 08 18:34:02 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d9ab8c9c_9b92b95e
+Bytes: 176
+This is wrong file.
+You should add them to target/product/aosp_arm64.mk and target/product/aosp_mips64.mk separately, if the permission file only applies to these two products.
+
