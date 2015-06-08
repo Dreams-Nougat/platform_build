@@ -1,0 +1,17 @@
+Revision: b09fb84becf73bf2bc578ebf27910d75b79d668a
+Patch-set: 1
+File: target/product/emulator.mk
+
+67
+Mon Jun 08 16:20:58 2015 +0000
+Author: David Turner <1000411@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 99ce74a2_57476ecd
+Bytes: 397
+Since they are the same files, it's probably better to use a single filter as in:
+
+  ifneq (,$(filter aosp_mips64 aosp_arm64,$(TARGET_PRODUCT)))
+    PRODUCT_COPY_FILES += .....
+  endif
+
+Also, is there any drawback in adding this file to non-ranchu builds at this point? If not it's probably easier to always add the file, so we don't have to manage the list of ranchu build products manually here.
+
