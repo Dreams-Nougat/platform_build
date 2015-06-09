@@ -1,0 +1,21 @@
+Revision: d62f03976df969b04845e7bd530b521f395fc3cb
+Patch-set: 1
+File: core/clear_vars.mk
+
+184:0-184:28
+Tue Jun 09 01:49:09 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d9d9cc70_7f5a5002
+Bytes: 79
+Why do we need this new variable?
+It looks like we can use just LOCAL_SANITIZE.
+
+File: core/static_library.mk
+
+118:0-118:5
+Tue Jun 09 01:49:09 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 796b8031_516ebfab
+Bytes: 119
+I think the above else block can be removed, if we manipulate some variables to have the first block handle both cases.
+
