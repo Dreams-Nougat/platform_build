@@ -10,6 +10,14 @@ Bytes: 79
 Why do we need this new variable?
 It looks like we can use just LOCAL_SANITIZE.
 
+184:0-184:28
+Tue Jun 09 23:25:29 2015 +0000
+Author: Evgenii Stepanov <1005967@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d9d9cc70_7f5a5002
+UUID: 3937486d_84d848e9
+Bytes: 217
+We set LOCAL_SANITIZE in one of the two builds initiated by this variable setting. Maybe we could use some build-system-internal variable to say "build the current target with sanitizer" and re-purpose LOCAL_SANITIZE?
+
 File: core/static_library.mk
 
 118:0-118:5
