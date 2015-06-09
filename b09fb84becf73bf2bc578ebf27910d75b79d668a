@@ -23,6 +23,16 @@ UUID: b971781d_eb9c25bc
 Bytes: 206
 I have the same question. I'd prefer this file to be added for all applicable architectures, including x86 and x86_64, for which (as well as ARM) we have both ranchu and non-ranchu versions of the emulator.
 
+67
+Tue Jun 09 15:18:07 2015 +0000
+Author: Miroslav Tisma <1072780@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 99ce74a2_57476ecd
+UUID: 79c9c09b_f9b0af81
+Bytes: 501
+If this permission file is added to goldfish target build it will cause connectivity service to request startup of dhcpcd_eth0 service which is not defined in init.goldfish.rc.
+If we define such service in init.goldfish.rc like we did in ranchu, ethernet would take priority over the RIL so all data traffic would go through ethernet interface, otherwise you'll get the message "no such service dhcpcd_eth0" in terminal and RIL would take over the data traffic as usual.
+Would you consider this as ok?
+
 61:0-70:5
 Mon Jun 08 18:34:02 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
