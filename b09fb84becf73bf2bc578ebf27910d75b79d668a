@@ -15,6 +15,14 @@ Since they are the same files, it's probably better to use a single filter as in
 
 Also, is there any drawback in adding this file to non-ranchu builds at this point? If not it's probably easier to always add the file, so we don't have to manage the list of ranchu build products manually here.
 
+67
+Tue Jun 09 01:16:16 2015 +0000
+Author: Yu Ning <1057369@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 99ce74a2_57476ecd
+UUID: b971781d_eb9c25bc
+Bytes: 206
+I have the same question. I'd prefer this file to be added for all applicable architectures, including x86 and x86_64, for which (as well as ARM) we have both ranchu and non-ranchu versions of the emulator.
+
 61:0-70:5
 Mon Jun 08 18:34:02 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
