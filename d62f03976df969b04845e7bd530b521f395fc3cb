@@ -18,6 +18,15 @@ UUID: 3937486d_84d848e9
 Bytes: 217
 We set LOCAL_SANITIZE in one of the two builds initiated by this variable setting. Maybe we could use some build-system-internal variable to say "build the current target with sanitizer" and re-purpose LOCAL_SANITIZE?
 
+184:0-184:28
+Wed Jun 10 00:30:32 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3937486d_84d848e9
+UUID: d902ac8c_bb257be5
+Bytes: 156
+Yes, I think so.
+LOCAL_SANITIZE is supposed to be Android.mk settable. We should use an internal variable to distinguish the auto-generated module variants.
+
 File: core/static_library.mk
 
 118:0-118:5
