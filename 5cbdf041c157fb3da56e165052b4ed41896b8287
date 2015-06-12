@@ -9,6 +9,14 @@ UUID: 59e07c3c_9831e2f7
 Bytes: 59
 We need this because this is called with "make -rR", right?
 
+1:0-2:17
+Fri Jun 12 23:00:58 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 59e07c3c_9831e2f7
+UUID: 390ca8ed_0e347708
+Bytes: 225
+The rest of the build system inherits this from main.mk, but since we're a sub-make, we don't. This is needed so that if there is an error generated from androidbp, it deletes the potentially partially written Android.mk file
+
 File: core/main.mk
 
 490:104-490:107
@@ -18,10 +26,26 @@ UUID: 992af412_2097df9c
 Bytes: 51
 Any other consideration than efficiency to use -rR?
 
+490:104-490:107
+Fri Jun 12 23:00:58 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 992af412_2097df9c
+UUID: 992af412_46a0f47c
+Bytes: 124
+Nope, just efficiency -- i started copying the top of this file, and then discovered -rR, which appears to cover most of it.
+
 497:54-497:69
 Fri Jun 12 22:46:50 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 190364c0_8148607e
 Bytes: 11
 remove this
+
+497:54-497:69
+Fri Jun 12 23:00:58 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 190364c0_8148607e
+UUID: 59095cdc_54a6040f
+Bytes: 4
+Done
 
