@@ -1,0 +1,26 @@
+Revision: 0f5d8b54a4fcd4f5f40bc823fb6537cab295c777
+Patch-set: 5
+File: core/cleanbuild.mk
+
+172:4-172:41
+Fri Jun 12 23:09:52 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 390ca8ed_0ed757eb
+Bytes: 81
+We don't need this.
+I don't think DISABLE_AUTO_INSTALLCLEAN was ever used either.
+
+246:0-247:46
+Fri Jun 12 23:09:52 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 59e07c3c_93d26344
+Bytes: 46
+# The files/dirs to delete during an objclean.
+
+249:1-249:21
+Fri Jun 12 23:09:52 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 390ca8ed_6eb6d3c6
+Bytes: 164
+Please use $(TARGET_OUT_INTERMEDIATES) and $($(TARGET_2ND_ARCH_VAR_PREFIX)TARGET_OUT_INTERMEDIATES), to take care of both obj and obj_arm in case of multilib bulid.
+
