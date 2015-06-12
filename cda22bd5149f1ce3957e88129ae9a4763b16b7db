@@ -1,0 +1,17 @@
+Revision: cda22bd5149f1ce3957e88129ae9a4763b16b7db
+Patch-set: 2
+File: envsetup.sh
+
+179
+Fri Jun 12 17:11:17 2015 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 59095cdc_1d5b17ce
+Bytes: 299
+Nit: it might be better to avoid introducing a new variable here, since you only use it in one place.
+
+What about just modifying this line to read:
+
+  export ANDROID_DEV_SCRIPTS=$T/development/scripts:$T/prebuilts/devtools/tools:$T/external/selinux/prebuilts/bin
+
+and dropping ANDROID_SELINUX_TOOLS?
+
