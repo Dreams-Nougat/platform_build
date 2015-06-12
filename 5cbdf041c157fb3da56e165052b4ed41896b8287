@@ -1,0 +1,27 @@
+Revision: 5cbdf041c157fb3da56e165052b4ed41896b8287
+Patch-set: 2
+File: core/bptransition.mk
+
+1:0-2:17
+Fri Jun 12 22:46:50 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 59e07c3c_9831e2f7
+Bytes: 59
+We need this because this is called with "make -rR", right?
+
+File: core/main.mk
+
+490:104-490:107
+Fri Jun 12 22:46:50 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 992af412_2097df9c
+Bytes: 51
+Any other consideration than efficiency to use -rR?
+
+497:54-497:69
+Fri Jun 12 22:46:50 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 190364c0_8148607e
+Bytes: 11
+remove this
+
