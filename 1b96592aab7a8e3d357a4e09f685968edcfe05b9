@@ -1,0 +1,11 @@
+Revision: 1b96592aab7a8e3d357a4e09f685968edcfe05b9
+Base-for-patch-set: 1
+File: envsetup.sh
+
+178:4-178:10
+Fri Jun 12 17:06:57 2015 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 79254042_66ac1324
+Bytes: 55
+you dropped the export line here. Was that intentional?
+
