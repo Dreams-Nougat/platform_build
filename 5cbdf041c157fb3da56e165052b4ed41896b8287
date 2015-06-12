@@ -17,6 +17,14 @@ UUID: 390ca8ed_0e347708
 Bytes: 225
 The rest of the build system inherits this from main.mk, but since we're a sub-make, we don't. This is needed so that if there is an error generated from androidbp, it deletes the potentially partially written Android.mk file
 
+1:0-2:17
+Fri Jun 12 23:14:37 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 390ca8ed_0e347708
+UUID: 59095cdc_6f009133
+Bytes: 90
+Ah, I was thinking this behavior is on by default. I just double-checked that I was wrong.
+
 File: core/main.mk
 
 490:104-490:107
