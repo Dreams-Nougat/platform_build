@@ -1,0 +1,28 @@
+Revision: be7804e9226988af838be59a373ad797beb8f103
+Patch-set: 5
+File: core/envsetup.mk
+
+279:0-283:5
+Sat Jun 13 00:15:16 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 390ca8ed_c2cb7315
+Bytes: 394
+Let's not move TARGET_OUT_DATA.
+Instead define the new variable directly to  $(PRODUCT_OUT)/$(TARGET_COPY_OUT_DATA), something like:
+ifeq ($(SANITIZE_TARGET),address)
+target_out_shared_libraries_base := $(PRODUCT_OUT)/$(TARGET_COPY_OUT_DATA)
+else
+target_out_shared_libraries_base := $(TARGET_OUT)
+endif
+
+I changed the variable to lowercase because this variable shouldn't be used anywhere else.
+
+File: core/main.mk
+
+434:0-442:5
+Sat Jun 13 00:15:16 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 190364c0_2c5b4bce
+Bytes: 16
+Don't need this.
+

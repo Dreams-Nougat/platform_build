@@ -1,0 +1,11 @@
+Revision: 10b8918a072b7f604adcf4030060a6ce770f108e
+Base-for-patch-set: 5
+File: core/envsetup.mk
+
+305:0-306:57
+Sat Jun 13 00:15:16 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 59095cdc_0f3635a2
+Bytes: 32
+Moving this looks a bit awkward.
+
