@@ -17,6 +17,14 @@ endif
 
 I changed the variable to lowercase because this variable shouldn't be used anywhere else.
 
+279:0-283:5
+Sat Jun 13 00:24:42 2015 +0000
+Author: Evgenii Stepanov <1005967@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 390ca8ed_c2cb7315
+UUID: 99c4b4d3_042d9649
+Bytes: 4
+Done
+
 File: core/main.mk
 
 434:0-442:5
@@ -25,4 +33,12 @@ Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 190364c0_2c5b4bce
 Bytes: 16
 Don't need this.
+
+434:0-442:5
+Sat Jun 13 00:24:42 2015 +0000
+Author: Evgenii Stepanov <1005967@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 190364c0_2c5b4bce
+UUID: 190364c0_ccaa8fdf
+Bytes: 35
+yes, leftover from another approach
 
