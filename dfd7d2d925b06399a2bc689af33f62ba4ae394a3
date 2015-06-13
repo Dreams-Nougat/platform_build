@@ -1,0 +1,11 @@
+Revision: dfd7d2d925b06399a2bc689af33f62ba4ae394a3
+Patch-set: 6
+File: core/main.mk
+
+434:19-434:40
+Sat Jun 13 01:04:35 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 597cfc56_0278ea6c
+Bytes: 11
+still here.
+
