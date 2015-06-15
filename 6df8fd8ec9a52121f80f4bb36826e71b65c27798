@@ -9,3 +9,17 @@ UUID: 597cfc56_6993562c
 Bytes: 292
 The host can use the ubsan runtime to show error messages instead of just aborting. Also, this should probably make use of LOCAL_SANITIZE rather than doing all the configuration itself. There's a bit of cleanup that would need to happen to make that work though. I'll update this CL in a bit.
 
+1032
+Mon Jun 15 18:10:01 2015 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 597cfc56_6993562c
+UUID: 5965dcc2_20bfae1e
+Bytes: 438
+Thanks for looking into this Dan. WFIW, I'm most interested in getting this working on the device, not the host.
+
+I've also read (http://danluu.com/integer-overflow/) that using ubsan to show runtime error messages causes the generation of inefficient code. Quoting that URL:
+
+"The current mechanism that produces nice error messages somehow causes optmizations to get screwed up in a lot of cases."
+
+Not sure if this is still the case...
+
