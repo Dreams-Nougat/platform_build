@@ -31,3 +31,11 @@ UUID: b98a589d_d1309429
 Bytes: 19
 +eugenis: any idea?
 
+1032
+Mon Jun 15 19:52:25 2015 +0000
+Author: Evgenii Stepanov <1005967@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b98a589d_d1309429
+UUID: 796d40b3_198cebb9
+Bytes: 169
+According to https://plus.sandbox.google.com/105487075784331805819/posts/dyKKLrW8jXb, -fsanitize-undefined-trap-on-error should be pretty fast. I don't have the numbers.
+
