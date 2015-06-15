@@ -55,3 +55,13 @@ UUID: 3968289e_1c5db9f8
 Bytes: 130
 I don't really know. You could try adding these checks to the asan build (that's how we often use them) and measuring build times.
 
+1032
+Mon Jun 15 21:07:02 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3968289e_1c5db9f8
+UUID: 594a3c43_9ba0d7af
+Bytes: 168
+Okay. I think we'll just do this as-is for now and see if it can be improved later.
+
+nnk: could you move this block into config_sanitizers.mk? Other than that lgtm now.
+
