@@ -1,0 +1,11 @@
+Revision: 6df8fd8ec9a52121f80f4bb36826e71b65c27798
+Patch-set: 2
+File: core/binary.mk
+
+1032
+Mon Jun 15 17:50:42 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 597cfc56_6993562c
+Bytes: 292
+The host can use the ubsan runtime to show error messages instead of just aborting. Also, this should probably make use of LOCAL_SANITIZE rather than doing all the configuration itself. There's a bit of cleanup that would need to happen to make that work though. I'll update this CL in a bit.
+
