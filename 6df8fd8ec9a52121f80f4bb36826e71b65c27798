@@ -47,3 +47,11 @@ UUID: 594a3c43_382d314a
 Bytes: 149
 I meant the performance issues of *not* doing that. Should it be okay to use the ubsan runtime on the host, or is that going to be too much of a hit?
 
+1032
+Mon Jun 15 20:38:03 2015 +0000
+Author: Evgenii Stepanov <1005967@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 594a3c43_382d314a
+UUID: 3968289e_1c5db9f8
+Bytes: 130
+I don't really know. You could try adding these checks to the asan build (that's how we often use them) and measuring build times.
+
