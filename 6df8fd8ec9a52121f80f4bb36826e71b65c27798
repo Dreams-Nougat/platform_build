@@ -39,3 +39,11 @@ UUID: 796d40b3_198cebb9
 Bytes: 169
 According to https://plus.sandbox.google.com/105487075784331805819/posts/dyKKLrW8jXb, -fsanitize-undefined-trap-on-error should be pretty fast. I don't have the numbers.
 
+1032
+Mon Jun 15 20:03:46 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 796d40b3_198cebb9
+UUID: 594a3c43_382d314a
+Bytes: 149
+I meant the performance issues of *not* doing that. Should it be okay to use the ubsan runtime on the host, or is that going to be too much of a hit?
+
