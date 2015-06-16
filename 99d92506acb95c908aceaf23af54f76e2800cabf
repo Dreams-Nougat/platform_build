@@ -25,3 +25,11 @@ UUID: b98a589d_1afe8ce3
 Bytes: 129
 What do you think of a new libc function, something like abort_integer_overflow(), which would make this crash even more obvious?
 
+112
+Tue Jun 16 18:04:58 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b98a589d_1afe8ce3
+UUID: 594a3c43_a739f806
+Bytes: 123
+oh, we can supply an arbitrary function here? sgtm. (we should probably stick a couple of underscores on the front though.)
+
