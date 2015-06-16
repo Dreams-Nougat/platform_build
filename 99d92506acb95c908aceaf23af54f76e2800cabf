@@ -9,3 +9,11 @@ UUID: f95690ec_32370eed
 Bytes: 221
 are we going to move existing -ftrapv users like libpng over to this? i suspect an abort will be a lot less painful to debug that the current SIGILLs, which always end up on cferris' desk because of their non-obviousness.
 
+112
+Tue Jun 16 17:53:04 2015 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f95690ec_32370eed
+UUID: 796d40b3_ed592988
+Bytes: 14
+yes we should.
+
