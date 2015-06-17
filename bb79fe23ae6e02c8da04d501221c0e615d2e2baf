@@ -1,5 +1,14 @@
 Revision: bb79fe23ae6e02c8da04d501221c0e615d2e2baf
 Patch-set: 2
+File: core/combo/arch/arm/armv7-a-neon.mk
+
+105:0-105:36
+Wed Jun 17 23:04:29 2015 +0000
+Author: Serban Constantinescu <1072549@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5e114241_ba6f51f0
+Bytes: 222
+Ian would't this be enough? Or are you thinking about how ART does it? Other options would be declaring a new generic64 which enables the extra options, or aiding ART's infrastructure to take a look at the TARGET_ARCH too.
+
 File: target/board/generic_arm64/BoardConfig.mk
 
 54:26-54:33
@@ -8,4 +17,12 @@ Author: Ian Rogers <1010118@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 7942a031_cb7b7572
 Bytes: 196
 This will mean 32-bit code on ARM64 using the generic ARM64 board config will lose LPAE optimizations, etc. cortex-a15 seems unfortunate, but generic is overly conservative. Is there a better fix?
+
+54:26-54:33
+Wed Jun 17 23:04:29 2015 +0000
+Author: Serban Constantinescu <1072549@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7942a031_cb7b7572
+UUID: fef4b642_7fa08fae
+Bytes: 109
+Ian please see my other comment. No we should definitely not lose these optimisations for 32bit ARMv8 builds!
 
