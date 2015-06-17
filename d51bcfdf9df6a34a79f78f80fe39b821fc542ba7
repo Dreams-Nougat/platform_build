@@ -1,0 +1,27 @@
+Revision: d51bcfdf9df6a34a79f78f80fe39b821fc542ba7
+Patch-set: 1
+File: /COMMIT_MSG
+
+13:0-14:60
+Wed Jun 17 13:24:33 2015 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 99abd4ef_c6b6e62b
+Bytes: 128
+the only user of LOCAL_DETECT_INTEGER_OVERFLOW was reverted, so nobody is using this today. We should just delete it in this CL.
+
+File: core/config_sanitizers.mk
+
+42
+Wed Jun 17 13:24:33 2015 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b99c18d9_8a9cda72
+Bytes: 101
+Recommend deleting LOCAL_DETECT_INTEGER_OVERFLOWS in this commit, since nobody is using it right now.
+
+49:0-53:7
+Wed Jun 17 13:24:33 2015 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 19b8c43c_255b64ce
+Bytes: 76
+This can be deleted. The flags will end up being added in lines 60-67 below.
+
