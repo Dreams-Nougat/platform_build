@@ -9,6 +9,14 @@ UUID: 99abd4ef_c6b6e62b
 Bytes: 128
 the only user of LOCAL_DETECT_INTEGER_OVERFLOW was reverted, so nobody is using this today. We should just delete it in this CL.
 
+13:0-14:60
+Wed Jun 17 20:54:06 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 99abd4ef_c6b6e62b
+UUID: d9262c9c_694b61a9
+Bytes: 17
+Oh, okay. Can do.
+
 File: core/config_sanitizers.mk
 
 42
