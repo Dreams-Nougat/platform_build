@@ -1,0 +1,11 @@
+Revision: 1a736295e12372a9e0626d6ebb8812494cd827c0
+Patch-set: 4
+File: core/main.mk
+
+491:17-491:33
+Thu Jun 18 20:16:12 2015 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3e700ec3_0d0f0137
+Bytes: 112
+This should go in a subdirectory of $(OUT_DIR) to avoid soong accidentally clobbering any part of the make build
+
