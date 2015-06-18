@@ -1,0 +1,18 @@
+Revision: e82d48616c5c2c5bd69ea5fa8bb4f6e8e429d473
+Patch-set: 2
+File: target/product/aosp_arm64.mk
+
+21
+Thu Jun 18 19:24:33 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9e7adaa8_5a613531
+Bytes: 66
+Please move it up here, before inheriting from any other products.
+
+31
+Thu Jun 18 19:24:33 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1e67ca0f_cc7caf2f
+Bytes: 60
+The convention is to put the above overriding at the bottom.
+
