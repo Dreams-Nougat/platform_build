@@ -9,6 +9,14 @@ UUID: 5e114241_ba6f51f0
 Bytes: 222
 Ian would't this be enough? Or are you thinking about how ART does it? Other options would be declaring a new generic64 which enables the extra options, or aiding ART's infrastructure to take a look at the TARGET_ARCH too.
 
+105:0-105:36
+Thu Jun 18 21:35:59 2015 +0000
+Author: Ian Rogers <1010118@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5e114241_ba6f51f0
+UUID: 3e700ec3_c87c972f
+Bytes: 113
+Oh ok, I follow you. Won't this break if ARM 32 is the primary architecture and ARM 64 the secondary? Do we care?
+
 File: target/board/generic_arm64/BoardConfig.mk
 
 54:26-54:33
