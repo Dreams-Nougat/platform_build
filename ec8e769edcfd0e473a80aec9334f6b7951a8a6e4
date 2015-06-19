@@ -1,0 +1,18 @@
+Revision: ec8e769edcfd0e473a80aec9334f6b7951a8a6e4
+Patch-set: 1
+File: core/binary.mk
+
+27:36-27:105
+Fri Jun 19 00:14:20 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1e67ca0f_75999ffe
+Bytes: 9
+see here.
+
+112:34-112:43
+Fri Jun 19 00:14:20 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9e7adaa8_899f893b
+Bytes: 109
+This is the default now, after you have removed libstdc++ from TARGET_DEFAULT_SYSTEM_SHARED_LIBRARIES, right?
+
