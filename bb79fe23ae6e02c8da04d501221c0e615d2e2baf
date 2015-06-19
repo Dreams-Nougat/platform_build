@@ -17,6 +17,24 @@ UUID: 3e700ec3_c87c972f
 Bytes: 113
 Oh ok, I follow you. Won't this break if ARM 32 is the primary architecture and ARM 64 the secondary? Do we care?
 
+105:0-105:36
+Fri Jun 19 14:03:14 2015 +0000
+Author: Serban Constantinescu <1072549@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3e700ec3_c87c972f
+UUID: 7e7526b8_b628a60f
+Bytes: 469
+Great catch! It would ... have not really thought or ARM32 primary.  Then the perfect solution is replacing 
+
+ifeq ($(strip $(TARGET_ARCH)),arm64)
+
+with
+
+ifneq (,$(filter $(TARGET_$(combo_2nd_arch_prefix)CPU_VARIANT), $(SUPPORTED_ARMV8_CPU_VARIANTS))
+
+(defined at the top of the file)
+
+This way all 32bit of ARMv8 CPU_VARIANTs will be picking up the correct flags. And we do not rely on the, otherwise faulty, assumption that only ARM64 targets have the extra features.
+
 File: target/board/generic_arm64/BoardConfig.mk
 
 54:26-54:33
