@@ -9,3 +9,11 @@ UUID: 9e7adaa8_cc9825cd
 Bytes: 35
 isn't gold the default one for arm?
 
+141
+Mon Jun 22 19:58:02 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 9e7adaa8_cc9825cd
+UUID: 5efea270_87357409
+Bytes: 119
+Oh, I forgot that I had reworked this CL so the gold folks could take a look. Guess I didn't test anything after all...
+
