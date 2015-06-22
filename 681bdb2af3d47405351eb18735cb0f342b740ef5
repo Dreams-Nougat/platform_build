@@ -1,0 +1,11 @@
+Revision: 681bdb2af3d47405351eb18735cb0f342b740ef5
+Patch-set: 8
+File: core/cxx_stl_setup.mk
+
+49
+Mon Jun 22 20:00:00 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7ef6069f_3105e883
+Bytes: 58
+dimitry: will your version script allow me to remove this?
+
