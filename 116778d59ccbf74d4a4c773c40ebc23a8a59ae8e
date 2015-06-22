@@ -1,0 +1,13 @@
+Revision: 116778d59ccbf74d4a4c773c40ebc23a8a59ae8e
+Patch-set: 1
+File: core/main.mk
+
+1011:0-1011:46
+Mon Jun 22 18:23:47 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5e2782f4_f0c99848
+Bytes: 143
+I think it's more convenient to just use an environmental variable that you can export in your shell:
+ifneq ($(ANDROID_NO_TEST_CHECK),true)
+...
+
