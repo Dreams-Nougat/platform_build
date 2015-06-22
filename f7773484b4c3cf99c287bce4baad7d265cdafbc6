@@ -1,0 +1,11 @@
+Revision: f7773484b4c3cf99c287bce4baad7d265cdafbc6
+Patch-set: 7
+File: core/combo/TARGET_linux-arm.mk
+
+141
+Mon Jun 22 19:40:42 2015 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9e7adaa8_cc9825cd
+Bytes: 35
+isn't gold the default one for arm?
+

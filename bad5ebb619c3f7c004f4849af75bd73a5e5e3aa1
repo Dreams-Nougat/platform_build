@@ -1,0 +1,11 @@
+Revision: bad5ebb619c3f7c004f4849af75bd73a5e5e3aa1
+Base-for-patch-set: 7
+File: core/combo/TARGET_linux-arm.mk
+
+139
+Mon Jun 22 19:40:42 2015 +0000
+Author: Dimitry Ivanov <1041673@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9e7adaa8_0cc5bd9b
+Bytes: 40
+I do not think we want to remove this...
+
