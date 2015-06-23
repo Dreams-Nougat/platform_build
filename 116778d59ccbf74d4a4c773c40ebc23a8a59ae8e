@@ -11,3 +11,11 @@ I think it's more convenient to just use an environmental variable that you can 
 ifneq ($(ANDROID_NO_TEST_CHECK),true)
 ...
 
+1011:0-1011:46
+Tue Jun 23 13:50:24 2015 +0000
+Author: Johan Redestig <1002951@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5e2782f4_f0c99848
+UUID: 9efbba85_0fa529be
+Bytes: 4
+Done
+
