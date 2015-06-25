@@ -24,3 +24,13 @@ UUID: 9e99fafb_02f46e80
 Bytes: 81
 Because in this case config_sanitizer.mk will decide not to sanitize the library.
 
+6
+Thu Jun 25 23:57:24 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 9e99fafb_02f46e80
+UUID: fe6116bc_9dee2381
+Bytes: 187
+Then also need to check the case of `LOCAL_SANITIZE := never`, right?
+
+Also, this should probably be in config_sanitizers.mk. I believe I already do something like this for SANITIZE_HOST.
+
