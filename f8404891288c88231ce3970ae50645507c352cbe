@@ -1,0 +1,18 @@
+Revision: f8404891288c88231ce3970ae50645507c352cbe
+Patch-set: 2
+File: core/shared_library.mk
+
+2:10-2:11
+Thu Jun 25 23:53:00 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9e99fafb_22c08a1e
+Bytes: 10
+sanitized?
+
+6
+Thu Jun 25 23:53:00 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9e99fafb_42bd96b1
+Bytes: 4
+Why?
+
