@@ -16,3 +16,11 @@ UUID: 9e99fafb_42bd96b1
 Bytes: 4
 Why?
 
+6
+Thu Jun 25 23:55:20 2015 +0000
+Author: Evgenii Stepanov <1005967@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 9e99fafb_42bd96b1
+UUID: 9e99fafb_02f46e80
+Bytes: 81
+Because in this case config_sanitizer.mk will decide not to sanitize the library.
+
