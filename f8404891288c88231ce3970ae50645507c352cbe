@@ -9,6 +9,14 @@ UUID: 9e99fafb_22c08a1e
 Bytes: 10
 sanitized?
 
+2:10-2:11
+Fri Jun 26 00:35:42 2015 +0000
+Author: Evgenii Stepanov <1005967@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 9e99fafb_22c08a1e
+UUID: 9e99fafb_c23b665a
+Bytes: 4
+Done
+
 6
 Thu Jun 25 23:53:00 2015 +0000
 Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -33,4 +41,12 @@ Bytes: 187
 Then also need to check the case of `LOCAL_SANITIZE := never`, right?
 
 Also, this should probably be in config_sanitizers.mk. I believe I already do something like this for SANITIZE_HOST.
+
+6
+Fri Jun 26 00:35:42 2015 +0000
+Author: Evgenii Stepanov <1005967@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: fe6116bc_9dee2381
+UUID: be731e93_bb668fa0
+Bytes: 4
+Done
 
