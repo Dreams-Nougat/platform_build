@@ -1,0 +1,12 @@
+Revision: 40b7e4b4ffabef7e55f66d7bc583c14c874c7757
+Patch-set: 1
+File: core/clear_vars.mk
+
+196:0-196:32
+Thu Jul 02 17:38:02 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 130345c0_98c9f522
+Bytes: 94
+it seems unlikely we would need these variants.
+We can add them only when we really need them.
+
