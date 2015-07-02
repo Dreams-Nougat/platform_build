@@ -9,3 +9,11 @@ UUID: d31c4d21_d9dd3709
 Bytes: 53
 This is good. I think we can also do so in androidbp.
 
+20:0-21:55
+Thu Jul 02 04:03:21 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d31c4d21_d9dd3709
+UUID: 53093ddc_5a12b50c
+Bytes: 107
+Yep. soong does even better at avoiding extra compiles, but either approach will support this optimization.
+
