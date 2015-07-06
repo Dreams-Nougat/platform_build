@@ -11,3 +11,12 @@ Just out of curiosity, it seems the symlink permission on Linux should always be
 
 (And the other change below actually makes no difference other than the wrong comment.)
 
+139:50-139:58
+Mon Jul 06 22:18:20 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 736d61b3_7966bfce
+UUID: 135425e3_33a1d2f7
+Bytes: 95
+It seems that's not the the case on Mac.
+I changed IsRegular() to use the same pattern as this.
+
