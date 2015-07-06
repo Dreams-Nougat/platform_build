@@ -19,3 +19,11 @@ Not sure about Android, but google3 style would go for Elliott's proposal.
 
 However, this is simply re-using what's been done for WriteIncrementalOTAPackage and WriteFullOTAPackage. The re-styling could be done in https://googleplex-android-review.git.corp.google.com/#/c/721058
 
+741
+Mon Jul 06 16:31:42 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f3ba3136_98e39953
+UUID: f3ba3136_8305ee47
+Bytes: 94
+agreed with "if oem_props:". i'll leave it in the refactor CL since there are multiple copies.
+
