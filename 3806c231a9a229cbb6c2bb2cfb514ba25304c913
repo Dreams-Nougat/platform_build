@@ -9,3 +9,13 @@ UUID: f3ba3136_98e39953
 Bytes: 92
 i think this can be written as "if oem_props:" but i'm not sure which is the approved style.
 
+741
+Mon Jul 06 16:30:08 2015 +0000
+Author: Alain Vongsouvanh <1072623@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f3ba3136_98e39953
+UUID: d31c4d21_eaddaf08
+Bytes: 278
+Not sure about Android, but google3 style would go for Elliott's proposal.
+
+However, this is simply re-using what's been done for WriteIncrementalOTAPackage and WriteFullOTAPackage. The re-styling could be done in https://googleplex-android-review.git.corp.google.com/#/c/721058
+
