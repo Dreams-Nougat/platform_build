@@ -1,0 +1,13 @@
+Revision: 2ffb3147bc3e44fa76a470f181f5923fbdce9c77
+Patch-set: 2
+File: tools/releasetools/ota_from_target_files.py
+
+139:50-139:58
+Mon Jul 06 21:27:23 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 736d61b3_7966bfce
+Bytes: 269
+Just out of curiosity, it seems the symlink permission on Linux should always be 0o777 (http://man7.org/linux/man-pages/man7/symlink.7.html). Do we have any counter case somewhere?
+
+(And the other change below actually makes no difference other than the wrong comment.)
+
