@@ -1,0 +1,11 @@
+Revision: 3806c231a9a229cbb6c2bb2cfb514ba25304c913
+Patch-set: 1
+File: tools/releasetools/ota_from_target_files.py
+
+741
+Mon Jul 06 15:49:31 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f3ba3136_98e39953
+Bytes: 92
+i think this can be written as "if oem_props:" but i'm not sure which is the approved style.
+
