@@ -20,3 +20,13 @@ Bytes: 95
 It seems that's not the the case on Mac.
 I changed IsRegular() to use the same pattern as this.
 
+139:50-139:58
+Tue Jul 07 03:02:57 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 135425e3_33a1d2f7
+UUID: 58e87a65_a2acbe25
+Bytes: 121
+Thanks, Ying. That sounds reasonable. I've never tried running the scripts on Mac though.
+
+I'll verify and sbumit the CL.
+
