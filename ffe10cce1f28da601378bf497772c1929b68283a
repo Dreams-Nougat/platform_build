@@ -1,0 +1,25 @@
+Revision: ffe10cce1f28da601378bf497772c1929b68283a
+Patch-set: 1
+File: tools/atree/files.cpp
+
+342:15-342:17
+Wed Jul 08 22:04:58 2015 +0000
+Author: Siva Velusamy <1010055@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 534a1d43_c83d2880
+Bytes: 16
+nit: extra space
+
+346:42-346:45
+Wed Jul 08 22:04:58 2015 +0000
+Author: Siva Velusamy <1010055@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f356b1ec_82321ff7
+Bytes: 56
+nit: we seem to be using && everywhere else in this file
+
+347:12-347:34
+Wed Jul 08 22:04:58 2015 +0000
+Author: Siva Velusamy <1010055@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f356b1ec_027aaf6d
+Bytes: 186
+sorry, i don't know much about this tool, but with this change, it seems like you are looping through the vectir "search", but nothing changes in the loop if rec->sourceName is absolute?
+
