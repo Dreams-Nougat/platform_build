@@ -1,0 +1,11 @@
+Revision: 23595346239d61572b06e4ce06e49f9dd5521a94
+Patch-set: 1
+File: core/pathmap.mk
+
+19
+Wed Jul 08 20:17:09 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 135425e3_c228a414
+Bytes: 102
+wangying: should there be a comment here suggesting people should use LOCAL_EXPORT_C_INCLUDES instead?
+
