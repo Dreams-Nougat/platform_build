@@ -27,3 +27,11 @@ Bytes: 283
 Hmm, I forgot about the fact linker is a static executable.
 On the other hand, is it possible to make this a runtime decision? e.g. passing an option when the linker is called? or make linker_asan a symlink of linker and in the code see  if the executable is called as "linker_asan"?
 
+99:0-99:5
+Mon Jul 13 18:10:14 2015 +0000
+Author: Evgenii Stepanov <1005967@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 18dc42fc_aa56e39f
+UUID: 987af2a8_465ab4c6
+Bytes: 37
+OK, I'll try this approach (symlink).
+
