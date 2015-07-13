@@ -9,3 +9,12 @@ UUID: 58d23ae8_a1192881
 Bytes: 68
 You don't need this, if we rebuild the linker with name linker_asan.
 
+99:0-99:5
+Mon Jul 13 18:00:30 2015 +0000
+Author: Evgenii Stepanov <1005967@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 58d23ae8_a1192881
+UUID: 78753eb8_c2e79c21
+Bytes: 194
+Without this, nothing depends on linker_asan in the first build.
+And we don't build the linker in the second build at all, because it should not (and can not) be build with ASan instrumentation.
+
