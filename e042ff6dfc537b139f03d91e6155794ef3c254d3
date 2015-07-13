@@ -1,0 +1,11 @@
+Revision: e042ff6dfc537b139f03d91e6155794ef3c254d3
+Patch-set: 1
+File: target/product/embedded.mk
+
+99:0-99:5
+Mon Jul 13 17:57:20 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 58d23ae8_a1192881
+Bytes: 68
+You don't need this, if we rebuild the linker with name linker_asan.
+
