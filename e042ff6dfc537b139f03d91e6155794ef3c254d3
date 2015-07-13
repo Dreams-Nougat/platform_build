@@ -18,3 +18,12 @@ Bytes: 194
 Without this, nothing depends on linker_asan in the first build.
 And we don't build the linker in the second build at all, because it should not (and can not) be build with ASan instrumentation.
 
+99:0-99:5
+Mon Jul 13 18:07:11 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 78753eb8_c2e79c21
+UUID: 18dc42fc_aa56e39f
+Bytes: 283
+Hmm, I forgot about the fact linker is a static executable.
+On the other hand, is it possible to make this a runtime decision? e.g. passing an option when the linker is called? or make linker_asan a symlink of linker and in the code see  if the executable is called as "linker_asan"?
+
