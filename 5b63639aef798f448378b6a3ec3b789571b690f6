@@ -1,0 +1,11 @@
+Revision: 5b63639aef798f448378b6a3ec3b789571b690f6
+Patch-set: 1
+File: core/config_sanitizers.mk
+
+86:4-87:36
+Tue Jul 14 01:46:35 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9870321a_0ac41f08
+Bytes: 90
+nit: we mixed hardcoding flags in this file, and using constants defined in the config.mk.
+
