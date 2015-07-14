@@ -35,3 +35,12 @@ UUID: 987af2a8_465ab4c6
 Bytes: 37
 OK, I'll try this approach (symlink).
 
+99:0-99:5
+Tue Jul 14 18:21:29 2015 +0000
+Author: Evgenii Stepanov <1005967@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 987af2a8_465ab4c6
+UUID: 187d22ed_2e7f33d7
+Bytes: 68
+Removed.
+Oh, maybe I should re-add this block with $SANITIZE_TARGET?
+
