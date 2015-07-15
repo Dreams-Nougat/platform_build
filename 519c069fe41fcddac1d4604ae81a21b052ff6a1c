@@ -1,0 +1,12 @@
+Revision: 519c069fe41fcddac1d4604ae81a21b052ff6a1c
+Patch-set: 2
+File: /COMMIT_MSG
+
+10:30-11:19
+Wed Jul 15 23:48:00 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 78f7fee1_e9831f56
+Bytes: 420
+Actually the convention is to build module into their intermediate directory and add new rule to copy it to the $(PRODUCT_OUT) if necessary. Especially for packaging rule with staging files in the intermediate dir, that way you can avoid absolute path in the build recipe. Absolute path is considered bad, because it makes it harder to replay the command.
+If there is no other reason, I'd prefer not ot make this change.
+
