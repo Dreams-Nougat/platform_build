@@ -21,3 +21,15 @@ We can not label the ttyS* as cosole_device because it's already labeled as seri
 
 ttyAMA* is the Ranchu emulator (aka qemu2) serial device for ARM64, and is still not triggered by the init, because there is no -shell support for Ranchu yet. This is just in preparation for the future -shell support.
 
+8
+Thu Jul 16 18:04:33 2015 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b8fdf6c1_8b615134
+UUID: f8404ed5_b9f00f8e
+Bytes: 217
+You can change it here. Just add the following line:
+
+  /dev/ttyS2  u:object_r:console_device:s0
+
+to this file. It's completely legal and permitted to do that, and will restrict this modification to the emulator only.
+
