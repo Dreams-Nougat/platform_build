@@ -1,0 +1,11 @@
+Revision: 8640c88a3a07d2afb1e4d045d04db68c9d0cac9d
+Patch-set: 3
+File: /COMMIT_MSG
+
+12
+Thu Jul 16 18:30:11 2015 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5834fa65_71faa2b4
+Bytes: 121
+not accurate anymore. This change only ensures the console device is properly labeled. No new rules are added or removed.
+
