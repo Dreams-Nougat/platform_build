@@ -33,3 +33,13 @@ You can change it here. Just add the following line:
 
 to this file. It's completely legal and permitted to do that, and will restrict this modification to the emulator only.
 
+8
+Thu Jul 16 18:27:25 2015 +0000
+Author: Miodrag Dinic <1050647@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f8404ed5_b9f00f8e
+UUID: b8fdf6c1_6ec86398
+Bytes: 160
+Done.
+
+I guess I tried to label all of them (ttyS[0-9]*) as console_device and then broke the build. Thanks for your input about how SELinux parses this labels.
+
