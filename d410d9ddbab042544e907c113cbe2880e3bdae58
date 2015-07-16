@@ -1,0 +1,11 @@
+Revision: d410d9ddbab042544e907c113cbe2880e3bdae58
+Patch-set: 1
+File: target/board/generic/sepolicy/file_contexts
+
+8
+Thu Jul 16 17:41:14 2015 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3837466d_f0522ee3
+Bytes: 61
+shouldn't this be console_device and drop the init.te change?
+
