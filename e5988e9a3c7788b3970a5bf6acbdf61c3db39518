@@ -9,3 +9,11 @@ UUID: 987f5221_a069a273
 Bytes: 78
 Shouldn't this be in $PRODUCT_OUT, since it's dependent on the TARGET_PRODUCT?
 
+128
+Fri Jul 17 21:53:36 2015 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 987f5221_a069a273
+UUID: 586b1a6a_192d9749
+Bytes: 85
+Sure, although it gets rewritten every time you run make, so it doesn't really matter
+
