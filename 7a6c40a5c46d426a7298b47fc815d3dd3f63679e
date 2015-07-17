@@ -9,6 +9,16 @@ UUID: 987f5221_55bc3e25
 Bytes: 72
 But recovery_resources_private is assigned with only one directory here.
 
+776:0-776:84
+Fri Jul 17 22:58:14 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 987f5221_55bc3e25
+UUID: 586b1a6a_04552a21
+Bytes: 95
+Agreed.
+
+Yezhong, did you mean something like "$(wildcard $(TARGET_DEVICE_DIR)/recovery/res*)"?
+
 847:10-847:25
 Fri Jul 17 18:56:24 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -17,4 +27,13 @@ Bytes: 116
 Hmm, this indicates the author used to think there might be more than one items.
 I am not the original author.
 +tbao
+
+848:47-848:58
+Fri Jul 17 22:58:14 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 586b1a6a_c437120b
+Bytes: 120
+I'd prefer to not put the extra white space before $(newline).
+
+"cp -rf $(item) $(TARGET_RECOVERY_ROOT_OUT)/$(newline))"
 
