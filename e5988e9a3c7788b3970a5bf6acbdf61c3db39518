@@ -9,6 +9,21 @@ UUID: 188c4286_4a27b742
 Bytes: 176
 Hmm, I used to see other such uses of BUILD_NUMBER (or the root of the uncertainty, "date")in some Android.mks, e.g to generate a unique ID and pass to the compiler as a macro.
 
+14:0-21:15
+Fri Jul 17 22:42:05 2015 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 188c4286_4a27b742
+UUID: 188c4286_8a46ffd2
+Bytes: 135
+I found all of the ones that caused rebuilds for make && make for the aosp_arm64-eng target in aosp master, but I'm sure there are more
+
+25
+Fri Jul 17 22:42:05 2015 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 38858659_050c42ad
+Bytes: 6
+whoops
+
 File: core/Makefile
 
 128
