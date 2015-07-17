@@ -17,3 +17,13 @@ UUID: 586b1a6a_192d9749
 Bytes: 85
 Sure, although it gets rewritten every time you run make, so it doesn't really matter
 
+128
+Fri Jul 17 22:02:54 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 586b1a6a_192d9749
+UUID: 386e667b_7d44bf1b
+Bytes: 194
+Unless there are two builds of make running with different products being created under the same $OUT. This mostly works today.
+
+I guess kati/ninja would break that anyway... so not a huge deal.
+
