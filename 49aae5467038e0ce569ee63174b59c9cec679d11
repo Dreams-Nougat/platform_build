@@ -45,6 +45,14 @@ None of those have been computed yet for the case where the product is specified
 
 but I agree we should figure out how to get that info, and also store build.ninja in $(PRODUCT_OUT) since it is product-specific.
 
+3
+Fri Jul 17 23:17:56 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 188c4286_45e808f1
+UUID: 987f5221_fb0bdb95
+Bytes: 41
+Ah, I didn't know the PRODUCT-XXX target.
+
 18
 Fri Jul 17 23:08:17 2015 +0000
 Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
