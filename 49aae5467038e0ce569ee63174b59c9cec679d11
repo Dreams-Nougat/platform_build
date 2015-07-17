@@ -15,6 +15,14 @@ Maybe add something like
 
 just in case?
 
+1
+Fri Jul 17 23:12:37 2015 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 58823a52_0101940f
+UUID: 58823a52_e12490be
+Bytes: 78
+Adding darwin support should be pretty easy, I plan to do it before submitting
+
 3
 Fri Jul 17 23:08:17 2015 +0000
 Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -24,6 +32,18 @@ Maybe we could have $(TARGET_PRODUCT)-$(TARGET_BUILD_VARIANT)-$(TARGET_BUILD_TYP
 
  KATI_OUTPUT_SUFFIX := $(TARGET_PRODUCT)-$(TARGET_BUILD_VARIANT)-$(TARGET_BUILD_TYPE)
  KATI_OUTPUTS := build-$(KATI_OUTPUT_SUFFIX).ninja ninja-$(KATI_OUTPUT_SUFFIX).sh
+
+3
+Fri Jul 17 23:12:37 2015 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d8754a3f_cb0aca29
+UUID: 188c4286_45e808f1
+Bytes: 274
+None of those have been computed yet for the case where the product is specified on the command line, for example
+
+ make PRODUCT-aosp_arm64-eng
+
+but I agree we should figure out how to get that info, and also store build.ninja in $(PRODUCT_OUT) since it is product-specific.
 
 18
 Fri Jul 17 23:08:17 2015 +0000
