@@ -1,0 +1,11 @@
+Revision: e5988e9a3c7788b3970a5bf6acbdf61c3db39518
+Patch-set: 1
+File: core/Makefile
+
+128
+Fri Jul 17 20:51:00 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 987f5221_a069a273
+Bytes: 78
+Shouldn't this be in $PRODUCT_OUT, since it's dependent on the TARGET_PRODUCT?
+
