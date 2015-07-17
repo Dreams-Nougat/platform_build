@@ -1,0 +1,20 @@
+Revision: 7a6c40a5c46d426a7298b47fc815d3dd3f63679e
+Patch-set: 1
+File: core/Makefile
+
+776:0-776:84
+Fri Jul 17 18:56:24 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 987f5221_55bc3e25
+Bytes: 72
+But recovery_resources_private is assigned with only one directory here.
+
+847:10-847:25
+Fri Jul 17 18:56:24 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 787a9e34_dfb36b3a
+Bytes: 116
+Hmm, this indicates the author used to think there might be more than one items.
+I am not the original author.
++tbao
+
