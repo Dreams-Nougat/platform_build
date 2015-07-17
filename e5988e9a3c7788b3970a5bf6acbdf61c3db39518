@@ -27,3 +27,12 @@ Unless there are two builds of make running with different products being create
 
 I guess kati/ninja would break that anyway... so not a huge deal.
 
+128
+Fri Jul 17 22:33:30 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 386e667b_7d44bf1b
+UUID: f88e8e7f_44e24cc4
+Bytes: 67
+Better to move to $(PRODUCT_OUT).
+We don't rewrite if mkdb is used.
+
