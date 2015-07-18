@@ -60,3 +60,18 @@ UUID: 38858659_8554b24a
 Bytes: 49
 ... and add --ninja_suffix=-$(KATI_OUTPUT_SUFFIX)
 
+13:0-21:6
+Sat Jul 18 00:34:15 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b8709650_a2e684a9
+Bytes: 230
+Hmm, I have never used make's .INTERMEDIATE feature.
+How is this different from:
+$(KATI_OUTPUTS): $(KATI) FORCE
+  @echo Running kati to generate build.ninja...
+  @$(KATI) --ninja ...
+
+or as simple as
+$(shell $(KATI) --ninja ...)
+?
+
