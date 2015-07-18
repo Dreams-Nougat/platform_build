@@ -75,3 +75,11 @@ or as simple as
 $(shell $(KATI) --ninja ...)
 ?
 
+13:0-21:6
+Sat Jul 18 00:36:09 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b8709650_a2e684a9
+UUID: f88e8e7f_f880c0d6
+Bytes: 78
+Oh, we need an intermediate target because $(KATI_OUTPUTS) includes two files.
+
