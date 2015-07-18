@@ -60,6 +60,16 @@ UUID: 38858659_8554b24a
 Bytes: 49
 ... and add --ninja_suffix=-$(KATI_OUTPUT_SUFFIX)
 
+18
+Sat Jul 18 01:55:40 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 38858659_8554b24a
+UUID: 586b1a6a_df2effcb
+Bytes: 207
+I forgot to mention, I've added --detect_android_echo flag and you need to specify this flag if you'll update the ckati binary.
+
+https://github.com/google/kati/commit/33e108b7df476e20fd7c3bbe26a75fff00e66cc6
+
 13:0-21:6
 Sat Jul 18 00:34:15 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
