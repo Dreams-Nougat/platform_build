@@ -1,0 +1,11 @@
+Revision: eea4afc79382ddf47866ebe293f962e0dc5495d3
+Patch-set: 2
+File: core/droiddoc.mk
+
+135:64-135:66
+Sat Jul 18 19:15:46 2015 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b8709650_56b3e5d4
+Bytes: 38
+this is over-escaped, should just be "
+
