@@ -48,6 +48,14 @@ I'd prefer to not put the extra white space before $(newline).
 
 "cp -rf $(item) $(TARGET_RECOVERY_ROOT_OUT)/$(newline))"
 
+848:47-848:58
+Sun Jul 19 13:54:32 2015 +0000
+Author: Yu Yezhong <1029303@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 586b1a6a_c437120b
+UUID: 386e667b_f8c8bd1c
+Bytes: 4
+Done
+
 1842
 Sun Jul 19 13:41:24 2015 +0000
 Author: Yu Yezhong <1029303@85c56323-6fa9-3386-8a01-6480fb634889>
