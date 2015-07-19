@@ -19,6 +19,17 @@ Agreed.
 
 Yezhong, did you mean something like "$(wildcard $(TARGET_DEVICE_DIR)/recovery/res*)"?
 
+776:0-776:84
+Sun Jul 19 13:41:24 2015 +0000
+Author: Yu Yezhong <1029303@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 586b1a6a_04552a21
+UUID: 586b1a6a_9f38878d
+Bytes: 243
+Hi tbao & Ying,
+"$(wildcard $(TARGET_DEVICE_DIR)/recovery/res*)" is not enough for my case.
+At this stage, $(recovery_resources_private) is only blabla/res, but this var can be extended by vendor makefiles later.
+See my comments in Line #1842.
+
 847:10-847:25
 Fri Jul 17 18:56:24 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -36,4 +47,19 @@ Bytes: 120
 I'd prefer to not put the extra white space before $(newline).
 
 "cp -rf $(item) $(TARGET_RECOVERY_ROOT_OUT)/$(newline))"
+
+1842
+Sun Jul 19 13:41:24 2015 +0000
+Author: Yu Yezhong <1029303@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 38858659_cb5e4943
+Bytes: 386
+I can add makefiles like this to make $(recovery_resources_private) to be a list of directories, then I can put some other stuff into recovery image elegantly.
+
+For example, I add this file:
+vendor/xxx/build/tasks/recovery.mk:
+...
+RECOVERY_ADDON := $(PRODUCT_OUT)/recovery_addon
+recovery_resources_private += $(RECOVERY_ADDON)/bin
+recovery_resources_private += $(RECOVERY_ADDON)/lib
+...
 
