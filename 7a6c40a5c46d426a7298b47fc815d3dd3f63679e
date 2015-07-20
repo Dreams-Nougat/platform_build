@@ -71,3 +71,12 @@ recovery_resources_private += $(RECOVERY_ADDON)/bin
 recovery_resources_private += $(RECOVERY_ADDON)/lib
 ...
 
+1842
+Mon Jul 20 23:00:26 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 38858659_cb5e4943
+UUID: 185442e3_f9dbab59
+Bytes: 245
+No, the task .mk files are not for configuration.
+If we want to support multiple recovery resource dirs, we should expilcitly define a new board config variable, something like TARGET_RECOVERY_RESOURCE_DIRS, and have the build system respect it.
+
