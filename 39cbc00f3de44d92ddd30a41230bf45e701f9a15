@@ -1,0 +1,17 @@
+Revision: 39cbc00f3de44d92ddd30a41230bf45e701f9a15
+Patch-set: 8
+File: core/ninja.mk
+
+14:0-16:5
+Tue Jul 21 23:35:58 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 4dd51ace_06eb68eb
+Bytes: 233
+That way if your run "make all droid", the build recipe will be run independently twice.
+You can use an intermediate target to fix this:
+.PHONY: all
+all: $(KATI_OUTPUTS)
+  <build recipe>
+
+droid fastincremental $(ANDROID_TARGETS): all
+
