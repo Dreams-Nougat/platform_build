@@ -9,3 +9,11 @@ UUID: 2ddc66fc_99bc9fa4
 Bytes: 153
 Perhaps by adjusting where ninja.mk is included in main.mk, or reordering some inclusion, we can build ckati with $(BUILD_HOST_EXECUTABLE) in Android.mk?
 
+37:0-41:33
+Wed Jul 22 18:10:58 2015 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2ddc66fc_99bc9fa4
+UUID: 4dd51ace_a4912f5c
+Bytes: 417
+I tried that, all it takes is including defintions.mk, but kati depends on a C++ runtime.  If I use BUILD_HOST_EXECUTABLE it will insert dependencies on libcompiler-rt_extras, and probably more.  I'd need to include extra makefiles from a bunch of other directories too, and that seemed less maintainable.  This ends up linking against the host C++ runtime, the same as if you built a ckati prebuilt from out of tree.
+
