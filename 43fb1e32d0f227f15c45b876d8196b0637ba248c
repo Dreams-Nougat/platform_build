@@ -21,6 +21,15 @@ Bytes: 590
 
 (3). What about naming the new var as TARGET_RECOVERY_MISC_DIRS other than TARGET_RECOVERY_RESOURCE_DIRS ?
 
+776:0-776:84
+Wed Jul 22 18:36:09 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: ad7a16a8_da70e501
+UUID: cdc02a18_3c7c7d5d
+Bytes: 365
+Regarding (2): no, you can't install files built from source by just copying them to the recovery directory without establishing dependency. Why do you need extra binaries and libraries in the recovery.img but not install them to the ramdisk?
+It seems to me by design Android only allows to customize the resources at this point. Tao has more say than I do on this.
+
 847:0-848:48
 Wed Jul 22 03:08:34 2015 +0000
 Author: Yu Yezhong <1029303@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -29,6 +38,14 @@ Bytes: 204
 It's a little confusing to see this "foreach", since multiple $(recovery_resources_private) doesn't work here.
 What about simplify it as :
 cp -rf $(recovery_resources_private) $(TARGET_RECOVERY_ROOT_OUT)/
+
+847:0-848:48
+Wed Jul 22 18:36:09 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: cdc02a18_735c7854
+UUID: ed808ec6_df60d7af
+Bytes: 42
+Yes, we should remove the $(foreach) call.
 
 851:0-852:58
 Wed Jul 22 03:08:34 2015 +0000
