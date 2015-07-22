@@ -9,3 +9,33 @@ UUID: b83896b1_dc59795d
 Bytes: 127
 Shouldn't we combine this with the new variable? say if no TARGET_RECOVERY_RESOURCE_DIRS is specified, use this as the default?
 
+776:0-776:84
+Wed Jul 22 03:08:34 2015 +0000
+Author: Yu Yezhong <1029303@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b83896b1_dc59795d
+UUID: ad7a16a8_da70e501
+Bytes: 590
+(1). Strictly speaking, $(recovery_resources_private) and $(recovery_resources_common) are used for resource files(say *.png) in recovery mode.
+
+(2). What I want now is to put some misc files into recovery image, they may be additional debug binary tools and *.so files. These files are generated during android build, so it's not suitable to find files in the directory as dependency before whole android compilation.(#Line 777). The result of "find xx -type f" will be empty then.
+
+(3). What about naming the new var as TARGET_RECOVERY_MISC_DIRS other than TARGET_RECOVERY_RESOURCE_DIRS ?
+
+847:0-848:48
+Wed Jul 22 03:08:34 2015 +0000
+Author: Yu Yezhong <1029303@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: cdc02a18_735c7854
+Bytes: 204
+It's a little confusing to see this "foreach", since multiple $(recovery_resources_private) doesn't work here.
+What about simplify it as :
+cp -rf $(recovery_resources_private) $(TARGET_RECOVERY_ROOT_OUT)/
+
+851:0-852:58
+Wed Jul 22 03:08:34 2015 +0000
+Author: Yu Yezhong <1029303@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0ddfa2f3_f2b946c4
+Bytes: 166
+If opinion (3) is adopted, we can add new rule like:
+$(hide) $(foreach item,$(TARGET_RECOVERY_MISC_DIRS), \
+    cp -rf $(item) $(TARGET_RECOVERY_ROOT_OUT)/$(newline))
+
