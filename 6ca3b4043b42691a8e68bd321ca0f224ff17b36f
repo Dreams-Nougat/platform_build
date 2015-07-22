@@ -1,0 +1,11 @@
+Revision: 6ca3b4043b42691a8e68bd321ca0f224ff17b36f
+Patch-set: 11
+File: core/ninja.mk
+
+37:0-41:33
+Wed Jul 22 17:46:39 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2ddc66fc_99bc9fa4
+Bytes: 153
+Perhaps by adjusting where ninja.mk is included in main.mk, or reordering some inclusion, we can build ckati with $(BUILD_HOST_EXECUTABLE) in Android.mk?
+
