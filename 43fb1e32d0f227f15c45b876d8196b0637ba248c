@@ -30,6 +30,18 @@ Bytes: 365
 Regarding (2): no, you can't install files built from source by just copying them to the recovery directory without establishing dependency. Why do you need extra binaries and libraries in the recovery.img but not install them to the ramdisk?
 It seems to me by design Android only allows to customize the resources at this point. Tao has more say than I do on this.
 
+776:0-776:84
+Thu Jul 23 04:45:20 2015 +0000
+Author: Yu Yezhong <1029303@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: cdc02a18_3c7c7d5d
+UUID: 6dd2dee8_61a580b9
+Bytes: 556
+Why I need extra files:
+(a)engineer tools like logd and debuggerd, which are helpful for engineers when something is wrong in recovery mode. They are in /system/bin/, dependent libs in /system/lib. They are not in ramdisk.
+(b)vendor binary. If vendor doesn't support kernel frame buffer driver, we need customized "/sbin/recovery". We are trying to bring up frame buffer driver now, but before it's ready, we still need this vendor binary.
+
+If Android by design allow customization of other files, yes, it's a good idea to establish proper dependency then.
+
 847:0-848:48
 Wed Jul 22 03:08:34 2015 +0000
 Author: Yu Yezhong <1029303@85c56323-6fa9-3386-8a01-6480fb634889>
