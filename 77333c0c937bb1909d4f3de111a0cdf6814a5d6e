@@ -17,6 +17,14 @@ UUID: eda16e0d_147dbc8f
 Bytes: 44
 Move the conditional and assignment up here.
 
+14:0-14:32
+Tue Jul 28 18:01:32 2015 +0000
+Author: Fredrik Roubert <1024310@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: eda16e0d_147dbc8f
+UUID: 2d862697_80deb6d4
+Bytes: 4
+Done
+
 26:0-29:5
 Tue Jul 28 17:30:43 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -27,4 +35,12 @@ ifneq ($(USE_DEX2OAT_DEBUG), false)
 DEX2OAT := $(DEX2OATD)
 endif
 DEX2OAT_DEPENDENCY += $(DEX2OAT)
+
+26:0-29:5
+Tue Jul 28 18:01:32 2015 +0000
+Author: Fredrik Roubert <1024310@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2db8e63c_d30fc66a
+UUID: 0d8962a8_3fe187b9
+Bytes: 4
+Done
 
