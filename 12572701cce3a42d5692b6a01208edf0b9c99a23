@@ -1,0 +1,11 @@
+Revision: 12572701cce3a42d5692b6a01208edf0b9c99a23
+Patch-set: 3
+File: core/dex_preopt_libart.mk
+
+28:0-32:5
+Tue Jul 28 18:53:49 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: eda16e0d_d72696ea
+Bytes: 28
+why do we need to keep this?
+
