@@ -9,6 +9,14 @@ UUID: ad1696fe_3780b201
 Bytes: 21
 and remove this line.
 
+14:0-14:32
+Tue Jul 28 17:33:49 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: ad1696fe_3780b201
+UUID: eda16e0d_147dbc8f
+Bytes: 44
+Move the conditional and assignment up here.
+
 26:0-29:5
 Tue Jul 28 17:30:43 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
