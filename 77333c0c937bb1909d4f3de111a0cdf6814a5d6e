@@ -1,0 +1,22 @@
+Revision: 77333c0c937bb1909d4f3de111a0cdf6814a5d6e
+Patch-set: 2
+File: core/dex_preopt_libart.mk
+
+14:0-14:32
+Tue Jul 28 17:30:43 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: ad1696fe_3780b201
+Bytes: 21
+and remove this line.
+
+26:0-29:5
+Tue Jul 28 17:30:43 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2db8e63c_d30fc66a
+Bytes: 155
+You don't need $(subst) here. It's better to write it as:
+ifneq ($(USE_DEX2OAT_DEBUG), false)
+DEX2OAT := $(DEX2OATD)
+endif
+DEX2OAT_DEPENDENCY += $(DEX2OAT)
+
