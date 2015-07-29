@@ -11,3 +11,11 @@ I am not sure if the fstab file is always named that way.
 For example for aosp_arm, TARGET_DEVICE is generic, but we don't have fstab.generic - instead we have fstab.goldfish.
 Perhaps we should have a board config variable to specify this, if it doesn't use fstab.$(TARGET_DEVICE).
 
+458:28-458:69
+Wed Jul 29 22:43:27 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2af28c55_c6a47603
+UUID: eafb1432_64547ea4
+Bytes: 167
+Yeah, they're named after ro.hardware, which has nothing to do with $TARGET_DEVICE. In fact, there may be multiple in the same image -- see manta for a simple example.
+
