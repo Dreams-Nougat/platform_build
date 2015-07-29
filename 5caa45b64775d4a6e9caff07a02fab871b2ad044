@@ -1,0 +1,11 @@
+Revision: 5caa45b64775d4a6e9caff07a02fab871b2ad044
+Patch-set: 2
+File: core/ninja.mk
+
+25:1-25:8
+Wed Jul 29 19:02:39 2015 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8a00d8f0_9e911928
+Bytes: 66
+hide is defined in definitions.mk, which hasn't been included here
+
