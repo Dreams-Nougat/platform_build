@@ -1,0 +1,13 @@
+Revision: e4c46472ba8089366cb087ce4810d4186bb8feac
+Patch-set: 1
+File: core/Makefile
+
+458:28-458:69
+Wed Jul 29 22:31:05 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2af28c55_c6a47603
+Bytes: 281
+I am not sure if the fstab file is always named that way.
+For example for aosp_arm, TARGET_DEVICE is generic, but we don't have fstab.generic - instead we have fstab.goldfish.
+Perhaps we should have a board config variable to specify this, if it doesn't use fstab.$(TARGET_DEVICE).
+
