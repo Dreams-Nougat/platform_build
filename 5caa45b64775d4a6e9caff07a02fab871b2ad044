@@ -9,3 +9,12 @@ UUID: 8a00d8f0_9e911928
 Bytes: 66
 hide is defined in definitions.mk, which hasn't been included here
 
+25:1-25:8
+Wed Jul 29 19:17:40 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8a00d8f0_9e911928
+UUID: 2a0b6c19_bbf8733e
+Bytes: 177
+Argh, I just tested that the command was really printed when I ran "make showcommands", but didn't test if it's really hidden without showcommands.
+I'll move definition of hide.
+
