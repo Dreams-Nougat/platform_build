@@ -1,0 +1,11 @@
+Revision: 58e1b0bb1a6f9e7eca56078e8f5bcf7c26f840c6
+Patch-set: 1
+File: core/main.mk
+
+89:0-89:6
+Wed Jul 29 18:33:19 2015 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: eafb1432_dea7a505
+Bytes: 48
+ORIG or ORIGINAL, ORIGIN has a different meaning
+
