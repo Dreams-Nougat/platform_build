@@ -1,0 +1,11 @@
+Revision: bb1da5e614a26fb9d973c88db2c56a1f294f332d
+Patch-set: 3
+File: core/ninja.mk
+
+43:11-43:12
+Wed Jul 29 20:14:43 2015 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 4a142033_bcf86d3e
+Bytes: 262
+I also considered adding $(hide) here, but Makefile.ckati has no @echo to say it is building something.  My other thought was to put either "@" for !showcommands or "@echo Building $@  $$" for showcommands, and using = instead of := to delay the evaluation of $@
+
