@@ -12,6 +12,13 @@ I think I changed it from "cp -Rf" to async to just prevent the broken symlink e
 
 File: core/Makefile
 
+846:16-846:50
+Thu Jul 30 23:27:11 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8a2e188f_9170dcce
+Bytes: 28
+but it's created again here.
+
 848:63-848:114
 Thu Jul 30 22:41:17 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -33,4 +40,14 @@ could not make way for new symlink: root/etc
 rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1183) [sender=3.1.0]
 
 This is because $(TARGET_RECOVERY_ROOT_OUT)/etc is non-empty (has recovery.fstab inside), while $(TARGET_ROOT_OUT)/etc is a symlink. rsync refuses to replace the non-empty recovery/etc with the symlink.
+
+848:63-848:114
+Thu Jul 30 23:27:11 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: ca2490af_8123eaae
+UUID: 4a6260ef_52b94a65
+Bytes: 244
+I see. That's the error because you are trying to overwrite existing dir with symlink; while "rsync -a" was to fix symlink overwriting broken symlink.
+
+Probably better to write a python script to do the copy, so you can select whatever to copy.
 
