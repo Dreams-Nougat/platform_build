@@ -1,0 +1,21 @@
+Revision: 76320464a50d2eb6dd523e92ed4330b46980dc78
+Patch-set: 3
+File: /COMMIT_MSG
+
+9:49-9:54
+Thu Jul 30 22:41:17 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: ea523422_2991c9aa
+Bytes: 93
+Really?
+I think I changed it from "cp -Rf" to async to just prevent the broken symlink error.
+
+File: core/Makefile
+
+848:63-848:114
+Thu Jul 30 22:41:17 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8a2e188f_2eb8a730
+Bytes: 9
+See here.
+
