@@ -19,3 +19,18 @@ UUID: 8a2e188f_2eb8a730
 Bytes: 9
 See here.
 
+848:63-848:114
+Thu Jul 30 23:14:11 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8a2e188f_2eb8a730
+UUID: ca2490af_8123eaae
+Bytes: 503
+The error is:
+
+ $ rsync -a out/target/product/flounder/root out/target/product/flounder/recovery
+cannot delete non-empty directory: root/etc
+could not make way for new symlink: root/etc
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1183) [sender=3.1.0]
+
+This is because $(TARGET_RECOVERY_ROOT_OUT)/etc is non-empty (has recovery.fstab inside), while $(TARGET_ROOT_OUT)/etc is a symlink. rsync refuses to replace the non-empty recovery/etc with the symlink.
+
