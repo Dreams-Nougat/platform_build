@@ -1,0 +1,58 @@
+Revision: 58d5d554b1520cc3f4dd0d1834e4c1eb5f7b8a06
+Patch-set: 1
+File: core/binary.mk
+
+534:0-534:71
+Fri Jul 31 00:59:07 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 6a5f2428_d0ebf4e7
+Bytes: 285
+You'll need to do something similar, otherwise you'll get duplicate rules for multilib modules, because this file is included twice for both 32-bit and 64-bit build.
+
+(Ideally these things should be moved out of this file and be added to higher-level makefile, but not in this change.)
+
+577:60-577:97
+Fri Jul 31 00:59:07 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: ea295486_54b94465
+Bytes: 34
+why not also grep out these files?
+
+579:68-579:104
+Fri Jul 31 00:59:07 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: ca4d7087_4e2e47c7
+Bytes: 93
+What is this prefix for?
+I'd like to keep the number of LOCAL variables as small as possible.
+
+584:0-585:48
+Fri Jul 31 00:59:07 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0a5ce834_8dc20527
+Bytes: 22
+No, you don't need it.
+
+586:0-586:69
+Fri Jul 31 00:59:07 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8a2e188f_31bec84f
+Bytes: 137
+For build tools the convention is to define a const in build/core/config.mk and use the const here.
+Probably DBUS_GENERAOTR in config.mk.
+
+597:24-597:53
+Fri Jul 31 00:59:07 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0a5ce834_0df05588
+Bytes: 238
+You have to use target specific variables in the build recipe, if the value of the variables vary based on the file it's being built.
+See http://www.gnu.org/software/make/manual/make.html#Target_002dspecific for target-specific variables.
+
+594:0-601:33
+Fri Jul 31 00:59:07 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0a5ce834_cde11dbb
+Bytes: 82
+Probably move to a function in definitions.mk, similar to $(transform-proto-to-cc)
+
