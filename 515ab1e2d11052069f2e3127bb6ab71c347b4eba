@@ -10,3 +10,13 @@ Bytes: 93
 The build process doesn't use this, right?
 A build doesn't necessarily run build/envsetup.sh.
 
+9:0-10:43
+Fri Jul 31 20:46:18 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 4a6260ef_f566e319
+UUID: 4a6260ef_1553b73a
+Bytes: 75
+No, not needed by the build.
+
+If it ever is we can handle this differently.
+
