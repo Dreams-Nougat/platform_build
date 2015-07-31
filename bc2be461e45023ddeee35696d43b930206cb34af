@@ -1,0 +1,12 @@
+Revision: bc2be461e45023ddeee35696d43b930206cb34af
+Patch-set: 3
+File: core/binary.mk
+
+615
+Fri Jul 31 18:28:53 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: ea523422_fac13197
+Bytes: 253
+Do you need to add the path to my_c_includes?
+If the headers are included from $(generated_sources_dir), something like #include "dbus-bindings/foo/adaptors.h", then you don't, because $(generated_sources_dir) is automatically added by the build system.
+
