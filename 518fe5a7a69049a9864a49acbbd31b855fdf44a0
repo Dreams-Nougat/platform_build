@@ -1,0 +1,11 @@
+Revision: 518fe5a7a69049a9864a49acbbd31b855fdf44a0
+Patch-set: 1
+File: tools/buildinfo.sh
+
+20:0-20:64
+Fri Jul 31 22:04:13 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8a2e188f_fa581585
+Bytes: 62
+Shouldn't we check if $BOARD_BUILD_SYSTEM_ROOT_IMAGE is empty?
+
