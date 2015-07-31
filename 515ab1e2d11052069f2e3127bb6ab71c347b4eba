@@ -1,0 +1,12 @@
+Revision: 515ab1e2d11052069f2e3127bb6ab71c347b4eba
+Patch-set: 1
+File: /COMMIT_MSG
+
+9:0-10:43
+Fri Jul 31 20:42:57 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 4a6260ef_f566e319
+Bytes: 93
+The build process doesn't use this, right?
+A build doesn't necessarily run build/envsetup.sh.
+
