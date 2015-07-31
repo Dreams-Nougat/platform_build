@@ -18,6 +18,14 @@ UUID: ea295486_54b94465
 Bytes: 34
 why not also grep out these files?
 
+577:60-577:97
+Fri Jul 31 18:08:13 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: ea295486_54b94465
+UUID: ca2490af_42ae209e
+Bytes: 19
+I suppose we could.
+
 579:68-579:104
 Fri Jul 31 00:59:07 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -26,12 +34,32 @@ Bytes: 93
 What is this prefix for?
 I'd like to keep the number of LOCAL variables as small as possible.
 
+579:68-579:104
+Fri Jul 31 18:08:13 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: ca4d7087_4e2e47c7
+UUID: 6a5f2428_d0c894ca
+Bytes: 318
+It is to help developers avoid header path collisions.  Without it, when I include <service1/client_lib.h> and <service2/client_lib.h> and each of those includes <dbus-bindings/dbus_proxy.h> we would worry.
+
+I guess I could just take the module name as the folder prefix.  I'll go with that unless you have objections.
+
 584:0-585:48
 Fri Jul 31 00:59:07 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 0a5ce834_8dc20527
 Bytes: 22
 No, you don't need it.
+
+584:0-585:48
+Fri Jul 31 18:08:13 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 0a5ce834_8dc20527
+UUID: 2a59ac45_bc16197e
+Bytes: 130
+Removed.
+
+Is that because when I express that my header depends on the host binary, that creates the dependency chain that I want?
 
 586:0-586:69
 Fri Jul 31 00:59:07 2015 +0000
@@ -41,6 +69,14 @@ Bytes: 137
 For build tools the convention is to define a const in build/core/config.mk and use the const here.
 Probably DBUS_GENERAOTR in config.mk.
 
+586:0-586:69
+Fri Jul 31 18:08:13 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8a2e188f_31bec84f
+UUID: 4a6260ef_becf2da0
+Bytes: 10
+Excellent.
+
 597:24-597:53
 Fri Jul 31 00:59:07 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -49,10 +85,30 @@ Bytes: 238
 You have to use target specific variables in the build recipe, if the value of the variables vary based on the file it's being built.
 See http://www.gnu.org/software/make/manual/make.html#Target_002dspecific for target-specific variables.
 
+597:24-597:53
+Fri Jul 31 18:08:13 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 0a5ce834_0df05588
+UUID: ea523422_7a00a13e
+Bytes: 133
+That explains so much!!
+
+https://www.gnu.org/software/make/manual/html_node/Variables-in-Recipes.html
+
+Thank you thank you thank you.
+
 594:0-601:33
 Fri Jul 31 00:59:07 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 0a5ce834_cde11dbb
 Bytes: 82
 Probably move to a function in definitions.mk, similar to $(transform-proto-to-cc)
+
+594:0-601:33
+Fri Jul 31 18:08:13 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 0a5ce834_cde11dbb
+UUID: ca2490af_62059c4d
+Bytes: 31
+Ah, that also makes more sense.
 
