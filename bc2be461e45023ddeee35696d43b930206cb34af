@@ -10,3 +10,11 @@ Bytes: 253
 Do you need to add the path to my_c_includes?
 If the headers are included from $(generated_sources_dir), something like #include "dbus-bindings/foo/adaptors.h", then you don't, because $(generated_sources_dir) is automatically added by the build system.
 
+615
+Fri Jul 31 18:34:14 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: ea523422_fac13197
+UUID: ca2490af_d6bbf5a8
+Bytes: 75
+That's the include pattern I've been intending to use.  So I guess I don't?
+
