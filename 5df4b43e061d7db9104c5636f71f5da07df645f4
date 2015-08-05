@@ -1,0 +1,12 @@
+Revision: 5df4b43e061d7db9104c5636f71f5da07df645f4
+Patch-set: 1
+File: core/Makefile
+
+1438:6-1438:35
+Wed Aug 05 23:35:42 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0abea8e2_9dd9a36b
+Bytes: 97
+ifeq ($(BOARD_BUILD_SYSTEM_ROOT_IMAGE),true)
+to be consistent with other checks of this variable.
+
