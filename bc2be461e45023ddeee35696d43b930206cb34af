@@ -18,3 +18,12 @@ UUID: ca2490af_d6bbf5a8
 Bytes: 75
 That's the include pattern I've been intending to use.  So I guess I don't?
 
+File: core/definitions.mk
+
+972:42-972:70
+Wed Aug 05 16:05:45 2015 +0000
+Author: Nam Nguyen <1058338@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0ad9483e_be46f0d5
+Bytes: 8
+proto???
+
