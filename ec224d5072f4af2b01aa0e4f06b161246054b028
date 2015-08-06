@@ -1,0 +1,13 @@
+Revision: ec224d5072f4af2b01aa0e4f06b161246054b028
+Patch-set: 1
+File: /COMMIT_MSG
+
+9:32-10:8
+Thu Aug 06 23:29:48 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 67111f42_3a03411c
+Bytes: 246
+I didn't know that.
+It seems $(wildcard) itself doesn't sort, but its implementation calls glob() that does the sorting.
+That means results of $(wildcard) are only locally sorted if multiple globbing patters are provided. But this doesn't matter.
+
