@@ -10,3 +10,18 @@ Bytes: 97
 ifeq ($(BOARD_BUILD_SYSTEM_ROOT_IMAGE),true)
 to be consistent with other checks of this variable.
 
+1438:6-1438:35
+Thu Aug 06 17:43:41 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 0abea8e2_9dd9a36b
+UUID: 6ac1e46b_c09612d3
+Bytes: 4
+Done
+
+1541
+Thu Aug 06 17:43:41 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0abea8e2_bd2227d8
+Bytes: 73
+Made the wrong change when copying from goog/master in PS1. Fixed is PS2.
+
