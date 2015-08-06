@@ -42,6 +42,17 @@ Why I need extra files:
 
 If Android by design allow customization of other files, yes, it's a good idea to establish proper dependency then.
 
+776:0-776:84
+Thu Aug 06 18:46:52 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 6dd2dee8_61a580b9
+UUID: 8ac9b89e_620bc82e
+Bytes: 348
+Actually you can install extra binaries built from source to the recovery image by setting the module's LOCAL_MODULE_PATH with:
+LOCAL_MODULE_PATH := $(TARGET_RECOVERY_ROOT_OUT)/<subidr>
+and add the module's name to PRODUCT_PACKAGES of the product you are building.
+This is the most common way how modules get built into system.img and other images.
+
 847:0-848:48
 Wed Jul 22 03:08:34 2015 +0000
 Author: Yu Yezhong <1029303@85c56323-6fa9-3386-8a01-6480fb634889>
