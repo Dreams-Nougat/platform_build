@@ -1,0 +1,12 @@
+Revision: 66c440ab0e2a551b5ecc4766f5497c22a9b16abe
+Patch-set: 1
+File: core/Makefile
+
+863:46-863:48
+Mon Aug 10 17:28:15 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 47e97bf9_5460a2ae
+Bytes: 182
+Not sure about the exact format for multiple dirs. Is it like
+"TARGET_PRIVATE_RES_DIRS := device/x/y/res1 device/u/v/res2"? If so, you need to put $(newline) here as in Yezhong's CL.
+
