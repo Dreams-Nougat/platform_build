@@ -1,0 +1,11 @@
+Revision: 420f95ff5d0ccf9c41683760c1b2731f6be0667e
+Base-for-patch-set: 1
+File: core/binary.mk
+
+245
+Mon Aug 10 18:05:59 2015 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 67e67f2a_3583daa8
+Bytes: 26
+Random whitespace changes?
+
