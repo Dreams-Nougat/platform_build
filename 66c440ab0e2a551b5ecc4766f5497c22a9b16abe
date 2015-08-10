@@ -10,3 +10,11 @@ Bytes: 182
 Not sure about the exact format for multiple dirs. Is it like
 "TARGET_PRIVATE_RES_DIRS := device/x/y/res1 device/u/v/res2"? If so, you need to put $(newline) here as in Yezhong's CL.
 
+863:46-863:48
+Mon Aug 10 18:14:27 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 47e97bf9_5460a2ae
+UUID: 87c9b39e_59e323c4
+Bytes: 20
+Oops, you are right.
+
