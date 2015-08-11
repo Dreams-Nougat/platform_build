@@ -1,0 +1,11 @@
+Revision: 3123a8eaa2c0e98a265c59ccf8c9ebb85f4fb699
+Patch-set: 1
+File: core/base_rules.mk
+
+713:71-713:105
+Tue Aug 11 16:15:05 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 67091fdd_5a70f5ca
+Bytes: 15
+How about jack?
+
