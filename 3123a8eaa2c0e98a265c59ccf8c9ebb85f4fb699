@@ -9,6 +9,14 @@ UUID: a7ceb7a1_1bf23c93
 Bytes: 67
 oh, this should be a class from framework.jar, not core-libart.jar.
 
+13:0-13:34
+Tue Aug 11 16:44:13 2015 +0000
+Author: Neil Fuller <1038039@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a7ceb7a1_1bf23c93
+UUID: 47e33b4a_e1ab265d
+Bytes: 35
+Please see the bug for the reasons.
+
 File: core/base_rules.mk
 
 400:55-400:135
@@ -20,10 +28,28 @@ In libcore/JavaLibrary.mk I don't see core-libart has dependency on okhttp. How 
 Oh, it's framework.jar, not core-libart that references okhttp. Anyway you can't just change the -bootclasspath without establishing dependency on okhttp.jar.
 Sounds like we should add okhttp to TARGET_DEFAULT_JAVA_LIBRARIES in build/core/config.mk, instead of modifying the bootclasspath?
 
+400:55-400:135
+Tue Aug 11 16:44:13 2015 +0000
+Author: Neil Fuller <1038039@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 67091fdd_3a50a129
+UUID: e7f34f19_be0819ba
+Bytes: 212
+I see what you're saying. Will try it.
+
+For clarity: It's only required when building with LOCAL_SDK_VERSION unset. When building against the android_stubs or the sdk the dependency on OkCacheContainer is absent.
+
 713:71-713:105
 Tue Aug 11 16:15:05 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 67091fdd_5a70f5ca
 Bytes: 15
 How about jack?
+
+713:71-713:105
+Tue Aug 11 16:44:13 2015 +0000
+Author: Neil Fuller <1038039@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 67091fdd_5a70f5ca
+UUID: 271727da_7ba83b10
+Bytes: 68
+AFAIK, not required unless Jack changes its behavior like javac did.
 
