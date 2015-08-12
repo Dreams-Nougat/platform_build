@@ -1,0 +1,11 @@
+Revision: df3fd1d12823e3241df52b9ad48d5e1f5de21262
+Patch-set: 1
+File: core/binary.mk
+
+1132
+Wed Aug 12 21:59:35 2015 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c4f6494b_11e73cd3
+Bytes: 171
+You should potentially log that this is being stripped from their build too (in BIG LETTERS). Should it be an error perhaps? I don't really know how pervasive this is/was.
+
