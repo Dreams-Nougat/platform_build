@@ -1,0 +1,11 @@
+Revision: d2ba4ee01b328397095163e0e160e58e5b998640
+Patch-set: 1
+File: core/clear_vars.mk
+
+183
+Sat Aug 15 00:50:58 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c4a9e95f_5a2141a7
+Bytes: 192
+This prefix allows us to namespace the installed headers, without depending on the name of the module.  This is important when a target wants to consume headers from multiple client libraries.
+
