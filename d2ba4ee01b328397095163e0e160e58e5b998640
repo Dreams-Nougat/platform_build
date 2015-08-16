@@ -1,5 +1,14 @@
 Revision: d2ba4ee01b328397095163e0e160e58e5b998640
 Patch-set: 1
+File: /COMMIT_MSG
+
+20
+Sun Aug 16 07:49:03 2015 +0000
+Author: Gilad Arnold <1076344@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 04b861a5_f0bdb1ae
+Bytes: 134
+To complete the picture, it'll be useful to show how DBus proxies are consumed by a client (both Android.mk and #includes directives).
+
 File: core/binary.mk
 
 614
