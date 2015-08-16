@@ -1,5 +1,25 @@
 Revision: d2ba4ee01b328397095163e0e160e58e5b998640
 Patch-set: 1
+File: core/binary.mk
+
+614
+Sun Aug 16 07:43:14 2015 +0000
+Author: Gilad Arnold <1076344@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a4fb1585_bb61b3b6
+Bytes: 491
+This could be written so more logic is shared:
+
+ ifdef LOCAL_DBUS_PROXY_PREFIX
+ dbus_created_dir := $(dbus_header_prefix)/include/$(LOCAL_DBUS_PROXY_PREFIX)
+ dbus_headers := dbus-proxies.h
+ else
+ dbus_created_dir := $(dbus_header_prefix)
+ dbus_headers := $(patsubst %.dbus.xml,%.h,$(notdir $(dbus_if_sources)))
+ endif  # $(LOCAL_DBUS_PROXY_PREFIX)
+ dbus_generated_headers := $(addprefix $(dbus_created_dir),$(dbus_headers))
+
+Thereafter, replace dbus_proxy_header with dbus_generated_headers.
+
 File: core/clear_vars.mk
 
 183
