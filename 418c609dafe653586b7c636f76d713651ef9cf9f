@@ -1,0 +1,12 @@
+Revision: 418c609dafe653586b7c636f76d713651ef9cf9f
+Patch-set: 6
+File: core/binary.mk
+
+630:0-638:57
+Tue Aug 18 21:53:47 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 04806112_d0baadb4
+Bytes: 71
+static pattern rule is just for such cases.
+I'll upload a new patchset.
+
