@@ -37,6 +37,14 @@ UUID: 04b861a5_9f8a3ef6
 Bytes: 8
 I agree.
 
+614
+Tue Aug 18 19:45:16 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 04b861a5_9f8a3ef6
+UUID: a4fb1585_27c80149
+Bytes: 4
+Done
+
 621:28-621:52
 Tue Aug 18 02:02:44 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -44,6 +52,14 @@ UUID: c471e91c_6e9e83e9
 Bytes: 80
 this variable is unnecessary.
 You can get it with $(dir $@) in the build recipe.
+
+621:28-621:52
+Tue Aug 18 19:45:16 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c471e91c_6e9e83e9
+UUID: c471e91c_d90f43e9
+Bytes: 5
+Done.
 
 623:28-623:94
 Tue Aug 18 02:02:44 2015 +0000
@@ -55,12 +71,40 @@ If you have multiple .dbus.xml files, a single .h file should depend on only the
 In that case you should use static pattern rule, similar to the .pb.h rule:
 $(proto_generated_headers): $(proto_generated_sources_dir)/%.pb.h: $(proto_generated_sources_dir)/%.pb$(my_proto_source_suffix)
 
+623:28-623:94
+Tue Aug 18 19:45:16 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a4a8755c_905231b5
+UUID: a4a8755c_191f4d94
+Bytes: 775
+There are two cases here.
+
+For proxies, we depend on all listed .dbus.xml files and generate a single C++ header file.  For adaptors, the correspondence is 1:1.
+
+For adaptors, we have 1:1 dependency between .dbus.xml files and generated header files.  However, the .dbus.xml files may be anywhere in the source directory, and I have a hard time writing a simple pattern matching rule that expresses that:
+
+$(output_prefix)/%.h : $(some_variable_prefix)/%.dbus.xml
+
+I can do this, but I'm going to need to eval() a template to get that right.  Update incoming.
+
+Given how rare it is to actually change these .dbus.xml files and the amount of overhead it is to generate the corresponding header files, I judged it reasonable to simplify the build logic by depending generously.
+
 630:1-630:27
 Tue Aug 18 02:02:44 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 64591d73_102c1198
 Bytes: 36
 should be my_export_c_include_dirs .
+
+630:1-630:27
+Tue Aug 18 19:45:16 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 64591d73_102c1198
+UUID: e4434d7f_afe9732e
+Bytes: 311
+There is no my_export_c_include_dirs.  Instead, it seems that various places in this file have been editing LOCAL_EXPORT_C_INCLUDE_DIRS directly.  I was unsure why this was the case.
+
+With your permission, I'm going to keep this as is, and do the refactor to add a my_export_c_include_dirs in a following patch?
 
 File: core/clear_vars.mk
 
