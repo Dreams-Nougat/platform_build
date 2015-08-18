@@ -1,0 +1,11 @@
+Revision: a96e9832d0f771f36b79ab586094eb4970af0d41
+Patch-set: 1
+File: core/cxx_stl_setup.mk
+
+43
+Tue Aug 18 22:24:37 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c4a9e95f_33fa6a36
+Bytes: 63
+adb and fastboot both have this logic in their Android.mk files
+
