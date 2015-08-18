@@ -1,0 +1,11 @@
+Revision: a71f47a6179d8a36f4d1c4cda05daaaf1bdb7caa
+Patch-set: 5
+File: core/binary.mk
+
+637
+Tue Aug 18 21:26:59 2015 +0000
+Author: Gilad Arnold <1076344@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 04b861a5_993b3986
+Bytes: 53
+Seems more natural the break the line before $(eval .
+
