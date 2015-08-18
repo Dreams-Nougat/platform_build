@@ -1,0 +1,19 @@
+Revision: c37fc0bfa0b1edc1e0c5e180121dd87b8370321d
+Patch-set: 7
+File: core/binary.mk
+
+639:16-639:61
+Tue Aug 18 22:38:26 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a4a8755c_9f3b1d86
+Bytes: 115
+To use static pattern rule, I added the source path (relative to LOCAL_PATH) to the generated headers in this case.
+
+661:0-661:49
+Tue Aug 18 22:38:26 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c471e91c_3f52f7b6
+Bytes: 70
+then added their dir to the include path here.
+Does this work for you?
+
