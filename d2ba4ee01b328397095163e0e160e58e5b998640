@@ -29,6 +29,39 @@ This could be written so more logic is shared:
 
 Thereafter, replace dbus_proxy_header with dbus_generated_headers.
 
+614
+Tue Aug 18 02:02:44 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a4fb1585_bb61b3b6
+UUID: 04b861a5_9f8a3ef6
+Bytes: 8
+I agree.
+
+621:28-621:52
+Tue Aug 18 02:02:44 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c471e91c_6e9e83e9
+Bytes: 80
+this variable is unnecessary.
+You can get it with $(dir $@) in the build recipe.
+
+623:28-623:94
+Tue Aug 18 02:02:44 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a4a8755c_905231b5
+Bytes: 380
+this doesn't work if we have more than one .dbus.xml file.
+If you have multiple .dbus.xml files, a single .h file should depend on only the corresponding .dbus.xml file, right?
+In that case you should use static pattern rule, similar to the .pb.h rule:
+$(proto_generated_headers): $(proto_generated_sources_dir)/%.pb.h: $(proto_generated_sources_dir)/%.pb$(my_proto_source_suffix)
+
+630:1-630:27
+Tue Aug 18 02:02:44 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 64591d73_102c1198
+Bytes: 36
+should be my_export_c_include_dirs .
+
 File: core/clear_vars.mk
 
 183
@@ -37,4 +70,12 @@ Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: c4a9e95f_5a2141a7
 Bytes: 192
 This prefix allows us to namespace the installed headers, without depending on the name of the module.  This is important when a target wants to consume headers from multiple client libraries.
+
+183
+Tue Aug 18 02:02:44 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c4a9e95f_5a2141a7
+UUID: a4a8755c_90bb115d
+Bytes: 91
+I don't understand: why using the module name as your LOCAL_DBUS_PROXY_PREFIX doesn't work?
 
