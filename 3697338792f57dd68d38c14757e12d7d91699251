@@ -9,3 +9,11 @@ UUID: 04b861a5_b9cf1d57
 Bytes: 121
 Why not embed $(dbus_header_dir) and $(dbus_header_dependencies) in lieu of $(1) and $(3) in DBUS_ADAPTOR_BUILD_TEMPLATE?
 
+640
+Tue Aug 18 21:02:13 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 04b861a5_b9cf1d57
+UUID: a4a8755c_7c73cf5c
+Bytes: 14
+I can do that.
+
