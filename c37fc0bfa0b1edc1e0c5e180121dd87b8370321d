@@ -78,6 +78,14 @@ UUID: c471e91c_2eac86f7
 Bytes: 167
 My rough reading of the file is that ": " is used for scoping the next statement to a set of targets.  " : " is used to express dependencies.  But that's just a guess.
 
+649
+Wed Aug 19 18:03:32 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c471e91c_2eac86f7
+UUID: e4434d7f_b3f8b98a
+Bytes: 55
+Yes, that's the convention in the Android build system.
+
 661:0-661:49
 Tue Aug 18 22:38:26 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -131,4 +139,12 @@ Parent: 04806112_891730d4
 UUID: c4a9e95f_e7fc08a9
 Bytes: 236
 I suppose it can't hurt.  There exist patterns where we compile 95% of a daemon into a common library for the purposes of running unittests against it.  It would be a hassle to have to reason about hiding the headers for generated code.
+
+661:0-661:49
+Wed Aug 19 18:03:32 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c4a9e95f_e7fc08a9
+UUID: c4a9e95f_07836412
+Bytes: 25
+sounds good. I'll update.
 
