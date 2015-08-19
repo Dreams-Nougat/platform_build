@@ -25,3 +25,11 @@ Wouldn't that add the service config and the generator to the dependencies?
 
 In practice, I see that they are listed in $^.
 
+993:1-993:24
+Wed Aug 19 21:04:40 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 04b861a5_b342d666
+UUID: c471e91c_84d9db20
+Bytes: 45
+You are right - $^ still includes everything.
+
