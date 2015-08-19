@@ -1,0 +1,27 @@
+Revision: aba54efc10d7fc86fa834ee9bbc6056f5fce278e
+Patch-set: 1
+File: core/init_rc.mk
+
+12:0-12:48
+Wed Aug 19 23:43:39 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c4a9e95f_8dda1395
+Bytes: 142
+We should likely change this based on LOCAL_PROPRIETARY_MODULE / LOCAL_OEM_MODULE / LOCAL_ODM_MODULE to always put this in the right partition
+
+22
+Wed Aug 19 23:43:39 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a4a8755c_33aa5d09
+Bytes: 54
+These should just go in clear_vars.mk, shouldn't they?
+
+File: core/tasks/tools/build_custom_image.mk
+
+34
+Wed Aug 19 23:43:39 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 243ac5f6_12d40ab6
+Bytes: 105
+Won't this pick up all the shared library dependencies and install them too? That's probably not desired.
+
