@@ -23,3 +23,13 @@ I don't disagree, but this is what we're effectively doing for adb and fastboot 
 
 Which does default back to libstdc++ on windows with the above code.
 
+43
+Wed Aug 19 04:23:58 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c4a9e95f_b936396d
+UUID: e4434d7f_86129c15
+Bytes: 385
+Ack. My concern is more about users that would set this thinking they'd get a static STL. Then again, the users of a static STL on the host should be very few and far between (probably won't go beyond adb and fastboot), so maybe this isn't much of an issue.
+
+Windows support for libc++ should be available in the near future, so maybe that's yet another reason to not worry about this.
+
