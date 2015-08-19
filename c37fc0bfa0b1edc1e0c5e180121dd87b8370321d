@@ -2,12 +2,33 @@ Revision: c37fc0bfa0b1edc1e0c5e180121dd87b8370321d
 Patch-set: 7
 File: core/binary.mk
 
+635:35-635:42
+Wed Aug 19 14:24:59 2015 +0000
+Author: Gilad Arnold <1076344@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a4fb1585_21ee2a2a
+Bytes: 54
+For clarity, this could just be 'proxies' (see below).
+
+638
+Wed Aug 19 14:24:59 2015 +0000
+Author: Gilad Arnold <1076344@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e4aeed64_3419f204
+Bytes: 166
+We might want to append another directory to $(dbus_gen_dir) in this case to ensure there's no possible overlap between the two cases, e.g. $(dbus_gen_dir)/adaptors .
+
 639:16-639:61
 Tue Aug 18 22:38:26 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: a4a8755c_9f3b1d86
 Bytes: 115
 To use static pattern rule, I added the source path (relative to LOCAL_PATH) to the generated headers in this case.
+
+649
+Wed Aug 19 14:24:59 2015 +0000
+Author: Gilad Arnold <1076344@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e4aeed64_9408e6b8
+Bytes: 100
+Is there a reason for the different spacing around ':' between variable assignment and dependencies?
 
 661:0-661:49
 Tue Aug 18 22:38:26 2015 +0000
@@ -16,4 +37,14 @@ UUID: c471e91c_3f52f7b6
 Bytes: 70
 then added their dir to the include path here.
 Does this work for you?
+
+661:0-661:49
+Wed Aug 19 14:24:59 2015 +0000
+Author: Gilad Arnold <1076344@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c471e91c_3f52f7b6
+UUID: 243ac5f6_56dfa985
+Bytes: 174
+I think this would work (but curious what wiley says ;-) ).
+
+We should probably add these to my_export_c_include_dirs as well, in case these get generated in a separate rule.
 
