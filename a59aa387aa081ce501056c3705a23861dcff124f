@@ -9,6 +9,14 @@ UUID: e4434d7f_e6f280d5
 Bytes: 22
 Check this in goma.mk?
 
+12:0-12:45
+Wed Aug 19 08:17:13 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e4434d7f_e6f280d5
+UUID: c4dac934_4630c821
+Bytes: 4
+Done
+
 File: core/goma.mk
 
 17:0-17:44
@@ -18,10 +26,32 @@ UUID: a4a8755c_0a5b6d7f
 Bytes: 132
 Perhaps change to "this works only with Google's Goma build infrastructure" and give pointer to Goma if any is publically available.
 
+17:0-17:44
+Wed Aug 19 08:17:13 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a4a8755c_0a5b6d7f
+UUID: 649afd79_b5644a15
+Bytes: 483
+Done. Unfortunately, there isn't a good pointer, I think (and a current goma-team member agrees with me).
+
+https://code.google.com/p/chromium/wiki/LinuxFasterBuilds#Use_goma
+
+says something, but doesn't provide a lot of info.
+
+There is an externally available detailed slide (https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxnZGQxMWphcGFufGd4OjNlMTJiYTNlOTlmZWVjZWU) but this is written in Japanese, because this slide was used in DevRel-ish event held in Japan.
+
 38:2-38:21
 Wed Aug 19 01:17:45 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: c4a9e95f_59b065f8
 Bytes: 44
 I couldn't find where this variable is used.
+
+38:2-38:21
+Wed Aug 19 08:17:13 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c4a9e95f_59b065f8
+UUID: e4dfcd21_c1f92442
+Bytes: 378
+I have introduced this variable in ckati (https://github.com/google/kati/commit/4cb8a6f4f7c23271cf58141d938a35c95c217b82) but I think this was a bad idea. We probably want to pass this value more explicitly. I have introduced --remote_num_jobs flag to ckati (https://github.com/google/kati/commit/de5846149595437b94f03e5d3cb47e093f64bd1c) and changed this variable and ninja.mk.
 
