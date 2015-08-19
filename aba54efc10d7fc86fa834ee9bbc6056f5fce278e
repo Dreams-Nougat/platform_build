@@ -33,6 +33,14 @@ Bytes: 258
 That would make this file a little bit more complicated, because we "include $(CLEAR_VARS)" in this file.
 Also I'd like to avoid that: these variables are really only for this file and it's unnecessary to be reset every time you define other kind of modules.
 
+22
+Wed Aug 19 23:53:44 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 04b861a5_2e6f5d21
+UUID: e4aeed64_fd57bd9e
+Bytes: 89
+ah, true. it is still possible to cause problems, but luckily they all go away with soong
+
 File: core/tasks/tools/build_custom_image.mk
 
 34
@@ -49,4 +57,12 @@ Parent: 243ac5f6_12d40ab6
 UUID: e4434d7f_8c9abac3
 Bytes: 93
 no, shared libraries are recorded separately in variables *_DEPENDENCIES_ON_SHARED_LIBRARIES.
+
+34
+Wed Aug 19 23:53:44 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e4434d7f_8c9abac3
+UUID: c4a9e95f_6d947798
+Bytes: 123
+but the contents of *_DEPENDENCIES_ON_SHARED_LIBRARIES is added back into .REQUIRED in main.mk before this file is included
 
