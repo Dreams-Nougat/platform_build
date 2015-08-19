@@ -12,3 +12,16 @@ The PRIVATE variable was removed by me, because I changed the dependency to :
 $(dbus_generated_headers) : $(dbus_definition_paths)
 which makes $^ be only the .dbus.xml files.
 
+993:1-993:24
+Wed Aug 19 21:01:04 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a4a8755c_fdf01606
+UUID: 04b861a5_b342d666
+Bytes: 221
+What about this line:
+ $(dbus_generated_headers) : $(dbus_service_config_path) $(DBUS_GENERATOR)
+
+Wouldn't that add the service config and the generator to the dependencies?
+
+In practice, I see that they are listed in $^.
+
