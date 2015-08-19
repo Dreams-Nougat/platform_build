@@ -124,3 +124,11 @@ UUID: 04806112_891730d4
 Bytes: 107
 This makes sense to me. my_c_includes += $(dbus_header_dir) then? Do we need my_export_c_include_dirs, too?
 
+661:0-661:49
+Wed Aug 19 17:47:55 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 04806112_891730d4
+UUID: c4a9e95f_e7fc08a9
+Bytes: 236
+I suppose it can't hurt.  There exist patterns where we compile 95% of a daemon into a common library for the purposes of running unittests against it.  It would be a hassle to have to reason about hiding the headers for generated code.
+
