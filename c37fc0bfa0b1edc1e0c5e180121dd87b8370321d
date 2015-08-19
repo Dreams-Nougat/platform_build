@@ -9,12 +9,28 @@ UUID: a4fb1585_21ee2a2a
 Bytes: 54
 For clarity, this could just be 'proxies' (see below).
 
+635:35-635:42
+Wed Aug 19 17:19:56 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a4fb1585_21ee2a2a
+UUID: 04806112_e90fcce8
+Bytes: 121
+I kind of like calling this directory include, because it clearly communicates that this is the root of the include path.
+
 638
 Wed Aug 19 14:24:59 2015 +0000
 Author: Gilad Arnold <1076344@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: e4aeed64_3419f204
 Bytes: 166
 We might want to append another directory to $(dbus_gen_dir) in this case to ensure there's no possible overlap between the two cases, e.g. $(dbus_gen_dir)/adaptors .
+
+638
+Wed Aug 19 17:19:56 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e4aeed64_3419f204
+UUID: 64591d73_dc4d8f94
+Bytes: 115
+Right now, a given target cannot generate both adaptors and proxies.  I don't see how we could end up with overlap.
 
 639:16-639:61
 Tue Aug 18 22:38:26 2015 +0000
@@ -23,12 +39,28 @@ UUID: a4a8755c_9f3b1d86
 Bytes: 115
 To use static pattern rule, I added the source path (relative to LOCAL_PATH) to the generated headers in this case.
 
+639:16-639:61
+Wed Aug 19 17:19:56 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a4a8755c_9f3b1d86
+UUID: e4aeed64_b7596462
+Bytes: 88
+I wish I had thought of this, but hey, now I have a basic understanding of call/eval. :/
+
 649
 Wed Aug 19 14:24:59 2015 +0000
 Author: Gilad Arnold <1076344@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: e4aeed64_9408e6b8
 Bytes: 100
 Is there a reason for the different spacing around ':' between variable assignment and dependencies?
+
+649
+Wed Aug 19 17:19:56 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e4aeed64_9408e6b8
+UUID: c471e91c_2eac86f7
+Bytes: 167
+My rough reading of the file is that ": " is used for scoping the next statement to a set of targets.  " : " is used to express dependencies.  But that's just a guess.
 
 661:0-661:49
 Tue Aug 18 22:38:26 2015 +0000
@@ -47,4 +79,24 @@ Bytes: 174
 I think this would work (but curious what wiley says ;-) ).
 
 We should probably add these to my_export_c_include_dirs as well, in case these get generated in a separate rule.
+
+661:0-661:49
+Wed Aug 19 17:19:56 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 243ac5f6_56dfa985
+UUID: c4a9e95f_fcc6dfad
+Bytes: 671
+I think I'd like to include the folder structure inside the repository as part of the header namespacing.  So if a project had sources dbus_bindings/example/org.chromium.Example.dbus.xml, they would write
+
+#include <dbus_bindings/example/org.chromium.Example.h>
+
+I think that this gives better hints to authors where the code is coming from than:
+
+#include <org.chromium.Example.h>
+
+In practice, most projects keep their binding definitions in a directory called dbus_bindings in the root of their project, so the include statement would look like:
+
+#include <dbus_bindings/org.chromium.Buffet.Manager.h>
+
+We should be able to massage the gyp files to match this pattern.
 
