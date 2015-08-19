@@ -9,3 +9,17 @@ UUID: a4a8755c_25fa1a36
 Bytes: 210
 Should just make this an error. There's no need to manually set LOCAL_CXX_STL := libc++ any more, and if they've set it to libc++_static but we're giving them the shared mingw libstdc++ it isn't what they want.
 
+43
+Wed Aug 19 04:18:24 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a4a8755c_25fa1a36
+UUID: c4a9e95f_b936396d
+Bytes: 229
+I don't disagree, but this is what we're effectively doing for adb and fastboot today.
+
+  ifneq ($(HOST_OS),windows)
+    LOCAL_CXX_STL := libc++_static
+  endif
+
+Which does default back to libstdc++ on windows with the above code.
+
