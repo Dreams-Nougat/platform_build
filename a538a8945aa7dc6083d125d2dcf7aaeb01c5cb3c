@@ -17,6 +17,14 @@ UUID: e4434d7f_13bb6dba
 Bytes: 131
 Mainly because most targets don't support windows builds. We could remove this if we switched the default to windows not supported.
 
+621
+Wed Aug 19 18:13:29 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e4434d7f_13bb6dba
+UUID: 64591d73_5ca4df37
+Bytes: 89
+I see. So the goal for "build all supported windows modules" would still be winsdk-tools?
+
 File: core/envsetup.mk
 
 59
