@@ -1,0 +1,20 @@
+Revision: a538a8945aa7dc6083d125d2dcf7aaeb01c5cb3c
+Patch-set: 2
+File: core/base_rules.mk
+
+621
+Wed Aug 19 05:56:38 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 04806112_06232f33
+Bytes: 73
+As in `make checkbuild` won't cover Windows targets? Any reason for that?
+
+File: core/envsetup.mk
+
+59
+Wed Aug 19 05:56:38 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c4a9e95f_79e9a12b
+Bytes: 33
+There's also a winsdk-tools goal.
+
