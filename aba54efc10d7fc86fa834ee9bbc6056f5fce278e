@@ -9,12 +9,29 @@ UUID: c4a9e95f_8dda1395
 Bytes: 142
 We should likely change this based on LOCAL_PROPRIETARY_MODULE / LOCAL_OEM_MODULE / LOCAL_ODM_MODULE to always put this in the right partition
 
+12:0-12:48
+Wed Aug 19 23:50:46 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c4a9e95f_8dda1395
+UUID: 64591d73_a5acf7f8
+Bytes: 10
+good idea!
+
 22
 Wed Aug 19 23:43:39 2015 +0000
 Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: a4a8755c_33aa5d09
 Bytes: 54
 These should just go in clear_vars.mk, shouldn't they?
+
+22
+Wed Aug 19 23:50:46 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a4a8755c_33aa5d09
+UUID: 04b861a5_2e6f5d21
+Bytes: 258
+That would make this file a little bit more complicated, because we "include $(CLEAR_VARS)" in this file.
+Also I'd like to avoid that: these variables are really only for this file and it's unnecessary to be reset every time you define other kind of modules.
 
 File: core/tasks/tools/build_custom_image.mk
 
@@ -24,4 +41,12 @@ Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 243ac5f6_12d40ab6
 Bytes: 105
 Won't this pick up all the shared library dependencies and install them too? That's probably not desired.
+
+34
+Wed Aug 19 23:50:46 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 243ac5f6_12d40ab6
+UUID: e4434d7f_8c9abac3
+Bytes: 93
+no, shared libraries are recorded separately in variables *_DEPENDENCIES_ON_SHARED_LIBRARIES.
 
