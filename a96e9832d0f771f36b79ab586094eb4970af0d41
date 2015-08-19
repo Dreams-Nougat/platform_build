@@ -2,6 +2,13 @@ Revision: a96e9832d0f771f36b79ab586094eb4970af0d41
 Patch-set: 1
 File: core/cxx_stl_setup.mk
 
+39:4-39:8
+Wed Aug 19 01:35:51 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e4aeed64_f4c4ba37
+Bytes: 7
+ifneq ?
+
 43
 Tue Aug 18 22:24:37 2015 +0000
 Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
