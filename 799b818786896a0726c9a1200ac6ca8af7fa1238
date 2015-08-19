@@ -1,0 +1,20 @@
+Revision: 799b818786896a0726c9a1200ac6ca8af7fa1238
+Patch-set: 1
+File: /COMMIT_MSG
+
+14
+Wed Aug 19 21:58:36 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a4a8755c_80cad914
+Bytes: 160
+I don't think you can do this. If a test is checked in with `LOCAL_SANITIZE := thread` then you're guaranteeing that we can't build with SANITIZE_(HOST|TARGET).
+
+File: core/config_sanitizers.mk
+
+29
+Wed Aug 19 21:58:36 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c471e91c_e481af9f
+Bytes: 9
+If either
+
