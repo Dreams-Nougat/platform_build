@@ -17,6 +17,14 @@ UUID: 04806112_e90fcce8
 Bytes: 121
 I kind of like calling this directory include, because it clearly communicates that this is the root of the include path.
 
+635:35-635:42
+Wed Aug 19 17:36:46 2015 +0000
+Author: Gilad Arnold <1076344@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 04806112_e90fcce8
+UUID: 64591d73_9cf2f78e
+Bytes: 92
+But we don't do this for the adaptor headers, do we? I'm fine either way, just pointing out.
+
 638
 Wed Aug 19 14:24:59 2015 +0000
 Author: Gilad Arnold <1076344@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -31,6 +39,14 @@ Parent: e4aeed64_3419f204
 UUID: 64591d73_dc4d8f94
 Bytes: 115
 Right now, a given target cannot generate both adaptors and proxies.  I don't see how we could end up with overlap.
+
+638
+Wed Aug 19 17:36:46 2015 +0000
+Author: Gilad Arnold <1076344@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 64591d73_dc4d8f94
+UUID: a4a8755c_509912fe
+Bytes: 278
+You are right and I keep forgetting that generated artifacts are scoped within their target's intermediates dir. That said, for the sake of clarity, I think the distinction between $(dbus_gen_dir)/proxies/... and $(dbus_gen_dir)/adaptors/... is useful. Again, just a preference.
 
 639:16-639:61
 Tue Aug 18 22:38:26 2015 +0000
@@ -99,4 +115,12 @@ In practice, most projects keep their binding definitions in a directory called 
 #include <dbus_bindings/org.chromium.Buffet.Manager.h>
 
 We should be able to massage the gyp files to match this pattern.
+
+661:0-661:49
+Wed Aug 19 17:36:46 2015 +0000
+Author: Gilad Arnold <1076344@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c4a9e95f_fcc6dfad
+UUID: 04806112_891730d4
+Bytes: 107
+This makes sense to me. my_c_includes += $(dbus_header_dir) then? Do we need my_export_c_include_dirs, too?
 
