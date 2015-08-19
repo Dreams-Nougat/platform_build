@@ -1,0 +1,11 @@
+Revision: 1ca3b70f84311884dfe00398fb28526d247c62f3
+Patch-set: 2
+File: core/cxx_stl_setup.mk
+
+43
+Wed Aug 19 04:06:46 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a4a8755c_25fa1a36
+Bytes: 210
+Should just make this an error. There's no need to manually set LOCAL_CXX_STL := libc++ any more, and if they've set it to libc++_static but we're giving them the shared mingw libstdc++ it isn't what they want.
+
