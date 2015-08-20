@@ -1,0 +1,21 @@
+Revision: e7d8ff1413d9e6f8f158075a3758c54975197e4b
+Patch-set: 4
+File: core/binary.mk
+
+157:36-157:48
+Thu Aug 20 23:23:59 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e4750d3f_02075a59
+Bytes: 65
+HOST_ ?
+since these are enclosed by "ifdef LOCAL_IS_HOST_MODULE".
+
+File: core/host_test_internal.mk
+
+5:0-5:42
+Thu Aug 20 23:23:59 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c4700952_b629eebe
+Bytes: 137
+It may not be a big deal, but LOCAL_CFLAGS_windows will be repeatedly appended with this and unused, when we are building non-windows :-)
+
