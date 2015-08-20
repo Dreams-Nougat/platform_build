@@ -1,0 +1,11 @@
+Revision: b3c585d745918bebb6e4ea72ad60875adf53337e
+Base-for-patch-set: 1
+File: core/combo/include/arch/windows/AndroidConfig.h
+
+41:0-42:27
+Thu Aug 20 01:13:09 2015 +0000
+Author: Spencer Low <1065256@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 64591d73_14f7d300
+Bytes: 290
+Don't we need these to map stat to 64-bit stat and related? Or do you guys have some other design around 64-bit file sizes/offsets? adb isn't totally 64-bit size/offset clean (due to file_sync_service.h being 32-bit), but I have read that people are using adb to push >4GB files on Windows.
+
