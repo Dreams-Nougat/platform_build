@@ -33,3 +33,13 @@ Here's a user that is adb pull'ing >4GiB files: https://productforums.google.com
 
 I think the reason that the code works in practice is because the sync code only uses the size in determining if a file is different, it doesn't use it for determining how much to read/write.
 
+41:0-42:27
+Thu Aug 20 02:40:51 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e4434d7f_473c0b47
+UUID: a4fb1585_e8b07efa
+Bytes: 267
+(checks.) yeah, you're right. it works because they only use the size to show progress. (as far as i can tell, sync doesn't even use the size in deciding what to copy.)
+
+okay, i'll add this to the combo .mk and dream wistfully of the day when all Windows is 64-bit...
+
