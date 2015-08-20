@@ -1,0 +1,11 @@
+Revision: b8dd176441f6ba9527d24a5065d8225437fe39d5
+Patch-set: 1
+File: core/combo/HOST_windows-x86.mk
+
+39:69-39:90
+Thu Aug 20 21:00:07 2015 +0000
+Author: Spencer Low <1065256@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 4485f957_f7dd3855
+Bytes: 139
+I'm kind of curious: what actually broke without this? Earlier I did a search for this through the headers and didn't see much interesting.
+
