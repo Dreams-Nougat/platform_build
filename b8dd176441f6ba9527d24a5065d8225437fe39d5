@@ -9,3 +9,13 @@ UUID: 4485f957_f7dd3855
 Bytes: 139
 I'm kind of curious: what actually broke without this? Earlier I did a search for this through the headers and didn't see much interesting.
 
+39:69-39:90
+Thu Aug 20 21:03:43 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 4485f957_f7dd3855
+UUID: 84253145_39c727ac
+Bytes: 523
+nothing. this wasn't actually the problem. the WIN32 was. srhines has a hack in llvm that uses WIN32 rather than _WIN32. one question is: "should we fix that to _WIN32 and remove the hack in the build system?" but a deeper question is "why did srhines need that llvm hack in the first place? is it because we polluted his environment with _FILE_OFFSET_BITS=64? in which case, should we stop doing that and just add it explicitly to adb and fastboot?"
+
+(plus: when will 32-bit Windows die so we can get past all this crap?!)
+
