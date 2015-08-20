@@ -66,3 +66,12 @@ UUID: c4a9e95f_6d947798
 Bytes: 123
 but the contents of *_DEPENDENCIES_ON_SHARED_LIBRARIES is added back into .REQUIRED in main.mk before this file is included
 
+34
+Thu Aug 20 00:00:23 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c4a9e95f_6d947798
+UUID: c471e91c_42d99368
+Bytes: 82
+Ah, I missed that and I didn't test this feature.
+I need to think more about this.
+
