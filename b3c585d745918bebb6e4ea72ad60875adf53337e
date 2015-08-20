@@ -43,3 +43,13 @@ Bytes: 267
 
 okay, i'll add this to the combo .mk and dream wistfully of the day when all Windows is 64-bit...
 
+41:0-42:27
+Thu Aug 20 02:48:25 2015 +0000
+Author: Spencer Low <1065256@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a4fb1585_e8b07efa
+UUID: 04806112_158a6fa1
+Bytes: 535
+See copy_local_dir_remote() where it does "if(size == ci->size) {" to see how sync checks for file size/timestamp differences. Yes, it is wrong for >4GiB because the protocol only returns a 32-bit size.
+
+I found this when trying to get adb to compile with Visual Studio (whose headers don't support _FILE_OFFSET_BITS and _LARGEFILE_SOURCE) -- it gave a truncation warning about local_build_list() truncating a 64-bit st_size to 32-bits (which is a red herring since the protocol is the real thing that needs to be fixed to begin with).
+
