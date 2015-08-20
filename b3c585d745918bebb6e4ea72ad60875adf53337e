@@ -21,3 +21,15 @@ the former is harder to tell statically, but there are certainly no references t
 
 (from my exploration of the sync code in my WIP patch to speed up sync by using larger packet sizes i can tell you that no one is transferring > 4GiB files on any platform because adb uses "unsigned" to represent file sizes.)
 
+41:0-42:27
+Thu Aug 20 01:57:16 2015 +0000
+Author: Spencer Low <1065256@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e4aeed64_a8ab418e
+UUID: e4434d7f_473c0b47
+Bytes: 668
+I think adb uses 'stat' which sys/stat.h maps to a 64-bit api & structure if _FILE_OFFSET_BITS==64. I checked and sizeof(((struct stat*)0)->st_size) == 8 in Windows builds. Some references to st_size just (incorrectly) truncate to 32-bit, but it seems like some may use it correctly (as a param to pm install-create, which might be broken by this change?).
+
+Here's a user that is adb pull'ing >4GiB files: https://productforums.google.com/d/msg/nexus/stu63KZzXb8/ki8KOh72AnIJ
+
+I think the reason that the code works in practice is because the sync code only uses the size in determining if a file is different, it doesn't use it for determining how much to read/write.
+
