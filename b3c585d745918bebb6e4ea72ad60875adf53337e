@@ -9,3 +9,15 @@ UUID: 64591d73_14f7d300
 Bytes: 290
 Don't we need these to map stat to 64-bit stat and related? Or do you guys have some other design around 64-bit file sizes/offsets? adb isn't totally 64-bit size/offset clean (due to file_sync_service.h being 32-bit), but I have read that people are using adb to push >4GB files on Windows.
 
+41:0-42:27
+Thu Aug 20 01:30:18 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 64591d73_14f7d300
+UUID: e4aeed64_a8ab418e
+Bytes: 417
+we don't need the latter; if we did, code wouldn't compile now i've removed it.
+
+the former is harder to tell statically, but there are certainly no references to off_t (or off64_t!) in adb.
+
+(from my exploration of the sync code in my WIP patch to speed up sync by using larger packet sizes i can tell you that no one is transferring > 4GiB files on any platform because adb uses "unsigned" to represent file sizes.)
+
