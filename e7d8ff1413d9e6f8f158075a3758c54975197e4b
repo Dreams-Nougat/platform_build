@@ -10,6 +10,14 @@ Bytes: 65
 HOST_ ?
 since these are enclosed by "ifdef LOCAL_IS_HOST_MODULE".
 
+157:36-157:48
+Tue Aug 25 23:21:07 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e4750d3f_02075a59
+UUID: 248c8586_ff6df679
+Bytes: 119
+That's just to prevent more changes with the introduction of HOST_CROSS_ as a valid prefix in the HOST_CROSS_OS change.
+
 File: core/host_test_internal.mk
 
 5:0-5:42
@@ -18,4 +26,14 @@ Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: c4700952_b629eebe
 Bytes: 137
 It may not be a big deal, but LOCAL_CFLAGS_windows will be repeatedly appended with this and unused, when we are building non-windows :-)
+
+5:0-5:42
+Tue Aug 25 23:21:07 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c4700952_b629eebe
+UUID: 248c8586_df75923e
+Bytes: 185
+Hmm, that's the case with all the _linux/_darwin variables too.
+
+And it's the case with LOCAL_CFLAGS_mips / etc as well, since we only clear the current configurations in clear_vars.mk.
 
