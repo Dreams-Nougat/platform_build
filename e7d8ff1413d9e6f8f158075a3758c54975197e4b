@@ -37,3 +37,15 @@ Hmm, that's the case with all the _linux/_darwin variables too.
 
 And it's the case with LOCAL_CFLAGS_mips / etc as well, since we only clear the current configurations in clear_vars.mk.
 
+5:0-5:42
+Tue Aug 25 23:57:06 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 248c8586_df75923e
+UUID: c42ba915_6645ee19
+Bytes: 372
+Yeah, but we don't have things like "LOCAL_CFLAGS_mips +=" in the core build system, in which it's repeatedly applied when the file is included.
+This is one reason I prefer to use ":=" instead of "+=" in Android.mk when setting such variables.
+
+I don't see an easy fix without causing other overhead.
+Again, this isn't a big deal, since this file isn't included that much.
+
