@@ -21,12 +21,30 @@ else
 my_prefix := $(LOCAL_HOST_PREFIX)
 endif
 
+37:2-45:7
+Tue Aug 25 22:56:20 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c42ba915_239a89c6
+UUID: 248c8586_ac23ce31
+Bytes: 166
+I was mostly trying to be safe, in case someone manages to bypass the places that I've explicitly set LOCAL_HOST_PREFIX. But that would break rather obviously.
+
+Done.
+
 54:0-54:26
 Tue Aug 25 21:07:58 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 248c8586_173b0488
 Bytes: 21
 this isn't necessary.
+
+54:0-54:26
+Tue Aug 25 22:56:20 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 248c8586_173b0488
+UUID: 048f817d_a49a0e79
+Bytes: 4
+Done
 
 180:78-180:116
 Tue Aug 25 21:07:58 2015 +0000
@@ -35,12 +53,28 @@ UUID: 248c8586_b70318c8
 Bytes: 74
 If we define a variable in base_rules.mk, we can reference it in binary.mk
 
+180:78-180:116
+Tue Aug 25 22:56:20 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 248c8586_b70318c8
+UUID: 248c8586_cc5bb27d
+Bytes: 4
+Done
+
 618:0-618:26
 Tue Aug 25 21:07:58 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 048f817d_a168c0e8
 Bytes: 5
 ditto
+
+618:0-618:26
+Tue Aug 25 22:56:20 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 048f817d_a168c0e8
+UUID: e4750d3f_cbfcffe5
+Bytes: 4
+Done
 
 File: core/binary.mk
 
@@ -52,6 +86,14 @@ Bytes: 143
 It seems we don't need the complex streq here. Also we can factor this out, something like:
 my_host_cross := $(filter HOST_CROSS_,$(my_prefix))
 
+1015:111-1015:149
+Tue Aug 25 22:56:20 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a42a3512_ac5be97d
+UUID: 048f817d_a483ee10
+Bytes: 4
+Done
+
 File: core/envsetup.mk
 
 62:8-62:20
@@ -60,6 +102,18 @@ Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 248c8586_f739a08b
 Bytes: 45
 where is the dependency setup of this target?
+
+62:8-62:20
+Tue Aug 25 22:56:20 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 248c8586_f739a08b
+UUID: c4700952_8061fb7e
+Bytes: 307
+There isn't anything -- this was mostly as a temporary modifier to allow the building of windows code, but it could be useful later too. The use case would be:
+
+  cd system/core/adb; mm buildwindows
+
+Though there are some places where I'd need to filter this out of the MAKECMDGOALS, just like showcommands.
 
 File: core/host_executable.mk
 
@@ -76,6 +130,16 @@ endif
 In which we need LOCAL_INSTALLED_MODULE to be the windows one.
 Or perhaps we should remove all the use of LOCAL_INSTALLED_MODULE and LOCAL_BUILT_MODULE in Android.mks.
 
+74:0-74:57
+Tue Aug 25 22:56:20 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e4750d3f_f08c4a8a
+UUID: a47f9520_47948649
+Bytes: 388
+Yeah, I moved that to a LOCAL_REQUIRED_MODULE_windows locally (I haven't pushed all of the changes to the makefiles related to these changes until we get the API down).
+
+But most of the cases of LOCAL_INSTALLED_MODULE and LOCAL_BUILT_MODULE that I've found are already questionable, and probably should be removed. Especially with shared libraries, most of them are wrong due to multilib.
+
 File: core/host_shared_library.mk
 
 48:0-48:57
@@ -84,4 +148,12 @@ Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 84253145_4b423b6a
 Bytes: 119
 Why in executables.mk we save both LOCAL_INSTALLED_MODULE and LOCAL_BUILT_MODULE, but here only LOCAL_INSTALLED_MODULE?
+
+48:0-48:57
+Tue Aug 25 22:56:20 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 84253145_4b423b6a
+UUID: e4750d3f_eb653b3a
+Bytes: 147
+I found things using LOCAL_BUILT_MODULE for executables, but I didn't run into any issues with shared libraries. I can add it here too if you want.
 
