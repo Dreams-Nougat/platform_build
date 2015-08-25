@@ -1,0 +1,87 @@
+Revision: 78cc1a7b721a013737f35fa9ca0b6e70991d7fb0
+Patch-set: 4
+File: core/base_rules.mk
+
+39:7-39:40
+Tue Aug 25 21:07:58 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 4485f957_e91f9061
+Bytes: 25
+we don't set it to HOST_.
+
+37:2-45:7
+Tue Aug 25 21:07:58 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c42ba915_239a89c6
+Bytes: 122
+Looks like we can simply use:
+ifeq ($(LOCAL_HOST_PREFIX),)
+my_prefix := HOST_
+else
+my_prefix := $(LOCAL_HOST_PREFIX)
+endif
+
+54:0-54:26
+Tue Aug 25 21:07:58 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 248c8586_173b0488
+Bytes: 21
+this isn't necessary.
+
+180:78-180:116
+Tue Aug 25 21:07:58 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 248c8586_b70318c8
+Bytes: 74
+If we define a variable in base_rules.mk, we can reference it in binary.mk
+
+618:0-618:26
+Tue Aug 25 21:07:58 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 048f817d_a168c0e8
+Bytes: 5
+ditto
+
+File: core/binary.mk
+
+1015:111-1015:149
+Tue Aug 25 21:07:58 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a42a3512_ac5be97d
+Bytes: 143
+It seems we don't need the complex streq here. Also we can factor this out, something like:
+my_host_cross := $(filter HOST_CROSS_,$(my_prefix))
+
+File: core/envsetup.mk
+
+62:8-62:20
+Tue Aug 25 21:07:58 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 248c8586_f739a08b
+Bytes: 45
+where is the dependency setup of this target?
+
+File: core/host_executable.mk
+
+74:0-74:57
+Tue Aug 25 21:07:58 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e4750d3f_f08c4a8a
+Bytes: 309
+In system/core/fastboot/Android.mk, we have
+ifeq ($(HOST_OS),windows)
+$(LOCAL_INSTALLED_MODULE): $(HOST_OUT_EXECUTABLES)/AdbWinApi.dll
+endif
+
+In which we need LOCAL_INSTALLED_MODULE to be the windows one.
+Or perhaps we should remove all the use of LOCAL_INSTALLED_MODULE and LOCAL_BUILT_MODULE in Android.mks.
+
+File: core/host_shared_library.mk
+
+48:0-48:57
+Tue Aug 25 21:07:58 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 84253145_4b423b6a
+Bytes: 119
+Why in executables.mk we save both LOCAL_INSTALLED_MODULE and LOCAL_BUILT_MODULE, but here only LOCAL_INSTALLED_MODULE?
+
