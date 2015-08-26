@@ -10,6 +10,14 @@ Bytes: 182
 Now this function isn't called anywhere.
 Previously this function is called in the following definitions of CLANG_HOST_GLOBAL_*FLAGS, and also in binary.mk (search for "convert-to").
 
+40:0-40:38
+Wed Aug 26 22:13:33 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 849451c2_e136a20c
+UUID: 048f817d_1b02514a
+Bytes: 77
+Yeah, I'll remove this function, since it doesn't use anything host specific.
+
 File: core/notice_files.mk
 
 60:0-60:90
