@@ -1,0 +1,22 @@
+Revision: 44d0836fafec3d045e83e9c6d1845418226417ac
+Patch-set: 6
+File: core/clang/HOST_CROSS_windows.mk
+
+40:0-40:38
+Wed Aug 26 22:01:00 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 849451c2_e136a20c
+Bytes: 182
+Now this function isn't called anywhere.
+Previously this function is called in the following definitions of CLANG_HOST_GLOBAL_*FLAGS, and also in binary.mk (search for "convert-to").
+
+File: core/notice_files.mk
+
+60:0-60:90
+Wed Aug 26 22:01:00 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 84253145_fa8d0b3d
+Bytes: 206
+Look at how tools_notice_file gets packaged in build/core/Makefile, those host_cross notice files will go nowhere.
+In the existing system, we don't collect the windows notice files. So I think this is fine.
+
