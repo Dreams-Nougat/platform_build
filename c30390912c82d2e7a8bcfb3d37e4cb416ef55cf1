@@ -1,0 +1,11 @@
+Revision: c30390912c82d2e7a8bcfb3d37e4cb416ef55cf1
+Patch-set: 4
+File: tools/releasetools/blockimgdiff.py
+
+988:37-988:41
+Wed Aug 26 08:57:17 2015 +0000
+Author: Sami Tolvanen <1058768@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 845371c9_c9017546
+Bytes: 49
+Use MAX_BLOCKS_PER_DIFF_TRANSFER instead of 1024?
+
