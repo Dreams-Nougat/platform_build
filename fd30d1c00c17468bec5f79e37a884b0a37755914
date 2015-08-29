@@ -1,0 +1,11 @@
+Revision: fd30d1c00c17468bec5f79e37a884b0a37755914
+Patch-set: 1
+File: core/java_common.mk
+
+127:0-127:72
+Sat Aug 29 00:04:04 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c42ba915_208d9184
+Bytes: 142
+This only applied to java.mk before this change. Now it also applies to host java libraries (though it's cleared by host_dalvik_java_library).
+
