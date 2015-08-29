@@ -1,5 +1,14 @@
 Revision: fd30d1c00c17468bec5f79e37a884b0a37755914
 Patch-set: 1
+File: core/host_dalvik_java_library.mk
+
+67:0-71:52
+Sat Aug 29 00:16:14 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 248c8586_e45c74fa
+Bytes: 70
+I should remove these lines as well. they are moved to java_common.mk.
+
 File: core/java_common.mk
 
 127:0-127:72
@@ -8,4 +17,13 @@ Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: c42ba915_208d9184
 Bytes: 142
 This only applied to java.mk before this change. Now it also applies to host java libraries (though it's cleared by host_dalvik_java_library).
+
+127:0-127:72
+Sat Aug 29 00:16:14 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c42ba915_208d9184
+UUID: c4700952_877d878d
+Bytes: 99
+yeah. Only the target module framework.jar has this variable set.
+It's good to unify all the cases.
 
