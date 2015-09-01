@@ -10,6 +10,14 @@ Bytes: 184
 Actually there are tons of variables can be passed in as environmental variables that affect the build rules.
 But kati will regenerate the build.ninja and I think probably that's fine.
 
+12:9-12:26
+Tue Sep 01 22:39:27 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 644d9e85_ce7a3784
+UUID: e45b4e6b_99bfbbe4
+Bytes: 185
+Yes, and I'd expect developers don't change environment variables often. Of course, they may change their lunch targets, but we use different directory for different lunch targets IIUC.
+
 8:0-14:5
 Tue Sep 01 18:05:23 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -18,12 +26,28 @@ Bytes: 203
 Perhaps we calculate md5sum of the normalized (sorting the targets) string as the suffix?
 In mkdb we calculate a checksum on the normalized make command line and a list of environmental variables/values.
 
+8:0-14:5
+Tue Sep 01 22:39:27 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e486eed4_108ab20e
+UUID: 04594273_dac92591
+Bytes: 135
+Done. Let me keep KATI_NINJA_SUFFIX to be blank for vanilla "m", so that we can find build.ninja easily when we need to investigate it.
+
 51:32-51:43
 Tue Sep 01 20:28:52 2015 +0000
 Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: e486eed4_9b6fc3c6
 Bytes: 59
 Might as well put $(KATI_NINJA_SUFFIX) in here for accuracy
+
+51:32-51:43
+Tue Sep 01 22:39:27 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e486eed4_9b6fc3c6
+UUID: e4bd0e95_29be8deb
+Bytes: 4
+Done
 
 53:53-53:66
 Tue Sep 01 18:05:23 2015 +0000
