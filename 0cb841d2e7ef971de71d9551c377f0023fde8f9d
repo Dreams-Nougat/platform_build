@@ -9,3 +9,11 @@ UUID: 6424bead_62859cf8
 Bytes: 95
 I preferred the old way, it makes it clearer why there are multiple build_*.ninja files in $OUT
 
+10:99-10:105
+Tue Sep 01 22:39:27 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 6424bead_62859cf8
+UUID: 244806a0_bbc2676c
+Bytes: 96
+Oh :) Please discuss with Ying then, I'm OK with either way. I uploaded PS1 with $(sort) as PS3.
+
