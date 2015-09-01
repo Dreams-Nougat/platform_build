@@ -1,0 +1,11 @@
+Revision: 0cb841d2e7ef971de71d9551c377f0023fde8f9d
+Patch-set: 2
+File: core/ninja.mk
+
+10:99-10:105
+Tue Sep 01 22:32:52 2015 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 6424bead_62859cf8
+Bytes: 95
+I preferred the old way, it makes it clearer why there are multiple build_*.ninja files in $OUT
+
