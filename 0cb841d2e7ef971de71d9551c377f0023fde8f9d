@@ -17,3 +17,12 @@ UUID: 244806a0_bbc2676c
 Bytes: 96
 Oh :) Please discuss with Ying then, I'm OK with either way. I uploaded PS1 with $(sort) as PS3.
 
+10:99-10:105
+Tue Sep 01 23:30:22 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 244806a0_bbc2676c
+UUID: 045f8228_ffc2436d
+Bytes: 114
+I am afraid the file name gets too long, as $(ONE_SHOT_MAKEFILE) is usually long.
+But I don't have strong opinion.
+
