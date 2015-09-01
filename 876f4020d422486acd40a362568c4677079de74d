@@ -1,0 +1,27 @@
+Revision: 876f4020d422486acd40a362568c4677079de74d
+Patch-set: 1
+File: core/ninja.mk
+
+12:9-12:26
+Tue Sep 01 18:05:23 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 644d9e85_ce7a3784
+Bytes: 184
+Actually there are tons of variables can be passed in as environmental variables that affect the build rules.
+But kati will regenerate the build.ninja and I think probably that's fine.
+
+8:0-14:5
+Tue Sep 01 18:05:23 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e486eed4_108ab20e
+Bytes: 203
+Perhaps we calculate md5sum of the normalized (sorting the targets) string as the suffix?
+In mkdb we calculate a checksum on the normalized make command line and a list of environmental variables/values.
+
+53:53-53:66
+Tue Sep 01 18:05:23 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 84529221_c07e82ef
+Bytes: 40
+Ah, I didn't know kati has this support.
+
