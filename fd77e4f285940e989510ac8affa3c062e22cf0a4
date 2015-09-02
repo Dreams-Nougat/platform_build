@@ -9,3 +9,11 @@ UUID: c4072a51_d04bbc46
 Bytes: 35
 this target does not use 2nd_prefix
 
+69
+Wed Sep 02 18:53:44 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c4072a51_d04bbc46
+UUID: e486eed4_800c2bb8
+Bytes: 49
+yeah, we don't support 64-bit as TARGET_2ND_ARCH.
+
