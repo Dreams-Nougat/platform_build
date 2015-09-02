@@ -16,3 +16,13 @@ UUID: c4580a44_110cee7a
 Bytes: 84
 we know this code is correct? we don't need to worry about it following the symlink?
 
+1401:23-1401:56
+Wed Sep 02 20:54:39 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c4580a44_110cee7a
+UUID: a40a365b_7255b639
+Bytes: 125
+emm. since the zip implementation may change, we should take a safer approach, like:
+
+sha1_check(dest, "xyz") || delete(dest)
+
