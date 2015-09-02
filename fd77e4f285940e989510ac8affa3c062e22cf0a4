@@ -1,0 +1,11 @@
+Revision: fd77e4f285940e989510ac8affa3c062e22cf0a4
+Patch-set: 1
+File: core/clang/TARGET_x86_64.mk
+
+69
+Wed Sep 02 18:26:52 2015 +0000
+Author: Evgenii Stepanov <1005967@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c4072a51_d04bbc46
+Bytes: 35
+this target does not use 2nd_prefix
+
