@@ -10,3 +10,11 @@ Bytes: 159
 we'll need to change this with your HOST_CROSS_ change.
 Or can we move "LOCAL_IS_HOST_MODULE := true" from the *_internal.mk to *.mk ? That looks more natural.
 
+63:0-63:25
+Fri Sep 04 22:43:13 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 6492fe15_4baac4ee
+UUID: 04cce27b_df1d7429
+Bytes: 118
+Done. I was worried there would be a bunch of places that may need this done, but it looks like it's just those three.
+
