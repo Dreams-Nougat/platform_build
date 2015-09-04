@@ -1,0 +1,12 @@
+Revision: fc4bba8db6e151b66db1c5084b36f833ad5277cf
+Patch-set: 2
+File: core/module_arch_supported.mk
+
+63:0-63:25
+Fri Sep 04 22:38:10 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 6492fe15_4baac4ee
+Bytes: 159
+we'll need to change this with your HOST_CROSS_ change.
+Or can we move "LOCAL_IS_HOST_MODULE := true" from the *_internal.mk to *.mk ? That looks more natural.
+
