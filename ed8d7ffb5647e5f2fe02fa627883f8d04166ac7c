@@ -1,0 +1,19 @@
+Revision: ed8d7ffb5647e5f2fe02fa627883f8d04166ac7c
+Patch-set: 1
+File: core/ninja.mk
+
+13:46-13:87
+Fri Sep 04 17:44:09 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0484e2ca_a454d8c8
+Bytes: 10
+same here.
+
+16:47-16:94
+Fri Sep 04 17:44:09 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 64159e82_9fb94b52
+Bytes: 63
+it can be more than one paths.
+We need to replace $(space) too.
+
