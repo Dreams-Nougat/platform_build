@@ -9,6 +9,14 @@ UUID: 0484e2ca_a454d8c8
 Bytes: 10
 same here.
 
+13:46-13:87
+Sat Sep 05 00:03:14 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 0484e2ca_a454d8c8
+UUID: e4bd0e95_4c518ffe
+Bytes: 131
+Ah, good catch. Also, I've realized ANDROID_TARGETS may contain slashes. In PS2 we use the same function for these three variables.
+
 16:47-16:94
 Fri Sep 04 17:44:09 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -16,4 +24,12 @@ UUID: 64159e82_9fb94b52
 Bytes: 63
 it can be more than one paths.
 We need to replace $(space) too.
+
+16:47-16:94
+Sat Sep 05 00:03:14 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 64159e82_9fb94b52
+UUID: e45b4e6b_dc100117
+Bytes: 4
+Done
 
