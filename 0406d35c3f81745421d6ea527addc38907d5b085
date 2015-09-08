@@ -1,0 +1,18 @@
+Revision: 0406d35c3f81745421d6ea527addc38907d5b085
+Patch-set: 4
+File: core/ninja.mk
+
+5:31-5:37
+Tue Sep 08 19:12:43 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 44cedaa4_b406c05a
+Bytes: 7
+parsing
+
+6:0-6:18
+Tue Sep 08 19:12:43 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 64cf5e9f_b554803e
+Bytes: 42
+Probably a more descriptive variable name?
+
