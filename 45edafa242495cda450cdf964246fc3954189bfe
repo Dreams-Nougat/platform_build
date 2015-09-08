@@ -1,0 +1,11 @@
+Revision: 45edafa242495cda450cdf964246fc3954189bfe
+Patch-set: 1
+File: tools/makeparallel/makeparallel.cpp
+
+228
+Tue Sep 08 19:43:53 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 04c1426c_fa3789c6
+Bytes: 132
+shouldn't there be an else case here that prints out a warning that we couldn't find a jobserver, and will run the command with -j1?
+
