@@ -9,3 +9,11 @@ UUID: 04c1426c_fa3789c6
 Bytes: 132
 shouldn't there be an else case here that prints out a warning that we couldn't find a jobserver, and will run the command with -j1?
 
+228
+Tue Sep 08 19:48:29 2015 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 04c1426c_fa3789c6
+UUID: 24c9e69c_b3a2589b
+Bytes: 235
+If GetJobserver returns false then there was no --jobserver in MAKEFLAGS, which implies the top level make was run with -j1 or no -j argument.  Tokens is initialized to zero, so this falls through and passes -j1 to the wrapped command.
+
