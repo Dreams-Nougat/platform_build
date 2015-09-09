@@ -11,6 +11,16 @@ Sounds like the number you get isn't deterministic - it depends on how many toke
 In what situations you need to pass this number down to ninja?
 I can imagine that if distributed backend (such as goma) is used, we may want to specify a number much bigger than the cpu cores as parallelism. In that case it's probably better to hard-code the parallelism in the build system, as KATI_REMOTE_NUM_JOBS_FLAG does now.
 
+23:0-28:40
+Wed Sep 09 23:50:52 2015 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 44cedaa4_fa98a16e
+UUID: 244c8613_6452e0aa
+Bytes: 609
+It's deterministic as long as the makeparallel rule is the only one running.  For wrapping ninja, the ninja rule depends on all the other rules so it will always be the only one running and always get the same -j value passed to make.
+
+I missed the local_pool implementation in kati, I can change the next patch to pass -j to kati instead of to ninja.  It's a little unfortunate that the -j value ends up in the build.ninja file, as that means the file needs to be regenerated every time a different -j value is passed.  Maybe for non-goma I should pass it to ninja, and kati should not use local_pool at all?
+
 File: tools/makeparallel/makeparallel.cpp
 
 228
