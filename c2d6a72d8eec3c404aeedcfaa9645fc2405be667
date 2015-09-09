@@ -10,6 +10,14 @@ Bytes: 85
 probably restrict it to target only.
 The host case has been handled in lines 186-194.
 
+212:2-212:55
+Wed Sep 09 23:12:06 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 64cf5e9f_dee83477
+UUID: a4ecf63c_a5664aaf
+Bytes: 4
+Done
+
 213:0-219:5
 Wed Sep 09 22:58:10 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -17,10 +25,26 @@ UUID: 64cf5e9f_3e116819
 Bytes: 66
 better move this up to line 195, before $(my_clang) is referenced.
 
+213:0-219:5
+Wed Sep 09 23:12:06 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 64cf5e9f_3e116819
+UUID: c4ef2afe_958022eb
+Bytes: 4
+Done
+
 240:0-242:5
 Wed Sep 09 22:58:10 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 64cf5e9f_be3b389a
 Bytes: 22
 Move this forward too.
+
+240:0-242:5
+Wed Sep 09 23:12:06 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 64cf5e9f_be3b389a
+UUID: 244c8613_241cd871
+Bytes: 4
+Done
 
