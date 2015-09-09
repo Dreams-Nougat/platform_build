@@ -1,5 +1,16 @@
 Revision: 45edafa242495cda450cdf964246fc3954189bfe
 Patch-set: 1
+File: tools/makeparallel/README.md
+
+23:0-28:40
+Wed Sep 09 02:38:53 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 44cedaa4_fa98a16e
+Bytes: 465
+Sounds like the number you get isn't deterministic - it depends on how many tokens remaining in the pipe when makeparallel is running.
+In what situations you need to pass this number down to ninja?
+I can imagine that if distributed backend (such as goma) is used, we may want to specify a number much bigger than the cpu cores as parallelism. In that case it's probably better to hard-code the parallelism in the build system, as KATI_REMOTE_NUM_JOBS_FLAG does now.
+
 File: tools/makeparallel/makeparallel.cpp
 
 228
