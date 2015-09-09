@@ -1,0 +1,26 @@
+Revision: c2d6a72d8eec3c404aeedcfaa9645fc2405be667
+Patch-set: 1
+File: core/binary.mk
+
+212:2-212:55
+Wed Sep 09 22:58:10 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 64cf5e9f_dee83477
+Bytes: 85
+probably restrict it to target only.
+The host case has been handled in lines 186-194.
+
+213:0-219:5
+Wed Sep 09 22:58:10 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 64cf5e9f_3e116819
+Bytes: 66
+better move this up to line 195, before $(my_clang) is referenced.
+
+240:0-242:5
+Wed Sep 09 22:58:10 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 64cf5e9f_be3b389a
+Bytes: 22
+Move this forward too.
+
