@@ -1,0 +1,18 @@
+Revision: 82dbc959a9023d418a308b02a97836844c1a155d
+Patch-set: 2
+File: core/build-system.html
+
+838:21-838:47
+Thu Sep 10 00:08:37 2015 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 04c1426c_ef6ea1c9
+Bytes: 137
+Isn't this false? I thought the llvm/clang Android.mk updates used this with only windows for the non-FORCE_BUILD_LLVM_COMPONENTS builds.
+
+934:10-934:13
+Thu Sep 10 00:08:37 2015 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 24c9e69c_48fb4bb0
+Bytes: 2
+to
+
