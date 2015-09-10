@@ -17,6 +17,14 @@ UUID: e4c34e74_f36c5043
 Bytes: 154
 Does the new wording make more sense? Essentially "" translates to "linux darwin", so if you want windows supported, you need to add windows to that list.
 
+838:21-838:47
+Thu Sep 10 00:41:49 2015 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e4c34e74_f36c5043
+UUID: 64cf5e9f_54976536
+Bytes: 212
+Yes, the new version is better. I actually now see that you can read this a second way (how you are reading it), and that way makes sense. It would just be confusing, though, so I am glad for the updated wording.
+
 934:10-934:13
 Thu Sep 10 00:08:37 2015 +0000
 Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
