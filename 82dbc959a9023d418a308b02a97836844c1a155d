@@ -9,10 +9,26 @@ UUID: 04c1426c_ef6ea1c9
 Bytes: 137
 Isn't this false? I thought the llvm/clang Android.mk updates used this with only windows for the non-FORCE_BUILD_LLVM_COMPONENTS builds.
 
+838:21-838:47
+Thu Sep 10 00:22:22 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 04c1426c_ef6ea1c9
+UUID: e4c34e74_f36c5043
+Bytes: 154
+Does the new wording make more sense? Essentially "" translates to "linux darwin", so if you want windows supported, you need to add windows to that list.
+
 934:10-934:13
 Thu Sep 10 00:08:37 2015 +0000
 Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 24c9e69c_48fb4bb0
 Bytes: 2
 to
+
+934:10-934:13
+Thu Sep 10 00:22:22 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 24c9e69c_48fb4bb0
+UUID: e4c34e74_337c08f5
+Bytes: 4
+Done
 
