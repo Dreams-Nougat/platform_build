@@ -1,0 +1,11 @@
+Revision: 70bdccae602cf119a4393e0f9f9e981421e4671d
+Patch-set: 2
+File: core/cxx_stl_setup.mk
+
+123:7-123:63
+Fri Sep 11 20:10:21 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 848ff2ac_def0a5a0
+Bytes: 12
+remove this.
+
