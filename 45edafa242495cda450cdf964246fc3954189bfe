@@ -21,7 +21,23 @@ It's deterministic as long as the makeparallel rule is the only one running.  Fo
 
 I missed the local_pool implementation in kati, I can change the next patch to pass -j to kati instead of to ninja.  It's a little unfortunate that the -j value ends up in the build.ninja file, as that means the file needs to be regenerated every time a different -j value is passed.  Maybe for non-goma I should pass it to ninja, and kati should not use local_pool at all?
 
+23:0-28:40
+Fri Sep 11 01:26:59 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 244c8613_6452e0aa
+UUID: 24c9e69c_f5666bb0
+Bytes: 150
+Sounds good to me. Shinichiro?
+though I still don't get why we need to pass -j to ninja, which supposedly enables running jobs in parallel by default.
+
 File: tools/makeparallel/makeparallel.cpp
+
+174:11-174:60
+Fri Sep 11 01:26:59 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 44fdfae7_85ca282c
+Bytes: 44
+we don't return the tokens in this function.
 
 228
 Tue Sep 08 19:43:53 2015 +0000
