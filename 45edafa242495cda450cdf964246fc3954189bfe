@@ -30,6 +30,14 @@ Bytes: 150
 Sounds good to me. Shinichiro?
 though I still don't get why we need to pass -j to ninja, which supposedly enables running jobs in parallel by default.
 
+23:0-28:40
+Fri Sep 11 01:28:46 2015 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 24c9e69c_f5666bb0
+UUID: e4c34e74_f8e9c82a
+Bytes: 130
+Because I'd like it to be configurable. Cores + 2 isn't a good default when running ART tests, for example (yes, even when niced).
+
 File: tools/makeparallel/makeparallel.cpp
 
 174:11-174:60
