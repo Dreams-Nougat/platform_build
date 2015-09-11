@@ -1,0 +1,11 @@
+Revision: ed14320d280d6e18020e55931c81cf3f50c61ad5
+Patch-set: 1
+File: core/cxx_stl_setup.mk
+
+123
+Fri Sep 11 18:41:12 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e4b0ae55_71a898c1
+Bytes: 193
+This is definitely not correct (making the same change on L93 breaks the system/core build, this probably breaks something), but I don't know the right way to do this in our new Windows set up.
+
