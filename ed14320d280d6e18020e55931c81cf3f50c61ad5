@@ -9,3 +9,16 @@ UUID: e4b0ae55_71a898c1
 Bytes: 193
 This is definitely not correct (making the same change on L93 breaks the system/core build, this probably breaks something), but I don't know the right way to do this in our new Windows set up.
 
+123
+Fri Sep 11 19:00:08 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e4b0ae55_71a898c1
+UUID: 44ab3af0_af99f5ba
+Bytes: 81
+my_prefix can be:
+TARGET_
+HOST_
+HOST_CROSS_
+
+so you can write $($(my_prefix)OS) .
+
