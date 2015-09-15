@@ -1,0 +1,12 @@
+Revision: cb1bd116ed9282526484fb414c103aae46fd2bfc
+Patch-set: 1
+File: /COMMIT_MSG
+
+9:0-11:61
+Tue Sep 15 00:09:16 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 6473de94_4428381a
+Bytes: 351
+Ah yes, with "make PRODUCT-sdk-win_sdk" (I don't know why we had to support such things in the first place), in build/core/product_config.mk we added the unknown variant "win_sdk" to MAKECMDGOALS, and have PRODUCT-sdk-win_sdk depend on $(MAKECMDGOALS).
+Without this change, the outer make build would fail because the win_sdk rule isn't visible to it.
+
