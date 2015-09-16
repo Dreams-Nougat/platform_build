@@ -9,10 +9,27 @@ UUID: 246d66b4_b93cd7ac
 Bytes: 33
 does this need to be in DIST_DIR?
 
+97
+Wed Sep 16 22:57:44 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 246d66b4_b93cd7ac
+UUID: 64383eb1_368c5eb9
+Bytes: 54
+no.
+There is no DIST_DIR if you don't run "make dist".
+
 100
 Wed Sep 16 22:43:32 2015 +0000
 Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: e93887ce_250b2665
 Bytes: 62
 maybe just put the rm just above the ifeq ($(USE_NINJA),true)?
+
+100
+Wed Sep 16 22:57:44 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e93887ce_250b2665
+UUID: 843d32a1_cb360a1b
+Bytes: 75
+The Kati pass would remove the file written by the outer make in that case.
 
