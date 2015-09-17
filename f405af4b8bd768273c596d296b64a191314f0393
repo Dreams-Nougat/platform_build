@@ -9,6 +9,14 @@ UUID: 29bd3fca_1307ece4
 Bytes: 28
 I would remove this as well.
 
+1102:0-1116:5
+Thu Sep 17 22:53:01 2015 +0000
+Author: Scott James Remnant <1068428@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 29bd3fca_1307ece4
+UUID: 099a3b78_95f9068a
+Bytes: 95
+I'd rather not remove a rule someone else might be relying on since I can't test build for them
+
 1118:0-1137:5
 Thu Sep 17 22:08:22 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -16,12 +24,28 @@ UUID: 099a3b78_b292a016
 Bytes: 23
 No need. Please remove.
 
+1118:0-1137:5
+Thu Sep 17 22:53:01 2015 +0000
+Author: Scott James Remnant <1068428@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 099a3b78_b292a016
+UUID: 69c3b75a_5bd17b35
+Bytes: 15
+removed from CL
+
 1239:35-1239:41
 Thu Sep 17 22:08:22 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: c9ae6393_5895fd79
 Bytes: 72
 This is the only difference from transform-host-cpp-to-o-no-deps, right?
+
+1239:35-1239:41
+Thu Sep 17 22:53:01 2015 +0000
+Author: Scott James Remnant <1068428@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c9ae6393_5895fd79
+UUID: 099a3b78_b5f60a97
+Bytes: 25
+right, just pretty output
 
 1249:0-1250:19
 Thu Sep 17 22:08:22 2015 +0000
@@ -31,4 +55,12 @@ Bytes: 115
 I'd probably just write it here as:
 $(transform-host-cpp-to-o)
 Or just call $(transform-host-cpp-to-o) in binary.mk
+
+1249:0-1250:19
+Thu Sep 17 22:53:01 2015 +0000
+Author: Scott James Remnant <1068428@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c9a3c3b1_30e228bf
+UUID: e99c0776_d4039217
+Bytes: 4
+done
 
