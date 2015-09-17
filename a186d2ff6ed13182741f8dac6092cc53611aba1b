@@ -20,6 +20,14 @@ Bytes: 96
 I think UBSan works for static executables, but we do not support ubsan in SANITIZE_TARGET.
 SGTM
 
+1386:0-1386:44
+Thu Sep 17 21:20:49 2015 +0000
+Author: Ivan Krasin <1062643@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 69dad736_9d1a2337
+UUID: e99c0776_d1e48417
+Bytes: 4
+Done
+
 File: core/host_fuzz_test.mk
 
 6
