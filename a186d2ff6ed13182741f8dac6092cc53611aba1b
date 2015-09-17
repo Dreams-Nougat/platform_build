@@ -1,5 +1,16 @@
 Revision: a186d2ff6ed13182741f8dac6092cc53611aba1b
 Patch-set: 1
+File: core/Makefile
+
+1386:0-1386:44
+Thu Sep 17 21:04:22 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 69dad736_9d430333
+Bytes: 69
+For all these check, could we just say:
+ifneq ($(SANITIZE_TARGET),)
+?
+
 File: core/host_fuzz_test.mk
 
 6
