@@ -10,3 +10,12 @@ Bytes: 76
 Why not LOCAL_SANITIZE:=coverage?
 How does this work if ASan is not enabled?
 
+6
+Thu Sep 17 18:43:13 2015 +0000
+Author: Ivan Krasin <1062643@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 096ddbec_234f7832
+UUID: 29753fb9_761bee07
+Bytes: 156
+If ASan is not enabled, these flags are ignored, I think.
+As for LOCAL_SANITIZE:=coverage -- it could be a good idea, but it's out of the scope for this CL.
+
