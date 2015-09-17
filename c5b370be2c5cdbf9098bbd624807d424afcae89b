@@ -1,0 +1,19 @@
+Revision: c5b370be2c5cdbf9098bbd624807d424afcae89b
+Patch-set: 6
+File: core/config_sanitizers.mk
+
+109
+Thu Sep 17 22:34:35 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 099a3b78_f2a508e9
+Bytes: 469
+Error checking should go up above. This should be a block on its own near the other error handling blocks as:
+
+    ifneq ($(filter coverage,$(my_sanitize)),)
+        ifneq ($(filter address,$(my_sanitize)),)
+            # emit error
+        endif
+    endif
+
+The block on L101 can then be pulled out of the block for handling ASAN. This file reads much easier to me if we try to keep the handling for these things separate (and coverage is valid with msan and lsan too).
+
