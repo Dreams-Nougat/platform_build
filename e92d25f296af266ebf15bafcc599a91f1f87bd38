@@ -1,0 +1,13 @@
+Revision: e92d25f296af266ebf15bafcc599a91f1f87bd38
+Patch-set: 3
+File: core/config.mk
+
+604
+Mon Sep 21 23:12:58 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e9e887f8_d4b5b250
+Bytes: 238
+I missed this one: you also add the flag to 
+$(TARGET_2ND_ARCH_VAR_PREFIX)TARGET_GLOBAL_LDFLAGS for multilib build.
+On the other hand you can add the flag separately to TARGET_GLOBAL_LDFLAGS in all the build/core/combon/TARGET_linux-*.mk.
+
