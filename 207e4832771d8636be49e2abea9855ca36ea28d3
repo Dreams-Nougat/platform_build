@@ -1,0 +1,11 @@
+Revision: 207e4832771d8636be49e2abea9855ca36ea28d3
+Patch-set: 1
+File: core/ninja.mk
+
+78
+Tue Sep 22 22:14:29 2015 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c9a3c3b1_3a691e32
+Bytes: 186
+it would be nice if short suffixes stayed as text, and long suffixes turned into md5.  There is no easy way to get the length of a string in make, but some crazy subst hackery can do it.
+
