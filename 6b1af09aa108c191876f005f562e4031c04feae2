@@ -33,6 +33,14 @@ UUID: 0e5fa128_be9611c7
 Bytes: 319
 Ah, sorry... I should have paid closer attention.  Thought you meant so that it would silently not fail by calling "false -c $< > $@.sym" when the tool didn't exist for other hosts.  Sure, that should work.  Eventually this entire if case will be going away once all our tools and build is supported on the other hosts.
 
+429
+Thu Sep 24 22:39:07 2015 +0000
+Author: Steve Fung <1076778@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 0e5fa128_be9611c7
+UUID: 6e4d7d85_94ffb268
+Bytes: 4
+Done
+
 File: core/dynamic_binary.mk
 
 101
@@ -41,6 +49,14 @@ Author: Mike Frysinger <1040868@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 4efd19e8_3ce891ec
 Bytes: 34
 should have $(hide) in front of it
+
+101
+Thu Sep 24 22:39:07 2015 +0000
+Author: Steve Fung <1076778@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 4efd19e8_3ce891ec
+UUID: ae5bf53d_c180c62f
+Bytes: 4
+Done
 
 127:31-127:50
 Thu Sep 24 21:46:51 2015 +0000
@@ -51,10 +67,26 @@ You don't need add this dependency and the followings.
 Just add to its own black:
 $(LOCAL_BUILT_MODULE) : $(breakpad_output)
 
+127:31-127:50
+Thu Sep 24 22:39:07 2015 +0000
+Author: Steve Fung <1076778@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 6e4d7d85_59d05388
+UUID: ae5bf53d_a17dd2f1
+Bytes: 4
+Done
+
 162
 Thu Sep 24 19:40:34 2015 +0000
 Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 2e2e2591_34ceb698
 Bytes: 48
 breakpad_output should be added to this list too
+
+162
+Thu Sep 24 22:39:07 2015 +0000
+Author: Steve Fung <1076778@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2e2e2591_34ceb698
+UUID: ae5bf53d_816ace27
+Bytes: 4
+Done
 
