@@ -1,0 +1,20 @@
+Revision: 6b1af09aa108c191876f005f562e4031c04feae2
+Patch-set: 2
+File: core/config.mk
+
+429
+Thu Sep 24 19:28:41 2015 +0000
+Author: Mike Frysinger <1040868@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: cee9092d_40f3eed6
+Bytes: 94
+how about setting BREAKPAD_GENERATE_SYMBOLS to false ?  then you don't have to check two knobs
+
+File: core/dynamic_binary.mk
+
+101
+Thu Sep 24 19:28:41 2015 +0000
+Author: Mike Frysinger <1040868@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 4efd19e8_3ce891ec
+Bytes: 34
+should have $(hide) in front of it
+
