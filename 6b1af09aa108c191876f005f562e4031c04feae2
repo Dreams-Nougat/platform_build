@@ -18,3 +18,10 @@ UUID: 4efd19e8_3ce891ec
 Bytes: 34
 should have $(hide) in front of it
 
+162
+Thu Sep 24 19:40:34 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2e2e2591_34ceb698
+Bytes: 48
+breakpad_output should be added to this list too
+
