@@ -1,0 +1,11 @@
+Revision: a2fa77fa9696fb582607cf2c85a396e1c59b750f
+Patch-set: 3
+File: core/dynamic_binary.mk
+
+100:1-100:45
+Thu Sep 24 23:18:57 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: ce582944_574ed6b1
+Bytes: 50
+This doesn't generate the target file $@, does it?
+
