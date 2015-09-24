@@ -17,6 +17,14 @@ UUID: ee86cdd4_e75d1688
 Bytes: 405
 Setting it to false I don't think works, because I have $(BREAKPAD_DUMP_SYMS) as an order-only prerequisite target of $(breakpad_output).  To my knowledge, this is the only way of having a generated tool thats required for the build to be built before everything else.  Setting it to false would cause the build to look for a 'false' target, and then the build fails since it can't find a rule to make it.
 
+429
+Thu Sep 24 21:26:53 2015 +0000
+Author: Mike Frysinger <1040868@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: ee86cdd4_e75d1688
+UUID: 4e9999f8_3cbef1e6
+Bytes: 86
+i wrote "BREAKPAD_GENERATE_SYMBOLS" which i think you read as "BREAKPAD_DUMP_SYMS" ...
+
 File: core/dynamic_binary.mk
 
 101
