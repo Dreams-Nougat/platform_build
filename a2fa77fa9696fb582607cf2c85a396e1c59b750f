@@ -30,3 +30,11 @@ Bytes: 121
 Yes, just add .sym to breakpad_output.
 Otherwise whenever you run make, it tries to build $@, which never gets generated.
 
+100:1-100:45
+Thu Sep 24 23:50:47 2015 +0000
+Author: Steve Fung <1076778@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: ee86cdd4_6a6a2b2b
+UUID: ce582944_d778868b
+Bytes: 4
+Done
+
