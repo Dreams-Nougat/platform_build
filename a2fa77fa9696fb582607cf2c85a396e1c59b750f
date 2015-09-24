@@ -9,3 +9,15 @@ UUID: ce582944_574ed6b1
 Bytes: 50
 This doesn't generate the target file $@, does it?
 
+100:1-100:45
+Thu Sep 24 23:28:21 2015 +0000
+Author: Steve Fung <1076778@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: ce582944_574ed6b1
+UUID: 2e470569_78e545df
+Bytes: 589
+No.  It generates "$@.sym".  Breakpad's dump_syms program outputs to stdout, so this just redirects it to $@.sym.  So for example if its processing the file "/system/bin/test_prog", then this will output $(PRODUCT_OUT)/breakpad/system/bin/test_prog.sym.  Would it be preferable if instead, breakpad_out was defined to the *.sym path, and drop the ".sym" from this line?
+
+breakpad_output := $(my_breakpad_path)/$(my_installed_module_stem).sym
+
+Now that I look at it again, with the clean line added below, I'm guessing that the sym file would actually get orphaned with this current code...
+
