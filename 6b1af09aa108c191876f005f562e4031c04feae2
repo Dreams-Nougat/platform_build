@@ -42,6 +42,15 @@ UUID: 4efd19e8_3ce891ec
 Bytes: 34
 should have $(hide) in front of it
 
+127:31-127:50
+Thu Sep 24 21:46:51 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 6e4d7d85_59d05388
+Bytes: 124
+You don't need add this dependency and the followings.
+Just add to its own black:
+$(LOCAL_BUILT_MODULE) : $(breakpad_output)
+
 162
 Thu Sep 24 19:40:34 2015 +0000
 Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
