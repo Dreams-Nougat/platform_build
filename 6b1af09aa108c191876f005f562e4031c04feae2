@@ -9,6 +9,14 @@ UUID: cee9092d_40f3eed6
 Bytes: 94
 how about setting BREAKPAD_GENERATE_SYMBOLS to false ?  then you don't have to check two knobs
 
+429
+Thu Sep 24 21:24:04 2015 +0000
+Author: Steve Fung <1076778@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: cee9092d_40f3eed6
+UUID: ee86cdd4_e75d1688
+Bytes: 405
+Setting it to false I don't think works, because I have $(BREAKPAD_DUMP_SYMS) as an order-only prerequisite target of $(breakpad_output).  To my knowledge, this is the only way of having a generated tool thats required for the build to be built before everything else.  Setting it to false would cause the build to look for a 'false' target, and then the build fails since it can't find a rule to make it.
+
 File: core/dynamic_binary.mk
 
 101
