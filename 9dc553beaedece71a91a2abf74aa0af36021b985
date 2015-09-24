@@ -1,0 +1,12 @@
+Revision: 9dc553beaedece71a91a2abf74aa0af36021b985
+Patch-set: 1
+File: /COMMIT_MSG
+
+9:0-9:44
+Thu Sep 24 19:10:37 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0e5fa128_d3ed3e85
+Bytes: 103
+How does Goma handle that case? does it just skip the cache?
+If so this change is probably unnecessary.
+
