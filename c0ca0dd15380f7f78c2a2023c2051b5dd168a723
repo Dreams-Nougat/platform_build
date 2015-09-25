@@ -1,0 +1,12 @@
+Revision: c0ca0dd15380f7f78c2a2023c2051b5dd168a723
+Patch-set: 1
+File: core/Makefile
+
+1566:0-1569:5
+Fri Sep 25 17:23:13 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2e470569_c0467fe9
+Bytes: 191
+why do you need to add it to target_files.zip? it's not needed by system.img, right?
+You should create a separate zip and just store that zip on the build server $(call dist-files-for-goals).
+
