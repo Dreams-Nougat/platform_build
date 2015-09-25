@@ -2,6 +2,14 @@ Revision: c0ca0dd15380f7f78c2a2023c2051b5dd168a723
 Patch-set: 1
 File: core/Makefile
 
+1568:19-1568:42
+Fri Sep 25 23:32:48 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: ae5bf53d_da02e415
+Bytes: 179
+Probably it's better to define a global variable something like TARGET_OUT_BREAKPAD and reference it here and dynamic_binary.mk.
+See how TARGET_OUT_UNSTRIPPED is defined and used.
+
 1566:0-1569:5
 Fri Sep 25 17:23:13 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
