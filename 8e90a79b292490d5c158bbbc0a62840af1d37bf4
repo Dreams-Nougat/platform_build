@@ -1,0 +1,11 @@
+Revision: 8e90a79b292490d5c158bbbc0a62840af1d37bf4
+Patch-set: 1
+File: core/combo/TARGET_linux-arm.mk
+
+189:38-189:40
+Fri Sep 25 12:56:14 2015 +0000
+Author: Nicolas Geoffray <1038443@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8ec8f176_16cb5ce2
+Bytes: 145
+This is inconsistent with other definitions in that file, but maybe that's ok? Or would using eg a CUSTOM_LINKER environment variable be cleaner?
+
