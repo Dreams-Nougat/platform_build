@@ -1,0 +1,11 @@
+Revision: 67020d2338dd51af5daa3479624acaa494be51a9
+Base-for-patch-set: 1
+File: core/ninja.mk
+
+10:1-10:6
+Sat Sep 26 00:21:42 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: ae5bf53d_9a158cd4
+Bytes: 98
+tests still makes a difference in the internal tree, see vendor/google/build/tasks/google_tests.mk
+
