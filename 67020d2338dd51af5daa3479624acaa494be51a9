@@ -17,3 +17,11 @@ UUID: 8e52b121_cdfc7aa7
 Bytes: 79
 Just realized Hamaji also added "tests" to vendor/google/build/ninja_config.mk.
 
+10:1-10:6
+Sat Sep 26 03:17:05 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8e52b121_cdfc7aa7
+UUID: ce666912_385fa9d2
+Bytes: 57
+Oops, it seems I did this mistake when I split this list.
+
