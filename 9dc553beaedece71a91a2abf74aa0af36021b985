@@ -18,3 +18,11 @@ UUID: ae5bf53d_16d3c23c
 Bytes: 58
 OK, at least we can still use Goma's remote build workers.
 
+9:0-9:44
+Sat Sep 26 03:03:26 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: ae5bf53d_16d3c23c
+UUID: 8e971102_011d8c6d
+Bytes: 212
+Goma uses the checksum of all input files, including the profile result, as the key of the distributed cache. If the same profile result is used twice, goma backend returns the cached result for the latter build.
+
