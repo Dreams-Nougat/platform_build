@@ -10,6 +10,14 @@ Bytes: 179
 Probably it's better to define a global variable something like TARGET_OUT_BREAKPAD and reference it here and dynamic_binary.mk.
 See how TARGET_OUT_UNSTRIPPED is defined and used.
 
+1568:19-1568:42
+Sat Sep 26 01:36:34 2015 +0000
+Author: Steve Fung <1076778@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: ae5bf53d_da02e415
+UUID: 2e470569_18e52713
+Bytes: 4
+Done
+
 1566:0-1569:5
 Fri Sep 25 17:23:13 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
