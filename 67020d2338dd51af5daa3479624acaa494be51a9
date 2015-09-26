@@ -9,3 +9,11 @@ UUID: ae5bf53d_9a158cd4
 Bytes: 98
 tests still makes a difference in the internal tree, see vendor/google/build/tasks/google_tests.mk
 
+10:1-10:6
+Sat Sep 26 01:23:18 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: ae5bf53d_9a158cd4
+UUID: 8e52b121_cdfc7aa7
+Bytes: 79
+Just realized Hamaji also added "tests" to vendor/google/build/ninja_config.mk.
+

@@ -1,0 +1,12 @@
+Revision: c53d6b90b30ad148313010779463e3494fbd014d
+Patch-set: 1
+File: core/main.mk
+
+986:0-986:35
+Sat Sep 26 01:23:18 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2e470569_956fa238
+Bytes: 185
+If you run mgrep "droid *:" in the internal tree, you'll find more dependency in the vendor tree (bad idea!).
+With this change "make checkbuild" won't build them. Not a big deal though.
+
