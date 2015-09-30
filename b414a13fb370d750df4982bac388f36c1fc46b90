@@ -1,0 +1,11 @@
+Revision: b414a13fb370d750df4982bac388f36c1fc46b90
+Patch-set: 1
+File: core/ninja.mk
+
+139:114-139:141
+Wed Sep 30 04:48:14 2015 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d55b5e6b_593c03a5
+Bytes: 226
+I am having a hard time understanding this part of the command. Is this matching the first thing in $(OUT_DIR)? If not, where does it get its match from? I just wondered because you moved the new file directly into $(OUT_DIR).
+
