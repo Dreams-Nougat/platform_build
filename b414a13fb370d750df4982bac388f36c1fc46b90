@@ -17,3 +17,11 @@ UUID: b5398a03_a0751ac2
 Bytes: 255
 This is something to do with detecting when kati needs to regenerate, telling it to ignore dirty files anywhere under $OUT_DIR.  It shouldn't be affected by this patch, these are output files from kati not input files, so it won't check if they are dirty.
 
+139:114-139:141
+Wed Sep 30 05:03:28 2015 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b5398a03_a0751ac2
+UUID: 953c86f3_bf8257c1
+Bytes: 169
+Doh. I realize what I missed before. This is part of a command, so % doesn't expanded by make itself (and turned into a pattern for the next %.P). Thanks for clarifying.
+
