@@ -1,0 +1,11 @@
+Revision: a376b2f8a26b6bb58b37475f7271dc915f0f7847
+Patch-set: 1
+File: core/Makefile
+
+1569:1-1569:2
+Wed Sep 30 06:21:06 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 953c86f3_7ffd6f29
+Bytes: 81
+nit: might be better with "@# blabla" to avoid dumping the comment to the output.
+
