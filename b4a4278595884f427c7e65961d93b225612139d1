@@ -11,3 +11,11 @@ Thanks for this investigation. I hate GNU make's target specific variables :( I 
 
 Anyway, please go a head with this patch.
 
+14:41-14:62
+Thu Oct 01 19:47:30 2015 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 15925666_2bdf19d1
+UUID: 1548969f_d04e2a06
+Bytes: 41
+targets with no parents sounds reasonable
+
