@@ -1,0 +1,12 @@
+Revision: b4cb663a4ee87910d31fddb9ca6b00c37eab512b
+Patch-set: 1
+File: core/Makefile
+
+1444:4-1444:19
+Fri Oct 02 09:27:13 2015 +0000
+Author: Alex Deymo <1077068@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b5d50a02_e3d38c65
+Bytes: 205
+This dependency can also be removed, so you don't build them.
+Also, I don't get why here we depend on "built_ota_tools" but then we use PRIVATE_OTA_TOOLS that is indeed assigned to built_ota_tools earlier.
+
