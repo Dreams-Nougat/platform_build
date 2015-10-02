@@ -1,0 +1,13 @@
+Revision: 97f157188c22265892d29986b9b98c0ca0eb3678
+Patch-set: 1
+File: core/config.mk
+
+290
+Fri Oct 02 22:34:48 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b5526a4f_75d29f3f
+Bytes: 136
+what about HOST_2ND_ARCH?
+
+and is there a reason this shouldn't be with the "Set up final options" section that deals with cflags below?
+
