@@ -10,3 +10,11 @@ Bytes: 205
 This dependency can also be removed, so you don't build them.
 Also, I don't get why here we depend on "built_ota_tools" but then we use PRIVATE_OTA_TOOLS that is indeed assigned to built_ota_tools earlier.
 
+1444:4-1444:19
+Fri Oct 02 10:08:18 2015 +0000
+Author: Steve Fung <1076778@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b5d50a02_e3d38c65
+UUID: f5b4e2df_00586a97
+Bytes: 181
+Done.  I couldn't put an ifdef in the middle of the dependency list, so I ifdef'd the definition of the variable above, so in AB builds, this will just be a blank continuation line.
+
