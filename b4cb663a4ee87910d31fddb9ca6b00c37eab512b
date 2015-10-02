@@ -18,3 +18,17 @@ UUID: f5b4e2df_00586a97
 Bytes: 181
 Done.  I couldn't put an ifdef in the middle of the dependency list, so I ifdef'd the definition of the variable above, so in AB builds, this will just be a blank continuation line.
 
+1444:4-1444:19
+Fri Oct 02 18:58:21 2015 +0000
+Author: Alex Deymo <1077068@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f5b4e2df_00586a97
+UUID: b5526a4f_ff221063
+Bytes: 253
+Dependencies don't need to be all in the same place. You can set the dependency early.
+
+  ifneq($(AB_OTA_UPDATER,true)
+  $(BUILT_TARGET_FILES_PACKAGE): $(build_ota_tools)
+  endif
+
+or merge that with the new ifneq you added in patch #2. Anyway just a nit
+
