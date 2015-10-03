@@ -1,0 +1,11 @@
+Revision: e39f63daea0918a4ef59b482c89759e2ce0fc5af
+Patch-set: 3
+File: core/Makefile
+
+1317:0-1319:5
+Sat Oct 03 00:16:01 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b5526a4f_f59fcfc7
+Bytes: 429
+I have some concern with this change. Currently otatools.zip package is needed by the OTA server to generate incremental OTA packages. We can define "TARGET_SKIP_OTA_PACKAGE := true" for a device that doesn't need the otatools.zip. But for future A/B updater, we may still want to do that (just to pack a different set of tools instead). So can we remove L1317-1319 but add "TARGET_SKIP_OTA_PACKAGE := true" to board config file?
+
