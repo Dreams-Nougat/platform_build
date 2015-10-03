@@ -9,3 +9,11 @@ UUID: b5526a4f_f59fcfc7
 Bytes: 429
 I have some concern with this change. Currently otatools.zip package is needed by the OTA server to generate incremental OTA packages. We can define "TARGET_SKIP_OTA_PACKAGE := true" for a device that doesn't need the otatools.zip. But for future A/B updater, we may still want to do that (just to pack a different set of tools instead). So can we remove L1317-1319 but add "TARGET_SKIP_OTA_PACKAGE := true" to board config file?
 
+1317:0-1319:5
+Sat Oct 03 00:25:54 2015 +0000
+Author: Steve Fung <1076778@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b5526a4f_f59fcfc7
+UUID: b5526a4f_f5450fe1
+Bytes: 185
+Done.  I've added TARGET_SKIP_OTA_PACKAGE to our base mk with http://ag/#/c/783580/.  If future A/B updater requires some set of ota tools installed, we can remove it from there easily.
+
