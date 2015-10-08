@@ -1,0 +1,11 @@
+Revision: 7fa65eec726dbaeaf219440821bbaade38e9936f
+Patch-set: 1
+File: target/product/core_tiny.mk
+
+35:4-35:14
+Thu Oct 08 07:15:33 2015 +0000
+Author: Chih-Wei Huang <1002563@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 300f6db3_8afdcb26
+Bytes: 15
+already defined
+
