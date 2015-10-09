@@ -1,0 +1,11 @@
+Revision: 3e1a4a870475eb2c1090b69bb304a6d406f836a5
+Patch-set: 1
+File: core/base_rules.mk
+
+226
+Fri Oct 09 05:46:31 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: cab73eb4_274f9aa3
+Bytes: 122
+Not sure this is the best place, but I couldn't find a common code path used by (host_|)_shared_library.mk and prebuilt.mk
+
