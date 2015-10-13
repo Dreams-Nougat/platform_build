@@ -1,0 +1,18 @@
+Revision: e8685959de6019d83689d7f370b5e738a30eb554
+Patch-set: 1
+File: core/definitions.mk
+
+2499:0-2500:27
+Tue Oct 13 21:14:02 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7f2b7617_7b0b57f7
+Bytes: 48
+Please add a comment about the empty input case.
+
+2504:60-2504:78
+Tue Oct 13 21:14:02 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: dfb462b2_529e0134
+Bytes: 94
+This makes it consistent with LOCAL_MODULE_TARGET_ARCH: empty input means it matches any arch.
+
