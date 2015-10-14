@@ -11,3 +11,13 @@ is there any chance that these two will use source path?
 
 in another words, if we use source path for these two partitions today, will be any problems?
 
+1471
+Wed Oct 14 00:39:12 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7fa9b65d_c7bf9535
+UUID: ff32061b_6074a700
+Bytes: 154
+first one no. second one yes.
+
+these two lines must use the info_dict in the target build. because the script will only be executed in the updated system.
+
