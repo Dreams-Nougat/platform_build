@@ -1,0 +1,13 @@
+Revision: 6f0b219ac551710c724e3f344023943178cdc217
+Patch-set: 1
+File: tools/releasetools/common.py
+
+1471
+Wed Oct 14 00:36:12 2015 +0000
+Author: Leo Wang <1021775@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7fa9b65d_c7bf9535
+Bytes: 151
+is there any chance that these two will use source path?
+
+in another words, if we use source path for these two partitions today, will be any problems?
+
