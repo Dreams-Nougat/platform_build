@@ -2,6 +2,14 @@ Revision: 6a66a887baadc9eb3d0d60e26f748b8453e27a02
 Patch-set: 2
 File: /COMMIT_MSG
 
+9:0-12:72
+Thu Oct 15 01:08:43 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: ff32061b_0fb98354
+Bytes: 86
++Dehao
+Is there a way to not take the working directory when calculating the build-id?
+
 19:0-20:52
 Thu Oct 15 00:34:58 2015 +0000
 Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
