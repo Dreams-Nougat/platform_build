@@ -1,0 +1,11 @@
+Revision: 6a66a887baadc9eb3d0d60e26f748b8453e27a02
+Patch-set: 2
+File: /COMMIT_MSG
+
+19:0-20:52
+Thu Oct 15 00:34:58 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1f30ba11_d3e3cb87
+Bytes: 88
+Should we change the gdbclient script to add $ANDROID_BUILD_TOP to the source names now?
+
