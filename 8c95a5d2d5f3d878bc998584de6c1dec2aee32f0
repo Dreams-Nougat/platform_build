@@ -1,0 +1,28 @@
+Revision: 8c95a5d2d5f3d878bc998584de6c1dec2aee32f0
+Patch-set: 1
+File: /COMMIT_MSG
+
+9:0-10:55
+Thu Oct 15 18:33:25 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9943ea80_870aac35
+Bytes: 46
+Why do you need an empty res dir in that case?
+
+File: core/package_internal.mk
+
+244:1-244:10
+Thu Oct 15 18:33:25 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1959ba73_5d54ef36
+Bytes: 64
+Move "mkdir -p $(dir $@)" here:
+@rm -rf $@ && mkdir -p $(dir $@)
+
+261:1-261:17
+Thu Oct 15 18:33:25 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 39611e20_b369f826
+Bytes: 36
+Add a comment why you need to touch.
+
