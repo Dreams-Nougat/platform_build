@@ -1,0 +1,11 @@
+Revision: 3d1ffa87eaa6ca8029f38941da169ebd4a0b8ee9
+Patch-set: 2
+File: core/install_jni_libs_internal.mk
+
+97
+Fri Oct 16 00:40:13 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9943ea80_2dfd7922
+Bytes: 44
+Here too, in case the prebuilts are updated?
+
