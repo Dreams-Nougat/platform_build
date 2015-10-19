@@ -1,0 +1,11 @@
+Revision: 82a8b40b46589d8055e642880a930deb374ffcd5
+Patch-set: 1
+File: envsetup.sh
+
+756:21-757:63
+Mon Oct 19 18:55:15 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d90802ae_02c77ed1
+Bytes: 78
+You won't reach here with your change, because these targets aren't directory.
+
