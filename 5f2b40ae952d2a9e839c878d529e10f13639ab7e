@@ -1,0 +1,36 @@
+Revision: 5f2b40ae952d2a9e839c878d529e10f13639ab7e
+Patch-set: 2
+File: core/binary.mk
+
+703:0-703:46
+Mon Oct 19 18:37:33 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 79fd56bf_f48e6674
+Bytes: 451
+You are generating the .cc files to $(intermediates) instead of $(generated_sources_dir). That's fine. The upside of this approach is that you can use the general generated cpp compilation rule and don't need to set up your own.
+However for 64-bit multilib build, the 32-bit and 64-bit modules share the same $(generated_sources_dir), but they have different $(intermediates). That means you'll need to generate two copies of the .cc files separately.
+
+706:35-706:57
+Mon Oct 19 18:37:33 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d90802ae_820c8e11
+Bytes: 56
+seems we can just hardcode .cc (or .cpp if you like it).
+
+716:0-718:81
+Mon Oct 19 18:37:33 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 79fd56bf_74839649
+Bytes: 167
+Remove this conditional: Because you generate the .cc files into $(intermediates), we need to generate them separately for 32-bit and 64-bit modules in multilib build.
+
+File: core/definitions.mk
+
+980:22-980:67
+Mon Oct 19 18:37:33 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f91146d4_12758d51
+Bytes: 59
+$(basename $@).P
+then you don't need PRIVATE_CPP_EXTENSION.
+
