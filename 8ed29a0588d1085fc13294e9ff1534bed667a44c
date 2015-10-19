@@ -1,0 +1,11 @@
+Revision: 8ed29a0588d1085fc13294e9ff1534bed667a44c
+Patch-set: 3
+File: core/binary.mk
+
+712:0-712:65
+Mon Oct 19 22:58:56 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d90802ae_cfa74e29
+Bytes: 22
+This isn't needed now.
+
