@@ -10,6 +10,14 @@ Bytes: 451
 You are generating the .cc files to $(intermediates) instead of $(generated_sources_dir). That's fine. The upside of this approach is that you can use the general generated cpp compilation rule and don't need to set up your own.
 However for 64-bit multilib build, the 32-bit and 64-bit modules share the same $(generated_sources_dir), but they have different $(intermediates). That means you'll need to generate two copies of the .cc files separately.
 
+703:0-703:46
+Mon Oct 19 22:05:29 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 79fd56bf_f48e6674
+UUID: d90802ae_c255e6ac
+Bytes: 103
+Ah, I had wondered why everyone was defining their own .o transformations.  I'll remove my conditional.
+
 706:35-706:57
 Mon Oct 19 18:37:33 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -17,12 +25,28 @@ UUID: d90802ae_820c8e11
 Bytes: 56
 seems we can just hardcode .cc (or .cpp if you like it).
 
+706:35-706:57
+Mon Oct 19 22:05:29 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d90802ae_820c8e11
+UUID: 39de7e5b_5f031b90
+Bytes: 144
+The rule to pick up local generated c++ sources uses LOCAL_CPP_EXTENSION for its filter.  I think using LOCAL_CPP_EXTENSION is appropriate then?
+
 716:0-718:81
 Mon Oct 19 18:37:33 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 79fd56bf_74839649
 Bytes: 167
 Remove this conditional: Because you generate the .cc files into $(intermediates), we need to generate them separately for 32-bit and 64-bit modules in multilib build.
+
+716:0-718:81
+Mon Oct 19 22:05:29 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 79fd56bf_74839649
+UUID: 39de7e5b_1ffd93cb
+Bytes: 7
+Thanks.
 
 File: core/definitions.mk
 
@@ -33,4 +57,12 @@ UUID: f91146d4_12758d51
 Bytes: 59
 $(basename $@).P
 then you don't need PRIVATE_CPP_EXTENSION.
+
+980:22-980:67
+Mon Oct 19 22:05:29 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f91146d4_12758d51
+UUID: f91146d4_729f29d3
+Bytes: 5
+Sure.
 
