@@ -1,0 +1,11 @@
+Revision: c46c810c15162ee4d979ec8f44a0cb99a645a9ab
+Patch-set: 1
+File: tools/releasetools/edify_generator.py
+
+253:30-253:39
+Tue Oct 20 19:07:09 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 79d47637_caf74286
+Bytes: 232
+We actually have self.WordWrap in L42. It was changed from _WordWrap to WordWrap in commit 8b72aefb5a8ed4da28c6f83854e8babf53b9cb53 (https://android-review.googlesource.com/#/c/143532/). Did you accidentally mess up your local copy?
+
