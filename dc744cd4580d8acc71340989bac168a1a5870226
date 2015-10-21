@@ -16,6 +16,13 @@ UUID: 99784a71_5c1e5576
 Bytes: 234
 Although it won't cause real trouble (since being protected by free_string), it feels better to move this def to the outer level near L356. And can you rename it to something like "free_size" to be consistent with "free_string" there?
 
+387
+Wed Oct 21 20:26:25 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 993daaa1_d439546e
+Bytes: 36
+missing "to_free += sr.size()" here?
+
 497:8-497:19
 Wed Oct 21 20:18:32 2015 +0000
 Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
