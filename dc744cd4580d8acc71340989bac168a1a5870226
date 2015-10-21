@@ -1,0 +1,25 @@
+Revision: dc744cd4580d8acc71340989bac168a1a5870226
+Patch-set: 6
+File: tools/releasetools/blockimgdiff.py
+
+350:12-350:39
+Wed Oct 21 20:18:32 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 99784a71_7967a39d
+Bytes: 229
+I agree this is a bug in our script for BBOTA v3. I also noticed it before. Since it's only overly approximating the use of stashed blocks (less likely to fail the update), I didn't fix at that time and forgot to come back to it.
+
+373:8-373:19
+Wed Oct 21 20:18:32 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 99784a71_5c1e5576
+Bytes: 234
+Although it won't cause real trouble (since being protected by free_string), it feels better to move this def to the outer level near L356. And can you rename it to something like "free_size" to be consistent with "free_string" there?
+
+497:8-497:19
+Wed Oct 21 20:18:32 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 194a9a42_98e8ddae
+Bytes: 78
+Not needed. (It won't solve the undefined var issue, if that's the intention.)
+

@@ -9,3 +9,11 @@ UUID: 761f2555_95ba24f2
 Bytes: 217
 stashed_blocks is used to calculate the max stash size later. I don't think it can be deducted here because they are not actually freed. The free commands are just collected but not appended to the output buffer here.
 
+374
+Wed Oct 21 20:18:32 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 761f2555_95ba24f2
+UUID: 99784a71_d9435709
+Bytes: 399
+I thought about this part some time ago. Although it's not writing the "free" commands immediately here, the effect should be negligible. Because the only command that will be emitted prior to the "free" would be the current command in xf (new/move/bsdiff/imgdiff/zero and etc). The "free" command will be written right after the current command. We are not using stashed_blocks anywhere in-between.
+
