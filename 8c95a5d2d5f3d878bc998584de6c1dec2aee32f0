@@ -9,6 +9,26 @@ UUID: 9943ea80_870aac35
 Bytes: 46
 Why do you need an empty res dir in that case?
 
+9:0-10:55
+Fri Oct 23 16:21:35 2015 +0000
+Author: Johan Redestig <1002951@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 9943ea80_870aac35
+UUID: 96c57926_eed39fe4
+Bytes: 829
+It is sometimes needed due to issues with proguard.
+
+When building without res-directory, the argument "-include proguard_options" is not added when starting ProGuard.
+It is not added because "need_compile_res" is not true (in package_internal.mk), which in turn is because "all_resources" is empty.
+"all_resources" is empty as there are no resources.
+I.e. when there are no resources, "-include proguard_options" should not be added when starting proguard.
+
+proguard_options contain classes that should be kept when running ProGuard: "-keep class <someclass> { <init>(...); }"
+It gets the classes from AndroidManifest.xml.
+Since proguard_options is no longer an argument, our classes are no longer kept.
+
+Hence ProGuard fails during build because of:
+"Error: The output jar is empty. Did you specify the proper '-keep' options?"
+
 File: core/package_internal.mk
 
 244:1-244:10
