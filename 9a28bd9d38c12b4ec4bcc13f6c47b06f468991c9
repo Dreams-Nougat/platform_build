@@ -9,6 +9,18 @@ UUID: 565141a7_8287de13
 Bytes: 59
 why do we call this given that "-X" has been passed to zip?
 
+678:1-678:34
+Wed Oct 28 01:17:23 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 565141a7_8287de13
+UUID: 7642c5df_a3953e0e
+Bytes: 637
+Because -X just removes the extra fields -- the ones we particularly care about here are the 'unix uid/gid' and 'universal timestamp' extras. -X does not remove the standard modification date in the zip headers.
+
+The standard zip headers include a timestamp with 2-second resolution and using the local time zone (but doesn't save the timezone). The 'universal timestamp' extra stores the unix epoch time, so it's UTC, and 1 second resolution.
+
+I started making a change to zipalign to set the universal time extra as well, but parsing the extra fields is a much larger change, and not necessary if we can just tell zip not to save them.
+
 File: core/definitions.mk
 
 2097:25-2097:33
@@ -18,10 +30,26 @@ UUID: f636b56e_44b0002c
 Bytes: 3
 -X?
 
+2097:25-2097:33
+Wed Oct 28 01:17:23 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f636b56e_44b0002c
+UUID: b68efd7e_6f873115
+Bytes: 143
+Maybe, I haven't had any problems with APKs so far, since they at least go through SignApk, which handles some of this. I'll test this further.
+
 2168:36-2168:48
 Wed Oct 28 00:50:55 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: d63d314e_06d51ea5
 Bytes: 3
 -X?
+
+2168:36-2168:48
+Wed Oct 28 01:17:23 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d63d314e_06d51ea5
+UUID: d63d314e_e6403ad3
+Bytes: 21
+Same here, I'll test.
 
