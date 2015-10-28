@@ -46,6 +46,14 @@ UUID: 7642c5df_a3f3fe0c
 Bytes: 69
 Does SignApk take care of the uid/gid, universal timestamp stuff too?
 
+2097:25-2097:33
+Wed Oct 28 22:39:22 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7642c5df_a3f3fe0c
+UUID: d6d0d18a_4ebb27f8
+Bytes: 62
+Added -- I went and investigated this case, and it was needed.
+
 2168:36-2168:48
 Wed Oct 28 00:50:55 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -68,4 +76,12 @@ Parent: d63d314e_e6403ad3
 UUID: d63d314e_e99fad8c
 Bytes: 110
 We may need it here, because for presigned apk we do run this function but without re-signing it with SignApk.
+
+2168:36-2168:48
+Wed Oct 28 22:39:22 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d63d314e_e99fad8c
+UUID: 96cad9dc_afb9f9b7
+Bytes: 11
+Yep, added.
 
