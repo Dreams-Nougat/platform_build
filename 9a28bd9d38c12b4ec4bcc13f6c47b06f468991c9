@@ -1,0 +1,27 @@
+Revision: 9a28bd9d38c12b4ec4bcc13f6c47b06f468991c9
+Patch-set: 3
+File: core/Makefile
+
+678:1-678:34
+Wed Oct 28 00:50:55 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 565141a7_8287de13
+Bytes: 59
+why do we call this given that "-X" has been passed to zip?
+
+File: core/definitions.mk
+
+2097:25-2097:33
+Wed Oct 28 00:50:55 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f636b56e_44b0002c
+Bytes: 3
+-X?
+
+2168:36-2168:48
+Wed Oct 28 00:50:55 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d63d314e_06d51ea5
+Bytes: 3
+-X?
+
