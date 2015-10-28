@@ -38,6 +38,14 @@ UUID: b68efd7e_6f873115
 Bytes: 143
 Maybe, I haven't had any problems with APKs so far, since they at least go through SignApk, which handles some of this. I'll test this further.
 
+2097:25-2097:33
+Wed Oct 28 02:12:15 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b68efd7e_6f873115
+UUID: 7642c5df_a3f3fe0c
+Bytes: 69
+Does SignApk take care of the uid/gid, universal timestamp stuff too?
+
 2168:36-2168:48
 Wed Oct 28 00:50:55 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -52,4 +60,12 @@ Parent: d63d314e_06d51ea5
 UUID: d63d314e_e6403ad3
 Bytes: 21
 Same here, I'll test.
+
+2168:36-2168:48
+Wed Oct 28 02:12:15 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d63d314e_e6403ad3
+UUID: d63d314e_e99fad8c
+Bytes: 110
+We may need it here, because for presigned apk we do run this function but without re-signing it with SignApk.
 
