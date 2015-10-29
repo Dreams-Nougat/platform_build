@@ -27,3 +27,11 @@ In that case do we need to distinguish those builds by the value of SANITIZE_TAR
 Can we set ro.build.flavor to something like shamu-userdebug_asan_address?
 Guang?
 
+182
+Thu Oct 29 19:29:55 2015 +0000
+Author: Abhishek Arya <1072369@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b6d35d95_dbca33a5
+UUID: b6143e34_1913eba6
+Bytes: 214
+Yes these builds will need to be distinguished. Since each will have to report results via smoke tests, etc (like asan build can be broken, but msan is fine). This is fine for now, we can change it later in future.
+
