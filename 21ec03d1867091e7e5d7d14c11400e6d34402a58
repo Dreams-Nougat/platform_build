@@ -1,0 +1,11 @@
+Revision: 21ec03d1867091e7e5d7d14c11400e6d34402a58
+Patch-set: 2
+File: core/Makefile
+
+182
+Thu Oct 29 04:35:07 2015 +0000
+Author: Abhishek Arya <1072369@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d6d0d18a_fc4d71ae
+Bytes: 189
+This is ok for now, but might not be future proof, a check like https://cs.corp.google.com/#android/system/core/rootdir/Android.mk&l=16 looks more accurate to actually parse SANITIZE_TARGET
+
