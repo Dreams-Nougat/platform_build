@@ -9,3 +9,11 @@ UUID: d6d0d18a_fc4d71ae
 Bytes: 189
 This is ok for now, but might not be future proof, a check like https://cs.corp.google.com/#android/system/core/rootdir/Android.mk&l=16 looks more accurate to actually parse SANITIZE_TARGET
 
+182
+Thu Oct 29 17:09:17 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d6d0d18a_fc4d71ae
+UUID: f6d955b5_5e32b1d5
+Bytes: 81
+Do we plan to set up builds on build server with other values of SANITIZE_TARGET?
+
