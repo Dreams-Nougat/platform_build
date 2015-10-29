@@ -17,3 +17,13 @@ UUID: f6d955b5_5e32b1d5
 Bytes: 81
 Do we plan to set up builds on build server with other values of SANITIZE_TARGET?
 
+182
+Thu Oct 29 17:56:25 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f6d955b5_5e32b1d5
+UUID: b6d35d95_dbca33a5
+Bytes: 166
+In that case do we need to distinguish those builds by the value of SANITIZE_TARGET?
+Can we set ro.build.flavor to something like shamu-userdebug_asan_address?
+Guang?
+
