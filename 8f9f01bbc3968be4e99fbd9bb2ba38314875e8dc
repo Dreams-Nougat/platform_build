@@ -20,3 +20,13 @@ Hm, true.
 
 We are rapidly approaching the time where USE_NINJA=false will no longer be supported once we build bionic with soong, do you think it is too early to take out USE_NINJA=false support?
 
+25:0-29:5
+Fri Oct 30 18:34:25 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 765c8636_67c37287
+UUID: 765c8636_ead9674d
+Bytes: 319
+I'd like to keep the USE_NINJA=false support before soong can fully take the responsibility. Especially when we are still using kati and unexpected behavior is discovered, we need  USE_NINJA=false to see how make works.
+
+I found a couple of other behavior differences between USE_NINJA=false|true. I'll upload a change.
+
