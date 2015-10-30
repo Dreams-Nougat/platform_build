@@ -10,6 +10,16 @@ Bytes: 259
 Make doesn't have the restat feature. If the .toc file doesn't have a new timestamp after its build recipe was executed, make always tries to rebuild it whenenver you run make.
 So we should use the .toc files as dependencies only if BUILDING_WITH_NINJA=true .
 
+12:29-14:26
+Fri Oct 30 18:16:00 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 161fca56_08d71742
+UUID: 5625c29e_9f7c7f4f
+Bytes: 246
+I am wondering about Ninja's restat behavior:
+If libc.so.toc has older timestamp than libc.so and no symbol change since the old .toc file, will Ninja always run the recipe of the .toc file?
+If so, a nothing-to-do-build may not really do nothing.
+
 File: core/base_rules.mk
 
 227:30-227:51
