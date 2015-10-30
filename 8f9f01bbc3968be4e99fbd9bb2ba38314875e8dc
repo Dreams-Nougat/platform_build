@@ -10,3 +10,13 @@ Bytes: 155
 This changed the "USE_NINJA=false" build behavior in unfavorable way.
 Looks like we don't necessarily need to remove this if we never pass "dist" to ninja?
 
+25:0-29:5
+Fri Oct 30 18:23:44 2015 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7643a650_8391ae79
+UUID: 765c8636_67c37287
+Bytes: 195
+Hm, true.
+
+We are rapidly approaching the time where USE_NINJA=false will no longer be supported once we build bionic with soong, do you think it is too early to take out USE_NINJA=false support?
+
