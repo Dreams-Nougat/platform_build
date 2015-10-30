@@ -1,0 +1,12 @@
+Revision: 8f9f01bbc3968be4e99fbd9bb2ba38314875e8dc
+Base-for-patch-set: 1
+File: core/distdir.mk
+
+25:0-29:5
+Fri Oct 30 18:21:32 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7643a650_8391ae79
+Bytes: 155
+This changed the "USE_NINJA=false" build behavior in unfavorable way.
+Looks like we don't necessarily need to remove this if we never pass "dist" to ninja?
+
