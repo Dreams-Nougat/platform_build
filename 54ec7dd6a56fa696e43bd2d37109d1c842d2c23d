@@ -1,0 +1,54 @@
+Revision: 54ec7dd6a56fa696e43bd2d37109d1c842d2c23d
+Patch-set: 2
+File: /COMMIT_MSG
+
+12:29-14:26
+Fri Oct 30 18:04:09 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 161fca56_08d71742
+Bytes: 259
+Make doesn't have the restat feature. If the .toc file doesn't have a new timestamp after its build recipe was executed, make always tries to rebuild it whenenver you run make.
+So we should use the .toc files as dependencies only if BUILDING_WITH_NINJA=true .
+
+File: core/base_rules.mk
+
+227:30-227:51
+Fri Oct 30 18:04:09 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 760e462a_fdb37f56
+Bytes: 25
+$(LOCAL_BUILT_MODULE).toc
+
+File: core/binary.mk
+
+1178
+Fri Oct 30 18:04:09 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d63612de_6127e0f6
+Bytes: 73
+built_shared_library_tocs := $(adddsuffix .toc, $(built_shared_libraries)
+
+1191:0-1191:38
+Fri Oct 30 18:04:09 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 562a227b_174a9ea8
+Bytes: 28
+built_shared_library_tocs :=
+
+1193:0-1193:125
+Fri Oct 30 18:04:09 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 161fca56_a8ddc35f
+Bytes: 14
+No filter-out.
+
+File: core/definitions.mk
+
+1523:2-1523:9
+Fri Oct 30 18:04:09 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d63612de_c101ec48
+Bytes: 218
+The host machine readelf and nm doesn't work on Mac with those flags.
+Probably we should use the prebuilt toolchain tools, such as prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-readelf
+
