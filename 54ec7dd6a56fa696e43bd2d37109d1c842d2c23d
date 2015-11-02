@@ -20,6 +20,33 @@ I am wondering about Ninja's restat behavior:
 If libc.so.toc has older timestamp than libc.so and no symbol change since the old .toc file, will Ninja always run the recipe of the .toc file?
 If so, a nothing-to-do-build may not really do nothing.
 
+12:29-14:26
+Mon Nov 02 10:30:54 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 161fca56_08d71742
+UUID: f6195673_7cd1a8d5
+Bytes: 277
+Good point. I'd like to keep USE_NINJA=false build close to USE_NINJA=true build. So, I modified definitions.mk so it always updates the timestamp of .toc files. This would make USE_NINJA=false build slower, but it's OK because now USE_NINJA=false is almost only for debugging?
+
+12:29-14:26
+Mon Nov 02 10:30:54 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5625c29e_9f7c7f4f
+UUID: 7643a650_bb8df2e5
+Bytes: 524
+I think ninja doesn't believe timestamps of files. Instead it uses out/.ninja_log file. For example:
+
+ $ m
+ $ m  # no work to do
+ $ touch bionic/libc/stdio/stdio.c
+ $ m  # build 85 targets
+ $ ls -l out/target/product/generic/obj/lib/libc.so*
+ -rwxr-x--- 1 hamaji eng 766052 Nov  2 19:20 out/target/product/generic/obj/lib/libc.so*
+ -rw-r----- 1 hamaji eng  19677 Nov  2 18:19 out/target/product/generic/obj/lib/libc.so.toc
+ $ m  # no work to do
+
+Notice libc.so.toc is older than libc.so, but the last build was a null build.
+
 File: core/base_rules.mk
 
 227:30-227:51
@@ -28,6 +55,14 @@ Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 760e462a_fdb37f56
 Bytes: 25
 $(LOCAL_BUILT_MODULE).toc
+
+227:30-227:51
+Mon Nov 02 10:30:54 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 760e462a_fdb37f56
+UUID: 96401a44_bf6723f8
+Bytes: 31
+Oops. Thanks for catching this!
 
 File: core/binary.mk
 
@@ -38,6 +73,14 @@ UUID: d63612de_6127e0f6
 Bytes: 73
 built_shared_library_tocs := $(adddsuffix .toc, $(built_shared_libraries)
 
+1178
+Mon Nov 02 10:30:54 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d63612de_6127e0f6
+UUID: 562a227b_3dffbbd1
+Bytes: 4
+Done
+
 1191:0-1191:38
 Fri Oct 30 18:04:09 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -45,12 +88,28 @@ UUID: 562a227b_174a9ea8
 Bytes: 28
 built_shared_library_tocs :=
 
+1191:0-1191:38
+Mon Nov 02 10:30:54 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 562a227b_174a9ea8
+UUID: 5625c29e_f0ba80fb
+Bytes: 146
+This should be $(addsuffix .toc, $(built_shared_libraries)). Anyway, I think two $(addsuffix) would be better than $(addsuffix) and $(filter-out).
+
 1193:0-1193:125
 Fri Oct 30 18:04:09 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 161fca56_a8ddc35f
 Bytes: 14
 No filter-out.
+
+1193:0-1193:125
+Mon Nov 02 10:30:54 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 161fca56_a8ddc35f
+UUID: 765c8636_966452f4
+Bytes: 4
+Done
 
 File: core/definitions.mk
 
@@ -61,4 +120,12 @@ UUID: d63612de_c101ec48
 Bytes: 218
 The host machine readelf and nm doesn't work on Mac with those flags.
 Probably we should use the prebuilt toolchain tools, such as prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-readelf
+
+1523:2-1523:9
+Mon Nov 02 10:30:54 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d63612de_c101ec48
+UUID: 96401a44_9f645ff4
+Bytes: 61
+Ah yes. Sorry this patch was incomplete. I added XXX_GEN_TOC.
 
