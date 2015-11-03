@@ -1,0 +1,13 @@
+Revision: 17a49d9603ae107ffca4c7bd3bf8a31b8edd9059
+Patch-set: 2
+File: core/ninja.mk
+
+123
+Tue Nov 03 03:23:36 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f6195673_fc7938d8
+Bytes: 140
+Do we still need this? I thought I have fixed the issue and the new version of kati in build/kati.
+
+https://github.com/google/kati/issues/30
+
