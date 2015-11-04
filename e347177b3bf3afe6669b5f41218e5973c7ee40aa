@@ -1,0 +1,11 @@
+Revision: e347177b3bf3afe6669b5f41218e5973c7ee40aa
+Patch-set: 1
+File: tools/zipalign/ZipEntry.h
+
+199:38-199:42
+Wed Nov 04 23:47:07 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 568ea242_17ed1ee7
+Bytes: 9
+uint32_t?
+
