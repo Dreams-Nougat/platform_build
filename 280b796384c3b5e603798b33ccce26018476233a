@@ -1,0 +1,30 @@
+Revision: 280b796384c3b5e603798b33ccce26018476233a
+Patch-set: 3
+File: core/base_rules.mk
+
+228:0-230:5
+Wed Nov 04 00:57:18 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f6a3167e_835bded2
+Bytes: 14
+not necessary.
+
+File: core/combo/HOST_CROSS_windows-x86.mk
+
+45:30-45:37
+Wed Nov 04 00:57:18 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5625c29e_9327d35e
+Bytes: 227
+I think we can remove the use of this by using makefile arguments. Probably Makefile arguments are more readable in this case.
+Also it's better to split the subcommands, so that if the objdump command fails, it fails the build.
+
+File: core/definitions.mk
+
+1530:1-1530:28
+Wed Nov 04 00:57:18 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d6bb729e_aa06ef9d
+Bytes: 117
+We can make it a makefile parse-time decision ("if..else.." statement) instead of execute-time decision ($(if) call).
+
