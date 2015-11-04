@@ -9,3 +9,11 @@ UUID: 76a726c0_ef58c1d7
 Bytes: 319
 I think this is just a 64-bit problem with this old code -- this should be using uint32_t so that it's always returning a 32-bit value. Same with most of the rest of the storage uses (short -> uint16_t, long -> uint32_t). I'm testing a change with this now -- it seems to make ziptime and zipalign work with the bad zip
 
+59:18-59:31
+Wed Nov 04 19:58:03 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 76a726c0_ef58c1d7
+UUID: 76a726c0_8f849533
+Bytes: 192
+agree. i was digging this because i was concerned about zip64 issue, where OTA scripts would also fail on that. please feel free to replace the CL with better fixes for ziptime/zipalign tools.
+
