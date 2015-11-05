@@ -39,3 +39,13 @@ This may not be true for devices other than Brillo. We still need files under /S
 
 I don't know how the server processes the TF file. It feels like we probably don't need individual files for each property? Shall we make them (or even the ab_partitions above) into one meta file? (It's fine to get another file other than META/misc_info.txt, because Brillo can then kill this misc_info.txt when removing SYSTEM folders.)
 
+1633:1-1634:73
+Thu Nov 05 20:30:39 2015 +0000
+Author: Steve Fung <1076778@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b69d1e72_8515521b
+UUID: d683721b_de156527
+Bytes: 572
+Sure, I can append it instead to the misc_info.txt file.  Should I still keep it ifdef'd to the AB_OTA_UPDATER?  Or would it be ok to just add it for all builds?
+
+Regarding removing the /SYSTEM folder, thats just something we unofficially talked about, we don't yet even have a bug open for looking into that.  If we do come back to that, we'll keep the signing and release-keys in mind and discuss it properly before taking any action.  At least for now, though, adding the value to misc_info.txt can allow our server to unify the metadata lookup to only the META folder.
+
