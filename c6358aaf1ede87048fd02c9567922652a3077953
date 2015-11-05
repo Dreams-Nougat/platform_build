@@ -9,3 +9,11 @@ UUID: 36892e3b_01ff9a83
 Bytes: 65
 You can get these information from $(zip_root)/SYSTEM/build.prop.
 
+1633:1-1634:73
+Thu Nov 05 18:48:54 2015 +0000
+Author: Steve Fung <1076778@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 36892e3b_01ff9a83
+UUID: 568ea242_28d9d7a8
+Bytes: 496
+Yea, this was called out in the bug.  However it was suggested that redundantly adding it to META would be better for us.  The only things the AB updater is dependent on is the META and IMAGES folders of the zip, so in the future we may remove the SYSTEM folder in zip packages that we want developers uploading to the server to reduce storage and bandwidth.  We'd also like to go with the convention that any fields the server may need for processing the zip package would be in the META folder.
+
