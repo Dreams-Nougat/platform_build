@@ -27,3 +27,15 @@ Then can we put it in misc_info.txt?
 Or just make a copy of build.prop in the META folder? I don't see why the build variant is special and needs its own file.
 I don't have strong opinion. If it's ok with Tao, it's fine with me.
 
+1633:1-1634:73
+Thu Nov 05 19:43:33 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 568ea242_28d9d7a8
+UUID: b69d1e72_8515521b
+Bytes: 621
+> "so in the future we may remove the SYSTEM folder in zip packages that we want developers uploading to the server to reduce storage and bandwidth."
+
+This may not be true for devices other than Brillo. We still need files under /SYSTEM or /BOOT when signing apks with release-keys.
+
+I don't know how the server processes the TF file. It feels like we probably don't need individual files for each property? Shall we make them (or even the ab_partitions above) into one meta file? (It's fine to get another file other than META/misc_info.txt, because Brillo can then kill this misc_info.txt when removing SYSTEM folders.)
+
