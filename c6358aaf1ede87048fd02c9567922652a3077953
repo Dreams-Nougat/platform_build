@@ -49,3 +49,11 @@ Sure, I can append it instead to the misc_info.txt file.  Should I still keep it
 
 Regarding removing the /SYSTEM folder, thats just something we unofficially talked about, we don't yet even have a bug open for looking into that.  If we do come back to that, we'll keep the signing and release-keys in mind and discuss it properly before taking any action.  At least for now, though, adding the value to misc_info.txt can allow our server to unify the metadata lookup to only the META folder.
 
+1633:1-1634:73
+Thu Nov 05 21:55:06 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d683721b_de156527
+UUID: 96a49abb_8ae63fd6
+Bytes: 82
+Let's still get it ifdef'd to avoid unintended side effects to the current script.
+
