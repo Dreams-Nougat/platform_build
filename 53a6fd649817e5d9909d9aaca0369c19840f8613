@@ -1,0 +1,11 @@
+Revision: 53a6fd649817e5d9909d9aaca0369c19840f8613
+Base-for-patch-set: 1
+File: core/definitions.mk
+
+1066:13-1067:46
+Fri Nov 06 21:22:37 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 96a49abb_add6ba42
+Bytes: 158
+I am afraid some partners/vendors are already relying on this to override bionic header files. I'll forward you an email asking about this from the auto team.
+
