@@ -1,0 +1,12 @@
+Revision: 6ccbc82abce551802728c50bb4ae5cd269138dbd
+Patch-set: 1
+File: core/dynamic_binary.mk
+
+100:1-100:54
+Fri Nov 06 22:38:57 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d69a9277_e82d0c6b
+Bytes: 99
+No error message even if it really fails?
+Probably you need to add some flag like "-q" to the tool.
+
