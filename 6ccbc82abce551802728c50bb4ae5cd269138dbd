@@ -10,3 +10,11 @@ Bytes: 99
 No error message even if it really fails?
 Probably you need to add some flag like "-q" to the tool.
 
+100:1-100:54
+Fri Nov 06 23:03:47 2015 +0000
+Author: Steve Fung <1076778@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d69a9277_e82d0c6b
+UUID: 36892e3b_9904dea4
+Bytes: 526
+Hm, I'll have to take a look into the feasibliity of adding that next week.  The warnings that we see a lot are actually coming from a core breakpad library call that fprintf's directy to stderr, not from the dump_syms tool code.  So at a glance it didn't look like a trivial change to add a flag to dump_syms for these warnings.  And I uploaded this CL quickly as we have movers right now getting ready to move us to a different building, so I had to quickly upload this before shutting down my build machine for the weekend.
+
