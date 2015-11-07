@@ -18,3 +18,13 @@ UUID: 36892e3b_9904dea4
 Bytes: 526
 Hm, I'll have to take a look into the feasibliity of adding that next week.  The warnings that we see a lot are actually coming from a core breakpad library call that fprintf's directy to stderr, not from the dump_syms tool code.  So at a glance it didn't look like a trivial change to add a flag to dump_syms for these warnings.  And I uploaded this CL quickly as we have movers right now getting ready to move us to a different building, so I had to quickly upload this before shutting down my build machine for the weekend.
 
+100:1-100:54
+Sat Nov 07 18:22:41 2015 +0000
+Author: Mike Frysinger <1040868@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 36892e3b_9904dea4
+UUID: 36a76ed3_637ab6ce
+Bytes: 159
+the breakpad tools are generally hostile.  you could do something like:
+
+ $(hide)if ! $(BREAKPAD_DUMP_SYMS) -c $< > $@ 2>$@.log; then cat $@.log >&2; false; fi
+
