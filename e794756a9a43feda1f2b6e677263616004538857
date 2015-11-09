@@ -1,0 +1,11 @@
+Revision: e794756a9a43feda1f2b6e677263616004538857
+Patch-set: 2
+File: core/java.mk
+
+533:0-533:18
+Mon Nov 09 11:15:30 2015 +0000
+Author: Jean-Philippe Lesot <1015381@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 96173ad8_f85e9127
+Bytes: 51
+nit full_jack_deps now there are not only lib here?
+
