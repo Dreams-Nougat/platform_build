@@ -1,0 +1,12 @@
+Revision: 9b9e0c751f7ac434a732ab4683cea546b9718ad5
+Patch-set: 2
+File: core/envsetup.mk
+
+356:0-356:66
+Wed Nov 11 19:14:40 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 56cb02e2_c126c1f8
+Bytes: 97
++ctate
+I am not sure if the framework treats /vedor/priv-app as install path for privileged apps.
+
