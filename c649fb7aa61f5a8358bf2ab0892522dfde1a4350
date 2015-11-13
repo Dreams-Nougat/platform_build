@@ -1,0 +1,11 @@
+Revision: c649fb7aa61f5a8358bf2ab0892522dfde1a4350
+Patch-set: 1
+File: core/Makefile
+
+1633:1-1633:2
+Fri Nov 13 03:07:48 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b6da7ea7_e02656f8
+Bytes: 67
+nit: replace the second tab with space to be consistent with L1630?
+
