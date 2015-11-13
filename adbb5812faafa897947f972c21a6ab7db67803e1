@@ -9,3 +9,11 @@ UUID: 5b25eb9e_2bfbe9a2
 Bytes: 128
 I'm assuming ensure_start means do nothing if it's already been started. Will it switch existing daemons to using GOMA_HERMETIC?
 
+59
+Fri Nov 13 06:55:01 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5b25eb9e_2bfbe9a2
+UUID: 3bf75749_fd6ca74f
+Bytes: 214
+Good point. Fixed. As ensure_start is much faster than restart, I added a condition to check if the compiler_proxy runs with this option. We should be able to remove this condition after http://b/25676777 is fixed.
+
