@@ -1,0 +1,11 @@
+Revision: adbb5812faafa897947f972c21a6ab7db67803e1
+Patch-set: 1
+File: core/goma.mk
+
+59
+Fri Nov 13 06:34:17 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5b25eb9e_2bfbe9a2
+Bytes: 128
+I'm assuming ensure_start means do nothing if it's already been started. Will it switch existing daemons to using GOMA_HERMETIC?
+
