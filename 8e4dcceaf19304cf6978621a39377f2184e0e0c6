@@ -1,0 +1,11 @@
+Revision: 8e4dcceaf19304cf6978621a39377f2184e0e0c6
+Patch-set: 1
+File: core/definitions.mk
+
+1951
+Fri Nov 13 08:15:22 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: dbe8fb67_e2e40640
+Bytes: 216
+This function is a bit complicated due to double-dollars, though this allows me to implement define-jar-to-toc-rule which defines two rules at once (so callers look clean). Please let me know if there's a better way.
+
