@@ -10,3 +10,11 @@ Bytes: 154
 This will not work on pre-JB-MR2:
 https://android.googlesource.com/platform/libcore/+/jb-mr1-release/luni/src/main/java/java/util/jar/JarVerifier.java#193
 
+258:31-258:45
+Mon Nov 16 18:27:15 2015 +0000
+Author: Alex Klyubin <1018773@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5b25eb9e_d6d53968
+UUID: 5b532b27_00593a0b
+Bytes: 383
+Is this tool used for creating APKs to be run on JB MR1 or older? My understanding is that this tool is only used to sign APKs built from the current branch and to sign OTA update ZIPs built from the current branch. If there are branches which build "unbundled" APKs (those to be run on older versions of Android) they should be using Android SDK tools to sign. Is that not the case?
+
