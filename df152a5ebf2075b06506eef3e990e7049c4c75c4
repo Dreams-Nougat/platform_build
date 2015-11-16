@@ -1,0 +1,12 @@
+Revision: df152a5ebf2075b06506eef3e990e7049c4c75c4
+Patch-set: 2
+File: tools/signapk/SignApk.java
+
+258:31-258:45
+Mon Nov 16 18:20:31 2015 +0000
+Author: Kenny Root <1002975@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5b25eb9e_d6d53968
+Bytes: 154
+This will not work on pre-JB-MR2:
+https://android.googlesource.com/platform/libcore/+/jb-mr1-release/luni/src/main/java/java/util/jar/JarVerifier.java#193
+
