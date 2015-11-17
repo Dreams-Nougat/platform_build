@@ -17,3 +17,13 @@ UUID: 5b816bc7_7660d0e5
 Bytes: 72
 Good point, that should be more than theory, since we don't use ONESHELL
 
+127:1-127:46
+Tue Nov 17 19:51:23 2015 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5b816bc7_7660d0e5
+UUID: 5b2a4b7b_df82e1e3
+Bytes: 282
+I thought that would be the case, but when I tested it it worked fine.  Turns out I have NINJA_STATUS in my .bashrc.
+
+I moved it out of the command because setting an environment variable doesn't work with non-simple commands like the && I added, I'll have to find another solution.
+
