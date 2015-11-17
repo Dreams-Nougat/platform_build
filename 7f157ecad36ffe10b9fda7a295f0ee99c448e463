@@ -9,6 +9,14 @@ UUID: 1b3453db_c1ffa657
 Bytes: 53
 How about putting all soong output files in a subdir?
 
+1:0-1:25
+Tue Nov 17 21:33:28 2015 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 1b3453db_c1ffa657
+UUID: 76d4867d_631386a6
+Bytes: 4
+Done
+
 45:18-45:27
 Tue Nov 17 20:17:54 2015 +0000
 Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -23,4 +31,12 @@ Parent: db847bce_49309296
 UUID: 1b3453db_21be6a80
 Bytes: 45
 $(TOP) is always ".". Looks unnecessary here.
+
+45:18-45:27
+Tue Nov 17 21:33:28 2015 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 1b3453db_21be6a80
+UUID: db847bce_ec13b440
+Bytes: 4
+Done
 
