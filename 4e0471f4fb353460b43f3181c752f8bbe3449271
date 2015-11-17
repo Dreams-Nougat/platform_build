@@ -9,6 +9,14 @@ UUID: 3b2597a9_013eccb6
 Bytes: 61
 Update this: maybe we can pass in from the kati command line.
 
+524:31-524:52
+Tue Nov 17 22:25:40 2015 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3b2597a9_013eccb6
+UUID: 7b6aafda_66a4a07b
+Bytes: 65
+oh, that's why i had SOONG_OUT_DIR defined in envsetup.mk before.
+
 File: core/ninja.mk
 
 126:65-126:70
