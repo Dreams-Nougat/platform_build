@@ -16,3 +16,11 @@ UUID: db847bce_49309296
 Bytes: 46
 Does this work when OUT_DIR is not under $TOP?
 
+45:18-45:27
+Tue Nov 17 20:21:34 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: db847bce_49309296
+UUID: 1b3453db_21be6a80
+Bytes: 45
+$(TOP) is always ".". Looks unnecessary here.
+
