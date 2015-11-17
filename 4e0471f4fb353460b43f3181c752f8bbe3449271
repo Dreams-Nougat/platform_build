@@ -1,0 +1,20 @@
+Revision: 4e0471f4fb353460b43f3181c752f8bbe3449271
+Patch-set: 4
+File: core/main.mk
+
+524:31-524:52
+Tue Nov 17 21:45:33 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3b2597a9_013eccb6
+Bytes: 61
+Update this: maybe we can pass in from the kati command line.
+
+File: core/ninja.mk
+
+126:65-126:70
+Tue Nov 17 21:45:33 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 76d4867d_83931a3e
+Bytes: 18
+Looks unnecessary.
+
