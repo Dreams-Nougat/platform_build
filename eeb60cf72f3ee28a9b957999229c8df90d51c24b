@@ -11,3 +11,11 @@ I'd use 'source' instead of the '.' shortcut to make it clear what's happening.
 
 Also, maybe move the && down to the rule so that it's clear that these are separate commands and not wrappers?
 
+93
+Tue Nov 17 20:09:03 2015 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3b2597a9_feb8ff02
+UUID: 7b6aafda_4bc6456e
+Bytes: 277
+I had the && because at least the SOONG_ENV one is optional and might be empty for !USE_SOONG, but it turns out the SOONG_ENV one is unnecessary for the ninja stage, and didn't do anything because it uses A=B and not export A=B.  I'll just put them all back in the make recipe.
+
