@@ -1,0 +1,20 @@
+Revision: 6d087c4014b86f8d9264d5a8857c1f7f3b4e2a11
+Patch-set: 5
+File: core/main.mk
+
+524:20-524:53
+Tue Nov 17 23:55:45 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5b816bc7_5fab67b2
+Bytes: 19
+$(SOONG_ANDROID_MK)
+
+File: core/ninja.mk
+
+148:318-148:319
+Tue Nov 17 23:55:45 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5b25eb9e_0a449df7
+Bytes: 52
+pass from here: SOONG_ANDROID_MK=$(SOONG_ANDROID_MK)
+
