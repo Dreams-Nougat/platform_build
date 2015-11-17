@@ -34,3 +34,11 @@ UUID: fb75bfb9_7c2bcd29
 Bytes: 104
 It is necessary in case the path to KATI_BUILD_NINJA changes, for example when changing target products.
 
+126:65-126:70
+Tue Nov 17 23:15:18 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: fb75bfb9_7c2bcd29
+UUID: 3b2597a9_44650222
+Bytes: 59
+But COMBINED_BUILD_NINJA is 1:1 mapped to KATI_BUILD_NINJA.
+
