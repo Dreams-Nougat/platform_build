@@ -9,3 +9,11 @@ UUID: 3b2597a9_e1b860ea
 Bytes: 63
 Don't we need to tell kati to not run ninja in the KATI_ENV_SH?
 
+135:1-135:305
+Tue Nov 17 21:25:35 2015 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3b2597a9_e1b860ea
+UUID: 3b2597a9_61cc703b
+Bytes: 125
+Kati's build.sh runs ninja, a kati patch split the part we need out to env.sh, and above we only use env.sh and not build.sh.
+
