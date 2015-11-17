@@ -26,3 +26,11 @@ UUID: 76d4867d_83931a3e
 Bytes: 18
 Looks unnecessary.
 
+126:65-126:70
+Tue Nov 17 22:26:22 2015 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 76d4867d_83931a3e
+UUID: fb75bfb9_7c2bcd29
+Bytes: 104
+It is necessary in case the path to KATI_BUILD_NINJA changes, for example when changing target products.
+
