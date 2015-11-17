@@ -1,0 +1,11 @@
+Revision: 56d35c93343baae5351ebfd73845200d4d304285
+Patch-set: 1
+File: core/ninja.mk
+
+127:1-127:46
+Tue Nov 17 02:28:16 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b6da7ea7_8abe8cef
+Bytes: 107
+In theory this can be run in a sub-shell and the exported variable isn't visible to the next shell command.
+
