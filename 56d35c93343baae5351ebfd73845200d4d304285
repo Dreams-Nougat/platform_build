@@ -9,3 +9,11 @@ UUID: b6da7ea7_8abe8cef
 Bytes: 107
 In theory this can be run in a sub-shell and the exported variable isn't visible to the next shell command.
 
+127:1-127:46
+Tue Nov 17 03:03:24 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b6da7ea7_8abe8cef
+UUID: 5b816bc7_7660d0e5
+Bytes: 72
+Good point, that should be more than theory, since we don't use ONESHELL
+
