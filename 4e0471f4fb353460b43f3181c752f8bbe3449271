@@ -42,3 +42,13 @@ UUID: 3b2597a9_44650222
 Bytes: 59
 But COMBINED_BUILD_NINJA is 1:1 mapped to KATI_BUILD_NINJA.
 
+126:65-126:70
+Tue Nov 17 23:29:45 2015 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3b2597a9_44650222
+UUID: 1b3453db_a4226834
+Bytes: 329
+Oh, I forgot I made COMBINED_BUILD_NINJA vary based on KATI_NINJA_SUFFIX.
+
+This file still might need to change if I added a line or something, but I suppose the dependency on KATI_BUILD_NINJA and SOONG_ANDROID_MK is likely to regenerate it anyways, and if it was critical I could add a dependency on $(lastword $(MAKEFILE_LIST))
+
