@@ -1,0 +1,13 @@
+Revision: eeb60cf72f3ee28a9b957999229c8df90d51c24b
+Patch-set: 2
+File: core/ninja.mk
+
+93
+Tue Nov 17 20:07:16 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3b2597a9_feb8ff02
+Bytes: 191
+I'd use 'source' instead of the '.' shortcut to make it clear what's happening.
+
+Also, maybe move the && down to the rule so that it's clear that these are separate commands and not wrappers?
+
