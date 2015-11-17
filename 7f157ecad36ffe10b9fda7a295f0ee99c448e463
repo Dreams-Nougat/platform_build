@@ -9,3 +9,10 @@ UUID: 1b3453db_c1ffa657
 Bytes: 53
 How about putting all soong output files in a subdir?
 
+45:18-45:27
+Tue Nov 17 20:17:54 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: db847bce_49309296
+Bytes: 46
+Does this work when OUT_DIR is not under $TOP?
+
