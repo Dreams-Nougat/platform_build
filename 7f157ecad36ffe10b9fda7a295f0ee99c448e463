@@ -1,0 +1,11 @@
+Revision: 7f157ecad36ffe10b9fda7a295f0ee99c448e463
+Patch-set: 3
+File: core/soong.mk
+
+1:0-1:25
+Tue Nov 17 20:17:11 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1b3453db_c1ffa657
+Bytes: 53
+How about putting all soong output files in a subdir?
+
