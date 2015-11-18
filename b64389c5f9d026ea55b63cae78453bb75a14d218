@@ -1,0 +1,64 @@
+Revision: b64389c5f9d026ea55b63cae78453bb75a14d218
+Patch-set: 3
+File: core/java.mk
+
+530:0-530:25
+Wed Nov 18 22:18:59 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: fb75bfb9_5c1cccf4
+Bytes: 6
+remove
+
+533:0-533:72
+Wed Nov 18 22:18:59 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: fb75bfb9_3fa8e29a
+Bytes: 226
+In the previous implementation, we don't have proguard_dictionary as a dependency target. Instead we establish the dependency directly on $(link_instr_intermediates_dir.COMMON)/proguard.classes.jar.
+
+Jack can also go that way.
+
+540:0-541:89
+Wed Nov 18 22:18:59 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5b25eb9e_5ecc973a
+Bytes: 9
+see here.
+
+645:20-645:45
+Wed Nov 18 22:18:59 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: db847bce_b0c2da81
+Bytes: 316
+Though I don't think we have any such cases in the source tree for now, but if it's a static Java library, it should be
+$(jack_dictionary) : $(full_classes_jack)
+
+Following the existing approach, we can also establish the dependency as: 
+$(built_dex_intermediate) : $(link_instr_intermediates_dir.COMMON)/classes.dex
+
+File: core/java_common.mk
+
+284:0-285:87
+Wed Nov 18 22:18:59 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5b816bc7_8bf9bdec
+Bytes: 336
+I found a problem here:
+full_shared_jack_libs are the proguarded .jack files.
+Won't that cause compilation error if a library is obfuscated? because the symbol references in the current module's source are original unobfuscated one.
+That's why when jack is disabled, we link against the classes.jar, the file before Proguard processing.
+
+301:8-302:48
+Wed Nov 18 22:18:59 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5b816bc7_2bfe69d3
+Bytes: 13
+similar here.
+
+315:3-315:89
+Wed Nov 18 22:18:59 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7b6aafda_966a3d94
+Bytes: 16
+this is correct.
+
