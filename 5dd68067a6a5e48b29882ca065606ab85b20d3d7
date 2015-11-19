@@ -1,0 +1,11 @@
+Revision: 5dd68067a6a5e48b29882ca065606ab85b20d3d7
+Base-for-patch-set: 3
+File: core/java.mk
+
+525:0-526:70
+Thu Nov 19 11:09:55 2015 +0000
+Author: Yohann Roussel <1023201@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 56278298_0fc02dfd
+Bytes: 149
+@Ying: Do you remember if there was a reason why you had proguard do the obfuscation of the application again and output the result in an unused jar?
+
