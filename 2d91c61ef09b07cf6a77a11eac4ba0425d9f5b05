@@ -1,0 +1,12 @@
+Revision: 2d91c61ef09b07cf6a77a11eac4ba0425d9f5b05
+Patch-set: 1
+File: core/binary.mk
+
+1306:0-1307:87
+Thu Nov 19 22:00:22 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5b816bc7_7679a512
+Bytes: 222
+I am fine with this approach.
+Alternatively we can have a "touch" rule to generate the headers from the $(aidl_gen_cpp). See rule of proto_generated_headers. But you need to know the path and file name of the header files.
+
