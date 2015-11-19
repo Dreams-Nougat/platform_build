@@ -1,0 +1,13 @@
+Revision: f0b4dbb9ad1d5948de6cdfcb18fb6a6a5fd7e7aa
+Patch-set: 1
+File: envsetup.sh
+
+1422:4-1427:45
+Thu Nov 19 18:30:22 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3b2597a9_f8092a3f
+Bytes: 159
+I see no bug. Read the comment.
+- we hornor JAVA_HOME set up before the first run of this function.
+- But we should reset JAVA_HOME that's set up by ourselves.
+
