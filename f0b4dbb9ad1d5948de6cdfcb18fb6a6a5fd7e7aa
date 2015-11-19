@@ -11,3 +11,17 @@ I see no bug. Read the comment.
 - we hornor JAVA_HOME set up before the first run of this function.
 - But we should reset JAVA_HOME that's set up by ourselves.
 
+1422:4-1427:45
+Thu Nov 19 19:02:46 2015 +0000
+Author: Ruslan Piasetskyi <1087743@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3b2597a9_f8092a3f
+UUID: d67c5259_ab90f974
+Bytes: 494
+I can explain.
+
+I have $JAVA_HOME variable. And this variable contains path to Java 6 home folder. set_java_home function is called in lunch function. We don't have $ANDROID_SET_JAVA_HOME variable and don't enter this "if" condition (because of "-n").
+
+So we don't enter second "if" condition (because $JAVA_HOME variable is not null) and don't set $JAVA_HOME variable to proper value.
+
+Actually I don't see a reason for $ANDROID_SET_JAVA_HOME variable, because we use it only in this function.
+
