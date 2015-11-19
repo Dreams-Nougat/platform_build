@@ -1,0 +1,18 @@
+Revision: 2ee6a0e3a8d1c55f16b6f4f2a93df84a23dc3b28
+Patch-set: 1
+File: core/binary.mk
+
+699:0-699:46
+Thu Nov 19 18:15:51 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3b2597a9_b87602e3
+Bytes: 9
+like this
+
+734:0-734:41
+Thu Nov 19 18:15:51 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: fb75bfb9_3081f121
+Bytes: 128
+why not also auto-export the aidl_gen_include_root? so any module linking against the current library will get it automatically.
+
