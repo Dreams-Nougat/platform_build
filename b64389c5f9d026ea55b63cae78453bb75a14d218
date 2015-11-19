@@ -80,6 +80,19 @@ UUID: 3b4e7783_8e543f4b
 Bytes: 305
 I agree, obfuscated library will cause compilation error here. But won't they cause runtime failure if we compile against the unobfuscated .jack? I mean we handle no other mapping/dictionary than the one given by LOCAL_INSTRUMENTATION_FOR, so nothing to handle an eventual obfuscated LOCAL_JAVA_LIBRARIES.
 
+284:0-285:87
+Thu Nov 19 23:55:53 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3b4e7783_8e543f4b
+UUID: 5b25eb9e_a44a7556
+Bytes: 512
+Yes, we need to make sure the dependent uses the library's dictionary, not hard by setting up the dependency and LOCAL_PROGUARD_FLAGS in the dependent's Android.mk.
+No existing use case for now. But I remember Narayan asked me for this kind of thing not long time ago.
+
+If we have dependency on classes.noshrob.jack, that means we'll be also building all library's classes.noshrob.jack, which we don't build previously, in addition to classes.jack.
+
+It's fine to leave it as is now. But probably put a note here.
+
 301:8-302:48
 Wed Nov 18 22:18:59 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
