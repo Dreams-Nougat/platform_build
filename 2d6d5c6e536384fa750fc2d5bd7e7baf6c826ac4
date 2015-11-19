@@ -11,3 +11,11 @@ How did you pass in the variables in you test?
 In makefile by default you can't override a command line makefile variable, but you can override an environmental variable.
 So "make LLVM_PREBUILTS_VERSION=3.9" works but "LLVM_PREBUILTS_VERSION=3.9 make" doesn't.
 
+9:0-10:29
+Thu Nov 19 02:10:06 2015 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5b25eb9e_d98a013b
+UUID: 1b3453db_08b94aec
+Bytes: 94
+Not sure what I was doing last week when I was digging in to this, but clearly it was wrong :)
+
