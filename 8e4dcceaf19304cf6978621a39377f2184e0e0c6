@@ -1,6 +1,22 @@
 Revision: 8e4dcceaf19304cf6978621a39377f2184e0e0c6
 Patch-set: 1
+File: /COMMIT_MSG
+
+27:0-29:36
+Thu Nov 19 00:37:12 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7b6aafda_99c7ce92
+Bytes: 111
+Yeah, the jack team is talking about discontinuing javac/dx toolchain support soon, and this will be more true.
+
 File: core/definitions.mk
+
+1950:7-1950:27
+Thu Nov 19 00:37:12 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 96d1fa8e_ab3c38be
+Bytes: 114
+Since this is only used inside define-jar-to-toc-rule, we can "internalize" by appending "_" to the function name.
 
 1951
 Fri Nov 13 08:15:22 2015 +0000
@@ -8,4 +24,44 @@ Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: dbe8fb67_e2e40640
 Bytes: 216
 This function is a bit complicated due to double-dollars, though this allows me to implement define-jar-to-toc-rule which defines two rules at once (so callers look clean). Please let me know if there's a better way.
+
+1951:21-1951:28
+Thu Nov 19 00:37:12 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 76d4867d_f82d59d0
+Bytes: 45
+$(IJAR) as order-only depependency: | $(IJAR)
+
+1951
+Thu Nov 19 00:37:12 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: dbe8fb67_e2e40640
+UUID: db847bce_f657fa4d
+Bytes: 105
+$$ is fine. Just put a note that it must be called with $(eval). (there are many such cases in this file)
+
+1958:0-1958:7
+Thu Nov 19 00:37:12 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3b2597a9_471a9f58
+Bytes: 12
+Unnecessary.
+
+File: core/java.mk
+
+404:44-404:66
+Thu Nov 19 00:37:12 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5b2a4b7b_83aabba9
+Bytes: 325
+From java_common.java: full_java_lib_deps := $(full_java_lib_deps) $(full_static_java_libs) $(LOCAL_CLASSPATH)
+
+For static Java libraries, whose class files will be packaged into the current module, using the toc file probably is incorrect. Static libraries are part of the app that use them and their implementation matters.
+
+457:0-457:75
+Thu Nov 19 00:37:12 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5b816bc7_bda72029
+Bytes: 260
+Looks like unnecessary to generate .toc for all the jar files. I think only the jars used as dependencies by other modules need .toc. They are classes.jar for target Java library and javalib.jar for host Java library. See _java-lib-full-dep in definitions.mk .
 
