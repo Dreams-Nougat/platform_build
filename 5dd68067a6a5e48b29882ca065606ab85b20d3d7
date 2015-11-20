@@ -20,3 +20,11 @@ As far as I know, if you don't pass the main app's classes.jar as -injars, the t
 
 Yes, the output proguard.$(LOCAL_INSTRUMENTATION_FOR).jar is unused and probably we can remove that -outjars flag, if Proguard allows it.
 
+525:0-526:70
+Fri Nov 20 17:35:13 2015 +0000
+Author: Yohann Roussel <1023201@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5b2a4b7b_92556305
+UUID: 9b8e83ee_1462a41a
+Bytes: 328
+Proguard is renaming the references to obfuscated symbol of the application in the test classes even for -libraryjars, we did test that before. In doubt I tried to execute some tests and you're right it's failing. Looks like it's because Proguard is renaming the tests classes with name conflicting with the application classes.
+
