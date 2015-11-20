@@ -9,3 +9,11 @@ UUID: 3b2597a9_8e73fc32
 Bytes: 48
 This doesn't work. See my comment in patchset 3.
 
+532:0-532:72
+Fri Nov 20 00:32:13 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 76d4867d_bb363626
+Bytes: 125
+ok, this is fine, if you prefer this explicit dependency on the dictionary file.
+But don't bother to update the legacy setup.
+
