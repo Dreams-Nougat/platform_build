@@ -34,6 +34,14 @@ UUID: 569062ca_07363c91
 Bytes: 240
 Ok I see the lack of coherency there. I feel more comfortable to depend on the used file instead of depending on the file known to be built at the same time. So maybe I could modify the legacy rules to align them on that. What do you think?
 
+533:0-533:72
+Fri Nov 20 00:28:54 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 569062ca_07363c91
+UUID: 5b816bc7_2cd8bc45
+Bytes: 69
+I don't have strong opinion. I prefer the legacy setup: it's simpler.
+
 540:0-541:89
 Wed Nov 18 22:18:59 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>

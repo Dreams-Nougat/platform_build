@@ -9,3 +9,14 @@ UUID: 56278298_0fc02dfd
 Bytes: 149
 @Ying: Do you remember if there was a reason why you had proguard do the obfuscation of the application again and output the result in an unused jar?
 
+525:0-526:70
+Fri Nov 20 00:28:54 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 56278298_0fc02dfd
+UUID: 5b2a4b7b_92556305
+Bytes: 551
+IIRC, to use the main app's dictionary, Proguard requires the main app's classes.jar to be passed as -injars, not as -libraryjars, as the comment says.
+As far as I know, if you don't pass the main app's classes.jar as -injars, the test app's references to symbols of the main app won't be rewritten with the obfuscated one: Proguard obfuscates only the -injars' symbols, not symbols it references from a library.
+
+Yes, the output proguard.$(LOCAL_INSTRUMENTATION_FOR).jar is unused and probably we can remove that -outjars flag, if Proguard allows it.
+
