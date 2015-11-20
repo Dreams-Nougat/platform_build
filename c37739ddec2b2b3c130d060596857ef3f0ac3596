@@ -1,0 +1,11 @@
+Revision: c37739ddec2b2b3c130d060596857ef3f0ac3596
+Patch-set: 4
+File: core/java.mk
+
+524:0-527:66
+Fri Nov 20 00:30:59 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3b2597a9_8e73fc32
+Bytes: 48
+This doesn't work. See my comment in patchset 3.
+
