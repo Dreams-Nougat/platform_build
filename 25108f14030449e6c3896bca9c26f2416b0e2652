@@ -1,0 +1,11 @@
+Revision: 25108f14030449e6c3896bca9c26f2416b0e2652
+Patch-set: 5
+File: core/java_common.mk
+
+284:0-285:79
+Fri Nov 20 17:38:46 2015 +0000
+Author: Yohann Roussel <1023201@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: db11db43_0e303bc3
+Bytes: 203
+I'm finally not so sure about this comment, it gives only little information and this is probably something we'll find quickly if we want to add support for library obfuscation. Are you sure you want it?
+
