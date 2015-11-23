@@ -1,0 +1,25 @@
+Revision: 04c757ed5e1fb5e76723a0a84fa91027275ca7ef
+Patch-set: 1
+File: tools/releasetools/add_vendor_partition_to_target_files.py
+
+21:44-21:45
+Mon Nov 23 19:42:42 2015 +0000
+Author: Dan Shi <1088076@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1b153384_f88fb9da
+Bytes: 67
+will add another arg here, the path to the target_files's zip file.
+
+35
+Mon Nov 23 19:42:42 2015 +0000
+Author: Dan Shi <1088076@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1b153384_d88c7de9
+Bytes: 28
+will cleanup unused imports.
+
+41:0-45:33
+Mon Nov 23 19:42:42 2015 +0000
+Author: Dan Shi <1088076@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3bed97ca_c12f7261
+Bytes: 48
+do we need these, as none of them are used here.
+
