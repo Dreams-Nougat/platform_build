@@ -1,5 +1,18 @@
 Revision: 04c757ed5e1fb5e76723a0a84fa91027275ca7ef
 Patch-set: 1
+File: core/Makefile
+
+1669
+Mon Nov 23 19:43:19 2015 +0000
+Author: David Zeuthen <1076971@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7bd9cf3d_3fdd8793
+Bytes: 547
+I don't think this is going to scale, e.g. we'd have to add content here for each and every board.
+
+I'd instead expect that we list the files in e.g. device/qcom/dragonboard/BoardConfig.mk for dragonboard, device/intel/edison/BoardConfig.mk for edison and so on. To be honest I'm not sure which location is the best - for example, there's also vendor/ and hardware/ directories it could go in. I'm adding leecam@ to the Cc to get his opinion.
+
+I'd also expect that we'd manually list all files instead of assuming they all have the .bin extension.
+
 File: tools/releasetools/add_vendor_partition_to_target_files.py
 
 21:44-21:45
