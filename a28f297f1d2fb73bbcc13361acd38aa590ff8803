@@ -9,3 +9,11 @@ UUID: fbbdbfca_d624828f
 Bytes: 85
 it's more readable to just close it - especially when using Java7 try-with-resources.
 
+248:12-248:94
+Tue Nov 24 17:28:52 2015 +0000
+Author: Alex Klyubin <1018773@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: fbbdbfca_d624828f
+UUID: 5b1b2bb8_83557105
+Bytes: 4
+Done
+
