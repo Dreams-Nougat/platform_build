@@ -1,0 +1,11 @@
+Revision: 80e75b747d0f8ddbf2fc44a593f0392c46c1da71
+Patch-set: 1
+File: core/Makefile
+
+1685:0-1685:24
+Tue Nov 24 23:16:56 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: db271bf3_672205e6
+Bytes: 27
+$(VENDOR_PARTITIONS_TARGET)
+
