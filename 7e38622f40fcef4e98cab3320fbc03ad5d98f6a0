@@ -1,0 +1,12 @@
+Revision: 7e38622f40fcef4e98cab3320fbc03ad5d98f6a0
+Patch-set: 1
+File: core/binary.mk
+
+322:0-322:54
+Wed Nov 25 02:18:54 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1b153384_41cd3539
+Bytes: 67
+How is this file being used?
+I am not sure if this is still needed.
+
