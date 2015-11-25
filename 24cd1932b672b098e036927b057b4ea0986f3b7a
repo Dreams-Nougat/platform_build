@@ -9,6 +9,13 @@ UUID: fbb05f0b_84bee77d
 Bytes: 21
 will undo this later.
 
+1672:0-1673:30
+Wed Nov 25 03:35:13 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5bd5eb28_96cbcc23
+Bytes: 145
+This probably doesn't belong to the core build system. Do we have a project common to all brillo devices? I think it's better to move over there.
+
 1688
 Wed Nov 25 03:22:26 2015 +0000
 Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
