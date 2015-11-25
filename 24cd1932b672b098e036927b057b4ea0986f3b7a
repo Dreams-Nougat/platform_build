@@ -9,6 +9,13 @@ UUID: fbb05f0b_84bee77d
 Bytes: 21
 will undo this later.
 
+1688
+Wed Nov 25 03:22:26 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: bb2a67bd_a827ae91
+Bytes: 113
+Why aren't you just using zip here? do we actually need to use the python zipfile implementation for some reason?
+
 File: tools/releasetools/add_files_to_zip.py
 
 20:25-20:39
