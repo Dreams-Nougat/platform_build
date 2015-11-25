@@ -1,0 +1,27 @@
+Revision: 24cd1932b672b098e036927b057b4ea0986f3b7a
+Patch-set: 2
+File: core/Makefile
+
+1485
+Wed Nov 25 02:44:04 2015 +0000
+Author: Dan Shi <1088076@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: fbb05f0b_84bee77d
+Bytes: 21
+will undo this later.
+
+File: tools/releasetools/add_files_to_zip.py
+
+20:25-20:39
+Wed Nov 25 02:44:04 2015 +0000
+Author: Dan Shi <1088076@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5bd5eb28_56109467
+Bytes: 22
+need to flip the args.
+
+36:0-40:33
+Wed Nov 25 02:44:04 2015 +0000
+Author: Dan Shi <1088076@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3bed97ca_ec2d3ed0
+Bytes: 17
+do we need these?
+
