@@ -9,6 +9,14 @@ UUID: 7b6aafda_99c7ce92
 Bytes: 111
 Yeah, the jack team is talking about discontinuing javac/dx toolchain support soon, and this will be more true.
 
+27:0-29:36
+Thu Nov 26 05:24:58 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7b6aafda_99c7ce92
+UUID: 3bf75749_a3215e7d
+Bytes: 85
+Oh, then it would be better to abandon this change and just wait for the deprecation?
+
 File: core/definitions.mk
 
 1950:7-1950:27
@@ -17,6 +25,14 @@ Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 96d1fa8e_ab3c38be
 Bytes: 114
 Since this is only used inside define-jar-to-toc-rule, we can "internalize" by appending "_" to the function name.
+
+1950:7-1950:27
+Thu Nov 26 05:24:58 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 96d1fa8e_ab3c38be
+UUID: 16218a86_6a63535c
+Bytes: 4
+Done
 
 1951
 Fri Nov 13 08:15:22 2015 +0000
@@ -40,12 +56,36 @@ UUID: db847bce_f657fa4d
 Bytes: 105
 $$ is fine. Just put a note that it must be called with $(eval). (there are many such cases in this file)
 
+1951
+Thu Nov 26 05:24:58 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: db847bce_f657fa4d
+UUID: bbeb4762_87c2ea81
+Bytes: 4
+Done
+
+1951:21-1951:28
+Thu Nov 26 05:24:58 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 76d4867d_f82d59d0
+UUID: 1b06130b_e2e40240
+Bytes: 4
+Done
+
 1958:0-1958:7
 Thu Nov 19 00:37:12 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 3b2597a9_471a9f58
 Bytes: 12
 Unnecessary.
+
+1958:0-1958:7
+Thu Nov 26 05:24:58 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3b2597a9_471a9f58
+UUID: 3bf75749_e3276691
+Bytes: 4
+Done
 
 File: core/java.mk
 
@@ -58,10 +98,30 @@ From java_common.java: full_java_lib_deps := $(full_java_lib_deps) $(full_static
 
 For static Java libraries, whose class files will be packaged into the current module, using the toc file probably is incorrect. Static libraries are part of the app that use them and their implementation matters.
 
+404:44-404:66
+Thu Nov 26 05:24:58 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5b2a4b7b_83aabba9
+UUID: 9bf20354_099ef1d4
+Bytes: 55
+Ah true. I moved this logic from here to java_common.mk
+
 457:0-457:75
 Thu Nov 19 00:37:12 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 5b816bc7_bda72029
 Bytes: 260
 Looks like unnecessary to generate .toc for all the jar files. I think only the jars used as dependencies by other modules need .toc. They are classes.jar for target Java library and javalib.jar for host Java library. See _java-lib-full-dep in definitions.mk .
+
+457:0-457:75
+Thu Nov 26 05:24:58 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5b816bc7_bda72029
+UUID: 7bf54f3c_0b34a01e
+Bytes: 369
+Done. As for host Java library, it seems full_java_lib_deps can be module_name.jar instead of javalib.jar. Maybe we should just correct the line in java_common.mk:
+
+ full_java_lib_deps := $(full_shared_java_libs)
+
+but I'm not sure. As host java libraries won't be rebuilt often and .jar.toc seems not to be important anyway, the PS2 only supports target java libraries.
 
