@@ -1,0 +1,11 @@
+Revision: 089cf5c86ad54d58c48591dfacd55fbc29f6023b
+Patch-set: 2
+File: tools/dextoc/dextoc.cc
+
+24
+Fri Nov 27 07:38:21 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3b72f720_da0bb1fe
+Bytes: 353
+This is what I understand from the behavior of jack. IIUC, .dex files have the initial values of non-static final fields as bytecode of constructors, not as data. It's interesting .dex file format seems to not follow Java language's spec (3 of https://docs.oracle.com/javase/specs/jls/se8/html/jls-13.html#jls-13.1). Please correct me if I'm wrong here.
+
