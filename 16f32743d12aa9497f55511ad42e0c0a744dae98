@@ -1,0 +1,36 @@
+Revision: 16f32743d12aa9497f55511ad42e0c0a744dae98
+Patch-set: 3
+File: /COMMIT_MSG
+
+17
+Fri Nov 27 07:38:21 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7ba54fc6_d310342d
+Bytes: 159
+I'm not sure if you like this change, as EncodedStaticFieldValueIterator seems to be designed as more private interface than DexFile. Suggestions are welcomed.
+
+File: tools/Android.mk
+
+30
+Fri Nov 27 07:38:21 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3ba757d3_43bc5add
+Bytes: 105
+I'll remove this comment before I land this patch. I guess this issue will be resolved during the review.
+
+File: tools/dextoc/dextoc.cc
+
+24
+Fri Nov 27 07:38:21 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1b71b31c_c743e0ef
+Bytes: 353
+This is what I understand from the behavior of jack. IIUC, .dex files have the initial values of non-static final fields as bytecode of constructors, not as data. It's interesting .dex file format seems to not follow Java language's spec (3 of https://docs.oracle.com/javase/specs/jls/se8/html/jls-13.html#jls-13.1). Please correct me if I'm wrong here.
+
+92
+Fri Nov 27 07:38:21 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: fb6bff2e_e63aa0c0
+Bytes: 167
+runtime/dex_file.cc handles kType but I couldn't create a .dex file which contains this information. It seemed all .dex files built in AOSP tree didn't have this type.
+
