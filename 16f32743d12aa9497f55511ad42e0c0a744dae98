@@ -20,6 +20,20 @@ I'll remove this comment before I land this patch. I guess this issue will be re
 
 File: tools/dextoc/Android.mk
 
+1:12-1:16
+Mon Nov 30 16:45:49 2015 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3bd59733_ada77dcc
+Bytes: 35
+Wrong year. And add the full blurb.
+
+11:16-11:21
+Mon Nov 30 16:45:49 2015 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3bd59733_8dacc1af
+Bytes: 36
+Anything in ART should have -Werror.
+
 9:0-13:32
 Mon Nov 30 14:33:50 2015 +0000
 Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -36,10 +50,45 @@ UUID: 1b71b31c_c743e0ef
 Bytes: 353
 This is what I understand from the behavior of jack. IIUC, .dex files have the initial values of non-static final fields as bytecode of constructors, not as data. It's interesting .dex file format seems to not follow Java language's spec (3 of https://docs.oracle.com/javase/specs/jls/se8/html/jls-13.html#jls-13.1). Please correct me if I'm wrong here.
 
+37:0-37:22
+Mon Nov 30 16:45:49 2015 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3bd59733_edc6a56e
+Bytes: 39
+Please use ART logging (base/logging.h)
+
+41:0-41:9
+Mon Nov 30 16:45:49 2015 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: bb1267d6_69b2a50f
+Bytes: 48
+I'd be OK putting this into the art namespace...
+
 92
 Fri Nov 27 07:38:21 2015 +0000
 Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: fb6bff2e_e63aa0c0
 Bytes: 167
 runtime/dex_file.cc handles kType but I couldn't create a .dex file which contains this information. It seemed all .dex files built in AOSP tree didn't have this type.
+
+94:8-94:24
+Mon Nov 30 16:45:49 2015 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9b0923b2_68b2a30f
+Bytes: 39
+ART style for this is LOG(FATAL) << ...
+
+126:2-126:21
+Mon Nov 30 16:45:49 2015 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: bb1267d6_49afe1a1
+Bytes: 37
+ART style is to use CHECK(...) << ...
+
+126:2-126:21
+Mon Nov 30 16:45:49 2015 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: bb1267d6_e99d757c
+Bytes: 33
+ART style is to use CHECK macros,
 
