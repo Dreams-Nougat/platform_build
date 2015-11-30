@@ -18,6 +18,15 @@ UUID: 3ba757d3_43bc5add
 Bytes: 105
 I'll remove this comment before I land this patch. I guess this issue will be resolved during the review.
 
+File: tools/dextoc/Android.mk
+
+9:0-13:32
+Mon Nov 30 14:33:50 2015 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7b80ef13_1088ca08
+Bytes: 140
+did you test on Mac? libart isn't always portable there. we are trying to make sure the dex subset works for tools like this but be aware...
+
 File: tools/dextoc/dextoc.cc
 
 24
