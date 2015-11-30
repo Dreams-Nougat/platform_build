@@ -1,0 +1,11 @@
+Revision: 25b18248fb8b3c5b5cf5c72ad4ea966becb57d90
+Patch-set: 1
+File: tools/releasetools/ota_from_target_files.py
+
+99
+Mon Nov 30 17:54:57 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: bbe987fc_f1fe885b
+Bytes: 72
+s/dictates/shows/ or lists or something. ("dictates" would mean "sets".)
+
