@@ -1,0 +1,21 @@
+Revision: a0f7dfa9cf7d605f1f2603f70dd0e6877482eb8a
+Patch-set: 1
+File: /COMMIT_MSG
+
+7:0-7:65
+Tue Dec 01 18:07:23 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: bb1267d6_5dd8bb46
+Bytes: 17
+Looks good to me.
+
+File: core/Makefile
+
+125:31-125:59
+Tue Dec 01 18:07:23 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: bbe987fc_c5f73a46
+Bytes: 61
+We can simply use bash substring operation:
+echo $${USER:0:6}
+
