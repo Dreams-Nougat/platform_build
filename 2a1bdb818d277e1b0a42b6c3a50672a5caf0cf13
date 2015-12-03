@@ -1,0 +1,31 @@
+Revision: 2a1bdb818d277e1b0a42b6c3a50672a5caf0cf13
+Patch-set: 3
+File: core/main.mk
+
+322:19-322:26
+Thu Dec 03 18:31:58 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c0148835_99a13b67
+Bytes: 76
+why do we need this if we run jack-admin directly from the source directory.
+
+321:0-322:17
+Thu Dec 03 18:31:58 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e0118c43_fa3269c9
+Bytes: 47
+Declare it as phony:
+.PHONY : start-jack-server
+
+324:1-324:50
+Thu Dec 03 18:31:58 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2006440b_9c8b65d2
+Bytes: 364
+This command hangs on my clean checkout of the master tree:
+master3$ prebuilts/sdk/tools/jack-admin start-server 2>&1
+Launching Jack server java -Djava.io.tmpdir=/tmp -Dfile.encoding=UTF-8 -XX:+TieredCompilation -cp /usr/local/google/home/wangying/.jack-server/launcher.jar com.android.jack.launcher.ServerLauncher
+<it hangs>
+
+Do you have any idea what it's doing?
+
