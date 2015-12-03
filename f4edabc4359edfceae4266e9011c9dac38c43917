@@ -1,0 +1,11 @@
+Revision: f4edabc4359edfceae4266e9011c9dac38c43917
+Patch-set: 2
+File: core/config.mk
+
+474:54-474:59
+Thu Dec 03 01:11:53 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5ba24b12_eb9806eb
+Bytes: 6
+remove
+
