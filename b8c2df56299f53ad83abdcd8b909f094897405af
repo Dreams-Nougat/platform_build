@@ -1,0 +1,11 @@
+Revision: b8c2df56299f53ad83abdcd8b909f094897405af
+Patch-set: 1
+File: /COMMIT_MSG
+
+14:0-15:30
+Thu Dec 03 18:36:05 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 60259c9f_d6242491
+Bytes: 82
+But if you don't uncompress the library, you won't be able to load it at run time.
+
