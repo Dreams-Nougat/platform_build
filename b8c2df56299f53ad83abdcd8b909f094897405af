@@ -9,3 +9,12 @@ UUID: 60259c9f_d6242491
 Bytes: 82
 But if you don't uncompress the library, you won't be able to load it at run time.
 
+14:0-15:30
+Thu Dec 03 23:39:04 2015 +0000
+Author: kyunam Jo <1069065@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 60259c9f_d6242491
+UUID: 00cb003e_6ba241c1
+Bytes: 266
+You're right. but the app on system partition is only applied in this case.
+This flag should be used only app that is installed on the data partition. 'uncompress-shared-libs' is to increase the size of the apk. some apps determine whether or not hack into app size.
+
