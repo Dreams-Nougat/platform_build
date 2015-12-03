@@ -17,6 +17,22 @@ Bytes: 47
 Declare it as phony:
 .PHONY : start-jack-server
 
+321:0-322:17
+Thu Dec 03 20:36:20 2015 +0000
+Author: Yohann Roussel <1023201@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e0118c43_fa3269c9
+UUID: c0eba861_61c6b699
+Bytes: 4
+Done
+
+322:19-322:26
+Thu Dec 03 20:36:20 2015 +0000
+Author: Yohann Roussel <1023201@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c0148835_99a13b67
+UUID: db339bd5_adf2c956
+Bytes: 193
+I just wanted to ensure that this target wouldn't be run concurrently with $(JACK) that is also doing a start-server. (It should be fine to run them concurrently but I still prefer to avoid it)
+
 324:1-324:50
 Thu Dec 03 18:31:58 2015 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -28,4 +44,14 @@ Launching Jack server java -Djava.io.tmpdir=/tmp -Dfile.encoding=UTF-8 -XX:+Tier
 <it hangs>
 
 Do you have any idea what it's doing?
+
+324:1-324:50
+Thu Dec 03 20:36:20 2015 +0000
+Author: Yohann Roussel <1023201@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2006440b_9c8b65d2
+UUID: 9b2da379_8bd5f1de
+Bytes: 180
+Looks like it was not installed on your computer, right? Looks like in this case it's waiting for the huge connection timeout we had to put for the build server :-(
+
+I'll fix that.
 
