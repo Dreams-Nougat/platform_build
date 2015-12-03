@@ -1,0 +1,11 @@
+Revision: 88307cefbf8a2d4432d67398317c55bbca9be7cf
+Patch-set: 1
+File: core/config.mk
+
+452
+Thu Dec 03 00:45:26 2015 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5b1deb19_a553e8bf
+Bytes: 115
+build OS always == host OS now, and HOST_EXECUTABLE_SUFFIX is unnecessary too (windows has moved to HOST_CROSS_...)
+
