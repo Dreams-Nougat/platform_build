@@ -41,6 +41,14 @@ UUID: 7b80ef13_1088ca08
 Bytes: 140
 did you test on Mac? libart isn't always portable there. we are trying to make sure the dex subset works for tools like this but be aware...
 
+9:0-13:32
+Thu Dec 03 10:48:52 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7b80ef13_1088ca08
+UUID: 5b908bca_0149ccb2
+Bytes: 117
+I ran art/test/dexdump/run-all-tests on Mac for the next change (https://android-review.googlesource.com/#/c/185000/)
+
 File: tools/dextoc/dextoc.cc
 
 24
