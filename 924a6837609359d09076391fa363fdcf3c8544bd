@@ -1,0 +1,11 @@
+Revision: 924a6837609359d09076391fa363fdcf3c8544bd
+Patch-set: 1
+File: /COMMIT_MSG
+
+13:0-14:35
+Fri Dec 04 01:41:39 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 40933818_91ac8c65
+Bytes: 71
+As Dan said, for presigned prebuilt apks we still need to run zipalign.
+
