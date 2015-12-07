@@ -9,3 +9,13 @@ UUID: a0af948e_98ea350c
 Bytes: 46
 is it better to use PRIVATE_OTA_TOOLS instead?
 
+1564:9-1564:24
+Mon Dec 07 18:59:39 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a0af948e_98ea350c
+UUID: 60e03ce1_61a770cf
+Bytes: 314
+You cannot use PRIVATE_OTA_TOOLS in ifneq() here, because it's not available in the global context.
+But we can use something like $(if $(RIVATE_OTA_TOOLS),$(hide) ...), but that way it will be evaluated only when the build recipe is executed.
+I prefer ifneq() so it can be evaluated earlier at makefile parse time.
+
