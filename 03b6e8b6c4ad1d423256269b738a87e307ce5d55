@@ -1,0 +1,11 @@
+Revision: 03b6e8b6c4ad1d423256269b738a87e307ce5d55
+Patch-set: 1
+File: core/Makefile
+
+1564:9-1564:24
+Mon Dec 07 18:56:05 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a0af948e_98ea350c
+Bytes: 46
+is it better to use PRIVATE_OTA_TOOLS instead?
+
