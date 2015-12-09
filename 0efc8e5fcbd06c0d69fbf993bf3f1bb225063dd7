@@ -9,3 +9,11 @@ UUID: 05487277_e39bd2e0
 Bytes: 123
 Use "-include" the same way as the above jack config. We may have branches that don't have prebuilts/sdk in their manifest.
 
+325:0-325:57
+Wed Dec 09 21:02:54 2015 +0000
+Author: Yohann Roussel <1023201@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 05487277_e39bd2e0
+UUID: a5f24653_202aea6d
+Bytes: 4
+Done
+
