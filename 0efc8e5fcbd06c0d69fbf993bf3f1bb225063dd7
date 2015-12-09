@@ -1,0 +1,11 @@
+Revision: 0efc8e5fcbd06c0d69fbf993bf3f1bb225063dd7
+Patch-set: 6
+File: core/main.mk
+
+325:0-325:57
+Wed Dec 09 18:25:41 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 05487277_e39bd2e0
+Bytes: 123
+Use "-include" the same way as the above jack config. We may have branches that don't have prebuilts/sdk in their manifest.
+
