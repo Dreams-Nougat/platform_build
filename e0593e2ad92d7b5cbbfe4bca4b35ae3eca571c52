@@ -1,0 +1,11 @@
+Revision: e0593e2ad92d7b5cbbfe4bca4b35ae3eca571c52
+Patch-set: 1
+File: core/config.mk
+
+473:8-473:24
+Thu Dec 10 21:49:34 2015 +0000
+Author: Kenny Root <1002975@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a567a60d_67701cbf
+Bytes: 74
+Seems like this should be HOST_IS_64_BIT, but I don't know if that exists.
+
