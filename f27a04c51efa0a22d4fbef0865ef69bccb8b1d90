@@ -48,6 +48,13 @@ UUID: e55fde25_c4b0d24a
 Bytes: 100
 netd does not load kernel modules. This is unnecessary and is an artifact of a different kernel bug.
 
+1:0-1:5
+Thu Dec 10 18:27:41 2015 +0000
+Author: Jeffrey Vander Stoep <1054468@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a567a60d_acf13b8e
+Bytes: 9
+dontaudit
+
 File: target/board/generic/sepolicy/platform_app.te
 
 1
