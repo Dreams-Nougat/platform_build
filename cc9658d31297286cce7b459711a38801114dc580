@@ -1,6 +1,22 @@
 Revision: cc9658d31297286cce7b459711a38801114dc580
 Patch-set: 2
+File: core/Makefile
+
+1688:4-1688:53
+Thu Dec 10 22:25:37 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a5596647_a215d225
+Bytes: 84
+I think you need to pass in the new flag "--signapk_shared_library_path " from here.
+
 File: core/config.mk
+
+456:0-456:24
+Thu Dec 10 22:25:37 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 855c6237_015b7e03
+Bytes: 53
+I'd suggest to rename it to SIGAPK_JNI_LIBRARY_PATH .
 
 473:0-477:5
 Thu Dec 10 22:09:00 2015 +0000
@@ -16,4 +32,13 @@ Parent: 6553ee27_8d9c427f
 UUID: 65984e34_b8bc0985
 Bytes: 4
 Done
+
+File: tools/releasetools/common.py
+
+47:4-50:46
+Thu Dec 10 22:25:37 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a567a60d_a73b94a3
+Bytes: 47
+Same here. We don't need to support 32-bit JDK.
 
