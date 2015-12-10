@@ -1,0 +1,20 @@
+Revision: 790fe5d7969381ad35474e29cff0b5b8934502d8
+Patch-set: 2
+File: /COMMIT_MSG
+
+15
+Thu Dec 10 09:41:46 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8057f0e8_8f65f5c9
+Bytes: 183
+I'm not sure what we should ideally do for static java libraries. To be honest, I don't understand what "static java library" is. But I'm guessing current implementation is OK anyway.
+
+File: core/definitions.mk
+
+1980
+Thu Dec 10 09:41:46 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 050152f3_7bd41fdf
+Bytes: 153
+Currently, we have only one caller for this but I defined this function because this is consistent with jar-to-toc and we may add more callers in future.
+
