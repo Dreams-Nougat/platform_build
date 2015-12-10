@@ -1,0 +1,11 @@
+Revision: cc9658d31297286cce7b459711a38801114dc580
+Patch-set: 2
+File: core/config.mk
+
+473:0-477:5
+Thu Dec 10 22:09:00 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 6553ee27_8d9c427f
+Bytes: 297
+This is incorrect. What bitness to use is decided by the JDK's bitness, not how we build the host binaries. There is a build system variable HOST_JDK_IS_64BIT_VERSION for this. But I don't think we need to care about 32-bit JDK any more at this point. So we can just remove the 32bit support here.
+
