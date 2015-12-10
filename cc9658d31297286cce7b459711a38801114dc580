@@ -9,3 +9,11 @@ UUID: 6553ee27_8d9c427f
 Bytes: 297
 This is incorrect. What bitness to use is decided by the JDK's bitness, not how we build the host binaries. There is a build system variable HOST_JDK_IS_64BIT_VERSION for this. But I don't think we need to care about 32-bit JDK any more at this point. So we can just remove the 32bit support here.
 
+473:0-477:5
+Thu Dec 10 22:15:58 2015 +0000
+Author: Alex Klyubin <1018773@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 6553ee27_8d9c427f
+UUID: 65984e34_b8bc0985
+Bytes: 4
+Done
+
