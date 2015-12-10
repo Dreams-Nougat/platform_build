@@ -72,6 +72,14 @@ UUID: e55fde25_84241a5e
 Bytes: 167
 ptrace access for platform_app was deliberately removed in https://android-review.googlesource.com/175786 . This should not be necessary. What bug are you seeing here?
 
+1
+Thu Dec 10 19:26:32 2015 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e55fde25_84241a5e
+UUID: 6553ee27_a03ee661
+Bytes: 123
+Most likely this is due to the emulators missing the following kernel patch: https://android-review.googlesource.com/186250
+
 File: target/board/generic/sepolicy/radio.te
 
 1
