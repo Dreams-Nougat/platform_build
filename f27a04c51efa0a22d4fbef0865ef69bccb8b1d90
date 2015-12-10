@@ -1,0 +1,104 @@
+Revision: f27a04c51efa0a22d4fbef0865ef69bccb8b1d90
+Patch-set: 1
+File: target/board/generic/sepolicy/adbd.te
+
+1:0-2:47
+Thu Dec 10 18:25:31 2015 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 254d7687_f3839abb
+Bytes: 99
+these are not specific to the emulator. This needs to be fixed in core policy. I'm working on this.
+
+File: target/board/generic/sepolicy/goldfish_setup.te
+
+16:0-18:47
+Thu Dec 10 18:25:31 2015 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 855c6237_bb185f5c
+Bytes: 202
+Why does goldfish_setup need to access the network? Even if this is necessary, this is the wrong approach. You should be adding the following line:
+
+  net_domain(goldfish_setup)
+
+which adds these rules.
+
+File: target/board/generic/sepolicy/mediaserver.te
+
+1
+Thu Dec 10 18:25:31 2015 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a5596647_9c659564
+Bytes: 213
+This should be written as:
+
+  get_prop(mediaserver, qemu_prop)
+
+However, it would be better to just grant this in domain.te instead:
+
+  get_prop(domain, qemu_prop)
+
+which will allow everyone to read this property.
+
+File: target/board/generic/sepolicy/netd.te
+
+1
+Thu Dec 10 18:25:31 2015 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e55fde25_c4b0d24a
+Bytes: 100
+netd does not load kernel modules. This is unnecessary and is an artifact of a different kernel bug.
+
+File: target/board/generic/sepolicy/platform_app.te
+
+1
+Thu Dec 10 18:25:31 2015 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e55fde25_84241a5e
+Bytes: 167
+ptrace access for platform_app was deliberately removed in https://android-review.googlesource.com/175786 . This should not be necessary. What bug are you seeing here?
+
+File: target/board/generic/sepolicy/radio.te
+
+1
+Thu Dec 10 18:25:31 2015 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 855c6237_5bf16350
+Bytes: 61
+ptrace was deliberately removed. What problem are you seeing?
+
+File: target/board/generic/sepolicy/shell.te
+
+2:0-3:56
+Thu Dec 10 18:25:31 2015 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e55fde25_24332ea2
+Bytes: 47
+should be fixed in core policy, just like adbd.
+
+File: target/board/generic/sepolicy/surfaceflinger.te
+
+3
+Thu Dec 10 18:25:31 2015 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 254d7687_b36642fe
+Bytes: 70
+please see comment in mediaserver.te. This should be a domain.te rule.
+
+File: target/board/generic/sepolicy/system_server.te
+
+1
+Thu Dec 10 18:25:31 2015 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 454eea83_3911179d
+Bytes: 70
+please see comment in mediaserver.te. This should be a domain.te rule.
+
+File: target/board/generic/sepolicy/zygote.te
+
+1
+Thu Dec 10 18:25:31 2015 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 05487277_7267a6d2
+Bytes: 70
+please see comment in mediaserver.te. This should be a domain.te rule.
+
