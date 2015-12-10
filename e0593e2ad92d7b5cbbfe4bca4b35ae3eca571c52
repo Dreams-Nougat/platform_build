@@ -9,3 +9,11 @@ UUID: a567a60d_67701cbf
 Bytes: 74
 Seems like this should be HOST_IS_64_BIT, but I don't know if that exists.
 
+473:8-473:24
+Thu Dec 10 21:52:23 2015 +0000
+Author: Alex Klyubin <1018773@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a567a60d_67701cbf
+UUID: 05487277_7dc0977c
+Bytes: 61
+Done. HOST_IS_64_BIT exists and is exactly what we want here.
+
