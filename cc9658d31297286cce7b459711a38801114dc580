@@ -9,6 +9,14 @@ UUID: a5596647_a215d225
 Bytes: 84
 I think you need to pass in the new flag "--signapk_shared_library_path " from here.
 
+1688:4-1688:53
+Thu Dec 10 22:47:13 2015 +0000
+Author: Alex Klyubin <1018773@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a5596647_a215d225
+UUID: 254d7687_f94b7baa
+Bytes: 221
+No, the default "lib64/libconscrypt..." is automaticaly appended to the path specified in the -p argument and everything works fine. It's the same reason why the relative path of signapk.jar is not overridden here either.
+
 File: core/config.mk
 
 456:0-456:24
@@ -17,6 +25,14 @@ Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 855c6237_015b7e03
 Bytes: 53
 I'd suggest to rename it to SIGAPK_JNI_LIBRARY_PATH .
+
+456:0-456:24
+Thu Dec 10 22:47:13 2015 +0000
+Author: Alex Klyubin <1018773@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 855c6237_015b7e03
+UUID: 454eea83_7492f67c
+Bytes: 4
+Done
 
 473:0-477:5
 Thu Dec 10 22:09:00 2015 +0000
@@ -41,4 +57,12 @@ Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: a567a60d_a73b94a3
 Bytes: 47
 Same here. We don't need to support 32-bit JDK.
+
+47:4-50:46
+Thu Dec 10 22:47:13 2015 +0000
+Author: Alex Klyubin <1018773@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a567a60d_a73b94a3
+UUID: 05487277_985da155
+Bytes: 4
+Done
 
