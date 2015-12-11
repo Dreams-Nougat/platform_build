@@ -17,6 +17,14 @@ UUID: 855c6237_fbbc97f7
 Bytes: 63
 This is fixed in https://android-review.googlesource.com/186433
 
+1:0-2:47
+Fri Dec 11 15:53:40 2015 +0000
+Author: Miroslav Tisma <1072780@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 855c6237_fbbc97f7
+UUID: 0576b2c5_d3e9b418
+Bytes: 101
+Yes, that patch fixes those issues, so I removed changes for sysfs_devices_system_cpu in PS2. Thanks!
+
 File: target/board/generic/sepolicy/goldfish_setup.te
 
 16:0-18:47
@@ -29,6 +37,18 @@ Why does goldfish_setup need to access the network? Even if this is necessary, t
   net_domain(goldfish_setup)
 
 which adds these rules.
+
+16:0-18:47
+Fri Dec 11 15:53:40 2015 +0000
+Author: Miroslav Tisma <1072780@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 855c6237_bb185f5c
+UUID: c5701ac6_7c1c35b5
+Bytes: 229
+goldfish_setup is a service in both init.ranchu.rc and init.goldfish.rc, and it runs a shell script init.goldfish.sh
+
+(https://android.googlesource.com/device/generic/goldfish/+/master/init.goldfish.sh)
+
+which sets up networking.
 
 File: target/board/generic/sepolicy/mediaserver.te
 
@@ -47,6 +67,14 @@ However, it would be better to just grant this in domain.te instead:
 
 which will allow everyone to read this property.
 
+1
+Fri Dec 11 15:53:40 2015 +0000
+Author: Miroslav Tisma <1072780@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a5596647_9c659564
+UUID: c5701ac6_1c11799c
+Bytes: 4
+Done
+
 File: target/board/generic/sepolicy/netd.te
 
 1
@@ -62,6 +90,14 @@ Author: Jeffrey Vander Stoep <1054468@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: a567a60d_acf13b8e
 Bytes: 9
 dontaudit
+
+1:0-1:5
+Fri Dec 11 15:53:40 2015 +0000
+Author: Miroslav Tisma <1072780@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a567a60d_acf13b8e
+UUID: a5f24653_c35a28cc
+Bytes: 4
+Done
 
 File: target/board/generic/sepolicy/platform_app.te
 
@@ -80,6 +116,14 @@ UUID: 6553ee27_a03ee661
 Bytes: 123
 Most likely this is due to the emulators missing the following kernel patch: https://android-review.googlesource.com/186250
 
+1
+Fri Dec 11 15:53:40 2015 +0000
+Author: Miroslav Tisma <1072780@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 6553ee27_a03ee661
+UUID: c03648c7_0c8597bf
+Bytes: 123
+Yes, this patch was missing for the kernel. It's uploaded here: https://android-review.googlesource.com/#/c/186946/ Thanks!
+
 File: target/board/generic/sepolicy/radio.te
 
 1
@@ -88,6 +132,14 @@ Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 855c6237_5bf16350
 Bytes: 61
 ptrace was deliberately removed. What problem are you seeing?
+
+1
+Fri Dec 11 15:53:40 2015 +0000
+Author: Miroslav Tisma <1072780@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 855c6237_5bf16350
+UUID: e5d27ee6_b2a2e018
+Bytes: 77
+Solved with kernel patch: https://android-review.googlesource.com/#/c/186946/
 
 File: target/board/generic/sepolicy/shell.te
 
@@ -98,6 +150,14 @@ UUID: e55fde25_24332ea2
 Bytes: 47
 should be fixed in core policy, just like adbd.
 
+2:0-3:56
+Fri Dec 11 15:53:40 2015 +0000
+Author: Miroslav Tisma <1072780@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e55fde25_24332ea2
+UUID: 2506560b_1f51870b
+Bytes: 30
+Please see comment in adbd.te.
+
 File: target/board/generic/sepolicy/surfaceflinger.te
 
 3
@@ -106,6 +166,14 @@ Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 254d7687_b36642fe
 Bytes: 70
 please see comment in mediaserver.te. This should be a domain.te rule.
+
+3
+Fri Dec 11 15:53:40 2015 +0000
+Author: Miroslav Tisma <1072780@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 254d7687_b36642fe
+UUID: c5701ac6_fc07e55e
+Bytes: 4
+Done
 
 File: target/board/generic/sepolicy/system_server.te
 
@@ -116,6 +184,14 @@ UUID: 454eea83_3911179d
 Bytes: 70
 please see comment in mediaserver.te. This should be a domain.te rule.
 
+1
+Fri Dec 11 15:53:40 2015 +0000
+Author: Miroslav Tisma <1072780@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 454eea83_3911179d
+UUID: e5d27ee6_7276b874
+Bytes: 4
+Done
+
 File: target/board/generic/sepolicy/zygote.te
 
 1
@@ -124,4 +200,12 @@ Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 05487277_7267a6d2
 Bytes: 70
 please see comment in mediaserver.te. This should be a domain.te rule.
+
+1
+Fri Dec 11 15:53:40 2015 +0000
+Author: Miroslav Tisma <1072780@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 05487277_7267a6d2
+UUID: c03648c7_cc4c5f79
+Bytes: 4
+Done
 
