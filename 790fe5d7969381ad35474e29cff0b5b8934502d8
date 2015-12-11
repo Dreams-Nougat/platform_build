@@ -9,7 +9,26 @@ UUID: 8057f0e8_8f65f5c9
 Bytes: 183
 I'm not sure what we should ideally do for static java libraries. To be honest, I don't understand what "static java library" is. But I'm guessing current implementation is OK anyway.
 
+15
+Fri Dec 11 21:59:19 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8057f0e8_8f65f5c9
+UUID: e5cc3e7f_02a14a65
+Bytes: 918
+Static java library and (shared) java library have the same link format at build time, just that they differ in how the they end up on the device:
+For a shared Java library, we transform it to dex and install the dex to /system/framework/<lib>.jar, which is shared by all apks;
+For a static Java library, we don't build dex file; instead any apk/jar linking against it will merge the static library's class files into its own .jar/.jack and then transformed to dex; that said every app gets its own copy of the static library.
+Sometimes we want to compile a module against a static java library, but we don't want to merge the library's classes (we know the classes will be available by other means at runtime), so we link the static library as LOCAL_JAVA_LIBRARIES as opposed to LOCAL_STATIC_JAVA_LIBRARIES. That's totally fine with the current build system.
+I think how you handle the static library here is correct.
+
 File: core/definitions.mk
+
+1906:52-1906:53
+Fri Dec 11 21:59:19 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 65e04ee1_9e0a1d67
+Bytes: 8
+See here
 
 1980
 Thu Dec 10 09:41:46 2015 +0000
@@ -17,4 +36,29 @@ Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 050152f3_7bd41fdf
 Bytes: 153
 Currently, we have only one caller for this but I defined this function because this is consistent with jar-to-toc and we may add more callers in future.
+
+2165:59-2165:71
+Fri Dec 11 21:59:19 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 85d9c240_df601b15
+Bytes: 14
+See also here.
+
+File: core/java.mk
+
+589:1-590:52
+Fri Dec 11 21:59:19 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 05107294_4358a636
+Bytes: 9
+See here.
+
+679:0-679:44
+Fri Dec 11 21:59:19 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e5cc3e7f_82e39ac9
+Bytes: 391
+We need to take multidex into account here.
+If we generate multiple dex files for a module (for example in out/target/common/obj/JAVA_LIBRARIES/framework_intermediates/), jack actually output multiple dex files: classes.dex, classes2.dex, ... 
+But the build system uses only classes.dex as dependency, and use wildcard classes*.dex to collect all the generated dex files in the build recipe.
 
