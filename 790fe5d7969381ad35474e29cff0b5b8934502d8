@@ -21,6 +21,14 @@ For a static Java library, we don't build dex file; instead any apk/jar linking 
 Sometimes we want to compile a module against a static java library, but we don't want to merge the library's classes (we know the classes will be available by other means at runtime), so we link the static library as LOCAL_JAVA_LIBRARIES as opposed to LOCAL_STATIC_JAVA_LIBRARIES. That's totally fine with the current build system.
 I think how you handle the static library here is correct.
 
+15
+Mon Dec 14 10:11:23 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e5cc3e7f_02a14a65
+UUID: c501fa3e_71f6584b
+Bytes: 31
+Thanks for the detailed answer!
+
 File: core/definitions.mk
 
 1906:52-1906:53
@@ -61,4 +69,12 @@ Bytes: 391
 We need to take multidex into account here.
 If we generate multiple dex files for a module (for example in out/target/common/obj/JAVA_LIBRARIES/framework_intermediates/), jack actually output multiple dex files: classes.dex, classes2.dex, ... 
 But the build system uses only classes.dex as dependency, and use wildcard classes*.dex to collect all the generated dex files in the build recipe.
+
+679:0-679:44
+Mon Dec 14 10:11:23 2015 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e5cc3e7f_82e39ac9
+UUID: a5088664_d0073c2d
+Bytes: 148
+Done. I'm not sure if passing $(intermediates.COMMON) is a great idea, but maybe we can change arguments if we need to add callers of this function?
 
