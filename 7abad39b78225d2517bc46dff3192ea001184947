@@ -9,3 +9,15 @@ UUID: 65f20ea9_d4a0d463
 Bytes: 219
 I guess my only concern (which you have probably already verified) is to make sure that this line gets applied before your new Clang-related .mk update (i.e. -strong takes precedence by being later on the command line).
 
+48
+Mon Dec 14 21:41:53 2015 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 65f20ea9_d4a0d463
+UUID: 0593126b_91667c30
+Bytes: 517
+yeah, i tested with showcommands.
+
+i did try to use the filtering to remove -fstack-protector but (a) my first guess didn't work and (b) i felt slightly weird doing that anyway, in case someone has a legit(-ish) need to (presumably temporarily) downgrade a project to -fstack-protector instead of -fstack-protector-strong. i'd certainly prefer our failure fallback be -fstack-protector than nothing.
+
+in parallel i'm working on killing GCC 4.8 for the host. if we're lucky, i can revert this change later this week...
+
