@@ -1,0 +1,13 @@
+Revision: 3786fea2491a9e434229ce689e925dcb5bb2002c
+Patch-set: 1
+File: core/version_defaults.mk
+
+149:22-149:34
+Tue Dec 15 19:04:36 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 25157684_bed36952
+Bytes: 169
+This doesn't work. The substring operation works only in bash script.
+
+Also I'd like to combine the change to trim down BF_BUILD_NUMBER in build/core/Makefile with this.
+
