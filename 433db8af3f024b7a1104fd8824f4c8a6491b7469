@@ -1,0 +1,11 @@
+Revision: 433db8af3f024b7a1104fd8824f4c8a6491b7469
+Patch-set: 2
+File: core/config.mk
+
+192:2-192:12
+Wed Dec 16 22:16:19 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a5d1668e_68bd437f
+Bytes: 11
+__ANDROID__
+
