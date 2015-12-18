@@ -1,0 +1,11 @@
+Revision: d78cba12fe17c2c4406bb7e12c4110518c5c6859
+Patch-set: 1
+File: core/ccache.mk
+
+17:0-17:42
+Fri Dec 18 19:31:13 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0a2f9f8d_5f795bce
+Bytes: 54
+This changes the behaviour when USE_CCACHE is not set.
+
