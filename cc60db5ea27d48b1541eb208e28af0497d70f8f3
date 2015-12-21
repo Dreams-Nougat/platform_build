@@ -1,0 +1,11 @@
+Revision: cc60db5ea27d48b1541eb208e28af0497d70f8f3
+Patch-set: 1
+File: tools/generate-notice-files.py
+
+114:43-114:50
+Mon Dec 21 17:48:58 2015 +0000
+Author: Xin Li <1086523@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: ea5fab25_7ec77997
+Bytes: 29
+Should we say "Android" here?
+
