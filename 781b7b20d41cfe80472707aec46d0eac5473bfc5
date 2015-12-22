@@ -9,3 +9,11 @@ UUID: 2afc637c_cceb2f07
 Bytes: 209
 Because of L868, it seems we don't even need any condition checking here. RECOVERY_RESOUCE_ZIP must be empty if "ifeq (,$(filter true, $(BOARD_USES_FULL_RECOVERY_IMAGE) $(BOARD_USES_RECOVERY_AS_BOOT)))" holds.
 
+985:0-985:4
+Tue Dec 22 19:10:58 2015 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2afc637c_cceb2f07
+UUID: 4aed17c9_f0f07e87
+Bytes: 163
+in that case the next line will be expanded to ": <deps>". Probably make would just ignores such rules. It looks better to guard with "ifdef RECOVERY_RESOUCE_ZIP".
+
