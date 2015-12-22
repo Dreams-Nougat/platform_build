@@ -1,0 +1,11 @@
+Revision: 781b7b20d41cfe80472707aec46d0eac5473bfc5
+Base-for-patch-set: 1
+File: core/Makefile
+
+985:0-985:4
+Tue Dec 22 17:56:56 2015 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2afc637c_cceb2f07
+Bytes: 209
+Because of L868, it seems we don't even need any condition checking here. RECOVERY_RESOUCE_ZIP must be empty if "ifeq (,$(filter true, $(BOARD_USES_FULL_RECOVERY_IMAGE) $(BOARD_USES_RECOVERY_AS_BOOT)))" holds.
+
