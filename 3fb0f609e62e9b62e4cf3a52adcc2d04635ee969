@@ -1,0 +1,13 @@
+Revision: 3fb0f609e62e9b62e4cf3a52adcc2d04635ee969
+Patch-set: 1
+File: libs/host/CopyFile.c
+
+85:8-85:30
+Wed Dec 30 18:51:24 2015 +0000
+Author: Narayan Kamath <1014443@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8ab2aff4_77ad70bf
+Bytes: 152
+this seems a bit suspicious. HAVE_VALID_STAT_ST_INO is defined nowhere.
+
+I see this is a cleanup change, so perhaps you could file a bug to track this ?
+
