@@ -11,3 +11,11 @@ this seems a bit suspicious. HAVE_VALID_STAT_ST_INO is defined nowhere.
 
 I see this is a cleanup change, so perhaps you could file a bug to track this ?
 
+85:8-85:30
+Wed Dec 30 18:52:56 2015 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8ab2aff4_77ad70bf
+UUID: eafecb6e_a1bea8ea
+Bytes: 132
+The cleanup? Why certainly.  I don't know about HAVE_VALID_STAT_ST_INO.  These are just the first 4 warnings in every build I do. :)
+
