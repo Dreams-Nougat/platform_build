@@ -41,3 +41,11 @@ Brillo needs to build kernel, some kernel requires lzop, that's why I add it.
 
 Why we only have one binary and no source, Bill knows it better.
 
+165:143-165:152
+Mon Jan 04 19:44:27 2016 +0000
+Author: Leo Wang <1021775@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 6a1bbbb8_cd031a55
+UUID: aa2133e4_7df3bbc6
+Bytes: 98
+more info: there is no official build for mac, http://www.lzop.org/, there is a build for macport.
+
