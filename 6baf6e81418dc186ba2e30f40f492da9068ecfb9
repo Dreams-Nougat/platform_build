@@ -1,0 +1,11 @@
+Revision: 6baf6e81418dc186ba2e30f40f492da9068ecfb9
+Patch-set: 1
+File: envsetup.sh
+
+165:143-165:152
+Mon Jan 04 19:18:54 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8a0b8f60_69a4a9d3
+Bytes: 82
+this is unlikely to be correct -- this line is run both for linux and darwin hosts
+
