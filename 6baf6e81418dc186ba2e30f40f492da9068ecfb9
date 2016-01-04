@@ -21,3 +21,13 @@ Do we need to import binary for mac? or make it linux specific?
 
 From my prospective, I only build on linux.
 
+165:143-165:152
+Mon Jan 04 19:28:48 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: eafecb6e_67d6904b
+UUID: ea27abf2_f166b766
+Bytes: 197
+Why do we need this added to the path in the first place? It's also strange that there's only a binary in that folder, no source to go along with it.
+
+The platform build works on both Linux and Mac
+
