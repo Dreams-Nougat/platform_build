@@ -31,3 +31,13 @@ Why do we need this added to the path in the first place? It's also strange that
 
 The platform build works on both Linux and Mac
 
+165:143-165:152
+Mon Jan 04 19:38:15 2016 +0000
+Author: Leo Wang <1021775@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: ea27abf2_f166b766
+UUID: 6a1bbbb8_cd031a55
+Bytes: 143
+Brillo needs to build kernel, some kernel requires lzop, that's why I add it.
+
+Why we only have one binary and no source, Bill knows it better.
+
