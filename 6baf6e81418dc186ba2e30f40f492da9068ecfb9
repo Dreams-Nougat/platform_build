@@ -9,3 +9,15 @@ UUID: 8a0b8f60_69a4a9d3
 Bytes: 82
 this is unlikely to be correct -- this line is run both for linux and darwin hosts
 
+165:143-165:152
+Mon Jan 04 19:23:43 2016 +0000
+Author: Leo Wang <1021775@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8a0b8f60_69a4a9d3
+UUID: eafecb6e_67d6904b
+Bytes: 147
+Can you please suggest how to fix it?
+
+Do we need to import binary for mac? or make it linux specific?
+
+From my prospective, I only build on linux.
+
