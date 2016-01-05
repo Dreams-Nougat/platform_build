@@ -1,0 +1,11 @@
+Revision: 034a59ddddf1161c6860f68fde448b49ccb6217e
+Patch-set: 1
+File: core/soong.mk
+
+27:49-27:57
+Tue Jan 05 21:05:19 2016 +0000
+Author: Christopher Ferris <1019050@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: aa3e9347_03a6707d
+Bytes: 69
+I think this isn't quite right since it's still looking for dlmalloc.
+
