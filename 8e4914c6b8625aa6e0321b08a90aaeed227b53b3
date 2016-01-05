@@ -1,0 +1,11 @@
+Revision: 8e4914c6b8625aa6e0321b08a90aaeed227b53b3
+Patch-set: 1
+File: libs/host/CopyFile.c
+
+86
+Tue Jan 05 16:53:20 2016 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 6a481bfe_be9b195a
+Bytes: 34
+we've been using _WIN32 elsewhere.
+
