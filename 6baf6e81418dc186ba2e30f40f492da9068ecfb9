@@ -49,3 +49,11 @@ UUID: aa2133e4_7df3bbc6
 Bytes: 98
 more info: there is no official build for mac, http://www.lzop.org/, there is a build for macport.
 
+165:143-165:152
+Tue Jan 05 23:13:11 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: aa2133e4_7df3bbc6
+UUID: 8a1aaf01_5adbf171
+Bytes: 139
+Doesn't look like brillo is supporting mac builds right now anyways, so I'd suggest only adding it to ANDROID_BUILD_PATHS if we're on linux
+
