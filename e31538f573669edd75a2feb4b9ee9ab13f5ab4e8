@@ -1,0 +1,11 @@
+Revision: e31538f573669edd75a2feb4b9ee9ab13f5ab4e8
+Patch-set: 3
+File: core/ninja.mk
+
+3
+Thu Jan 07 23:45:46 2016 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 4a4357e2_9f6dee47
+Bytes: 104
+This does the opposite of what you said - USE_SOONG_FOR_KATI implies USE_SOONG, which doesn't seem right
+
