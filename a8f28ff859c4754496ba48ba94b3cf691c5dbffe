@@ -9,6 +9,14 @@ UUID: c701023f_11c8ac7b
 Bytes: 41
 Shouldn't we move the endif here instead?
 
+45
+Tue Jan 12 01:56:40 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c701023f_11c8ac7b
+UUID: 27673e34_fa84e17e
+Bytes: 105
+No, LOCAL_JAR_EXCLUDE_FILES and proguard_options_file are needed only if the module has Android resource.
+
 73:0-73:27
 Mon Jan 11 23:08:42 2016 +0000
 Author: Yohann Roussel <1023201@85c56323-6fa9-3386-8a01-6480fb634889>
