@@ -1,0 +1,13 @@
+Revision: 861ab99536bf1a7a3b15dd08c17b9047fc88014b
+Patch-set: 1
+File: core/main.mk
+
+506
+Tue Jan 12 01:19:26 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e759a674_60d5c63d
+Bytes: 212
+What about this case? Should we deprecate ONE_SHOT_MAKEFILE with USE_SOONG?
+
+It will hopefully cause a duplicate module error in make, so it shouldn't actually try to build both, but that still doesn't feel nice.
+
