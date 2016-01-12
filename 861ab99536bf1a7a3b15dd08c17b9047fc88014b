@@ -11,3 +11,11 @@ What about this case? Should we deprecate ONE_SHOT_MAKEFILE with USE_SOONG?
 
 It will hopefully cause a duplicate module error in make, so it shouldn't actually try to build both, but that still doesn't feel nice.
 
+506
+Tue Jan 12 01:34:54 2016 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e759a674_60d5c63d
+UUID: 4768b202_fbed071d
+Bytes: 132
+I think I'll leave that for a follow-up patch.  We should make mm into mma for USE_SOONG=true, but we don't have mma support either.
+
