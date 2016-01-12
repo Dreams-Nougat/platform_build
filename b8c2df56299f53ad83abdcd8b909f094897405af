@@ -18,3 +18,11 @@ Bytes: 266
 You're right. but the app on system partition is only applied in this case.
 This flag should be used only app that is installed on the data partition. 'uncompress-shared-libs' is to increase the size of the apk. some apps determine whether or not hack into app size.
 
+14:0-15:30
+Tue Jan 12 17:42:35 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 00cb003e_6ba241c1
+UUID: a7532e54_4c5f1f29
+Bytes: 61
+The same applies if the app is preloaded in the userdata.img.
+
