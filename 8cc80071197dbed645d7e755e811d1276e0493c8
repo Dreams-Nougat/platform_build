@@ -40,3 +40,11 @@ For platform build (system.img), shouldn't we always use $(PLATFORM_SDK_VERSION)
 Looks to me we only need the apk's minSdkVersion if the apk is about to be installed in older system, right?
 In that case, we only need the dumped sdkVersion for unbundled build.
 
+2200:4-2200:75
+Wed Jan 13 23:56:58 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 678e9643_1560b30a
+UUID: 07623a24_bfb9b294
+Bytes: 62
+Please ignore this.  I just moved the comment up a little bit.
+
