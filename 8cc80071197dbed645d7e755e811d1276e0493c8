@@ -1,0 +1,42 @@
+Revision: 8cc80071197dbed645d7e755e811d1276e0493c8
+Patch-set: 3
+File: core/definitions.mk
+
+2191:0-2191:7
+Wed Jan 13 23:56:07 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 27673e34_9e779a1b
+Bytes: 118
+You don't need to to call $(shell) here: the build recipe itself is shell script. Use shell construct $$(...) instead.
+
+2193:0-2193:5
+Wed Jan 13 23:56:07 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 676db610_91530b1a
+Bytes: 612
+For platform build (system.img), shouldn't we always use $(PLATFORM_SDK_VERSION)?
+Looks to me we only need the apk's minSdkVersion if the apk is about to be installed in older system, right?
+In that case, we only need the dumped sdkVersion for unbundled build. You can write it as:
+
+ifdef TARGET_BUILD_APPS
+# Unbundled build
+define get-package-min-sdk-version-int
+$$($(AAPT) dump badging $(1) 2>&1 | grep '^sdkVersion' | cut -d"'" -f2 | \
+    sed -e s/^$(PLATFORM_VERSION_CODENAME)$$/$(PLATFORM_SDK_VERSION)/)
+endef
+else
+# Platform build
+define get-package-min-sdk-version-int
+$(PLATFORM_SDK_VERSION)
+endef
+endif
+
+2200:4-2200:75
+Wed Jan 13 23:56:07 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 678e9643_1560b30a
+Bytes: 260
+For platform build (system.img), shouldn't we always use $(PLATFORM_SDK_VERSION)?
+Looks to me we only need the apk's minSdkVersion if the apk is about to be installed in older system, right?
+In that case, we only need the dumped sdkVersion for unbundled build.
+
