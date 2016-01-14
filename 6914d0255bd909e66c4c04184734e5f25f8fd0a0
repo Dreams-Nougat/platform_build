@@ -1,0 +1,11 @@
+Revision: 6914d0255bd909e66c4c04184734e5f25f8fd0a0
+Patch-set: 6
+File: tools/signapk/src/com/android/signapk/ApkSignerV2.java
+
+296:0-296:34
+Thu Jan 14 23:15:31 2016 +0000
+Author: Chad Brubaker <1022895@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 27673e34_efd9ba78
+Bytes: 90
+Add a comment that this doesn't actually clear the ByteBuffer but just resets the position
+
