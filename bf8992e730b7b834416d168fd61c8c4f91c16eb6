@@ -1,0 +1,11 @@
+Revision: bf8992e730b7b834416d168fd61c8c4f91c16eb6
+Patch-set: 1
+File: core/binary.mk
+
+279
+Thu Jan 14 01:21:42 2016 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c75ca266_db2bde50
+Bytes: 65
+should we always be setting --enable-new-dtags for device builds?
+
