@@ -73,6 +73,20 @@ but, if the requirement is that APK minSDK version is needed to evaluate whether
 
 Sorry I don't understand - so asking.
 
+2193:0-2193:5
+Thu Jan 14 20:31:30 2016 +0000
+Author: Alex Klyubin <1018773@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 274e5eac_8853d419
+UUID: c75ca266_cc4e82bd
+Bytes: 1237
+The finer point is that it depends only on the platform's API Level whether SHA-256 signatures can be verified by the platform. An APK's minSdkVersion (as long as its equal to or lower than platform's API Level) is irrelevant for the verification.
+
+Thus, if we're signing APKs for a platform with API Level 23, we know for a fact that SHA-256 signatures will be verified just fine by that platform. It doesn't matter whether an APK says that its minSdkVersion is, say, 15.
+
+The catch is that somebody could take such a signed APKs and attempt to install it on older platforms. In this hypothetical example, the APK itself says it's fine to install it on platforms with API Level 15 or newer. However, if it's signed with SHA-256, then it'll fail to install on anything older than API Level 18. Thus, I was trying to be very conservative here and use SHA-256 only if the APK being signed declares minSdkVersion 18 or higher.
+
+If we don't need that level of conservatism, we can indeed ignore APKs' minSdkVersion and simply rely on API Level of the platform for which we're signing APKs. If the build is unbundled, then we'd still need to rely on minSdkVersion instead (exactly as Ying proposed in his code snippet earlier in this thread).
+
 2200:4-2200:75
 Wed Jan 13 23:56:07 2016 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
