@@ -63,6 +63,16 @@ I'm happy to make our life simpler and ignore minSdkVersion in this CL, if Balig
 
 P. S. If we do go for the simpler solution, I'd also love to add the "Serious players shouldn't be doing that" quote to the relevant bit of the scripts, with your permission of course. :)
 
+2193:0-2193:5
+Thu Jan 14 20:05:12 2016 +0000
+Author: Baligh Uddin <1018026@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 4768b202_689abe89
+UUID: 274e5eac_8853d419
+Bytes: 248
+but, if the requirement is that APK minSDK version is needed to evaluate whether we use SHA1 vs SHA256, how will using PLATFORM_SDK_VERSION help ?  Isn't Platform_SDK_version almost always higher than min_SDK.
+
+Sorry I don't understand - so asking.
+
 2200:4-2200:75
 Wed Jan 13 23:56:07 2016 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
