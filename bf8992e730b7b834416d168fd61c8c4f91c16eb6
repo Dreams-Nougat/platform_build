@@ -18,6 +18,15 @@ UUID: 274e5eac_f787d739
 Bytes: 172
 do relative paths work? it would be nice if this was relative, but i guess we'd need to compute that based on the install path, which could get complicated. maybe in soong?
 
+277
+Thu Jan 14 01:44:07 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 274e5eac_f787d739
+UUID: 274e5eac_722755f4
+Bytes: 227
+We already use relative rpath in the host binaries, see transform-host-o-to-executable-inner in build/core/definitions.mk:
+-Wl,-rpath,\$$ORIGIN/../$(notdir $($(PRIVATE_2ND_ARCH_VAR_PREFIX)$(PRIVATE_PREFIX)OUT_SHARED_LIBRARIES))
+
 279
 Thu Jan 14 01:21:42 2016 +0000
 Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
