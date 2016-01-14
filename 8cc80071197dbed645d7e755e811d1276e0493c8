@@ -31,6 +31,18 @@ $(PLATFORM_SDK_VERSION)
 endef
 endif
 
+2193:0-2193:5
+Thu Jan 14 01:48:45 2016 +0000
+Author: Alex Klyubin <1018773@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 676db610_91530b1a
+UUID: 676db610_2c09fc43
+Bytes: 779
+For platform builds, is it actually guaranteed that nobody takes the APK the build produces and then reuse them elsewhere? I'm simply trying to be conservative/cautious here. If this is not a concern, then, indeed, we can ignore APK's minSdkVersion and instead use $(PLATFORM_SDK_VERSION).
+
+A similar concern applies to the sign target files Python script (also in this change). Right now, I'm being conservative there and relying on each APK's minSdkVersion. However, since we're signing a build there, we know which platform version / API Level these APKs will be pre-installed on and thus can use that platform's API Level instead. Again, this is only OK if nobody extracts APKs from those signed ZIP files and reuses them elsewhere.
+
+Which approach do you and Baligh suggest?
+
 2200:4-2200:75
 Wed Jan 13 23:56:07 2016 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
