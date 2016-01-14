@@ -11,6 +11,14 @@ shouldn't this also check LOCAL_IS_HOST_MODULE?
 
 and a global sanity check somewhere to make sure that this is only enabled on linux/x86/x86_64?
 
+275
+Thu Jan 14 21:46:04 2016 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c75ca266_7b60d2af
+UUID: 27673e34_0fe19617
+Bytes: 4
+Done
+
 277
 Thu Jan 14 01:28:11 2016 +0000
 Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -26,6 +34,19 @@ UUID: 274e5eac_722755f4
 Bytes: 227
 We already use relative rpath in the host binaries, see transform-host-o-to-executable-inner in build/core/definitions.mk:
 -Wl,-rpath,\$$ORIGIN/../$(notdir $($(PRIVATE_2ND_ARCH_VAR_PREFIX)$(PRIVATE_PREFIX)OUT_SHARED_LIBRARIES))
+
+277
+Thu Jan 14 21:46:04 2016 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 274e5eac_722755f4
+UUID: 274e5eac_92e141be
+Bytes: 530
+This is primarily targeted at tests, which have fairly unpredictable install paths relative to $OUT/system/lib*.  I could use something like:
+system/lib/
+../system/lib/
+../../system/lib/
+../../../system/lib/
+Dan pointed out it needs vendor/lib as well, so another 4 rpath entries.  Since executables still need an absolute path to the linker, I think it makes more sense to keep an absolute path in both places rather than try to come up with a set of relative paths that will work everywhere, but I can do relative if you prefer.
 
 279
 Thu Jan 14 01:21:42 2016 +0000
