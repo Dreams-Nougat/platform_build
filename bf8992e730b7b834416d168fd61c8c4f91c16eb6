@@ -48,6 +48,14 @@ system/lib/
 ../../../system/lib/
 Dan pointed out it needs vendor/lib as well, so another 4 rpath entries.  Since executables still need an absolute path to the linker, I think it makes more sense to keep an absolute path in both places rather than try to come up with a set of relative paths that will work everywhere, but I can do relative if you prefer.
 
+277
+Thu Jan 14 21:50:33 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 274e5eac_92e141be
+UUID: 676db610_6416689e
+Bytes: 84
+Yeah, if the linker path is absolute, I've got no problems with this being absolute.
+
 279
 Thu Jan 14 01:21:42 2016 +0000
 Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
