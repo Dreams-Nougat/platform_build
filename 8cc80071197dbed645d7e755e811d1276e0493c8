@@ -43,6 +43,14 @@ A similar concern applies to the sign target files Python script (also in this c
 
 Which approach do you and Baligh suggest?
 
+2193:0-2193:5
+Thu Jan 14 02:03:03 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 676db610_2c09fc43
+UUID: 07495aa4_5a7d14fb
+Bytes: 191
+Serious players shouldn't be doing that (Baligh should have more say than I do). But you can't prevent individual persons from doing that. If people do that, what error message will they get?
+
 2200:4-2200:75
 Wed Jan 13 23:56:07 2016 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
