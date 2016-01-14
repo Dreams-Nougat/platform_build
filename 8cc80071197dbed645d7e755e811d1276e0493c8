@@ -51,6 +51,18 @@ UUID: 07495aa4_5a7d14fb
 Bytes: 191
 Serious players shouldn't be doing that (Baligh should have more say than I do). But you can't prevent individual persons from doing that. If people do that, what error message will they get?
 
+2193:0-2193:5
+Thu Jan 14 02:40:48 2016 +0000
+Author: Alex Klyubin <1018773@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 07495aa4_5a7d14fb
+UUID: 4768b202_689abe89
+Bytes: 806
+If somebody extracts such a minSdkVersion 15 APK from, say, an M or N target files ZIP and then installs it on a platform with, say, API Level 16, that platform won't be able to verify the APK signatures (because it doesn't support APKs signed using SHA-256) and thus will refuse to install/upgrade the APK.
+
+I'm happy to make our life simpler and ignore minSdkVersion in this CL, if Baligh agrees. To be fair, in the past, APKs from target files ZIP couldn't be used outside of the system partition anyway because they might have been missing classes.dex or .so files. Not sure whether this is the case these days...
+
+P. S. If we do go for the simpler solution, I'd also love to add the "Serious players shouldn't be doing that" quote to the relevant bit of the scripts, with your permission of course. :)
+
 2200:4-2200:75
 Wed Jan 13 23:56:07 2016 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
