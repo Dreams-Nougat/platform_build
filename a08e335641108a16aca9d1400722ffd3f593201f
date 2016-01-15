@@ -1,0 +1,29 @@
+Revision: a08e335641108a16aca9d1400722ffd3f593201f
+Patch-set: 3
+File: tools/releasetools/blockimgdiff.py
+
+593:10-593:33
+Fri Jan 15 02:37:55 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 07495aa4_09d7c873
+Bytes: 303
+on a second thought, this looks wrong.
+
+we actually pack all the blocks in "use_cmd" as new blocks, and "sr" here could be just part of them. think about the case that "use_cmd" need to read multiple stashed blocks. once "use_cmd" gets converted, more blocks than sr.size() will be added to the package.
+
+609:26-609:28
+Fri Jan 15 02:37:55 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2752dead_1fb7a7a0
+Bytes: 44
+and here we don't even have any "sr" defined
+
+620
+Fri Jan 15 02:37:55 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e759a674_bcdc1b0b
+Bytes: 112
+it should be changed right here:
+new_blocks += cmd.tgt_ranges.size()
+you can figure out the right indentation :)
+
