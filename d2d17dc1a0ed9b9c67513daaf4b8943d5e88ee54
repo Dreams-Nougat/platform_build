@@ -1,0 +1,11 @@
+Revision: d2d17dc1a0ed9b9c67513daaf4b8943d5e88ee54
+Patch-set: 1
+File: core/binary.mk
+
+890
+Sat Jan 16 04:10:12 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e759a674_726d87d3
+Bytes: 94
+This should happen for the generate assembly file case too. I'll test and upload a patch later
+
