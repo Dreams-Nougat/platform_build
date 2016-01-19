@@ -9,6 +9,14 @@ UUID: e759a674_726d87d3
 Bytes: 94
 This should happen for the generate assembly file case too. I'll test and upload a patch later
 
+890
+Tue Jan 19 20:33:32 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e759a674_726d87d3
+UUID: 274e5eac_9543e199
+Bytes: 4
+Done
+
 1048
 Tue Jan 19 19:56:02 2016 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -17,4 +25,12 @@ Bytes: 131
 Probably $(asm_objects) : PRIVATE_ARM_CFLAGS := $(normal_objects_cflags)
 
 So we don't need to set it everywhere the rule is set up.
+
+1048
+Tue Jan 19 20:33:32 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 07495aa4_67ce703b
+UUID: 07495aa4_878e1ca9
+Bytes: 4
+Done
 
