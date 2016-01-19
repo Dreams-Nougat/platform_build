@@ -1,0 +1,11 @@
+Revision: c098e9efd989a46d5d1aa625bc899536de15eaaa
+Patch-set: 3
+File: tools/releasetools/ota_from_target_files.py
+
+1133:0-1134:47
+Tue Jan 19 23:48:45 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 07495aa4_e2d6ee47
+Bytes: 68
+PS3 fixes one missing parameter when generating incremental updates.
+
