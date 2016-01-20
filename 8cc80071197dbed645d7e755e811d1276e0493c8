@@ -87,6 +87,14 @@ The catch is that somebody could take such a signed APKs and attempt to install 
 
 If we don't need that level of conservatism, we can indeed ignore APKs' minSdkVersion and simply rely on API Level of the platform for which we're signing APKs. If the build is unbundled, then we'd still need to rely on minSdkVersion instead (exactly as Ying proposed in his code snippet earlier in this thread).
 
+2193:0-2193:5
+Wed Jan 20 21:16:06 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c75ca266_cc4e82bd
+UUID: 07123a0e_569bb235
+Bytes: 104
+OK. I am fine to be cautious here. Running aapt on each apk shouldn't be a high cost for platform build.
+
 2200:4-2200:75
 Wed Jan 13 23:56:07 2016 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
