@@ -1,0 +1,29 @@
+Revision: 8d770b41f21ae1fed770b8beb931c9c24ab726bf
+Patch-set: 1
+File: core/binary.mk
+
+564:0-565:32
+Wed Jan 20 18:31:57 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c70ca2f0_d9753363
+Bytes: 168
+Another case.
+The problem here is, the single target $(RenderScript_file_stamp) may generate multiple depfiles. Looks like Ninja's depfile attribute has to be one file?
+
+566
+Wed Jan 20 18:31:57 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 07123a0e_d3aeb452
+Bytes: 100
+Two more cases in java.mk:
+-include $(bc_dep_files:%.d=%.P)
+-include $(aidl_java_sources:%.java=%.P)
+
+753:0-754:71
+Wed Jan 20 18:31:57 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 07123a0e_33bd6880
+Bytes: 270
+I was wondering why not just have something like ".KATI_DEPFILE : $(addsuffix .P,$(basename $(aidl_gen_cpp)))"?
+In Ninja you have to associate the depfile with the target file, probably because so that Ninja can load the depfile right after the build recipe is executed?
+
