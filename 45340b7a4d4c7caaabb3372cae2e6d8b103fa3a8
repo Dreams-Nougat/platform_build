@@ -1,0 +1,12 @@
+Revision: 45340b7a4d4c7caaabb3372cae2e6d8b103fa3a8
+Patch-set: 2
+File: core/definitions.mk
+
+1008:6-1008:29
+Wed Jan 20 00:25:18 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 274e5eac_38dac46c
+Bytes: 221
+Better to not call this function again for each source file here.
+Just have this function return the generated cpp file, then you can collect all the generated cpp file in binary.mk, and then set up the PRIVATE variables.
+
