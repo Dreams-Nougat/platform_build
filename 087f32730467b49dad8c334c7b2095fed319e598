@@ -1,0 +1,11 @@
+Revision: 087f32730467b49dad8c334c7b2095fed319e598
+Patch-set: 2
+File: core/binary.mk
+
+744
+Wed Jan 20 23:34:50 2016 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 27fe5ee6_e2c322af
+Bytes: 105
+Can we make this a function in definitions.mk instead of spreading BUILDING_WITH_NINJA around everywhere?
+
