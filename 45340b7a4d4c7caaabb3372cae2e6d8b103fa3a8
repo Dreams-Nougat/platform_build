@@ -10,3 +10,11 @@ Bytes: 221
 Better to not call this function again for each source file here.
 Just have this function return the generated cpp file, then you can collect all the generated cpp file in binary.mk, and then set up the PRIVATE variables.
 
+1008:6-1008:29
+Wed Jan 20 17:20:49 2016 +0000
+Author: Christopher Wiley <1057759@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 274e5eac_38dac46c
+UUID: 671db61a_36d7181f
+Bytes: 10
+Certainly.
+
