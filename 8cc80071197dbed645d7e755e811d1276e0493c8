@@ -9,6 +9,14 @@ UUID: 27673e34_9e779a1b
 Bytes: 118
 You don't need to to call $(shell) here: the build recipe itself is shell script. Use shell construct $$(...) instead.
 
+2191:0-2191:7
+Wed Jan 20 21:47:25 2016 +0000
+Author: Alex Klyubin <1018773@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 27673e34_9e779a1b
+UUID: 07f95afe_9e3c39a0
+Bytes: 4
+Done
+
 2193:0-2193:5
 Wed Jan 13 23:56:07 2016 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -94,6 +102,14 @@ Parent: c75ca266_cc4e82bd
 UUID: 07123a0e_569bb235
 Bytes: 104
 OK. I am fine to be cautious here. Running aapt on each apk shouldn't be a high cost for platform build.
+
+2193:0-2193:5
+Wed Jan 20 21:47:25 2016 +0000
+Author: Alex Klyubin <1018773@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 07123a0e_569bb235
+UUID: 07f95afe_fe41fd21
+Bytes: 134
+OK. Leaving the approach as is: use the APK's minSdkVersion instead of the API Level of the platform for which the APK is being built.
 
 2200:4-2200:75
 Wed Jan 13 23:56:07 2016 +0000
