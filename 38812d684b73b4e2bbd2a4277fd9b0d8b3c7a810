@@ -11,6 +11,14 @@ update_engine expects the key (if any) at /etc/update_engine/update-payload-key.
 
 Shouldn't you remove this "security/" part?
 
+704:18-704:26
+Thu Jan 21 22:25:53 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f4115643_2e61bfb4
+UUID: b4f27e53_462bc627
+Bytes: 20
+ah i'll submit a fix
+
 707:9-707:48
 Thu Jan 21 21:58:38 2016 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
