@@ -9,3 +9,11 @@ UUID: 27fe5ee6_e2c322af
 Bytes: 105
 Can we make this a function in definitions.mk instead of spreading BUILDING_WITH_NINJA around everywhere?
 
+744
+Thu Jan 21 05:08:16 2016 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 27fe5ee6_e2c322af
+UUID: 071cfa50_4363e619
+Bytes: 171
+Ying pointed out there are some more depfile patterns kati isn't handling properly. I'll make this a function when I'll fix them. So, please feel free to leave this to me.
+
