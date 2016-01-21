@@ -10,6 +10,18 @@ Bytes: 168
 Another case.
 The problem here is, the single target $(RenderScript_file_stamp) may generate multiple depfiles. Looks like Ninja's depfile attribute has to be one file?
 
+564:0-565:32
+Thu Jan 21 05:05:48 2016 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c70ca2f0_d9753363
+UUID: 74fc862b_fedee12e
+Bytes: 235
+Hmm this comment seems to be wrong.
+
+https://github.com/google/kati/blob/master/ninja.cc#L130
+
+I'll look into this. I think this case should be handled by .KATI_DEPFILE. Yeah, I guess we need to combine all depfiles into a single file.
+
 566
 Wed Jan 20 18:31:57 2016 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -19,6 +31,14 @@ Two more cases in java.mk:
 -include $(bc_dep_files:%.d=%.P)
 -include $(aidl_java_sources:%.java=%.P)
 
+566
+Thu Jan 21 05:05:48 2016 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 07123a0e_d3aeb452
+UUID: 7425669f_7612f0a7
+Bytes: 25
+I'll look into this, too.
+
 753:0-754:71
 Wed Jan 20 18:31:57 2016 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -26,4 +46,12 @@ UUID: 07123a0e_33bd6880
 Bytes: 270
 I was wondering why not just have something like ".KATI_DEPFILE : $(addsuffix .P,$(basename $(aidl_gen_cpp)))"?
 In Ninja you have to associate the depfile with the target file, probably because so that Ninja can load the depfile right after the build recipe is executed?
+
+753:0-754:71
+Thu Jan 21 05:05:48 2016 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 07123a0e_33bd6880
+UUID: 7425669f_360c788a
+Bytes: 155
+Yes, I think we need foreach+eval to generate multiple assignments. A mitigation would be introducing a make function as Colin suggested in a different CL.
 
