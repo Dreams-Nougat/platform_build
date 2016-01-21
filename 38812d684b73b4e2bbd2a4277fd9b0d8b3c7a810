@@ -9,3 +9,11 @@ UUID: 141a6a67_9935bbad
 Bytes: 70
 I don't have a Mac to verify at this point... Did you try it on a Mac?
 
+707:9-707:48
+Thu Jan 21 22:20:59 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 141a6a67_9935bbad
+UUID: 940e5a27_bdf067f4
+Bytes: 92
+I tried the same command on my macbook and it worked fine. I'll keep an eye on build status.
+
