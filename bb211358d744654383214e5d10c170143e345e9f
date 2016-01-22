@@ -9,3 +9,12 @@ UUID: 54aa2254_48df3f90
 Bytes: 8
 mackerel
 
+File: core/Makefile
+
+412
+Fri Jan 22 20:27:06 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 74c64632_f13702d4
+Bytes: 66
+This is not common, the contents depend on the installed packages.
+
