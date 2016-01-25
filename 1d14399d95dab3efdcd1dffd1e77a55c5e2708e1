@@ -1,0 +1,18 @@
+Revision: 1d14399d95dab3efdcd1dffd1e77a55c5e2708e1
+Patch-set: 1
+File: core/definitions.mk
+
+893:47-893:50
+Mon Jan 25 20:57:03 2016 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b4afde8e_1810e52c
+Bytes: 69
+This isn't GCC-specific, so maybe "the compiler" is more appropriate.
+
+973:53-973:55
+Mon Jan 25 20:57:03 2016 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 14beeac6_5356c411
+Bytes: 10
+Remove "a"
+
