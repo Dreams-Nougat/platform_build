@@ -9,6 +9,14 @@ UUID: 940c9ac1_47aa2e92
 Bytes: 129
 Maybe just fixed the cases where .logtags are added to LOCAL_SRC_FILES since we don't support them in generating native code yet?
 
+1151:36-1151:54
+Tue Jan 26 01:53:13 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 940c9ac1_47aa2e92
+UUID: 94b2daf4_3d4cb77b
+Bytes: 169
+We don't generate native code, but we do store the list of logtags in ALL_MODULES.<name>.EVENT_LOG_TAGS for later merging. So we cannot remove them from LOCAL_SRC_FILES.
+
 File: core/definitions.mk
 
 901:2-901:27
@@ -17,4 +25,18 @@ Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 54fea2bd_85a702c9
 Bytes: 133
 it's unfortunate we have to use recursion in makefile in such cases. I am wondering how much this CL adds to the makefile parse time?
+
+901:2-901:27
+Tue Jan 26 01:53:13 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 54fea2bd_85a702c9
+UUID: b4afde8e_7ed4693f
+Bytes: 364
+Yeah... I tried a few different ways of doing this, but every way ended up using recursion for some part of the operations.
+
+For an aosp/master aosp_flounder-eng no-op build (with kati reading the makefiles):
+without this change: 33.4s
+with this change: 37.4s
+
+Internal builds seem to increase by about the same amount (4.1s), even though the total time is longer.
 
