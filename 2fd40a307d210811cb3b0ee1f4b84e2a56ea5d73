@@ -1,0 +1,20 @@
+Revision: 2fd40a307d210811cb3b0ee1f4b84e2a56ea5d73
+Patch-set: 1
+File: core/binary.mk
+
+1151:36-1151:54
+Tue Jan 26 00:56:19 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 940c9ac1_47aa2e92
+Bytes: 129
+Maybe just fixed the cases where .logtags are added to LOCAL_SRC_FILES since we don't support them in generating native code yet?
+
+File: core/definitions.mk
+
+901:2-901:27
+Tue Jan 26 00:56:19 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 54fea2bd_85a702c9
+Bytes: 133
+it's unfortunate we have to use recursion in makefile in such cases. I am wondering how much this CL adds to the makefile parse time?
+
