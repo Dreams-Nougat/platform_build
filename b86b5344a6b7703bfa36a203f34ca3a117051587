@@ -17,3 +17,11 @@ UUID: f4b5d6da_1a3b7da8
 Bytes: 95
 He just pulled the logic for include-depfile from here, since it's now used in multiple places.
 
+744
+Tue Jan 26 05:25:39 2016 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f4b5d6da_1a3b7da8
+UUID: 54fea2bd_858382c1
+Bytes: 28
+Thanks for explanation, Dan!
+
