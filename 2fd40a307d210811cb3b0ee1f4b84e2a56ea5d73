@@ -40,3 +40,19 @@ with this change: 37.4s
 
 Internal builds seem to increase by about the same amount (4.1s), even though the total time is longer.
 
+901:2-901:27
+Thu Jan 28 01:13:48 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b4afde8e_7ed4693f
+UUID: 542ce22d_d547dcfe
+Bytes: 240
+The latest patch removes the recursion by adding a counter using $(words).
+
+Timing just running ckati:
+
+30.9s on HEAD
+34.6s with PS1
+33.3s with PS2
+
+32.8s with PS2 - new object order lookup/checks (but still with the unused src file checks)
+
