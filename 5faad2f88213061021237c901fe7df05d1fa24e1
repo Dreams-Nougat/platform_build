@@ -1,0 +1,15 @@
+Revision: 5faad2f88213061021237c901fe7df05d1fa24e1
+Patch-set: 1
+File: core/main.mk
+
+180
+Fri Jan 29 20:53:41 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 349a0eef_36ad28a9
+Bytes: 278
+Is this some random environment variable? I assume yes.
+
+We need a check later in the build (once we know whether BRILLO is set) that errors out if this is set and BRILLO isn't.
+
+We should make the places that use java/javac fail early if this is set, even if java is available.
+
