@@ -13,3 +13,13 @@ We need a check later in the build (once we know whether BRILLO is set) that err
 
 We should make the places that use java/javac fail early if this is set, even if java is available.
 
+180
+Fri Jan 29 20:56:36 2016 +0000
+Author: Lee Campbell <1052976@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 349a0eef_36ad28a9
+UUID: 749006cb_b2dea891
+Bytes: 179
+This is set in the brillo_base.mk, not some random external variable.
+
+I could check if BRILLO is set but its not really a Brillo related thing. Its a 'dont check for java' thing.
+
