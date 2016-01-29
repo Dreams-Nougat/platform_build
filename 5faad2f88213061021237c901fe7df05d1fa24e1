@@ -35,3 +35,13 @@ Ah, I forgot how late this check was. In that case, we need to explicitly initia
 
 We should still fail out in java related calls so that actually get a build break on the builders if brillo happens to use java. If brillo does happen to use java somewhere still, this check should stay until that's not the case.
 
+180
+Fri Jan 29 21:10:44 2016 +0000
+Author: Lee Campbell <1052976@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 749006cb_f2bf5017
+UUID: 9462dabe_c07a74c2
+Bytes: 240
+Brillo doesn't have a makefile common to all boards but even I make one and set JAVA_NOT_REQUIRED there, doesn't this CL still stand?
+
+We can put an extra check around the javac tools if you want. I think that would be a separate CL though.
+
