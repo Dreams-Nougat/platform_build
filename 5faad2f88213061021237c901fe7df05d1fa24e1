@@ -23,3 +23,15 @@ This is set in the brillo_base.mk, not some random external variable.
 
 I could check if BRILLO is set but its not really a Brillo related thing. Its a 'dont check for java' thing.
 
+180
+Fri Jan 29 21:04:53 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 749006cb_b2dea891
+UUID: 749006cb_f2bf5017
+Bytes: 630
+Ah, I forgot how late this check was. In that case, we need to explicitly initialize JAVA_NOT_REQUIRED sometime before the envsetup.mk so that the environment variable isn't read on non-brillo builds.
+
+(brillo_base.mk is a product makefile, it's not allowed to set any variables other than the ones listed in _product_var_list in product.mk. It needs to be moved to the brillo-common BoardConfig.mk)
+
+We should still fail out in java related calls so that actually get a build break on the builders if brillo happens to use java. If brillo does happen to use java somewhere still, this check should stay until that's not the case.
+
