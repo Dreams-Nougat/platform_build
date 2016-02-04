@@ -1,0 +1,11 @@
+Revision: 3d8bf2994c4e8e17500f79acf9b9decb8adc40af
+Patch-set: 2
+File: core/main.mk
+
+61
+Thu Feb 04 09:45:39 2016 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 31fce07c_6c4b10b2
+Bytes: 562
+Can we undo this part of the change? LLVM also is not using Java as part of its build, but we do target partial products (i.e. build the ASan runtime for ARM). It isn't realistic for us to add something to each of those device configuration files just for our own build. It would be preferable to set this as part of our build environment one time, and then continue building without the extra checks. Anyone who sets this variable to work around your check locally could just as easily delete the check itself, so I am not sure how much safer this makes things.
+
