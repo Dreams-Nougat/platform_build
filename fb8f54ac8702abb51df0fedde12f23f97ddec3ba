@@ -1,0 +1,11 @@
+Revision: fb8f54ac8702abb51df0fedde12f23f97ddec3ba
+Patch-set: 3
+File: core/java.mk
+
+681
+Fri Feb 05 14:28:08 2016 +0000
+Author: Jean-Philippe Lesot <1015381@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 918f4c7c_2f628917
+Bytes: 32
+Modulo default behavior in Jack.
+
