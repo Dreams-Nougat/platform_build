@@ -9,3 +9,11 @@ UUID: 31fce07c_d8abda92
 Bytes: 31
 (except me, apparently. weird.)
 
+10
+Fri Feb 05 01:13:09 2016 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 31fce07c_d8abda92
+UUID: 31fce07c_984672aa
+Bytes: 129
+Do you have NATIVE_COVERAGE defined in your environment for some reason? That is the only way that these variables are even used.
+
