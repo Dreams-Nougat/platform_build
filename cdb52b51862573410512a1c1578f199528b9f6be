@@ -17,3 +17,24 @@ UUID: 31fce07c_984672aa
 Bytes: 129
 Do you have NATIVE_COVERAGE defined in your environment for some reason? That is the only way that these variables are even used.
 
+10
+Fri Feb 05 01:14:39 2016 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 31fce07c_984672aa
+UUID: 11f7dc9a_5db23923
+Bytes: 348
+huh. apparently i do:
+
+  local lunch_target=$1
+  local device_serial=$2
+  source build/envsetup.sh
+  setpaths
+  lunch $lunch_target
+  export NATIVE_COVERAGE=true
+  export ANDROID_SERIAL=$device_serial
+  export ANDROID_PRINTF_LOG=threadtime
+
+oops.
+
+oh well, i can confirm that removing the symlink workaround everything works for me with this patch.
+
