@@ -9,10 +9,26 @@ UUID: 9162ecbe_00c0ec54
 Bytes: 54
 can you please put prefix: ota- as ota-required-cache?
 
+1140:7-1140:15
+Mon Feb 08 18:41:55 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 9162ecbe_00c0ec54
+UUID: 9162ecbe_6001a84e
+Bytes: 4
+Done
+
 1141
 Mon Feb 08 18:35:14 2016 +0000
 Author: Xi Zhao <1060547@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 7179f872_5cdc9593
 Bytes: 21
 the same for ota-type
+
+1141
+Mon Feb 08 18:41:55 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7179f872_5cdc9593
+UUID: 5174f47a_dbe7cb61
+Bytes: 4
+Done
 
