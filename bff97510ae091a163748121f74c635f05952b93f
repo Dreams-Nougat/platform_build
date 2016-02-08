@@ -1,0 +1,18 @@
+Revision: bff97510ae091a163748121f74c635f05952b93f
+Patch-set: 5
+File: tools/releasetools/ota_from_target_files.py
+
+1140:7-1140:15
+Mon Feb 08 18:35:14 2016 +0000
+Author: Xi Zhao <1060547@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9162ecbe_00c0ec54
+Bytes: 54
+can you please put prefix: ota- as ota-required-cache?
+
+1141
+Mon Feb 08 18:35:14 2016 +0000
+Author: Xi Zhao <1060547@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7179f872_5cdc9593
+Bytes: 21
+the same for ota-type
+
