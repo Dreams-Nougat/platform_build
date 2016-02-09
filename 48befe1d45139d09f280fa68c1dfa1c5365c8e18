@@ -1,0 +1,29 @@
+Revision: 48befe1d45139d09f280fa68c1dfa1c5365c8e18
+Patch-set: 2
+File: core/binary.mk
+
+427:2-427:24
+Tue Feb 09 20:55:45 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5da7a8bf_58b8b1ee
+Bytes: 132
+Using 'export' here applies globally to the entire build -- if this is your intention, it should be done once, not for every module.
+
+450:2-450:29
+Tue Feb 09 20:55:45 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: fdc21c56_ba20c991
+Bytes: 13
+Same as above
+
+File: core/combo/HOST_CROSS_windows-x86.mk
+
+22
+Tue Feb 09 20:55:45 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: bd9a6476_98ff7d7d
+Bytes: 202
+I've added HOST_CROSS_windows-x86_64.mk now too: https://android-review.googlesource.com/#/c/201400/
+
+We don't support clang for windows crossbuilds yet, so I'm not sure this matters until that happens.
+
