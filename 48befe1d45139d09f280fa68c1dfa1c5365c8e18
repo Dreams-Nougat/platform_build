@@ -9,12 +9,28 @@ UUID: 5da7a8bf_58b8b1ee
 Bytes: 132
 Using 'export' here applies globally to the entire build -- if this is your intention, it should be done once, not for every module.
 
+427:2-427:24
+Tue Feb 09 23:48:25 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5da7a8bf_58b8b1ee
+UUID: bd83441c_133536c0
+Bytes: 320
+Although not working with gcc or other my_cc setting yet, we can eventually let ccc-analyzer call different compilers depending on each module's local setting. So it is necessary to export  CCC_CC for every module. For now, I move it to the if statement at line 405, to export CCC_CC and CCC_CXX for clang compiler only.
+
 450:2-450:29
 Tue Feb 09 20:55:45 2016 +0000
 Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: fdc21c56_ba20c991
 Bytes: 13
 Same as above
+
+450:2-450:29
+Tue Feb 09 23:48:25 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: fdc21c56_ba20c991
+UUID: ddbd58cb_f6933e7f
+Bytes: 27
+Moved, similarly to CCC_CC.
 
 File: core/combo/HOST_CROSS_windows-x86.mk
 
@@ -26,4 +42,12 @@ Bytes: 202
 I've added HOST_CROSS_windows-x86_64.mk now too: https://android-review.googlesource.com/#/c/201400/
 
 We don't support clang for windows crossbuilds yet, so I'm not sure this matters until that happens.
+
+22
+Tue Feb 09 23:48:25 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: bd9a6476_98ff7d7d
+UUID: ddbd58cb_f92faf66
+Bytes: 36
+Thanks. Now I changed that file too.
 
