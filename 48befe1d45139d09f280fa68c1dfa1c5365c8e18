@@ -17,6 +17,16 @@ UUID: bd83441c_133536c0
 Bytes: 320
 Although not working with gcc or other my_cc setting yet, we can eventually let ccc-analyzer call different compilers depending on each module's local setting. So it is necessary to export  CCC_CC for every module. For now, I move it to the if statement at line 405, to export CCC_CC and CCC_CXX for clang compiler only.
 
+427:2-427:24
+Tue Feb 09 23:52:40 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: bd83441c_133536c0
+UUID: 1d89b03a_3685be31
+Bytes: 513
+That doesn't work. "export" will export the environment variable to *every* build rule in the entire system, not just this one. We've implemented "export" in kati by having kati write out a file out/env-<target>.sh with a list of the name-value pairs and we source that into the environment before running ninja.
+
+If you need to set an environment variable for a specific rule, you've got to set it in the command line of that rule (see https://android.googlesource.com/platform/build/+/master/core/ninja.mk#147 )
+
 450:2-450:29
 Tue Feb 09 20:55:45 2016 +0000
 Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
