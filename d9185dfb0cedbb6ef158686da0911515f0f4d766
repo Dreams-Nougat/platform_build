@@ -1,0 +1,11 @@
+Revision: d9185dfb0cedbb6ef158686da0911515f0f4d766
+Patch-set: 1
+File: tools/releasetools/build_image.py
+
+104:2-104:13
+Wed Feb 10 17:34:53 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: fdb5bcf8_a20b1abc
+Bytes: 126
+looks like ZeroPadSimg doesn't have a chance to return False. shall we just remove the return value and the if branch in L461?
+
