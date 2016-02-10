@@ -27,6 +27,14 @@ That doesn't work. "export" will export the environment variable to *every* buil
 
 If you need to set an environment variable for a specific rule, you've got to set it in the command line of that rule (see https://android.googlesource.com/platform/build/+/master/core/ninja.mk#147 )
 
+427:2-427:24
+Wed Feb 10 01:02:02 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 1d89b03a_3685be31
+UUID: bd9a6476_66087609
+Bytes: 41
+I see. Please take a look of PS4. Thanks.
+
 450:2-450:29
 Tue Feb 09 20:55:45 2016 +0000
 Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
