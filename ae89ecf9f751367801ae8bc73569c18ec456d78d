@@ -9,3 +9,13 @@ UUID: 7dbb8cf2_1bf8ffd8
 Bytes: 121
 there's a catch here: we may have multiple transfers that use the same source. maybe change to list to keep all the "b"s?
 
+1014:10-1014:23
+Wed Feb 10 15:46:33 2016 +0000
+Author: Doug Zongker <1002268@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7dbb8cf2_1bf8ffd8
+UUID: fdb5bcf8_6273d2b8
+Bytes: 261
+Whoops, fixed.  (The filesystem images I'm using this with can't ever use the same source twice, so I never encountered that.)
+
+I tested it building an incremental for a pair of fugu images, but that didn't encounter a problem.  What images did you use to test?
+
