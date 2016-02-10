@@ -1,0 +1,11 @@
+Revision: ae89ecf9f751367801ae8bc73569c18ec456d78d
+Patch-set: 1
+File: tools/releasetools/blockimgdiff.py
+
+1014:10-1014:23
+Wed Feb 10 04:45:06 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7dbb8cf2_1bf8ffd8
+Bytes: 121
+there's a catch here: we may have multiple transfers that use the same source. maybe change to list to keep all the "b"s?
+
