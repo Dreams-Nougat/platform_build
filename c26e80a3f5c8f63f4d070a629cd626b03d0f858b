@@ -1,0 +1,11 @@
+Revision: c26e80a3f5c8f63f4d070a629cd626b03d0f858b
+Patch-set: 4
+File: core/config.mk
+
+353:66-353:73
+Thu Feb 11 02:47:20 2016 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: bde6e426_9b8997e6
+Bytes: 126
+We really shouldn't be hardcoding this value here. Can we pull it (or define this variable) from core/clang/config.mk instead?
+
