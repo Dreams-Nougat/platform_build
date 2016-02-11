@@ -9,3 +9,13 @@ UUID: bde6e426_9b8997e6
 Bytes: 126
 We really shouldn't be hardcoding this value here. Can we pull it (or define this variable) from core/clang/config.mk instead?
 
+353:66-353:73
+Thu Feb 11 18:33:45 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: bde6e426_9b8997e6
+UUID: 7df0ecdc_84749610
+Bytes: 145
+core/clang/config.mk is included later in this file.
+I will try to include it earlier before this line.
+If that works, I will upload a new patch.
+
