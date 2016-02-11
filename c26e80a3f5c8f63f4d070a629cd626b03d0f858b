@@ -19,3 +19,14 @@ core/clang/config.mk is included later in this file.
 I will try to include it earlier before this line.
 If that works, I will upload a new patch.
 
+353:66-353:73
+Thu Feb 11 21:57:53 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7df0ecdc_84749610
+UUID: ddde385a_ee48df5c
+Bytes: 415
+Including core/clang/config.mk before this line does not work, because other files included by clang/config.mk will need *GLOBAL_CFLAGS defined after this line.
+
+I suppose moving many lines here or in clang/config.mk would be messy. How about moving LLVM_PREBUILTS_BASE and its required macros out of clang/config.mk, put them in a new .mk file to be included here?
+Or just keep this SYNTAX_TOOLS_PREFIX as is here?
+
