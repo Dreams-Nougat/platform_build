@@ -11,3 +11,11 @@ I'd argue that they shouldn't be marked as shared libraries, since they don't ma
 
 Maybe this should be moved to dynamic_binary.mk now that we don't support host modules. That file definitely shouldn't be used except for elf files.
 
+235
+Sat Feb 13 08:26:20 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 9dc4c07e_25d4b9be
+UUID: 1da7f0d2_868cabf2
+Bytes: 130
+We can't move this to dynamic_binary.mk -- then there's a path through BUILD_PREBUILT for shared libraries that wouldn't get this.
+
