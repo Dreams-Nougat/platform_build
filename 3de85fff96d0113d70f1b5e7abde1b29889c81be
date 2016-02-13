@@ -1,0 +1,13 @@
+Revision: 3de85fff96d0113d70f1b5e7abde1b29889c81be
+Patch-set: 1
+File: core/base_rules.mk
+
+235
+Sat Feb 13 06:58:57 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 9dc4c07e_25d4b9be
+Bytes: 408
+I'd argue that they shouldn't be marked as shared libraries, since they don't match the build system's definition of a shared library. AFAICT, the only thing it's giving you is the install path, and we could define the install path for a different class too.
+
+Maybe this should be moved to dynamic_binary.mk now that we don't support host modules. That file definitely shouldn't be used except for elf files.
+
