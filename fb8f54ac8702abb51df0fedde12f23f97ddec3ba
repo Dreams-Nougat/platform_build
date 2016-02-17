@@ -1,5 +1,14 @@
 Revision: fb8f54ac8702abb51df0fedde12f23f97ddec3ba
 Patch-set: 3
+File: core/definitions.mk
+
+1967:56-1967:64
+Wed Feb 17 09:43:23 2016 +0000
+Author: Yohann Roussel <1023201@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5da5e8c5_333080c8
+Bytes: 112
+Nit: Other such removing substitutions I found in build are all without $(empty) they just use $(subst ...,,...)
+
 File: core/java.mk
 
 681
