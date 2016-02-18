@@ -9,6 +9,30 @@ UUID: 5da5e8c5_333080c8
 Bytes: 112
 Nit: Other such removing substitutions I found in build are all without $(empty) they just use $(subst ...,,...)
 
+1967:56-1967:64
+Thu Feb 18 00:29:25 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5da5e8c5_333080c8
+UUID: 9d6840a0_799ec7db
+Bytes: 31
+they are the same in this case.
+
+1968:0-1968:63
+Thu Feb 18 00:29:25 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: fd993cfa_3c67d192
+Bytes: 145
+I would remove the use of temp var list_, with:
+$(call transform-to-jack-filter-list,\
+  $(call split-emma-filter-list,$(subst +,$(empty),$(1))))
+
+1975:0-1976:76
+Thu Feb 18 00:29:25 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3d9034ca_de3ee5a2
+Bytes: 5
+ditto
+
 File: core/java.mk
 
 681
