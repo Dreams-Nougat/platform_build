@@ -1,0 +1,11 @@
+Revision: d8d4dbc14db1c28e1c4ccd8869c358b4fe22a57e
+Patch-set: 1
+File: tools/releasetools/ota_from_target_files.py
+
+797:6-797:11
+Tue Feb 23 22:03:28 2016 +0000
+Author: Xi Zhao <1060547@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c2c1f56d_8f4dd4b4
+Bytes: 24
+should the script abort?
+
