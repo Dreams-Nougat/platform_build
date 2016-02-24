@@ -1,0 +1,30 @@
+Revision: bdfeb3e760feb080b449cc58129e5473bda54dec
+Patch-set: 2
+File: core/combo/arch/arm/armv7-a-neon.mk
+
+49:0-49:0
+Wed Feb 24 22:56:16 2016 +0000
+Author: Ian Rogers <1010118@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e2def959_66a40614
+Bytes: 887
+sorry to be a PITA. I wonder if this wouldn't be better by getting rid of the large if-then-else and having:
+
+arch_variants_cflags := -mcpu=$(TARGET_$(combo...))
+
+local_arch_arm_has_lpae := $(filter cortex-a15 krait denver cortex-a7 cortex-a53 cortex-a53.57,$(TARGET_$(combo...))
+ifneq (,$local_arch_arm_has_lpae)
+   # ....
+   arch_variant_cflags += -D__ARM_FEATURE_LPAE=1
+endif
+local_arch_arm_has_lpae :=
+
+local_arch_arm_is_non_buggy_cortex_a8 = $(filter cortex-a15 krait denver cortex-a7 cortex-a53 cortex-a53.57,$(TARGET_$(combo...))
+ifneq (,$local_arch_arm_is_non_buggy_cortex_a8)
+    arch_variant_ldflags := -Wl,--no-fix-cortex-a8
+else
+    arch_variant_ldflags := -Wl,--fix-cortex-a8
+endif
+local_arch_arm_is_non_buggy_cortex_a8 :=
+
+The code is something of a spaghetti mess currently (not aided by the proposed change) and the end result is that there's bit rot in areas like -mcpu.
+
