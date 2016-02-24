@@ -1,0 +1,21 @@
+Revision: 9714296822396d194264b1f0e9ac2c875600aeeb
+Patch-set: 1
+File: core/combo/arch/arm/armv7-a-neon.mk
+
+10:0-13:27
+Wed Feb 24 21:36:47 2016 +0000
+Author: Ian Rogers <1010118@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 82bb7df1_c5716be9
+Bytes: 152
+I believe this is TO-DONE:
+https://android.googlesource.com/platform/external/llvm/+/master/lib/Target/ARM/ARM.td#284
+and so this should be:
+-mcpu=krait
+
+32:1-33:49
+Wed Feb 24 21:36:47 2016 +0000
+Author: Ian Rogers <1010118@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 82bb7df1_857b73c5
+Bytes: 155
+Perhaps define a local_arch_has_lpae=true and then add the fake cflag below with this comment. It looks odd that this comment differs from that on line 16.
+
