@@ -9,12 +9,30 @@ UUID: 22d0113b_496903f9
 Bytes: 20
 this isn't an error?
 
+802:11-802:56
+Wed Feb 24 19:32:44 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 22d0113b_496903f9
+UUID: 02e4ed24_9dc7447f
+Bytes: 377
+wanted to keep this path to allow getting a package, since the script user can still manually change the "post-timestamp" line in the generated package. otherwise with "--downgrade", we will enforce a data wipe in the generated script. PS3 added some code comments.
+
+(the thought is to only raise an error if you explicitly tell me to do downgrade but i found that's not true.)
+
 804:33-805:71
 Wed Feb 24 19:15:59 2016 +0000
 Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 62be89e4_4c259145
 Bytes: 15
 post_timestamp?
+
+804:33-805:71
+Wed Feb 24 19:32:44 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 62be89e4_4c259145
+UUID: c2c1f56d_dcfca15f
+Bytes: 4
+Done
 
 1434:6-1438:71
 Wed Feb 24 19:15:59 2016 +0000
