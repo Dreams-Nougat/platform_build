@@ -1,0 +1,25 @@
+Revision: 2d08b94b71abdb2e92a215636ff8ee2658fe8215
+Patch-set: 2
+File: tools/releasetools/ota_from_target_files.py
+
+802:11-802:56
+Wed Feb 24 19:15:59 2016 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 22d0113b_496903f9
+Bytes: 20
+this isn't an error?
+
+804:33-805:71
+Wed Feb 24 19:15:59 2016 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 62be89e4_4c259145
+Bytes: 15
+post_timestamp?
+
+1434:6-1438:71
+Wed Feb 24 19:15:59 2016 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 82bb7df1_c7fe137f
+Bytes: 13
+same comments
+
