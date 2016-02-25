@@ -1,0 +1,11 @@
+Revision: d996af24957eb72bad27ed3f3586e2dc023b2108
+Patch-set: 1
+File: envsetup.sh
+
+652:65-652:72
+Thu Feb 25 01:01:06 2016 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 22d0113b_fdd3e94d
+Bytes: 74
+Can we get this value from our versions.mk file instead of hard-coding it?
+
