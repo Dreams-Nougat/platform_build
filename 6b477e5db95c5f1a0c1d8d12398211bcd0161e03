@@ -9,3 +9,12 @@ UUID: c2981592_6e13b4ec
 Bytes: 154
 Oh, I didn't notice this on the first look here. We should be able to support darwin as well, right? That is easy to determine and use (based on $OSTYPE).
 
+653:49-653:58
+Thu Feb 25 03:21:36 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c2981592_6e13b4ec
+UUID: e2b0b90b_b88ea0e8
+Bytes: 74
+I think it will work for darwin-x86, but have not tested it yet.
+PTAL PS3.
+
