@@ -9,3 +9,13 @@ UUID: 22d0113b_fdd3e94d
 Bytes: 74
 Can we get this value from our versions.mk file instead of hard-coding it?
 
+652:65-652:72
+Thu Feb 25 01:07:58 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 22d0113b_fdd3e94d
+UUID: 02e4ed24_649520f5
+Bytes: 145
+How about
+grep LLVM_PREBUILTS_VERSION $T/build/core/clang/versions.mk | cut -d' ' -f3
+That will depend more on the syntax in versions.mk, though.
+
