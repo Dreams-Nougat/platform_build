@@ -29,3 +29,11 @@ Please don't parse the makefile :)
 
 You can likely get it with get_build_var. (but I'm hoping to reduce the uses of get_build_var, since I'm not sure how we'll implement it when more configuration moves to soong)
 
+652:65-652:72
+Thu Feb 25 01:25:33 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 02e4ed24_649520f5
+UUID: c2981592_ae1bfc93
+Bytes: 28
+get_build_var works. Thanks.
+
