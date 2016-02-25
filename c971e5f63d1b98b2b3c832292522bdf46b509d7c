@@ -1,0 +1,13 @@
+Revision: c971e5f63d1b98b2b3c832292522bdf46b509d7c
+Patch-set: 1
+File: core/binary.mk
+
+1354:0-1357:5
+Thu Feb 25 18:32:38 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a29b218c_430b16bc
+Bytes: 70
+ifneq ($(filter external/%,$(LOCAL_PATH)),)
+  my_strict := false
+endif
+
