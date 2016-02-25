@@ -1,0 +1,11 @@
+Revision: 6b477e5db95c5f1a0c1d8d12398211bcd0161e03
+Patch-set: 2
+File: envsetup.sh
+
+653:49-653:58
+Thu Feb 25 02:49:19 2016 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c2981592_6e13b4ec
+Bytes: 154
+Oh, I didn't notice this on the first look here. We should be able to support darwin as well, right? That is easy to determine and use (based on $OSTYPE).
+
