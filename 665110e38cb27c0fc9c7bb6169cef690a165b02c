@@ -1,0 +1,13 @@
+Revision: 665110e38cb27c0fc9c7bb6169cef690a165b02c
+Patch-set: 2
+File: tools/brillo-clang-format
+
+32:18-32:23
+Fri Feb 26 20:06:41 2016 +0000
+Author: Alex Vakulenko <1076863@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 4276e54b_82710aea
+Bytes: 165
+Why is this "false"?
+
+If I remember correctly, we always used each parameter on separate line when defining functions but we pack arguments (when calling functions).
+
