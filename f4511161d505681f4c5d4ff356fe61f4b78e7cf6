@@ -19,3 +19,11 @@ For dynamically linked ckati, we don't need the --whole-archive and -ldl. These 
 
 If you are suggesting we should move all flags including -static to Makefile.ckati, it would be an option. But I'd like to keep using dynamically linked ckati for development as some debugging tools for C++ work poorly for statically linked binaries.
 
+162:0-163:76
+Fri Feb 26 20:17:42 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 620cc9c0_2a65bf88
+UUID: 02e4ed24_9eaa9047
+Bytes: 149
+I'm not too concerned about keeping this clean. Once we turn on Soong, this won't be used, and we'll be building Kati as a dynamic binary with Soong.
+
