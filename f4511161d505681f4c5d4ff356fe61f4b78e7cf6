@@ -9,3 +9,13 @@ UUID: c2981592_9f686162
 Bytes: 52
 Should this be in build/kati/Makefile.ckati instead?
 
+162:0-163:76
+Fri Feb 26 19:44:24 2016 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c2981592_9f686162
+UUID: 620cc9c0_2a65bf88
+Bytes: 450
+For dynamically linked ckati, we don't need the --whole-archive and -ldl. These flags are necessary only when -static is specified. So having these flags without -static would be somewhat confusing.
+
+If you are suggesting we should move all flags including -static to Makefile.ckati, it would be an option. But I'd like to keep using dynamically linked ckati for development as some debugging tools for C++ work poorly for statically linked binaries.
+
