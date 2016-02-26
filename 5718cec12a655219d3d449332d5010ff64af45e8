@@ -1,0 +1,11 @@
+Revision: 5718cec12a655219d3d449332d5010ff64af45e8
+Patch-set: 1
+File: tools/releasetools/ota_from_target_files.py
+
+58:6-60:27
+Fri Feb 26 22:52:48 2016 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c2981592_4531e6eb
+Bytes: 61
+explain why this is a rare case that you probably don't want?
+
