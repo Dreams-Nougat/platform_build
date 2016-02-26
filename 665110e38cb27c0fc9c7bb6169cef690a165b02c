@@ -11,3 +11,11 @@ Why is this "false"?
 
 If I remember correctly, we always used each parameter on separate line when defining functions but we pack arguments (when calling functions).
 
+32:18-32:23
+Fri Feb 26 20:47:22 2016 +0000
+Author: Alex Deymo <1077068@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 4276e54b_82710aea
+UUID: 02e4ed24_1e3ea0a2
+Bytes: 31
+This was discussed in the list.
+
