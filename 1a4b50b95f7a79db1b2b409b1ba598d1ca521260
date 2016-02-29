@@ -9,6 +9,14 @@ UUID: 22ef3134_06daa092
 Bytes: 60
 I'm not convinced this needs to be protected against BRILLO.
 
+68
+Mon Feb 29 21:52:54 2016 +0000
+Author: Ari Hausman-Cohen <1077847@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 22ef3134_06daa092
+UUID: e27a7932_036999f9
+Bytes: 4
+Done
+
 File: core/tasks/brillo_tests.mk
 
 17
@@ -18,10 +26,26 @@ UUID: 22ef3134_a6bdac30
 Bytes: 95
 This could be in device/generic/brillo/build/tasks/... -- any particular reason to put it here?
 
+17
+Mon Feb 29 21:52:54 2016 +0000
+Author: Ari Hausman-Cohen <1077847@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 22ef3134_a6bdac30
+UUID: e27a7932_236e1502
+Bytes: 98
+Nope. Ying had suggested it, and I didn't realize there were task directories under device/. Done.
+
 20:0-23:30
 Mon Feb 29 21:25:47 2016 +0000
 Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: a2e32149_35d0a817
 Bytes: 75
 Why is this defined in a task, and not in device/generic/brillo/Android.mk?
+
+20:0-23:30
+Mon Feb 29 21:52:54 2016 +0000
+Author: Ari Hausman-Cohen <1077847@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a2e32149_35d0a817
+UUID: e27a7932_835d8951
+Bytes: 45
+put in device/generic/brillo/build/Android.mk
 
