@@ -2,10 +2,25 @@ Revision: 8894e91ccf14e200cd37b732e2dd9bd66cd49db6
 Patch-set: 2
 File: core/Makefile
 
+507:7-507:47
+Wed Mar 02 22:51:01 2016 +0000
+Author: David Zeuthen <1076971@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 42318581_e2ec8bb0
+Bytes: 57
+This is now system/bvb, not system/core/bvb. Will update.
+
 547:0-547:73
 Fri Feb 19 00:11:34 2016 +0000
 Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: c23655de_f86a6959
 Bytes: 17
 nit: move to 564?
+
+547:0-547:73
+Wed Mar 02 22:51:01 2016 +0000
+Author: David Zeuthen <1076971@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c23655de_f86a6959
+UUID: 02986d84_9ed4bb38
+Bytes: 26
+Yeah, will do. Nice catch.
 
