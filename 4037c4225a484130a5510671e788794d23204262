@@ -9,3 +9,11 @@ UUID: 22ef3134_c8f8ac93
 Bytes: 46
 I am wondering why ninja deletes the depfiles?
 
+9:0-10:17
+Thu Mar 03 20:46:39 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 22ef3134_c8f8ac93
+UUID: e2b0b90b_df325fd3
+Bytes: 151
+Because they get stored in .ninja_deps in a binary format to speed up loading: https://ninja-build.org/manual.html#_deps So they're no longer necessary
+
