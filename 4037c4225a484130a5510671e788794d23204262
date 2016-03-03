@@ -1,0 +1,11 @@
+Revision: 4037c4225a484130a5510671e788794d23204262
+Patch-set: 1
+File: /COMMIT_MSG
+
+9:0-10:17
+Thu Mar 03 19:50:22 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 22ef3134_c8f8ac93
+Bytes: 46
+I am wondering why ninja deletes the depfiles?
+
