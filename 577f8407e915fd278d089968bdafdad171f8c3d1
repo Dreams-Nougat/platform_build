@@ -1,0 +1,11 @@
+Revision: 577f8407e915fd278d089968bdafdad171f8c3d1
+Patch-set: 1
+File: core/native_benchmark.mk
+
+9:23-9:51
+Fri Mar 04 21:41:19 2016 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 82ea9d1e_035c33c5
+Bytes: 68
+guangzhu: should we have a separate directory for native benchmarks?
+
