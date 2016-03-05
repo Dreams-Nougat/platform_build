@@ -9,3 +9,11 @@ UUID: 82ea9d1e_035c33c5
 Bytes: 68
 guangzhu: should we have a separate directory for native benchmarks?
 
+9:23-9:51
+Sat Mar 05 03:21:01 2016 +0000
+Author: Guang Zhu <1014491@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 82ea9d1e_035c33c5
+UUID: 770bad18_981015dc
+Bytes: 113
+no that should be fine, since they'll be collected into a separate zip via something like native_metrics_tests.mk
+
