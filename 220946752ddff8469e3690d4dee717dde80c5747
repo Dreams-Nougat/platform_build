@@ -9,3 +9,19 @@ UUID: 77b56dab_08414715
 Bytes: 147
 I can upload a change that makes this method print a warning that its deprecated and then have another change make it an error and remove this way.
 
+File: tools/fs_config/README
+
+50:2-50:37
+Mon Mar 07 21:53:31 2016 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 37af7563_c6f242fa
+Bytes: 330
+Does not allow a per-device introduction of custom AID (except by using the first method).
+
+e.g.:
+
+user: AID_INTEL_UDEVMAX
+group: AID_INTEL_DMSTUFFER(2903)
+
+First one gets an unique value from 2900-2999 (not sure I like this since each build could conceivably come up with a different value), second one gets 2903 reserved for it?
+
