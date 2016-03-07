@@ -33,3 +33,11 @@ group: AID_INTEL_DMSTUFFER(2903)
 
 First one gets an unique value from 2900-2999 (not sure I like this since each build could conceivably come up with a different value), second one gets 2903 reserved for it?
 
+50:2-50:37
+Mon Mar 07 23:23:14 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 37af7563_c6f242fa
+UUID: 77dc8dfd_f6a5b8cb
+Bytes: 181
+Lets fix that. I was wondering if that was a possible feature I was missing. I didn't have much for old examples to go buy and the docs we got for this were difficult to understand.
+
