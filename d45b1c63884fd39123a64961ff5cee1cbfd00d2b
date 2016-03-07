@@ -9,3 +9,25 @@ UUID: 773acdf7_80b616ff
 Bytes: 210
 Do I actually need to assign this to a non LOCAL_ intermediate for the recipe? I capture it below and over-ride my_fs_config_h. This seems to work ok in all my builds, is their some corner case I am unaware of?
 
+84
+Mon Mar 07 21:03:15 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 773acdf7_80b616ff
+UUID: 77b56dab_a87d9bb9
+Bytes: 151
+No, this works. The other variable just works better when you need to generate more than one source file (and it's a bit shorter to read on every line)
+
+88
+Mon Mar 07 21:03:15 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b7bb659f_ca76c3de
+Bytes: 113
+Using $(transform-generated-source) is preferred here, it prints a clean header and handles showcommands for you.
+
+90:0-90:44
+Mon Mar 07 21:03:15 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 77b56dab_68e243c1
+Bytes: 40
+This shouldn't be needed anymore, right?
+
