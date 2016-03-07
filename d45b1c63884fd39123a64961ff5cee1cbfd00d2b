@@ -17,6 +17,14 @@ UUID: 77b56dab_a87d9bb9
 Bytes: 151
 No, this works. The other variable just works better when you need to generate more than one source file (and it's a bit shorter to read on every line)
 
+84
+Mon Mar 07 21:25:53 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 77b56dab_a87d9bb9
+UUID: 773acdf7_206f4a02
+Bytes: 4
+Done
+
 88
 Mon Mar 07 21:03:15 2016 +0000
 Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -24,10 +32,26 @@ UUID: b7bb659f_ca76c3de
 Bytes: 113
 Using $(transform-generated-source) is preferred here, it prints a clean header and handles showcommands for you.
 
+88
+Mon Mar 07 21:25:53 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b7bb659f_ca76c3de
+UUID: 77b56dab_6811e333
+Bytes: 4
+Done
+
 90:0-90:44
 Mon Mar 07 21:03:15 2016 +0000
 Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 77b56dab_68e243c1
 Bytes: 40
 This shouldn't be needed anymore, right?
+
+90:0-90:44
+Mon Mar 07 21:25:53 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 77b56dab_68e243c1
+UUID: 97d581d1_1155ecef
+Bytes: 139
+No we need this as far as I can tell. With out it, it uses the default under (set on line 72) : $(LOCAL_PATH)/default/$(ANDROID_FS_CONFIG_H
 
