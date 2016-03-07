@@ -9,6 +9,14 @@ UUID: 77b56dab_08414715
 Bytes: 147
 I can upload a change that makes this method print a warning that its deprecated and then have another change make it an error and remove this way.
 
+28
+Mon Mar 07 21:55:39 2016 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 77b56dab_08414715
+UUID: 773acdf7_c03e5ebf
+Bytes: 127
+We will have to update the corresponding documentation. Alas, once documented externally we have a long road to deprecation :-(
+
 File: tools/fs_config/README
 
 50:2-50:37
