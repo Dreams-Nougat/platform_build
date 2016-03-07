@@ -1,0 +1,11 @@
+Revision: da9a71dd2055f485a2196d42c7b466c852448669
+Patch-set: 3
+File: tools/fs_config/Android.mk
+
+105
+Mon Mar 07 18:43:01 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 978741d1_4146322f
+Bytes: 78
+Why isn't this implemented as a standard generated header file in this module?
+
