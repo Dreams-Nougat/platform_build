@@ -1,0 +1,11 @@
+Revision: 08800fd905e70faf01d9392d00ff3f49d99097b7
+Patch-set: 2
+File: core/dumpvar.mk
+
+118:37-118:51
+Mon Mar 07 19:04:17 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2239f1b4_b3e860ce
+Bytes: 87
+Yeah, this won't work with absolute OUT_DIRs, $(abspath $($(v))) should be used instead
+
