@@ -9,3 +9,11 @@ UUID: 978741d1_4146322f
 Bytes: 78
 Why isn't this implemented as a standard generated header file in this module?
 
+105
+Mon Mar 07 18:53:41 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 978741d1_4146322f
+UUID: f7331df3_0fa4c9cf
+Bytes: 145
+Im not really an expert on Android makefiles, is their some documentation or example you can point me to so I can understand your comment better?
+
