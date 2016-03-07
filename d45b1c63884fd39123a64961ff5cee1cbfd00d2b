@@ -1,0 +1,11 @@
+Revision: d45b1c63884fd39123a64961ff5cee1cbfd00d2b
+Patch-set: 5
+File: tools/fs_config/Android.mk
+
+84
+Mon Mar 07 20:58:14 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 773acdf7_80b616ff
+Bytes: 210
+Do I actually need to assign this to a non LOCAL_ intermediate for the recipe? I capture it below and over-ride my_fs_config_h. This seems to work ok in all my builds, is their some corner case I am unaware of?
+
