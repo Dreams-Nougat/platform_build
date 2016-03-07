@@ -25,3 +25,24 @@ UUID: 977021c5_3931efe6
 Bytes: 57
 Are you saying I should be using LOCAL_GENERATED_SOURCES?
 
+105
+Mon Mar 07 20:44:39 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 977021c5_3931efe6
+UUID: b7bb659f_8ac9ab74
+Bytes: 640
+Yes, using LOCAL_GENERATED_SOURCES:
+
+  LOCAL_MODULE_CLASS := EXECUTABLES
+  ifneq ($(TARGET_FS_CONFIG_GEN),)
+  gen := $(local-generated-sources-dir)/android_filesystem_config.h
+  $(gen): PRIVATE_LOCAL_PATH := $(LOCAL_PATH)
+  $(gen): PRIVATE_TARGET_FS_CONFIG_GEN := $(TARGET_FS_CONFIG_GEN)
+  $(gen): PRIVATE_CUSTOM_TOOL = $(PRIVATE_LOCAL_PATH)/fs_config_generator.py $(PRIVATE_TARGET_FS_CONFIG_GEN) > $@
+  $(gen): $(TARGET_FS_CONFIG_GEN) $(LOCAL_PATH)/fs_config_generator
+  	$(transform-generated-source)
+  LOCAL_GENERATED_SOURCES := $(gen)
+  endif
+
+There's some documentation under build/core/build-system.html, but parts are not up to date.
+
