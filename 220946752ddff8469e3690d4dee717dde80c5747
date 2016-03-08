@@ -123,3 +123,11 @@ UUID: 97be618f_666907f9
 Bytes: 129
 I can live with not being able to specify multiple identical AID_* references, I viewed it as a convenience for the lazy ;-} SGTM
 
+50:2-50:37
+Tue Mar 08 17:53:34 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 97be618f_666907f9
+UUID: 97be618f_06184b95
+Bytes: 152
+Ok Ill move down this path continuing with the simpler ini formatted input file. Ill likely get back to this tonight or tomorrow. Thanks for the inputs.
+
