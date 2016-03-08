@@ -9,3 +9,13 @@ UUID: 2239f1b4_f60bb671
 Bytes: 22
 where is it generated?
 
+1724:34-1724:50
+Tue Mar 08 03:18:53 2016 +0000
+Author: Alex Deymo <1077068@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2239f1b4_f60bb671
+UUID: d748d9a2_5bbb63e8
+Bytes: 196
+https://android-review.googlesource.com/#/c/205756/
+
+Tao, do you prefer to generate it here? We need to check that the delta_generator built for this version does actually support its own version.
+
