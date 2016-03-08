@@ -19,3 +19,11 @@ https://android-review.googlesource.com/#/c/205756/
 
 Tao, do you prefer to generate it here? We need to check that the delta_generator built for this version does actually support its own version.
 
+1724:34-1724:50
+Tue Mar 08 05:33:02 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d748d9a2_5bbb63e8
+UUID: 2274917a_49fe9180
+Bytes: 94
+Do we need to read the string on device? I'm thinking why it should go into $(TARGET_OUT_ETC).
+
