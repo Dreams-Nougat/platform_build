@@ -97,3 +97,21 @@ Regardless, I have the expectation that new AIDs need construct-time uniqueness 
 
 IMHO JSON barfs too easily on bad syntax, format may be too rigid for human composure? Explaining the JSON format in the README might be more complicated, we want to make things easier on all without having them require a reading of a wiki page to enter. But there are so many support libraries for it that the developer can use to compose them...
 
+50:2-50:37
+Tue Mar 08 17:39:37 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 97be618f_46b64302
+UUID: 97be618f_0677ebdb
+Bytes: 475
+I'm fine with that. However, multiple specifications of AID_BILL within the same file will fail (ini spec), and we can throw an error across ini files if they specify it.
+
+I really disliked the JSON appraoch, so i'm on board there. My other suggestion would have been XML:
+
+<config>
+  <aid name="AID_BILL" value="0x8888" />
+  <cap path="/foo" ... />
+</config>
+
+My requirement on file format, is that its part of the python
+installed runtime, I don't want to drag in any deps.
+
