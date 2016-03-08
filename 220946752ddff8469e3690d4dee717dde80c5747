@@ -115,3 +115,11 @@ I really disliked the JSON appraoch, so i'm on board there. My other suggestion 
 My requirement on file format, is that its part of the python
 installed runtime, I don't want to drag in any deps.
 
+50:2-50:37
+Tue Mar 08 17:44:25 2016 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 97be618f_0677ebdb
+UUID: 97be618f_666907f9
+Bytes: 129
+I can live with not being able to specify multiple identical AID_* references, I viewed it as a convenience for the lazy ;-} SGTM
+
