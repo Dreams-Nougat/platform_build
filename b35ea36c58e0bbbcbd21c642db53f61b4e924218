@@ -1,0 +1,11 @@
+Revision: b35ea36c58e0bbbcbd21c642db53f61b4e924218
+Patch-set: 1
+File: core/Makefile
+
+1724:34-1724:50
+Tue Mar 08 02:39:48 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2239f1b4_f60bb671
+Bytes: 22
+where is it generated?
+
