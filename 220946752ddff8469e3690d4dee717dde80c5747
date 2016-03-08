@@ -41,3 +41,39 @@ UUID: 77dc8dfd_f6a5b8cb
 Bytes: 181
 Lets fix that. I was wondering if that was a possible feature I was missing. I didn't have much for old examples to go buy and the docs we got for this were difficult to understand.
 
+50:2-50:37
+Tue Mar 08 00:39:00 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 77dc8dfd_f6a5b8cb
+UUID: 97be618f_5d2dbb47
+Bytes: 575
+Before I go down a rabbit hole, let me confirm I understand what your conveying. In this android_filesystem_config.h file, this is valid:
+
+#define AID_MYAID 0x2901
+
+If we want this, I am thinking we could switch the data format to something like this
+
+JSON:
+
+[
+{
+  "mode"  : "0700",
+  "user"  : "AID_RADIO",
+  "group" : "AID_SHELL",
+  "caps"  : "BLOCK_SUSPEND",
+  "path"  : "system/bin/qmuxd"
+}
+,
+{
+  "aid" : "AID_BILL",
+  "value" : "0x42"
+}
+]
+
+--- EOF ----
+
+
+That could also be expressed as just one of the single objects in the file, or an array of these things.
+
+Thoughts?
+
