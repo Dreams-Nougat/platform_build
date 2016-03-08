@@ -77,3 +77,23 @@ That could also be expressed as just one of the single objects in the file, or a
 
 Thoughts?
 
+50:2-50:37
+Tue Mar 08 17:11:18 2016 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 97be618f_5d2dbb47
+UUID: 97be618f_46b64302
+Bytes: 1070
+Just ideas.
+
+IMHO with a simple KISS extension of the current format? AID_* without slashes must _always_ be prefixed, 'value:' field aids the context/syntax of the specification (just in case someone decided to make a root directory file AID_ME ;-/)
+
+[AID_BILL]
+value: 0x2901
+
+[system/bin/qmuxd]
+...
+
+Regardless, I have the expectation that new AIDs need construct-time uniqueness checking (we may get that from a compilation error of the constructed android_filesystem_config.h file if not, harder to figure out _who_ created the problem?), but multiple files can specify the _exact_ _same_ AID I would expect without harm. Range checking for sure, let's start with the OEM range, we can open it up later if we need to.
+
+IMHO JSON barfs too easily on bad syntax, format may be too rigid for human composure? Explaining the JSON format in the README might be more complicated, we want to make things easier on all without having them require a reading of a wiki page to enter. But there are so many support libraries for it that the developer can use to compose them...
+
