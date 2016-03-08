@@ -27,3 +27,12 @@ UUID: 2274917a_49fe9180
 Bytes: 94
 Do we need to read the string on device? I'm thinking why it should go into $(TARGET_OUT_ETC).
 
+1724:34-1724:50
+Tue Mar 08 19:32:56 2016 +0000
+Author: Sen Jiang <1079733@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2274917a_49fe9180
+UUID: 979d8172_14e7da01
+Bytes: 348
+We have a unit test that checks if the current version is compatible, and unit test runs on the device...
+I'm trying to see if I can change zlib_fingerprint to a host module and copy the file when building unit test, but it seems HOST_OUT_ETC don't exist, and I have to change LOCAL_MODULE_CLASS to EXECUTABLES, do you have a better way to do this?
+
