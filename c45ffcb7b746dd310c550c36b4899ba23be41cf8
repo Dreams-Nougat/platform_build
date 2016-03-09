@@ -9,10 +9,28 @@ UUID: d7de195a_ba61eda3
 Bytes: 42
 $(firstword $(mac_sdk_versions_supported))
 
+48:19-48:23
+Wed Mar 09 04:31:48 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d7de195a_ba61eda3
+UUID: d7de195a_25fa82d1
+Bytes: 4
+Done
+
 50:0-50:50
 Wed Mar 09 02:23:35 2016 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: d7de195a_5a79e954
 Bytes: 279
 I am not familiar with this, but looks like we don't need this because we already have "-mmacosx-version-min=$(mac_sdk_version)" in HOST_GLOBAL_CFLAGS. See http://stackoverflow.com/questions/25352389/difference-between-macosx-deployment-target-and-mmacosx-version-min-compiler-op
+
+50:0-50:50
+Wed Mar 09 04:31:48 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d7de195a_5a79e954
+UUID: d7de195a_e5b47a1a
+Bytes: 406
+They are mostly the same, but I've found some references to the linker not getting forwarded the argument in some versions. But since the latest reference I found was with 10.6, and we aren't using the platform compiler, this should be safe to remove. I'll do that with the next patch after verifying.
+
+We're setting -DMACOSX_DEPLOYMENT_TARGET too, and I've found no reference to that in any documentation.
 
