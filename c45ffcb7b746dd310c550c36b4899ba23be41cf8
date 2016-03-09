@@ -34,3 +34,11 @@ They are mostly the same, but I've found some references to the linker not getti
 
 We're setting -DMACOSX_DEPLOYMENT_TARGET too, and I've found no reference to that in any documentation.
 
+50:0-50:50
+Wed Mar 09 04:40:30 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d7de195a_e5b47a1a
+UUID: d7de195a_a5a9d2bb
+Bytes: 45
+Verified that we don't need this, so removed.
+
