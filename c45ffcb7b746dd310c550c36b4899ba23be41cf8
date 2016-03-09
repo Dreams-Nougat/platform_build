@@ -1,0 +1,18 @@
+Revision: c45ffcb7b746dd310c550c36b4899ba23be41cf8
+Patch-set: 2
+File: core/combo/mac_version.mk
+
+48:19-48:23
+Wed Mar 09 02:23:35 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d7de195a_ba61eda3
+Bytes: 42
+$(firstword $(mac_sdk_versions_supported))
+
+50:0-50:50
+Wed Mar 09 02:23:35 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d7de195a_5a79e954
+Bytes: 279
+I am not familiar with this, but looks like we don't need this because we already have "-mmacosx-version-min=$(mac_sdk_version)" in HOST_GLOBAL_CFLAGS. See http://stackoverflow.com/questions/25352389/difference-between-macosx-deployment-target-and-mmacosx-version-min-compiler-op
+
