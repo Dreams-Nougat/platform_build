@@ -1,0 +1,20 @@
+Revision: a9b0bfb72908856982f36624f12b7c5562079d93
+Patch-set: 1
+File: core/config.mk
+
+830
+Wed Mar 09 16:37:08 2016 +0000
+Author: Yohann Roussel <1023201@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3776954b_0ea8ebe9
+Bytes: 278
+I had a little doubt here: is it possible that current would be sometimes the same version as one available from its number? I suppose the answer to this question is yes. So that means this line would switch to N+1 as soon as sdk_vN is imported. That would be probably too soon.
+
+File: core/prebuilt_internal.mk
+
+342:66-342:88
+Wed Mar 09 16:37:08 2016 +0000
+Author: Yohann Roussel <1023201@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3776954b_2ea5a710
+Bytes: 92
+No that's dangerous, the library could be imported in an app compiling against an older SDK.
+
