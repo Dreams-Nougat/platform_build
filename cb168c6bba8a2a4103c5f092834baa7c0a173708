@@ -1,0 +1,11 @@
+Revision: cb168c6bba8a2a4103c5f092834baa7c0a173708
+Patch-set: 1
+File: core/cxx_stl_setup.mk
+
+115:32-115:102
+Wed Mar 09 02:12:47 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d7de195a_7a26e5b1
+Bytes: 82
+nit: add a variable to mac_version.mk so we don't spread this path in many places.
+
