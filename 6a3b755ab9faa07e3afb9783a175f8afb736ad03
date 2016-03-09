@@ -1,0 +1,11 @@
+Revision: 6a3b755ab9faa07e3afb9783a175f8afb736ad03
+Patch-set: 2
+File: core/config.mk
+
+830
+Wed Mar 09 17:08:41 2016 +0000
+Author: Jean-Philippe Lesot <1015381@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 57686970_678af2da
+Bytes: 35
+I think we have to comment on that.
+
