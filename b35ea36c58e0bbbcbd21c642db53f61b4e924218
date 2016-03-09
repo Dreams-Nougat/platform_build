@@ -36,3 +36,11 @@ Bytes: 348
 We have a unit test that checks if the current version is compatible, and unit test runs on the device...
 I'm trying to see if I can change zlib_fingerprint to a host module and copy the file when building unit test, but it seems HOST_OUT_ETC don't exist, and I have to change LOCAL_MODULE_CLASS to EXECUTABLES, do you have a better way to do this?
 
+1724:34-1724:50
+Wed Mar 09 00:07:22 2016 +0000
+Author: Sen Jiang <1079733@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 979d8172_14e7da01
+UUID: d7de195a_6eae2ffb
+Bytes: 23
+Changed to HOST_OUT_GEN
+
