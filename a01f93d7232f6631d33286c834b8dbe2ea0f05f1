@@ -1,0 +1,35 @@
+Revision: a01f93d7232f6631d33286c834b8dbe2ea0f05f1
+Patch-set: 3
+File: core/config.mk
+
+831:36-831:38
+Thu Mar 10 02:07:42 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d7de195a_1759ead5
+Bytes: 80
+When and who will we update this number?
+Can't we just use PLATFORM_SDK_VERSION?
+
+File: core/definitions.mk
+
+1989:4-1989:60
+Thu Mar 10 02:07:42 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d7de195a_57ce52d3
+Bytes: 507
+I am wondering how this min api level is used by Jack.
+Note that A module with lower LOCAL_SDK_VERSION may import a static library with higher LOCAL_SDK_VERSION.
+For example, android-support-v4 (with LOCAL_SDK_VERSION := 4) imports android-support-v4-api24 (with LOCAL_SDK_VERSION := current, 24 for N). android-support-v4 will be included by apps that target platform with API level 4. Is that OK?
+
+This is similar to how we want to enable Java 8 language feature based on LOCAL_SDK_VERSION. See ag/879640.
+
+File: core/java.mk
+
+32:8-32:29
+Thu Mar 10 02:07:42 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d7de195a_b72b3661
+Bytes: 104
+this isn't a LOCAL variable that can be set by Android.mk.
+Please use something like my_min_sdk_version.
+
