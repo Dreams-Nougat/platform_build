@@ -23,6 +23,16 @@ For example, android-support-v4 (with LOCAL_SDK_VERSION := 4) imports android-su
 
 This is similar to how we want to enable Java 8 language feature based on LOCAL_SDK_VERSION. See ag/879640.
 
+1989:4-1989:60
+Thu Mar 10 14:58:10 2016 +0000
+Author: Jean-Philippe Lesot <1015381@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d7de195a_57ce52d3
+UUID: 976e6179_8c8aa79a
+Bytes: 559
+The flag in Jack drives how the dex is generated. For now, this will only emit an error on default/static methods if target is < 24. We plan to add other specific warnings/errors/code-variants to avoid bugs or use future opcodes. It is why we really need the current sdk version, and not the previous one like PLATFORM_SDK_VERSION (IIUC).
+
+Yes, the LOCAL_SDK_VERSION of a library doesn't matter here, because a Jack library is target independent. This is really the final generated dex which is impacted by this flag, despite how are build their dependencies.
+
 File: core/java.mk
 
 32:8-32:29
