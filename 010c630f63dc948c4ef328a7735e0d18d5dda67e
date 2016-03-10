@@ -1,0 +1,11 @@
+Revision: 010c630f63dc948c4ef328a7735e0d18d5dda67e
+Base-for-patch-set: 4
+File: core/ninja.mk
+
+10:0-10:37
+Thu Mar 10 01:38:15 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: d7de195a_97295ad2
+Bytes: 54
+There is still reference of KATI in build/core/main.mk
+
