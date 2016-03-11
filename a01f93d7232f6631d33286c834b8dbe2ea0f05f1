@@ -10,6 +10,16 @@ Bytes: 80
 When and who will we update this number?
 Can't we just use PLATFORM_SDK_VERSION?
 
+831:36-831:38
+Fri Mar 11 11:39:33 2016 +0000
+Author: Yohann Roussel <1023201@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d7de195a_1759ead5
+UUID: f7723d90_b41220a8
+Bytes: 376
+I suppose the jack-team will have to do it when a bump is required during development or it will have to be bump at least when PLATFORM_SDK_VERSION is bumped.
+
+I didn't know about PLATFORM_SDK_VERSION. We can't use this one since it's still at 23 (See Jean-Philippe response in definitions.mk). I renamed this variable and moved its definition close to PLATFORM_SDK_VERSION's.
+
 File: core/definitions.mk
 
 1989:4-1989:60
@@ -42,4 +52,12 @@ UUID: d7de195a_b72b3661
 Bytes: 104
 this isn't a LOCAL variable that can be set by Android.mk.
 Please use something like my_min_sdk_version.
+
+32:8-32:29
+Fri Mar 11 11:39:33 2016 +0000
+Author: Yohann Roussel <1023201@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: d7de195a_b72b3661
+UUID: 974d815c_71c7d85d
+Bytes: 4
+Done
 
