@@ -80,3 +80,12 @@ UUID: 57bb093b_ff00abe6
 Bytes: 85
 Right, but this change adds libasan as a dependency to LOCAL_SANITIZE:=never targets.
 
+117
+Mon Mar 14 19:21:16 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 57bb093b_ff00abe6
+UUID: 57bb093b_9f623fa5
+Bytes: 458
+I see what you meant now.
+When my_global_santitize is set, any LOCAL_SANITIZE:=never module still has a potential to depend on libasan, if it depends on something that uses libasan. This patch is to make that work to build any LOCAL_SANITIZE:=never module. We should make sure that libc does not actually use anything that uses libasan or libasan should not use libc. Then the extra unused link library should be okay. I think that condition is true for now.
+
