@@ -125,3 +125,13 @@ Bytes: 266
 Ah, that's true. I am not sure yet if that circular dependency between .so files would cause real runtime problem.
 Probably we should add -Wl,--as-needed here, but now I don't understand the need of -Wl,--no-as-needed at line 110, for LOCAL_IS_HOST_MODULE case. Dan?
 
+117
+Mon Mar 14 23:01:54 2016 +0000
+Author: Evgenii Stepanov <1005967@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 57bb093b_259a2696
+UUID: 57bb093b_9417c1d4
+Bytes: 256
+--as-needed would not work for sanitize=never executables - they don't "need" ASan runtime, but we still want them to link it.
+
+Maybe limit this new functionality (ASan linking of sanitize=never) to executables? This is getting more and more complicated...
+
