@@ -1,0 +1,11 @@
+Revision: dd51adc67cc7dcb89da72571cf9f1031413708d3
+Patch-set: 4
+File: core/Makefile
+
+510
+Mon Mar 14 18:57:32 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 57bb093b_9ffebf4f
+Bytes: 80
+although may be no-op, should these lines be guarded with BOARD_BVB_ENABLE flag?
+
