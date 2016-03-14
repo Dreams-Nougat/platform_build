@@ -26,3 +26,14 @@ UUID: 57bb093b_f4f9f294
 Bytes: 228
 If it's empty in all configurations, it's better to just remove it. An explicit check against ...RUNTIME_LIBRARY is a lot less confusing, and you can also move the my_static_libraries line below (line 121) under this check, too.
 
+117
+Mon Mar 14 18:27:21 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 57bb093b_f4f9f294
+UUID: 57bb093b_94586602
+Bytes: 340
+$(ADDRESS_SANITIZER_CONFIG_EXTRA_STATIC_LIBRARIES) is libasan, which we should check to avoid recursive dependency.
+I guess ADDRESS_SANITIZER_CONFIG_EXTRA_SHARED_LIBRARIES  is there, although empty now, for the future in case we need something like libasan as shared library.
+I think Dan added those two variables.
+I will check it with him.
+
