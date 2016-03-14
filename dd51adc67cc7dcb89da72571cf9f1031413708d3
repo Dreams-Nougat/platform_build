@@ -9,3 +9,11 @@ UUID: 57bb093b_9ffebf4f
 Bytes: 80
 although may be no-op, should these lines be guarded with BOARD_BVB_ENABLE flag?
 
+510
+Mon Mar 14 19:00:58 2016 +0000
+Author: David Zeuthen <1076971@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 57bb093b_9ffebf4f
+UUID: 17c6f1d9_889fd789
+Bytes: 20
+Sure, I can do that.
+
