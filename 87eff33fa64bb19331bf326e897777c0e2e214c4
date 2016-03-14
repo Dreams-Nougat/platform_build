@@ -9,3 +9,12 @@ UUID: 57bb093b_aeeefba5
 Bytes: 94
 Maybe compare directly with $($(LOCAL_2ND_ARCH_VAR_PREFIX)ADDRESS_SANITIZER_RUNTIME_LIBRARY) ?
 
+117
+Mon Mar 14 18:03:39 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 57bb093b_aeeefba5
+UUID: 57bb093b_349a5a8b
+Bytes: 217
+Although $(ADDRESS_SANITIZER_CONFIG_EXTRA_SHARED_LIBRARIES) is empty now, I think it is safer to check it too here.
+make complains about recursive dependency if $(my_shared_libraries) contains current $(LOCAL_MODULE).
+
