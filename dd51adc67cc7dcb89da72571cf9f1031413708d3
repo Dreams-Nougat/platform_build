@@ -17,3 +17,11 @@ UUID: 17c6f1d9_889fd789
 Bytes: 20
 Sure, I can do that.
 
+510
+Mon Mar 14 19:04:20 2016 +0000
+Author: David Zeuthen <1076971@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 17c6f1d9_889fd789
+UUID: 17c6f1d9_c8a9cfbb
+Bytes: 175
+Although, it gets really messy later on when we add to it (lines 531 and 540) since we'd also need the same guard in those places. So I'd prefer not to.. unless you insist :-)
+
