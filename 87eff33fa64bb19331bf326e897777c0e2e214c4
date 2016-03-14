@@ -99,3 +99,12 @@ We already have libasan depending on libc.
 Libc is LOCAL_SANITIZE:=never, so this change will make libc depend on libasan.
 That's a dependency loop. Do I miss anything?
 
+117
+Mon Mar 14 21:01:29 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 57bb093b_fa739971
+UUID: 57bb093b_c5d87a38
+Bytes: 272
+libasan depends on libc, but libc does not depend on libasan.
+Although this patch adds libasan.a to link with libc.so, it was linked with -Wl,--no-whole-archive, so code in libasan.a does not get into libc.so. Later it is still possible to use the libc.so without libasan.
+
