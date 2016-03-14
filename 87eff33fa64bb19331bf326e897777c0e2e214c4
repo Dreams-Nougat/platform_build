@@ -72,3 +72,11 @@ UUID: 57bb093b_dfca0719
 Bytes: 93
 Okay, i am going to remove ADDRESS_SANITIZER_CONFIG_EXTRA_SHARED_LIBRARIES in my next upload.
 
+117
+Mon Mar 14 19:09:06 2016 +0000
+Author: Evgenii Stepanov <1005967@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 57bb093b_bfa0e36b
+UUID: 57bb093b_ff00abe6
+Bytes: 85
+Right, but this change adds libasan as a dependency to LOCAL_SANITIZE:=never targets.
+
