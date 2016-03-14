@@ -108,3 +108,11 @@ Bytes: 272
 libasan depends on libc, but libc does not depend on libasan.
 Although this patch adds libasan.a to link with libc.so, it was linked with -Wl,--no-whole-archive, so code in libasan.a does not get into libc.so. Later it is still possible to use the libc.so without libasan.
 
+117
+Mon Mar 14 21:05:09 2016 +0000
+Author: Evgenii Stepanov <1005967@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 57bb093b_c5d87a38
+UUID: 57bb093b_052442f3
+Bytes: 97
+But this patch also adds libclang_rt.asan-arm-android.so to libc deps, which is a shared library.
+
