@@ -37,3 +37,13 @@ I guess ADDRESS_SANITIZER_CONFIG_EXTRA_SHARED_LIBRARIES  is there, although empt
 I think Dan added those two variables.
 I will check it with him.
 
+117
+Mon Mar 14 18:38:08 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 57bb093b_94586602
+UUID: 57bb093b_14bf56f2
+Bytes: 113
+It used to contain libdl https://android-review.git.corp.google.com/#/c/155082/
+
+Don't think we need it any more.
+
