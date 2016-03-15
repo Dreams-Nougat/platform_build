@@ -1,0 +1,11 @@
+Revision: 10baeeebc449d7db7ecae7f153955e796604c798
+Base-for-patch-set: 1
+File: core/config.mk
+
+835
+Tue Mar 15 10:12:18 2016 +0000
+Author: Yohann Roussel <1023201@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 373e959c_3142aa88
+Bytes: 100
+This was introduce by mistake in https://android-review.googlesource.com/#/c/207351/4/core/config.mk
+
