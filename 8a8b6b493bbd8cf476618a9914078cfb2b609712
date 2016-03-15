@@ -17,3 +17,21 @@ UUID: 17c6f1d9_1415c25c
 Bytes: 13
 Done. Thanks.
 
+136
+Tue Mar 15 23:57:59 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 17c6f1d9_1415c25c
+UUID: 17c6f1d9_b4314eec
+Bytes: 397
+I need to revert to my PS4. PS5 does not work.
+
+LOCAL_ARM_MODE:=arm should be set only if
+LOCAL_SANITIZE does not overwrite SANITIZE_TARGET.
+In other words, only when $(my_sanitize) has address,
+we will set my_cflags and LOCAL_ARM_MODE.
+
+system/extras/tests/memtest/Android.mk
+has LOCAL_SANITIZE:=never to avoid
+LOCAL_ARM_MODE:=arm because its inline assembly
+code must be compiled in thumb2 mode.
+
