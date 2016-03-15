@@ -135,3 +135,12 @@ Bytes: 256
 
 Maybe limit this new functionality (ASan linking of sanitize=never) to executables? This is getting more and more complicated...
 
+117
+Tue Mar 15 22:40:08 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 57bb093b_9417c1d4
+UUID: 17c6f1d9_19c4dbb1
+Bytes: 94
+Now limited --as-needed only to shared libraries on target.
+Please take a look of patch set 4.
+
