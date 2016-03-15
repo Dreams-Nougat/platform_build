@@ -1,0 +1,12 @@
+Revision: 2220ec10a0a3964050b4376404bae6839a6ee6ad
+Patch-set: 2
+File: core/ccache.mk
+
+20:2-20:80
+Tue Mar 15 17:19:14 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 57bb093b_f9143ed1
+Bytes: 68
+You can use pure makefile as:
+export CCACHE_COMPILERCHECK ?= content
+
