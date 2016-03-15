@@ -1,0 +1,11 @@
+Revision: 3e30d97dde42416a1762c161ed7217d4e7ebf2c6
+Patch-set: 2
+File: tools/releasetools/ota_from_target_files.py
+
+542:64-542:73
+Tue Mar 15 20:31:13 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 17c6f1d9_cef3974e
+Bytes: 128
+was wrongly using "target_info_dict" due to copy-paste error and didn't capture that by verifying the incremental OTA path only.
+
