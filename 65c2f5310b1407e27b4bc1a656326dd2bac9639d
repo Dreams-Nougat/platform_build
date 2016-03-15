@@ -9,3 +9,11 @@ UUID: 57bb093b_9465018d
 Bytes: 55
 You need to add $(BVBTOOL) as dependency of system.img.
 
+1155:0-1155:112
+Tue Mar 15 15:56:50 2016 +0000
+Author: David Zeuthen <1076971@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 57bb093b_9465018d
+UUID: 17c6f1d9_4b0039e5
+Bytes: 94
+Looks like I can just conditionally add it to FULL_SYSTEMIMAGE_DEPS - stay tuned for a new PS.
+
