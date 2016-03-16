@@ -1,0 +1,12 @@
+Revision: 83d51c8ad1cb43cd5e0542830cf39fc9758b4480
+Patch-set: 1
+File: tools/warn.py
+
+59
+Wed Mar 16 19:28:07 2016 +0000
+Author: Marco Nelissen <1001525@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5c6a4eda_7db66f24
+Bytes: 154
+Do we actually have code that does this?
+I remember at one point we had one line of code that did this, which I fixed and then made that warning an error.
+
