@@ -10,3 +10,11 @@ Bytes: 163
 Change to a less specific variable something like SOONG_SKIP_DEPENDENCY_CHECK?
 I believe there are be more cases we can't have the complete dependency in the tree.
 
+36:72-36:94
+Wed Mar 16 19:44:08 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5c6a4eda_5d612be3
+UUID: 5c6a4eda_a02620fe
+Bytes: 114
+Done. I also piped it through as a separate option into Soong, since "Unbundled" does change some other logic too.
+
