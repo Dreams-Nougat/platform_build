@@ -30,3 +30,11 @@ UUID: 5c6a4eda_e075f8d3
 Bytes: 131
 Those both seem untrue to me based on a quick look, but perhaps I'm overlooking an edge case. Still, good to have those classified.
 
+59
+Wed Mar 16 21:01:17 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5c6a4eda_e075f8d3
+UUID: 5c6a4eda_abfcc184
+Bytes: 121
+Yes, sometime static analyzer's warning is wrong because it does not see assert or some function used by ASSERT or CHECK.
+
