@@ -22,3 +22,11 @@ I saw two at:
 external/sqlite/dist/sqlite3.c:72822:3: warning: Address of stack memory associated with local variable 'zBase' returned to caller
 external/sqlite/dist/sqlite3.c:108799:3: warning: Address of stack memory associated with local variable 'standin' returned to caller
 
+59
+Wed Mar 16 19:46:33 2016 +0000
+Author: Marco Nelissen <1001525@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5c6a4eda_e002d858
+UUID: 5c6a4eda_e075f8d3
+Bytes: 131
+Those both seem untrue to me based on a quick look, but perhaps I'm overlooking an edge case. Still, good to have those classified.
+
