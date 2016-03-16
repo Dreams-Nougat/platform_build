@@ -10,3 +10,15 @@ Bytes: 154
 Do we actually have code that does this?
 I remember at one point we had one line of code that did this, which I fixed and then made that warning an error.
 
+59
+Wed Mar 16 19:37:12 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5c6a4eda_7db66f24
+UUID: 5c6a4eda_e002d858
+Bytes: 388
+This warning is from clang static analyzer.
+It's rare and I have not checked all output from all targets yet.
+I saw two at:
+external/sqlite/dist/sqlite3.c:72822:3: warning: Address of stack memory associated with local variable 'zBase' returned to caller
+external/sqlite/dist/sqlite3.c:108799:3: warning: Address of stack memory associated with local variable 'standin' returned to caller
+
