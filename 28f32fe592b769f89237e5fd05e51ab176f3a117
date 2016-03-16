@@ -1,0 +1,12 @@
+Revision: 28f32fe592b769f89237e5fd05e51ab176f3a117
+Patch-set: 1
+File: core/soong.mk
+
+36:72-36:94
+Wed Mar 16 18:53:42 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5c6a4eda_5d612be3
+Bytes: 163
+Change to a less specific variable something like SOONG_SKIP_DEPENDENCY_CHECK?
+I believe there are be more cases we can't have the complete dependency in the tree.
+
