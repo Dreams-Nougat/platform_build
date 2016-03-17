@@ -10,3 +10,15 @@ Bytes: 240
 Unfortunately this does not work:
 The build system loads the the product makefiles first. It uses the PRODUCT_DEVICE to figure out the board name and then load the BoardConfig.mk. So you can't use board config variable in product makefiles.
 
+80:8-80:39
+Thu Mar 17 17:15:26 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7c21d2e1_280d8b1c
+UUID: 7c21d2e1_88abd7e6
+Bytes: 330
+But you can use board config variable in Android.mks. You can use LOCAL_REQUIRED_MODULES to pull in these two modules.
+Let's say it's called by the recovery exectuable, then you can write in recovery's module definition:
+ifeq ($(BOARD_CACHEIMAGE_PARTITION_SIZE),)
+LOCAL_REQUIRED_MODULES := recovery-persisit recovery-refresh
+endif
+
