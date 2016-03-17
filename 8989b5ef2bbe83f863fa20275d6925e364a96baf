@@ -1,0 +1,12 @@
+Revision: 8989b5ef2bbe83f863fa20275d6925e364a96baf
+Patch-set: 1
+File: target/product/core_minimal.mk
+
+80:8-80:39
+Thu Mar 17 17:08:02 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7c21d2e1_280d8b1c
+Bytes: 240
+Unfortunately this does not work:
+The build system loads the the product makefiles first. It uses the PRODUCT_DEVICE to figure out the board name and then load the BoardConfig.mk. So you can't use board config variable in product makefiles.
+
