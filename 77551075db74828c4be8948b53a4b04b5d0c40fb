@@ -1,0 +1,54 @@
+Revision: 77551075db74828c4be8948b53a4b04b5d0c40fb
+Patch-set: 6
+File: core/Makefile
+
+1761:0-1761:22
+Thu Mar 17 21:14:56 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7c21d2e1_a2d6b208
+Bytes: 73
+make it consistent with above by using "ifeq ($(BOARD_BVB_ENABLE),true)"?
+
+File: tools/releasetools/add_img_to_target_files.py
+
+78:59-78:60
+Thu Mar 17 21:14:56 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7c21d2e1_9765ae8e
+Bytes: 20
+(hello C programmer)
+
+308:7-308:65
+Thu Mar 17 21:14:56 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7c21d2e1_77a47ae3
+Bytes: 352
+can you help add some sanity checks for future refactoring?
+
+i assume by using board_bcb_enable, we should always see (a) has_recovery=False; (b) system_root_image=False; (c) OPTIONS.rebuild_recovery=False; (d) has_vendor=False. if so, can you hoist 'OPTIONS.info_dict.get("board_bvb_enable", None) == "true"' out to L294 and put some assertions there?
+
+File: tools/releasetools/common.py
+
+516:36-516:45
+Thu Mar 17 21:14:56 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7c21d2e1_22ebe2cc
+Bytes: 315
+we would never call this script outside the building process, right? for android, we need to pack this binary into otatools.zip, because we won't build host tools again when signing for release or generating OTA packages.
+
+similar thing for L557. but if we will only call this at build time, just ignore my concern.
+
+526:61-526:62
+Thu Mar 17 21:14:56 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7c21d2e1_7708fac1
+Bytes: 4
+same
+
+531:55-531:56
+Thu Mar 17 21:14:56 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7c21d2e1_97ee4e16
+Bytes: 4
+same
+
