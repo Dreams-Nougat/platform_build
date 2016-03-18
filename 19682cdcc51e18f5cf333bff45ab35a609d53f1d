@@ -2,6 +2,14 @@ Revision: 19682cdcc51e18f5cf333bff45ab35a609d53f1d
 Patch-set: 2
 File: core/java.mk
 
+721:1-721:67
+Fri Mar 18 01:26:46 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7c21d2e1_857d75f6
+Bytes: 306
+You cannot call compile-java here: now $(error_prone_classes_compiled_jar) and $(full_classes_compiled_jar) are competing for intermediate files like $(PRIVATE_CLASS_INTERMEDIATES_DIR)/java-source-list. See definition of compile-java in bulid/core/definitions.mk.
+My build fails due to this kind of errors.
+
 685:1-722:14
 Fri Mar 18 00:44:46 2016 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
