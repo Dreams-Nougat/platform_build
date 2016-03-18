@@ -9,6 +9,14 @@ UUID: 7c21d2e1_a2d6b208
 Bytes: 73
 make it consistent with above by using "ifeq ($(BOARD_BVB_ENABLE),true)"?
 
+1761:0-1761:22
+Fri Mar 18 19:23:34 2016 +0000
+Author: David Zeuthen <1076971@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7c21d2e1_a2d6b208
+UUID: 9c86862c_cc585f5e
+Bytes: 4
+Done
+
 File: tools/releasetools/add_img_to_target_files.py
 
 78:59-78:60
@@ -18,6 +26,14 @@ UUID: 7c21d2e1_9765ae8e
 Bytes: 20
 (hello C programmer)
 
+78:59-78:60
+Fri Mar 18 19:23:34 2016 +0000
+Author: David Zeuthen <1076971@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7c21d2e1_9765ae8e
+UUID: 9c86862c_2ce1fbbb
+Bytes: 17
+Oops - fixing :-)
+
 308:7-308:65
 Thu Mar 17 21:14:56 2016 +0000
 Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -26,6 +42,16 @@ Bytes: 352
 can you help add some sanity checks for future refactoring?
 
 i assume by using board_bcb_enable, we should always see (a) has_recovery=False; (b) system_root_image=False; (c) OPTIONS.rebuild_recovery=False; (d) has_vendor=False. if so, can you hoist 'OPTIONS.info_dict.get("board_bvb_enable", None) == "true"' out to L294 and put some assertions there?
+
+308:7-308:65
+Fri Mar 18 19:23:34 2016 +0000
+Author: David Zeuthen <1076971@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7c21d2e1_77a47ae3
+UUID: 9c86862c_0caef764
+Bytes: 337
+I've added asserts for a) through d).
+
+For has_vendor, I suppose we can drop that restriction in the future by adding verity-hashes to vendor.img and adding/modifying a /vendor entry in /fstab.<ro_hardware> such that it has the root-hash and salt. Therefore, I've made the assert read "VENDOR images currently incompatible with bvb". OK?
 
 File: tools/releasetools/common.py
 
@@ -38,6 +64,14 @@ we would never call this script outside the building process, right? for android
 
 similar thing for L557. but if we will only call this at build time, just ignore my concern.
 
+516:36-516:45
+Fri Mar 18 19:23:34 2016 +0000
+Author: David Zeuthen <1076971@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7c21d2e1_22ebe2cc
+UUID: 9c86862c_6cbdb392
+Bytes: 384
+I'm not sure how to answer this but I suspect the answer is no and here's why: For Brillo, we expect the developer to run 'm dist' and then upload the resulting target_files.zip to the cloud (Brillo Developer Console)... the developer is expected to have the right keys set with BOARD_BVB_ALGORITHM, BOARD_BVB_KEY_PATH before running 'm dist' and no resigning or anything is expected.
+
 526:61-526:62
 Thu Mar 17 21:14:56 2016 +0000
 Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -45,10 +79,26 @@ UUID: 7c21d2e1_7708fac1
 Bytes: 4
 same
 
+526:61-526:62
+Fri Mar 18 19:23:34 2016 +0000
+Author: David Zeuthen <1076971@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7c21d2e1_7708fac1
+UUID: 9c86862c_8ca10773
+Bytes: 4
+Done
+
 531:55-531:56
 Thu Mar 17 21:14:56 2016 +0000
 Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 7c21d2e1_97ee4e16
 Bytes: 4
 same
+
+531:55-531:56
+Fri Mar 18 19:23:34 2016 +0000
+Author: David Zeuthen <1076971@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7c21d2e1_97ee4e16
+UUID: 9c86862c_ac9ecb27
+Bytes: 4
+Done
 
