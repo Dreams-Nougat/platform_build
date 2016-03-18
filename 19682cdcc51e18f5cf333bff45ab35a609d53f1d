@@ -10,10 +10,26 @@ Bytes: 306
 You cannot call compile-java here: now $(error_prone_classes_compiled_jar) and $(full_classes_compiled_jar) are competing for intermediate files like $(PRIVATE_CLASS_INTERMEDIATES_DIR)/java-source-list. See definition of compile-java in bulid/core/definitions.mk.
 My build fails due to this kind of errors.
 
+721:1-721:67
+Fri Mar 18 04:16:33 2016 +0000
+Author: Ian Rogers <1010118@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7c21d2e1_857d75f6
+UUID: 7c21d2e1_037dfdb6
+Bytes: 182
+I'm not sure how you compete for a dependency, the point of reusing compile-java is to avoid reinventing its logic. Is executing 2 recipes in the same shell simultaneously the issue?
+
 685:1-722:14
 Fri Mar 18 00:44:46 2016 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 7c21d2e1_e5f6f17b
 Bytes: 157
 Can we just inject the new flags to the full_classes_compiled_jar rule if user asks for running error check, instead of setting up a new intermediate target?
+
+685:1-722:14
+Fri Mar 18 04:16:33 2016 +0000
+Author: Ian Rogers <1010118@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7c21d2e1_e5f6f17b
+UUID: 7c21d2e1_636b19f5
+Bytes: 30
+Let's discuss this in the bug.
 
