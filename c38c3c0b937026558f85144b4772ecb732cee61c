@@ -13,3 +13,11 @@ https://cs.corp.google.com/piper///depot/google3/wireless/android/launchcontrol/
 
 We need to clean up the build server config for all downstream branches.
 
+119:4-119:59
+Fri Mar 18 19:29:22 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7c21d2e1_fa9327d1
+UUID: 7c21d2e1_2010f06a
+Bytes: 212
+Ah, I missed those usecases. If I'm going to clean up the build server configs, what do you think about removing the default goal substitution entirely, and require 'droid' to be passed if that's what is desired?
+
