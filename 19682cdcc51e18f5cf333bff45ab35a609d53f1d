@@ -1,0 +1,11 @@
+Revision: 19682cdcc51e18f5cf333bff45ab35a609d53f1d
+Patch-set: 2
+File: core/java.mk
+
+685:1-722:14
+Fri Mar 18 00:44:46 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7c21d2e1_e5f6f17b
+Bytes: 157
+Can we just inject the new flags to the full_classes_compiled_jar rule if user asks for running error check, instead of setting up a new intermediate target?
+
