@@ -1,0 +1,15 @@
+Revision: c38c3c0b937026558f85144b4772ecb732cee61c
+Patch-set: 1
+File: core/product_config.mk
+
+119:4-119:59
+Fri Mar 18 18:03:31 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7c21d2e1_fa9327d1
+Bytes: 312
+I agree we should remove this.
+But our build server still has configuration using this for the sdk targets:
+https://cs.corp.google.com/piper///depot/google3/wireless/android/launchcontrol/config/prod/config_platform.py?rcl=117563675&l=427
+
+We need to clean up the build server config for all downstream branches.
+
