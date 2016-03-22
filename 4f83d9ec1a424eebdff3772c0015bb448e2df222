@@ -9,6 +9,14 @@ UUID: 7c21d2e1_ffff7c4a
 Bytes: 7
 warning
 
+9:15-9:21
+Tue Mar 22 17:12:50 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7c21d2e1_ffff7c4a
+UUID: 7c21d2e1_d5041738
+Bytes: 4
+Done
+
 File: tools/warn.py
 
 38:16-38:23
@@ -18,10 +26,26 @@ UUID: 7c21d2e1_df043838
 Bytes: 8
 Critical
 
+38:16-38:23
+Tue Mar 22 17:12:50 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7c21d2e1_df043838
+UUID: 7c21d2e1_b5aec362
+Bytes: 4
+Done
+
 49:11-49:17
 Tue Mar 22 07:52:11 2016 +0000
 Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 7c21d2e1_3f19149a
 Bytes: 95
 Do you really intend 'grey' here? Why not something like "Unhandled warnings" (or Unsupported)?
+
+49:11-49:17
+Tue Mar 22 17:12:50 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7c21d2e1_3f19149a
+UUID: 7c21d2e1_35a2d375
+Bytes: 4
+Done
 
