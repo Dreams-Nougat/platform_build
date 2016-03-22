@@ -13,3 +13,17 @@ CleanSpec.mk won't help, since we don't get that far.
 
 I could change this rule to make $(SOONG_OUT_DIR)/.soong.bootstrap depend on bootstrap.bash, so that anytime bootstrap.bash is updated, then we re-run bootstrap, but that's not strictly necessary. And ideally, we'd want to re-run it any time SOONG_OUT_DIR changes.
 
+16
+Tue Mar 22 23:31:38 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7c21d2e1_106076af
+UUID: 7c21d2e1_bd598261
+Bytes: 348
+I don't know anyone would encounter such issue in reality.
+If we really care we can use a variable dependency file like:
+soong_out_dir_dep := $(OUT_DIR)/$(subst /,-,$(SOONG_OUT_DIR)).soong_out_dir_dep
+$(soong_out_dir_dep) :
+  $(hide) mkdir -p $(dir $@) && rm -f $(dir $@)*.soong_out_dir_dep && touch $@
+$(SOONG): $(soong_out_dir_dep)
+  <the recipe>
+
