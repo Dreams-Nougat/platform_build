@@ -1,0 +1,15 @@
+Revision: 68dd6afa6f00d6da8cc02be4be787e7e947e429c
+Patch-set: 1
+File: core/soong.mk
+
+16
+Tue Mar 22 22:23:36 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7c21d2e1_106076af
+Bytes: 514
+My only problem with this change is that we aren't regenerating out/soong/.soong.bootstrap for any affected users, since we only run this target if out/soong/soong doesn't exist, which it will.
+
+CleanSpec.mk won't help, since we don't get that far.
+
+I could change this rule to make $(SOONG_OUT_DIR)/.soong.bootstrap depend on bootstrap.bash, so that anytime bootstrap.bash is updated, then we re-run bootstrap, but that's not strictly necessary. And ideally, we'd want to re-run it any time SOONG_OUT_DIR changes.
+
