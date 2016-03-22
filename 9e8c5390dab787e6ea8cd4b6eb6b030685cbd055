@@ -9,6 +9,14 @@ UUID: 7c21d2e1_7ffa6c61
 Bytes: 160
 I generally use the "http://b/" prefixed version, instead of just the bug number here, so that the links work everywhere in gerrit (and also when copy/pasting).
 
+12
+Tue Mar 22 16:30:44 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7c21d2e1_7ffa6c61
+UUID: 7c21d2e1_dad606c4
+Bytes: 114
+I didn't know the http://b/ version, but now i found a few commits with this syntax. I will try it in this commit.
+
 File: tools/warn.py
 
 545
@@ -17,4 +25,12 @@ Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 7c21d2e1_5ff7a878
 Bytes: 89
 Is there a patch for this in upstream yet? It would be a nice thing to quickly fix there.
+
+545
+Tue Mar 22 16:30:44 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7c21d2e1_5ff7a878
+UUID: 7c21d2e1_7afa7a61
+Bytes: 41
+Nop. I will try to get it fixed upstream.
 
