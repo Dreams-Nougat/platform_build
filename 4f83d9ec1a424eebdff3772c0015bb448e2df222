@@ -1,0 +1,27 @@
+Revision: 4f83d9ec1a424eebdff3772c0015bb448e2df222
+Patch-set: 1
+File: /COMMIT_MSG
+
+9:15-9:21
+Tue Mar 22 07:52:11 2016 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7c21d2e1_ffff7c4a
+Bytes: 7
+warning
+
+File: tools/warn.py
+
+38:16-38:23
+Tue Mar 22 07:52:11 2016 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7c21d2e1_df043838
+Bytes: 8
+Critical
+
+49:11-49:17
+Tue Mar 22 07:52:11 2016 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7c21d2e1_3f19149a
+Bytes: 95
+Do you really intend 'grey' here? Why not something like "Unhandled warnings" (or Unsupported)?
+
