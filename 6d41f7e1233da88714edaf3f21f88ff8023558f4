@@ -1,0 +1,11 @@
+Revision: 6d41f7e1233da88714edaf3f21f88ff8023558f4
+Base-for-patch-set: 1
+File: core/legacy_prebuilts.mk
+
+24
+Wed Mar 23 23:12:27 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7c21d2e1_f7d5c7fe
+Bytes: 80
+Verified on AOSP and internal master that clearing this list produces no errors.
+
