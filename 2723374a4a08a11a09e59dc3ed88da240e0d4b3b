@@ -1,0 +1,11 @@
+Revision: 2723374a4a08a11a09e59dc3ed88da240e0d4b3b
+Patch-set: 1
+File: core/main.mk
+
+1044:44-1044:48
+Thu Mar 24 18:08:21 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3ca2fa11_3419d89a
+Bytes: 142
+This implies to me that this target actually changes the behavior of the java compiles from jack to javac. Maybe "that use" instead of "with"?
+
