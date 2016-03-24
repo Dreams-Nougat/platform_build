@@ -1,0 +1,11 @@
+Revision: 5029ca0601dc506f09669a25f13a80a77e2fd88d
+Patch-set: 1
+File: core/host_java_library.mk
+
+73
+Thu Mar 24 19:49:08 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3ca2fa11_17181e04
+Bytes: 139
+Shouldn't we be moving this ifneq around the entire block (the rule definition above, jarjar/emma below) if we know it's not going to work?
+
