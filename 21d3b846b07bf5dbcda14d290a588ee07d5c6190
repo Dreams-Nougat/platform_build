@@ -10,3 +10,13 @@ Bytes: 134
 Yohann, do you think no-local/with-local still makes sense for Jack?
 If no probably we can just rename them to something like dex-dir.
 
+89:0-94:5
+Wed Mar 30 19:03:38 2016 +0000
+Author: Yohann Roussel <1023201@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b168d59f_2d66c592
+UUID: 8e0bac17_18ef65d1
+Bytes: 262
+I don't know what was the meaning of the existing names, was it that instrumenting with Emma was removing debug info?
+
+Anyway I agree about renaming them would be better. "dex-dir" seems lgtm, maybe coverage-dex-dir if we want t keep instrumented dex separately.
+
