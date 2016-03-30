@@ -20,3 +20,11 @@ I don't know what was the meaning of the existing names, was it that instrumenti
 
 Anyway I agree about renaming them would be better. "dex-dir" seems lgtm, maybe coverage-dex-dir if we want t keep instrumented dex separately.
 
+89:0-94:5
+Wed Mar 30 19:31:17 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8e0bac17_18ef65d1
+UUID: b168d59f_b336b836
+Bytes: 129
+We don't need to keep them separately. with ninja the classes.dex will be automatically rebuilt if the jack command line changes.
+
