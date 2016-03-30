@@ -9,6 +9,14 @@ UUID: 7141fdd6_1f7c8341
 Bytes: 63
 What about removing this one and use directly full_classes_jar?
 
+110
+Wed Mar 30 07:46:46 2016 +0000
+Author: Yohann Roussel <1023201@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7141fdd6_1f7c8341
+UUID: 51acf9b4_61f4f032
+Bytes: 56
+It's probably better to do that in a separate CL anyway.
+
 560
 Wed Mar 30 07:44:27 2016 +0000
 Author: Yohann Roussel <1023201@85c56323-6fa9-3386-8a01-6480fb634889>
