@@ -38,6 +38,14 @@ Sorry I commented the wrong variable, I meant to comment full_classes_proguard_j
 
 If you want to keep the rules what about just removing it from the dependency chain (see my other comments in java_library.mk, and I suppose others but I didn't find them) ?
 
+110
+Wed Mar 30 18:53:00 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 0e1fbc56_f4a5d8c7
+UUID: b168d59f_2dfc0584
+Bytes: 56
+That's the only place in the dependency chain I believe.
+
 560
 Wed Mar 30 07:44:27 2016 +0000
 Author: Yohann Roussel <1023201@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -64,10 +72,27 @@ UUID: 0e1fbc56_b4af60a4
 Bytes: 25
 What about removing that?
 
+63:0-65:4
+Wed Mar 30 18:53:00 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 0e1fbc56_b4af60a4
+UUID: b168d59f_6ddfdd23
+Bytes: 77
+Sounds good.
+(We don't really need Proguard on a static Java library anyway.)
+
 66:0-66:43
 Wed Mar 30 17:56:44 2016 +0000
 Author: Yohann Roussel <1023201@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 0e1fbc56_94ac64b0
 Bytes: 23
 And keep only this one?
+
+66:0-66:43
+Wed Mar 30 18:53:00 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 0e1fbc56_94ac64b0
+UUID: b168d59f_cd0c6994
+Bytes: 4
+Done
 
