@@ -28,3 +28,11 @@ UUID: b168d59f_b336b836
 Bytes: 129
 We don't need to keep them separately. with ninja the classes.dex will be automatically rebuilt if the jack command line changes.
 
+89:0-94:5
+Wed Mar 30 19:34:00 2016 +0000
+Author: Yohann Roussel <1023201@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b168d59f_b336b836
+UUID: 4e25349f_96ac6cb0
+Bytes: 58
+It's OK for me to always name it dex-dir as you suggested.
+
