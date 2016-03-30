@@ -1,0 +1,12 @@
+Revision: 21d3b846b07bf5dbcda14d290a588ee07d5c6190
+Patch-set: 5
+File: core/java.mk
+
+89:0-94:5
+Wed Mar 30 18:55:07 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b168d59f_2d66c592
+Bytes: 134
+Yohann, do you think no-local/with-local still makes sense for Jack?
+If no probably we can just rename them to something like dex-dir.
+
