@@ -36,3 +36,23 @@ UUID: 4e25349f_96ac6cb0
 Bytes: 58
 It's OK for me to always name it dex-dir as you suggested.
 
+89:0-94:5
+Thu Mar 31 07:13:16 2016 +0000
+Author: Sebastien Hertz <1029223@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 4e25349f_96ac6cb0
+UUID: 0e1fbc56_940d8459
+Bytes: 209
+I confirm we do not need to distinguish no-local vs with-local with Jack. This was necessary for EMMA because it was messing up with debug info when instrumenting a jar file. We do not have this issue in Jack.
+
+89:0-94:5
+Thu Mar 31 07:13:16 2016 +0000
+Author: Sebastien Hertz <1029223@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 4e25349f_96ac6cb0
+UUID: 0e1fbc56_74a8a851
+Bytes: 304
+I confirm the 'no-local' vs 'with-local' split is not necessary with Jack.
+
+IIRC EMMA was messing up with debug info when instrumenting a jar file so we used to remove debug info for code coverage (thus use separate dirs to reflect that).
+
+Jack does not have this problem so it's OK to use one directory.
+
