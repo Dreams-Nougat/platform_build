@@ -14,3 +14,13 @@ Dan, does assert-max-image-size still make sense given that we have moved to ext
 
 (I would write the whole assert-max-image-size using a python script in the first place instead of the mixed makefile and shell scripts.)
 
+2568:34-2568:46
+Thu Mar 31 02:16:49 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8e59ec47_28ec2b6b
+UUID: 8e59ec47_28342b8e
+Bytes: 243
+This is running into the whitelist for pure math shell commands: https://github.com/google/kati/blob/master/func.cc#L481
+
+I'm pretty sure this function isn't necessary with eMMC, but I don't know if we're saying no to NAND in the build system.
+
