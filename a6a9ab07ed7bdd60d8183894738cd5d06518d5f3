@@ -1,0 +1,16 @@
+Revision: a6a9ab07ed7bdd60d8183894738cd5d06518d5f3
+Patch-set: 1
+File: core/definitions.mk
+
+2568:34-2568:46
+Thu Mar 31 01:52:07 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8e59ec47_28ec2b6b
+Bytes: 528
+Looks like this $(shell) is executed before generating the ninja file, while the ones I replaced are deferred to when the build recipe is executed. We can do this only if this $(shell) doesn't depend on any build output. What's the Kati magic here?
+I don't think we can replace this $(shell).
+
+Dan, does assert-max-image-size still make sense given that we have moved to ext4fs and beyond?
+
+(I would write the whole assert-max-image-size using a python script in the first place instead of the mixed makefile and shell scripts.)
+
