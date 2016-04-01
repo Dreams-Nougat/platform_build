@@ -13,3 +13,17 @@ My first suggestion was to split it into a different rule -- one to create a .o 
 
 But this doesn't work for incremental builds -- we don't get dependency information from clang-tidy, so you're relying on the fact that the "real" compile step is exporting all of the necessary dependencies. So that doesn't work unless clang-tidy doesn't read any of the include files, but that doesn't appear to be the case.
 
+1398:0-1402:5
+Fri Apr 01 23:16:05 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2ec1e019_22569404
+UUID: 2ec1e019_6c1faea9
+Bytes: 927
+Like the static analyzer, it's difficult to run clang-tidy without normal compilation rules. I tried a separate tidy output file as a target but had the exact problem of generating required include files. That approach also requires a lot of cloning existing rules.
+
+What works so far is to run a complete normal build first, or a normal build plus WITH_TIDY=1. Then run incremental builds 'mm' or 'mma' in a project directory repeatedly with WITH_TIDY=1 WITH_TIDY_ONLY=1 to fix tidy warnings. The .o files could be reused.
+
+Without a complete set of .o files, I can run "mma -k" plus WITH_TIDY_ONLY=1 to get clang-tidy warnings and ignore all link errors.
+
+I can experiment other ideas, e.g., adding a wrapper script. The current patch adds an optional call to clang-tidy in definitions.mk. It looks heavier but actually runs faster and I think also easier to maintain than the wrapper approach used by WITH_STATIC_ANALYZER=1.
+
