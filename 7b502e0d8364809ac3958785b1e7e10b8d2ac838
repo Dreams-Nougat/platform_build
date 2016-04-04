@@ -27,3 +27,13 @@ Without a complete set of .o files, I can run "mma -k" plus WITH_TIDY_ONLY=1 to 
 
 I can experiment other ideas, e.g., adding a wrapper script. The current patch adds an optional call to clang-tidy in definitions.mk. It looks heavier but actually runs faster and I think also easier to maintain than the wrapper approach used by WITH_STATIC_ANALYZER=1.
 
+1398:0-1402:5
+Mon Apr 04 20:15:24 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2ec1e019_6c1faea9
+UUID: 2ec1e019_f1bb64e6
+Bytes: 368
+The .o files will be reused (at least for now), but it's undefined what dependencies you will have after a WITH_TIDY_ONLY=1 run, since you didn't generate a new dependency file. It may work today, but is not guaranteed to work in the future.
+
+It would be great if these tools generated real dependency files so that they could be properly be used within build systems.
+
