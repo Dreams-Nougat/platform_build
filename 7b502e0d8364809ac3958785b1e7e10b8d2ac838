@@ -37,3 +37,11 @@ The .o files will be reused (at least for now), but it's undefined what dependen
 
 It would be great if these tools generated real dependency files so that they could be properly be used within build systems.
 
+1398:0-1402:5
+Mon Apr 04 22:41:25 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2ec1e019_f1bb64e6
+UUID: 2ec1e019_a564b28a
+Bytes: 135
+I checked current clang-tidy, and it now just ignored the -MD and -MF flags. So, my current CL does not pass -MD and -MF to clang-tidy.
+
