@@ -1,0 +1,32 @@
+Revision: ad86a383bfc2b6ac18b5cfae0ad23695af39849c
+Patch-set: 5
+File: core/java.mk
+
+631
+Tue Apr 05 19:12:30 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2ec1e019_995a23ff
+Bytes: 68
+You need to reset jack_jacoco_includes and jack_jacoco_excludes here
+
+638:10-638:31
+Tue Apr 05 19:12:30 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2ec1e019_d923cb97
+Bytes: 43
+You mean LOCAL_EMMA_COVERAGE_FILTER, right?
+
+641:0-641:34
+Tue Apr 05 19:12:30 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2ec1e019_d948ab09
+Bytes: 207
+Can we just fix all the cases (only about ~15 in master) in the source tree and remove LOCAL_EMMA_COVERAGE_FILTER? Also send out annoucement to android-eng so engineers know how to do it in the new Jack way.
+
+647:4-648:89
+Tue Apr 05 19:12:30 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2ec1e019_194e333f
+Bytes: 59
+Otherwise you may get obsolete values set by other modules.
+
