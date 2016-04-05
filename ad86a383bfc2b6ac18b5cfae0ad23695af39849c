@@ -23,6 +23,16 @@ UUID: 2ec1e019_d948ab09
 Bytes: 207
 Can we just fix all the cases (only about ~15 in master) in the source tree and remove LOCAL_EMMA_COVERAGE_FILTER? Also send out annoucement to android-eng so engineers know how to do it in the new Jack way.
 
+641:0-641:34
+Tue Apr 05 19:24:29 2016 +0000
+Author: Sebastien Hertz <1029223@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2ec1e019_d948ab09
+UUID: 2ec48060_5b8edb21
+Bytes: 326
+That was my plan as a next step. I thought we might want a transition to fix the few build breakages linked to those filters, then update them one by one with the new filtering way.
+
+If you think we should directly move on to replace LOCAL_EMMA_COVERAGE_FILTER with LOCAL_JACK_FLAGS in each project, I can start that tomorrow.
+
 647:4-648:89
 Tue Apr 05 19:12:30 2016 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
