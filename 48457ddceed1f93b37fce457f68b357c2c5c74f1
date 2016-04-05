@@ -1,0 +1,11 @@
+Revision: 48457ddceed1f93b37fce457f68b357c2c5c74f1
+Patch-set: 1
+File: core/binary.mk
+
+816:13-816:71
+Tue Apr 05 19:20:35 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2ec1e019_34cbf66e
+Bytes: 49
+nit: define them in config.mk as global constant.
+
