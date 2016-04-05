@@ -26,12 +26,28 @@ I would remove the use of temp var list_, with:
 $(call transform-to-jack-filter-list,\
   $(call split-emma-filter-list,$(subst +,$(empty),$(1))))
 
+1968:0-1968:63
+Tue Apr 05 16:35:32 2016 +0000
+Author: Sebastien Hertz <1029223@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: fd993cfa_3c67d192
+UUID: ce304415_856104df
+Bytes: 4
+Done
+
 1975:0-1976:76
 Thu Feb 18 00:29:25 2016 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 3d9034ca_de3ee5a2
 Bytes: 5
 ditto
+
+1975:0-1976:76
+Tue Apr 05 16:35:32 2016 +0000
+Author: Sebastien Hertz <1029223@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3d9034ca_de3ee5a2
+UUID: 2ec48060_d8c4b17f
+Bytes: 4
+Done
 
 File: core/java.mk
 
