@@ -9,3 +9,11 @@ UUID: 8ea2ccbd_724cab71
 Bytes: 144
 You need to move this outside the "ifdef LOCAL_SDK_VERSION" above. Otherwise it may get value set by previous modules in executable_internal.mk.
 
+108:2-109:21
+Wed Apr 06 22:28:11 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8ea2ccbd_724cab71
+UUID: 8ea2ccbd_cd475c99
+Bytes: 51
+Yep, found that out the hard way :) ps2 has the fix
+
