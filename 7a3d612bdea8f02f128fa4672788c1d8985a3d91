@@ -1,0 +1,23 @@
+Revision: 7a3d612bdea8f02f128fa4672788c1d8985a3d91
+Patch-set: 2
+File: core/java.mk
+
+635:62-635:67
+Thu Apr 07 08:49:22 2016 +0000
+Author: Yohann Roussel <1023201@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8e172cd8_db7dc78c
+Bytes: 428
+Nit:
+I don't think this one is necessary. Make is already stripping the start of values when they are assigned:
+
+A := B
+<$A> is <B>
+
+only
+A := " B"
+would not lead to starting space not stripped: <$A> is < B> but in this case I'd say it's intentional and does not require striping.
+
+$(strip ...) is still necessary in the ifneq (,...) because make is not striping the end of variable assignations:
+A := B # A comment
+<$A> is <B >
+
