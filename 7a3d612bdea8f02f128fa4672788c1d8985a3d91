@@ -21,3 +21,11 @@ $(strip ...) is still necessary in the ifneq (,...) because make is not striping
 A := B # A comment
 <$A> is <B >
 
+634:0-636:42
+Thu Apr 07 18:54:43 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8ea2ccbd_528875e3
+Bytes: 149
+You can replace the whole block with:
+jacoco_filter_properties += $(addprefix,-D jack.coverage.jacoco.include=,$(LOCAL_JACK_COVERAGE_INCLUDE_FILTER))
+
