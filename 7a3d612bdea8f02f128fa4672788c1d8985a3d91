@@ -29,3 +29,11 @@ Bytes: 149
 You can replace the whole block with:
 jacoco_filter_properties += $(addprefix,-D jack.coverage.jacoco.include=,$(LOCAL_JACK_COVERAGE_INCLUDE_FILTER))
 
+634:0-636:42
+Fri Apr 08 08:28:58 2016 +0000
+Author: Sebastien Hertz <1029223@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8ea2ccbd_528875e3
+UUID: 2e8ba0a4_bdbf5fd2
+Bytes: 4
+Done
+
