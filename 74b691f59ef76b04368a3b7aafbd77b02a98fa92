@@ -1,0 +1,13 @@
+Revision: 74b691f59ef76b04368a3b7aafbd77b02a98fa92
+Patch-set: 1
+File: tools/releasetools/add_img_to_target_files.py
+
+246:14-246:54
+Fri Apr 08 20:30:07 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8e2d6c79_9d4b6f5a
+Bytes: 148
+if BOARD_BPT_DISK_SIZE is not defined, it will trigger exception here? change to info_dict.get("...") instead?
+
+(and same comment for L241 and L249)
+
