@@ -11,3 +11,11 @@ if BOARD_BPT_DISK_SIZE is not defined, it will trigger exception here? change to
 
 (and same comment for L241 and L249)
 
+246:14-246:54
+Fri Apr 08 22:00:09 2016 +0000
+Author: David Zeuthen <1076971@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8e2d6c79_9d4b6f5a
+UUID: 2b20f290_55824cc8
+Bytes: 28
+Got it - nice catch, thanks!
+
