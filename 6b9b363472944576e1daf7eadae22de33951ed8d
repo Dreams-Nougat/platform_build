@@ -1,0 +1,43 @@
+Revision: 6b9b363472944576e1daf7eadae22de33951ed8d
+Patch-set: 1
+File: tools/fs_config/fs_config_generator.py
+
+7
+Sat Apr 09 17:39:25 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8e2d6c79_9951bc58
+Bytes: 16
+No more globals!
+
+257
+Sat Apr 09 17:39:25 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8e2d6c79_b91e80aa
+Bytes: 75
+This bit of magic lets us add:
+
+@generator("groups")
+class GroupGen():
+ ...
+
+357
+Sat Apr 09 17:39:25 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8e2d6c79_d92334ed
+Bytes: 9
+generator
+
+361
+Sat Apr 09 17:39:25 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8e2d6c79_191eaca9
+Bytes: 79
+Every time you add a @generator() it sets it up as a mutually exclusive option.
+
+365
+Sat Apr 09 17:39:25 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8e2d6c79_f918f8bf
+Bytes: 8
+genertor
+
