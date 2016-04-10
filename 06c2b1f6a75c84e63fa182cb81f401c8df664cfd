@@ -1,0 +1,11 @@
+Revision: 06c2b1f6a75c84e63fa182cb81f401c8df664cfd
+Patch-set: 3
+File: tools/fs_config/fs_config_generator.py
+
+107
+Sun Apr 10 05:34:30 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8e2d6c79_b9292038
+Bytes: 163
+We want to make sure to exclude the delimiter token... perhaps since we say "valid C define" We just validate that here, that covers this token, along with others.
+
