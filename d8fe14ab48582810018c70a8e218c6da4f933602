@@ -1,0 +1,27 @@
+Revision: d8fe14ab48582810018c70a8e218c6da4f933602
+Patch-set: 4
+File: tools/fs_config/README
+
+87
+Sun Apr 10 19:04:37 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8e2d6c79_947fc1ac
+Bytes: 310
+May be we should limit this to [a-z0-9_]. Right now, its essentially case insensitive, so foo is FOO is fOo, and for aid identifiers it becomes AID_FOO and for the friendly name it becomes "foo". Rather than having this dis-ambiguity, it makes sens to me to have this as all lowercase, numbers and dashes only.
+
+File: tools/fs_config/fs_config_generator.py
+
+393
+Sun Apr 10 19:04:37 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8e2d6c79_b4a76582
+Bytes: 117
+likely should roll this into a class if were adding fields, 4 things was tricky enough to keep track of in the tuple.
+
+396
+Sun Apr 10 19:04:37 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8e2d6c79_940ee151
+Bytes: 232
+homedir and intepreter could move as options to the AID sections, and we could have a default for them in the base config file. The base config DEFAULT could apply globally where as the OEM supplied file DEFAULT is applied per-file.
+
