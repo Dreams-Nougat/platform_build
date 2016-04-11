@@ -1,0 +1,18 @@
+Revision: 72985241ca61782fa13ad9caae51da0ab2d6cb07
+Patch-set: 5
+File: tools/fs_config/README
+
+100:6-100:13
+Mon Apr 11 20:16:36 2016 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8e2d6c79_d7977170
+Bytes: 46
+Hmmm /vendor as homedir default for OEM range?
+
+103:7-103:17
+Mon Apr 11 20:16:36 2016 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8e2d6c79_7aa6acd4
+Bytes: 121
+This field is unused and only adds clutter, default /system/bin/false might be the most appropriate answer none-the-less.
+
