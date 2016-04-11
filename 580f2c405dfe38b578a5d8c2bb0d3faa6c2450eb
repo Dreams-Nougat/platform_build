@@ -11,3 +11,11 @@ Could this be parsed from android_filesystem_config.h (e.g. could we add AID_OEM
 
 Dependencies to other repositories is probably the norm for the /build tree.
 
+36:1-39:1
+Mon Apr 11 20:21:18 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8e2d6c79_971259eb
+UUID: 8e2d6c79_5a456892
+Bytes: 99
+Sure, can I revisit this after the large internal architectural revamp and take this as is for now.
+
