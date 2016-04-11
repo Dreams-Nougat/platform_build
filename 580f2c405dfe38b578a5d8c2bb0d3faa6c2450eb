@@ -1,0 +1,13 @@
+Revision: 580f2c405dfe38b578a5d8c2bb0d3faa6c2450eb
+Patch-set: 2
+File: tools/fs_config/fs_config_generator.py
+
+36:1-39:1
+Mon Apr 11 20:07:33 2016 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8e2d6c79_971259eb
+Bytes: 233
+Could this be parsed from android_filesystem_config.h (e.g. could we add AID_OEM_RESERVED_3_START and AID_OEM_RESERVED_3_END and not have to revisit this?)
+
+Dependencies to other repositories is probably the norm for the /build tree.
+
