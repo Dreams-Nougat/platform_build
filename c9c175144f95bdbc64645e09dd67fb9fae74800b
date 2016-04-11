@@ -1,0 +1,11 @@
+Revision: c9c175144f95bdbc64645e09dd67fb9fae74800b
+Patch-set: 1
+File: core/clear_vars.mk
+
+194
+Mon Apr 11 20:19:40 2016 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8e2d6c79_3a035463
+Bytes: 77
+you need to clear all these variants of LOCAL_REEXPORTED_SHARED_LIBRARIES too
+
