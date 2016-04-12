@@ -1,0 +1,20 @@
+Revision: 041a10358ca579adc9cb26fc9a107be75853a9c7
+Patch-set: 1
+File: tools/fs_config/Android.mk
+
+87
+Tue Apr 12 23:21:25 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 4b48c6fd_e1aa604d
+Bytes: 32
+access the dir and file like so:
+
+File: tools/fs_config/README
+
+122
+Tue Apr 12 23:21:25 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 4b48c6fd_81111c77
+Bytes: 36
+generated file and directory like so
+
