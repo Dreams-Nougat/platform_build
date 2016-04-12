@@ -19,3 +19,13 @@ UUID: 8e2d6c79_5a456892
 Bytes: 99
 Sure, can I revisit this after the large internal architectural revamp and take this as is for now.
 
+36:1-39:1
+Tue Apr 12 16:24:30 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8e2d6c79_5a456892
+UUID: 8baf1e8f_58b5fda6
+Bytes: 201
+Now you can: https://android-review.googlesource.com/#/c/214999
+
+Dropping this will likely cause a rebase nightmare... also, this is a simple stop-gap till the better way gets merged (fixes it on AOSP)
+
