@@ -1,0 +1,73 @@
+Revision: 011df5cc45a07b73d6ecb85473bd3a8be24f1da9
+Patch-set: 3
+File: /COMMIT_MSG
+
+12:65-14:52
+Tue Apr 12 18:16:47 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8baf1e8f_014a3052
+Bytes: 373
+i don't know how you want to "ensure" that in follow-up CLs... by waiting for reports on bricked devices? if you don't want to merge this CL, put DO NOT SUBMIT things and remove reviewers. only add people who wants to experiment the CL. otherwise make it correct (based on your local verification tests) and avoid wasting human hours for testing and debugging buggy builds.
+
+File: tools/releasetools/rangelib.py
+
+34:27-34:29
+Tue Apr 12 18:16:47 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8baf1e8f_1e860d45
+Bytes: 301
+use None, here and L37. also need to update all the 'len(xx) != 0' part to be 'xx is not None".
+
+None means the data here is invalid (we have never set a meaningful value), and "()" means a valid value.
+
+It's different from the case in L36. Because L36 really means a meaningful (i.e. empty) RnageSet.
+
+114:20-114:24
+Tue Apr 12 18:16:47 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8baf1e8f_61912c3f
+Bytes: 47
+i don't understand why you need to call list().
+
+117:27-117:32
+Tue Apr 12 18:16:47 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8baf1e8f_a161840d
+Bytes: 45
+do we really need to call tuple() every time?
+
+118:6-118:32
+Tue Apr 12 18:16:47 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8baf1e8f_be760110
+Bytes: 6
+delete
+
+156:13-156:49
+Tue Apr 12 18:16:47 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8baf1e8f_410fc888
+Bytes: 13
+same as above
+
+163:4-167:50
+Tue Apr 12 18:16:47 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8baf1e8f_01f5d092
+Bytes: 63
+https://www.python.org/dev/peps/pep-0008/#documentation-strings
+
+238:68-238:69
+Tue Apr 12 18:16:47 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8baf1e8f_e1529c57
+Bytes: 2
+ws
+
+238:51-238:58
+Tue Apr 12 18:16:47 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8baf1e8f_211c94b2
+Bytes: 11
+the current
+
