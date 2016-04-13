@@ -22,12 +22,28 @@ None means the data here is invalid (we have never set a meaningful value), and 
 
 It's different from the case in L36. Because L36 really means a meaningful (i.e. empty) RnageSet.
 
+34:27-34:29
+Wed Apr 13 00:34:21 2016 +0000
+Author: Tianjie Xu <1088085@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8baf1e8f_1e860d45
+UUID: ab85c25a_31e8b0f5
+Bytes: 4
+Done
+
 114:20-114:24
 Tue Apr 12 18:16:47 2016 +0000
 Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 8baf1e8f_61912c3f
 Bytes: 47
 i don't understand why you need to call list().
+
+114:20-114:24
+Wed Apr 13 00:34:21 2016 +0000
+Author: Tianjie Xu <1088085@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8baf1e8f_61912c3f
+UUID: ab85c25a_d1b3642d
+Bytes: 4
+Done
 
 117:27-117:32
 Tue Apr 12 18:16:47 2016 +0000
@@ -36,12 +52,28 @@ UUID: 8baf1e8f_a161840d
 Bytes: 45
 do we really need to call tuple() every time?
 
+117:27-117:32
+Wed Apr 13 00:34:21 2016 +0000
+Author: Tianjie Xu <1088085@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8baf1e8f_a161840d
+UUID: ab85c25a_91addccc
+Bytes: 40
+we're maintaining original_data as tuple
+
 118:6-118:32
 Tue Apr 12 18:16:47 2016 +0000
 Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 8baf1e8f_be760110
 Bytes: 6
 delete
+
+118:6-118:32
+Wed Apr 13 00:34:21 2016 +0000
+Author: Tianjie Xu <1088085@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8baf1e8f_be760110
+UUID: ab85c25a_f1b8e80b
+Bytes: 4
+Done
 
 156:13-156:49
 Tue Apr 12 18:16:47 2016 +0000
@@ -50,12 +82,28 @@ UUID: 8baf1e8f_410fc888
 Bytes: 13
 same as above
 
+156:13-156:49
+Wed Apr 13 00:34:21 2016 +0000
+Author: Tianjie Xu <1088085@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8baf1e8f_410fc888
+UUID: ab85c25a_51c8d494
+Bytes: 4
+Done
+
 163:4-167:50
 Tue Apr 12 18:16:47 2016 +0000
 Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 8baf1e8f_01f5d092
 Bytes: 63
 https://www.python.org/dev/peps/pep-0008/#documentation-strings
+
+163:4-167:50
+Wed Apr 13 00:34:21 2016 +0000
+Author: Tianjie Xu <1088085@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8baf1e8f_01f5d092
+UUID: ab85c25a_71c5d879
+Bytes: 4
+Done
 
 238:68-238:69
 Tue Apr 12 18:16:47 2016 +0000
@@ -70,4 +118,12 @@ Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 8baf1e8f_211c94b2
 Bytes: 11
 the current
+
+238:68-238:69
+Wed Apr 13 00:34:21 2016 +0000
+Author: Tianjie Xu <1088085@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8baf1e8f_e1529c57
+UUID: ab85c25a_31bf50ee
+Bytes: 4
+Done
 
