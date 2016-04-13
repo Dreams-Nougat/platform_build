@@ -1,0 +1,11 @@
+Revision: 54ea14546f42f7f2672c486a72046ca93c12d4f4
+Patch-set: 2
+File: core/dynamic_binary.mk
+
+132:0-132:53
+Wed Apr 13 21:20:53 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8bd1de8e_4fa5dec6
+Bytes: 44
+ifeq ($(my_strip_module),$(my_strip_module))
+
