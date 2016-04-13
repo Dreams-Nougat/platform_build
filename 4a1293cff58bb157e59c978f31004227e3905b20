@@ -1,0 +1,20 @@
+Revision: 4a1293cff58bb157e59c978f31004227e3905b20
+Patch-set: 5
+File: tools/releasetools/blockimgdiff.py
+
+181:19-181:59
+Wed Apr 13 06:44:43 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0b808e4d_4cc6ff19
+Bytes: 152
+RangeSet("258768-259211 196604").monotonic is expected to be False (which is broken), so that it won't be calling 'imgdiff -z' when computing the patch.
+
+File: tools/releasetools/rangelib.py
+
+113:22-113:26
+Wed Apr 13 06:44:43 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0b808e4d_0cc0f7f8
+Bytes: 39
+i believe this is the actual culprit...
+
