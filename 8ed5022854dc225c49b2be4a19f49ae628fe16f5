@@ -1,0 +1,17 @@
+Revision: 8ed5022854dc225c49b2be4a19f49ae628fe16f5
+Patch-set: 1
+File: core/main.mk
+
+248:43-248:55
+Thu Apr 14 10:20:58 2016 +0000
+Author: Neil Fuller <1038039@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0b732e96_345ff04b
+Bytes: 310
+I think we can be more helpful and suggest a possible cause / solution.
+
+Suggestion:
+
+This '$(incompat_javac)' version is not supported for Android platform builds. Use a publicly available JDK and make sure you have run envsetup.sh / lunch.
+
+It'll be interesting to see what engineers this change flushes out.
+
