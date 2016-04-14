@@ -1,0 +1,12 @@
+Revision: 5f75e8b173d79aa51a0c8f3bb51d559a7a8d54b5
+Patch-set: 2
+File: /COMMIT_MSG
+
+7:0-7:58
+Thu Apr 14 18:30:09 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8bd1de8e_75afbdf0
+Bytes: 208
+Does that mean ld can resolve symbols coming from indirect dependency libraries? I don't think so.
+(Even if it was, that's not a good thing. A module must put all the libraries it needs as direct dependency.)
+
