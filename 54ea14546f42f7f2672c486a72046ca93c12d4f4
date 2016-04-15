@@ -37,3 +37,11 @@ Sorry, I meant:
 ifneq (mini-debug-info,$(my_strip_module))
 The point is that you don't need to call $(filter) if it's compared to a single value.
 
+132:0-132:53
+Fri Apr 15 23:12:44 2016 +0000
+Author: Yabin Cui <1056364@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a814e833_ce10ffe2
+UUID: a814e833_82dd3bff
+Bytes: 12
+I see. done.
+
