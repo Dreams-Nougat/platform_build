@@ -9,3 +9,11 @@ UUID: 8bd1de8e_4fa5dec6
 Bytes: 44
 ifeq ($(my_strip_module),$(my_strip_module))
 
+132:0-132:53
+Fri Apr 15 22:47:24 2016 +0000
+Author: Yabin Cui <1056364@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8bd1de8e_4fa5dec6
+UUID: a814e833_2eef7b63
+Bytes: 160
+oh, I plan to change L119 into my_strip_module := mini-debug-info in a later patch. So it will not revert everything if the default my_strip_module is reverted.
+
