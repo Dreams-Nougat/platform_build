@@ -1,0 +1,62 @@
+Revision: 7d769163d8ca00bf9cfa4be9299bd57c39acd850
+Patch-set: 3
+File: /COMMIT_MSG
+
+13:34-13:44
+Mon Apr 18 21:20:03 2016 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 4881acc7_16a151bb
+Bytes: 9
+WITH_TIDY
+
+File: core/definitions.mk
+
+1173:0-1175:42
+Mon Apr 18 21:20:03 2016 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 4881acc7_f614d568
+Bytes: 16
+Tabs vs. spaces.
+
+1180
+Mon Apr 18 21:20:03 2016 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 4881acc7_56002925
+Bytes: 44
+4 space indent vs. previous 2 space indents.
+
+1230:0-1234:41
+Mon Apr 18 21:20:03 2016 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 4881acc7_f6eb7592
+Bytes: 16
+Tabs vs. spaces.
+
+1253:0-1254:40
+Mon Apr 18 21:20:03 2016 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 4881acc7_76d8c50d
+Bytes: 85
+Tabs vs. spaces. The second line should also be indented, since it is a continuation.
+
+1320:0-1321:47
+Mon Apr 18 21:20:03 2016 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 4881acc7_d6599963
+Bytes: 59
+These lines are using tabs, while others just use 2 spaces.
+
+1326
+Mon Apr 18 21:20:03 2016 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 4881acc7_76aa054e
+Bytes: 35
+4 space indent vs. 2 space indents.
+
+1382:0-1383:47
+Mon Apr 18 21:20:03 2016 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 4881acc7_f6629510
+Bytes: 31
+These lines should be indented.
+
