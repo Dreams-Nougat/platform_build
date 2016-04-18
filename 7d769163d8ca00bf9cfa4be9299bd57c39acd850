@@ -9,6 +9,14 @@ UUID: 4881acc7_16a151bb
 Bytes: 9
 WITH_TIDY
 
+13:34-13:44
+Mon Apr 18 22:12:45 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 4881acc7_16a151bb
+UUID: 08fc147c_ac41833a
+Bytes: 4
+Done
+
 File: core/definitions.mk
 
 1173:0-1175:42
@@ -18,12 +26,28 @@ UUID: 4881acc7_f614d568
 Bytes: 16
 Tabs vs. spaces.
 
+1173:0-1175:42
+Mon Apr 18 22:12:45 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 4881acc7_f614d568
+UUID: 08fc147c_ac25038b
+Bytes: 4
+Done
+
 1180
 Mon Apr 18 21:20:03 2016 +0000
 Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 4881acc7_56002925
 Bytes: 44
 4 space indent vs. previous 2 space indents.
+
+1180
+Mon Apr 18 22:12:45 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 4881acc7_56002925
+UUID: 08fc147c_cc2ccf73
+Bytes: 4
+Done
 
 1230:0-1234:41
 Mon Apr 18 21:20:03 2016 +0000
@@ -32,12 +56,28 @@ UUID: 4881acc7_f6eb7592
 Bytes: 16
 Tabs vs. spaces.
 
+1230:0-1234:41
+Mon Apr 18 22:12:45 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 4881acc7_f6eb7592
+UUID: 08fc147c_ac4ea33e
+Bytes: 4
+Done
+
 1253:0-1254:40
 Mon Apr 18 21:20:03 2016 +0000
 Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 4881acc7_76d8c50d
 Bytes: 85
 Tabs vs. spaces. The second line should also be indented, since it is a continuation.
+
+1253:0-1254:40
+Mon Apr 18 22:12:45 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 4881acc7_76d8c50d
+UUID: 08fc147c_2c091314
+Bytes: 4
+Done
 
 1320:0-1321:47
 Mon Apr 18 21:20:03 2016 +0000
@@ -46,6 +86,14 @@ UUID: 4881acc7_d6599963
 Bytes: 59
 These lines are using tabs, while others just use 2 spaces.
 
+1320:0-1321:47
+Mon Apr 18 22:12:45 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 4881acc7_d6599963
+UUID: 08fc147c_ecfd4b15
+Bytes: 4
+Done
+
 1326
 Mon Apr 18 21:20:03 2016 +0000
 Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -53,10 +101,26 @@ UUID: 4881acc7_76aa054e
 Bytes: 35
 4 space indent vs. 2 space indents.
 
+1326
+Mon Apr 18 22:12:45 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 4881acc7_76aa054e
+UUID: 08fc147c_acf3434a
+Bytes: 4
+Done
+
 1382:0-1383:47
 Mon Apr 18 21:20:03 2016 +0000
 Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 4881acc7_f6629510
 Bytes: 31
 These lines should be indented.
+
+1382:0-1383:47
+Mon Apr 18 22:12:45 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 4881acc7_f6629510
+UUID: 08fc147c_8c2767a8
+Bytes: 4
+Done
 
