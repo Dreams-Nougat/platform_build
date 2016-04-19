@@ -1,0 +1,11 @@
+Revision: daa4e1316daa3bfd2b64be36097bdb01db023538
+Patch-set: 1
+File: core/config.mk
+
+472:0-472:36
+Tue Apr 19 23:17:45 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 68a590c6_5e178429
+Bytes: 146
+(likely as a follow-on) we should move acp from prebuilts/sdk to prebuilts/build-tools too, as it's not part of the public sdk build tools either.
+
