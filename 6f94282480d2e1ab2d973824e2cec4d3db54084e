@@ -9,6 +9,14 @@ UUID: 08fc147c_e02c2a73
 Bytes: 16
 my_tidy uneeded.
 
+467:0-467:32
+Tue Apr 19 19:05:10 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 08fc147c_e02c2a73
+UUID: 68a590c6_c23064e3
+Bytes: 4
+Done
+
 472:31-472:57
 Tue Apr 19 01:11:43 2016 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -16,12 +24,28 @@ UUID: 08fc147c_db963f04
 Bytes: 116
 If $(PATH_TO_CLANG_TIDY) is the only value (i.e. not differ across modules), you don't even need a PRIVATE variable.
 
+472:31-472:57
+Tue Apr 19 19:05:10 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 08fc147c_db963f04
+UUID: 68a590c6_e23b68c4
+Bytes: 4
+Done
+
 1378:2-1378:22
 Tue Apr 19 01:11:43 2016 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 08fc147c_e0454a1b
 Bytes: 71
 In makefile we usually use empty string or false to indicate disabling.
+
+1378:2-1378:22
+Tue Apr 19 19:05:10 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 08fc147c_e0454a1b
+UUID: 68a590c6_c28d04b7
+Bytes: 4
+Done
 
 1391:22-1391:38
 Tue Apr 19 01:11:43 2016 +0000
@@ -31,6 +55,16 @@ Bytes: 117
 Where will these global variables be defined?
 Probably rename the variable to something like GLOABL_TIDY_CHECK_FLAGS?
 
+1391:22-1391:38
+Tue Apr 19 19:05:10 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 08fc147c_80b9e63d
+UUID: 08fc147c_9d5f841c
+Bytes: 353
+WITH_TIDY_CHECKS is designed for users to set as an environment variable. It is named similar to WITH_TIDY, WITH_TIDAY_FLAGS, WITH_STATIC_ANALYZER and WITH_SYNTAX_CHECK.
+Current build environment variables usually don't have GLOBAL prefix, right?
+WITH_TIDY_CHECKS is for clang-tidy's 'checks' list, while WITH_TIDY_FLAGS is for clang-tidy's other flags.
+
 1401:21-1401:36
 Tue Apr 19 01:11:43 2016 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -38,12 +72,28 @@ UUID: 08fc147c_005fb6b9
 Bytes: 5
 ditto
 
+1401:21-1401:36
+Tue Apr 19 19:05:10 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 08fc147c_005fb6b9
+UUID: 68a590c6_859ee62c
+Bytes: 71
+Similar to WITH_TIDY_CHECKS, user can define this environment variable.
+
 1414:0-1417:5
 Tue Apr 19 01:11:43 2016 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 08fc147c_1b3c47bc
 Bytes: 123
 You don't need my_skip_compilation or PRIVATE_SKIP_COMPILATION, if it's purely decided by a global variable WITH_TIDY_ONLY.
+
+1414:0-1417:5
+Tue Apr 19 19:05:10 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 08fc147c_1b3c47bc
+UUID: 68a590c6_c5faae58
+Bytes: 4
+Done
 
 File: core/definitions.mk
 
@@ -54,10 +104,30 @@ UUID: 08fc147c_db775f5b
 Bytes: 104
 If PRIVATE_SKIP_COMPILATION with no PRIVATE_TIDY_CHECKS, we'll only print this line in the build recipe?
 
+1180:2-1180:50
+Tue Apr 19 19:05:10 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 08fc147c_db775f5b
+UUID: 68a590c6_054e566c
+Bytes: 180
+We print this line only if
+ $(and $(PRIVATE_SKIP_COMPILATION),$(PRIVATE_TIDY_CHECKS)),
+
+When compilation is not skipped normally, we print the normal compilation message as before.
+
 1185:0-1185:33
 Tue Apr 19 01:11:43 2016 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 08fc147c_7be0eb42
 Bytes: 64
 If it skips compilation, won't the build fail in the link phase?
+
+1185:0-1185:33
+Tue Apr 19 19:05:10 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 08fc147c_7be0eb42
+UUID: 68a590c6_659be23e
+Bytes: 124
+Yes, if .o files were not generated previously.
+This feature is only used to fix tidy/syntax errors, like WITH_SYNTAX_CHECK.
 
