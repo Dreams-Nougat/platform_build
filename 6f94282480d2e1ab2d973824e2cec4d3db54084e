@@ -1,0 +1,63 @@
+Revision: 6f94282480d2e1ab2d973824e2cec4d3db54084e
+Patch-set: 4
+File: core/binary.mk
+
+467:0-467:32
+Tue Apr 19 01:11:43 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 08fc147c_e02c2a73
+Bytes: 16
+my_tidy uneeded.
+
+472:31-472:57
+Tue Apr 19 01:11:43 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 08fc147c_db963f04
+Bytes: 116
+If $(PATH_TO_CLANG_TIDY) is the only value (i.e. not differ across modules), you don't even need a PRIVATE variable.
+
+1378:2-1378:22
+Tue Apr 19 01:11:43 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 08fc147c_e0454a1b
+Bytes: 71
+In makefile we usually use empty string or false to indicate disabling.
+
+1391:22-1391:38
+Tue Apr 19 01:11:43 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 08fc147c_80b9e63d
+Bytes: 117
+Where will these global variables be defined?
+Probably rename the variable to something like GLOABL_TIDY_CHECK_FLAGS?
+
+1401:21-1401:36
+Tue Apr 19 01:11:43 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 08fc147c_005fb6b9
+Bytes: 5
+ditto
+
+1414:0-1417:5
+Tue Apr 19 01:11:43 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 08fc147c_1b3c47bc
+Bytes: 123
+You don't need my_skip_compilation or PRIVATE_SKIP_COMPILATION, if it's purely decided by a global variable WITH_TIDY_ONLY.
+
+File: core/definitions.mk
+
+1180:2-1180:50
+Tue Apr 19 01:11:43 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 08fc147c_db775f5b
+Bytes: 104
+If PRIVATE_SKIP_COMPILATION with no PRIVATE_TIDY_CHECKS, we'll only print this line in the build recipe?
+
+1185:0-1185:33
+Tue Apr 19 01:11:43 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 08fc147c_7be0eb42
+Bytes: 64
+If it skips compilation, won't the build fail in the link phase?
+
