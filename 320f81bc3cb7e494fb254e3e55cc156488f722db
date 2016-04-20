@@ -1,0 +1,12 @@
+Revision: 320f81bc3cb7e494fb254e3e55cc156488f722db
+Patch-set: 7
+File: core/definitions.mk
+
+1260:0-1263:1
+Wed Apr 20 22:31:31 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 485feccb_77be0c81
+Bytes: 120
+why do you need to skip assembly compilation and static library creation etc.?
+Looks like you can just leave them as is.
+
