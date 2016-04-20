@@ -1,0 +1,28 @@
+Revision: 30b3418b73b4348db3b7dab8dd12cc19b98d6def
+Patch-set: 5
+File: core/definitions.mk
+
+1178:0-1194:1
+Wed Apr 20 01:28:40 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 485feccb_2678764a
+Bytes: 279
+sinace WITH_TIDY_ONLY is a global variable, I think it's more readable and natural if we write it as:
+ifneq ($(WITH_TIDY_ONLY),)
+define maybe0tidy-cpp-to
+...
+endef
+
+define transform-cpp-to
+...
+endef
+else
+define maybe0tidy-cpp-to
+...
+endef
+
+define transform-cpp-to
+...
+endef
+endif
+
