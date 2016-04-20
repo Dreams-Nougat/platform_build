@@ -10,3 +10,11 @@ Bytes: 120
 why do you need to skip assembly compilation and static library creation etc.?
 Looks like you can just leave them as is.
 
+1260:0-1263:1
+Wed Apr 20 23:33:29 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 485feccb_77be0c81
+UUID: 485feccb_5d25319d
+Bytes: 237
+When WITH_TIDY_ONLY, we want to save time and skip all compilation and link, assuming that .o and library files can be reused from previous make. When we need to regenerate correct .o files, we unset WITH_TIDY_ONLY to get a normal build.
+
