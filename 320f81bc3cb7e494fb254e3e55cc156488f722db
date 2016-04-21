@@ -27,3 +27,11 @@ Bytes: 216
 This sounds quite broken :)
 I think a better solution would be to define a phony target "c_cxx_compilation" that depends on all obj files of c/cpp files. Then you can run "make c_cxx_compilation WITH_TIDY_ONLY=true".
 
+1260:0-1263:1
+Thu Apr 21 16:56:04 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 08733496_748168ed
+UUID: 08733496_1e95aa2b
+Bytes: 388
+It is actually consistent to skip everything else and run only clang-tidy when WITH_TIDY_ONLY is set. Anyway, since clang-tidy only parses C/C++ code and WITH_TIDY_ONLY is used mostly with 'mm' and 'mmm', I now added a new tidy_only target to include c_objects and cpp_objects in the new patch. 'mm' and 'mmm' functions are modified to detect  WITH_TIDY_ONLY and call make with tidy_only.
+
