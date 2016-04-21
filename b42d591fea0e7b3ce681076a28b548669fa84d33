@@ -16,3 +16,11 @@ UUID: 08733496_46375490
 Bytes: 149
 Given that jack-lib-deps==jack-lib-files, the two branches are actually identical. We can remove the "ifeq ($(USE_CORE_LIB_BOOTCLASSPATH),true)" now.
 
+332:0-340:34
+Thu Apr 21 21:55:34 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 08733496_46375490
+UUID: 08733496_86140cd7
+Bytes: 98
+Probably we can remove the macro jack-lib-deps now. It's only referenced in the core build system.
+
