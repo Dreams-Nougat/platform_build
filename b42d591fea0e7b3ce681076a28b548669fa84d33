@@ -1,0 +1,18 @@
+Revision: b42d591fea0e7b3ce681076a28b548669fa84d33
+Patch-set: 2
+File: core/java_common.mk
+
+332:0-332:41
+Thu Apr 21 21:53:44 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 08733496_e6f940df
+Bytes: 134
+Could you also please remove "USE_CORE_LIB_BOOTCLASSPATH :=" in core/host_dalvik_static_java_library.mk? I just found that's unneeded.
+
+332:0-340:34
+Thu Apr 21 21:53:44 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 08733496_46375490
+Bytes: 149
+Given that jack-lib-deps==jack-lib-files, the two branches are actually identical. We can remove the "ifeq ($(USE_CORE_LIB_BOOTCLASSPATH),true)" now.
+
