@@ -1,0 +1,41 @@
+Revision: cdb1308986b6d937e16002cada59ebaf0340ca2c
+Patch-set: 8
+File: core/binary.mk
+
+1229
+Thu Apr 21 18:15:36 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 08733496_145d891a
+Bytes: 41
+Shouldn't this depend on my_tidy_enabled?
+
+1390
+Thu Apr 21 18:15:36 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 08733496_543f01b5
+Bytes: 81
+my_tidy_flags should also be cleared here (cleaner, it shouldn't change anything)
+
+1410:0-1413:5
+Thu Apr 21 18:15:36 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 08733496_d48071c2
+Bytes: 82
+This should affect my_tidy_enabled (and thus be moved up above the previous block)
+
+1415:0-1418:5
+Thu Apr 21 18:15:36 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 08733496_9497d9ff
+Bytes: 65
+This should happen once in config.mk, not in every binary module.
+
+File: core/config.mk
+
+355
+Thu Apr 21 18:15:36 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 08733496_9470b9a5
+Bytes: 94
+If we're expecting a user to set WITH_TIDY, this may as well be an error instead of a warning.
+
