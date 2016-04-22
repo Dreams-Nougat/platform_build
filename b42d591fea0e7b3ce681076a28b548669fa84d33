@@ -9,6 +9,14 @@ UUID: 08733496_e6f940df
 Bytes: 134
 Could you also please remove "USE_CORE_LIB_BOOTCLASSPATH :=" in core/host_dalvik_static_java_library.mk? I just found that's unneeded.
 
+332:0-332:41
+Fri Apr 22 08:20:32 2016 +0000
+Author: Yohann Roussel <1023201@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 08733496_e6f940df
+UUID: 2874787a_7549685c
+Bytes: 4
+Done
+
 332:0-340:34
 Thu Apr 21 21:53:44 2016 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -23,4 +31,20 @@ Parent: 08733496_46375490
 UUID: 08733496_86140cd7
 Bytes: 98
 Probably we can remove the macro jack-lib-deps now. It's only referenced in the core build system.
+
+332:0-340:34
+Fri Apr 22 08:20:32 2016 +0000
+Author: Yohann Roussel <1023201@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 08733496_46375490
+UUID: c8659cc5_bd55ab9f
+Bytes: 4
+Done
+
+332:0-340:34
+Fri Apr 22 08:20:32 2016 +0000
+Author: Yohann Roussel <1023201@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 08733496_86140cd7
+UUID: 88864495_2342543e
+Bytes: 4
+Done
 
