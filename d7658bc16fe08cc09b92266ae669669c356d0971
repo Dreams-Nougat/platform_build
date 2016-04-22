@@ -1,0 +1,13 @@
+Revision: d7658bc16fe08cc09b92266ae669669c356d0971
+Patch-set: 1
+File: core/tidy.mk
+
+34:0-35:40
+Fri Apr 22 17:35:00 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 08733496_586001ac
+Bytes: 218
+I'd prefer not to hardcode in path names to google projects here. Can we not require these to be added to these projects specifically?
+
+We already special case external/ for other warnings, but we don't go any further.
+
