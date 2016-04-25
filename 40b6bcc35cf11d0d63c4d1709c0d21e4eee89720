@@ -1,0 +1,11 @@
+Revision: 40b6bcc35cf11d0d63c4d1709c0d21e4eee89720
+Patch-set: 1
+File: tools/fs_config/fs_config_generator.py
+
+532
+Mon Apr 25 23:30:34 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 08733496_bf48fb59
+Bytes: 379
+You may ask yourself why I changed section detection, its that having AID_* and the attempting to find the incorrect character column within the aid handling code was just clunky. Its best to map sections based on their options, this seems to the best way to tell what section your in. Then within the aid handling code, we can just verify the section_name and report any errors.
+
