@@ -9,3 +9,11 @@ UUID: 08733496_b41d87fd
 Bytes: 101
 I'd move this to build/core/clang/config.mk (or add content of tidy.mk to build/core/definitions.mk).
 
+893:0-894:31
+Mon Apr 25 18:53:20 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 08733496_b41d87fd
+UUID: 08733496_54c1936c
+Bytes: 4
+Done
+
