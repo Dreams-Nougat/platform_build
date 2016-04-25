@@ -1,0 +1,11 @@
+Revision: 21275ad32d336438c4fe1951ebb9d33e7e771cf3
+Patch-set: 2
+File: core/config.mk
+
+893:0-894:31
+Mon Apr 25 18:44:46 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 08733496_b41d87fd
+Bytes: 101
+I'd move this to build/core/clang/config.mk (or add content of tidy.mk to build/core/definitions.mk).
+
