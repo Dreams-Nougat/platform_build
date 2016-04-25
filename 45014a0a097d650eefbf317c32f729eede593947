@@ -1,0 +1,11 @@
+Revision: 45014a0a097d650eefbf317c32f729eede593947
+Patch-set: 2
+File: target/product/embedded.mk
+
+91:4-91:10
+Mon Apr 25 23:39:11 2016 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 08733496_df6db794
+Bytes: 91
+This could be added to BoardConfig.mk for each product wishing to override the passwd file.
+
