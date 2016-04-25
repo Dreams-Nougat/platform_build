@@ -1,0 +1,11 @@
+Revision: 7979ff145c5a3d308ca867ad46dabade5cc07dea
+Patch-set: 3
+File: core/config.mk
+
+894:0-894:37
+Mon Apr 25 19:07:34 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 08733496_a75f1b1b
+Bytes: 59
+I meant to also include it from build/core/clang/config.mk.
+
