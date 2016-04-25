@@ -52,6 +52,18 @@ In the core build system we'll apply the SUBTREE_* values.
 
 We probably don't want do that in the makefile-based build system any more. Dan, how do you think about such support in Soong?
 
+34:0-35:40
+Mon Apr 25 17:59:56 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 08733496_ce8fe059
+UUID: 08733496_f4cd3f84
+Bytes: 477
+That's something that may be feasible in Soong, since variables are already subtree-scoped, but we'd need a way to implicitly attach them onto a module.
+
+But I'm not sure we can even put a file in external/ in any sane manner -- there's not a common external project in all manifests that I know of.
+
+And I'm less worried about external/.. (which is already a build system concept) than the external/google* and external/webrtc/* special cases, which won't be helped with that.
+
 39:5-39:52
 Sat Apr 23 03:34:29 2016 +0000
 Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
