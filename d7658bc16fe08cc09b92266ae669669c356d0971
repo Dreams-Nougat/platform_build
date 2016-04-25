@@ -9,6 +9,14 @@ UUID: 08733496_29b92eee
 Bytes: 98
 This makes me think it is a global constatn. I would explicitly pass in $(LOCAL_PATH) as argument.
 
+1400:24-1400:53
+Mon Apr 25 16:58:51 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 08733496_29b92eee
+UUID: 08733496_44764812
+Bytes: 4
+Done
+
 File: core/tidy.mk
 
 34:0-35:40
@@ -51,4 +59,12 @@ UUID: 08733496_a9a45ecd
 Bytes: 61
 It's more efficient with:
 $(filter $(word 1)%,$(LOCAL_PATH)/)
+
+39:5-39:52
+Mon Apr 25 16:58:51 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 08733496_a9a45ecd
+UUID: 08733496_9fe7c9fb
+Bytes: 4
+Done
 
