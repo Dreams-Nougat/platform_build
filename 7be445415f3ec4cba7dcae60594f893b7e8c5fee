@@ -11,3 +11,13 @@ Im ok with adding these as conditional based on TARGET_FS_CONFIG_GEN, it may res
 
 However, is it OK to gaurd PROD_PACK adds here?
 
+89
+Tue Apr 26 22:12:33 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 888725d1_5b2b7b20
+UUID: 888725d1_6d0ec026
+Bytes: 433
+No, in general don't use conditionals in product makefiles. (We can load them all in at the same time, and cache inherited products, which can lead to bad results when combined with conditionals)
+
+If you really do need it to be optional, then you can either make the products that need it add it to their PRODUCT_PACKAGES, or conditionalize the definition of the module itself -- a missing module in PRODUCT_PACKAGES is not an error.
+
