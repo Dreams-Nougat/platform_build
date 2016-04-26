@@ -1,0 +1,13 @@
+Revision: 7be445415f3ec4cba7dcae60594f893b7e8c5fee
+Patch-set: 2
+File: target/product/embedded.mk
+
+89
+Tue Apr 26 20:32:54 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 888725d1_5b2b7b20
+Bytes: 258
+Im ok with adding these as conditional based on TARGET_FS_CONFIG_GEN, it may result in a 0 length file added but only in the case an OEM is actually setting up filesystem customization, which seems reasonable.
+
+However, is it OK to gaurd PROD_PACK adds here?
+
