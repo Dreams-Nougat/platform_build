@@ -9,3 +9,13 @@ UUID: 08733496_df6db794
 Bytes: 91
 This could be added to BoardConfig.mk for each product wishing to override the passwd file.
 
+91:4-91:10
+Tue Apr 26 00:19:01 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 08733496_df6db794
+UUID: 08733496_45f0f8af
+Bytes: 492
+I'm not sure what your getting at, as their not overriding anything.
+
+What I am trying to avoid is something like fs_config_files, where one not only has to set up config.fs files, but they also have to add this magical package name to PRODUCT_PACKAGES. Its too easy to miss that PRODUCT_PACKAGES set. In fact, I want to go look at the fs_config_files and fs_config_dirs code and see if it handles empty files. I would like to drop that requirement for successful configuration at some point.
+
