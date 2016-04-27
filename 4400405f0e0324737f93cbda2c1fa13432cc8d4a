@@ -1,0 +1,11 @@
+Revision: 4400405f0e0324737f93cbda2c1fa13432cc8d4a
+Patch-set: 4
+File: /COMMIT_MSG
+
+39:6-39:11
+Wed Apr 27 22:28:56 2016 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a8594975_e38c4092
+Bytes: 178
+Another is the logistics and system call overhead of opening an empty file, then requesting a read that has no contents, then closing the file every time it needs to be accessed.
+
