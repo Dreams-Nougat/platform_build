@@ -1,0 +1,11 @@
+Revision: f8d15d6f3fa6c8c3efa08665a19d3d93ef8b6724
+Patch-set: 1
+File: core/java_common.mk
+
+138
+Wed Apr 27 00:50:49 2016 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 48560d47_dd02bbfa
+Bytes: 161
+binary.mk filters out the various source lists instead of the pattern that was used to generate the source lists, is there some reason you couldn't do that here?
+
