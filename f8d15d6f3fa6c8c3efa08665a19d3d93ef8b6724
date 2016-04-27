@@ -9,3 +9,12 @@ UUID: 48560d47_dd02bbfa
 Bytes: 161
 binary.mk filters out the various source lists instead of the pattern that was used to generate the source lists, is there some reason you couldn't do that here?
 
+138
+Wed Apr 27 01:29:27 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 48560d47_dd02bbfa
+UUID: 48560d47_6049487b
+Bytes: 252
+In binary.mk you can track the generated sources like .proto->.cpp->.o; in Java typically the generated .java files aren't known at this point and we don't have a full list of generated java files.
+Also pattern filtering is simpler and straightforward.
+
