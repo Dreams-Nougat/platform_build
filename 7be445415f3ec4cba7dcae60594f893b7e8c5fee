@@ -21,3 +21,11 @@ No, in general don't use conditionals in product makefiles. (We can load them al
 
 If you really do need it to be optional, then you can either make the products that need it add it to their PRODUCT_PACKAGES, or conditionalize the definition of the module itself -- a missing module in PRODUCT_PACKAGES is not an error.
 
+89
+Wed Apr 27 16:02:11 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 888725d1_6d0ec026
+UUID: 48560d47_f45d113a
+Bytes: 140
+Oh thanks Dan, I didn't realize that its ok to have it in PRODUCT_PACKAGES but no rule for the target. I think that fits the bill perfectly.
+
