@@ -9,3 +9,15 @@ UUID: a8594975_e38c4092
 Bytes: 178
 Another is the logistics and system call overhead of opening an empty file, then requesting a read that has no contents, then closing the file every time it needs to be accessed.
 
+39:6-39:11
+Wed Apr 27 23:14:31 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a8594975_e38c4092
+UUID: a8594975_8e448b65
+Bytes: 538
+True.
+
+glibc opens this file every time and does an fstat, and then mmaps it in according to strace. I'm not too concerned about the performance of this, however since its on a read-only filesystem we could cache that as its empty and not do it again to avoid this overhead. I guess for those remounting system and hand pushing a file they would need to reboot.
+
+OEMs now could add an empty file potentially based on the exact config, the only thing this limits them would be to remove it in the case of an empty file, which I am ok with.
+
