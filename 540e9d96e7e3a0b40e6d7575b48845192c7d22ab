@@ -1,0 +1,12 @@
+Revision: 540e9d96e7e3a0b40e6d7575b48845192c7d22ab
+Patch-set: 1
+File: core/dynamic_binary.mk
+
+126:7-126:21
+Wed Apr 27 00:16:16 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 48560d47_ba242db7
+Bytes: 62
+How about mips64?
+If it's mips only, you don't need $(filter).
+
