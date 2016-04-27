@@ -10,3 +10,11 @@ Bytes: 62
 How about mips64?
 If it's mips only, you don't need $(filter).
 
+126:7-126:21
+Wed Apr 27 00:42:19 2016 +0000
+Author: Yabin Cui <1056364@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 48560d47_ba242db7
+UUID: 48560d47_7d83afdc
+Bytes: 105
+mips64 has the same problem as mips. I mistakenly thought $(filter) can search string "mips" in the text.
+
