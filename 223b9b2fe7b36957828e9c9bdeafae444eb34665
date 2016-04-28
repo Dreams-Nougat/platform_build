@@ -39,3 +39,13 @@ UUID: 480b6d61_cedcb687
 Bytes: 165
 I am not familiar with tests in libunwind. So I will read some code in libunwind and enable simpleperf for mips and test this patch once you fix the alignment issue.
 
+1655:27-1655:68
+Thu Apr 28 19:35:59 2016 +0000
+Author: Than McIntosh <1059614@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 480b6d61_cedcb687
+UUID: a8594975_fa8fbeda
+Bytes: 223
+Bad news: it looks as though the --section-alignment flag is only supported for the PE target. I tried it on MIPS and it is basically a no-op (you can ask for 4, but it will give you 1).
+
+So this may not work out after all.
+
