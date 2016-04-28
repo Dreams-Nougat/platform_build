@@ -9,3 +9,17 @@ UUID: 480b6d61_ce3956ca
 Bytes: 176
 I am worried if we add .debug_frame like this, the section types, section flags and alignment may have changed. And libunwind may not be able to use it. Have you verified that?
 
+1655:27-1655:68
+Thu Apr 28 19:15:43 2016 +0000
+Author: Than McIntosh <1059614@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 480b6d61_ce3956ca
+UUID: a8594975_9afe827a
+Bytes: 239
+It's a legitimate worry, I agree.
+
+I did check the section type and flags, which looked ok. Did not think to check the alignment-- I can look into that. 
+
+Haven't tested the unwinder. Can you recommend a test or tests to run?
+
+Thanks, Than
+
