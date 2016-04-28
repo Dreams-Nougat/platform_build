@@ -23,3 +23,11 @@ Haven't tested the unwinder. Can you recommend a test or tests to run?
 
 Thanks, Than
 
+1655:27-1655:68
+Thu Apr 28 19:19:49 2016 +0000
+Author: Than McIntosh <1059614@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a8594975_9afe827a
+UUID: a8594975_3a177695
+Bytes: 106
+Rats. You're right, the alignment was lost-- was 4-byte aligned and is now unaligned. I'll look into that.
+
