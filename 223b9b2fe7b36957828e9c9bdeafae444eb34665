@@ -31,3 +31,11 @@ UUID: a8594975_3a177695
 Bytes: 106
 Rats. You're right, the alignment was lost-- was 4-byte aligned and is now unaligned. I'll look into that.
 
+1655:27-1655:68
+Thu Apr 28 19:26:50 2016 +0000
+Author: Yabin Cui <1056364@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a8594975_3a177695
+UUID: 480b6d61_cedcb687
+Bytes: 165
+I am not familiar with tests in libunwind. So I will read some code in libunwind and enable simpleperf for mips and test this patch once you fix the alignment issue.
+
