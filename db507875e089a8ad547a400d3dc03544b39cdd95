@@ -1,0 +1,11 @@
+Revision: db507875e089a8ad547a400d3dc03544b39cdd95
+Patch-set: 8
+File: tools/fs_config/fs_config_generator.py
+
+440
+Mon May 02 21:07:27 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a8aea9f7_e77160d2
+Bytes: 180
+Damn, this is overly-complex. I missed the last sentence in https://docs.python.org/2/library/functions.html#int and this works like strtol() family of routines on base equal to 0.
+
