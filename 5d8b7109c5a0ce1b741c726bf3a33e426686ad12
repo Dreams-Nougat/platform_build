@@ -1,0 +1,25 @@
+Revision: 5d8b7109c5a0ce1b741c726bf3a33e426686ad12
+Patch-set: 2
+File: tools/fs_config/fs_config_generator.py
+
+129
+Mon May 02 18:47:08 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a8aea9f7_c6b542e1
+Bytes: 33
+Fix these doc indents while here.
+
+873
+Mon May 02 18:47:08 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a8aea9f7_86c4da50
+Bytes: 44
+Cant use super() here do to decorator usage.
+
+901
+Mon May 02 18:47:08 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a8aea9f7_e6eb26bf
+Bytes: 97
+This was already done by the C compiler via redefinition of define, but now were detecting early.
+
