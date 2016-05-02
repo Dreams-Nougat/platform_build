@@ -1,0 +1,11 @@
+Revision: 8edeaf1bd9fe1f292cc83918e1a849d1d531651c
+Patch-set: 1
+File: core/Makefile
+
+553:6-553:16
+Mon May 02 21:11:37 2016 +0000
+Author: Shawn Willden <1043663@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a8aea9f7_8706940e
+Bytes: 20
+--os_secure_version?
+
