@@ -9,6 +9,14 @@ UUID: a8aea9f7_c6b542e1
 Bytes: 33
 Fix these doc indents while here.
 
+129
+Mon May 02 18:49:13 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a8aea9f7_c6b542e1
+UUID: a8aea9f7_c611c2a1
+Bytes: 67
+nm, unlike class AID the hunk is not split across multiple commits.
+
 873
 Mon May 02 18:47:08 2016 +0000
 Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
