@@ -9,6 +9,14 @@ UUID: cd53efc8_438806d6
 Bytes: 167
 I assume the input / output APKs may be the same or not since this API does not deal with the files directly. However, this could be made clearer in the documentation.
 
+31:6-32:13
+Fri May 06 17:02:18 2016 +0000
+Author: Alex Klyubin <1018773@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: cd53efc8_438806d6
+UUID: ad65dbc5_da3fc574
+Bytes: 4
+Done
+
 47:7-47:42
 Fri May 06 14:22:06 2016 +0000
 Author: Paulo Casanova <1104608@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -17,6 +25,14 @@ Bytes: 454
 My understanding of the API is that we need one engine for each transformation and it cannot be reused for future transformations. Is this correct? If so, could you add that to the documentation? For example, when you say "Obtain a new instance of the engine." you could add something line: "Note that engine instances cannot be reused."
 
 And, if they cannot be reused, wouldn't it make sense to make the engine a Closeable so we can explicitly close it?
+
+47:7-47:42
+Fri May 06 17:02:18 2016 +0000
+Author: Alex Klyubin <1018773@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 6d65a395_0821c7ec
+UUID: ad65dbc5_3af521dc
+Bytes: 22
+All good points. Done.
 
 72:17-72:32
 Fri May 06 14:22:06 2016 +0000
@@ -28,12 +44,28 @@ Some high-level comments:
 - 
 -
 
+72:17-72:32
+Fri May 06 17:02:18 2016 +0000
+Author: Alex Klyubin <1018773@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: cdf84ffd_fb810fd6
+UUID: ad65dbc5_5a1bb50a
+Bytes: 105
+Hm. I can't see your comments in this box other than two bullet/dash characters. There's no other text...
+
 80:30-80:56
 Fri May 06 14:22:06 2016 +0000
 Author: Paulo Casanova <1104608@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: ad6b1b69_6a5cf73a
 Bytes: 64
 Is invoking this with null equivalent to not invoking it at all?
+
+80:30-80:56
+Fri May 06 17:02:18 2016 +0000
+Author: Alex Klyubin <1018773@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: ad6b1b69_6a5cf73a
+UUID: ad65dbc5_9d8d473c
+Bytes: 255
+I see what you mean. I've now dropped the null option from here. It makes this method similar in spirit to inputJarEntry: if you invoke it, it means there's something in the input APK, if you don't invoke it, we don't know but will assume there's nothing.
 
 87:30-87:43
 Fri May 06 14:22:06 2016 +0000
@@ -42,6 +74,16 @@ UUID: edab53ee_8cbb67d3
 Bytes: 178
 What happens when this method returns SKIP ad the file is already in the APK? Are we expected to remove the entry from the output? And should "outputJarEntryRemoved()" be called?
 
+87:30-87:43
+Fri May 06 17:02:18 2016 +0000
+Author: Alex Klyubin <1018773@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: edab53ee_8cbb67d3
+UUID: ad65dbc5_3d5c3b3a
+Bytes: 583
+Yes, the Javadoc of SKIP says "must not be output". Obviously, you're encourage to follow through. Otherwise the resulting APK might not get signed. If this entry is already in the output, you should thus remove it from there. If you've previously told the engine that this entry is in the output (via outputJarEntry), you should definitely invoke outputJarEntryRemoved. However, there's no harm in invoking outputJarEntryRemoved even if you haven't told the engine that this entry was there.
+
+I've clarified some of this in the class-level Javadoc and that of outputJarEntryRemoved.
+
 247:13-247:17
 Fri May 06 14:22:06 2016 +0000
 Author: Paulo Casanova <1104608@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -49,10 +91,26 @@ UUID: edab53ee_ecb02bf1
 Bytes: 40
 close()? And make this extend Closeable?
 
+247:13-247:17
+Fri May 06 17:02:18 2016 +0000
+Author: Alex Klyubin <1018773@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: edab53ee_ecb02bf1
+UUID: ad65dbc5_9dfd471a
+Bytes: 414
+I don't think Request is Closeable. Request by design holds resources after you're done with it. So, I'd rather keep done() and not add a close(). On the engine side, it might make sense to invoke close() once the engine is done with the request, however, the engine impl is the one that produces impls of this interface and thus the engine impl's Request impls can be Closeable if the engine impl finds it useful.
+
 264:88-264:93
 Fri May 06 14:22:06 2016 +0000
 Author: Paulo Casanova <1104608@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: edab53ee_2ccb5364
 Bytes: 83
 What do you mean by "order"? Is entry order in the APK under control of the signer?
+
+264:88-264:93
+Fri May 06 17:02:18 2016 +0000
+Author: Alex Klyubin <1018773@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: edab53ee_2ccb5364
+UUID: ad65dbc5_fabba97f
+Bytes: 155
+Good point. It's actually better to not require a particular order. I'll leave this as a List though to make life easier for deterministic build pipelines.
 
