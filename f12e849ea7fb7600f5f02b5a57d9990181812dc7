@@ -1,0 +1,62 @@
+Revision: f12e849ea7fb7600f5f02b5a57d9990181812dc7
+Patch-set: 9
+File: tools/apksigner/core/src/com/android/apksigner/core/ApkSignerEngine.java
+
+81:10-81:31
+Sun May 08 20:30:54 2016 +0000
+Author: Paulo Casanova <1104608@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 927038c5_99c11b44
+Bytes: 178
+My expectation while reading this is that I can reuse the engine for subsequent incremental runs on the same input/output APK as long as I do not invoke close(). Is this correct?
+
+81:10-81:31
+Sun May 08 20:30:54 2016 +0000
+Author: Paulo Casanova <1104608@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 927038c5_59df031c
+Bytes: 432
+Now, if all above are "yes", then for incremental runs in the "new" engine, my expectation is that I need to inform of all existing input entries, but for runs in the "reused" engine, I only need to inform of changed input entries.
+
+Regarding output entries, I need to inform of all existing output entries in the "new" engine. In the "reused" engine, I only need to inform if I cannot guarantee they have not been changed, correct?
+
+81:10-81:31
+Sun May 08 20:30:54 2016 +0000
+Author: Paulo Casanova <1104608@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 927038c5_b9be5fbb
+Bytes: 426
+If the answer to the previous comment is "yes", then in the case of an incremental run where 1 file has been added to the input, there would be two possible sequences: one in which I reuse the engine and another in which I would create a new engine. Right? This would allow much better performance in the build system if I can keep the engine object cached. However, even if I cannot, I can still do an incremental run, right?
+
+107:9-107:29
+Sun May 08 20:30:54 2016 +0000
+Author: Paulo Casanova <1104608@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 927038c5_79e447f3
+Bytes: 175
+I'm curious about why the engine would ever need this. If I'm doing IN -> OUT, OUT's v2 signature would be a newly computed one, so what is the relevance of IN's v2 signature?
+
+127:35-127:49
+Sun May 08 20:30:54 2016 +0000
+Author: Paulo Casanova <1104608@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f2fb3484_0c925759
+Bytes: 144
+Can it happen that the engine wants to remove a file from the output? For example, what about the CERT.RSA file if you're not signing using RSA.
+
+137:43-137:63
+Sun May 08 20:30:54 2016 +0000
+Author: Paulo Casanova <1104608@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 927038c5_19e98bca
+Bytes: 172
+You don't handle the case in which we update an input entry. You're expecting me to call inputJarEntryRemoved followed by inputJarEntry, right? This is just to make sure :)
+
+202:9-202:14
+Sun May 08 20:30:54 2016 +0000
+Author: Paulo Casanova <1104608@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 927038c5_39eecfd3
+Bytes: 298
+Does this method imply outputDone() kinda like File's close() implies flush()? Or is it incorrect to do:
+
+try (ApkSignerEngine engine = ...) {
+    engine.inputJarEntry()...
+    // Do not call outputDone()
+}
+
+If calling close still requires a call to outputDone(), could you add that to the javadoc?
+
