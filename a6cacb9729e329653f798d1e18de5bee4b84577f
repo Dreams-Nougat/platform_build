@@ -1,0 +1,11 @@
+Revision: a6cacb9729e329653f798d1e18de5bee4b84577f
+Patch-set: 2
+File: tools/apksigner/core/src/com/android/apksigner/core/internal/apk/v2/V2SchemeSigner.java
+
+209:0-209:69
+Mon May 09 19:12:11 2016 +0000
+Author: Chad Brubaker <1022895@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0d22678a_e8d4abcf
+Bytes: 28
+Any reason not to include e?
+
