@@ -33,6 +33,14 @@ UUID: 12728820_a82073eb
 Bytes: 453
 I presume you're talking about how this engine would be used in your Gradle/AS pipeline. If so, you're 100% correct. Given that we can't persist the engine across invocations of ./gradlew, the only place there's a chance to use this engine's incremental mode (not to be confused with your pipeline's incremental mode!) is when building in Android Studio. There, it should be possible to preserve the engine's instance across invocations of the pipeline.
 
+81:10-81:31
+Mon May 09 20:33:09 2016 +0000
+Author: Paulo Casanova <1104608@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 12728820_a82073eb
+UUID: 72af4490_58cc1dcf
+Bytes: 35
+Perfect then. It all makes sense :)
+
 107:9-107:29
 Sun May 08 20:30:54 2016 +0000
 Author: Paulo Casanova <1104608@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -47,6 +55,14 @@ Parent: 927038c5_79e447f3
 UUID: 12728820_e5b37659
 Bytes: 170
 Depending on the engine's configuration/impl it may or may not need to preserve: (1) input APK's v2 signatures, and/or (2) input APK's non-v2 blocks in APK Signing Block.
+
+107:9-107:29
+Mon May 09 20:33:09 2016 +0000
+Author: Paulo Casanova <1104608@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 12728820_e5b37659
+UUID: 72af4490_78d1e161
+Bytes: 4
+Done
 
 127:35-127:49
 Sun May 08 20:30:54 2016 +0000
@@ -65,6 +81,14 @@ Yes, that's why you want to use inputJarEntry first, if you can, to avoid output
 
 See Output-only Operation section of class-level Javadoc.
 
+127:35-127:49
+Mon May 09 20:33:09 2016 +0000
+Author: Paulo Casanova <1104608@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 12728820_e58a9675
+UUID: f2fb3484_eca0abb3
+Bytes: 4
+Done
+
 137:43-137:63
 Sun May 08 20:30:54 2016 +0000
 Author: Paulo Casanova <1104608@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -79,6 +103,14 @@ Parent: 927038c5_19e98bca
 UUID: 12728820_65d14662
 Bytes: 171
 It's up to you. I've now added documentation to input/outputJarEntryAdded to say that it's fine to invoke this without first invoking Removed if you're updating the entry.
+
+137:43-137:63
+Mon May 09 20:33:09 2016 +0000
+Author: Paulo Casanova <1104608@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 12728820_65d14662
+UUID: 72af4490_98c5d5a2
+Bytes: 4
+Done
 
 202:9-202:14
 Sun May 08 20:30:54 2016 +0000
