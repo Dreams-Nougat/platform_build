@@ -25,12 +25,28 @@ UUID: 927038c5_b9be5fbb
 Bytes: 426
 If the answer to the previous comment is "yes", then in the case of an incremental run where 1 file has been added to the input, there would be two possible sequences: one in which I reuse the engine and another in which I would create a new engine. Right? This would allow much better performance in the build system if I can keep the engine object cached. However, even if I cannot, I can still do an incremental run, right?
 
+81:10-81:31
+Mon May 09 18:15:25 2016 +0000
+Author: Alex Klyubin <1018773@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 927038c5_b9be5fbb
+UUID: 12728820_a82073eb
+Bytes: 453
+I presume you're talking about how this engine would be used in your Gradle/AS pipeline. If so, you're 100% correct. Given that we can't persist the engine across invocations of ./gradlew, the only place there's a chance to use this engine's incremental mode (not to be confused with your pipeline's incremental mode!) is when building in Android Studio. There, it should be possible to preserve the engine's instance across invocations of the pipeline.
+
 107:9-107:29
 Sun May 08 20:30:54 2016 +0000
 Author: Paulo Casanova <1104608@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 927038c5_79e447f3
 Bytes: 175
 I'm curious about why the engine would ever need this. If I'm doing IN -> OUT, OUT's v2 signature would be a newly computed one, so what is the relevance of IN's v2 signature?
+
+107:9-107:29
+Mon May 09 18:15:25 2016 +0000
+Author: Alex Klyubin <1018773@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 927038c5_79e447f3
+UUID: 12728820_e5b37659
+Bytes: 170
+Depending on the engine's configuration/impl it may or may not need to preserve: (1) input APK's v2 signatures, and/or (2) input APK's non-v2 blocks in APK Signing Block.
 
 127:35-127:49
 Sun May 08 20:30:54 2016 +0000
@@ -39,12 +55,30 @@ UUID: f2fb3484_0c925759
 Bytes: 144
 Can it happen that the engine wants to remove a file from the output? For example, what about the CERT.RSA file if you're not signing using RSA.
 
+127:35-127:49
+Mon May 09 18:15:25 2016 +0000
+Author: Alex Klyubin <1018773@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f2fb3484_0c925759
+UUID: 12728820_e58a9675
+Bytes: 253
+Yes, that's why you want to use inputJarEntry first, if you can, to avoid outputting an entry which the engine doesn't like. However, the current pipeline in Gradle/AS doesn't offer this luxury.
+
+See Output-only Operation section of class-level Javadoc.
+
 137:43-137:63
 Sun May 08 20:30:54 2016 +0000
 Author: Paulo Casanova <1104608@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 927038c5_19e98bca
 Bytes: 172
 You don't handle the case in which we update an input entry. You're expecting me to call inputJarEntryRemoved followed by inputJarEntry, right? This is just to make sure :)
+
+137:43-137:63
+Mon May 09 18:15:25 2016 +0000
+Author: Alex Klyubin <1018773@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 927038c5_19e98bca
+UUID: 12728820_65d14662
+Bytes: 171
+It's up to you. I've now added documentation to input/outputJarEntryAdded to say that it's fine to invoke this without first invoking Removed if you're updating the entry.
 
 202:9-202:14
 Sun May 08 20:30:54 2016 +0000
@@ -59,4 +93,12 @@ try (ApkSignerEngine engine = ...) {
 }
 
 If calling close still requires a call to outputDone(), could you add that to the javadoc?
+
+202:9-202:14
+Mon May 09 18:15:25 2016 +0000
+Author: Alex Klyubin <1018773@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 927038c5_39eecfd3
+UUID: 12728820_65b78604
+Bytes: 39
+I've now clarified this in the Javadoc.
 
