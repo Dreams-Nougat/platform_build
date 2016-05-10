@@ -1,0 +1,13 @@
+Revision: 697da4236b3699875b65afe714c61a0310a3804d
+Patch-set: 1
+File: core/Makefile
+
+1978:71-1978:83
+Tue May 10 17:10:04 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 125a88dd_ab042d6d
+Bytes: 190
+It's not good to have file target depend on phony target.
+Also target-tests isn't enough.
+We can add $(INSTALLED_USERDATAIMAGE_TARGET) and $(INSTALLED_VENDORIMAGE_TARGET) as dependency here.
+
