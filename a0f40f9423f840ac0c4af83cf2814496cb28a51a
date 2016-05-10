@@ -1,0 +1,11 @@
+Revision: a0f40f9423f840ac0c4af83cf2814496cb28a51a
+Patch-set: 1
+File: core/combo/arch/arm/armv7-a-neon.mk
+
+35
+Tue May 10 22:33:06 2016 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 125a88dd_e734919b
+Bytes: 91
+it seems better to add a cortex-a9 section instead of mixing it in with the generic section
+
