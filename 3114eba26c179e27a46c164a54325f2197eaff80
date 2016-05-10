@@ -11,12 +11,28 @@ intermediates :)
 
 (and L1882)
 
+1644:20-1644:34
+Tue May 10 18:03:11 2016 +0000
+Author: Wei Wang <1105075@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 125a88dd_2b4a7d47
+UUID: 125a88dd_ce9897dd
+Bytes: 19
+fixed typo! thanks!
+
 1882:16-1882:62
 Tue May 10 17:30:55 2016 +0000
 Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 125a88dd_cbd16967
 Bytes: 190
 I'm not sure what would be under $(vendor_partitions_intermediates). Do we want to include all of them here? Since we're only checking for top-level .img files in add_img_to_target_files.py.
+
+1882:16-1882:62
+Tue May 10 18:03:11 2016 +0000
+Author: Wei Wang <1105075@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 125a88dd_cbd16967
+UUID: 125a88dd_ee847370
+Bytes: 46
+good point, updated to copy only ".img" files.
 
 File: tools/releasetools/add_img_to_target_files.py
 
@@ -26,4 +42,12 @@ Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 125a88dd_2b611dc5
 Bytes: 37
 Can you help update the comment here?
+
+398:2-399:63
+Tue May 10 18:03:11 2016 +0000
+Author: Wei Wang <1105075@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 125a88dd_2b611dc5
+UUID: 125a88dd_ceead721
+Bytes: 7
+updated
 
