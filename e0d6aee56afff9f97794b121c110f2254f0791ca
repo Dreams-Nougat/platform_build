@@ -1,0 +1,11 @@
+Revision: e0d6aee56afff9f97794b121c110f2254f0791ca
+Patch-set: 1
+File: tools/warn.py
+
+815
+Tue May 10 23:11:24 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 125a88dd_dd37e639
+Bytes: 346
+The 'line' parameter happens to contain '\n' at the end so the output html file has one line per warning. When arg.url is used, the re.search does not keep '\n' and newly constructed return values are all in one huge line. Could you add '\n' at the end of warning or at the end of each return line? So, we can also see the html file in an editor.
+
