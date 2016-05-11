@@ -9,6 +9,14 @@ UUID: 125a88dd_9ca96638
 Bytes: 64
 the second tab => space (to be consistent with the lines around)
 
+1879:1-1879:2
+Wed May 11 17:37:36 2016 +0000
+Author: Wei Wang <1105075@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 125a88dd_9ca96638
+UUID: 125a88dd_5cd76e59
+Bytes: 4
+Done
+
 1880:36-1880:44
 Wed May 11 16:42:51 2016 +0000
 Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -17,4 +25,13 @@ Bytes: 130
 feels like you want notdir instead of basename?
 
 also do we need to worry about duplicate filenames (like a/file.img, b/file.img)?
+
+1880:36-1880:44
+Wed May 11 17:37:36 2016 +0000
+Author: Wei Wang <1105075@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 125a88dd_1cbd7673
+UUID: 125a88dd_d2d02707
+Bytes: 137
+This is in bash context, so use basename instead of notdir, see '$$'.
+If this happens, there will be also ambiguous in ab_partitions.txt.
 
