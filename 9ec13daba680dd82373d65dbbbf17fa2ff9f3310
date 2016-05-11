@@ -42,3 +42,11 @@ UUID: 125a88dd_87fa7482
 Bytes: 276
 This is not for provision device, this change is for fixing the build breakage on brillo branch due to the dependency. This change as well as c/224289 are to add support for more AB partitions other than boot and system.  provision-device is not impacted by any of the change.
 
+11:65-11:72
+Wed May 11 07:06:52 2016 +0000
+Author: Dan Shi <1088076@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 125a88dd_87fa7482
+UUID: 125a88dd_079764fb
+Bytes: 135
+Got it. David can comment on if we need to preserve the folder structure. That is mostly to separate regular images from vendor images.
+
