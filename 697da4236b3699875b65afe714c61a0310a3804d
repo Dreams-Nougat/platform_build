@@ -11,3 +11,11 @@ It's not good to have file target depend on phony target.
 Also target-tests isn't enough.
 We can add $(INSTALLED_USERDATAIMAGE_TARGET) and $(INSTALLED_VENDORIMAGE_TARGET) as dependency here.
 
+1978:71-1978:83
+Wed May 11 11:11:37 2016 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 125a88dd_ab042d6d
+UUID: 92daf8a7_29386dc2
+Bytes: 241
+I see. I couldn't find a make variable which contains all test binaries, so I've added ALL_TEST_BINARIES variable. I also added the two target images and the updater binary (as I've realized the zip file contains the symbol info of it. too).
+
