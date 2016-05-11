@@ -1,0 +1,18 @@
+Revision: e35abdad032b7846924cd66e751e7f6e88862e83
+Patch-set: 3
+File: tools/releasetools/add_img_to_target_files.py
+
+414:18-414:22
+Wed May 11 19:18:59 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 125a88dd_0b47666a
+Bytes: 6
+nit: _
+
+417:12-417:24
+Wed May 11 19:18:59 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 125a88dd_8b535627
+Bytes: 67
+nit: indent with two space or align with "output_zip" in last line.
+
