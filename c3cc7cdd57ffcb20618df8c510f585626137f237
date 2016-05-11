@@ -1,0 +1,20 @@
+Revision: c3cc7cdd57ffcb20618df8c510f585626137f237
+Patch-set: 2
+File: core/Makefile
+
+1879:1-1879:2
+Wed May 11 16:42:51 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 125a88dd_9ca96638
+Bytes: 64
+the second tab => space (to be consistent with the lines around)
+
+1880:36-1880:44
+Wed May 11 16:42:51 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 125a88dd_1cbd7673
+Bytes: 130
+feels like you want notdir instead of basename?
+
+also do we need to worry about duplicate filenames (like a/file.img, b/file.img)?
+
