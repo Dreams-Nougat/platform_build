@@ -1,0 +1,12 @@
+Revision: 3c094aab763b843d70a68c17040a8d40c3a34e12
+Patch-set: 2
+File: core/Makefile
+
+1983:2-1983:24
+Wed May 11 17:03:26 2016 +0000
+Author: Ying Wang <1003981@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 125a88dd_9cb40644
+Bytes: 333
+Hmm, this will change the behavior of "make dist" : we are not necessarily building all the test binaries. The same with dependency on phony target "target-tests". 
+What we really want is all target binaries/shared libraries built during the build process. I don't see a way to this list, or a target that can cover the dependencies.
+
