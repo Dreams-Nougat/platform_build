@@ -9,3 +9,13 @@ UUID: 125a88dd_27b940da
 Bytes: 82
 What do you mean by ignored? These paths are the source of the image files, right?
 
+11:65-11:72
+Wed May 11 06:25:04 2016 +0000
+Author: Wei Wang <1105075@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 125a88dd_27b940da
+UUID: 125a88dd_a7c53050
+Bytes: 252
+The last part of the pair path will be trucated to filename so images are stored flat under VENDOR_IMAGES/.
+e.g. $(vendor_partition_directory):bootloader/teesst.img
+ teesst.img will be stored under VENDOR_IMAGES/ not VENDOR_IMAGES/bootloader/teesst.img
+
