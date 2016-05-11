@@ -1,0 +1,11 @@
+Revision: 9ec13daba680dd82373d65dbbbf17fa2ff9f3310
+Patch-set: 1
+File: /COMMIT_MSG
+
+11:65-11:72
+Wed May 11 06:19:08 2016 +0000
+Author: Dan Shi <1088076@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 125a88dd_27b940da
+Bytes: 82
+What do you mean by ignored? These paths are the source of the image files, right?
+
