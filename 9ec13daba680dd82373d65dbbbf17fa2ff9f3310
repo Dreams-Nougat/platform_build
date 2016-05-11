@@ -34,3 +34,11 @@ Some bin files are under partitions folder, some are under vendor-partitions fol
 
 Also, it seems that this change will not include that provision-device script. Is it the plan not to use that to do device provision? David might have more input on that.
 
+11:65-11:72
+Wed May 11 06:36:35 2016 +0000
+Author: Wei Wang <1105075@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 125a88dd_67bf38b9
+UUID: 125a88dd_87fa7482
+Bytes: 276
+This is not for provision device, this change is for fixing the build breakage on brillo branch due to the dependency. This change as well as c/224289 are to add support for more AB partitions other than boot and system.  provision-device is not impacted by any of the change.
+
