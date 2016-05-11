@@ -9,3 +9,11 @@ UUID: 125a88dd_dd37e639
 Bytes: 346
 The 'line' parameter happens to contain '\n' at the end so the output html file has one line per warning. When arg.url is used, the re.search does not keep '\n' and newly constructed return values are all in one huge line. Could you add '\n' at the end of warning or at the end of each return line? So, we can also see the html file in an editor.
 
+815
+Wed May 11 05:27:27 2016 +0000
+Author: Ian Rogers <1010118@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 125a88dd_dd37e639
+UUID: 125a88dd_1c801b5b
+Bytes: 4
+Done
+
