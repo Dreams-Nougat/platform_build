@@ -10,3 +10,11 @@ Bytes: 333
 Hmm, this will change the behavior of "make dist" : we are not necessarily building all the test binaries. The same with dependency on phony target "target-tests". 
 What we really want is all target binaries/shared libraries built during the build process. I don't see a way to this list, or a target that can cover the dependencies.
 
+1983:2-1983:24
+Wed May 11 17:12:49 2016 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 125a88dd_9cb40644
+UUID: 92daf8a7_69b70549
+Bytes: 167
+OK. Then let's give up having them for now? Not updating symbol info of  test binaries won't be a big deal anyway. Also, I guess it'd be easier to fix this with Soong.
+
