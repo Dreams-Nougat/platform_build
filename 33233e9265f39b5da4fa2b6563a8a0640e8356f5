@@ -1,0 +1,12 @@
+Revision: 33233e9265f39b5da4fa2b6563a8a0640e8356f5
+Patch-set: 2
+File: core/binary.mk
+
+175
+Thu May 12 21:55:44 2016 +0000
+Author: Duane Sand <1080051@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5257a0e9_eabf38b6
+Bytes: 189
+It appears that ndk master NDK is generating libwunwind.a only for armeabi, not arm64, x86*, or mips*.
+Until that changes, this will also need an ARCH conditional around the libunwind.a ref
+
