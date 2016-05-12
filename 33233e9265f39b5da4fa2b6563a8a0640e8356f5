@@ -18,3 +18,28 @@ UUID: 5257a0e9_0a62bc30
 Bytes: 111
 Huh. I wonder why `ndk-build` isn't complaining, since it isn't conditional on the architecture there either...
 
+175
+Thu May 12 23:43:20 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5257a0e9_0a62bc30
+UUID: 5257a0e9_2367ab40
+Bytes: 1250
+Gross.
+
+    $ ndk-build -C tests/build/issue66668-libc++-std-feof/ APP_ABI=mips V=1 NDK_DEBUG_MODULES=true
+    [trimmed]
+    module issue66668-libc++-std-feof [./obj/local/mips/issue66668-libc++-std-feof]
+    .  all_libs='c++_static c++abi unwind android_support'
+    .  shared_libs=''
+    .  static_libs='c++_static c++abi android_support'
+    .  whole_static_libs=''
+    .  built_shared_libs=' '
+    .  built_static_libs='/work/src/ndk/out/android-ndk-r13-beta1/sources/cxx-stl/llvm-libc++/libs/mips/libc++_static.a /work/src/ndk/out/android-ndk-r13-beta1/sources/cxx-stl/llvm-libc++abi/../llvm-libc++/libs/mips/libc++abi.a ./obj/local/mips/libandroid_support.a'
+    .  built_whole_static_libs=''
+
+Can see that libunwind is in the list of all_libs, but doesn't make it into static_libs. static_libs is setup here https://android.googlesource.com/platform/ndk/+/master/build/core/build-binary.mk#624
+
+The function it's calling just filters all_libs by the MODULE_CLASS of each lib. Since make thinks all uninitialized values are the empty string, it happily reports that the non-existent library is not a static library, and it gets filtered out.
+
+I should probably fix that, but at least for now I know why ndk-build wasn't having the same problem.
+
