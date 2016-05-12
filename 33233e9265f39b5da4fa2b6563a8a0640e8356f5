@@ -10,3 +10,11 @@ Bytes: 189
 It appears that ndk master NDK is generating libwunwind.a only for armeabi, not arm64, x86*, or mips*.
 Until that changes, this will also need an ARCH conditional around the libunwind.a ref
 
+175
+Thu May 12 21:59:33 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5257a0e9_eabf38b6
+UUID: 5257a0e9_0a62bc30
+Bytes: 111
+Huh. I wonder why `ndk-build` isn't complaining, since it isn't conditional on the architecture there either...
+
