@@ -1,0 +1,11 @@
+Revision: 3b8cb4ace908428df8ba4c88c344d13fd9112a67
+Patch-set: 1
+File: core/Makefile
+
+49:0-49:38
+Thu May 12 09:56:08 2016 +0000
+Author: Nicolas Geoffray <1038443@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b75fee26_aa45afa8
+Bytes: 68
+Erf, this is very ART specific, not sure we want to mention it here.
+
