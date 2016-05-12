@@ -1,0 +1,11 @@
+Revision: 585ab91741f5e21bec3f42985e6a651f46946816
+Patch-set: 1
+File: tools/signapk/src/com/android/signapk/SignApk.java
+
+400:7-400:12
+Thu May 12 18:28:40 2016 +0000
+Author: Chad Brubaker <1022895@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5257a0e9_c7ec3408
+Bytes: 12
+blob? block?
+
