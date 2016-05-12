@@ -1,0 +1,11 @@
+Revision: c4aef130f2273f43515203a6298e1993a84cb1af
+Patch-set: 2
+File: tools/apksigner/core/src/com/android/apksigner/core/DefaultApkSignerEngine.java
+
+61
+Thu May 12 17:50:06 2016 +0000
+Author: Chad Brubaker <1022895@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5257a0e9_cfac5db5
+Bytes: 25
+missing blank line above?
+
