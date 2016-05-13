@@ -9,12 +9,28 @@ UUID: 5257a0e9_b49e6560
 Bytes: 66
 Is there some preferred way to do numerical < compare in mk files?
 
+87
+Fri May 13 19:48:41 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5257a0e9_b49e6560
+UUID: 5257a0e9_b4d665cf
+Bytes: 134
+iirc the only way to do it is to shell out, and idk how portable this is. This seems reasonable to me, but wangying will say for sure.
+
 96
 Fri May 13 19:43:16 2016 +0000
 Author: Duane Sand <1080051@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 722d8476_4e8ea78c
 Bytes: 86
 Have we been using symlinks before, or did NDK change how it handled old api's lately?
+
+96
+Fri May 13 19:48:41 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 722d8476_4e8ea78c
+UUID: 5257a0e9_b453c558
+Bytes: 166
+That is was https://android.googlesource.com/platform/prebuilts/ndk/+/master/make_platform_symlinks.py#66 does, but I actually prefer having this in the build system.
 
 185
 Fri May 13 19:43:16 2016 +0000
