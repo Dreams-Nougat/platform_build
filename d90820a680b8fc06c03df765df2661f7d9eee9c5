@@ -17,6 +17,13 @@ UUID: 5257a0e9_b4d665cf
 Bytes: 134
 iirc the only way to do it is to shell out, and idk how portable this is. This seems reasonable to me, but wangying will say for sure.
 
+91
+Fri May 13 22:16:39 2016 +0000
+Author: Duane Sand <1080051@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 722d8476_ee43db03
+Bytes: 165
+This is unrelated to LOCAL_NDK_VERSION. A better name would be local_ndk_api.  Var my_local_sdk_version is unused after this so a single var should be used for both.
+
 96
 Fri May 13 19:43:16 2016 +0000
 Author: Duane Sand <1080051@85c56323-6fa9-3386-8a01-6480fb634889>
