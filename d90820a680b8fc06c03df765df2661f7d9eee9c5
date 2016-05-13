@@ -1,0 +1,25 @@
+Revision: d90820a680b8fc06c03df765df2661f7d9eee9c5
+Patch-set: 3
+File: core/binary.mk
+
+87
+Fri May 13 19:43:16 2016 +0000
+Author: Duane Sand <1080051@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5257a0e9_b49e6560
+Bytes: 66
+Is there some preferred way to do numerical < compare in mk files?
+
+96
+Fri May 13 19:43:16 2016 +0000
+Author: Duane Sand <1080051@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 722d8476_4e8ea78c
+Bytes: 86
+Have we been using symlinks before, or did NDK change how it handled old api's lately?
+
+185
+Fri May 13 19:43:16 2016 +0000
+Author: Duane Sand <1080051@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5257a0e9_14b491e0
+Bytes: 52
+This can become a simple test for arm, w/o a filter.
+
