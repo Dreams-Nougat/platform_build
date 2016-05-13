@@ -1,0 +1,11 @@
+Revision: 3cd67e17a888032ff34be2e4121f038318891dd0
+Patch-set: 4
+File: /COMMIT_MSG
+
+11
+Fri May 13 22:16:39 2016 +0000
+Author: Duane Sand <1080051@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5257a0e9_084e32b2
+Bytes: 82
+Comment wrong; oldest 64-bit native api is 21.  Is now correct in the actual code.
+
