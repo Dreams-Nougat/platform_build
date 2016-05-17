@@ -17,3 +17,11 @@ UUID: 722d8476_97d0ae3b
 Bytes: 100
 So... BOARD_DEFAULT_RTTI_FLAG ? It doesn't make sense (to me) to tie this to a "board"... but... OK.
 
+123
+Tue May 17 19:13:43 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 722d8476_97d0ae3b
+UUID: 722d8476_82e6ae53
+Bytes: 177
+Yeah, either BOARD_..., or TARGET_... seem to be the convention, but it's rather free-form, since it's just a standard make variable. Just make sure it's not used anywhere else.
+
