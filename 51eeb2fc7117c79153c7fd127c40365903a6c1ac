@@ -9,3 +9,11 @@ UUID: 722d8476_576ab674
 Bytes: 117
 products aren't supposed to change how code is built, a similar variable should be set in your BoardConfig.mk instead
 
+123
+Tue May 17 18:31:01 2016 +0000
+Author: Gabriel Beddingfield <1084358@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 722d8476_576ab674
+UUID: 722d8476_97d0ae3b
+Bytes: 100
+So... BOARD_DEFAULT_RTTI_FLAG ? It doesn't make sense (to me) to tie this to a "board"... but... OK.
+
