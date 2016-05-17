@@ -1,0 +1,11 @@
+Revision: 51eeb2fc7117c79153c7fd127c40365903a6c1ac
+Patch-set: 1
+File: core/product.mk
+
+123
+Tue May 17 18:26:45 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 722d8476_576ab674
+Bytes: 117
+products aren't supposed to change how code is built, a similar variable should be set in your BoardConfig.mk instead
+
