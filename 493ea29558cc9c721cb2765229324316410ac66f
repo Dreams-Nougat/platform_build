@@ -1,0 +1,15 @@
+Revision: 493ea29558cc9c721cb2765229324316410ac66f
+Patch-set: 1
+File: core/envsetup.mk
+
+483
+Thu May 19 20:17:00 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 17fefabc_9f42ab01
+Bytes: 344
+I'd almost just do a check outside everything above that makes sure that the value is either true or false at this point, so that we error on values other than "" earlier too.
+
+Example, setting it to "asdf" gives this error:
+
+  config file: out/soong/soong.variables did not parse correctly: invalid character 'a' looking for beginning of value
+
