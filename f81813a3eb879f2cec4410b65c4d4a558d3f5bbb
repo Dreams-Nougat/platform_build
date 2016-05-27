@@ -1,0 +1,11 @@
+Revision: f81813a3eb879f2cec4410b65c4d4a558d3f5bbb
+Patch-set: 2
+File: tools/apksigner/core/src/com/android/apksigner/core/internal/util/ByteBufferDataSource.java
+
+78:56-78:78
+Fri May 27 17:22:10 2016 +0000
+Author: Chad Brubaker <1022895@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: fcfdcbc0_5a2ad780
+Bytes: 109
+it doesn't look like checkChunkValid checks that theres no truncation in the cast of offset or offset + size?
+
