@@ -9,3 +9,11 @@ UUID: fcfdcbc0_5a2ad780
 Bytes: 109
 it doesn't look like checkChunkValid checks that theres no truncation in the cast of offset or offset + size?
 
+78:56-78:78
+Fri May 27 17:31:10 2016 +0000
+Author: Alex Klyubin <1018773@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: fcfdcbc0_5a2ad780
+UUID: fcfdcbc0_7ad35372
+Bytes: 207
+I've now fixed the bug where mSize was long rather than int. Now that mSize is an int, checkChunkValid does ensure that both offset and offset + size fall within 0 and mSize and are thus safe to case to int.
+
