@@ -1,0 +1,11 @@
+Revision: 2fdf132a637194e909e04f2582e5434e812e95ff
+Patch-set: 1
+File: core/main.mk
+
+545:69-545:79
+Fri May 27 22:39:10 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1ca29f11_5d82c7a8
+Bytes: 160
+Change this to "." and remove subdirs, otherwise if we did actually have subdirs in this variable, the previous comment about first-makefiles-under would apply.
+
