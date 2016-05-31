@@ -1,0 +1,18 @@
+Revision: 74e5e9b7dac03c18f393d17dd291a3b00957960c
+Patch-set: 1
+File: core/main.mk
+
+380:24-380:28
+Tue May 31 19:50:17 2016 +0000
+Author: Jeffrey Vander Stoep <1054468@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3991350e_5399247f
+Bytes: 71
+Why user? Prefer to keep diffs between userdebug and user to a minimum.
+
+382:37-382:44
+Tue May 31 19:50:17 2016 +0000
+Author: Jeffrey Vander Stoep <1054468@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3991350e_53b284f3
+Bytes: 31
+Does this need to be persisted?
+
