@@ -1,0 +1,15 @@
+Revision: cc025090cfbeb80a71c491a3a2d3e03424bb0ab6
+Patch-set: 1
+File: core/clear_vars.mk
+
+199
+Tue May 31 18:49:35 2016 +0000
+Author: Duane Sand <1010669@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3991350e_65290225
+Bytes: 277
+Allow override by some new shell variable; default to current.
+
+Shell variable will allow naming of nonstandard NDK version directory names such as  prebuilts/ndk/r13-mips, to be found only on Imgtec-supported repos, not at aosp.
+
+This mechanism will be used for mips64 builds.
+
