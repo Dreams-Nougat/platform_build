@@ -9,10 +9,26 @@ UUID: 3991350e_5399247f
 Bytes: 71
 Why user? Prefer to keep diffs between userdebug and user to a minimum.
 
+380:24-380:28
+Tue May 31 20:14:05 2016 +0000
+Author: Daniel Micay <1069238@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3991350e_5399247f
+UUID: 590b4918_b80ab916
+Bytes: 146
+No real reason beyond removing a bit of friction for profiling with perf in userdebug builds. It could just be the default in both user/userdebug.
+
 382:37-382:44
 Tue May 31 19:50:17 2016 +0000
 Author: Jeffrey Vander Stoep <1054468@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 3991350e_53b284f3
 Bytes: 31
 Does this need to be persisted?
+
+382:37-382:44
+Tue May 31 20:14:05 2016 +0000
+Author: Daniel Micay <1069238@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3991350e_53b284f3
+UUID: 590b4918_9807f510
+Bytes: 52
+If it's not exposed as a setting, then probably not.
 
