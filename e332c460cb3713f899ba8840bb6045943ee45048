@@ -1,0 +1,15 @@
+Revision: e332c460cb3713f899ba8840bb6045943ee45048
+Patch-set: 3
+File: target/product/product_launched_with_l.mk
+
+2:0-5:5
+Fri Jun 03 22:55:22 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 46ed2637_598763cc
+Bytes: 84
+Can we get this back to:
+
+  PRODUCT_SHIPPING_API_LEVEL := 21
+
+(notice the :=, not =)
+
