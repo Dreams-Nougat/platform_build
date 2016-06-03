@@ -1,0 +1,18 @@
+Revision: f5b15f5b78885416922d8b44723fdfb7a6eea9ca
+Patch-set: 1
+File: core/product_launched_with_l.mk
+
+1
+Fri Jun 03 22:17:48 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 46ed2637_0e93d361
+Bytes: 69
+Most of the product files have been going in build/target/product/...
+
+2
+Fri Jun 03 22:17:48 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 46ed2637_4ec4bb57
+Bytes: 117
+Just set PRODUCT_SHIPPING_API_LEVEL here. You can't use a conditional if you're included with $(call inherit-product)
+
