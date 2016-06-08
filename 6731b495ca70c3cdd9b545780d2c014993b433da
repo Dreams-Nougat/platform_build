@@ -1,0 +1,11 @@
+Revision: 6731b495ca70c3cdd9b545780d2c014993b433da
+Patch-set: 1
+File: core/config.mk
+
+784
+Wed Jun 08 05:59:57 2016 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 032c002d_e4ed8434
+Bytes: 63
+FYI for danalbert@, since he may need to update this list later
+
