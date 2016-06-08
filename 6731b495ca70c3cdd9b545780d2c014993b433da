@@ -9,3 +9,11 @@ UUID: 032c002d_e4ed8434
 Bytes: 63
 FYI for danalbert@, since he may need to update this list later
 
+784
+Wed Jun 08 06:26:23 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 032c002d_e4ed8434
+UUID: 032c002d_0430c088
+Bytes: 266
+I suspect this list will move to Soong and be exported here eventually. Then we could automatically generate it based on the ndk_prebuilt_library list (which at least is defined in prebuilts/ndk). But there's more to figure out on the Soong side before that happens.
+
