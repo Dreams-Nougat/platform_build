@@ -26,3 +26,11 @@ UUID: 8f09f4df_1775abb5
 Bytes: 93
 If you're doing strict checking you should check here that unCompressedSize == compressedSize
 
+183:0-183:54
+Mon Jun 13 19:43:28 2016 +0000
+Author: Alex Klyubin <1018773@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8f09f4df_1775abb5
+UUID: 8f09f4df_ae7bc10d
+Bytes: 107
+As documented at the top of the method, this is doing just the checks (roughly) that Android platform does.
+
