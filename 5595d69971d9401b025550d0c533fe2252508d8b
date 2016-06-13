@@ -1,0 +1,11 @@
+Revision: 5595d69971d9401b025550d0c533fe2252508d8b
+Patch-set: 3
+File: tools/apksigner/core/src/com/android/apksigner/core/internal/jar/ManifestParser.java
+
+209:0-209:41
+Mon Jun 13 17:53:11 2016 +0000
+Author: Chad Brubaker <1022895@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8f09f4df_c4fb7f1b
+Bytes: 14
+Break missing?
+
