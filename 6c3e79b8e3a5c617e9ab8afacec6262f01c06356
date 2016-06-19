@@ -1,0 +1,11 @@
+Revision: 6c3e79b8e3a5c617e9ab8afacec6262f01c06356
+Patch-set: 2
+File: core/Makefile
+
+1910:9-1910:11
+Sun Jun 19 07:21:55 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 29b2c8f6_eb6d02b7
+Bytes: 7
+$(ACP)?
+
