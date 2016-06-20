@@ -1,0 +1,18 @@
+Revision: e16095a68c4c2447c15ffaab55f333de5ceedde2
+Patch-set: 1
+File: core/post_clean.mk
+
+101
+Mon Jun 20 19:24:42 2016 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8982d44f_a1c3e895
+Bytes: 77
+How does this interact with the automatic installclean when changing targets?
+
+118
+Mon Jun 20 19:24:42 2016 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8982d44f_81d4a451
+Bytes: 178
+Might be worth computing this somewhere more obvious like main.mk, other patches are constantly adding new images (https://googleplex-android-review.git.corp.google.com/1159150).
+
