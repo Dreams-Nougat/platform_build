@@ -1,0 +1,11 @@
+Revision: c6a51285890645e0545a9d02ac32991644f3ab73
+Patch-set: 2
+File: tools/releasetools/ota_from_target_files.py
+
+1904:50-1904:51
+Mon Jun 20 21:39:41 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8982d44f_19402c42
+Bytes: 21
+'n' should be removed
+
