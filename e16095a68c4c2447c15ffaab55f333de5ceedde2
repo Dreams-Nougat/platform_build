@@ -9,10 +9,28 @@ UUID: 8982d44f_a1c3e895
 Bytes: 77
 How does this interact with the automatic installclean when changing targets?
 
+101
+Mon Jun 20 21:25:20 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8982d44f_a1c3e895
+UUID: 8982d44f_c7addc56
+Bytes: 365
+It duplicates it, more or less. We may remove more than what an installclean would remove (some top level components in $PRODUCT_OUT). But an installclean would catch symlinks and other missing items.
+
+I changed the removal code below to check for file existence before removing, so unless there's something extra to remove, there won't be any prints (or removals).
+
 118
 Mon Jun 20 19:24:42 2016 +0000
 Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 8982d44f_81d4a451
 Bytes: 178
 Might be worth computing this somewhere more obvious like main.mk, other patches are constantly adding new images (https://googleplex-android-review.git.corp.google.com/1159150).
+
+118
+Mon Jun 20 21:25:20 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8982d44f_81d4a451
+UUID: 8982d44f_a77c58d1
+Bytes: 4
+Done
 
