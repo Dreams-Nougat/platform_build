@@ -9,3 +9,13 @@ UUID: 8982d44f_59e8f489
 Bytes: 41
 wouldn't $(wildcard $(f)) be enough here?
 
+121:76-121:103
+Mon Jun 20 21:37:38 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8982d44f_59e8f489
+UUID: 8982d44f_19558c08
+Bytes: 287
+I suspect so, but I did this just in case there were wildcards present in the filename, with the goal that we'd only call rm on what's actually in the file list. Though for that to be complete, we'd need to make sure they aren't expanded in the rm call below either.
+
+I'll just remove it
+
