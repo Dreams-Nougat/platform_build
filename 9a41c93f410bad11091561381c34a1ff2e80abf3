@@ -1,0 +1,11 @@
+Revision: 9a41c93f410bad11091561381c34a1ff2e80abf3
+Patch-set: 2
+File: tools/apksigner/core/src/com/android/apksigner/core/internal/util/RandomAccessFileDataSource.java
+
+30:13-30:39
+Wed Jun 22 22:03:26 2016 +0000
+Author: Chad Brubaker <1022895@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2eed6e38_825fbc23
+Bytes: 64
+Is it worth splitting this off into another CL? Seems unrelated.
+
