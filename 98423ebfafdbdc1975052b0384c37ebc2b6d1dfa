@@ -11,6 +11,14 @@ No space.
 
 Also, missing TEST=foobar line.
 
+9:4-9:5
+Mon Jun 27 21:03:21 2016 +0000
+Author: Kevin Chavez <1107984@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 80e8eb66_05b5b490
+UUID: 80e8eb66_e86747fd
+Bytes: 4
+Done
+
 File: core/Makefile
 
 1449
@@ -19,6 +27,14 @@ Author: David Zeuthen <1076971@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 80e8eb66_45bbbc86
 Bytes: 11
 Extra line?
+
+1449
+Mon Jun 27 21:03:21 2016 +0000
+Author: Kevin Chavez <1107984@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 80e8eb66_45bbbc86
+UUID: 80e8eb66_058254b3
+Bytes: 4
+Done
 
 1453:14-1453:15
 Mon Jun 27 15:16:51 2016 +0000
@@ -32,6 +48,14 @@ Also, EFI_IMAGEBUILD is a weird name. Since the tool is called make_efi_image.sh
 I would also drop the .sh extension (some day we might rewrite it in python) and ensure that it's installed in $(HOST_OUT_EXECUTABLES). The snippet you'd use in the Android.mk for make_efi_image would be something like what's in system/tools/bpt/Android.mk
 
 You should also define this in config.mk just like for BPTTOOL, BVBTOOL, and MKBOOTIMG and then just use MAKE_EFI_IMAGE from there.
+
+1453:14-1453:15
+Mon Jun 27 21:03:21 2016 +0000
+Author: Kevin Chavez <1107984@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 80e8eb66_25c0b8ea
+UUID: 80e8eb66_c8e7e3b4
+Bytes: 4
+Done
 
 1457:9-1457:13
 Mon Jun 27 15:04:04 2016 +0000
@@ -49,4 +73,12 @@ Bytes: 126
 How is EFI_INPUT_FILES passed to make_efi_image.sh?
 
 Also, please post the CL for make_efi_image.sh and mention it in this CL.
+
+1457:9-1457:13
+Mon Jun 27 21:03:21 2016 +0000
+Author: Kevin Chavez <1107984@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 80e8eb66_e5b1b0a4
+UUID: 80e8eb66_88f2fb3b
+Bytes: 4
+Done
 
