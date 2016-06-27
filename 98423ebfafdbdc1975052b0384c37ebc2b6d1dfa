@@ -1,6 +1,37 @@
 Revision: 98423ebfafdbdc1975052b0384c37ebc2b6d1dfa
 Patch-set: 1
+File: /COMMIT_MSG
+
+9:4-9:5
+Mon Jun 27 15:16:51 2016 +0000
+Author: David Zeuthen <1076971@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 80e8eb66_05b5b490
+Bytes: 42
+No space.
+
+Also, missing TEST=foobar line.
+
 File: core/Makefile
+
+1449
+Mon Jun 27 15:16:51 2016 +0000
+Author: David Zeuthen <1076971@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 80e8eb66_45bbbc86
+Bytes: 11
+Extra line?
+
+1453:14-1453:15
+Mon Jun 27 15:16:51 2016 +0000
+Author: David Zeuthen <1076971@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 80e8eb66_25c0b8ea
+Bytes: 555
+No tab here.
+
+Also, EFI_IMAGEBUILD is a weird name. Since the tool is called make_efi_image.sh it would make more sense if you used the variable MAKE_EFI_IMAGE, no?
+
+I would also drop the .sh extension (some day we might rewrite it in python) and ensure that it's installed in $(HOST_OUT_EXECUTABLES). The snippet you'd use in the Android.mk for make_efi_image would be something like what's in system/tools/bpt/Android.mk
+
+You should also define this in config.mk just like for BPTTOOL, BVBTOOL, and MKBOOTIMG and then just use MAKE_EFI_IMAGE from there.
 
 1457:9-1457:13
 Mon Jun 27 15:04:04 2016 +0000
@@ -8,4 +39,14 @@ Author: Kevin Chavez <1107984@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 80e8eb66_85c1c4f4
 Bytes: 80
 EFI_IMAGEBUILD would not run if this 'exec' was not present. Unsure why this is.
+
+1457:9-1457:13
+Mon Jun 27 15:16:51 2016 +0000
+Author: David Zeuthen <1076971@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 80e8eb66_85c1c4f4
+UUID: 80e8eb66_e5b1b0a4
+Bytes: 126
+How is EFI_INPUT_FILES passed to make_efi_image.sh?
+
+Also, please post the CL for make_efi_image.sh and mention it in this CL.
 
