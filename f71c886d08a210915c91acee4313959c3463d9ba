@@ -1,0 +1,11 @@
+Revision: f71c886d08a210915c91acee4313959c3463d9ba
+Patch-set: 2
+File: core/Makefile
+
+1457:28-1457:47
+Mon Jun 27 21:10:27 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e3c531ce_2d2a1f22
+Bytes: 52
+You're missing dependencies used by the script here.
+
