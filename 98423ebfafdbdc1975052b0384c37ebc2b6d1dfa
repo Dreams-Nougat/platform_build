@@ -1,0 +1,11 @@
+Revision: 98423ebfafdbdc1975052b0384c37ebc2b6d1dfa
+Patch-set: 1
+File: core/Makefile
+
+1457:9-1457:13
+Mon Jun 27 15:04:04 2016 +0000
+Author: Kevin Chavez <1107984@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 80e8eb66_85c1c4f4
+Bytes: 80
+EFI_IMAGEBUILD would not run if this 'exec' was not present. Unsure why this is.
+
