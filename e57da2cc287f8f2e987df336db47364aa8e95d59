@@ -9,3 +9,15 @@ UUID: 9d4856a2_98a7a4b9
 Bytes: 89
 Comment is not longer relevant with this change, and the conditional no longer necessary.
 
+22
+Thu Jun 30 22:52:46 2016 +0000
+Author: Evgenii Stepanov <1005967@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 9d4856a2_98a7a4b9
+UUID: 9d4856a2_73963b64
+Bytes: 291
+The conditional is actually needed, otherwise we get non-empty $(my_sanitize), and the following check fails:
+
+# Sanitizers can only be used with clang.                                                                                        
+ifneq ($(my_clang),true)
+  ifneq ($(my_sanitize),)
+
