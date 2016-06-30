@@ -9,6 +9,14 @@ UUID: 8082ab4f_f2b0e80d
 Bytes: 15
 Stray addition?
 
+1399:50-1399:51
+Thu Jun 30 21:10:31 2016 +0000
+Author: Kevin Chavez <1107984@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8082ab4f_f2b0e80d
+UUID: 8082ab4f_782059ee
+Bytes: 8
+Removed.
+
 1449:0-1449:82
 Thu Jun 30 16:01:04 2016 +0000
 Author: David Zeuthen <1076971@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -23,4 +31,12 @@ Also, I would simplify the check to just be
 since it's simpler and all you need - no need to gracefully handle the user only setting one of the variables but not the other(s).
 
 Also add a comment after "EFI image" that explains what EFI_INPUT_FILES and EFI_IMAGE_SIZE variable are.
+
+1449:0-1449:82
+Thu Jun 30 21:10:31 2016 +0000
+Author: Kevin Chavez <1107984@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8082ab4f_b2ba60e8
+UUID: 8082ab4f_582315fc
+Bytes: 4
+Done
 
