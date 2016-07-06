@@ -1,0 +1,18 @@
+Revision: 4f9f81a906d39e754847d31f5b0e5b587e7e25f2
+Patch-set: 4
+File: core/Makefile
+
+1451
+Wed Jul 06 20:08:38 2016 +0000
+Author: David Zeuthen <1076971@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: dd71ee1c_6ea4c31d
+Bytes: 132
+Why would someone ever want to set EFI_OUTPUT_IMAGE to something that isn't ${PRODUCT_OUT}/EFI.img ? Just use ${PRODUCT_OUT}/EFI.img
+
+1462:29-1462:51
+Wed Jul 06 20:08:38 2016 +0000
+Author: David Zeuthen <1076971@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: dd71ee1c_8ea81ff2
+Bytes: 79
+Well... If we were to have ${EFI_OUTPUT_IMAGE}, then you forgot to update this.
+
