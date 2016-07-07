@@ -9,10 +9,26 @@ UUID: dd71ee1c_6ea4c31d
 Bytes: 132
 Why would someone ever want to set EFI_OUTPUT_IMAGE to something that isn't ${PRODUCT_OUT}/EFI.img ? Just use ${PRODUCT_OUT}/EFI.img
 
+1451
+Thu Jul 07 15:08:34 2016 +0000
+Author: Kevin Chavez <1107984@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: dd71ee1c_6ea4c31d
+UUID: 3d868a97_0000e6fb
+Bytes: 4
+Done
+
 1462:29-1462:51
 Wed Jul 06 20:08:38 2016 +0000
 Author: David Zeuthen <1076971@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: dd71ee1c_8ea81ff2
 Bytes: 79
 Well... If we were to have ${EFI_OUTPUT_IMAGE}, then you forgot to update this.
+
+1462:29-1462:51
+Thu Jul 07 15:08:34 2016 +0000
+Author: Kevin Chavez <1107984@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: dd71ee1c_8ea81ff2
+UUID: 3d868a97_2005ea0b
+Bytes: 45
+Reverted back to using ${PRODUCT_OUT}/EFI.img
 
