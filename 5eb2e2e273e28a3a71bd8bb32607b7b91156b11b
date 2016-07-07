@@ -1,0 +1,11 @@
+Revision: 5eb2e2e273e28a3a71bd8bb32607b7b91156b11b
+Patch-set: 4
+File: tools/fs_config/fs_config.c
+
+108
+Thu Jul 07 15:53:36 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: ddc56ece_6b6255f0
+Bytes: 113
+line 144 and line 153 seem to show that single if statements should be bracketed, so you'll want to bracket this.
+
