@@ -9,3 +9,24 @@ UUID: ddc56ece_6b6255f0
 Bytes: 113
 line 144 and line 153 seem to show that single if statements should be bracketed, so you'll want to bracket this.
 
+108
+Thu Jul 07 16:56:50 2016 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: ddc56ece_6b6255f0
+UUID: ddc56ece_2e1a2b74
+Bytes: 143
+Correct: Android coding standard:
+
+if (i == 0) {
+ . . . /* even if one line */
+}
+
+or
+
+if (i == 0) is_dir = 1;
+
+NOT
+
+if (i == 0)
+    is_dir = 1;
+
