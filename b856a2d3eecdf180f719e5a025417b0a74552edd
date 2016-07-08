@@ -1,0 +1,13 @@
+Revision: b856a2d3eecdf180f719e5a025417b0a74552edd
+Patch-set: 6
+File: tools/releasetools/add_img_to_target_files.py
+
+260
+Fri Jul 08 17:31:58 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: daf6544b_fcb940d9
+Bytes: 266
+Can you add something like L278-L281? Otherwise it would give duplicate name warnings from zipfile.write() when running "add_img_to_target_files.py -a" with existing EFI images.
+
+(AddPartitionTable also misses such lines, but it's fine to just change the new codes.)
+
