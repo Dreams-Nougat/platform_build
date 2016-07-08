@@ -11,3 +11,11 @@ Can you add something like L278-L281? Otherwise it would give duplicate name war
 
 (AddPartitionTable also misses such lines, but it's fine to just change the new codes.)
 
+260
+Fri Jul 08 18:00:07 2016 +0000
+Author: Kevin Chavez <1107984@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: daf6544b_fcb940d9
+UUID: 7ad2c8e8_124c0c61
+Bytes: 4
+Done
+
