@@ -1,0 +1,13 @@
+Revision: cd52e5fd5d2ca7bff41a7dd8a4bd4a0c0e3f2a52
+Patch-set: 1
+File: /COMMIT_MSG
+
+12:18-13:37
+Tue Jul 12 19:44:51 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: da157484_3ce49742
+Bytes: 242
+This is supported currently, this change is adding OS+Arch specific cflags.
+
+Do you really need both 32/64 bit and x86/x86_64? Those are basically equivalent for host (and we only support the latter in the new build system, Soong, right now).
+
