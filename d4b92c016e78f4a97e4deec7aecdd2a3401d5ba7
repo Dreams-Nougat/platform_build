@@ -1,0 +1,11 @@
+Revision: d4b92c016e78f4a97e4deec7aecdd2a3401d5ba7
+Patch-set: 1
+File: core/definitions.mk
+
+2611
+Thu Jul 14 23:48:33 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: faa1580d_2266b604
+Bytes: 247
+I didn't think a broken symlink would work properly in the dependency graph, since the file would always be missing, and would have to be reegenerated every time, even if nothing else changes. It would cause us to regenerate the system image, etc.
+
