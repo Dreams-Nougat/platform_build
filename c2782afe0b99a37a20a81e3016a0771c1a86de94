@@ -25,3 +25,11 @@ I suggest we just delete all of this code for simplicity. GOMA can manage the op
 
 Thoughts from others on this?
 
+35
+Tue Jul 19 17:38:02 2016 +0000
+Author: Fang Deng <1104568@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 6a6037e5_25ed6523
+UUID: 6a6037e5_7620b504
+Bytes: 148
+Not setting GOMA_HERMETIC at all and defaulting to "fallback" make sense to me. Dan and Shinichiro, any other concern if we do what david suggested?
+
