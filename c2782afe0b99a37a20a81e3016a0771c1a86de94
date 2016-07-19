@@ -9,3 +9,19 @@ UUID: 4ac1b31c_298e8d25
 Bytes: 601
 Just a note - not an objection: Are you planning to use GOMA_HERMETIC=fallback on the bot? I'm not sure if error-for-developers-and-fallback-for-bot config is the best. Considering the motivation of bots is to find build failures before the build of end-developers fails, IMO fallback-for-developers-and-error-for-bots is the best option (fyi, this is how Chromium's build system is configured). However, I also understand setting GOMA_HERMETIC=error on bots would be troublesome before goma on bots becomes stable. Maybe setting GOMA_HERMETIC=fallback by default would be an option, but I'm not sure.
 
+35
+Tue Jul 19 16:01:32 2016 +0000
+Author: David James <1076194@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 4ac1b31c_298e8d25
+UUID: 6a6037e5_25ed6523
+Bytes: 1177
+I'd prefer to be able to use GOMA_HERMETIC=error everywhere, but doing this would require that GOMA can pick up toolchains from the build itself -- i.e. when we're testing a CL that modifies the toolchain, GOMA would pick up the new toolchain from the CL and use it. I believe GOMA can't do that with current architecture, so that's why we need fallback mode.
+
+A question: When we update the toolchain in Android with a commit, does Goma pick it up immediately or is there some lag? If the latter, we actually want GOMA_HERMETIC=fallback everywhere, because it's then inevitable that there will be times when we can't compile on the goma farm.
+
+The last option, GOMA_HERMETIC=off, is generally a recipe for trouble since it doesn't guarantee you get the right compiler. But, do we really know better than the user here? Maybe the user just wants to use the option for debugging goma performance?
+
+I suggest we just delete all of this code for simplicity. GOMA can manage the options. Don't set GOMA_HERMETIC at all, and goma will default to "fallback" -- this is new as of 4 months ago: https://chrome-internal-review.googlesource.com/#/c/251515/
+
+Thoughts from others on this?
+
