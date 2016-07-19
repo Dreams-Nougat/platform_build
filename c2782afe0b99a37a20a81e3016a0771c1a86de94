@@ -1,0 +1,11 @@
+Revision: c2782afe0b99a37a20a81e3016a0771c1a86de94
+Patch-set: 2
+File: core/goma.mk
+
+35
+Tue Jul 19 06:30:59 2016 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 4ac1b31c_298e8d25
+Bytes: 601
+Just a note - not an objection: Are you planning to use GOMA_HERMETIC=fallback on the bot? I'm not sure if error-for-developers-and-fallback-for-bot config is the best. Considering the motivation of bots is to find build failures before the build of end-developers fails, IMO fallback-for-developers-and-error-for-bots is the best option (fyi, this is how Chromium's build system is configured). However, I also understand setting GOMA_HERMETIC=error on bots would be troublesome before goma on bots becomes stable. Maybe setting GOMA_HERMETIC=fallback by default would be an option, but I'm not sure.
+
