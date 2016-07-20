@@ -1,0 +1,11 @@
+Revision: 37c1f0fd016d535bc2b0dfa568c405766ff8e793
+Patch-set: 1
+File: core/prebuilt_internal.mk
+
+55
+Wed Jul 20 18:10:14 2016 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: aaf86f8a_ef1edd72
+Bytes: 55
+how about LOCAL_COPY_TO_INTERMEDIATE_LIBRARIES := false
+
