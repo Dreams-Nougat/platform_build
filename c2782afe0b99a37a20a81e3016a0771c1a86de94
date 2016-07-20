@@ -41,3 +41,13 @@ UUID: 6a6037e5_414e0695
 Bytes: 38
 Sure, always using fallback seems fine
 
+35
+Wed Jul 20 04:00:24 2016 +0000
+Author: Shinichiro Hamaji <1076769@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 6a6037e5_414e0695
+UUID: 4ac1b31c_e91f155f
+Bytes: 282
+> does Goma pick it up immediately
+
+No, there's some lag. Ideally, compiler changes should be automatically tested on the bot with goma before they are actually delivered to developers. IIRC this is what Chromium is doing. But for now, setting fallback by default makes sense to me.
+
