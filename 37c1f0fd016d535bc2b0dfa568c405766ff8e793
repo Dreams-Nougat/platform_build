@@ -9,3 +9,11 @@ UUID: aaf86f8a_ef1edd72
 Bytes: 55
 how about LOCAL_COPY_TO_INTERMEDIATE_LIBRARIES := false
 
+55
+Wed Jul 20 18:20:43 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: aaf86f8a_ef1edd72
+UUID: aaf86f8a_6f1f8d14
+Bytes: 27
+Yeah, that's a better name.
+
