@@ -9,3 +9,11 @@ UUID: 8a91eb63_10642b1c
 Bytes: 202
 This is a good start, but we probably will eventually need to break this down further (i.e. we can separate out vendor/google from vendor/*). I don't think we need that for the initial version, however.
 
+1798
+Fri Jul 22 00:54:47 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8a91eb63_10642b1c
+UUID: 8a91eb63_4b58c62d
+Bytes: 33
+Yes, this list will grow quickly.
+
