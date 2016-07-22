@@ -1,0 +1,11 @@
+Revision: 48a16ba7099e22f680ac45acfe4e78d3180549eb
+Patch-set: 2
+File: tools/warn.py
+
+1798
+Fri Jul 22 00:18:07 2016 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 8a91eb63_10642b1c
+Bytes: 202
+This is a good start, but we probably will eventually need to break this down further (i.e. we can separate out vendor/google from vendor/*). I don't think we need that for the initial version, however.
+
