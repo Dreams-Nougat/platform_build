@@ -1,0 +1,11 @@
+Revision: a77e820227442475e9d60b5dfa43f929b2edf60d
+Patch-set: 1
+File: core/fuzz_test.mk
+
+5
+Tue Jul 26 17:37:16 2016 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 6fff696c_55369eeb
+Bytes: 57
+Won't this double-count as a FUZZ_TEST and an EXECUTABLE?
+
