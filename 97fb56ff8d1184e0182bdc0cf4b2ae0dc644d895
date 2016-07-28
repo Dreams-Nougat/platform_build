@@ -1,0 +1,11 @@
+Revision: 97fb56ff8d1184e0182bdc0cf4b2ae0dc644d895
+Patch-set: 1
+File: Android.mk
+
+10:5-10:21
+Thu Jul 28 05:18:42 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0ff26de6_246dde34
+Bytes: 16
+$(SOONG_OUT_DIR)
+
