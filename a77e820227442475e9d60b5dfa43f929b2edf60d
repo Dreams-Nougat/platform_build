@@ -21,3 +21,11 @@ BUILD_NOTICE_FILE and BUILD_COPY_HEADERS both get included often by the build sy
 
 BUILD_HOST_PREBUILT, native tests and benchmarks, and static test libraries all wrap other BUILD_*  too.
 
+5
+Thu Jul 28 05:50:45 2016 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 0ff26de6_c414d256
+UUID: 0ff26de6_e407d61e
+Bytes: 126
+Set a variable inside record-module-type when it is called, don't add to the list if it is set, and clear it in clear_vars.mk?
+
