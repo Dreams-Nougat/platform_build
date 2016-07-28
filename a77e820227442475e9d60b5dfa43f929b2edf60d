@@ -9,3 +9,15 @@ UUID: 6fff696c_55369eeb
 Bytes: 57
 Won't this double-count as a FUZZ_TEST and an EXECUTABLE?
 
+5
+Thu Jul 28 05:48:08 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 6fff696c_55369eeb
+UUID: 0ff26de6_c414d256
+Bytes: 437
+Yeah, we'll get some double counting, not sure if it's worth dealing with that here. If Make was better at math, I'd say we could just subtract them at the end, but it's probably better done when analyzing the data.
+
+BUILD_NOTICE_FILE and BUILD_COPY_HEADERS both get included often by the build system, but could be used by others.
+
+BUILD_HOST_PREBUILT, native tests and benchmarks, and static test libraries all wrap other BUILD_*  too.
+
