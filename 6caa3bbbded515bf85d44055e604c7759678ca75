@@ -1,0 +1,18 @@
+Revision: 6caa3bbbded515bf85d44055e604c7759678ca75
+Patch-set: 2
+File: core/clang/config.mk
+
+152:16-152:25
+Tue Aug 02 22:15:29 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f48172c9_2008c3d6
+Bytes: 6
+camera
+
+152:0-163:24
+Tue Aug 02 22:15:29 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f48172c9_000b47d6
+Bytes: 22
+This shouldn't be here
+
