@@ -9,10 +9,26 @@ UUID: f48172c9_2008c3d6
 Bytes: 6
 camera
 
+152:16-152:25
+Tue Aug 02 22:23:31 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f48172c9_2008c3d6
+UUID: f48172c9_b39aef5b
+Bytes: 13
+Done. Thanks.
+
 152:0-163:24
 Tue Aug 02 22:15:29 2016 +0000
 Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: f48172c9_000b47d6
 Bytes: 22
 This shouldn't be here
+
+152:0-163:24
+Tue Aug 02 22:23:31 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f48172c9_000b47d6
+UUID: f48172c9_13b5e3c8
+Bytes: 126
+Do you mean that LOCAL_CLANG_EXCEPTION_PROJECTS shouldn't be in this file, or some of vendor project names should not be here?
 
