@@ -9,10 +9,26 @@ UUID: 54231e3a_3b5dda1c
 Bytes: 7
 entries
 
+9:31-9:36
+Thu Aug 04 19:14:49 2016 +0000
+Author: Tianjie Xu <1088085@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 54231e3a_3b5dda1c
+UUID: 54231e3a_ec36c606
+Bytes: 4
+Done
+
 10:8-10:50
 Thu Aug 04 17:29:48 2016 +0000
 Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 54231e3a_3b74fa92
 Bytes: 72
 fastboot doesn't care about target_files.zip. it looks at -img.zip only.
+
+10:8-10:50
+Thu Aug 04 19:14:49 2016 +0000
+Author: Tianjie Xu <1088085@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 54231e3a_3b74fa92
+UUID: 54231e3a_8c4cea9d
+Bytes: 4
+Done
 
