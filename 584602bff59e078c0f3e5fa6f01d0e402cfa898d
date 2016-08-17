@@ -13,6 +13,14 @@ Is the intent here to make -Werror not overridable? This would turn it off, sinc
 
 we've got my_cflags_no_override if that's the intent.
 
+1570
+Wed Aug 17 18:38:23 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3bd3fb1e_6c5da026
+UUID: bb944b51_d2a484fb
+Bytes: 44
+Thanks. Use my_cflags_no_override is better.
+
 File: core/config.mk
 
 803:0-803:20
@@ -21,4 +29,14 @@ Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 3bd3fb1e_4c0a9c27
 Bytes: 70
 This is a single module -- why isn't -Werror just in its local cflags?
+
+803:0-803:20
+Wed Aug 17 18:38:23 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3bd3fb1e_4c0a9c27
+UUID: bb944b51_d5e8ee75
+Bytes: 194
+It's just an example here to show that a subdirectory can be compiled with -Werror while most other directories cannot,
+so external/ is in the "allowed" list.
+I added more comments to this list.
 
