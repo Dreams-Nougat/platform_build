@@ -9,3 +9,11 @@ UUID: 48e70357_ef0cad4b
 Bytes: 109
 a bit different from what i imagined. take a look at other files (like sign_target_files_apks.py in this CL).
 
+20:24-22:69
+Wed Aug 24 19:42:02 2016 +0000
+Author: Tianjie Xu <1088085@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 48e70357_ef0cad4b
+UUID: 48e70357_7a7059d3
+Bytes: 4
+Done
+
