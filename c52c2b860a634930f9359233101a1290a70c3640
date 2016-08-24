@@ -9,6 +9,14 @@ UUID: c8277349_7d602b37
 Bytes: 53
 shall we just use a general name like "--is_signing"?
 
+13:45-13:66
+Wed Aug 24 18:44:37 2016 +0000
+Author: Tianjie Xu <1088085@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c8277349_7d602b37
+UUID: 48e70357_b434b8dd
+Bytes: 4
+Done
+
 File: tools/releasetools/add_img_to_target_files.py
 
 49:0-49:35
@@ -17,4 +25,12 @@ Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: c8277349_1d6d772e
 Bytes: 28
 also add to the usage at L21
+
+49:0-49:35
+Wed Aug 24 18:44:37 2016 +0000
+Author: Tianjie Xu <1088085@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: c8277349_1d6d772e
+UUID: 48e70357_f42e408d
+Bytes: 4
+Done
 
