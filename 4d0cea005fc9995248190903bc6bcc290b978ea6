@@ -1,0 +1,25 @@
+Revision: 4d0cea005fc9995248190903bc6bcc290b978ea6
+Patch-set: 5
+File: tools/releasetools/add_img_to_target_files.py
+
+25:10-25:19
+Wed Aug 24 19:48:29 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 48e70357_5a50f531
+Bytes: 4
+typo
+
+29:6-29:35
+Wed Aug 24 19:48:29 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 48e70357_fa6909c7
+Bytes: 115
+Rebuild the recovery patch and write it to the system image. Only meaningful when system image needs to be rebuilt.
+
+44:6-44:13
+Wed Aug 24 19:48:29 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 48e70357_9a59dd37
+Bytes: 4
+typo
+
