@@ -1,0 +1,33 @@
+(version 1)
+
+(deny default)
+
+; Import apple-defined rules for bsd daemons
+(import "bsd.sb")
+
+; Allow reading of any file
+(allow file-read*)
+
+; Allow writing to $OUT_DIR
+(allow file-write*
+    (subpath (param "OUT_DIR"))
+    (subpath (param "DIST_DIR")))
+
+; Java attempts to write usage data to ~/.oracle_jre_usage, just ignore
+(deny file-write* (with no-log)
+    (subpath (string-append (param "HOME") "/.oracle_jre_usage")))
+
+; Allow writes to user-specific temporary folders (Java stores hsperfdata there, likely others)
+(allow file-write*
+    (subpath "/private/var/folders"))
+
+; Java
+(allow mach-lookup (global-name "com.apple.SystemConfiguration.configd"))
+
+; Allow writing output to a terminal?
+(allow file-write-data
+    (regex #"^/dev/tty.*"))
+
+; Allow executing any file
+(allow process-exec*)
+(allow process-fork)

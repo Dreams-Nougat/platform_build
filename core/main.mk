@@ -65,29 +65,6 @@ $(DEFAULT_GOAL): droid_targets
 .PHONY: droid_targets
 droid_targets:
 
-# Used to force goals to build.  Only use for conditionally defined goals.
-.PHONY: FORCE
-FORCE:
-
-# These goals don't need to collect and include Android.mks/CleanSpec.mks
-# in the source tree.
-dont_bother_goals := clean clobber dataclean installclean \
-    help out \
-    snod systemimage-nodeps \
-    stnod systemtarball-nodeps \
-    userdataimage-nodeps userdatatarball-nodeps \
-    cacheimage-nodeps \
-    bptimage-nodeps \
-    vendorimage-nodeps \
-    ramdisk-nodeps \
-    bootimage-nodeps \
-    recoveryimage-nodeps \
-    product-graph dump-products
-
-ifneq ($(filter $(dont_bother_goals), $(MAKECMDGOALS)),)
-dont_bother := true
-endif
-
 ORIGINAL_MAKECMDGOALS := $(MAKECMDGOALS)
 
 # Targets that provide quick help on the build system.
