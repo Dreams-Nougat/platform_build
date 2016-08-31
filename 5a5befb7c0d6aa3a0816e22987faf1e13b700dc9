@@ -1,0 +1,11 @@
+Revision: 5a5befb7c0d6aa3a0816e22987faf1e13b700dc9
+Patch-set: 1
+File: core/config.mk
+
+288:0-288:18
+Wed Aug 31 16:59:32 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 5137b50c_ddb63c48
+Bytes: 34
+We don't use CXX_WRAPPER in soong.
+
