@@ -9,3 +9,11 @@ UUID: 5137b50c_ddb63c48
 Bytes: 34
 We don't use CXX_WRAPPER in soong.
 
+288:0-288:18
+Wed Aug 31 18:36:47 2016 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 5137b50c_ddb63c48
+UUID: 11ca9d6e_799f2363
+Bytes: 32
+I figured we might need it later
+
