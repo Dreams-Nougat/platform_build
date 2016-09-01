@@ -1,0 +1,11 @@
+Revision: c1096da827b0ff6d64988addca05a1c5a323db44
+Patch-set: 1
+File: envsetup.sh
+
+892:0-892:11
+Thu Sep 01 22:32:34 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 11cc5df8_8c5feb43
+Bytes: 6
+remove
+
