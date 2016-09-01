@@ -1,0 +1,11 @@
+Revision: a8f6833f04e0da35529e39fc81c8cb411d9f62ed
+Patch-set: 1
+File: core/Makefile
+
+2111
+Thu Sep 01 21:04:18 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: f11a6924_b87b1585
+Bytes: 116
+Actually, I don't need to change this line, since jack won't use classes.jar. Should I be pulling in something else?
+
