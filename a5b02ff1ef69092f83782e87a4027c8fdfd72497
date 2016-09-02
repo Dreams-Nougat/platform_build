@@ -1,0 +1,11 @@
+Revision: a5b02ff1ef69092f83782e87a4027c8fdfd72497
+Base-for-patch-set: 1
+File: core/soong.mk
+
+56
+Fri Sep 02 20:35:21 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 11cc5df8_1aeb1fa2
+Bytes: 43
+Is there a Soong change to remove this too?
+
