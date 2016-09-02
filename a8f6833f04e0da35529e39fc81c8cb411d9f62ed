@@ -9,3 +9,13 @@ UUID: f11a6924_b87b1585
 Bytes: 116
 Actually, I don't need to change this line, since jack won't use classes.jar. Should I be pulling in something else?
 
+2111
+Fri Sep 02 09:42:51 2016 +0000
+Author: Yohann Roussel <1023201@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: f11a6924_b87b1585
+UUID: 96e9236c_a2d71ede
+Bytes: 507
+The equivalent unobfuscated jack file would be classes.noshrob.jack. But depending on the usage of "unobfuscated_jars" you more probably need to still include those unobfusacted jars and not the jack files.
+
+Jack doesn't use any classes.jar but the rule to generate it is still there. They are just not in the dependency chain to dex files as they used to be. So you'll need to add an explicit dependency between PROGUARD_DICT_ZIP and those classes.jar. I guess it's something to add around main.mk:975-991.
+
