@@ -1,0 +1,36 @@
+Revision: 1460c4a9103060eef5616ab63ecd85aa87cd9b33
+Patch-set: 1
+File: /COMMIT_MSG
+
+11
+Fri Sep 02 02:49:56 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 11cc5df8_fbfa93d6
+Bytes: 93
+Is your repo version old, or did you manually reorder these? Change-Id should be sorted last.
+
+File: tools/fat16copy
+
+1
+Fri Sep 02 02:49:56 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 11cc5df8_bb893b81
+Bytes: 55
+#!/usr/bin/env python
+
+this file should be fat16copy.py
+
+292:0-294:30
+Fri Sep 02 02:49:56 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 11cc5df8_bb281ba8
+Bytes: 17
+what is this for?
+
+666
+Fri Sep 02 02:49:56 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 11cc5df8_db37d703
+Bytes: 67
+print command line usage if at least two arguments aren't specified
+
