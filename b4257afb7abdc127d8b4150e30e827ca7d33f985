@@ -1,0 +1,11 @@
+Revision: b4257afb7abdc127d8b4150e30e827ca7d33f985
+Patch-set: 1
+File: tools/releasetools/build_image.py
+
+112:4-112:59
+Fri Sep 02 16:04:37 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 11cc5df8_6681e32e
+Bytes: 42
+nit: can you also update the comment here?
+
