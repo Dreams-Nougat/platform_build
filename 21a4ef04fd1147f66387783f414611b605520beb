@@ -9,3 +9,12 @@ UUID: 16f373ac_8e859063
 Bytes: 45
 Did you really mean to add this Java pattern?
 
+368
+Wed Sep 07 05:27:39 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 16f373ac_8e859063
+UUID: 16f373ac_495f2244
+Bytes: 111
+I saw this new Java warning, maybe from some recent Java code.
+I will update commit message and submit this CL.
+
