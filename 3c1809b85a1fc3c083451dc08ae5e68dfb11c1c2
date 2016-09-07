@@ -15,3 +15,11 @@ So now we've got:
 
 all doing basically the same thing for a host module that has multilib := first? do we really need all of these? should we try to be more consistent?
 
+216
+Wed Sep 07 20:59:15 2016 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 563b2b5a_860daeee
+UUID: 563b2b5a_29c7d58e
+Bytes: 247
+host_$(LOCAL_MODULE) is an internal target of the build system, not intended for manual use.  In most cases $(LOCAL_MODULE)-host is a subset of $(LOCAL_MODULE), for a host-only module they are identical, but they should both exist for consistency.
+
