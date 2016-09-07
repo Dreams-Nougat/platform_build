@@ -1,0 +1,11 @@
+Revision: 2fe319ede4c617d42bda4fc49fec8f2e46908249
+Patch-set: 1
+File: core/base_rules.mk
+
+553
+Wed Sep 07 20:03:31 2016 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 563b2b5a_86b5aecd
+Bytes: 80
+This doesn't work, my_register_name is the same for the host and target modules.
+
