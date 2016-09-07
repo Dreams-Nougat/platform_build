@@ -1,0 +1,11 @@
+Revision: 21a4ef04fd1147f66387783f414611b605520beb
+Patch-set: 1
+File: tools/warn.py
+
+368
+Wed Sep 07 05:18:48 2016 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 16f373ac_8e859063
+Bytes: 45
+Did you really mean to add this Java pattern?
+
