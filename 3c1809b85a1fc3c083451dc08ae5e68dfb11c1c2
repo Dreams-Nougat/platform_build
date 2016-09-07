@@ -23,3 +23,11 @@ UUID: 563b2b5a_29c7d58e
 Bytes: 247
 host_$(LOCAL_MODULE) is an internal target of the build system, not intended for manual use.  In most cases $(LOCAL_MODULE)-host is a subset of $(LOCAL_MODULE), for a host-only module they are identical, but they should both exist for consistency.
 
+216
+Wed Sep 07 21:00:43 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 563b2b5a_29c7d58e
+UUID: 563b2b5a_e9448d00
+Bytes: 115
+The intended use gets really blurry in make -- can we give it a less "friendly" name to help make it a bit clearer?
+
