@@ -1,0 +1,17 @@
+Revision: 3c1809b85a1fc3c083451dc08ae5e68dfb11c1c2
+Patch-set: 2
+File: core/base_rules.mk
+
+216
+Wed Sep 07 20:38:11 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 563b2b5a_860daeee
+Bytes: 233
+So now we've got:
+
+  $(LOCAL_MODULE)
+  host_$(LOCAL_MODULE)
+  $(LOCAL_MODULE)-host
+
+all doing basically the same thing for a host module that has multilib := first? do we really need all of these? should we try to be more consistent?
+
