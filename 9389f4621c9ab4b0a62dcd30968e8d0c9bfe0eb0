@@ -1,0 +1,18 @@
+Revision: 9389f4621c9ab4b0a62dcd30968e8d0c9bfe0eb0
+Patch-set: 1
+File: core/Makefile
+
+2063:34-2063:35
+Mon Sep 12 21:15:03 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 6b3a0657_bee1d0f0
+Bytes: 21
+remove trailing space
+
+2083
+Mon Sep 12 21:15:03 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 6b3a0657_beac70a8
+Bytes: 41
+add a blank line at the end of this block
+
