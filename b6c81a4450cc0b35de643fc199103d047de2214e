@@ -17,6 +17,24 @@ UUID: 8b101ad0_aac9af78
 Bytes: 170
 Because we need yet another script to start goma compiler_proxy for developing goma client, especially we need to update both client and backend to support some features.
 
+10
+Tue Sep 13 05:38:45 2016 +0000
+Author: Yoshisato Yanagisawa <1067895@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 8b101ad0_aac9af78
+UUID: 8b101ad0_0adb1b3a
+Bytes: 1038
+Let me explain more on this.
+ensure_start ensures goma compiler_proxy is already running with *the same environment* goma compiler_proxy is started in the last time.  If not (i.e. environment has been changed), it automatically restarts.
+
+When we develop goma compiler_proxy, we need to make goma compiler_proxy connect to development server.  For that purpose, we use the option that is not relevant to set with goma_ctl.py. (we use yet another script for developers to start compiler_proxy in this case)
+
+However, even if we start goma compiler_proxy with "developer option" with special script, current "USE_GOMA=1 m" always restart compiler_proxy because "goma_ctl.py ensure_start" in goma.mk always think environment has changed.
+
+
+As a result, when I fixed b/31170252#comment16, I need to remove code goma_ctl.py ensure_start to avoid the issue above.  However, I believe such temporary removal of code for debugging the feature is error-prone, and I would like to make goma.mk to have a option for that purpose.
+
+What do you think?
+
 12
 Tue Sep 13 04:05:58 2016 +0000
 Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
