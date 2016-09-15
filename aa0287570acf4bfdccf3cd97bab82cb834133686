@@ -9,6 +9,14 @@ UUID: 6b3926b8_0fe4a9fe
 Bytes: 41
 Why are these warnings instead of errors?
 
+122:28-122:34
+Thu Sep 15 21:55:55 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 6b3926b8_0fe4a9fe
+UUID: 6b3926b8_1d886358
+Bytes: 167
+There are still 13 left in AOSP according to my local build. With the next patch, I improved things so that warn.py can separate these out as higher priority warnings.
+
 File: tools/check_link_type.py
 
 3:16-3:20
@@ -18,12 +26,28 @@ UUID: 6b3926b8_2fe16def
 Bytes: 4
 2016
 
+3:16-3:20
+Thu Sep 15 21:55:55 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 6b3926b8_2fe16def
+UUID: 6b3926b8_1de4e3fe
+Bytes: 4
+Done
+
 22
 Thu Sep 15 18:31:31 2016 +0000
 Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 6b3926b8_72742ec3
 Bytes: 70
 A trivial `"""Program entry point."""` docstring would appease pylint.
+
+22
+Thu Sep 15 21:55:55 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 6b3926b8_72742ec3
+UUID: 6b3926b8_ddc96b78
+Bytes: 4
+Done
 
 24
 Thu Sep 15 18:31:31 2016 +0000
@@ -32,6 +56,14 @@ UUID: 6b3926b8_9274422b
 Bytes: 125
 Is this okay to use anywhere we run builds? Does this need a sys.stdin.isatty()? Although iirc that didn't work with ninja...
 
+24
+Thu Sep 15 21:55:55 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 6b3926b8_9274422b
+UUID: 6b3926b8_7d695fb5
+Bytes: 283
+Yes. Ninja doesn't prevent a tty since it buffers all output, but expects you to always write out ANSI color codes. When ninja goes to print the output, it will leave them in if isatty is true (and TERM is agreeable), otherwise it will strip out the escape sequences before printing.
+
 33
 Thu Sep 15 18:31:31 2016 +0000
 Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -39,10 +71,26 @@ UUID: 6b3926b8_b215c6aa
 Bytes: 78
 Don't actually need this. Conditionals/with/loops/etc don't create new scopes.
 
+33
+Thu Sep 15 21:55:55 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 6b3926b8_b215c6aa
+UUID: 6b3926b8_9dba93de
+Bytes: 4
+Done
+
 54:4-54:10
 Thu Sep 15 18:31:31 2016 +0000
 Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 6b3926b8_f2673e1b
 Bytes: 181
 pylint doesn't like this because this is technically in the global scope so it thinks it should be PARSER. I typically just move the argument parsing into a `parse_args()` function.
+
+54:4-54:10
+Thu Sep 15 21:55:55 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 6b3926b8_f2673e1b
+UUID: 6b3926b8_3dac47a7
+Bytes: 4
+Done
 
