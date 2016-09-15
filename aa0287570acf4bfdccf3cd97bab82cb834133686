@@ -1,0 +1,48 @@
+Revision: aa0287570acf4bfdccf3cd97bab82cb834133686
+Patch-set: 2
+File: core/install_jni_libs_internal.mk
+
+122:28-122:34
+Thu Sep 15 18:31:31 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 6b3926b8_0fe4a9fe
+Bytes: 41
+Why are these warnings instead of errors?
+
+File: tools/check_link_type.py
+
+3:16-3:20
+Thu Sep 15 18:31:31 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 6b3926b8_2fe16def
+Bytes: 4
+2016
+
+22
+Thu Sep 15 18:31:31 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 6b3926b8_72742ec3
+Bytes: 70
+A trivial `"""Program entry point."""` docstring would appease pylint.
+
+24
+Thu Sep 15 18:31:31 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 6b3926b8_9274422b
+Bytes: 125
+Is this okay to use anywhere we run builds? Does this need a sys.stdin.isatty()? Although iirc that didn't work with ninja...
+
+33
+Thu Sep 15 18:31:31 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 6b3926b8_b215c6aa
+Bytes: 78
+Don't actually need this. Conditionals/with/loops/etc don't create new scopes.
+
+54:4-54:10
+Thu Sep 15 18:31:31 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 6b3926b8_f2673e1b
+Bytes: 181
+pylint doesn't like this because this is technically in the global scope so it thinks it should be PARSER. I typically just move the argument parsing into a `parse_args()` function.
+
