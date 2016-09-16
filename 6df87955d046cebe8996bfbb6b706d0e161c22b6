@@ -1,0 +1,11 @@
+Revision: 6df87955d046cebe8996bfbb6b706d0e161c22b6
+Patch-set: 1
+File: tools/releasetools/check_package_signature.py
+
+145
+Fri Sep 16 00:33:30 2016 +0000
+Author: Alex Klyubin <1018773@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 6b3926b8_0bcf347b
+Bytes: 194
+Consider making this script return different error codes (e.g., 0 for verified and 1 for failed) to be in-line with Unix philosophy and to make it easy to re-use this script in larger pipelines.
+
