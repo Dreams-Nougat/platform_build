@@ -9,3 +9,11 @@ UUID: 6b3926b8_0bcf347b
 Bytes: 194
 Consider making this script return different error codes (e.g., 0 for verified and 1 for failed) to be in-line with Unix philosophy and to make it easy to re-use this script in larger pipelines.
 
+145
+Fri Sep 16 22:09:11 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 6b3926b8_0bcf347b
+UUID: 6b3926b8_5620e70c
+Bytes: 171
+Done. PS2 changed the "FAILED" case to an assertion. So any failure including the digests mismatch case would return 1 to $? (or throw AssertionError if called in Python).
+
