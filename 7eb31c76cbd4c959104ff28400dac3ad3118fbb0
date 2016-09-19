@@ -34,6 +34,17 @@ For example, for the use case you mention - partitions 'system' and 'vendor' bei
 
 That said, if you have good use-cases I don't mind adding this - I just like to keep things simple to begin with!
 
+33:0-34:52
+Mon Sep 19 18:26:01 2016 +0000
+Author: Bowgo Tsai <1080813@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 90d3ebea_d2876410
+UUID: 6b3926b8_99ed27b8
+Bytes: 127
+OK, SGTM for now.
+I'll see if partners have any feedback on this and decide what to do next.
+
+Thanks for the detailed comments!
+
 File: core/main.mk
 
 940:8-940:17
