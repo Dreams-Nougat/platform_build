@@ -1,0 +1,11 @@
+Revision: 4c851b1098577f67f20742edbc086ee045e61c47
+Patch-set: 1
+File: tools/releasetools/common.py
+
+993:24-993:29
+Mon Sep 19 21:07:15 2016 +0000
+Author: Tianjie Xu <1088085@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 6b3926b8_ce4eee8a
+Bytes: 39
+I see "what + '-'" in other examples...
+
