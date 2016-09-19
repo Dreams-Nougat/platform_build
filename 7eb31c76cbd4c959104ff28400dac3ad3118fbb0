@@ -20,6 +20,20 @@ In Android, the verified partitions will be: /boot, /system, /vendor (optional f
 
 We probably also need to add the support for signing vendor partition, this could be another CL though.
 
+33:0-34:52
+Mon Sep 19 15:16:44 2016 +0000
+Author: David Zeuthen <1076971@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 6b3926b8_72a42956
+UUID: 90d3ebea_d2876410
+Bytes: 945
+I thought about doing that but decided not to.
+
+The reason is that avbtool gives so much flexibility that I don't think we'd be able to capture all possible use-cases through BOARD_*AVB* variables in the build system. That's also why it's easy to erase AVB metadata, both footers ('avbtool erase_footer') and the entire vbmeta.img file. E.g. the tools have been designed with "someone will need to re-sign images and/or inject metadata down the road" in mind.
+
+For example, for the use case you mention - partitions 'system' and 'vendor' being signed by different keys - the individual artifacts ('system' and 'vendor') will come from different entities and thus different build systems. So they wouldn't use this feature anyway. Extrapolating, I think the assumption that only a single key-par per build system is somewhat sound.
+
+That said, if you have good use-cases I don't mind adding this - I just like to keep things simple to begin with!
+
 File: core/main.mk
 
 940:8-940:17
@@ -28,4 +42,12 @@ Author: Bowgo Tsai <1080813@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 6b3926b8_7e26b5d6
 Bytes: 12
 vbmetaimage?
+
+940:8-940:17
+Mon Sep 19 15:16:44 2016 +0000
+Author: David Zeuthen <1076971@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 6b3926b8_7e26b5d6
+UUID: 90d3ebea_127e4c09
+Bytes: 4
+Done
 
