@@ -1,0 +1,17 @@
+Revision: b6c061e9ffa5208b0b2dae0a5a88694925c6b527
+Patch-set: 2
+File: core/Makefile
+
+2133:0-2134:50
+Wed Sep 21 09:49:33 2016 +0000
+Author: Yohann Roussel <1023201@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 10ca9b6e_d65f246b
+Bytes: 256
+Isn't it giving jack_dictionary twice to zip?
+
+What about something like that instead?
+
+unobfuscated_jars=`for dict_file in $$dict_files; do echo $dict_file | sed -n s/proguard_dictionary/classes.jar/gp; done`
+
+Or maybe you decided that it's not a problem?
+
