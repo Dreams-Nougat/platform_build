@@ -25,3 +25,11 @@ zip is fine with this -- I believe the behavior means that we'll "add" the first
 
 Since we've disabled support for turning off Jack, I'd actually consider removing the proguard dictionary and classes.jar inclusion, since the apps themselves should be using jack and jack_dictionary...
 
+2133:0-2134:50
+Wed Sep 21 17:54:48 2016 +0000
+Author: Yohann Roussel <1023201@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 70c1171d_d1dc2602
+UUID: 10ca9b6e_16043c20
+Bytes: 16
+yes makes sense.
+
