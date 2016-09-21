@@ -15,3 +15,13 @@ unobfuscated_jars=`for dict_file in $$dict_files; do echo $dict_file | sed -n s/
 
 Or maybe you decided that it's not a problem?
 
+2133:0-2134:50
+Wed Sep 21 17:04:46 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 10ca9b6e_d65f246b
+UUID: 70c1171d_d1dc2602
+Bytes: 489
+zip is fine with this -- I believe the behavior means that we'll "add" the first copy, then "update" with the second copy, but since they're the same it doesn't significantly matter. These also aren't exceptionally large files, so even if we compress twice, it's not a huge time issue.
+
+Since we've disabled support for turning off Jack, I'd actually consider removing the proguard dictionary and classes.jar inclusion, since the apps themselves should be using jack and jack_dictionary...
+
