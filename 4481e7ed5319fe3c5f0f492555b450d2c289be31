@@ -9,3 +9,11 @@ UUID: 508b33e0_83ea006e
 Bytes: 27
 should be LOCAL_JACK_PLUGIN
 
+109:47-109:58
+Wed Sep 21 14:47:52 2016 +0000
+Author: Sebastien Hertz <1029223@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 508b33e0_83ea006e
+UUID: 10ca9b6e_16419c60
+Bytes: 74
+Fixed by https://android-review.googlesource.com/276537 in the same topic.
+
