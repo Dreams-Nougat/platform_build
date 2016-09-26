@@ -1,0 +1,39 @@
+Revision: 6c0fdbb84d04600b8db6e108031a3b02e3f6bb20
+Patch-set: 1
+File: tools/warn.py
+
+1851:17-1851:20
+Mon Sep 26 19:47:47 2016 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 855f2b58_f937d7e4
+Bytes: 80
+Every 'cat' should really be 'category' if we are going to fix up abbreviations.
+
+1852:2-1852:6
+Mon Sep 26 19:47:47 2016 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 855f2b58_d93493e3
+Bytes: 8
+patterns
+
+1927:18-1927:21
+Mon Sep 26 19:47:47 2016 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 855f2b58_b9443f47
+Bytes: 10
+severerity
+
+1927:23-1927:26
+Mon Sep 26 19:47:47 2016 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 855f2b58_99417b37
+Bytes: 8
+category
+
+1933
+Mon Sep 26 19:47:47 2016 +0000
+Author: Stephen Hines <1010056@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 855f2b58_39782f84
+Bytes: 11
+Same naming
+
