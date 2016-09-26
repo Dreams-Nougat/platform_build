@@ -1,0 +1,24 @@
+Revision: bea465bf4444ef89636c63d64455b01c50a77543
+Patch-set: 2
+File: tools/warn.py
+
+1627
+Mon Sep 26 17:52:59 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 25c75f2e_6e032f72
+Bytes: 258
+Seems like most of these should be using ^ instead of (^|.*/) unless there's something else strange, to prevent this problem (there are many other instances that this could happen -- .*/build/.* is something that will be common under device/ and vendor/ too)
+
+1644
+Mon Sep 26 17:52:59 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 25c75f2e_2efd2752
+Bytes: 271
+To prevent hardcoding all of these names into the build system, should we have something more generic, like being able to say:
+
+  'frameworks/av/*'
+  'frameworks/*'
+  'system/*'
+
+And expanding out the regexes as required (it seems like many could be auto-generated today)
+
