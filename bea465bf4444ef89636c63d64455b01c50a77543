@@ -9,6 +9,16 @@ UUID: 25c75f2e_6e032f72
 Bytes: 258
 Seems like most of these should be using ^ instead of (^|.*/) unless there's something else strange, to prevent this problem (there are many other instances that this could happen -- .*/build/.* is something that will be common under device/ and vendor/ too)
 
+1627
+Mon Sep 26 18:22:24 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 25c75f2e_6e032f72
+UUID: 25c75f2e_6efa4fd6
+Bytes: 341
+Some warning messages contain absolute path of source files, so we need to match '/build/' in the middle.
+To remedy the problem of matching 'build' under vendor/ or device/, we can try to match vendor/ and device/ before build, and that could have other problem too.
+I will continue to twist these patterns to minimize wrong classifications.
+
 1644
 Mon Sep 26 17:52:59 2016 +0000
 Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -21,4 +31,14 @@ To prevent hardcoding all of these names into the build system, should we have s
   'system/*'
 
 And expanding out the regexes as required (it seems like many could be auto-generated today)
+
+1644
+Mon Sep 26 18:22:24 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 25c75f2e_2efd2752
+UUID: 25c75f2e_113ace83
+Bytes: 296
+Good idea, I will use some function to generate most of these patterns+project_name from simple directory path in future CLs.
+
+Right now, this program and its downstream dashboard require non-overlapping project group classifications. Hence, a warning message cannot match system/bt and system/*.
 
