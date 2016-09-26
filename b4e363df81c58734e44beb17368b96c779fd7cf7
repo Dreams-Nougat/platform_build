@@ -1,0 +1,11 @@
+Revision: b4e363df81c58734e44beb17368b96c779fd7cf7
+Patch-set: 3
+File: target/product/core_minimal.mk
+
+86
+Mon Sep 26 20:41:39 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a5b6efe4_9dcea726
+Bytes: 104
+This is intended to be alphabetical (though some of the filesystem packages above already violated that)
+
