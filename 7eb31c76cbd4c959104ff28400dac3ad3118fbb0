@@ -45,6 +45,14 @@ I'll see if partners have any feedback on this and decide what to do next.
 
 Thanks for the detailed comments!
 
+33:0-34:52
+Tue Sep 27 19:00:13 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 6b3926b8_99ed27b8
+UUID: 85ec8b0b_eef8d6ac
+Bytes: 228
+Once you've got vendor image support, we'll want a way to specify a default public key for vendor if we're not building the vendor image. For AOSP, the vendor image is either coming in as a prebuilt, or is already on the device.
+
 File: core/main.mk
 
 940:8-940:17
