@@ -9,6 +9,14 @@ UUID: 25f59ffe_7e0cd19c
 Bytes: 40
 empty needed adding here like elsewhere?
 
+4219
+Tue Sep 27 10:42:51 2016 +0000
+Author: Przemyslaw Szczepaniak <1015680@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 25f59ffe_7e0cd19c
+UUID: 25f59ffe_dec9a521
+Bytes: 72
+It's for consistency. I wouldn't expect "a" to be used differently here.
+
 File: tools/droiddoc/templates-sdk-dev/assets/css/default.css
 
 3211
@@ -17,4 +25,12 @@ Author: Paul Duffin <1039338@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 25f59ffe_1e0f8d93
 Bytes: 40
 empty needed adding here like elsewhere?
+
+3211
+Tue Sep 27 10:42:51 2016 +0000
+Author: Przemyslaw Szczepaniak <1015680@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 25f59ffe_1e0f8d93
+UUID: 650077b3_180fa593
+Bytes: 72
+It's for consistency. I wouldn't expect "a" to be used differently here.
 
