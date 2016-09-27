@@ -1,0 +1,20 @@
+Revision: 6f70567a743022bce74b768028cc3ebba57ae126
+Patch-set: 3
+File: tools/droiddoc/templates-ndk/assets/css/default.css
+
+4219
+Tue Sep 27 09:22:32 2016 +0000
+Author: Paul Duffin <1039338@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 25f59ffe_7e0cd19c
+Bytes: 40
+empty needed adding here like elsewhere?
+
+File: tools/droiddoc/templates-sdk-dev/assets/css/default.css
+
+3211
+Tue Sep 27 09:22:32 2016 +0000
+Author: Paul Duffin <1039338@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 25f59ffe_1e0f8d93
+Bytes: 40
+empty needed adding here like elsewhere?
+
