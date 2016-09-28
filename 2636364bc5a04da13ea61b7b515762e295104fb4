@@ -1,0 +1,11 @@
+Revision: 2636364bc5a04da13ea61b7b515762e295104fb4
+Patch-set: 3
+File: core/Makefile
+
+1508:0-1508:22
+Tue Sep 27 17:09:30 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 85ec8b0b_b0fd919b
+Bytes: 74
+"ifeq (true,$(BOARD_AVB_ENABLE))" to be consistent with other occurrences?
+
