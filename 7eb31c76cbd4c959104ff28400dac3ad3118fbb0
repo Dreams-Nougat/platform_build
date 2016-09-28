@@ -53,6 +53,18 @@ UUID: 85ec8b0b_eef8d6ac
 Bytes: 228
 Once you've got vendor image support, we'll want a way to specify a default public key for vendor if we're not building the vendor image. For AOSP, the vendor image is either coming in as a prebuilt, or is already on the device.
 
+33:0-34:52
+Wed Sep 28 16:06:01 2016 +0000
+Author: David Zeuthen <1076971@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 85ec8b0b_eef8d6ac
+UUID: 455613ef_af1b99e3
+Bytes: 290
+I think that's already possible this way
+
+ BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += " --chain-partition vendor:1:/path/to/vendor_public_key.avbpubkey"
+
+where /path/to/vendor_public_key.avbpubkey is generated using 'avbtool extract_public_key'. We can add some porcelain on top of that if needed!
+
 File: core/main.mk
 
 940:8-940:17
