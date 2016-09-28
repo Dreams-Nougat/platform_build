@@ -9,6 +9,14 @@ UUID: 6b3926b8_48ee7bed
 Bytes: 54
 nit: a mix of tab and space? (same below L1525, L1528)
 
+1515:0-1515:1
+Mon Sep 19 17:49:14 2016 +0000
+Author: David Zeuthen <1076971@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 6b3926b8_48ee7bed
+UUID: 90d3ebea_d2f8c443
+Bytes: 25
+Sorry about that - fixed!
+
 File: tools/releasetools/add_img_to_target_files.py
 
 266:0-266:2
@@ -17,4 +25,12 @@ Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 6b3926b8_a8e45700
 Bytes: 12
 tab => space
+
+266:0-266:2
+Mon Sep 19 17:49:14 2016 +0000
+Author: David Zeuthen <1076971@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 6b3926b8_a8e45700
+UUID: 90d3ebea_f2f5c84a
+Bytes: 4
+Done
 
