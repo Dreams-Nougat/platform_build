@@ -1,0 +1,29 @@
+Revision: c1c0f61ac553a1285a64e94e51e10df688fcf697
+Patch-set: 1
+File: core/definitions.mk
+
+3176:14-3176:19
+Sat Oct 01 03:24:17 2016 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2254b50d_68956936
+Bytes: 294
+streq seems kinda heavyweight, why not just:
+
+   $(if $(1),,$(error Argument missing to math function))
+   $(if $(word 2,$(1)),$(error Multiple words in a single argument to a math function: $(1)))
+   $(if $(call math_is_number),,$(error Only positive integers <= 100 are supported (not $(1))))
+
+3204:7-3204:12
+Sat Oct 01 03:24:17 2016 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2254b50d_8877852c
+Bytes: 44
+$(if $(filter $(1),$(__MATH_NUMBERS)),true,)
+
+3209
+Sat Oct 01 03:24:17 2016 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 2254b50d_e88f1927
+Bytes: 41
+This seems like a strange expected result
+
