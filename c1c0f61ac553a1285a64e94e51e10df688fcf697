@@ -13,6 +13,14 @@ streq seems kinda heavyweight, why not just:
    $(if $(word 2,$(1)),$(error Multiple words in a single argument to a math function: $(1)))
    $(if $(call math_is_number),,$(error Only positive integers <= 100 are supported (not $(1))))
 
+3176:14-3176:19
+Sat Oct 01 04:15:49 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2254b50d_68956936
+UUID: 2254b50d_6820c908
+Bytes: 4
+Done
+
 3204:7-3204:12
 Sat Oct 01 03:24:17 2016 +0000
 Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -20,10 +28,26 @@ UUID: 2254b50d_8877852c
 Bytes: 44
 $(if $(filter $(1),$(__MATH_NUMBERS)),true,)
 
+3204:7-3204:12
+Sat Oct 01 04:15:49 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2254b50d_8877852c
+UUID: 2254b50d_48250d17
+Bytes: 4
+Done
+
 3209
 Sat Oct 01 03:24:17 2016 +0000
 Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 2254b50d_e88f1927
 Bytes: 41
 This seems like a strange expected result
+
+3209
+Sat Oct 01 04:15:49 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 2254b50d_e88f1927
+UUID: 2254b50d_282ad1e6
+Bytes: 4
+Done
 
