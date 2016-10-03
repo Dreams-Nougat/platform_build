@@ -1,0 +1,11 @@
+Revision: 0b700beacb059a76de79cf889d5889a0598c4e6a
+Patch-set: 2
+File: tools/releasetools/build_image.py
+
+433:0-434:62
+Mon Oct 03 12:49:13 2016 +0000
+Author: Bowgo Tsai <1080813@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: e211bd99_c4ff7ef4
+Bytes: 55
+Do you have to change prop_dict["verity_size"] as well?
+
