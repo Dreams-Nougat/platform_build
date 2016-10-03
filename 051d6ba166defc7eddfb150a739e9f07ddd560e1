@@ -1,0 +1,11 @@
+Revision: 051d6ba166defc7eddfb150a739e9f07ddd560e1
+Patch-set: 1
+File: tools/makeparallel/makeparallel.cpp
+
+355
+Mon Oct 03 21:00:05 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 82a001a7_d16724b4
+Bytes: 88
+Should we pass SIGALRM down too, so that in the future we can deal with timeouts better?
+
