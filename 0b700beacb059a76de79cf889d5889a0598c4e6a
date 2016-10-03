@@ -2,6 +2,13 @@ Revision: 0b700beacb059a76de79cf889d5889a0598c4e6a
 Patch-set: 2
 File: tools/releasetools/build_image.py
 
+425:0-425:31
+Mon Oct 03 16:07:45 2016 +0000
+Author: Sami Tolvanen <1058768@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 22e115e5_670ce048
+Bytes: 145
+Are you assuming that verity_supported is false if avb_enable is in prop_dict, or how does this work with the existing verity partition resizing?
+
 433:0-434:62
 Mon Oct 03 12:49:13 2016 +0000
 Author: Bowgo Tsai <1080813@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -16,4 +23,11 @@ Parent: e211bd99_c4ff7ef4
 UUID: e24a9d97_5fa4efb3
 Bytes: 39
 Nope - |verity_size| isn't used by AVB.
+
+565:0-565:69
+Mon Oct 03 16:07:45 2016 +0000
+Author: Sami Tolvanen <1058768@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 22e115e5_a7b98835
+Bytes: 93
+Also, there's no support for appending FEC metadata here, unlike in the existing verity code.
 
