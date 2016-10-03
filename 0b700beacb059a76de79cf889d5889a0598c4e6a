@@ -9,6 +9,14 @@ UUID: 22e115e5_670ce048
 Bytes: 145
 Are you assuming that verity_supported is false if avb_enable is in prop_dict, or how does this work with the existing verity partition resizing?
 
+425:0-425:31
+Mon Oct 03 16:19:37 2016 +0000
+Author: David Zeuthen <1076971@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 22e115e5_670ce048
+UUID: e24a9d97_c2cdc62b
+Bytes: 29
+Yeah, that was my assumption.
+
 433:0-434:62
 Mon Oct 03 12:49:13 2016 +0000
 Author: Bowgo Tsai <1080813@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -30,4 +38,12 @@ Author: Sami Tolvanen <1058768@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 22e115e5_a7b98835
 Bytes: 93
 Also, there's no support for appending FEC metadata here, unlike in the existing verity code.
+
+565:0-565:69
+Mon Oct 03 16:19:37 2016 +0000
+Author: David Zeuthen <1076971@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 22e115e5_a7b98835
+UUID: e24a9d97_82c45e0a
+Bytes: 286
+My plan - see b/31263832 - is to do that in avbtool and --calc_max_image_size will take that into account. That way in things like Brillo and Treble creating an odm.img can be done easily just by a single avbtool command. That's the thinking anyway... maybe best to discuss in that bug?
 
