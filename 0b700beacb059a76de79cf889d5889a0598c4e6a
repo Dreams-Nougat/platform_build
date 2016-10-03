@@ -9,3 +9,11 @@ UUID: e211bd99_c4ff7ef4
 Bytes: 55
 Do you have to change prop_dict["verity_size"] as well?
 
+433:0-434:62
+Mon Oct 03 15:01:17 2016 +0000
+Author: David Zeuthen <1076971@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: e211bd99_c4ff7ef4
+UUID: e24a9d97_5fa4efb3
+Bytes: 39
+Nope - |verity_size| isn't used by AVB.
+
