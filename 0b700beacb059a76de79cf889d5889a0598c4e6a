@@ -9,6 +9,14 @@ UUID: 22e115e5_f2c3509b
 Bytes: 105
 nit: Do we want to set "system_avb_enable=$(BOARD_AVB_ENABLE)" and check for "true" in the python script?
 
+878:39-878:61
+Mon Oct 03 17:55:50 2016 +0000
+Author: David Zeuthen <1076971@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 22e115e5_f2c3509b
+UUID: e24a9d97_02032e1e
+Bytes: 20
+I can do that, sure.
+
 File: tools/releasetools/build_image.py
 
 425:0-425:31
@@ -70,4 +78,16 @@ Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 22e115e5_b215484f
 Bytes: 45
 seems a duplicate of d["mount_point"] (L616)?
+
+662:2-662:21
+Mon Oct 03 17:55:50 2016 +0000
+Author: David Zeuthen <1076971@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 22e115e5_b215484f
+UUID: e24a9d97_e2ff22f4
+Bytes: 99
+Almost - line 386 resets it to
+
+ prop_dict["mount_point"] = "/"
+
+so that's why I'm copying it here.
 
