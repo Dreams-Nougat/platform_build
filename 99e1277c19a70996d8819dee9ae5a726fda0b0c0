@@ -1,0 +1,25 @@
+Revision: 99e1277c19a70996d8819dee9ae5a726fda0b0c0
+Patch-set: 2
+File: core/shared_library_internal.mk
+
+99
+Mon Oct 03 23:40:07 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 82a001a7_05eec277
+Bytes: 799
+Ah, now I see how symbols is getting around this. This would work, but it won't necessarily map well to the installed shared library, since LOCAL_MODULE doesn't need to match the installed filename.
+
+Symbols uses this in order to grab the installed module path:
+
+  my_unstripped_path := $(TARGET_OUT_UNSTRIPPED)/$(patsubst $(PRODUCT_OUT)/%,%,$(my_module_path))
+
+You could do something similar, and use my_coverage_path instead of $($(my_prefix)OUT_COVERAGE)/$(GCNO_ARCHIVE)
+
+  ifdef LOCAL_IS_HOST_MODULE
+  my_coverage_path := $($(my_prefix)OUT_COVERAGE)/$(patsubst $($(my_prefix)OUT)/%,%,$(my_module_path))
+  else
+  my_coverage_path := $(TARGET_OUT_COVERAGE)/$(patsubst $(PRODUCT_OUT)/%,%,$(my_module_path))
+  endif
+
+They can't be unified between host and target because PRODUCT_OUT != TARGET_OUT :(
+
