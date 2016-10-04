@@ -1,0 +1,21 @@
+Revision: 4b9c3c56128f44e082ef99274a4cac3e9fbe8a98
+Patch-set: 3
+File: core/shared_library_internal.mk
+
+104
+Tue Oct 04 00:40:12 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 629f8d7a_e030020e
+Bytes: 419
+Ah, this will give filenames like:
+
+  coverage/system/lib/hw/gralloc.default.so/gralloc.default.$(gcno_suffix)
+
+You may want to use:
+
+ my_coverage_path := $(basename $(my_coverage_path))$(gcno_suffix)
+
+to replace the file extension, then drop the $(GCNO_ARCHIVE) appending to my_coverage_path (but keep the GCNO_ARCHIVE for consistent intermediates)
+
+(And do the same thing for binaries in addition to shared libraries)
+
