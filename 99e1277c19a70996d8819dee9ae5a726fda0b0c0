@@ -23,3 +23,11 @@ You could do something similar, and use my_coverage_path instead of $($(my_prefi
 
 They can't be unified between host and target because PRODUCT_OUT != TARGET_OUT :(
 
+99
+Tue Oct 04 00:31:39 2016 +0000
+Author: Ryan Campbell <1121516@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 82a001a7_05eec277
+UUID: 629f8d7a_a0967af8
+Bytes: 55
+Thank you! I'll fix this and get a patchset up shortly.
+
