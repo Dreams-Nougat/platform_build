@@ -11,6 +11,14 @@ does it make sense to make the default value to None, then assign len(data) to c
 
 otherwise when not specifying the compress_size, the comparison in ota_from_target_files.py would be always True
 
+1210:4-1210:38
+Fri Oct 14 00:54:25 2016 +0000
+Author: Young-Ho Cha <1005082@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7c9e567e_2415dcf7
+UUID: fc1a4624_15813400
+Bytes: 4
+Done
+
 File: tools/releasetools/ota_from_target_files.py
 
 147:26-147:29
@@ -19,4 +27,21 @@ Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 7c9e567e_c423d066
 Bytes: 75
 seems no need to change this value? (also changing to 1.0 makes it useless)
+
+147:26-147:29
+Fri Oct 14 00:54:25 2016 +0000
+Author: Young-Ho Cha <1005082@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7c9e567e_c423d066
+UUID: fc1a4624_758ea82f
+Bytes: 331
+I'm not sure which threshold value is better between 0.95 and 1.0.
+But in this case (MOB30P vs NRD90S), here are results.
+
+217252	ota_shamu_old.zip
+217408	ota_shamu_new_095.zip
+216520	ota_shamu_new.zip
+
+And I had some results of compress ratio of each patch files.
+
+https://gist.github.com/ganadist/2ef45ea73e1647aab60caa2cb2bde055
 
