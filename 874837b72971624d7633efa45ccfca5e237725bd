@@ -1,0 +1,34 @@
+Revision: 874837b72971624d7633efa45ccfca5e237725bd
+Patch-set: 2
+File: tools/warn.py
+
+2019
+Mon Oct 17 21:32:13 2016 +0000
+Author: Meike Baumgärtner <1115958@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3cf3ffac_4ea733a4
+Bytes: 40
+Please make this a flag + default value.
+
+2020:2-2024:25
+Mon Oct 17 21:32:13 2016 +0000
+Author: Meike Baumgärtner <1115958@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3cf3ffac_2e7e275e
+Bytes: 172
+groups = [warning_lines[i:max(i + num_cpu, len(warning_lines)) for i in xrange(0, len(warning_lines), num_cpu)]
+
+This should be more efficient to divide a list into chunks.
+
+2027:2-2028:13
+Mon Oct 17 21:32:13 2016 +0000
+Author: Meike Baumgärtner <1115958@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3cf3ffac_0ef88ba6
+Bytes: 129
+If no other threads are submitting tasks to the pool these two lines are irrelevant. Map already joins all the submitted workers.
+
+2129
+Mon Oct 17 21:32:13 2016 +0000
+Author: Meike Baumgärtner <1115958@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 3cf3ffac_6ecb0f5e
+Bytes: 111
+It might be better to have an option (flag) that determines if one wants to use parallel classification or not.
+
