@@ -102,3 +102,11 @@ The diff sums up to 947346 bytes, which is close to your observed value of (2174
 
 For the patch_threshold, I'm also thinking about a different purpose. Using 1.0 as the threshold is likely a win for the package size, as shown from your data. However, patching would be more costly then taking the file verbatim in terms of update time. Because we need to additionally read the source file, and apply the patching in memory before writing back the file. (0.95 is less likely a well-tuned threshold. We're not putting too much effort on file-based OTA though, since it's sort of being deprecated.)
 
+147:26-147:29
+Tue Oct 18 08:35:56 2016 +0000
+Author: Young-Ho Cha <1005082@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3cf3ffac_62f15e78
+UUID: 1cc71b67_751ac8e3
+Bytes: 4
+Done
+
