@@ -45,3 +45,60 @@ And I had some results of compress ratio of each patch files.
 
 https://gist.github.com/ganadist/2ef45ea73e1647aab60caa2cb2bde055
 
+147:26-147:29
+Tue Oct 18 00:45:33 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: fc1a4624_758ea82f
+UUID: 3cf3ffac_62f15e78
+Bytes: 3803
+Thanks for providing detailed data!
+
+The ratio value in your github link seems to be inverted. It should be patch_size / compressed_size when comparing against 0.95 or 1.0. I parsed the data from your full list. And here are the ones ranging between 0.95 and 1.0.
+
+821552   	   394070	   393617	  1.00		lib/libwebrtc_audio_preprocessing.so
+33248    	     8038	     8032	  1.00		framework/oat/arm/dpm.odex
+8581600  	  3808257	  3758492	  0.99		priv-app/Dialer/oat/arm/Dialer.odex
+639456   	   281583	   279332	  0.99		priv-app/ManagedProvisioning/oat/arm/ManagedProvisioning.odex
+4208337  	  1218170	  1205972	  0.99		priv-app/PackageInstaller/PackageInstaller.apk
+9253344  	  4280471	  4176707	  0.98		priv-app/Settings/oat/arm/Settings.odex
+4583904  	  2092325	  2052351	  0.98		app/DeskClock/oat/arm/DeskClock.odex
+451040   	   191707	   187017	  0.98		priv-app/SettingsProvider/oat/arm/SettingsProvider.odex
+3864660  	  1799441	  1761875	  0.98		lib/libskia.so
+366152   	   118820	   116393	  0.98		lib/libbinder.so
+354996   	   102559	   100034	  0.98		lib/libclcore_neon.bc
+161428   	    85980	    84664	  0.98		bin/dumpstate
+1511904  	   671169	   654967	  0.98		app/PrintSpooler/oat/arm/PrintSpooler.odex
+6034     	     4492	     4356	  0.97		priv-app/MmsService/MmsService.apk
+5811     	     4205	     4075	  0.97		app/BluetoothMidiService/BluetoothMidiService.apk
+4383200  	  1985336	  1934138	  0.97		priv-app/PackageInstaller/oat/arm/PackageInstaller.odex
+2856     	     1407	     1362	  0.97		usr/hyphen-data/hyph-eu.lic.txt
+20799968 	  9644926	  9314747	  0.97		framework/oat/arm/services.odex
+17884    	     7618	     7417	  0.97		bin/gzip
+123360   	    48661	    47070	  0.97		framework/oat/arm/pm.odex
+91488    	    47809	    45896	  0.96		lib/libexpat.so
+87616    	    45337	    43354	  0.96		lib/libunwind.so
+3885876  	  1870959	  1799778	  0.96		lib/libpac.so
+3645920  	  1603142	  1542481	  0.96		priv-app/TeleService/oat/arm/TeleService.odex
+330840   	   211667	   202635	  0.96		fonts/Roboto-BoldItalic.ttf
+329472   	   211688	   202766	  0.96		fonts/Roboto-MediumItalic.ttf
+321124   	   148381	   142643	  0.96		lib/libaudioflinger.so
+29152    	     8458	     8142	  0.96		app/HTMLViewer/oat/arm/HTMLViewer.odex
+2803396  	  1239991	  1189823	  0.96		lib/libart-compiler.so
+244588   	   140882	   135175	  0.96		lib/libttspico.so
+239188   	    75775	    72959	  0.96		lib/libcamera_client.so
+170888   	    59368	    56915	  0.96		priv-app/Shell/Shell.apk
+152192   	    83468	    80312	  0.96		bin/applypatch
+1110496  	   471163	   452118	  0.96		priv-app/DownloadProvider/oat/arm/DownloadProvider.odex
+104408   	    50942	    48810	  0.96		lib/libminikin.so
+91732    	    37768	    36032	  0.95		lib/libkeystore_binder.so
+631264   	   270114	   256958	  0.95		priv-app/TelephonyProvider/oat/arm/TelephonyProvider.odex
+376408   	   106725	   101526	  0.95		lib/libclcore_debug.bc
+332976   	   211872	   201959	  0.95		fonts/Roboto-LightItalic.ttf
+329592   	   210398	   200851	  0.95		fonts/Roboto-Italic.ttf
+192992   	    77645	    74135	  0.95		framework/oat/arm/am.odex
+112148   	    52511	    50066	  0.95		lib/libart-disassembler.so
+
+The diff sums up to 947346 bytes, which is close to your observed value of (217408 - 216520) (I assume your numbers are in KiB).
+
+For the patch_threshold, I'm also thinking about a different purpose. Using 1.0 as the threshold is likely a win for the package size, as shown from your data. However, patching would be more costly then taking the file verbatim in terms of update time. Because we need to additionally read the source file, and apply the patching in memory before writing back the file. (0.95 is less likely a well-tuned threshold. We're not putting too much effort on file-based OTA though, since it's sort of being deprecated.)
+
