@@ -9,6 +9,14 @@ UUID: 3cf3ffac_4ea733a4
 Bytes: 40
 Please make this a flag + default value.
 
+2019
+Tue Oct 18 00:54:00 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3cf3ffac_4ea733a4
+UUID: 3cf3ffac_14c25c21
+Bytes: 4
+Done
+
 2020:2-2024:25
 Mon Oct 17 21:32:13 2016 +0000
 Author: Meike Baumgärtner <1115958@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -18,6 +26,14 @@ groups = [warning_lines[i:max(i + num_cpu, len(warning_lines)) for i in xrange(0
 
 This should be more efficient to divide a list into chunks.
 
+2020:2-2024:25
+Tue Oct 18 00:54:00 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3cf3ffac_2e7e275e
+UUID: 3cf3ffac_345798e6
+Bytes: 157
+warning_lines is a set. So I have to use a loop instead of list subranges. I tried before to convert it to a list and then subrange, but that used more time.
+
 2027:2-2028:13
 Mon Oct 17 21:32:13 2016 +0000
 Author: Meike Baumgärtner <1115958@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -25,10 +41,27 @@ UUID: 3cf3ffac_0ef88ba6
 Bytes: 129
 If no other threads are submitting tasks to the pool these two lines are irrelevant. Map already joins all the submitted workers.
 
+2027:2-2028:13
+Tue Oct 18 00:54:00 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3cf3ffac_0ef88ba6
+UUID: 3cf3ffac_b43d48f7
+Bytes: 4
+Done
+
 2129
 Mon Oct 17 21:32:13 2016 +0000
 Author: Meike Baumgärtner <1115958@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 3cf3ffac_6ecb0f5e
 Bytes: 111
 It might be better to have an option (flag) that determines if one wants to use parallel classification or not.
+
+2129
+Tue Oct 18 00:54:00 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3cf3ffac_6ecb0f5e
+UUID: 3cf3ffac_a265063b
+Bytes: 140
+Now with a flag, users can choose to use 1 subprocess.
+For current large number of warnings, 2 or 3 subprocesses are almost 2X to 3X faster.
 
