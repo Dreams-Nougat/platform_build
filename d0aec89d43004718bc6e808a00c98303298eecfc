@@ -9,3 +9,11 @@ UUID: 3cf3ffac_542064c2
 Bytes: 103
 There should be no other projects, but I didn't see this as harmful (in case some new projects appear).
 
+1729
+Tue Oct 18 01:01:37 2016 +0000
+Author: Chih-hung Hsieh <1052399@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 3cf3ffac_542064c2
+UUID: 3cf3ffac_c232d20b
+Bytes: 101
+Right. In case a new subdirectory is added later, it's better to catch it here than frameworks/Other.
+
