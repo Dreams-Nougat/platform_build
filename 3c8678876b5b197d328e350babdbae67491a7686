@@ -1,0 +1,11 @@
+Revision: 3c8678876b5b197d328e350babdbae67491a7686
+Patch-set: 1
+File: core/prebuilt_internal.mk
+
+38:6-38:13
+Fri Oct 21 23:45:39 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: dcf74308_f00126b4
+Bytes: 7
+CHECKED
+
