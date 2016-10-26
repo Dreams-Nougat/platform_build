@@ -1,0 +1,17 @@
+Revision: b68142ae7f62463c3e0c2f31266ab7db65f6e126
+Patch-set: 1
+File: core/configure_local_jack.mk
+
+28:0-28:28
+Wed Oct 26 16:03:32 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 21a03809_d3f7cc1c
+Bytes: 159
+Plus, this probably isn't doing what you think it's doing -- the proper syntax is:
+
+  ifndef LOCAL_JACK_VERSION
+
+or:
+
+  ifneq (,$(strip $(LOCAL_JACK_VERSION)))
+
