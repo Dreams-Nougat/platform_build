@@ -19,3 +19,11 @@ As stated, they are behind an userdebug_or_eng :-(
 
 I want neither one to slip outside of the macro as to do so would lose the checking we have to ensure no one is using logpersist otherwise except for the tricks exposed in this file ...
 
+6:0-8:48
+Wed Oct 26 21:55:48 2016 +0000
+Author: Jeffrey Vander Stoep <1054468@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 21a03809_67e44e64
+UUID: 21a03809_079d8aa1
+Bytes: 71
+I would prefer we keep these inside a userdebug_or_eng() statement too.
+
