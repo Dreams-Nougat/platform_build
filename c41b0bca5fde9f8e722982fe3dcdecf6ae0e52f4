@@ -9,3 +9,13 @@ UUID: 21a03809_c72a62ae
 Bytes: 103
 These already exist in core policy so not needed here. This is device-specific policy for the emulator.
 
+6:0-8:48
+Wed Oct 26 21:45:46 2016 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 21a03809_c72a62ae
+UUID: 21a03809_67e44e64
+Bytes: 237
+As stated, they are behind an userdebug_or_eng :-(
+
+I want neither one to slip outside of the macro as to do so would lose the checking we have to ensure no one is using logpersist otherwise except for the tricks exposed in this file ...
+
