@@ -1,0 +1,11 @@
+Revision: c41b0bca5fde9f8e722982fe3dcdecf6ae0e52f4
+Patch-set: 1
+File: target/board/generic/sepolicy/logpersist.te
+
+6:0-8:48
+Wed Oct 26 21:38:26 2016 +0000
+Author: Jeffrey Vander Stoep <1054468@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 21a03809_c72a62ae
+Bytes: 103
+These already exist in core policy so not needed here. This is device-specific policy for the emulator.
+
