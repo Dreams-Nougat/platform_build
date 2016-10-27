@@ -42,3 +42,13 @@ UUID: a6651ef7_49f641bb
 Bytes: 171
 Adding it here is identical in function to adding it as a LOCAL_REQUIRED_MODULES to another module, with the extra benefit that you can tell what wants it to be installed.
 
+47
+Thu Oct 27 21:01:37 2016 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a6651ef7_49f641bb
+UUID: a6651ef7_09a96979
+Bytes: 225
+But it is not a required module for ART, that's the point.
+
+It's required for a functioning phone wrt/ O release. But it is wrong to declare that dependency for the ART module, because ART does not require this functionality.
+
