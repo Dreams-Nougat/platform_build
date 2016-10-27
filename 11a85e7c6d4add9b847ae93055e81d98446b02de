@@ -34,3 +34,11 @@ No.
 
 The runtime will load this when it is asked to, but it is not a requirement of the runtime. ART works just fine without TI. (In fact TI is just a regular plugin when it comes to internals.)
 
+47
+Thu Oct 27 20:55:28 2016 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a6651ef7_093609b0
+UUID: a6651ef7_49f641bb
+Bytes: 171
+Adding it here is identical in function to adding it as a LOCAL_REQUIRED_MODULES to another module, with the extra benefit that you can tell what wants it to be installed.
+
