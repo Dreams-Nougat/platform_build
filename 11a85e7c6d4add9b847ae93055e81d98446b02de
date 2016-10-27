@@ -1,0 +1,18 @@
+Revision: 11a85e7c6d4add9b847ae93055e81d98446b02de
+Patch-set: 1
+File: target/product/runtime_libart.mk
+
+39:3-42:14
+Thu Oct 27 20:32:17 2016 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a6651ef7_099f299a
+Bytes: 191
+Most of these libraries seem unnecessary, aren't they shared library dependencies of other modules that will cause them to be installed?  Only dlopen'd libraries would need to be listed here.
+
+47
+Thu Oct 27 20:32:17 2016 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a6651ef7_49a521ee
+Bytes: 97
+Who loads this library?  Would it be better to add it as a LOCAL_REQUIRED_MODULES of that module?
+
