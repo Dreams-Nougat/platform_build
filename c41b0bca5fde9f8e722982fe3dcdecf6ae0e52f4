@@ -2,6 +2,13 @@ Revision: c41b0bca5fde9f8e722982fe3dcdecf6ae0e52f4
 Patch-set: 1
 File: target/board/generic/sepolicy/logpersist.te
 
+6:0-6:43
+Thu Oct 27 16:51:42 2016 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 21a03809_8f8b4ca8
+Bytes: 167
+Sadly, we can not have duplicate types, no matter how much they are the same, so I have to move it out of userdebug_or_eng in the main logpersist.te and drop this one.
+
 6:0-8:48
 Wed Oct 26 21:38:26 2016 +0000
 Author: Jeffrey Vander Stoep <1054468@85c56323-6fa9-3386-8a01-6480fb634889>
