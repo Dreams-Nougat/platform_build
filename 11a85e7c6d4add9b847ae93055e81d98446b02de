@@ -9,10 +9,28 @@ UUID: a6651ef7_099f299a
 Bytes: 191
 Most of these libraries seem unnecessary, aren't they shared library dependencies of other modules that will cause them to be installed?  Only dlopen'd libraries would need to be listed here.
 
+39:3-42:14
+Thu Oct 27 20:52:00 2016 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a6651ef7_099f299a
+UUID: a6651ef7_e91a952e
+Bytes: 92
+I can't talk to that. See the comment above, maybe it's just to really really ensure things.
+
 47
 Thu Oct 27 20:32:17 2016 +0000
 Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: a6651ef7_49a521ee
 Bytes: 97
 Who loads this library?  Would it be better to add it as a LOCAL_REQUIRED_MODULES of that module?
+
+47
+Thu Oct 27 20:52:00 2016 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a6651ef7_49a521ee
+UUID: a6651ef7_093609b0
+Bytes: 194
+No.
+
+The runtime will load this when it is asked to, but it is not a requirement of the runtime. ART works just fine without TI. (In fact TI is just a regular plugin when it comes to internals.)
 
