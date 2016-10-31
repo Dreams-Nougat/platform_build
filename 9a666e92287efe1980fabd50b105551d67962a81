@@ -1,0 +1,11 @@
+Revision: 9a666e92287efe1980fabd50b105551d67962a81
+Patch-set: 2
+File: target/board/generic/sepolicy/logpersist.te
+
+3:0-12:55
+Mon Oct 31 19:24:47 2016 +0000
+Author: Jeffrey Vander Stoep <1054468@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: a65fde57_96365dae
+Bytes: 132
+why can't these be inside a userdebug_or_eng statement? Don't we want the emulator to have the same behavior as a production device?
+
