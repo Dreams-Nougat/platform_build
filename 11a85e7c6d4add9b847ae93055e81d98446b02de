@@ -52,3 +52,11 @@ But it is not a required module for ART, that's the point.
 
 It's required for a functioning phone wrt/ O release. But it is wrong to declare that dependency for the ART module, because ART does not require this functionality.
 
+47
+Tue Nov 01 17:54:36 2016 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a6651ef7_09a96979
+UUID: a6ec3e0b_2b56d56f
+Bytes: 56
+is is true this is not required for ART, it is optional.
+
