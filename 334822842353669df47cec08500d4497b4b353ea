@@ -1,0 +1,11 @@
+Revision: 334822842353669df47cec08500d4497b4b353ea
+Patch-set: 3
+File: tools/releasetools/blockimgdiff.py
+
+1004
+Wed Nov 02 17:26:41 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: c67db254_e5fa309d
+Bytes: 195
+Another one of those times I wish it was easier to share python code across android modules... This is really begging for someone to create OrderedSet, but there's no good place to share it from.
+
