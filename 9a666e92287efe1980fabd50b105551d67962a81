@@ -9,3 +9,11 @@ UUID: a65fde57_96365dae
 Bytes: 132
 why can't these be inside a userdebug_or_eng statement? Don't we want the emulator to have the same behavior as a production device?
 
+3:0-12:55
+Fri Nov 04 20:58:00 2016 +0000
+Author: Mark Salyzyn <1032276@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: a65fde57_96365dae
+UUID: cbff7b6a_411c1c7e
+Bytes: 75
+Line 4 '# allow for all builds'. This resource runs always on the emulator.
+
