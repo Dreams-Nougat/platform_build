@@ -1,0 +1,11 @@
+Revision: febb5a7c502720893149394f10c3837647c401d0
+Patch-set: 1
+File: tools/fs_config/fs_config_generator.py
+
+125:33-125:41
+Wed Nov 16 21:21:24 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 30b088be_4d6411f7
+Bytes: 11
+is not None
+
