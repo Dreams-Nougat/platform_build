@@ -9,6 +9,14 @@ UUID: 30ca486f_f0c0a0e9
 Bytes: 62
 let's call this --aid-header --- no reason to abbreviate here.
 
+827:34-827:40
+Thu Nov 17 22:51:26 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_f0c0a0e9
+UUID: 30ca486f_ab64f93a
+Bytes: 4
+Done
+
 829:72-830:32
 Thu Nov 17 22:12:35 2016 +0000
 Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -16,10 +24,28 @@ UUID: 30ca486f_10befc62
 Bytes: 14
 missing space?
 
+829:72-830:32
+Thu Nov 17 22:51:26 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_10befc62
+UUID: 30ca486f_8b801d94
+Bytes: 4
+Done
+
 834
 Thu Nov 17 22:12:35 2016 +0000
 Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 30ca486f_70c490f8
 Bytes: 67
 why does it say required=True above, but seems to be optional here?
+
+834
+Thu Nov 17 22:51:26 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_70c490f8
+UUID: 30ca486f_70a650a6
+Bytes: 213
+It was originally optional, but subsequent revisions it went to required. Since we really want to endorce the oem aid ranges.
+
+I'm just going to make this required now and drop the check below. Nice catch, thanks.
 
