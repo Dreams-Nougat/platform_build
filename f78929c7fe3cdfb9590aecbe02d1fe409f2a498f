@@ -1,0 +1,11 @@
+Revision: f78929c7fe3cdfb9590aecbe02d1fe409f2a498f
+Patch-set: 3
+File: tools/fs_config/README
+
+72
+Thu Nov 17 18:55:56 2016 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 30ca486f_bcb3699a
+Bytes: 41
+can we set strict mode in older versions?
+
