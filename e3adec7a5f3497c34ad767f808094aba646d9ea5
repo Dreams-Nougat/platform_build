@@ -11,6 +11,19 @@ Any particular reason for being lower case? At the very least you'll need to add
 
 I'm guessing nothing here has ever been pylint clean, but lets try not to make that worse :)
 
+18
+Thu Nov 17 23:44:04 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_b0838855
+UUID: 30ca486f_bd552016
+Bytes: 286
+A lot of this got reshuffled and lost history:
+https://android-review.googlesource.com/#/q/owner:self+status:abandoned+topic:fsconfig-2
+
+It was never completly clean, as pylint complained about a few things  that were dumb.
+
+I formatted this with yapf with the style set to google iirc.
+
 20:4-20:7
 Thu Nov 17 23:38:03 2016 +0000
 Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
