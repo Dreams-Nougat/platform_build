@@ -9,3 +9,13 @@ UUID: 30ca486f_4526f47e
 Bytes: 174
 this seems like a pain. if we think this is something OEMs actually need to do, shouldn't we just make a oem_aids library or something they can add to LOCAL_STATIC_LIBRARIES?
 
+122:0-132:97
+Thu Nov 17 22:18:02 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_4526f47e
+UUID: 30ca486f_f03b40f9
+Bytes: 76
+We need it.
+
+Would it just be an empty host lib so the dependency is set up?
+
