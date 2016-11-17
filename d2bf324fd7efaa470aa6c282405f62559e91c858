@@ -19,3 +19,11 @@ We need it.
 
 Would it just be an empty host lib so the dependency is set up?
 
+122:0-132:97
+Thu Nov 17 22:34:33 2016 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_f03b40f9
+UUID: 30ca486f_d00724c8
+Bytes: 86
++dwillemsen for the latest on how best to implement header-only libraries, but, "yes".
+
