@@ -1,0 +1,11 @@
+Revision: d71d23ab7e31df5832c5c0fad8085eebc5d1720d
+Patch-set: 3
+File: target/product/embedded.mk
+
+91:2-91:22
+Thu Nov 17 21:56:24 2016 +0000
+Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 30ca486f_45e354ed
+Bytes: 7
+<pwd.h>
+
