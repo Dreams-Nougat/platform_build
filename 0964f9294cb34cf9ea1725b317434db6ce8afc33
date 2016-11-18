@@ -9,12 +9,28 @@ UUID: 30ca486f_9d2a248f
 Bytes: 46
 in_any_range, and should just be a global func
 
+69:8-69:16
+Fri Nov 18 04:40:54 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_9d2a248f
+UUID: 30ca486f_918a0b6c
+Bytes: 203
+Utils grows in functionality and Id rather have it bound to class. I just don't like arbitrary static globals. Unless you can point to a Google style guide for python that says no, id prefer to leave it.
+
 201:8-201:28
 Fri Nov 18 00:13:44 2016 +0000
 Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 30ca486f_7d7388c6
 Bytes: 40
 for lineno, line in enumerate(aid_file):
+
+201:8-201:28
+Fri Nov 18 04:40:54 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_7d7388c6
+UUID: 30ca486f_117efb83
+Bytes: 5
+neato
 
 253
 Fri Nov 18 00:13:44 2016 +0000
@@ -24,6 +40,16 @@ Bytes: 148
 Should this ever be caught? Might make more sense to just sys.exit here (it's an expected form of failure).
 
 Same comment goes for the rest of these
+
+253
+Fri Nov 18 04:40:54 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_9d1ce453
+UUID: 30ca486f_d1d2c363
+Bytes: 205
+sys.exit just raises the SystemExit exception. I could really care less, but other cases in other patches that detect duplicate aid collisions also should then change.
+
+If it really matters, ill change it.
 
 317:37-317:47
 Fri Nov 18 00:13:44 2016 +0000
@@ -44,6 +70,14 @@ You're checking each pair twice.
 
 And then you can drop the `range1 == range2` check too.
 
+325
+Fri Nov 18 04:40:54 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_3d48302e
+UUID: 30ca486f_f1cfbfb8
+Bytes: 4
+nice
+
 331:35-331:41
 Fri Nov 18 00:13:44 2016 +0000
 Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -51,12 +85,36 @@ UUID: 30ca486f_3dde702e
 Bytes: 12
 _oem_ranges?
 
+331:35-331:41
+Fri Nov 18 04:40:54 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_3dde702e
+UUID: 30ca486f_f1b6df22
+Bytes: 22
+yeah all the ranges...
+
 340
 Fri Nov 18 00:13:44 2016 +0000
 Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 30ca486f_7dd8e83e
 Bytes: 9
 Property?
+
+340
+Fri Nov 18 04:40:54 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_7dd8e83e
+UUID: 30ca486f_31b13729
+Bytes: 187
+It doesn't provide much here...
+
+x.oem_ranges <-- someone will try and mutate that and get an error.
+
+vs
+
+x.get_oem_ranges() <-- this is a clearly not mutable
+
+I prefer explicit get/sets.
 
 423
 Fri Nov 18 00:13:44 2016 +0000
@@ -70,12 +128,30 @@ Here ranges are [a, b), but in `in_any_range` they're [a, b].
 
 This is a trivially unit tested function. Could you add some?
 
+423
+Fri Nov 18 04:40:54 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_40925f39
+UUID: 30ca486f_110b5b06
+Bytes: 190
+Im not following what your saying about here vs in_any_range.
+
+For unit tests, sure, I can add a commandlet called test that will fire up a unit test class. Ill do that in a different patch.
+
 536:15-537:58
 Fri Nov 18 00:13:44 2016 +0000
 Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 30ca486f_20b483b0
 Bytes: 13
 in_any_range?
+
+536:15-537:58
+Fri Nov 18 04:40:54 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_20b483b0
+UUID: 30ca486f_51f4f3d7
+Bytes: 3
+yes
 
 827:34-827:40
 Thu Nov 17 22:12:35 2016 +0000
