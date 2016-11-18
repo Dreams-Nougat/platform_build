@@ -9,6 +9,14 @@ UUID: 30ca486f_c5384492
 Bytes: 9
 uppercase
 
+85:47-85:55
+Fri Nov 18 05:32:19 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_c5384492
+UUID: 30ca486f_8cdaf005
+Bytes: 4
+Done
+
 File: tools/fs_config/fs_config_generator.py
 
 510:22-510:31
@@ -17,4 +25,12 @@ Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 30ca486f_0086a7a4
 Bytes: 125
 (anywhere in this stack that has a bare "Exception" will need to be fixed up, but I'm going to stop leaving comments on them)
+
+510:22-510:31
+Fri Nov 18 05:32:19 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_0086a7a4
+UUID: 30ca486f_6ce594c0
+Bytes: 69
+most will likely be converted to sys.exit based on previous comments.
 
