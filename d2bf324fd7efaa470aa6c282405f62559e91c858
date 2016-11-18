@@ -35,6 +35,28 @@ UUID: b010f8cf_13b11629
 Bytes: 115
 Currently, header-only libraries can be implemented using a static library that just doesn't have any source files.
 
+122:0-132:97
+Fri Nov 18 22:00:43 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b010f8cf_13b11629
+UUID: b010f8cf_d357fee5
+Bytes: 365
+If you're defining it in Soong, then:
+
+  cc_library_static {
+       name: "....",
+       generated_headers: ["headers_genrule_name"],
+       export_generated_headers: true,
+  }
+
+In Make:
+
+  include $(CLEAR_VARS)
+  LOCAL_MODULE := ....
+  LOCAL_EXPORT_C_INCLUDE_DIRS := $(oem_aid_dir)
+  LOCAL_EXPORT_C_INCLUDE_DEPS := $(oem_aid_file)
+  include $(BUILD_STATIC_LIBRARY)
+
 File: tools/fs_config/fs_config_generator.py
 
 1004:19-1004:21
