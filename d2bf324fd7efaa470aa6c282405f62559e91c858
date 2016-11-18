@@ -27,6 +27,14 @@ UUID: 30ca486f_d00724c8
 Bytes: 86
 +dwillemsen for the latest on how best to implement header-only libraries, but, "yes".
 
+122:0-132:97
+Fri Nov 18 21:57:08 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_d00724c8
+UUID: b010f8cf_13b11629
+Bytes: 115
+Currently, header-only libraries can be implemented using a static library that just doesn't have any source files.
+
 File: tools/fs_config/fs_config_generator.py
 
 1004:19-1004:21
