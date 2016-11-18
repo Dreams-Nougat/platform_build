@@ -81,6 +81,14 @@ Bytes: 205
 
 Although maybe it's a feature that someone passing the empty string for normalized_value would get ValueError? An explicit check would be more intention revealing though.
 
+90:32-90:68
+Fri Nov 18 02:07:04 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_d09c845a
+UUID: 30ca486f_40489f2e
+Bytes: 5
+Sure.
+
 160
 Thu Nov 17 23:38:03 2016 +0000
 Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -94,6 +102,14 @@ Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 30ca486f_ab37993f
 Bytes: 201
 Looks like this wasn't even an option before then? Bummer. I was going to suggest that this should be explicitly set for consistent behavior, but I don't think we want that behavior to be non-strict :(
+
+170:25-173:19
+Fri Nov 18 02:07:04 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_ab37993f
+UUID: 30ca486f_80cf176d
+Bytes: 125
+Yeah I don't want this, but it's not an option. The only way would be to subclass and get into a world of pain and suffering.
 
 214
 Thu Nov 17 23:38:03 2016 +0000
@@ -112,12 +128,28 @@ A closure would be a lot cleaner imo
     def error_message(msg):
         return '{} for: "{}" file: "{}"'.format(msg, section_name, file_name)
 
+221:7-221:80
+Fri Nov 18 02:07:04 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_0bd5eda0
+UUID: 30ca486f_b322af14
+Bytes: 28
+Yeah I like that better too.
+
 229:18-229:25
 Thu Nov 17 23:38:03 2016 +0000
 Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 30ca486f_2b154968
 Bytes: 10
 ValueError
+
+229:18-229:25
+Fri Nov 18 02:07:04 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_2b154968
+UUID: 30ca486f_d31f2bd3
+Bytes: 38
+Scratching my head, why did I do that.
 
 334
 Thu Nov 17 23:38:03 2016 +0000
@@ -129,6 +161,16 @@ Use a property instead?
     @property
     def files(self):
         return self._files
+
+334
+Fri Nov 18 02:07:04 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_3d6bd060
+UUID: 30ca486f_d34d6be3
+Bytes: 212
+I thought the point of properties is so you could do foo.files and if you wanted to encapsulate it later, you could by adding a property.
+
+I'm going to skip this for now, unless you have a more compelling reason.
 
 440
 Thu Nov 17 23:38:03 2016 +0000
@@ -163,4 +205,12 @@ Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 30ca486f_5de5ecbf
 Bytes: 66
 Trailing newline is inconsistent in all these. Most don't have it.
+
+488:71-488:73
+Fri Nov 18 02:07:04 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_5de5ecbf
+UUID: 30ca486f_d361eb29
+Bytes: 74
+The newlines here make the generated file easier for a human to read IMHO.
 
