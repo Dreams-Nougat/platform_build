@@ -2,6 +2,81 @@ Revision: 0964f9294cb34cf9ea1725b317434db6ce8afc33
 Patch-set: 3
 File: tools/fs_config/fs_config_generator.py
 
+69:8-69:16
+Fri Nov 18 00:13:44 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 30ca486f_9d2a248f
+Bytes: 46
+in_any_range, and should just be a global func
+
+201:8-201:28
+Fri Nov 18 00:13:44 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 30ca486f_7d7388c6
+Bytes: 40
+for lineno, line in enumerate(aid_file):
+
+253
+Fri Nov 18 00:13:44 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 30ca486f_9d1ce453
+Bytes: 148
+Should this ever be caught? Might make more sense to just sys.exit here (it's an expected form of failure).
+
+Same comment goes for the rest of these
+
+317:37-317:47
+Fri Nov 18 00:13:44 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 30ca486f_5df96cce
+Bytes: 4
+oops
+
+325
+Fri Nov 18 00:13:44 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 30ca486f_3d48302e
+Bytes: 188
+You're checking each pair twice.
+
+    for i, range1 in enumerate(self._oem_ranges):
+        for range2 in self._oem_ranges[i + 1:]:
+
+And then you can drop the `range1 == range2` check too.
+
+331:35-331:41
+Fri Nov 18 00:13:44 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 30ca486f_3dde702e
+Bytes: 12
+_oem_ranges?
+
+340
+Fri Nov 18 00:13:44 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 30ca486f_7dd8e83e
+Bytes: 9
+Property?
+
+423
+Fri Nov 18 00:13:44 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 30ca486f_40925f39
+Bytes: 168
+Here ranges are [a, b), but in `in_any_range` they're [a, b].
+
+    >>> _get_overlap((0, 1), (1, 2))
+    0
+
+This is a trivially unit tested function. Could you add some?
+
+536:15-537:58
+Fri Nov 18 00:13:44 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 30ca486f_20b483b0
+Bytes: 13
+in_any_range?
+
 827:34-827:40
 Thu Nov 17 22:12:35 2016 +0000
 Author: Elliott Hughes <1003224@85c56323-6fa9-3386-8a01-6480fb634889>
