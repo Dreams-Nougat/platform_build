@@ -11,6 +11,14 @@ this contained Apache HTTP Client in the past, which libcore at least used to ha
 
 ext is part of the BOOTCLASSPATH
 
+33:24-33:27
+Fri Nov 18 04:03:05 2016 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_3162171c
+UUID: 30ca486f_5115d366
+Bytes: 93
+See line 17. "without Android frameworks" I don't think this should be here. Similarly expat.
+
 69:2-69:15
 Fri Nov 18 03:58:20 2016 +0000
 Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -29,4 +37,12 @@ art/tools/dmtracedump
 dalvik/dx
 dalvik/tools/dexdeps
 dalvik/tools/hprof-conv
+
+73:0-73:41
+Fri Nov 18 04:03:05 2016 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_d141e376
+UUID: 30ca486f_711acf99
+Bytes: 76
+See line 17. These tools are not required for a functioning ART environment.
 
