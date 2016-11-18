@@ -9,10 +9,37 @@ UUID: 30ca486f_e0060b85
 Bytes: 26
 nit: missing leading space
 
+939:19-939:21
+Fri Nov 18 05:10:28 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_e0060b85
+UUID: 30ca486f_51f793b4
+Bytes: 10
+nice catch
+
 943
 Fri Nov 18 00:16:48 2016 +0000
 Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 30ca486f_80671760
 Bytes: 43
 textwrap.dedent would make this a bit nicer
+
+943
+Fri Nov 18 05:10:28 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_80671760
+UUID: 30ca486f_51deb32e
+Bytes: 4
+done
+
+976
+Fri Nov 18 05:10:28 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 30ca486f_b1ab876b
+Bytes: 198
+This is currently broken. Looks like this depends on the patch:
+
+https://android-review.googlesource.com/#/c/292015/3/tools/fs_config/fs_config_generator.py
+
+Likely just a rebase issue I introduced.
 
