@@ -56,3 +56,22 @@ neither is oatdump, dexlist, dexdump, ahat, libart_fake...
 
 dalvikvm isn't required to boot a device. in any case, the SCREAMING UPPERCASE doesn't seem necessary.
 
+73:0-73:41
+Fri Nov 18 07:03:18 2016 +0000
+Author: Andreas Gampe <1041833@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_91176b2e
+UUID: 30ca486f_2c62bc1b
+Bytes: 791
+As mentioned on the other CL:
+
+I agree with dexlist, dexdump, ahat. They're not required, and IMHO should not be here. I left ahat because its jars might be distributed as part of a regular build. I left dexlist because it is currently on device (?), similar for dexdump.
+
+Disagree with oatdump, which is valuable because of custom oat modifications.
+
+dalvikvm isn't required to boot a device, but then this file doesn't claim to give you a bootable device, just a "functioning ART environment."
+
+Agree with the fake libart.
+
+
+The uppercase is so that it catches the eye of the reviewer. I strongly disagree to these being here. And it's highly inconsistent and annoying that dx wasn't in the SDK list. dx is deprecated in the platform. If we had to put something here, shouldn't it be Jack?
+
