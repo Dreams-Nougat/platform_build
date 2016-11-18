@@ -27,3 +27,12 @@ UUID: 30ca486f_d00724c8
 Bytes: 86
 +dwillemsen for the latest on how best to implement header-only libraries, but, "yes".
 
+File: tools/fs_config/fs_config_generator.py
+
+1004:19-1004:21
+Fri Nov 18 00:18:55 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 30ca486f_a0b25397
+Bytes: 18
+nit: leading space
+
