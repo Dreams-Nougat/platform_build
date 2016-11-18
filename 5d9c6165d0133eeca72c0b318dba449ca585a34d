@@ -11,3 +11,15 @@ Richard, should ahat rather go into the SDK dependencies? Did you have a strong 
 
 (Similarly, dexlist and hprof-conv probably should go. Though dexlist is on device? And, while we're at it, why are we shipping dexdump on device?)
 
+64:4-64:10
+Fri Nov 18 08:20:23 2016 +0000
+Author: Richard Uhler <1057373@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_f157bf41
+UUID: d0c80c9b_b3d93815
+Bytes: 451
+If I remember correctly, the purpose of adding ahat here was to ensure ahat was built by default, under the assumption that Android developers would want to be able to run it without having to do a special make command.
+
+I don't know what it means for ahat to go in PRODUCT_PACKAGES or the SDK dependencies. I'm happy with it being anywhere that means I can run 'ahat' after doing a top level make.
+
+Is that reasonable? Does that answer your question?
+
