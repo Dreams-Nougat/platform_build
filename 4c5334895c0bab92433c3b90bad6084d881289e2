@@ -1,0 +1,18 @@
+Revision: 4c5334895c0bab92433c3b90bad6084d881289e2
+Patch-set: 3
+File: tools/fs_config/fs_config_generator.py
+
+1093:22-1093:25
+Fri Nov 18 00:37:10 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 30ca486f_6033db27
+Bytes: 100
+Split the lines or drop the splices (and if you're going to split the lines, prefer textwrap.dedent)
+
+1153:46-1153:63
+Fri Nov 18 00:37:10 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 30ca486f_e080cb4a
+Bytes: 220
+These should be sanitized. I get that you have to already be building the system image to affect this, but you can do weird shit here like give the username of "foo::0:0::/:/system/bin/sh #" and then your user is root...
+
