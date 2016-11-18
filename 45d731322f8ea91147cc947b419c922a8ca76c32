@@ -9,3 +9,12 @@ UUID: 30ca486f_c5384492
 Bytes: 9
 uppercase
 
+File: tools/fs_config/fs_config_generator.py
+
+510:22-510:31
+Fri Nov 18 00:22:51 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 30ca486f_0086a7a4
+Bytes: 125
+(anywhere in this stack that has a bare "Exception" will need to be fixed up, but I'm going to stop leaving comments on them)
+
