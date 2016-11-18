@@ -46,3 +46,13 @@ UUID: 30ca486f_711acf99
 Bytes: 76
 See line 17. These tools are not required for a functioning ART environment.
 
+73:0-73:41
+Fri Nov 18 04:37:14 2016 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_711acf99
+UUID: 30ca486f_91176b2e
+Bytes: 162
+neither is oatdump, dexlist, dexdump, ahat, libart_fake...
+
+dalvikvm isn't required to boot a device. in any case, the SCREAMING UPPERCASE doesn't seem necessary.
+
