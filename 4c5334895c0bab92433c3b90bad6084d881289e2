@@ -24,3 +24,17 @@ UUID: 30ca486f_ecd0c4e4
 Bytes: 11
 Good point.
 
+1153:46-1153:63
+Fri Nov 18 05:43:39 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_ecd0c4e4
+UUID: 30ca486f_4cf61872
+Bytes: 369
+Actually already caught:
+
+Section names for AID_<name> in the ini file must be a valid character for a C define:
+
+Exception: Invalid characters in AID section at "6" for: "Expecting upper case, a number or underscore" for: "AID_DE:IM" file: "/home/wcrobert/test/delim.fs"
+
+Granted, I want explicit checks that logon or uid don't have ':' in them, so ill still add them.
+
