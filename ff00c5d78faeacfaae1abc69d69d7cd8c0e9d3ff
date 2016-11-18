@@ -1,0 +1,32 @@
+Revision: ff00c5d78faeacfaae1abc69d69d7cd8c0e9d3ff
+Patch-set: 1
+File: target/product/runtime_libart.mk
+
+33:24-33:27
+Fri Nov 18 03:58:20 2016 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 30ca486f_3162171c
+Bytes: 142
+this contained Apache HTTP Client in the past, which libcore at least used to have some tests for I believe.
+
+ext is part of the BOOTCLASSPATH
+
+69:2-69:15
+Fri Nov 18 03:58:20 2016 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 30ca486f_b12d47c2
+Bytes: 16
+CA Certificates.
+
+73:0-73:41
+Fri Nov 18 03:58:20 2016 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 30ca486f_d141e376
+Bytes: 150
+because they are someone ART/dex helpers, just not ones you seem to use.
+
+art/tools/dmtracedump
+dalvik/dx
+dalvik/tools/dexdeps
+dalvik/tools/hprof-conv
+
