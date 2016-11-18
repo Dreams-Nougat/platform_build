@@ -1,0 +1,13 @@
+Revision: c4c788cfdc05369df39d6d3b024192be0d57fb87
+Patch-set: 3
+File: tools/fs_config/fs_config_generator.py
+
+882:24-882:70
+Fri Nov 18 00:40:21 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 30ca486f_c0b90f16
+Bytes: 71
+dict comprehensions exist
+
+    {aid.friendly: aid for aid in base_aids}
+
