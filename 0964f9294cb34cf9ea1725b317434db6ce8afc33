@@ -17,6 +17,16 @@ UUID: 30ca486f_918a0b6c
 Bytes: 203
 Utils grows in functionality and Id rather have it bound to class. I just don't like arbitrary static globals. Unless you can point to a Google style guide for python that says no, id prefer to leave it.
 
+69
+Mon Nov 21 23:24:59 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_918a0b6c
+UUID: b010f8cf_0c620552
+Bytes: 355
+Interestingly the internal version of our style guide (annoyingly differs in a few places) says no, but the public one doesn't mind. There really isn't a consistent Python style in Android, but I think we can safely ignore the one that only Googlers can see :)
+
+This is fine, it just looked a little odd since there's only a single method in it right now.
+
 201:8-201:28
 Fri Nov 18 00:13:44 2016 +0000
 Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -50,6 +60,14 @@ Bytes: 205
 sys.exit just raises the SystemExit exception. I could really care less, but other cases in other patches that detect duplicate aid collisions also should then change.
 
 If it really matters, ill change it.
+
+253
+Mon Nov 21 23:24:59 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_d1d2c363
+UUID: b010f8cf_ec91f1e2
+Bytes: 203
+It does, but there's a default handler that catches SystemExit and simply prints the message rather than the stack trace (just a UX difference). Sounds like this is intended to be caught though, so LGTM.
 
 317:37-317:47
 Fri Nov 18 00:13:44 2016 +0000
@@ -137,6 +155,16 @@ Bytes: 190
 Im not following what your saying about here vs in_any_range.
 
 For unit tests, sure, I can add a commandlet called test that will fire up a unit test class. Ill do that in a different patch.
+
+423
+Mon Nov 21 23:24:59 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_110b5b06
+UUID: b010f8cf_6c13c17f
+Bytes: 253
+These? https://en.wikipedia.org/wiki/Interval_(mathematics)#Notations_for_intervals
+
+Could you add a comment explaining if these intervals are open or closed? I suspect I'll find out when I get to the test CL, but a comment would certainly help clarify.
 
 536:15-537:58
 Fri Nov 18 00:13:44 2016 +0000
