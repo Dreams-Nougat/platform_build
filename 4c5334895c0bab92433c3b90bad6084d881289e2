@@ -38,3 +38,11 @@ Exception: Invalid characters in AID section at "6" for: "Expecting upper case, 
 
 Granted, I want explicit checks that logon or uid don't have ':' in them, so ill still add them.
 
+1153
+Mon Nov 21 23:50:18 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_4cf61872
+UUID: b010f8cf_27472298
+Bytes: 111
+Yeah, having the checks here is good because we'll still be protected in the event that the other code changes.
+
