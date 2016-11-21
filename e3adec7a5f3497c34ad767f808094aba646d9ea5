@@ -44,6 +44,14 @@ https://google.github.io/styleguide/pyguide.html?showone=Comments#Comments
 
 (comment applies to other places, I'm not going to call them all out so the other comments don't get buried in the noise)
 
+21
+Mon Nov 21 23:03:58 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_f0e98039
+UUID: b010f8cf_5e10a770
+Bytes: 22
+Still needs to be done
+
 40:26-40:31
 Thu Nov 17 23:38:03 2016 +0000
 Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -96,6 +104,27 @@ Parent: 30ca486f_40489f2e
 UUID: 30ca486f_564dc93c
 Bytes: 35
 Actually int("") throws ValueError.
+
+90
+Mon Nov 21 23:03:58 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_564dc93c
+UUID: b010f8cf_21015221
+Bytes: 689
+That's what I mean by "maybe it's a feature that someone passing the empty string for normalized_value would get ValueError?".
+
+I think both this and the updated version still don't make it clear if the behavior of the empty string for `normalized_value` is intentional or a bug.
+
+The following seems to most clear IMO:
+
+    if normalized_value == '':
+        raise ValueError('normalized_value cannot be the empty string')
+    elif normalized_value is None:
+        self.normalized_value = str(int(value))
+    else:
+        self.normalized_value = normalized_value
+
+Now that I've seen it written that way, I noticed something else: do you need to perform any checking on normalized_value?
 
 160
 Thu Nov 17 23:38:03 2016 +0000
@@ -180,6 +209,18 @@ I thought the point of properties is so you could do foo.files and if you wanted
 
 I'm going to skip this for now, unless you have a more compelling reason.
 
+334
+Mon Nov 21 23:03:58 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_d34d6be3
+UUID: b010f8cf_01cf6e6e
+Bytes: 649
+That's part of the reason, but I've always considered a property to be the more pythonic solution. It keeps the method of accessing things consistent. It also makes it possible to go the other direction (accessor to simple attribute) if need be.
+
+Looks like at least some people on SO agree with me: http://stackoverflow.com/q/13852279/632035. The Google Style guide also agrees: https://google.github.io/styleguide/pyguide.html?showone=Properties#Properties
+
+I can see a reason for property rather than a pure attribute here though: keeping it read only to users of the class. @property does enforce that unless you've also made a @property.setter.
+
 440
 Thu Nov 17 23:38:03 2016 +0000
 Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -229,4 +270,12 @@ Parent: 30ca486f_5de5ecbf
 UUID: 30ca486f_d361eb29
 Bytes: 74
 The newlines here make the generated file easier for a human to read IMHO.
+
+488
+Mon Nov 21 23:03:58 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 30ca486f_d361eb29
+UUID: b010f8cf_cc1d0ddf
+Bytes: 96
+Sure, but that logic probably belongs in the printing code rather than built in to the variable.
 
