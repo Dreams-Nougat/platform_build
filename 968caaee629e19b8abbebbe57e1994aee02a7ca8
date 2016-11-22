@@ -2,10 +2,26 @@ Revision: 968caaee629e19b8abbebbe57e1994aee02a7ca8
 Patch-set: 2
 File: core/binary.mk
 
+79
+Tue Nov 22 02:53:49 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b010f8cf_3f7f2a56
+Bytes: 22
+It might not have been
+
 499
 Tue Nov 22 01:58:52 2016 +0000
 Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: b010f8cf_adf2d3b6
 Bytes: 122
 It would be nice to reduce the duplication here, but I'm not sure there is a clear way while keeping the current ordering.
+
+File: core/executable_internal.mk
+
+66
+Tue Nov 22 02:53:49 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b010f8cf_1f2b4647
+Bytes: 61
+I thought this was fixed because we link with full paths now.
 
