@@ -1,0 +1,153 @@
+Revision: f79ea87acbcff566bdb44ad38b28ef658372c42e
+Patch-set: 3
+File: tools/fs_config/fs_config_generator.py
+
+153
+Tue Nov 22 00:44:09 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b010f8cf_a756721e
+Bytes: 142
+Any particular reason? I would think that it's more useful to just let the inevitable NameError happen here if an incompatible type is passed.
+
+207
+Tue Nov 22 00:44:09 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b010f8cf_67507a22
+Bytes: 14
+Same as above.
+
+1302
+Tue Nov 22 00:44:09 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b010f8cf_e7c8eab6
+Bytes: 456
+Actually, docstrings for test cases are used to print friendlier text when run:
+
+
+    $ cat test_foo.py
+    import unittest
+
+
+    class Tests(unittest.TestCase):
+        def test_foo(self):
+            """Tests that True is True."""
+            self.assertTrue(True)
+    $ nose2 -v
+    test_foo (test_foo.Tests)
+    Tests that True is True. ... ok
+
+    ----------------------------------------------------------------------
+    Ran 1 test in 0.000s
+
+    OK
+
+1305
+Tue Nov 22 00:44:09 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b010f8cf_07265e7d
+Bytes: 93
+I'm actually not familiar with redundant-unittest-assert. Which tests was that triggering on?
+
+1308
+Tue Nov 22 00:44:09 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b010f8cf_a7baf207
+Bytes: 233
+Should go in test_fs_config_generator.py so the usual python test runners (nose2 and co) can find it.
+
+Also means that your protected-access disable won't accidentally affect non-test code (you didn't enable it after the test class).
+
+1310
+Tue Nov 22 00:44:09 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b010f8cf_07fc1e96
+Bytes: 72
+Missing a test for an interval contained entirely in the other interval.
+
+1319
+Tue Nov 22 00:44:09 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b010f8cf_27de022e
+Bytes: 21
+Shouldn't this be 11?
+
+1329
+Tue Nov 22 00:44:09 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b010f8cf_c7aa8668
+Bytes: 66
+Tests for the identifier -> friendly mappings that are overridden?
+
+1338:52-1338:57
+Tue Nov 22 00:44:09 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b010f8cf_1270de49
+Bytes: 96
+Test doesn't actually show that this is used since it's equal to the value we're passing anyway.
+
+1349
+Tue Nov 22 00:44:09 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b010f8cf_077f7e55
+Bytes: 37
+Incorrect indentation (and elsewhere)
+
+1363
+Tue Nov 22 00:44:09 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b010f8cf_12621e52
+Bytes: 1458
+https://docs.python.org/2/library/unittest.html#unittest.TestCase.assertIn
+
+Gives much better error messages:
+
+    $ cat test_stuff.py
+    test_stuff.py   test_stuff.pyc  
+    danalbert@danalbert:~/checks$ cat test_stuff.py
+    import unittest
+
+
+    NEEDLE = 'foo'
+    HAYSTACK = ['bar']
+
+
+    class Tests(unittest.TestCase):
+        def test_assertIn(self):
+            self.assertIn(NEEDLE, HAYSTACK)
+
+        def test_assertTrue(self):
+            self.assertTrue(NEEDLE in HAYSTACK)
+    $ nose2
+    FF
+    ======================================================================
+    FAIL: test_assertIn (test_stuff.Tests)
+    ----------------------------------------------------------------------
+    Traceback (most recent call last):
+      File "/usr/local/google/home/danalbert/checks/test_stuff.py", line 10, in test_assertIn
+        self.assertIn(NEEDLE, HAYSTACK)
+    AssertionError: 'foo' not found in ['bar']
+
+    ======================================================================
+    FAIL: test_assertTrue (test_stuff.Tests)
+    ----------------------------------------------------------------------
+    Traceback (most recent call last):
+      File "/usr/local/google/home/danalbert/checks/test_stuff.py", line 13, in test_assertTrue
+        self.assertTrue(NEEDLE in HAYSTACK)
+    AssertionError: False is not true
+
+    ----------------------------------------------------------------------
+    Ran 2 tests in 0.000s
+
+    FAILED (failures=2)
+
+1406
+Tue Nov 22 00:44:09 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: b010f8cf_f218aaf0
+Bytes: 219
+Oh, probably for these. unittest is less clunky than you think it is :)
+
+https://docs.python.org/2/library/unittest.html#unittest.TestCase.assertRaises
+
+    self.assertRaises(SystemExit, AIDHeaderParser(temp_file.name))
+
