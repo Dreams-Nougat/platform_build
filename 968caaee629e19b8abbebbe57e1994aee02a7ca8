@@ -9,6 +9,14 @@ UUID: b010f8cf_3f7f2a56
 Bytes: 22
 It might not have been
 
+79
+Wed Nov 23 21:27:19 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b010f8cf_3f7f2a56
+UUID: f027d048_a373048e
+Bytes: 127
+It actually will, but yes, this is confusing to read. (I check for host&vndk in local_vndk.mk, which gets included before this)
+
 499
 Tue Nov 22 01:58:52 2016 +0000
 Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -24,4 +32,12 @@ Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: b010f8cf_1f2b4647
 Bytes: 61
 I thought this was fixed because we link with full paths now.
+
+66
+Wed Nov 23 21:27:19 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b010f8cf_1f2b4647
+UUID: f027d048_ce23c7ca
+Bytes: 115
+Yeah, this just hasn't been cleaned up. Added a change before this one to remove all the global ld dirs completely.
 
