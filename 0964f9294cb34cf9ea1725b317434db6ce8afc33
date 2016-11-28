@@ -166,6 +166,14 @@ These? https://en.wikipedia.org/wiki/Interval_(mathematics)#Notations_for_interv
 
 Could you add a comment explaining if these intervals are open or closed? I suspect I'll find out when I get to the test CL, but a comment would certainly help clarify.
 
+423
+Mon Nov 28 19:53:32 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b010f8cf_6c13c17f
+UUID: ed0297f6_8e00bdb5
+Bytes: 81
+Oh yeah I see how this is confusing, its a closed interval but in a python tuple.
+
 536:15-537:58
 Fri Nov 18 00:13:44 2016 +0000
 Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
