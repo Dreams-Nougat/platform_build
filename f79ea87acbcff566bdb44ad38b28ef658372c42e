@@ -9,6 +9,14 @@ UUID: b010f8cf_a756721e
 Bytes: 142
 Any particular reason? I would think that it's more useful to just let the inevitable NameError happen here if an incompatible type is passed.
 
+153
+Tue Nov 29 05:42:50 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b010f8cf_a756721e
+UUID: 702a0062_5289e1b4
+Bytes: 62
+No particular reason, I prefer it throwing name error as well.
+
 207
 Tue Nov 22 00:44:09 2016 +0000
 Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -41,12 +49,32 @@ Actually, docstrings for test cases are used to print friendlier text when run:
 
     OK
 
+1302
+Tue Nov 29 05:42:50 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b010f8cf_e7c8eab6
+UUID: 702a0062_12568949
+Bytes: 31
+Oh really, I did not know that.
+
 1305
 Tue Nov 22 00:44:09 2016 +0000
 Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: b010f8cf_07265e7d
 Bytes: 93
 I'm actually not familiar with redundant-unittest-assert. Which tests was that triggering on?
+
+1305
+Tue Nov 29 05:42:50 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b010f8cf_07265e7d
+UUID: 702a0062_d2323123
+Bytes: 195
+Im getting this, looking at it fresh, I should use fail()
+
+W:1457,12: Redundant use of assertTrue with constant value False (redundant-unittest-assert)
+
+Better yet see if I can use assertRaises()
 
 1308
 Tue Nov 22 00:44:09 2016 +0000
@@ -56,6 +84,14 @@ Bytes: 233
 Should go in test_fs_config_generator.py so the usual python test runners (nose2 and co) can find it.
 
 Also means that your protected-access disable won't accidentally affect non-test code (you didn't enable it after the test class).
+
+1308
+Tue Nov 29 05:42:50 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b010f8cf_a7baf207
+UUID: 702a0062_1224c9d1
+Bytes: 68
+So much for self contained... Isn't the disable scoped to the class?
 
 1310
 Tue Nov 22 00:44:09 2016 +0000
@@ -71,12 +107,28 @@ UUID: b010f8cf_27de022e
 Bytes: 21
 Shouldn't this be 11?
 
+1319
+Tue Nov 29 05:42:50 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b010f8cf_27de022e
+UUID: 702a0062_7213457f
+Bytes: 156
+duh yes.. :-P I see where this went wrong. Really based on its usage, i really only care if they overlap in any way shape or form. It really should be bool.
+
 1329
 Tue Nov 22 00:44:09 2016 +0000
 Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: b010f8cf_c7aa8668
 Bytes: 66
 Tests for the identifier -> friendly mappings that are overridden?
+
+1329
+Tue Nov 29 05:42:50 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b010f8cf_c7aa8668
+UUID: 702a0062_85beb560
+Bytes: 136
+That would be a separate test as the conversion doesn't happen within the AID() class itself. However, I see no reason why it shouldn't.
 
 1338:52-1338:57
 Tue Nov 22 00:44:09 2016 +0000
@@ -85,12 +137,28 @@ UUID: b010f8cf_1270de49
 Bytes: 96
 Test doesn't actually show that this is used since it's equal to the value we're passing anyway.
 
+1338:52-1338:57
+Tue Nov 29 05:42:50 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b010f8cf_1270de49
+UUID: 702a0062_c5a7cd57
+Bytes: 107
+Now that the conversion code is moving into AID class always, we drop this parameter so we test for it now.
+
 1349
 Tue Nov 22 00:44:09 2016 +0000
 Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: b010f8cf_077f7e55
 Bytes: 37
 Incorrect indentation (and elsewhere)
+
+1349
+Tue Nov 29 05:42:50 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b010f8cf_077f7e55
+UUID: 702a0062_e5acd13e
+Bytes: 4
+Done
 
 1363
 Tue Nov 22 00:44:09 2016 +0000
@@ -140,6 +208,14 @@ Gives much better error messages:
 
     FAILED (failures=2)
 
+1363
+Tue Nov 29 05:42:50 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b010f8cf_12621e52
+UUID: 702a0062_d21f9176
+Bytes: 134
+Actually this code wasn't working as expected. I ended up switching it around so we don't have to needlessly duplicate the iterations.
+
 1406
 Tue Nov 22 00:44:09 2016 +0000
 Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -150,4 +226,12 @@ Oh, probably for these. unittest is less clunky than you think it is :)
 https://docs.python.org/2/library/unittest.html#unittest.TestCase.assertRaises
 
     self.assertRaises(SystemExit, AIDHeaderParser(temp_file.name))
+
+1406
+Tue Nov 29 05:42:50 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b010f8cf_f218aaf0
+UUID: 702a0062_65c1c1eb
+Bytes: 31
+Yeah I just found this as well.
 
