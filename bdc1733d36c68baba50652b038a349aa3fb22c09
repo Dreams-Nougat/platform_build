@@ -9,3 +9,11 @@ UUID: b010f8cf_8706ce3b
 Bytes: 112
 Should probably raise ValueError since this is a utility function. Up to the caller how it wants to die/proceed.
 
+94
+Tue Nov 29 01:21:35 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b010f8cf_8706ce3b
+UUID: ed0297f6_0e514d26
+Bytes: 4
+Done
+
