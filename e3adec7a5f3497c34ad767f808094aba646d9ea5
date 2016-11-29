@@ -126,6 +126,14 @@ The following seems to most clear IMO:
 
 Now that I've seen it written that way, I noticed something else: do you need to perform any checking on normalized_value?
 
+90
+Tue Nov 29 03:38:22 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b010f8cf_21015221
+UUID: 702a0062_bd11133d
+Bytes: 315
+I think I can refactor this so the AID class does all the checking and conversion. As far as empty string, you cannot get an empty string as you'll hit the specified but unset check when the parser pulls it out of the ini file. If you quote it, the quotes are preserved and passed to int(x, 0) and it won't convert.
+
 160
 Thu Nov 17 23:38:03 2016 +0000
 Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -221,6 +229,14 @@ Looks like at least some people on SO agree with me: http://stackoverflow.com/q/
 
 I can see a reason for property rather than a pure attribute here though: keeping it read only to users of the class. @property does enforce that unless you've also made a @property.setter.
 
+334
+Tue Nov 29 03:38:22 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b010f8cf_01cf6e6e
+UUID: 702a0062_cfa7ee57
+Bytes: 30
+I don't like it but ill do it.
+
 440
 Thu Nov 17 23:38:03 2016 +0000
 Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -278,4 +294,12 @@ Parent: 30ca486f_d361eb29
 UUID: b010f8cf_cc1d0ddf
 Bytes: 96
 Sure, but that logic probably belongs in the printing code rather than built in to the variable.
+
+488
+Tue Nov 29 03:38:22 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b010f8cf_cc1d0ddf
+UUID: 702a0062_2fdecac9
+Bytes: 11
+Fair enough
 

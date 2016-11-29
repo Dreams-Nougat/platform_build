@@ -24,10 +24,26 @@ We use the following in a handful of other projects:
     [VARIABLES]
     dummy-variables-rgx=_|dummy
 
+67:0-67:40
+Tue Nov 29 03:38:22 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b010f8cf_1e20efaf
+UUID: 702a0062_7d4ddb86
+Bytes: 72
+One of my goals was self contained, so id rather not add a pylintrc now.
+
 260:50-260:91
 Mon Nov 21 23:03:58 2016 +0000
 Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: b010f8cf_c1ba7609
 Bytes: 97
 normlized_str and normalized_int (or whatever). No need to leave these landmines laying around :)
+
+260:50-260:91
+Tue Nov 29 03:38:22 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b010f8cf_c1ba7609
+UUID: 702a0062_4f621e2f
+Bytes: 118
+Moving the AID() initialization up and doing the check in the AID class gets rid of this kludge. Makes this way nicer.
 
