@@ -9,3 +9,11 @@ UUID: 702a0062_9ecb6234
 Bytes: 44
 this should be squashed to the right commit.
 
+822
+Tue Nov 29 17:10:04 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 702a0062_9ecb6234
+UUID: 702a0062_bec90615
+Bytes: 133
+This should have been introduced with modularizing the parser, which I corrected: https://android-review.googlesource.com/#/c/292010/
+
