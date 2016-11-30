@@ -9,3 +9,13 @@ UUID: 702a0062_c4fedabb
 Bytes: 95
 Is it possible that LOCAL_MODULE_PATH isn't set, but LOCAL_MODULE_RELATIVE_PATH set to vendor ?
 
+7
+Wed Nov 30 21:33:13 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 702a0062_c4fedabb
+UUID: 702a0062_44caea5f
+Bytes: 186
+That would be incorrect, but may work if there isn't a separate vendor partition. But we do support LOCAL_MODULE_PATH_(32,64,etc)
+
+Also, this check would need to be $(TARGET_OUT_VENDOR)%
+
