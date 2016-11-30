@@ -1,0 +1,11 @@
+Revision: a35d92e4312b2247b0a27e17a6f08f82dae49fdf
+Patch-set: 1
+File: target/product/base.mk
+
+135:15-135:17
+Wed Nov 30 05:14:13 2016 +0000
+Author: Brian Carlstrom <1003723@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 702a0062_e433e5af
+Bytes: 22
+double underscore WAI?
+
