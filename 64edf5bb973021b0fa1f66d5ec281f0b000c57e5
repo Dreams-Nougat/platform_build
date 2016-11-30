@@ -1,0 +1,11 @@
+Revision: 64edf5bb973021b0fa1f66d5ec281f0b000c57e5
+Patch-set: 11
+File: tools/fs_config/fs_config_generator.py
+
+423
+Wed Nov 30 00:26:20 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 702a0062_4915af02
+Bytes: 36
+Yeah, this clears things up. Thanks.
+
