@@ -1,0 +1,11 @@
+Revision: 8139025da27d6ce52f4771863bab6eedff180a58
+Patch-set: 2
+File: core/local_vndk.mk
+
+7:44-7:62
+Wed Nov 30 21:20:39 2016 +0000
+Author: Andrew Hsieh <1010186@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 702a0062_c4fedabb
+Bytes: 95
+Is it possible that LOCAL_MODULE_PATH isn't set, but LOCAL_MODULE_RELATIVE_PATH set to vendor ?
+
