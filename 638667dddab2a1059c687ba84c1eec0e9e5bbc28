@@ -17,3 +17,11 @@ UUID: ed0297f6_4e8f554b
 Bytes: 244
 outside of the fact its missing the space, it complains that the module contains too many lines of code. Ideally, id like to keep this as a single a file, rather than needing to split it into separate files and doing the whole PYTHON_DIR stuff.
 
+20
+Wed Nov 30 00:27:32 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: b010f8cf_8ce5d51e
+UUID: 702a0062_09d8173e
+Bytes: 190
+I'm not sure why I left this comment. This made sense. I moved all this into a pylintrc though since putting this disable here doesn't actually change anything (at least not with my pylint).
+
