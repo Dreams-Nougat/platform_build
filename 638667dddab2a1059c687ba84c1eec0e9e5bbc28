@@ -25,3 +25,19 @@ UUID: 702a0062_09d8173e
 Bytes: 190
 I'm not sure why I left this comment. This made sense. I moved all this into a pylintrc though since putting this disable here doesn't actually change anything (at least not with my pylint).
 
+20
+Wed Nov 30 00:31:31 2016 +0000
+Author: William C Roberts <1013433@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 702a0062_09d8173e
+UUID: 702a0062_899a475a
+Bytes: 304
+It does for min:
+
+$ pylint tools/fs_config/fs_config_generator.py 
+No config file found, using default configuration
+************* Module fs_config_generator
+I: 20, 0: Locally disabling too-many-lines (C0302) (locally-disabled)
+
+<snip>
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+
