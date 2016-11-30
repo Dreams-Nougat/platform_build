@@ -32,6 +32,14 @@ UUID: 702a0062_7d4ddb86
 Bytes: 72
 One of my goals was self contained, so id rather not add a pylintrc now.
 
+67
+Wed Nov 30 00:22:01 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 702a0062_7d4ddb86
+UUID: 702a0062_aecb9133
+Bytes: 126
+Looks like too-many-lines is technically a warning on the first line of the file, so we can't actually disable it without one.
+
 260:50-260:91
 Mon Nov 21 23:03:58 2016 +0000
 Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
