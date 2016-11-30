@@ -1,0 +1,11 @@
+Revision: ab9cedc9c3ffd762d92e5c0fae3ab0a346d6495d
+Patch-set: 1
+File: target/product/embedded.mk
+
+85
+Wed Nov 30 23:54:31 2016 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0d6b6b00_dbb2cbc5
+Bytes: 18
+No trailing slash?
+
