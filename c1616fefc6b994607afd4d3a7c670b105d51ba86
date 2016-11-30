@@ -1,0 +1,18 @@
+Revision: c1616fefc6b994607afd4d3a7c670b105d51ba86
+Patch-set: 1
+File: core/local_vndk.mk
+
+2
+Wed Nov 30 19:35:38 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 702a0062_06be3998
+Bytes: 105
+Please wrap this. There isn't a strict limit in this project, but if gerrit is wrapping it it's too long.
+
+4
+Wed Nov 30 19:35:38 2016 +0000
+Author: Dan Albert <1043845@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 702a0062_061479b9
+Bytes: 118
+Not sure, but won't this fail if multiple are true? Doesn't this turn in to `$(filter true,truetrue)` if that happens?
+
