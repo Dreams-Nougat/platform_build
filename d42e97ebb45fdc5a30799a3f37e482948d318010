@@ -1,0 +1,11 @@
+Revision: d42e97ebb45fdc5a30799a3f37e482948d318010
+Patch-set: 2
+File: tools/releasetools/ota_from_target_files.py
+
+995:12-995:15
+Fri Dec 02 02:00:40 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0d6b6b00_7b19dca1
+Bytes: 88
+PS2 also corrected the comment here. full OTA has a different order of the three stages.
+
