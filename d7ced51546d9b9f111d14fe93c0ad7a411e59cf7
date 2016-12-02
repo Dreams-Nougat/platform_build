@@ -9,3 +9,13 @@ UUID: 0d6b6b00_921b0459
 Bytes: 132
 (i'm assuming all three "stage 3/3"s should be outdented one level? not that it matters since it's only a comment, but looks odd...)
 
+654
+Fri Dec 02 01:58:43 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 0d6b6b00_921b0459
+UUID: 0d6b6b00_9b2f98ba
+Bytes: 264
+it's guarded by the if at L634, so it's intended to stay in the inner block.
+
+PS2 added one more line after this comment, by writing a no-op comment into the generated script. it makes the code less weird, and also improves the readability of the generated script.
+
