@@ -1,0 +1,11 @@
+Revision: ded685a0011afc8ee83bad5c4996feb6b44005dd
+Patch-set: 3
+File: target/product/embedded.mk
+
+90:4-90:14
+Fri Dec 02 19:08:47 2016 +0000
+Author: Daniel Cashman <1026058@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0dd8cb6b_8d1a8154
+Bytes: 386
+Should probably remove this too. I left it here to force sepolicy to still be built so that we can run neverallow tests at build-time still even though the split will be done without it, but since those aren't enabled just yet (need the attribute versioning exemption to go into libsepol first), I'll remove and then reinstate as a proper intermediate dependency when they're reenabled.
+
