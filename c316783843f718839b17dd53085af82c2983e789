@@ -1,0 +1,11 @@
+Revision: c316783843f718839b17dd53085af82c2983e789
+Base-for-patch-set: 4
+File: target/product/embedded.mk
+
+87
+Sat Dec 03 04:54:42 2016 +0000
+Author: Nick Kralevich <1003966@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 0dd8cb6b_2234b498
+Bytes: 41
+will this break the neverallow CTS tests?
+
