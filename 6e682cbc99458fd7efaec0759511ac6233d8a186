@@ -9,3 +9,11 @@ UUID: 7a7adff7_e237ea9a
 Bytes: 58
 seems like .. in the prefix might be useful for makefiles?
 
+474
+Wed Dec 14 01:17:54 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 7a7adff7_e237ea9a
+UUID: 7a7adff7_22ae6282
+Bytes: 119
+Yeah, an intermediate implementation would have broken with .. in base, but it should be fine now. I'll loosen that up.
+
