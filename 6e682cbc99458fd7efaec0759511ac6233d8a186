@@ -1,0 +1,11 @@
+Revision: 6e682cbc99458fd7efaec0759511ac6233d8a186
+Patch-set: 4
+File: core/base_rules.mk
+
+474
+Wed Dec 14 01:12:29 2016 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 7a7adff7_e237ea9a
+Bytes: 58
+seems like .. in the prefix might be useful for makefiles?
+
