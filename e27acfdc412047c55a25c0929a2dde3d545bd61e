@@ -1,0 +1,11 @@
+Revision: e27acfdc412047c55a25c0929a2dde3d545bd61e
+Patch-set: 1
+File: tools/releasetools/blockimgdiff.py
+
+717:9-717:26
+Fri Dec 16 21:07:53 2016 +0000
+Author: Tianjie Xu <1088085@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: ba4b7745_3c40be73
+Bytes: 72
+Is stashes used as a counter here; and the 'sid' above hasn't been used.
+
