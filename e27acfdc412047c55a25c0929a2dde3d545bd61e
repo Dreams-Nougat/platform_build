@@ -9,3 +9,13 @@ UUID: ba4b7745_3c40be73
 Bytes: 72
 Is stashes used as a counter here; and the 'sid' above hasn't been used.
 
+717:9-717:26
+Fri Dec 16 21:36:51 2016 +0000
+Author: Tao Bao <1056365@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: ba4b7745_3c40be73
+UUID: ba4b7745_ef72f64f
+Bytes: 335
+yes, for BBOTA v3/v4, stashes should be keyed by a hash, and the value being using as a counter.
+
+i suspect the sid should be used for BBOTA v2 only (technically sid is used, at L721). i'm using the same logic as in WriteTransfers() (L421) in this CL, but will come back to clean it up (the TODO at L421, and b/33694544 to track that).
+
