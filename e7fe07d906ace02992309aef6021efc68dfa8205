@@ -1,0 +1,11 @@
+Revision: e7fe07d906ace02992309aef6021efc68dfa8205
+Patch-set: 1
+File: core/product_config.mk
+
+427:25-427:33
+Mon Dec 19 22:52:12 2016 +0000
+Author: Nicolas Geoffray <1038443@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 1728de81_4d9899c4
+Bytes: 7
+visible
+
