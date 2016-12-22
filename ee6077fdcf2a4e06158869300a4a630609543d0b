@@ -1,0 +1,11 @@
+Revision: ee6077fdcf2a4e06158869300a4a630609543d0b
+Patch-set: 2
+File: target/product/embedded.mk
+
+82
+Thu Dec 22 21:41:19 2016 +0000
+Author: Sandeep Patil <1108565@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 37b082be_9618cd5c
+Bytes: 60
+I'm assuming this is not going to be around after the split?
+
