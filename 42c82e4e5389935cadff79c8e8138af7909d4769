@@ -1,0 +1,34 @@
+Revision: 42c82e4e5389935cadff79c8e8138af7909d4769
+Patch-set: 1
+File: CleanSpec.mk
+
+387
+Thu Dec 22 18:17:36 2016 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 37b082be_aaf48064
+Bytes: 38
+out/host/common/obj/JAVA_LIBRARIES too
+
+File: core/java_common.mk
+
+42
+Thu Dec 22 18:17:36 2016 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 37b082be_ea635856
+Bytes: 24
+This comment is obsolete
+
+167
+Thu Dec 22 18:17:36 2016 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 37b082be_2a5970a2
+Bytes: 14
+Leave this out
+
+168
+Thu Dec 22 18:17:36 2016 +0000
+Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
+UUID: 37b082be_6a4f68dc
+Bytes: 20
+Move this to java.mk
+
