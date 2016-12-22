@@ -9,3 +9,11 @@ UUID: 37b082be_9618cd5c
 Bytes: 60
 I'm assuming this is not going to be around after the split?
 
+82
+Thu Dec 22 23:55:31 2016 +0000
+Author: Daniel Cashman <1026058@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 37b082be_9618cd5c
+UUID: 37b082be_5b283d4a
+Bytes: 130
+It is used to build our system images as well (e.g. /system) so that dependency will have to be removed before we can remove this.
+
