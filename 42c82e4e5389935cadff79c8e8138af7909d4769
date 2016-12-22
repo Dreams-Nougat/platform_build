@@ -9,6 +9,14 @@ UUID: 37b082be_aaf48064
 Bytes: 38
 out/host/common/obj/JAVA_LIBRARIES too
 
+387
+Thu Dec 22 18:38:26 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 37b082be_aaf48064
+UUID: 37b082be_6af0c81d
+Bytes: 4
+Done
+
 File: core/java_common.mk
 
 42
@@ -18,6 +26,14 @@ UUID: 37b082be_ea635856
 Bytes: 24
 This comment is obsolete
 
+42
+Thu Dec 22 18:38:26 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 37b082be_ea635856
+UUID: 37b082be_aa400056
+Bytes: 4
+Done
+
 167
 Thu Dec 22 18:17:36 2016 +0000
 Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
@@ -25,10 +41,26 @@ UUID: 37b082be_2a5970a2
 Bytes: 14
 Leave this out
 
+167
+Thu Dec 22 18:38:26 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 37b082be_2a5970a2
+UUID: d7a2c67b_08328c4c
+Bytes: 247
+I can't, since the the underlying rules use this private variable unconditionally, even when java.mk is not included. In those cases, it would get a random setting of PRIVATE_HAS_RS_SOURCES depending on the order kati resolved the dependencies in.
+
 168
 Thu Dec 22 18:17:36 2016 +0000
 Author: Colin Cross <1002751@85c56323-6fa9-3386-8a01-6480fb634889>
 UUID: 37b082be_6a4f68dc
 Bytes: 20
 Move this to java.mk
+
+168
+Thu Dec 22 18:38:26 2016 +0000
+Author: Dan Willemsen <1074628@85c56323-6fa9-3386-8a01-6480fb634889>
+Parent: 37b082be_6a4f68dc
+UUID: 37b082be_4a55cc11
+Bytes: 4
+Done
 
